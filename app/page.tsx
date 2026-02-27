@@ -71,25 +71,26 @@ export default function HomePage() {
             <p className="eyebrow mb-6">AI SEARCH OPTIMIZATION</p>
           </div>
           <h1
-            className="font-poppins font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-tight mb-6 reveal"
-            style={{ animation: 'fadeUp 0.9s 0.1s ease forwards', opacity: 0 }}
+            className="font-poppins font-bold text-[40px] md:text-[64px] text-white leading-tight mb-6"
+            style={{ opacity: 0, animation: 'heroFadeIn 0.6s ease 0s forwards' }}
           >
             Most Businesses Are{' '}
-            <span className="text-[#D4A94A]">Invisible to AI.</span>
+            <span className="text-[#D4A94A]">Invisible</span>
+            {' '}to AI.
           </h1>
           <p
-            className="font-poppins font-medium text-xl md:text-2xl text-[#8A9BB5] max-w-3xl mx-auto mb-10 leading-relaxed reveal"
-            style={{ animation: 'fadeUp 0.9s 0.3s ease forwards', opacity: 0 }}
+            className="font-poppins font-normal text-base md:text-xl text-[#8A9BB5] max-w-[600px] mx-auto leading-relaxed"
+            style={{ marginTop: '24px', opacity: 0, animation: 'heroFadeIn 0.6s ease 0.2s forwards' }}
           >
             We build the websites, content, and campaigns that make you the answer.
           </p>
           <div
-            className="reveal"
-            style={{ animation: 'fadeUp 0.9s 0.5s ease forwards', opacity: 0 }}
+            style={{ marginTop: '36px', opacity: 0, animation: 'heroFadeIn 0.6s ease 0.4s forwards' }}
           >
             <a
               href="#problem"
-              className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block"
+              className="btn-gold font-poppins font-bold inline-block rounded-md"
+              style={{ padding: '16px 36px' }}
             >
               See How It Works
             </a>
