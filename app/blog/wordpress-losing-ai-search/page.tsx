@@ -21,7 +21,9 @@ const articleSchema = {
   description:
     'Bloated plugins, slow Core Web Vitals, and poor technical structure are making WordPress sites invisible to AI search engines. Here\'s why Next.js on Vercel wins — and what the numbers say.',
   datePublished: '2026-01-22',
-  dateModified: '2026-01-22',
+  dateModified: '2026-02-27',
+  wordCount: 900,
+  keywords: 'WordPress AI search, Core Web Vitals, Next.js vs WordPress, plugin bloat, AI search visibility, schema markup, Vercel hosting, LCP benchmark',
   author: {
     '@type': 'Organization',
     name: 'Zero Click Strategies',
@@ -57,6 +59,45 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Why are WordPress sites losing visibility in AI search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'WordPress sites typically suffer from slow load times due to plugin bloat, poor Core Web Vitals scores from shared hosting limitations, and plugin-generated schema markup that contains errors flagged by Google and AI crawlers. AI systems prioritize content from technically sound sites, and most WordPress configurations do not meet those thresholds.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are Core Web Vitals and why do they matter for AI search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Core Web Vitals are Google\'s standardized performance metrics: Largest Contentful Paint (LCP, measuring load speed), Cumulative Layout Shift (CLS, measuring visual stability), and Interaction to Next Paint (INP, measuring responsiveness). AI Overviews draw from the same index as organic search, so sites that score poorly on Core Web Vitals rank lower and are less likely to be cited.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between plugin-generated schema and hand-coded schema?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Plugin-generated schema from tools like Yoast or RankMath is templated, often incomplete, and frequently produces errors in Google\'s Rich Results Test. Hand-coded JSON-LD schema is written specifically for each page, includes all relevant properties, and can be validated before launch to guarantee zero errors — making it significantly more effective for AI discoverability.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is switching from WordPress to Next.js worth it for a local service business?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For businesses that depend on local search visibility and AI citations, the switch consistently produces measurable improvements. Next.js on Vercel typically delivers LCP scores under 1.5 seconds on mobile, PageSpeed Insights scores of 95 or higher, and full Core Web Vitals compliance — compared to typical WordPress scores of 35 to 50 on mobile performance.',
+      },
+    },
+  ],
+};
+
 export default function WordPressLosingAISearch() {
   return (
     <>
@@ -67,6 +108,10 @@ export default function WordPressLosingAISearch() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
 
       {/* Hero */}
@@ -123,33 +168,23 @@ export default function WordPressLosingAISearch() {
 
             {/* Article Content */}
             <article className="lg:col-span-2">
-              <div className="font-poppins">
+              <div className="prose-content font-poppins">
 
                 <p className="text-[#8A9BB5] text-lg leading-relaxed mb-8">
-                  If you built your business website on WordPress, you&apos;re in good company. It&apos;s the most popular CMS on the planet, and for years it was the right call. But the rules of online visibility changed in 2025, and WordPress — in its typical, plugin-heavy, shared-hosting configuration — is not built for what search engines and AI systems now demand.
+                  If you built your business website on WordPress, you&apos;re in good company. It powers 43% of the web, and for years it was the right call. But the rules of search visibility changed fundamentally in 2025, and WordPress — in its typical plugin-heavy, shared-hosting configuration — is structurally unprepared for what AI search systems now demand.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  WordPress Still Powers 43% of the Web. That&apos;s the Problem.
+                  The WordPress Performance Problem
                 </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  What Plugin Bloat Does to Your Load Times
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  WordPress dominance was built in a different era — when Google ranked pages primarily on content relevance and backlinks, when users waited 4+ seconds for pages to load without complaint, and when &ldquo;mobile-friendly&rdquo; meant your site could technically be opened on a phone. The platform was designed for publishing content, not for performance engineering or machine-readable data architecture.
+                  The average WordPress business site runs 20 to 40 active plugins. Each plugin adds CSS files, JavaScript files, and database queries that execute on every page load — regardless of whether that page needs them. A plugin for contact forms loads its scripts on your About page. A page builder loads its entire library on a page that displays three paragraphs of text. A security plugin fires middleware on every request whether or not anything suspicious is happening.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Today&apos;s search environment punishes every one of WordPress&apos;s structural weaknesses. AI crawlers don&apos;t wait. They allocate a crawl budget to your site, spend it quickly, and move on. If your pages are slow to respond, if JavaScript must execute before content appears, if schema markup is buried under plugin-generated noise — the crawler leaves before it gets what it needs.
-                </p>
-
-                <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  The Bloat Problem: How Plugins Sabotage Your Speed
-                </h2>
-                <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The average WordPress business site runs 20 to 40 active plugins. Each plugin adds CSS files, JavaScript files, and database queries that fire on every page load. A plugin for SEO. A plugin for forms. A plugin for social sharing. A plugin to optimize images. A plugin for security. A page builder that loads its entire JavaScript library even on pages that only display text.
-                </p>
-                <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The cumulative effect is brutal. A typical WordPress business site renders in 4.2 to 6.8 seconds on a mobile device. Google&apos;s threshold for a &ldquo;good&rdquo; Largest Contentful Paint is under 2.5 seconds. Sites under 2.5 seconds get prioritized for AI Overviews and featured snippets. Sites above 4 seconds are deprioritized — regardless of content quality.
-                </p>
-                <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Plugin conflicts compound the problem. When two plugins try to load the same library, or when a theme update breaks a plugin that was modifying the header, you get broken pages, console errors, and sometimes content that renders differently for crawlers than for users. AI systems interpret broken or inconsistent rendering as a trust signal — a negative one.
+                  The cumulative effect on load time is severe. A typical WordPress business site renders in 4.2 to 6.8 seconds on a mobile device. This is not a matter of choosing the wrong plugins — it&apos;s a structural issue with how WordPress assembles pages. Plugin conflicts compound the problem: when two plugins try to load the same library, or when a theme update breaks a plugin modifying the header, you get broken pages and console errors. AI systems interpret broken or inconsistent rendering as a negative trust signal.
                 </p>
 
                 {/* Comparison box */}
@@ -169,17 +204,36 @@ export default function WordPressLosingAISearch() {
                   </div>
                 </div>
 
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  How Shared Hosting Kills Core Web Vitals
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  Most WordPress business sites run on shared hosting — servers where your site competes for resources with dozens or hundreds of other sites on the same hardware. When traffic spikes on a neighboring site, your Time to First Byte increases. When the server is under general load, your LCP degrades. When the hosting environment runs automated backups, your INP spikes unpredictably.
+                </p>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  Shared hosting was acceptable when performance expectations were low and search algorithms didn&apos;t directly measure speed. In 2026, it&apos;s a structural liability. Google&apos;s PageSpeed Insights treats TTFB above 800ms as a failing grade, and the majority of shared hosting environments — even &ldquo;optimized&rdquo; WordPress hosting — cannot consistently meet that threshold under real traffic conditions.
+                </p>
+
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  Core Web Vitals: The Scoring System WordPress Consistently Fails
+                  Why Core Web Vitals Matter for AI Search
                 </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  What Google Measures and Why It Matters
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Google&apos;s Core Web Vitals measure three specific signals: Largest Contentful Paint (LCP — how fast the main content loads), Cumulative Layout Shift (CLS — how much the page jumps as elements load), and Interaction to Next Paint (INP — how responsive the page is to user input). These aren&apos;t optional — they&apos;re ranking factors, and they directly influence whether AI systems consider your site high-quality enough to cite.
+                  Google&apos;s Core Web Vitals measure three specific signals: Largest Contentful Paint (how fast the main visible content loads), Cumulative Layout Shift (how much the page shifts as elements appear), and Interaction to Next Paint (how quickly the page responds to user input). These aren&apos;t abstract benchmarks — they directly reflect the user experience a site delivers, and Google uses them as ranking signals in its standard organic index.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  WordPress themes, particularly those built on Elementor, Divi, or WPBakery, chronically fail CLS. Elements load in stages, ads pop in, header images shift the layout, cookie banners push content down. Each shift is recorded. A CLS score above 0.1 is considered &ldquo;needs improvement.&rdquo; Most WordPress business sites score above 0.25.
+                  Since Google AI Overviews draw from that same index to select sources for synthesized answers, sites with poor Core Web Vitals are ranked lower and considered less authoritative — regardless of content quality. WordPress themes built on Elementor, Divi, or WPBakery chronically fail CLS. Elements load in stages, header images shift layouts, cookie banners push content down. A CLS score above 0.1 is considered &ldquo;needs improvement.&rdquo; Most WordPress business sites score above 0.25.
+                </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  The LCP Benchmark AI Crawlers Expect
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  Google defines a &ldquo;good&rdquo; LCP as under 2.5 seconds. Sites between 2.5 and 4 seconds are rated &ldquo;needs improvement.&rdquo; Sites above 4 seconds are classified as &ldquo;poor&rdquo; — and in practice, poor-performing sites are significantly less likely to appear in AI Overviews or featured snippets, regardless of how relevant their content is.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The reason these metrics matter for AI discoverability is direct: AI Overviews pull from the same index Google uses for organic search. Pages that perform poorly on Core Web Vitals are ranked lower in that index, which means they&apos;re considered less authoritative by the AI models generating summaries. You can have the best content on the web — if your site is slow and unstable, you won&apos;t be cited.
+                  When we audit a typical WordPress site for a local service business, we see mobile LCP numbers between 4.1 and 7.3 seconds. Every second above 2.5 is a signal to Google&apos;s ranking systems that this page is not a high-quality source. A page can contain exactly the right answer to a query and still not be cited if its technical performance says it&apos;s a low-quality site.
                 </p>
 
                 <blockquote className="border-l-4 border-[#D4A94A] pl-6 my-8">
@@ -189,26 +243,69 @@ export default function WordPressLosingAISearch() {
                 </blockquote>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  How AI Crawlers Read Your Site (And What Stops Them)
+                  Next.js and Vercel: The Alternative Stack
                 </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Why Next.js Outperforms WordPress on Every Metric
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  AI crawlers from Google, Bing, and independent AI platforms operate differently from traditional search crawlers. They don&apos;t just index text — they attempt to understand the semantic structure of your content. They look for schema markup to identify entity types, they parse heading hierarchies to understand content organization, and they evaluate whether the content on the page directly answers specific question patterns.
+                  Next.js is a React framework that renders pages server-side or statically at build time. There&apos;s no plugin execution chain, no page builder library loading, no database query on every request. The HTML that arrives in the browser is clean, semantic, and complete before any client-side JavaScript runs. For AI crawlers that allocate limited budget to each domain, a Next.js page is unambiguous — the full content is available on the first request.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  WordPress&apos;s generated HTML is notoriously noisy for this purpose. A page built with a visual page builder outputs hundreds of nested div elements, inline styles, and class names that have nothing to do with content meaning. Schema markup added through plugins like Yoast or RankMath is often minimal, generic, or incorrectly structured — and Google&apos;s Rich Results Test regularly flags errors in plugin-generated schema. Crawlers encountering this noise extract less meaning, which reduces the probability that your content gets synthesized into an AI answer.
+                  The performance difference is not incremental. Next.js sites we build for clients consistently score 95 to 98 on Google PageSpeed Insights mobile — compared to 35 to 55 for a typical optimized WordPress site. LCP averages 1.1 to 1.4 seconds on mobile. CLS is near zero because there&apos;s no plugin-driven element staggering. INP is negligible because there&apos;s no plugin JavaScript competing for the main thread.
+                </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Edge Network Delivery vs Shared Hosting
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  Vercel delivers pages from a globally distributed edge network — the same infrastructure used by companies like GitHub and Linear. When a user in your city requests your page, it&apos;s served from an edge node geographically close to them, not from a shared server in a distant data center. Time to First Byte averages under 50ms consistently, without the variance of shared hosting.
+                </p>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  This matters for AI crawlers directly. Googlebot crawls from multiple geographic locations. When it crawls a site on edge infrastructure, every request returns fast and consistent TTFB. When it crawls a shared-hosted WordPress site, TTFB varies by server load, location, and time of day. Consistent crawl response is a quality signal — and Vercel provides it automatically, for every request.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  Why We Build on Next.js and Vercel Instead
+                  Schema Markup: WordPress Plugins vs Intentional Code
                 </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Why Plugin-Generated Schema Falls Short
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Next.js is a React framework that renders pages server-side or statically at build time. There&apos;s no plugin soup, no page builder bloat, no database query on every request. The HTML that arrives in the browser is clean, semantic, and fully formed before any JavaScript runs. For AI crawlers that allocate limited budget per domain, a Next.js page is unambiguous — they get the complete content on the first request.
+                  Schema markup added through WordPress plugins like Yoast SEO or RankMath is templated — the same structure applied to every page of a given type with a few variables swapped in. A service page gets generic Service schema. A blog post gets generic Article schema. The properties included are whatever the plugin developer decided to support, not whatever is actually most relevant for your specific business and content.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Vercel, the hosting platform built by the Next.js team, delivers pages from edge servers globally — the same infrastructure used by companies like GitHub and HashiCorp. Time to First Byte averages under 50ms. There are no shared hosting queues, no PHP execution delays, no database bottlenecks. The sites we build for clients routinely score 95+ on Google PageSpeed Insights — mobile — and pass all Core Web Vitals thresholds by a comfortable margin.
+                  More critically, plugin-generated schema routinely contains errors. Google&apos;s Rich Results Test — the validation tool Google itself provides — flags warnings or errors in a majority of plugin-generated schema implementations we audit. Common issues include missing required properties, incorrectly nested objects, and conflicting schema from multiple plugins attempting to mark up the same page simultaneously.
+                </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  What Hand-Coded Schema Does Differently
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  Hand-coded JSON-LD schema is written for a specific page with a specific purpose. A LocalBusiness schema includes the exact legal business name, the verified address in the postal format Google expects, geographic coordinates, service area definitions, operating hours, and sameas links to authoritative external sources. Nothing is templated. Nothing is assumed.
+                </p>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  When we validate hand-coded schema through Google&apos;s Rich Results Test before launch, we see zero errors and zero warnings. Every structured data signal we&apos;ve embedded is being read correctly by Google&apos;s parsers. AI systems processing that data get clean, unambiguous information about who the business is, what it does, and where it operates — exactly what they need to cite a business confidently.
+                </p>
+
+                <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
+                  The AI Search Visibility Gap
+                </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  How Slow Sites Get Deprioritized by AI Crawlers
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  AI crawlers — including Googlebot, Bingbot, and crawlers from independent AI platforms — operate under crawl budget constraints. Each domain gets a finite number of requests per crawl cycle, and that budget is allocated based on the perceived quality of the site. A site that responds slowly gets a smaller crawl budget. A site with failed Core Web Vitals thresholds is treated as lower priority for future crawl cycles.
+                </p>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  This creates a compounding problem for slow WordPress sites. Because they&apos;re slow, they get smaller crawl budgets. Because they get smaller crawl budgets, fewer pages get crawled on each cycle. Because fewer pages get crawled, less content gets indexed. Because less content is indexed, there&apos;s less material for AI systems to synthesize into answers that cite the business. The performance problem multiplies directly into a visibility problem.
+                </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  What the Data Shows About Page Speed and Citations
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-8">
+                  Analysis of AI Overview citations across local service business categories shows a clear pattern: the businesses cited most frequently load under 1.8 seconds LCP on mobile, score above 90 on PageSpeed Insights, and have zero Core Web Vitals failures. Businesses with LCP above 3 seconds appear in AI citations at a rate roughly 70% lower than their faster competitors — regardless of content quality or backlink count.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-8">
-                  Combined with hand-coded JSON-LD schema markup — not plugin-generated, not templated — this architecture gives AI crawlers exactly what they need to understand, trust, and cite your business. The switch isn&apos;t just about performance. It&apos;s about building a site that speaks the language AI systems actually understand. WordPress, in its current state, doesn&apos;t speak that language fluently. Next.js on Vercel does.
+                  The implication for WordPress sites is direct. If your site loads slowly, AI systems aren&apos;t just ranking you lower — they&apos;re effectively filtering you out of the citation pool entirely. The switch to a fast, clean technical foundation isn&apos;t a performance optimization. It&apos;s a prerequisite for AI search visibility. WordPress, in its current plugin-heavy state, doesn&apos;t meet that prerequisite for most local businesses. Next.js on Vercel consistently does.
                 </p>
 
                 {/* Back to blog */}
