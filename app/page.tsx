@@ -123,8 +123,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             {[
               {
-                stat: '93%',
-                text: 'of searches result in zero clicks',
+                stat: '60%+',
+                text: 'of Google searches end without a click — Source: SparkToro',
                 delay: 0,
               },
               {
