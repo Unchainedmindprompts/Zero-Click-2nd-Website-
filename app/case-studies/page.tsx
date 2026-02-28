@@ -60,10 +60,10 @@ export default function CaseStudiesPage() {
           {/* Big metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[
-              { value: '49', label: 'New pages indexed', sub: 'in under 48 hours' },
-              { value: '4', label: 'Rich result types', sub: 'all validated' },
+              { value: '93-100', label: 'Desktop PageSpeed score', sub: 'all categories' },
+              { value: '100', label: 'SEO score', sub: 'all three sites' },
               { value: '0', label: 'Invalid schema items', sub: 'across all pages' },
-              { value: '95+', label: 'Lighthouse score', sub: 'all categories' },
+              { value: '66%', label: 'Better mobile performance', sub: 'than average WordPress site' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
                 <div className="bg-[#162444] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
