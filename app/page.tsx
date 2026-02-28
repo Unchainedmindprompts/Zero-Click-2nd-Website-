@@ -244,37 +244,54 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-4 leading-tight">
-              We Proved It On Our Own
+              Sites That Score.
             </h2>
-            <p className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] text-center mb-16">
-              Businesses First
+            <p className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] text-center mb-6">
+              Clients Win.
+            </p>
+            <p className="font-poppins text-lg text-[#8A9BB5] text-center mb-16">
+              Custom-coded. No page builders. No plugins. Deployed on enterprise infrastructure.
             </p>
           </ScrollReveal>
 
           {/* Case study cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {[
               {
-                company: 'Luxe Window Works',
-                category: 'Window Treatments',
+                company: 'Zero Click Strategies',
+                category: 'Marketing Agency',
                 metrics: [
-                  { value: '49', label: 'new pages indexed' },
-                  { value: '48h', label: 'time to index' },
-                  { value: '4', label: 'rich result types' },
+                  { value: '100', label: 'Performance' },
+                  { value: '100', label: 'Accessibility' },
+                  { value: '100', label: 'Best Practices' },
+                  { value: '91', label: 'SEO' },
                 ],
-                desc: '49 new pages indexed in 48 hours. Schema validated across 4 rich result types. 0 invalid items.',
+                desc: 'Desktop PageSpeed scores: 100 Performance, 100 Accessibility, 100 Best Practices, 91 SEO.',
                 delay: 0,
               },
               {
                 company: 'INW Basecamp',
                 category: 'Home Theater & AV',
                 metrics: [
-                  { value: '1', label: 'day to launch' },
-                  { value: '100%', label: 'schema valid' },
-                  { value: '0', label: 'invalid items' },
+                  { value: '96', label: 'Performance' },
+                  { value: '96', label: 'Accessibility' },
+                  { value: '100', label: 'Best Practices' },
+                  { value: '100', label: 'SEO' },
                 ],
-                desc: 'Arizona landing page live, schema validated, and rich results firing same day as deployment.',
+                desc: 'Desktop PageSpeed scores: 96 Performance, 96 Accessibility, 100 Best Practices, 100 SEO.',
                 delay: 150,
+              },
+              {
+                company: 'Luxe Window Works',
+                category: 'Window Treatments',
+                metrics: [
+                  { value: '93', label: 'Performance' },
+                  { value: '96', label: 'Accessibility' },
+                  { value: '100', label: 'Best Practices' },
+                  { value: '100', label: 'SEO' },
+                ],
+                desc: 'Desktop PageSpeed scores: 93 Performance, 96 Accessibility, 100 Best Practices, 100 SEO.',
+                delay: 300,
               },
             ].map((study, i) => (
               <ScrollReveal key={i} delay={study.delay}>
@@ -286,7 +303,7 @@ export default function HomePage() {
                     </h3>
                   </div>
                   <div className="p-8">
-                    <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className="grid grid-cols-2 gap-4 mb-6">
                       {study.metrics.map((m, j) => (
                         <div key={j} className="text-center">
                           <div className="font-poppins font-bold text-2xl text-[#D4A94A]">
@@ -306,6 +323,11 @@ export default function HomePage() {
               </ScrollReveal>
             ))}
           </div>
+          <ScrollReveal delay={100}>
+            <p className="text-[#8A9BB5] text-sm text-center mb-20 font-poppins">
+              Desktop performance scores of 93–100 across all sites. Our mobile scores average 66% better than the typical WordPress or page-builder site.
+            </p>
+          </ScrollReveal>
 
           {/* Animated counter */}
           <ScrollReveal delay={200}>
