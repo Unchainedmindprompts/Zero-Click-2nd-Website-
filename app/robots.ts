@@ -33,7 +33,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://zeroclickstrategies.com/sitemap.xml',
-    host: 'https://zeroclickstrategies.com',
+    sitemap: 'https://www.zeroclickstrategies.com/sitemap.xml',
+    host: 'https://www.zeroclickstrategies.com',
   };
 }

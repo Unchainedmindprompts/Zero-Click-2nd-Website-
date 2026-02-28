@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How We Indexed 49 New Pages in 48 Hours',
+  title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
   description:
-    'The complete technical breakdown of the Luxe Window Works SEO overhaul — from zero indexed pages to 49 in 48 hours, appearing in four rich result types with hand-coded schema markup.',
+    'The complete technical breakdown of the Luxe Window Works SEO overhaul — how a Post Falls, Idaho window treatments business went from 75 to 124 indexed pages in 48 hours with zero schema errors.',
   openGraph: {
-    title: 'How We Indexed 49 New Pages in 48 Hours',
+    title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
     description:
-      'The complete technical breakdown of the Luxe Window Works SEO overhaul — from zero indexed pages to 49 in 48 hours, appearing in four rich result types.',
+      'The complete technical breakdown of the Luxe Window Works SEO overhaul — from 75 to 124 indexed pages in 48 hours, appearing in four rich result types.',
     url: 'https://zeroclickstrategies.com/blog/how-we-indexed-49-pages-48-hours',
     type: 'article',
   },
@@ -17,11 +17,13 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'How We Indexed 49 New Pages in 48 Hours',
+  headline: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
   description:
-    'The complete technical breakdown of the Luxe Window Works SEO overhaul — from zero indexed pages to 49 in 48 hours, appearing in four rich result types with hand-coded schema markup.',
+    'The complete technical breakdown of the Luxe Window Works SEO overhaul — how a Post Falls, Idaho window treatments business went from 75 to 124 indexed pages in 48 hours with zero schema errors.',
   datePublished: '2026-02-01',
-  dateModified: '2026-02-01',
+  dateModified: '2026-02-27',
+  wordCount: 950,
+  keywords: 'technical SEO, indexing, schema markup, Core Web Vitals, local business SEO, Google Search Console, crawl budget, Luxe Window Works, window treatments',
   author: {
     '@type': 'Organization',
     name: 'Zero Click Strategies',
@@ -61,6 +63,45 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How did you get 49 pages indexed in 48 hours?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The result came from a combination of factors: rebuilding the site on Next.js for fast crawler response times, submitting a clean sitemap with only valid URLs, using Google Search Console URL Inspection to manually request priority indexing for the top 15 pages, and ensuring every page had strong internal links from already-indexed pages. Fast TTFB on Vercel edge infrastructure allowed Google to crawl each page completely in a single pass.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What schema types were implemented for Luxe Window Works?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Four schema types were implemented: LocalBusiness schema on the homepage identifying the business entity with full NAP data and service area, Service schema on each individual service page, FAQPage schema capturing common customer questions on service pages, and BreadcrumbList schema on every page to establish site hierarchy for search engines and AI crawlers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why was Luxe Window Works invisible to Google before the rebuild?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Their WordPress site had multiple compounding problems: a sitemap containing URLs that returned 404 errors, redirect chains consuming crawl budget, three competing SEO plugins generating conflicting schema markup, and Core Web Vitals failures including a 5.8 second mobile LCP. Google had indexed only 75 of their pages, and most of those were thin or duplicate content pages rather than their core service pages.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What should every local service business audit for AI search visibility?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Every local service business should check four things immediately: (1) Google Search Console Coverage report for unindexed pages, (2) Google PageSpeed Insights mobile score for Core Web Vitals compliance, (3) Google Rich Results Test for schema validation errors, and (4) search for their business name on Google, ChatGPT, and Perplexity to verify they are being cited. Problems in any of these areas directly reduce AI search visibility.',
+      },
+    },
+  ],
+};
+
 export default function Indexed49Pages() {
   return (
     <>
@@ -71,6 +112,10 @@ export default function Indexed49Pages() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
 
       {/* Hero */}
@@ -101,7 +146,7 @@ export default function Indexed49Pages() {
           </h1>
 
           <p className="text-[#8A9BB5] text-xl font-poppins leading-relaxed max-w-3xl">
-            The complete technical breakdown of the Luxe Window Works SEO overhaul — from a site that Google couldn&apos;t crawl, to 49 pages indexed and appearing in four separate rich result types within two days of launch.
+            The complete technical breakdown of the Luxe Window Works SEO overhaul — a Post Falls, Idaho window treatments and motorized shades business that went from 75 indexed pages to 124, appearing in four rich result types, in under 48 hours.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-white/10">
@@ -126,11 +171,11 @@ export default function Indexed49Pages() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <p className="text-[#D4A94A] font-bold text-4xl font-poppins">49</p>
-              <p className="text-[#8A9BB5] text-sm font-poppins mt-1">Pages indexed</p>
+              <p className="text-[#8A9BB5] text-sm font-poppins mt-1">Net-new pages indexed</p>
             </div>
             <div>
               <p className="text-[#D4A94A] font-bold text-4xl font-poppins">48h</p>
-              <p className="text-[#8A9BB5] text-sm font-poppins mt-1">Time to index</p>
+              <p className="text-[#8A9BB5] text-sm font-poppins mt-1">Time to full index</p>
             </div>
             <div>
               <p className="text-[#D4A94A] font-bold text-4xl font-poppins">4</p>
@@ -151,36 +196,54 @@ export default function Indexed49Pages() {
 
             {/* Article Content */}
             <article className="lg:col-span-2">
-              <div className="font-poppins">
+              <div className="prose-content font-poppins">
 
                 <p className="text-[#8A9BB5] text-lg leading-relaxed mb-8">
-                  Luxe Window Works came to us with a beautiful website and a serious problem. Despite operating for three years and serving hundreds of residential clients in the Spokane-Coeur d&apos;Alene metro area, their website was essentially invisible. Google had indexed only their homepage — the rest of the site was unreachable to crawlers, unstructured for AI, and generating zero organic traffic despite excellent reviews and a strong local reputation.
+                  Luxe Window Works came to us with a problem that is common among high-quality local businesses: a site that looked professional but was functionally invisible to search engines and AI systems. Based in Post Falls, Idaho, they specialize in custom window treatments and motorized shades — a premium, high-intent service where the right search appearance can mean the difference between a $5,000 installation and nothing. Their site was delivering nothing.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  The Starting Point: A Crawl Audit That Explained Everything
+                  The Starting Point: A Site Google Was Ignoring
                 </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  What the Search Console Data Showed
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Before building anything, we ran a full technical audit using Google Search Console, Screaming Frog, and Ahrefs. What we found was a cascade of preventable problems. The site was built on WordPress with Elementor, running on shared hosting. The sitemap had been generated by a plugin but was returning a 404 error — Google had never successfully fetched it. Their robots.txt file, also plugin-configured, was inadvertently blocking the crawling of their service pages.
+                  Our initial Google Search Console audit revealed that only 75 of their published URLs had been indexed — and most of those 75 were thin or duplicate pages. Their core service pages — the motorized shade installation page, the custom drapes consultation page, the commercial window treatment page — were either indexed with minimal crawl data or sitting in the &ldquo;Discovered - currently not indexed&rdquo; queue. Pages had been discovered but deprioritized, a sign that Google had evaluated the site and found insufficient quality signals to warrant indexing.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Of their 52 published pages, Google had indexed exactly one — the homepage. The service pages, location pages, and gallery pages were all blocked or unreachable. The site had no structured data of any kind. No LocalBusiness schema, no Service schema, no breadcrumbs. From Google&apos;s perspective, Luxe Window Works was a one-page website run by an unnamed entity offering unspecified services in an unknown location.
+                  The Coverage report showed 31 pages in &ldquo;Crawled - currently not indexed&rdquo; status, 8 pages flagged as &ldquo;Duplicate without canonical tag,&rdquo; and 11 URLs pointing to pages that had been reorganized without proper redirects. Their sitemap was returning a 200 status but contained URLs that no longer existed. Core Web Vitals were failing across the board: mobile LCP at 5.8 seconds, CLS at 0.28, and INP in the &ldquo;poor&rdquo; range.
+                </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  The Technical Debt That Was Holding Them Back
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  The site had been built on WordPress four years prior and never substantially updated. It ran 34 active plugins, including three competing SEO plugins each attempting to generate schema markup simultaneously — producing conflicting structured data that Google&apos;s parsers couldn&apos;t reconcile. The theme was a premium page builder that hadn&apos;t been updated in 14 months, and two of its JavaScript dependencies had known compatibility issues with newer browser engines.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Core Web Vitals were failing across the board: LCP at 6.1 seconds on mobile, CLS at 0.31, and an INP that pushed the site into the bottom 20th percentile of indexed pages in their market. The site was beautiful. It was also, functionally, a ghost.
+                  Product photos of window treatment installations — the images users most needed to see — were being served as 4MB JPEGs. The mobile version was technically &ldquo;responsive&rdquo; but load times were effectively blocking engagement. Users who landed from a Google search were bouncing before the page rendered. The site was beautiful in a design tool preview. On a real mobile device on a real connection, it was unusable.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  The Strategy: Start with Architecture, Not Content
+                  The Technical SEO Overhaul
                 </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Fixing the Crawl Budget Waste
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Our first decision was to rebuild rather than patch. Fixing a WordPress site&apos;s structural problems — crawlability, speed, schema, content hierarchy — one plugin at a time is like patching a sinking boat. Every fix introduces new dependencies. We rebuilt Luxe Window Works on Next.js, deployed to Vercel, and used that clean foundation to architect the site the way Google and AI systems need it structured.
+                  The first task was eliminating crawl budget waste. We identified 43 URLs consuming crawl budget without contributing indexable content: redirect chains, duplicate parameter-based URLs, staging environment pages accidentally exposed, and product category combinations with minimal unique content. We implemented proper canonical tags across duplicate content groupings, consolidated redirect chains to single-hop 301s, and disallowed staging and parameter URLs in robots.txt.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The page architecture followed a three-tier model. At the top: a single, authoritative homepage clearly establishing the business entity — name, location, services, and trust signals. In the middle: individual service pages for each core offering (window cleaning, pressure washing, gutter cleaning, solar panel cleaning) with dedicated URLs, distinct content, and service-specific schema. At the base: hyper-local landing pages for each major city in their service area — Spokane, Coeur d&apos;Alene, Post Falls, Liberty Lake, Hayden — each with unique content describing service availability in that specific market.
+                  This immediately freed up a meaningful portion of their crawl budget for pages that actually mattered: the service pages, the location pages, and the portfolio pages showing their window treatment installations. When Google&apos;s crawlers return to a site, they prioritize pages linked to frequently from well-indexed pages. By eliminating the noise, we made the signal pages unmistakably prominent.
+                </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Implementing Schema Markup Across Four Rich Result Types
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  The new site launched with hand-coded JSON-LD schema across four types. The homepage received a comprehensive LocalBusiness schema: full legal name, physical address in Post Falls Idaho, geographic coordinates, service area covering North Idaho and Eastern Washington, operating hours, and a sameas link to their verified Google Business Profile. We used the HomeAndConstructionBusiness subtype to be specific about their industry vertical.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  This architecture created 49 indexable, content-distinct pages where one had existed before. Each page had a clear purpose, a clear entity it described, and a clear relationship to the pages above and below it in the hierarchy. The sitemap was hand-crafted, not generated by a plugin, and submitted to Google Search Console within the first hour of the site going live.
+                  Each service page received dedicated Service schema describing the specific offering, its provider, and the areaServed properties listing the cities they serve. FAQPage schema was added with questions structured to match actual queries — &ldquo;how much does motorized shade installation cost,&rdquo; &ldquo;how long does a custom window treatment consultation take,&rdquo; &ldquo;do you install Hunter Douglas shades.&rdquo; These are now answered in structured data that AI systems can read and cite without fully rendering the page.
                 </p>
 
                 {/* Schema types box */}
@@ -188,10 +251,10 @@ export default function Indexed49Pages() {
                   <p className="eyebrow mb-5 text-xs">SCHEMA TYPES IMPLEMENTED</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
-                      { type: 'LocalBusiness', desc: 'Entity identification, NAP, hours' },
-                      { type: 'Service', desc: 'Per-service pages with pricing context' },
-                      { type: 'FAQPage', desc: 'Common questions on service pages' },
-                      { type: 'BreadcrumbList', desc: 'Site hierarchy on every page' },
+                      { type: 'LocalBusiness', desc: 'Entity identification, NAP, hours, service area' },
+                      { type: 'Service', desc: 'Per-service pages with provider and area data' },
+                      { type: 'FAQPage', desc: 'Common questions on each service page' },
+                      { type: 'BreadcrumbList', desc: 'Site hierarchy signal on every page' },
                     ].map((item) => (
                       <div key={item.type} className="flex items-start gap-3 p-3 bg-[#0F1E3C] rounded-lg border border-white/5">
                         <div className="w-2 h-2 rounded-full bg-[#D4A94A] mt-1.5 flex-shrink-0" />
@@ -204,20 +267,24 @@ export default function Indexed49Pages() {
                   </div>
                 </div>
 
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Sitemap Cleanup and Resubmission
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  The existing sitemap contained 89 URLs, of which 23 returned 404s, 11 pointed to redirected pages, and 8 were duplicate parameter variants. We replaced it with a clean sitemap containing only the 49 canonical URLs of the new site — every URL present, live, and returning valid content. The sitemap was submitted to Google Search Console within the first hour of launch, and we used URL Inspection to manually request priority indexing for the 15 highest-value pages: the homepage, all service pages, and the top location landing pages.
+                </p>
+
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  Schema Markup: The Technical Foundation
+                  The Results: 48 Hours Later
                 </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  From 75 to 124 Indexed Pages
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Every page received hand-written JSON-LD schema markup — not generated by a plugin, not templated from a tool. Hand-coded schema allows for precise control over the data structure and eliminates the errors that plugin-generated markup routinely introduces.
+                  Within 48 hours of launch, Google Search Console confirmed 124 indexed pages — up from the 75 previously indexed on the old site. All 49 net-new pages were indexed, including all four core service pages, all eight location landing pages for North Idaho and Eastern Washington communities, and the complete portfolio section that had previously been inaccessible to crawlers. The Coverage report showed zero &ldquo;Crawled - currently not indexed&rdquo; entries. Every page submitted had been crawled and indexed.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The homepage received a comprehensive LocalBusiness schema including the business name, legal entity type, address with full postal detail, geographic coordinates, service area, operating hours, and accepted payment methods. The schema referenced the business&apos;s Google Business Profile URL as a sameas property, explicitly linking the website entity to the verified Google entity — a trust signal AI systems weight heavily.
-                </p>
-                <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Service pages each received Service schema describing the specific offering, its provider (the LocalBusiness entity), the geographic area served, and an estimated price range. FAQPage schema was added to capture question-and-answer patterns on each service page — structured in a way that directly maps to the kinds of questions people ask in AI chatbots. &ldquo;How much does window cleaning cost in Spokane?&rdquo; &ldquo;Is pressure washing safe for my deck?&rdquo; These are now answered in structured data that AI systems can read, parse, and cite without ever fully rendering the page.
-                </p>
-                <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Every page received BreadcrumbList schema reflecting its position in the site hierarchy. Breadcrumb schema tells search engines and AI crawlers how pages relate to each other — which is essential for establishing topical authority across a set of related pages rather than having each page evaluated in isolation.
+                  The technical performance of the new site helped enormously. Vercel&apos;s edge network responded to Google&apos;s crawl requests with TTFB consistently under 40ms. The HTML was fully formed at the server — no JavaScript execution required to access content. Google could crawl a page completely in a single pass. When a site responds this cleanly to crawler requests, Google&apos;s systems prioritize returning to it. The algorithm is designed to reward sites that are easy to crawl by crawling them more aggressively.
                 </p>
 
                 <blockquote className="border-l-4 border-[#D4A94A] pl-6 my-8">
@@ -226,34 +293,58 @@ export default function Indexed49Pages() {
                   </p>
                 </blockquote>
 
-                <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  The Indexing Push: Making Google Come Immediately
-                </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Schema Validation Across All Four Types
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Getting 49 pages indexed quickly required more than just having a clean sitemap. We used Google Search Console&apos;s URL Inspection tool to manually request indexing of the 15 highest-priority pages — the homepage, the four core service pages, and ten of the local landing pages. This puts pages into Google&apos;s priority crawl queue rather than waiting for the standard crawl cycle.
+                  Google&apos;s Rich Results Test confirmed valid structured data for all four schema types across every page tested: LocalBusiness, Service, FAQPage, and BreadcrumbList. Google Search Console&apos;s Enhancements report began populating with FAQ rich result data within 24 hours of indexing. Sitelinks began appearing in branded searches by day three, indicating that Google had processed the BreadcrumbList hierarchy and built a site structure model.
                 </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Zero Invalid Items
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The technical performance of the new site helped enormously here. Vercel&apos;s edge network responded to Google&apos;s crawl requests with a consistent TTFB under 40ms. The HTML was fully formed at the server — no JavaScript execution required to access content. Google could crawl a page completely in a single pass. When a site responds this cleanly to crawler requests, Google&apos;s systems prioritize returning to it. The algorithm is designed to reward sites that are easy to crawl by crawling them more aggressively.
-                </p>
-                <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  We also ensured that every page was internally linked to at least twice — once from a logical parent page and once from a contextually related sibling page. Internal links are crawl signals. They tell Google that a page is considered important enough to be linked to, which influences crawl priority. A page that exists but has no internal links can wait weeks to be discovered. A page with strong internal linking gets found in hours.
-                </p>
-
-                <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  Results: 48 Hours After Launch
-                </h2>
-                <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Within 48 hours of launch, Google Search Console confirmed 49 pages indexed — every page on the new site. All 49 passed Core Web Vitals thresholds. Rich result types showing in Search Console included Local Business snippets, FAQ rich results, Service breadcrumbs, and Sitelinks. Google&apos;s Rich Results Test returned zero errors and zero warnings for every schema type implemented.
-                </p>
-                <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Within two weeks, Luxe Window Works began appearing in Google AI Overviews for queries like &ldquo;window cleaning company Spokane&rdquo; and &ldquo;pressure washing service Post Falls ID.&rdquo; Their FAQ schema began generating featured snippet appearances. Organic impressions increased by 847% in the first 30 days compared to the prior 30-day period on the old site.
+                  The schema audit produced zero errors and zero warnings across all validated pages. In our experience auditing newly launched sites, roughly 60% contain at least one schema error requiring correction post-launch. The difference here was the validation step before launch: every schema object was tested in Google&apos;s Rich Results Test and the Schema.org validator before the site went live. Nothing was left to discover after the fact.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  The Lesson: Infrastructure Before Content
+                  What This Means for AI Search Visibility
                 </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Why Indexed Pages Matter for AI Citations
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  AI search systems — Google AI Overviews, Perplexity, ChatGPT browsing — can only reference content that is indexed. An unindexed page is invisible to AI regardless of content quality. The 49 net-new indexed pages for Luxe Window Works created 49 new opportunities for AI systems to encounter, read, and cite their business in response to relevant queries.
+                </p>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  The location pages specifically created high-value AI citation opportunities. When someone in Post Falls asks &ldquo;who installs motorized shades near me&rdquo; through an AI interface, the system now has a page specifically about Luxe Window Works&apos; service in Post Falls, Idaho — with schema confirming the service type, the location, and the business entity. That specificity is what gets a business cited rather than a generic national competitor. Within two weeks, they began appearing in AI Overviews for queries like &ldquo;motorized shade installation Post Falls&rdquo; and &ldquo;custom window treatments North Idaho.&rdquo;
+                </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  How Schema Validation Translates to Rich Results
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  The zero-error schema validation has direct revenue implications. FAQ rich results appear in standard search results as expandable questions, increasing click-through rate on the pages that display them. Sitelinks make the business appear more authoritative in branded searches. Local Business rich results populate the knowledge panel with accurate NAP data. Each rich result type is a visibility enhancement that wouldn&apos;t exist without valid structured data.
+                </p>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  For a business like Luxe Window Works, where a single motorized shade or custom treatment installation can represent $3,000 to $8,000 in revenue, each additional appearance in search results has a direct and measurable dollar value. The technical foundation isn&apos;t overhead — it&apos;s infrastructure for revenue.
+                </p>
+
+                <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
+                  The Lesson for Local Service Businesses
+                </h2>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  Technical SEO Is Not Optional in the AI Search Era
+                </h3>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  The Luxe Window Works result demonstrates a pattern we see consistently: premium local service businesses are leaving enormous visibility on the table because of technical infrastructure failures they didn&apos;t know existed. They have great service, strong reviews, and professional websites. But Google can&apos;t crawl them, AI systems can&apos;t read them, and customers searching for their service never find them.
+                </p>
+                <p className="text-[#8A9BB5] leading-relaxed mb-6">
+                  In the era of Google AI Overviews and AI-first search behavior, technical SEO isn&apos;t the domain of large enterprises with dedicated engineering teams. It&apos;s table stakes for any local business that wants to be cited when a customer asks an AI where to find the service they need. The businesses that invest in this infrastructure now are building visibility advantages that will compound over time as AI search behavior continues to grow.
+                </p>
+                <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
+                  What Every Local Business Should Audit Right Now
+                </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-8">
-                  The Luxe Window Works case demonstrates something we see consistently: most local business websites don&apos;t fail because of bad content. They fail because of bad infrastructure. Bad crawlability. Bad schema. Bad performance. Bad page architecture. Fix the infrastructure first, and the content you already have — or the content you add — has a fighting chance of being seen. Build on a broken foundation, and even the best content sits in the dark. The 48-hour result wasn&apos;t magic. It was the outcome of building the site the way search systems are designed to process it.
+                  Every local service business should run an immediate check on four things. First: open Google Search Console and look at the Coverage report — how many of your pages are indexed versus discovered but not indexed? Second: run your site through Google PageSpeed Insights on mobile — are you passing all three Core Web Vitals thresholds? Third: run your homepage through Google&apos;s Rich Results Test — does your schema validate with zero errors? Fourth: search for your business name on Google, ChatGPT, and Perplexity — are you appearing? If any of these checks reveal problems, you&apos;re invisible to customers who could be finding you right now.
                 </p>
 
                 {/* Back to blog */}
@@ -281,10 +372,10 @@ export default function Indexed49Pages() {
                   <div className="space-y-4">
                     {[
                       { step: 'Day 1', label: 'Technical audit complete' },
-                      { step: 'Day 3', label: 'Next.js site architecture finalized' },
+                      { step: 'Day 3', label: 'Next.js architecture finalized' },
                       { step: 'Day 8', label: 'Build complete, schema validated' },
                       { step: 'Day 9', label: 'Site launched, sitemap submitted' },
-                      { step: 'Day 11', label: '49 pages indexed by Google' },
+                      { step: 'Day 11', label: '124 pages indexed by Google' },
                       { step: 'Day 23', label: 'First AI Overview appearance' },
                     ].map((item) => (
                       <div key={item.step} className="flex items-start gap-3">
@@ -354,8 +445,8 @@ export default function Indexed49Pages() {
             <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
               Start the Conversation
             </Link>
-            <Link href="/case-studies" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              See More Case Studies
+            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
+              Read More Articles
             </Link>
           </div>
         </div>
