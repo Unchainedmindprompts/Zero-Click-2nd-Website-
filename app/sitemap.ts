@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://zeroclickstrategies.com';
+  const baseUrl = 'https://www.zeroclickstrategies.com';
 
   const routes = [
     {
@@ -43,6 +43,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog posts
     {
       url: `${baseUrl}/blog/what-is-zero-click-search`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/wordpress-losing-ai-search-war`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/49-pages-indexed-48-hours`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
