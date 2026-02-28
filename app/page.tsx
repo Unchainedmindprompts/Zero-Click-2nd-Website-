@@ -324,9 +324,18 @@ export default function HomePage() {
             ))}
           </div>
           <ScrollReveal delay={100}>
-            <p className="text-[#8A9BB5] text-sm text-center mb-20 font-poppins">
-              Desktop performance scores of 93–100 across all sites. Our mobile scores average 66% better than the typical WordPress or page-builder site.
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20 mt-10">
+              <div className="text-center border border-white/5 rounded-xl py-7 px-6 bg-[#162444]/50">
+                <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">93–100</div>
+                <div className="font-poppins text-white font-semibold text-base mb-1">Desktop PageSpeed across all sites</div>
+                <div className="font-poppins text-[#8A9BB5] text-sm">Performance · Accessibility · Best Practices · SEO</div>
+              </div>
+              <div className="text-center border border-white/5 rounded-xl py-7 px-6 bg-[#162444]/50">
+                <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">66% better</div>
+                <div className="font-poppins text-white font-semibold text-base mb-1">Mobile scores vs. the typical competitor</div>
+                <div className="font-poppins text-[#8A9BB5] text-sm">Compared to WordPress or page-builder sites</div>
+              </div>
+            </div>
           </ScrollReveal>
 
           {/* Animated counter */}
