@@ -271,7 +271,7 @@ export default function HomePage() {
               },
               {
                 company: 'INW Basecamp',
-                category: 'Home Theater & AV',
+                category: 'Real Estate & Relocation',
                 metrics: [
                   { value: '96', label: 'Performance' },
                   { value: '96', label: 'Accessibility' },
