@@ -48,18 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/blog/wordpress-losing-ai-search-war`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/49-pages-indexed-48-hours`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/blog/how-we-indexed-49-pages-48-hours`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
