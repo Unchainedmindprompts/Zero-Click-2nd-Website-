@@ -199,7 +199,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="flex flex-wrap items-center gap-4 mb-8">
-              <span className="category-tag">Home Theater & AV</span>
+              <span className="category-tag">Real Estate & Relocation</span>
               <span className="category-tag">Landing Page</span>
               <span className="category-tag">Facebook Ads</span>
             </div>
@@ -330,7 +330,7 @@ export default function CaseStudiesPage() {
               Your Business Could Be <span className="text-[#D4A94A]">Next</span>
             </h2>
             <p className="text-[#8A9BB5] text-xl font-poppins mb-10 leading-relaxed max-w-2xl mx-auto">
-              The same methodology that indexed 49 pages in 48 hours is available for your business right now.
+              The same approach that builds 93–100 desktop scores and gets businesses cited by AI — available for your business right now.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md">
