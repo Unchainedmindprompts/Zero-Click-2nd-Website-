@@ -81,58 +81,6 @@ export default function CaseStudiesPage() {
             ))}
           </div>
 
-          {/* Before/After indexed pages chart */}
-          <ScrollReveal delay={200}>
-            <div className="bg-[#162444] rounded-2xl p-8 md:p-12 mb-16 border border-white/5">
-              <h3 className="font-poppins font-bold text-2xl text-white mb-8">
-                Performance — Before & After
-              </h3>
-              <div className="flex items-end gap-8 md:gap-16">
-                {/* Before bar */}
-                <div className="flex-1 flex flex-col items-center gap-3">
-                  <div className="text-[#8A9BB5] font-poppins font-bold text-2xl">42</div>
-                  <div className="w-full relative" style={{ height: '160px' }}>
-                    <div
-                      className="absolute bottom-0 left-0 right-0 bg-[#8A9BB5]/20 rounded-t-lg border border-[#8A9BB5]/30 flex items-start justify-center pt-3"
-                      style={{ height: '12%' }}
-                    >
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-[#8A9BB5] text-sm font-poppins font-semibold">BEFORE</div>
-                    <div className="text-[#8A9BB5] text-xs font-poppins">WordPress PageSpeed score</div>
-                  </div>
-                </div>
-
-                {/* Arrow */}
-                <div className="flex-shrink-0 pb-12">
-                  <svg className="w-8 h-8 text-[#D4A94A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-
-                {/* After bar */}
-                <div className="flex-1 flex flex-col items-center gap-3">
-                  <div className="text-[#D4A94A] font-poppins font-bold text-2xl">93</div>
-                  <div className="w-full relative" style={{ height: '160px' }}>
-                    <div
-                      className="absolute bottom-0 left-0 right-0 rounded-t-lg"
-                      style={{
-                        height: '100%',
-                        background: 'linear-gradient(to top, #D4A94A33, #D4A94A66)',
-                        border: '1px solid #D4A94A',
-                      }}
-                    />
-                  </div>
-                  <div className="text-center">
-                    <div className="text-[#D4A94A] text-sm font-poppins font-semibold">AFTER</div>
-                    <div className="text-[#8A9BB5] text-xs font-poppins">Next.js + Schema</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-
           {/* Schema validation results */}
           <ScrollReveal delay={100}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
