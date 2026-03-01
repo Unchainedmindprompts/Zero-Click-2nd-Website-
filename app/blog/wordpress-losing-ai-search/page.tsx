@@ -334,10 +334,10 @@ export default function WordPressLosingAISearch() {
                     <div>
                       <div className="flex justify-between mb-1">
                         <span className="text-[#8A9BB5] text-xs font-poppins">WordPress avg.</span>
-                        <span className="text-red-400 text-xs font-bold font-poppins">38/100</span>
+                        <span className="text-red-400 text-xs font-bold font-poppins">42/100</span>
                       </div>
                       <div className="w-full bg-[#0F1E3C] rounded-full h-2">
-                        <div className="bg-red-400 h-2 rounded-full" style={{ width: '38%' }} />
+                        <div className="bg-red-400 h-2 rounded-full" style={{ width: '42%' }} />
                       </div>
                     </div>
                     <div>
@@ -349,7 +349,8 @@ export default function WordPressLosingAISearch() {
                         <div className="bg-[#D4A94A] h-2 rounded-full" style={{ width: '97%' }} />
                       </div>
                     </div>
-                    <p className="text-[#8A9BB5] text-xs font-poppins pt-2">Mobile PageSpeed Insights performance score</p>
+                    <p className="text-[#8A9BB5] text-xs font-poppins pt-2">Desktop PageSpeed Insights performance score</p>
+                    <p className="text-[#8A9BB5] text-xs font-poppins">Our sites also consistently score 66% better on mobile than the average WordPress, Wix, or Squarespace site — where most users will discover you first.</p>
                   </div>
                 </div>
 
