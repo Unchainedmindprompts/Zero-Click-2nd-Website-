@@ -85,12 +85,12 @@ export default function CaseStudiesPage() {
           <ScrollReveal delay={200}>
             <div className="bg-[#162444] rounded-2xl p-8 md:p-12 mb-16 border border-white/5">
               <h3 className="font-poppins font-bold text-2xl text-white mb-8">
-                Pages Indexed — Before & After
+                Performance — Before & After
               </h3>
               <div className="flex items-end gap-8 md:gap-16">
                 {/* Before bar */}
                 <div className="flex-1 flex flex-col items-center gap-3">
-                  <div className="text-[#8A9BB5] font-poppins font-bold text-2xl">3</div>
+                  <div className="text-[#8A9BB5] font-poppins font-bold text-2xl">42</div>
                   <div className="w-full relative" style={{ height: '160px' }}>
                     <div
                       className="absolute bottom-0 left-0 right-0 bg-[#8A9BB5]/20 rounded-t-lg border border-[#8A9BB5]/30 flex items-start justify-center pt-3"
@@ -100,7 +100,7 @@ export default function CaseStudiesPage() {
                   </div>
                   <div className="text-center">
                     <div className="text-[#8A9BB5] text-sm font-poppins font-semibold">BEFORE</div>
-                    <div className="text-[#8A9BB5] text-xs font-poppins">WordPress site</div>
+                    <div className="text-[#8A9BB5] text-xs font-poppins">WordPress PageSpeed score</div>
                   </div>
                 </div>
 
@@ -113,7 +113,7 @@ export default function CaseStudiesPage() {
 
                 {/* After bar */}
                 <div className="flex-1 flex flex-col items-center gap-3">
-                  <div className="text-[#D4A94A] font-poppins font-bold text-2xl">52</div>
+                  <div className="text-[#D4A94A] font-poppins font-bold text-2xl">93</div>
                   <div className="w-full relative" style={{ height: '160px' }}>
                     <div
                       className="absolute bottom-0 left-0 right-0 rounded-t-lg"
@@ -126,7 +126,7 @@ export default function CaseStudiesPage() {
                   </div>
                   <div className="text-center">
                     <div className="text-[#D4A94A] text-sm font-poppins font-semibold">AFTER</div>
-                    <div className="text-[#8A9BB5] text-xs font-poppins">Next.js + Schema (48hrs)</div>
+                    <div className="text-[#8A9BB5] text-xs font-poppins">Next.js + Schema</div>
                   </div>
                 </div>
               </div>
