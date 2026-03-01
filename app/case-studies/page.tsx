@@ -63,7 +63,7 @@ export default function CaseStudiesPage() {
               { value: '93-100', label: 'Desktop PageSpeed score', sub: 'all categories' },
               { value: '100', label: 'SEO score', sub: 'all three sites' },
               { value: '0', label: 'Invalid schema items', sub: 'across all pages' },
-              { value: '66%', label: 'Better mobile performance', sub: 'than average WordPress site' },
+              { value: '66%', label: 'Better mobile performance', sub: 'than average WordPress, Wix & Squarespace site' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
                 <div className="bg-[#162444] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
