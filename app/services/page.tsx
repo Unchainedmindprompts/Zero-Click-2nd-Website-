@@ -88,7 +88,7 @@ const faqSchema = {
       name: 'How long does it take to see results?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Technical SEO and schema results can appear in days to weeks — we indexed 49 new pages in 48 hours for one client. Facebook ad campaigns typically generate initial data within the first week. Full organic traction from content builds over 60–90 days.',
+        text: 'Technical SEO and schema results can appear in days to weeks — our clients see desktop PageSpeed scores of 93–100 and validated schema from day one. Facebook ad campaigns typically generate initial data within the first week. Full organic traction from content builds over 60–90 days.',
       },
     },
     {
@@ -356,7 +356,7 @@ export default function ServicesPage() {
               },
               {
                 q: 'How long does it take to see results?',
-                a: 'Technical SEO and schema results can appear in days to weeks — we indexed 49 new pages in 48 hours for one client. Facebook ad campaigns typically generate initial data within the first week. Full organic traction from content builds over 60–90 days.',
+                a: 'Technical SEO and schema results can appear in days to weeks — our clients see desktop PageSpeed scores of 93–100 and validated schema from day one. Facebook ad campaigns typically generate initial data within the first week. Full organic traction from content builds over 60–90 days.',
               },
               {
                 q: 'Do you work with businesses outside of Idaho?',
