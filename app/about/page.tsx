@@ -95,8 +95,7 @@ export default function AboutPage() {
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins">
                   Rather than theorize about it, the approach was to test it — on Luxe Window Works and
                   INW Basecamp, two real businesses with real customers and real revenue on the line.
-                  The results were immediate and measurable: 49 pages indexed in 48 hours, schema
-                  validated across four rich result types, Facebook campaigns generating leads same week.
+                  The results were immediate and measurable: desktop PageSpeed scores of 93–100, perfect SEO scores across the board, and businesses that AI systems could finally find, read, and cite.
                 </p>
 
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins">
