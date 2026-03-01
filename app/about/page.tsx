@@ -80,9 +80,7 @@ export default function AboutPage() {
                     30 Years of Sales. 23 Years of Building. Here&apos;s What Actually Works.
                   </h2>
                   <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                    With 30 years of sales experience and 23 years as an entrepreneur, you learn fast what works — and what burns time and money. Traditional
-                    SEO that took 12 months to maybe produce results. WordPress sites that fell apart every
-                    time a plugin updated. Ad campaigns that drained budgets without building anything lasting.
+                    With 30 years of sales experience and 23 years as an entrepreneur, you develop a sharp eye for what actually moves the needle — and zero patience for what doesn&apos;t.
                   </p>
                 </div>
 
