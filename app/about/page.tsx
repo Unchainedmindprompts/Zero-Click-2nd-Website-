@@ -77,10 +77,10 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div>
                   <h2 className="font-poppins font-bold text-3xl text-white mb-4">
-                    20 Years of Getting It Wrong — Then Getting It Right
+                    30 Years of Sales. 23 Years of Building. Here&apos;s What Actually Works.
                   </h2>
                   <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                    Two decades of entrepreneurship teaches you a lot about what doesn&apos;t work. Traditional
+                    With 30 years of sales experience and 23 years as an entrepreneur, you learn fast what works — and what burns time and money. Traditional
                     SEO that took 12 months to maybe produce results. WordPress sites that fell apart every
                     time a plugin updated. Ad campaigns that drained budgets without building anything lasting.
                   </p>
@@ -200,7 +200,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[
-              { value: '20+', label: 'Years in business' },
+              { value: '20+', label: 'Years of sales experience' },
               { value: '3', label: 'Businesses proven first' },
               { value: '124', label: 'Pages indexed post-launch' },
               { value: '0', label: 'Invalid schema items ever' },
