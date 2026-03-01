@@ -33,8 +33,7 @@ export default function AboutPage() {
             <span className="text-[#D4A94A]">On Their Own Businesses First</span>
           </h1>
           <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl leading-relaxed">
-            No theory. No agency fluff. Just a 20-year entrepreneur who discovered how AI search
-            works and proved it could generate leads — before offering it to anyone else.
+            Most agencies are still guessing at AI search. After 1,000+ hours researching AEO, GEO, and structured content strategy, I developed a methodology — not a hunch. Structured content is the real estate of the AI economy. How you deploy it, with lightning-fast websites, schema markup, and coordinated social signals, determines whether AI agents find you or your competitor.
           </p>
         </div>
       </section>
