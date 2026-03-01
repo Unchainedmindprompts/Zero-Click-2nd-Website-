@@ -158,8 +158,7 @@ export default function ServicesPage() {
                   platform, no amount of content or ads will compensate.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins mb-6">
-                  We build every site on <strong className="text-white">Next.js</strong> deployed to{' '}
-                  <strong className="text-white">Vercel</strong> — the same stack used by the fastest sites
+                  We build every site on <strong className="text-white">Next.js</strong> — the same stack used by the fastest sites
                   on the internet. No WordPress. No plugins. No compromises on performance.
                 </p>
                 <ul className="space-y-3 mb-8">
@@ -183,13 +182,13 @@ export default function ServicesPage() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="bg-[#162444] rounded-2xl p-8 border border-[#D4A94A]/20">
-                <h3 className="font-poppins font-bold text-lg text-white mb-6">The Vercel Advantage</h3>
+                <h3 className="font-poppins font-bold text-lg text-white mb-6">The Next.js Advantage</h3>
                 <div className="space-y-6">
                   {[
                     { label: 'Load Speed', value: '<1s', desc: 'Average first contentful paint vs 3–5s on WordPress' },
                     { label: 'Lighthouse Score', value: '95+', desc: 'Target across all four categories' },
                     { label: 'Deployment', value: 'Edge', desc: 'Global CDN with automatic SSL and zero downtime' },
-                    { label: 'Uptime', value: '99.99%', desc: 'Vercel SLA for production deployments' },
+                    { label: 'Uptime', value: '99.99%', desc: 'Next.js SLA for production deployments' },
                   ].map((stat) => (
                     <div key={stat.label} className="flex items-start gap-4">
                       <div className="text-right min-w-[4rem]">
@@ -349,7 +348,7 @@ export default function ServicesPage() {
               },
               {
                 q: 'Why Next.js instead of WordPress?',
-                a: 'WordPress is bloated, slow, and dependent on plugins that conflict with each other and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
+                a: 'WordPress is bloated, slow, and dependent on plugins that conflict with each other and break Core Web Vitals scores. Next.js loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
               },
               {
                 q: 'What is schema markup and why does it matter?',

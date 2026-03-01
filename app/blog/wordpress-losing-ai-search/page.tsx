@@ -197,7 +197,7 @@ export default function WordPressLosingAISearch() {
                       <p className="text-[#8A9BB5] text-xs font-poppins mt-1">Avg. LCP mobile</p>
                     </div>
                     <div className="text-center p-4 bg-[#0F1E3C] rounded-lg border border-[#D4A94A]/20">
-                      <p className="text-[#8A9BB5] text-sm font-poppins font-semibold mb-2">Next.js + Vercel</p>
+                      <p className="text-[#8A9BB5] text-sm font-poppins font-semibold mb-2">Next.js</p>
                       <p className="text-[#D4A94A] font-bold text-2xl font-poppins">1.2s</p>
                       <p className="text-[#8A9BB5] text-xs font-poppins mt-1">Avg. LCP mobile</p>
                     </div>
@@ -243,7 +243,7 @@ export default function WordPressLosingAISearch() {
                 </blockquote>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  Next.js and Vercel: The Alternative Stack
+                  Next.js: The Alternative Stack
                 </h2>
                 <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
                   Why Next.js Outperforms WordPress on Every Metric
@@ -258,10 +258,10 @@ export default function WordPressLosingAISearch() {
                   Edge Network Delivery vs Shared Hosting
                 </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Vercel delivers pages from a globally distributed edge network — the same infrastructure used by companies like GitHub and Linear. When a user in your city requests your page, it&apos;s served from an edge node geographically close to them, not from a shared server in a distant data center. Time to First Byte averages under 50ms consistently, without the variance of shared hosting.
+                  Next.js deploys pages from a globally distributed edge network — the same infrastructure used by companies like GitHub and Linear. When a user in your city requests your page, it&apos;s served from an edge node geographically close to them, not from a shared server in a distant data center. Time to First Byte averages under 50ms consistently, without the variance of shared hosting.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  This matters for AI crawlers directly. Googlebot crawls from multiple geographic locations. When it crawls a site on edge infrastructure, every request returns fast and consistent TTFB. When it crawls a shared-hosted WordPress site, TTFB varies by server load, location, and time of day. Consistent crawl response is a quality signal — and Vercel provides it automatically, for every request.
+                  This matters for AI crawlers directly. Googlebot crawls from multiple geographic locations. When it crawls a site on edge infrastructure, every request returns fast and consistent TTFB. When it crawls a shared-hosted WordPress site, TTFB varies by server load, location, and time of day. Consistent crawl response is a quality signal — and Next.js provides it automatically, for every request.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
@@ -305,7 +305,7 @@ export default function WordPressLosingAISearch() {
                   Analysis of AI Overview citations across local service business categories shows a clear pattern: the businesses cited most frequently load under 1.8 seconds LCP on mobile, score above 90 on PageSpeed Insights, and have zero Core Web Vitals failures. Businesses with LCP above 3 seconds appear in AI citations at a rate roughly 70% lower than their faster competitors — regardless of content quality or backlink count.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-8">
-                  The implication for WordPress sites is direct. If your site loads slowly, AI systems aren&apos;t just ranking you lower — they&apos;re effectively filtering you out of the citation pool entirely. The switch to a fast, clean technical foundation isn&apos;t a performance optimization. It&apos;s a prerequisite for AI search visibility. WordPress, in its current plugin-heavy state, doesn&apos;t meet that prerequisite for most local businesses. Next.js on Vercel consistently does.
+                  The implication for WordPress sites is direct. If your site loads slowly, AI systems aren&apos;t just ranking you lower — they&apos;re effectively filtering you out of the citation pool entirely. The switch to a fast, clean technical foundation isn&apos;t a performance optimization. It&apos;s a prerequisite for AI search visibility. WordPress, in its current plugin-heavy state, doesn&apos;t meet that prerequisite for most local businesses. Next.js consistently does.
                 </p>
 
                 {/* Back to blog */}
@@ -342,7 +342,7 @@ export default function WordPressLosingAISearch() {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1">
-                        <span className="text-[#8A9BB5] text-xs font-poppins">Next.js + Vercel</span>
+                        <span className="text-[#8A9BB5] text-xs font-poppins">Next.js</span>
                         <span className="text-[#D4A94A] text-xs font-bold font-poppins">97/100</span>
                       </div>
                       <div className="w-full bg-[#0F1E3C] rounded-full h-2">
@@ -359,7 +359,7 @@ export default function WordPressLosingAISearch() {
                     Still Running WordPress?
                   </p>
                   <p className="text-[#8A9BB5] text-sm font-poppins leading-relaxed mb-5">
-                    We migrate sites from WordPress to Next.js on Vercel — with zero downtime, improved rankings, and Core Web Vitals that pass every threshold.
+                    We migrate sites from WordPress to Next.js — with zero downtime, improved rankings, and Core Web Vitals that pass every threshold.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Discuss a Migration
@@ -372,7 +372,7 @@ export default function WordPressLosingAISearch() {
                   <div className="space-y-4">
                     <Link href="/blog/vercel-vs-wordpress-performance" className="block group">
                       <p className="text-white text-sm font-semibold font-poppins leading-snug group-hover:text-[#D4A94A] transition-colors">
-                        Vercel vs. WordPress: Real Performance Numbers for Local Businesses
+                        Next.js vs. WordPress: Real Performance Numbers for Local Businesses
                       </p>
                       <p className="text-[#8A9BB5] text-xs font-poppins mt-1">8 min read</p>
                     </Link>
@@ -404,7 +404,7 @@ export default function WordPressLosingAISearch() {
             Your Website Should Be an Asset, Not a Liability
           </h2>
           <p className="text-[#8A9BB5] font-poppins mb-8 leading-relaxed">
-            A Next.js site on Vercel isn&apos;t just faster — it&apos;s built to be cited by AI. Let&apos;s show you what your competitors with fast sites are doing that you&apos;re missing.
+            A Next.js site isn&apos;t just faster — it&apos;s built to be cited by AI. Let&apos;s show you what your competitors with fast sites are doing that you&apos;re missing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">

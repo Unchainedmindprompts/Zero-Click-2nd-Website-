@@ -72,7 +72,7 @@ const faqPageSchema = {
       name: 'How did you get 49 pages indexed in 48 hours?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The result came from a combination of factors: rebuilding the site on Next.js for fast crawler response times, submitting a clean sitemap with only valid URLs, using Google Search Console URL Inspection to manually request priority indexing for the top 15 pages, and ensuring every page had strong internal links from already-indexed pages. Fast TTFB on Vercel edge infrastructure allowed Google to crawl each page completely in a single pass.',
+        text: 'The result came from a combination of factors: rebuilding the site on Next.js for fast crawler response times, submitting a clean sitemap with only valid URLs, using Google Search Console URL Inspection to manually request priority indexing for the top 15 pages, and ensuring every page had strong internal links from already-indexed pages. Fast TTFB on Next.js edge infrastructure allowed Google to crawl each page completely in a single pass.',
       },
     },
     {
@@ -284,7 +284,7 @@ export default function Indexed49Pages() {
                   Within 48 hours of launch, Google Search Console confirmed 124 indexed pages — up from the 75 previously indexed on the old site. All 49 net-new pages were indexed, including all four core service pages, all eight location landing pages for North Idaho and Eastern Washington communities, and the complete portfolio section that had previously been inaccessible to crawlers. The Coverage report showed zero &ldquo;Crawled - currently not indexed&rdquo; entries. Every page submitted had been crawled and indexed.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The technical performance of the new site helped enormously. Vercel&apos;s edge network responded to Google&apos;s crawl requests with TTFB consistently under 40ms. The HTML was fully formed at the server — no JavaScript execution required to access content. Google could crawl a page completely in a single pass. When a site responds this cleanly to crawler requests, Google&apos;s systems prioritize returning to it. The algorithm is designed to reward sites that are easy to crawl by crawling them more aggressively.
+                  The technical performance of the new site helped enormously. The edge network responded to Google&apos;s crawl requests with TTFB consistently under 40ms. The HTML was fully formed at the server — no JavaScript execution required to access content. Google could crawl a page completely in a single pass. When a site responds this cleanly to crawler requests, Google&apos;s systems prioritize returning to it. The algorithm is designed to reward sites that are easy to crawl by crawling them more aggressively.
                 </p>
 
                 <blockquote className="border-l-4 border-[#D4A94A] pl-6 my-8">
