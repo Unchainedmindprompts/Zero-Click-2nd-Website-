@@ -287,7 +287,7 @@ export default function VercelVsWordPress() {
                   Making the Right Infrastructure Decision
                 </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-8">
-                  The data is clear. WordPress on shared or managed hosting is structurally unsuited to the performance requirements of AI search visibility in 2026. The platform was built for a different era of search — one that doesn&apos;t weight LCP, CLS, TTFB, and schema validity as heavily as the current environment does. Next.js on Vercel consistently meets every threshold that AI citation requires. For local service businesses where a single additional customer per month justifies the migration cost, the decision is straightforward.
+                  The data is clear. WordPress on shared or managed hosting is structurally unsuited to the performance requirements of AI search visibility in 2026. The platform was built for a different era of search — one that doesn&apos;t weight LCP, CLS, TTFB, and schema validity as heavily as the current environment does. The same structural limitations apply to Wix and Squarespace sites — platforms that share WordPress&apos;s performance ceiling despite different architectures. Next.js on Vercel consistently meets every threshold that AI citation requires. For local service businesses where a single additional customer per month justifies the migration cost, the decision is straightforward.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-white/10">
@@ -350,7 +350,7 @@ export default function VercelVsWordPress() {
                     <div className="border-t border-white/10 pt-4">
                       <Link href="/blog/how-we-indexed-49-pages-48-hours" className="block group">
                         <p className="text-white text-sm font-semibold font-poppins leading-snug group-hover:text-[#D4A94A] transition-colors">
-                          How We Indexed 49 New Pages in 48 Hours
+                          How We Built Sites That Score 93–100 on PageSpeed
                         </p>
                         <p className="text-[#8A9BB5] text-xs font-poppins mt-1">10 min read</p>
                       </Link>

@@ -113,8 +113,8 @@ export default function AboutPage() {
                   </h2>
                   <p className="text-[#8A9BB5] leading-relaxed font-poppins">
                     Two decades of entrepreneurship teaches you a lot about what doesn&apos;t work. Traditional
-                    SEO that took 12 months to maybe produce results. WordPress sites that fell apart every
-                    time a plugin updated. Ad campaigns that drained budgets without building anything lasting.
+                    SEO that took 12 months to maybe produce results. WordPress, Wix, and Squarespace sites that fell apart every
+                    time a plugin or template updated. Ad campaigns that drained budgets without building anything lasting.
                   </p>
                 </div>
 
@@ -169,7 +169,7 @@ export default function AboutPage() {
                   </svg>
                 ),
                 points: [
-                  'WordPress averages 3–5 second load times. Vercel averages under 1 second.',
+                  'WordPress, Wix, and Squarespace sites average 3–5 second load times. Vercel averages under 1 second.',
                   'Plugin dependencies create conflicts that break Core Web Vitals.',
                   'AI crawlers prioritize fast, clean HTML — not plugin-rendered content.',
                   'Vercel\'s edge network delivers content globally without additional CDN costs.',

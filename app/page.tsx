@@ -480,12 +480,6 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
           </div>
-
-          <ScrollReveal delay={300}>
-            <p className="text-center text-[#8A9BB5] mt-12 text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed">
-              One closed real estate deal pays for the entire package. One new window treatment project does the same.
-            </p>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -522,7 +516,7 @@ export default function HomePage() {
               },
               {
                 category: 'Case Studies',
-                title: 'How We Indexed 49 New Pages in 48 Hours',
+                title: 'How We Built Sites That Score 93–100 on PageSpeed',
                 excerpt:
                   'The complete breakdown of the technical SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types.',
                 delay: 300,

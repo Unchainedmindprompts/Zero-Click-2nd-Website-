@@ -28,7 +28,7 @@ const blogPosts = [
   {
     slug: 'how-we-indexed-49-pages-48-hours',
     category: 'Case Studies',
-    title: 'How We Indexed 49 New Pages in 48 Hours',
+    title: 'How We Built Sites That Score 93–100 on PageSpeed',
     excerpt:
       'The complete technical breakdown of the SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types — including the exact schema types we used.',
     date: 'February 1, 2026',
@@ -64,7 +64,7 @@ const blogPosts = [
   {
     slug: 'vercel-vs-wordpress-performance',
     category: 'Website Performance',
-    title: 'Vercel vs. WordPress: Real Performance Numbers for Local Businesses',
+    title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
     excerpt:
       'We ran the same site on both platforms. The results are not close. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
     date: 'February 22, 2026',
