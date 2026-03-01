@@ -197,9 +197,9 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[
-              { value: '20+', label: 'Years of sales experience' },
+              { value: '30+', label: 'Years of sales experience' },
               { value: '3', label: 'Businesses proven first' },
-              { value: '124', label: 'Pages indexed post-launch' },
+              { value: '1,000+', label: 'Hours of AEO & GEO research' },
               { value: '0', label: 'Invalid schema items ever' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
