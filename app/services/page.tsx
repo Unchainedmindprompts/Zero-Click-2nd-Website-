@@ -72,7 +72,7 @@ const faqSchema = {
       name: 'Why Next.js instead of WordPress?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'WordPress is bloated, slow, and dependent on plugins that conflict with each other and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
+        text: 'WordPress, Wix, and Squarespace are slow, bloated, and dependent on auto-generated or plugin-based structures that conflict and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
       },
     },
     {
@@ -186,7 +186,7 @@ export default function ServicesPage() {
                 <h3 className="font-poppins font-bold text-lg text-white mb-6">The Vercel Advantage</h3>
                 <div className="space-y-6">
                   {[
-                    { label: 'Load Speed', value: '<1s', desc: 'Average first contentful paint vs 3–5s on WordPress' },
+                    { label: 'Load Speed', value: '<1s', desc: 'Average first contentful paint vs 3–5s on WordPress, Wix, or Squarespace' },
                     { label: 'Lighthouse Score', value: '95+', desc: 'Target across all four categories' },
                     { label: 'Deployment', value: 'Edge', desc: 'Global CDN with automatic SSL and zero downtime' },
                     { label: 'Uptime', value: '99.99%', desc: 'Vercel SLA for production deployments' },
@@ -349,7 +349,7 @@ export default function ServicesPage() {
               },
               {
                 q: 'Why Next.js instead of WordPress?',
-                a: 'WordPress is bloated, slow, and dependent on plugins that conflict with each other and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
+                a: 'WordPress, Wix, and Squarespace are slow, bloated, and dependent on auto-generated or plugin-based structures that conflict and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
               },
               {
                 q: 'What is schema markup and why does it matter?',

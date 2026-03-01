@@ -287,7 +287,7 @@ export default function VercelVsWordPress() {
                   Making the Right Infrastructure Decision
                 </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-8">
-                  The data is clear. WordPress on shared or managed hosting is structurally unsuited to the performance requirements of AI search visibility in 2026. The platform was built for a different era of search — one that doesn&apos;t weight LCP, CLS, TTFB, and schema validity as heavily as the current environment does. Next.js on Vercel consistently meets every threshold that AI citation requires. For local service businesses where a single additional customer per month justifies the migration cost, the decision is straightforward.
+                  The data is clear. WordPress on shared or managed hosting is structurally unsuited to the performance requirements of AI search visibility in 2026. The platform was built for a different era of search — one that doesn&apos;t weight LCP, CLS, TTFB, and schema validity as heavily as the current environment does. The same structural limitations apply to Wix and Squarespace sites — platforms that share WordPress&apos;s performance ceiling despite different architectures. Next.js on Vercel consistently meets every threshold that AI citation requires. For local service businesses where a single additional customer per month justifies the migration cost, the decision is straightforward.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-white/10">

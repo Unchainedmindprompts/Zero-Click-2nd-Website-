@@ -201,7 +201,7 @@ export default function AIOverviewsLocalBusinesses() {
                   The technical floor for AI Overview eligibility is clear in the data: pages that pass all three Core Web Vitals thresholds — LCP under 2.5 seconds, CLS under 0.1, INP under 200 milliseconds — appear in AI Overview citations at dramatically higher rates than pages that fail these thresholds. This is not correlation. Slow pages get smaller crawl budgets, rank lower in the base index, and provide AI systems with weaker quality signals. Every one of these effects reduces citation probability.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  For local service businesses still on WordPress with shared hosting, this is likely the single largest barrier to AI Overview visibility. A site that loads in 5 seconds on mobile has effectively excluded itself from the citation pool for the majority of high-intent local queries. The fix is a platform change — not a plugin tweak.
+                  For local service businesses still on WordPress, Wix, or Squarespace, this is likely the single largest barrier to AI Overview visibility. A site that loads in 5 seconds on mobile has effectively excluded itself from the citation pool for the majority of high-intent local queries. The fix is a platform change — not a plugin or template tweak.
                 </p>
                 <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
                   Schema Markup That Identifies Your Business

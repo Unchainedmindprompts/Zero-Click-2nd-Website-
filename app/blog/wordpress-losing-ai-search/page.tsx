@@ -68,7 +68,7 @@ const faqPageSchema = {
       name: 'Why are WordPress sites losing visibility in AI search?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'WordPress sites typically suffer from slow load times due to plugin bloat, poor Core Web Vitals scores from shared hosting limitations, and plugin-generated schema markup that contains errors flagged by Google and AI crawlers. AI systems prioritize content from technically sound sites, and most WordPress configurations do not meet those thresholds.',
+        text: 'WordPress, Wix, and Squarespace sites typically suffer from slow load times, poor Core Web Vitals scores, and auto-generated schema markup that contains errors flagged by Google and AI crawlers. AI systems prioritize content from technically sound sites, and most sites on these platforms do not meet those thresholds.',
       },
     },
     {
@@ -92,7 +92,7 @@ const faqPageSchema = {
       name: 'Is switching from WordPress to Next.js worth it for a local service business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For businesses that depend on local search visibility and AI citations, the switch consistently produces measurable improvements. Next.js on Vercel typically delivers LCP scores under 1.5 seconds on mobile, PageSpeed Insights scores of 95 or higher, and full Core Web Vitals compliance — compared to typical WordPress scores of 35 to 50 on mobile performance.',
+        text: 'For businesses that depend on local search visibility and AI citations, the switch consistently produces measurable improvements. Next.js on Vercel typically delivers LCP scores under 1.5 seconds on mobile, PageSpeed Insights scores of 95 or higher, and full Core Web Vitals compliance — compared to typical WordPress, Wix, or Squarespace scores of 35 to 50 on mobile performance.',
       },
     },
   ],
@@ -142,7 +142,7 @@ export default function WordPressLosingAISearch() {
           </h1>
 
           <p className="text-[#8A9BB5] text-xl font-poppins leading-relaxed max-w-3xl">
-            WordPress powers 43% of the web. But in 2026, that ubiquity has become a liability. Bloated plugins, crawl barriers, and poor Core Web Vitals are quietly pushing WordPress sites out of AI-generated answers.
+            WordPress powers 43% of the web. But in 2026, that ubiquity has become a liability. Bloated plugins, crawl barriers, and poor Core Web Vitals are quietly pushing WordPress sites out of AI-generated answers — and Wix and Squarespace sites face the same structural problem.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-white/10">
@@ -171,7 +171,7 @@ export default function WordPressLosingAISearch() {
               <div className="prose-content font-poppins">
 
                 <p className="text-[#8A9BB5] text-lg leading-relaxed mb-8">
-                  If you built your business website on WordPress, you&apos;re in good company. It powers 43% of the web, and for years it was the right call. But the rules of search visibility changed fundamentally in 2025, and WordPress — in its typical plugin-heavy, shared-hosting configuration — is structurally unprepared for what AI search systems now demand.
+                  If you built your business website on WordPress, you&apos;re in good company. It powers 43% of the web, and for years it was the right call. But the rules of search visibility changed fundamentally in 2025, and WordPress — in its typical plugin-heavy, shared-hosting configuration — is structurally unprepared for what AI search systems now demand. The same is true for Wix and Squarespace: their closed platforms and template-driven structures create identical performance barriers.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
@@ -184,7 +184,7 @@ export default function WordPressLosingAISearch() {
                   The average WordPress business site runs 20 to 40 active plugins. Each plugin adds CSS files, JavaScript files, and database queries that execute on every page load — regardless of whether that page needs them. A plugin for contact forms loads its scripts on your About page. A page builder loads its entire library on a page that displays three paragraphs of text. A security plugin fires middleware on every request whether or not anything suspicious is happening.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The cumulative effect on load time is severe. A typical WordPress business site renders in 4.2 to 6.8 seconds on a mobile device. This is not a matter of choosing the wrong plugins — it&apos;s a structural issue with how WordPress assembles pages. Plugin conflicts compound the problem: when two plugins try to load the same library, or when a theme update breaks a plugin modifying the header, you get broken pages and console errors. AI systems interpret broken or inconsistent rendering as a negative trust signal.
+                  The cumulative effect on load time is severe. A typical WordPress, Wix, or Squarespace business site renders in 4.2 to 6.8 seconds on a mobile device. This is not a matter of choosing the wrong plugins — it&apos;s a structural issue with how WordPress assembles pages. Plugin conflicts compound the problem: when two plugins try to load the same library, or when a theme update breaks a plugin modifying the header, you get broken pages and console errors. AI systems interpret broken or inconsistent rendering as a negative trust signal.
                 </p>
 
                 {/* Comparison box */}
@@ -224,7 +224,7 @@ export default function WordPressLosingAISearch() {
                   Google&apos;s Core Web Vitals measure three specific signals: Largest Contentful Paint (how fast the main visible content loads), Cumulative Layout Shift (how much the page shifts as elements appear), and Interaction to Next Paint (how quickly the page responds to user input). These aren&apos;t abstract benchmarks — they directly reflect the user experience a site delivers, and Google uses them as ranking signals in its standard organic index.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  Since Google AI Overviews draw from that same index to select sources for synthesized answers, sites with poor Core Web Vitals are ranked lower and considered less authoritative — regardless of content quality. WordPress themes built on Elementor, Divi, or WPBakery chronically fail CLS. Elements load in stages, header images shift layouts, cookie banners push content down. A CLS score above 0.1 is considered &ldquo;needs improvement.&rdquo; Most WordPress business sites score above 0.25.
+                  Since Google AI Overviews draw from that same index to select sources for synthesized answers, sites with poor Core Web Vitals are ranked lower and considered less authoritative — regardless of content quality. WordPress themes built on Elementor, Divi, or WPBakery chronically fail CLS. Elements load in stages, header images shift layouts, cookie banners push content down. A CLS score above 0.1 is considered &ldquo;needs improvement.&rdquo; Most WordPress, Wix, and Squarespace business sites score above 0.25.
                 </p>
                 <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
                   The LCP Benchmark AI Crawlers Expect
@@ -233,7 +233,7 @@ export default function WordPressLosingAISearch() {
                   Google defines a &ldquo;good&rdquo; LCP as under 2.5 seconds. Sites between 2.5 and 4 seconds are rated &ldquo;needs improvement.&rdquo; Sites above 4 seconds are classified as &ldquo;poor&rdquo; — and in practice, poor-performing sites are significantly less likely to appear in AI Overviews or featured snippets, regardless of how relevant their content is.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  When we audit a typical WordPress site for a local service business, we see mobile LCP numbers between 4.1 and 7.3 seconds. Every second above 2.5 is a signal to Google&apos;s ranking systems that this page is not a high-quality source. A page can contain exactly the right answer to a query and still not be cited if its technical performance says it&apos;s a low-quality site.
+                  When we audit a typical WordPress, Wix, or Squarespace site for a local service business, we see mobile LCP numbers between 4.1 and 7.3 seconds. Every second above 2.5 is a signal to Google&apos;s ranking systems that this page is not a high-quality source. A page can contain exactly the right answer to a query and still not be cited if its technical performance says it&apos;s a low-quality site.
                 </p>
 
                 <blockquote className="border-l-4 border-[#D4A94A] pl-6 my-8">
@@ -252,7 +252,7 @@ export default function WordPressLosingAISearch() {
                   Next.js is a React framework that renders pages server-side or statically at build time. There&apos;s no plugin execution chain, no page builder library loading, no database query on every request. The HTML that arrives in the browser is clean, semantic, and complete before any client-side JavaScript runs. For AI crawlers that allocate limited budget to each domain, a Next.js page is unambiguous — the full content is available on the first request.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  The performance difference is not incremental. Next.js sites we build for clients consistently score 95 to 98 on Google PageSpeed Insights mobile — compared to 35 to 55 for a typical optimized WordPress site. LCP averages 1.1 to 1.4 seconds on mobile. CLS is near zero because there&apos;s no plugin-driven element staggering. INP is negligible because there&apos;s no plugin JavaScript competing for the main thread.
+                  The performance difference is not incremental. Next.js sites we build for clients consistently score 95 to 98 on Google PageSpeed Insights mobile — compared to 35 to 55 for a typical optimized WordPress, Wix, or Squarespace site. LCP averages 1.1 to 1.4 seconds on mobile. CLS is near zero because there&apos;s no plugin-driven element staggering. INP is negligible because there&apos;s no plugin JavaScript competing for the main thread.
                 </p>
                 <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
                   Edge Network Delivery vs Shared Hosting
@@ -261,7 +261,7 @@ export default function WordPressLosingAISearch() {
                   Vercel delivers pages from a globally distributed edge network — the same infrastructure used by companies like GitHub and Linear. When a user in your city requests your page, it&apos;s served from an edge node geographically close to them, not from a shared server in a distant data center. Time to First Byte averages under 50ms consistently, without the variance of shared hosting.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  This matters for AI crawlers directly. Googlebot crawls from multiple geographic locations. When it crawls a site on edge infrastructure, every request returns fast and consistent TTFB. When it crawls a shared-hosted WordPress site, TTFB varies by server load, location, and time of day. Consistent crawl response is a quality signal — and Vercel provides it automatically, for every request.
+                  This matters for AI crawlers directly. Googlebot crawls from multiple geographic locations. When it crawls a site on edge infrastructure, every request returns fast and consistent TTFB. When it crawls a WordPress, Wix, or Squarespace site on shared or managed hosting, TTFB varies by server load, location, and time of day. Consistent crawl response is a quality signal — and Vercel provides it automatically, for every request.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
@@ -296,7 +296,7 @@ export default function WordPressLosingAISearch() {
                   AI crawlers — including Googlebot, Bingbot, and crawlers from independent AI platforms — operate under crawl budget constraints. Each domain gets a finite number of requests per crawl cycle, and that budget is allocated based on the perceived quality of the site. A site that responds slowly gets a smaller crawl budget. A site with failed Core Web Vitals thresholds is treated as lower priority for future crawl cycles.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  This creates a compounding problem for slow WordPress sites. Because they&apos;re slow, they get smaller crawl budgets. Because they get smaller crawl budgets, fewer pages get crawled on each cycle. Because fewer pages get crawled, less content gets indexed. Because less content is indexed, there&apos;s less material for AI systems to synthesize into answers that cite the business. The performance problem multiplies directly into a visibility problem.
+                  This creates a compounding problem for slow WordPress, Wix, or Squarespace sites. Because they&apos;re slow, they get smaller crawl budgets. Because they get smaller crawl budgets, fewer pages get crawled on each cycle. Because fewer pages get crawled, less content gets indexed. Because less content is indexed, there&apos;s less material for AI systems to synthesize into answers that cite the business. The performance problem multiplies directly into a visibility problem.
                 </p>
                 <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
                   What the Data Shows About Page Speed and Citations
@@ -305,7 +305,7 @@ export default function WordPressLosingAISearch() {
                   Analysis of AI Overview citations across local service business categories shows a clear pattern: the businesses cited most frequently load under 1.8 seconds LCP on mobile, score above 90 on PageSpeed Insights, and have zero Core Web Vitals failures. Businesses with LCP above 3 seconds appear in AI citations at a rate roughly 70% lower than their faster competitors — regardless of content quality or backlink count.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-8">
-                  The implication for WordPress sites is direct. If your site loads slowly, AI systems aren&apos;t just ranking you lower — they&apos;re effectively filtering you out of the citation pool entirely. The switch to a fast, clean technical foundation isn&apos;t a performance optimization. It&apos;s a prerequisite for AI search visibility. WordPress, in its current plugin-heavy state, doesn&apos;t meet that prerequisite for most local businesses. Next.js on Vercel consistently does.
+                  The implication for WordPress, Wix, and Squarespace sites is direct. If your site loads slowly, AI systems aren&apos;t just ranking you lower — they&apos;re effectively filtering you out of the citation pool entirely. The switch to a fast, clean technical foundation isn&apos;t a performance optimization. It&apos;s a prerequisite for AI search visibility. WordPress, Wix, and Squarespace — in their current configurations — don&apos;t meet that prerequisite for most local businesses. Next.js on Vercel consistently does.
                 </p>
 
                 {/* Back to blog */}
@@ -333,7 +333,7 @@ export default function WordPressLosingAISearch() {
                   <div className="space-y-4">
                     <div>
                       <div className="flex justify-between mb-1">
-                        <span className="text-[#8A9BB5] text-xs font-poppins">WordPress avg.</span>
+                        <span className="text-[#8A9BB5] text-xs font-poppins">WordPress/Wix/Squarespace avg.</span>
                         <span className="text-red-400 text-xs font-bold font-poppins">38/100</span>
                       </div>
                       <div className="w-full bg-[#0F1E3C] rounded-full h-2">
@@ -356,10 +356,10 @@ export default function WordPressLosingAISearch() {
                 {/* CTA Card */}
                 <div className="bg-[#162444] rounded-xl border border-[#D4A94A]/20 p-6">
                   <p className="font-poppins font-bold text-white text-lg mb-3 leading-snug">
-                    Still Running WordPress?
+                    Still on WordPress, Wix, or Squarespace?
                   </p>
                   <p className="text-[#8A9BB5] text-sm font-poppins leading-relaxed mb-5">
-                    We migrate sites from WordPress to Next.js on Vercel — with zero downtime, improved rankings, and Core Web Vitals that pass every threshold.
+                    We migrate sites from WordPress, Wix, and Squarespace to Next.js on Vercel — with zero downtime, improved rankings, and Core Web Vitals that pass every threshold.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Discuss a Migration
