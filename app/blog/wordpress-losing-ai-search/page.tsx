@@ -359,7 +359,7 @@ export default function WordPressLosingAISearch() {
                     Still on WordPress, Wix, or Squarespace?
                   </p>
                   <p className="text-[#8A9BB5] text-sm font-poppins leading-relaxed mb-5">
-                    We migrate sites from WordPress, Wix, and Squarespace to Next.js on Vercel — with zero downtime, improved rankings, and Core Web Vitals that pass every threshold.
+                    We migrate sites from WordPress, Wix, and Squarespace to Next.js — with zero downtime, improved rankings, and Core Web Vitals that pass every threshold.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Discuss a Migration
@@ -372,14 +372,14 @@ export default function WordPressLosingAISearch() {
                   <div className="space-y-4">
                     <Link href="/blog/vercel-vs-wordpress-performance" className="block group">
                       <p className="text-white text-sm font-semibold font-poppins leading-snug group-hover:text-[#D4A94A] transition-colors">
-                        Vercel vs. WordPress: Real Performance Numbers for Local Businesses
+                        Next.js vs. WordPress: Real Performance Numbers for Local Businesses
                       </p>
                       <p className="text-[#8A9BB5] text-xs font-poppins mt-1">8 min read</p>
                     </Link>
                     <div className="border-t border-white/10 pt-4">
                       <Link href="/blog/how-we-indexed-49-pages-48-hours" className="block group">
                         <p className="text-white text-sm font-semibold font-poppins leading-snug group-hover:text-[#D4A94A] transition-colors">
-                          How We Indexed 49 New Pages in 48 Hours
+                          How We Built Sites That Score 93–100 on PageSpeed
                         </p>
                         <p className="text-[#8A9BB5] text-xs font-poppins mt-1">10 min read</p>
                       </Link>

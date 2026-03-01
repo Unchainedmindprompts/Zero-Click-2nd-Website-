@@ -350,7 +350,7 @@ export default function VercelVsWordPress() {
                     <div className="border-t border-white/10 pt-4">
                       <Link href="/blog/how-we-indexed-49-pages-48-hours" className="block group">
                         <p className="text-white text-sm font-semibold font-poppins leading-snug group-hover:text-[#D4A94A] transition-colors">
-                          How We Indexed 49 New Pages in 48 Hours
+                          How We Built Sites That Score 93–100 on PageSpeed
                         </p>
                         <p className="text-[#8A9BB5] text-xs font-poppins mt-1">10 min read</p>
                       </Link>

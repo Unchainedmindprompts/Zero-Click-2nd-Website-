@@ -522,7 +522,7 @@ export default function HomePage() {
               },
               {
                 category: 'Case Studies',
-                title: 'How We Indexed 49 New Pages in 48 Hours',
+                title: 'How We Built Sites That Score 93–100 on PageSpeed',
                 excerpt:
                   'The complete breakdown of the technical SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types.',
                 delay: 300,
