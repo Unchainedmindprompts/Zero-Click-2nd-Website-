@@ -480,12 +480,6 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
           </div>
-
-          <ScrollReveal delay={300}>
-            <p className="text-center text-[#8A9BB5] mt-12 text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed">
-              One closed real estate deal pays for the entire package. One new window treatment project does the same.
-            </p>
-          </ScrollReveal>
         </div>
       </section>
 
