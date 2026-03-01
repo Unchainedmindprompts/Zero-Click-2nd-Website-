@@ -207,18 +207,17 @@ export default function CaseStudiesPage() {
               INW Basecamp — Arizona Market
             </h2>
             <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl leading-relaxed mb-12">
-              A new market expansion campaign that went from concept to live landing page, validated
-              schema, and active Facebook campaigns in a single day.
+              A new real estate and relocation brand built from zero — live with validated schema, perfect SEO scores, and AI-ready structured content from day one.
             </p>
           </ScrollReveal>
 
           {/* Big metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[
-              { value: '1', label: 'Day to full launch', sub: 'concept to live' },
+              { value: '96', label: 'Desktop PageSpeed score', sub: '' },
+              { value: '100', label: 'SEO score', sub: '' },
               { value: '100%', label: 'Schema validation', sub: 'zero errors' },
-              { value: 'Same', label: 'Day rich results', sub: 'firing on launch day' },
-              { value: '3', label: 'Ad campaigns live', sub: 'at launch' },
+              { value: '0', label: 'Invalid schema items', sub: '' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
                 <div className="bg-[#162444] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
@@ -247,8 +246,8 @@ export default function CaseStudiesPage() {
                   {[
                     {
                       phase: 'Phase 1 — Morning',
-                      title: 'Landing Page Build',
-                      desc: 'Next.js landing page built with Arizona-specific copy, imagery, and LocalBusiness schema targeting the Phoenix/Scottsdale market.',
+                      title: 'Site Build',
+                      desc: 'Next.js site built with relocation-focused content, Northern Idaho lifestyle copy, and LocalBusiness schema targeting families relocating from the Pacific Northwest and California.',
                     },
                     {
                       phase: 'Phase 2 — Afternoon',
@@ -257,8 +256,8 @@ export default function CaseStudiesPage() {
                     },
                     {
                       phase: 'Phase 3 — Evening',
-                      title: 'Facebook Campaigns Live',
-                      desc: 'Pixel installed, custom audiences built, three campaigns launched targeting homeowners in target zip codes.',
+                      title: 'AI Visibility Confirmed',
+                      desc: 'Sitemap submitted, IndexNow signal sent, rich results firing on launch. Site structured to be cited by AI systems answering relocation queries.',
                     },
                   ].map((phase) => (
                     <div key={phase.phase} className="border-l-2 border-[#D4A94A]/30 pl-4">
@@ -299,17 +298,19 @@ export default function CaseStudiesPage() {
 
                 <div className="bg-[#162444] rounded-xl p-8 border border-white/5">
                   <h3 className="font-poppins font-bold text-lg text-white mb-4">
-                    Ad Campaign Structure
+                    Content Structure
                   </h3>
                   <div className="space-y-3">
                     {[
-                      { campaign: 'Awareness', target: 'Homeowners, HHI $100k+, AZ' },
-                      { campaign: 'Consideration', target: 'Home theater interest, AZ' },
-                      { campaign: 'Retargeting', target: 'Landing page visitors 30-day' },
+                      'Relocator guides targeting Pacific Northwest & California audiences',
+                      'Neighborhood and lifestyle content optimized for AI citation',
+                      'Schema-validated pages built to answer relocation queries directly',
                     ].map((item) => (
-                      <div key={item.campaign}>
-                        <div className="font-poppins font-semibold text-white text-sm">{item.campaign}</div>
-                        <div className="text-[#8A9BB5] text-xs font-poppins">{item.target}</div>
+                      <div key={item} className="flex items-start gap-3">
+                        <svg className="w-4 h-4 text-[#D4A94A] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <div className="text-[#8A9BB5] text-sm font-poppins">{item}</div>
                       </div>
                     ))}
                   </div>
