@@ -200,7 +200,7 @@ export default function AboutPage() {
               { value: '30+', label: 'Years of sales experience' },
               { value: '3', label: 'Businesses proven first' },
               { value: '1,000+', label: 'Hours of AEO & GEO research' },
-              { value: '0', label: 'Invalid schema items ever' },
+              { value: '23', label: 'Years as an entrepreneur' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
                 <div className="text-center p-6 bg-[#162444] rounded-xl border border-white/5">
