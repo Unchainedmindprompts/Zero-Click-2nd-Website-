@@ -343,7 +343,7 @@ export default function HomePage() {
             <div className="bg-[#162444] rounded-2xl p-12 md:p-16 text-center border border-[#D4A94A]/20">
               <CounterAnimation
                 end={124}
-                label="Pages indexed after technical SEO overhaul"
+                label="Invalid schema items across all sites"
                 duration={2500}
               />
             </div>
@@ -481,11 +481,6 @@ export default function HomePage() {
             </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={300}>
-            <p className="text-center text-[#8A9BB5] mt-12 text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed">
-              One closed real estate deal pays for the entire package. One new window treatment project does the same.
-            </p>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -522,7 +517,7 @@ export default function HomePage() {
               },
               {
                 category: 'Case Studies',
-                title: 'How We Indexed 49 New Pages in 48 Hours',
+                title: 'How We Built Sites That Score 93–100 on PageSpeed',
                 excerpt:
                   'The complete breakdown of the technical SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types.',
                 delay: 300,
