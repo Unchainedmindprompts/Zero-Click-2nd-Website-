@@ -191,7 +191,7 @@ export default function HomePage() {
                   </svg>
                 ),
                 title: 'Superior Website',
-                desc: 'Fast, clean Next.js sites on Vercel. No WordPress bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
+                desc: 'Fast, clean Next.js sites on Vercel. No template platform bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
                 delay: 0,
               },
               {
@@ -333,7 +333,7 @@ export default function HomePage() {
               <div className="text-center border border-white/5 rounded-xl py-7 px-6 bg-[#162444]/50">
                 <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">66% better</div>
                 <div className="font-poppins text-white font-semibold text-base mb-1">Mobile scores vs. the typical competitor</div>
-                <div className="font-poppins text-[#8A9BB5] text-sm">Compared to WordPress or page-builder sites</div>
+                <div className="font-poppins text-[#8A9BB5] text-sm">Compared to WordPress, Wix, and Squarespace sites</div>
               </div>
             </div>
           </ScrollReveal>
@@ -343,7 +343,7 @@ export default function HomePage() {
             <div className="bg-[#162444] rounded-2xl p-12 md:p-16 text-center border border-[#D4A94A]/20">
               <CounterAnimation
                 end={124}
-                label="Pages indexed after technical SEO overhaul"
+                label="Invalid schema items across all sites"
                 duration={2500}
               />
             </div>
@@ -481,11 +481,6 @@ export default function HomePage() {
             </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={300}>
-            <p className="text-center text-[#8A9BB5] mt-12 text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed">
-              One closed real estate deal pays for the entire package. One new window treatment project does the same.
-            </p>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -522,7 +517,7 @@ export default function HomePage() {
               },
               {
                 category: 'Case Studies',
-                title: 'How We Indexed 49 New Pages in 48 Hours',
+                title: 'How We Built Sites That Score 93–100 on PageSpeed',
                 excerpt:
                   'The complete breakdown of the technical SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types.',
                 delay: 300,

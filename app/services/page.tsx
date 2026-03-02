@@ -69,10 +69,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Why Next.js instead of WordPress?',
+      name: 'Why Next.js instead of WordPress, Wix, or Squarespace?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'WordPress is bloated, slow, and dependent on plugins that conflict with each other and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
+        text: 'WordPress, Wix, and Squarespace are built on template-driven frameworks that are bloated, slow, and dependent on plugins and third-party integrations that conflict with each other and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
       },
     },
     {
@@ -160,7 +160,7 @@ export default function ServicesPage() {
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins mb-6">
                   We build every site on <strong className="text-white">Next.js</strong> deployed to{' '}
                   <strong className="text-white">Vercel</strong> — the same stack used by the fastest sites
-                  on the internet. No WordPress. No plugins. No compromises on performance.
+                  on the internet. No WordPress, Wix, or Squarespace. No plugins. No compromises on performance.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
@@ -186,7 +186,7 @@ export default function ServicesPage() {
                 <h3 className="font-poppins font-bold text-lg text-white mb-6">The Vercel Advantage</h3>
                 <div className="space-y-6">
                   {[
-                    { label: 'Load Speed', value: '<1s', desc: 'Average first contentful paint vs 3–5s on WordPress' },
+                    { label: 'Load Speed', value: '<1s', desc: 'Average first contentful paint vs 3–5s on template platforms' },
                     { label: 'Lighthouse Score', value: '95+', desc: 'Target across all four categories' },
                     { label: 'Deployment', value: 'Edge', desc: 'Global CDN with automatic SSL and zero downtime' },
                     { label: 'Uptime', value: '99.99%', desc: 'Vercel SLA for production deployments' },
@@ -348,8 +348,8 @@ export default function ServicesPage() {
                 a: 'Zero click search happens when search engines or AI tools answer a query directly on the results page — without the user clicking through to any website. AI Overviews, featured snippets, and knowledge panels are examples. If your business isn\'t structured to be the source of those answers, you\'re invisible.',
               },
               {
-                q: 'Why Next.js instead of WordPress?',
-                a: 'WordPress is bloated, slow, and dependent on plugins that conflict with each other and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
+                q: 'Why Next.js instead of WordPress, Wix, or Squarespace?',
+                a: 'WordPress, Wix, and Squarespace are built on template-driven frameworks that are bloated, slow, and dependent on plugins and third-party integrations that conflict with each other and break Core Web Vitals scores. Next.js on Vercel loads faster, scores higher on Lighthouse, and is far easier for AI crawlers to parse and index. For AI search visibility, technical performance is no longer optional.',
               },
               {
                 q: 'What is schema markup and why does it matter?',
