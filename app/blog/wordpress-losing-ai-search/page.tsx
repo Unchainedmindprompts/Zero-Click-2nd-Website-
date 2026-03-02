@@ -175,7 +175,7 @@ export default function WordPressLosingAISearch() {
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
-                  The WordPress Performance Problem
+                  The Performance Problem With Template-Based Platforms
                 </h2>
                 <h3 className="font-poppins font-semibold text-xl text-white mt-6 mb-3">
                   What Plugin Bloat Does to Your Load Times
@@ -333,7 +333,7 @@ export default function WordPressLosingAISearch() {
                   <div className="space-y-4">
                     <div>
                       <div className="flex justify-between mb-1">
-                        <span className="text-[#8A9BB5] text-xs font-poppins">WordPress avg.</span>
+                        <span className="text-[#8A9BB5] text-xs font-poppins">Template platforms avg.</span>
                         <span className="text-red-400 text-xs font-bold font-poppins">38/100</span>
                       </div>
                       <div className="w-full bg-[#0F1E3C] rounded-full h-2">
@@ -356,7 +356,7 @@ export default function WordPressLosingAISearch() {
                 {/* CTA Card */}
                 <div className="bg-[#162444] rounded-xl border border-[#D4A94A]/20 p-6">
                   <p className="font-poppins font-bold text-white text-lg mb-3 leading-snug">
-                    Still Running WordPress?
+                    Still on WordPress, Wix, or Squarespace?
                   </p>
                   <p className="text-[#8A9BB5] text-sm font-poppins leading-relaxed mb-5">
                     We migrate sites from WordPress to Next.js on Vercel — with zero downtime, improved rankings, and Core Web Vitals that pass every threshold.

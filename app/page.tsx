@@ -191,7 +191,7 @@ export default function HomePage() {
                   </svg>
                 ),
                 title: 'Superior Website',
-                desc: 'Fast, clean Next.js sites on Vercel. No WordPress bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
+                desc: 'Fast, clean Next.js sites on Vercel. No template platform bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
                 delay: 0,
               },
               {
@@ -333,7 +333,7 @@ export default function HomePage() {
               <div className="text-center border border-white/5 rounded-xl py-7 px-6 bg-[#162444]/50">
                 <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">66% better</div>
                 <div className="font-poppins text-white font-semibold text-base mb-1">Mobile scores vs. the typical competitor</div>
-                <div className="font-poppins text-[#8A9BB5] text-sm">Compared to WordPress or page-builder sites</div>
+                <div className="font-poppins text-[#8A9BB5] text-sm">Compared to WordPress, Wix, and Squarespace sites</div>
               </div>
             </div>
           </ScrollReveal>

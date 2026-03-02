@@ -214,7 +214,7 @@ export default function WhatIsZeroClickSearch() {
                   What Your Content Needs to Appear in AI Overviews
                 </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  To appear in an AI Overview, your content needs to be structured in a way that Google&apos;s crawlers can parse and extract clearly. That means clean HTML with proper heading hierarchies, schema markup that labels your content for machines, fast page load times that allow complete crawling, and authoritative, direct answers to specific questions. A wall of unstructured text, a slow-loading WordPress site, or a page without schema won&apos;t cut it.
+                  To appear in an AI Overview, your content needs to be structured in a way that Google&apos;s crawlers can parse and extract clearly. That means clean HTML with proper heading hierarchies, schema markup that labels your content for machines, fast page load times that allow complete crawling, and authoritative, direct answers to specific questions. A wall of unstructured text, a slow-loading WordPress, Wix, or Squarespace site, or a page without schema won&apos;t cut it.
                 </p>
 
                 <h2 className="font-poppins font-bold text-2xl text-white mt-10 mb-4">
