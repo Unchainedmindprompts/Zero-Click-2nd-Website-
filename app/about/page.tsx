@@ -162,17 +162,17 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Why Vercel Over WordPress, Wix, or Squarespace',
+                title: 'Why Next.js Over WordPress, Wix, or Squarespace',
                 icon: (
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 ),
                 points: [
-                  'WordPress, Wix, and Squarespace average 3–5 second load times. Vercel averages under 1 second.',
+                  'WordPress, Wix, and Squarespace average 3–5 second load times. Our Next.js sites average under 1 second.',
                   'Plugin dependencies create conflicts that break Core Web Vitals.',
                   'AI crawlers prioritize fast, clean HTML — not plugin-rendered content.',
-                  'Vercel\'s edge network delivers content globally without additional CDN costs.',
+                  'Our edge infrastructure delivers content globally without additional CDN costs.',
                 ],
                 delay: 0,
               },
