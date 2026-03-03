@@ -21,7 +21,7 @@ const breadcrumbSchema = {
 const projects = [
   {
     url: 'https://www.inwbasecamp.com/',
-    screenshot: 'https://image.thum.io/get/width/1200/crop/630/https://www.inwbasecamp.com/',
+    screenshot: '/inw-basecamp-hero.png',
     title: 'INW Basecamp',
     category: 'Real Estate & Relocation',
     description:
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     url: 'https://www.luxewindowworks.com/',
-    screenshot: 'https://image.thum.io/get/width/1200/crop/630/https://www.luxewindowworks.com/',
+    screenshot: '/luxe-window-works-hero.png',
     title: 'Luxe Window Works',
     category: 'Home Services',
     description:
