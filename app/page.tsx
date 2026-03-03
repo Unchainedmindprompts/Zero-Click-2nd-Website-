@@ -358,8 +358,8 @@ export default function HomePage() {
 
           <ScrollReveal delay={300}>
             <div className="text-center mt-12">
-              <Link href="/case-studies" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-                See Full Case Studies
+              <Link href="/our-work" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+                See Our Work
               </Link>
             </div>
           </ScrollReveal>

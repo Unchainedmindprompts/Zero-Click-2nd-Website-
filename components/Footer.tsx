@@ -14,11 +14,9 @@ export default function Footer() {
       ],
     },
     {
-      title: 'Case Studies',
+      title: 'Our Work',
       links: [
-        { href: '/case-studies#luxe', label: 'Luxe Window Works' },
-        { href: '/case-studies#inw', label: 'INW Basecamp' },
-        { href: '/case-studies', label: 'View All' },
+        { href: '/our-work', label: 'Our Work' },
       ],
     },
     {

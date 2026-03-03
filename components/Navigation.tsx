@@ -30,7 +30,6 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/services', label: 'Services' },
-    { href: '/case-studies', label: 'Case Studies' },
     { href: '/our-work', label: 'Our Work' },
     { href: '/about', label: 'About' },
     { href: '/blog', label: 'Blog' },
