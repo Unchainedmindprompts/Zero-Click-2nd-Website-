@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Vercel vs. WordPress: Real Performance Numbers for Local Businesses',
+  title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
   description:
     'We ran the same site on both platforms. The results are not close. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
   openGraph: {
-    title: 'Vercel vs. WordPress: Real Performance Numbers for Local Businesses',
+    title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
     description:
-      'Side-by-side performance data from real local business sites on WordPress shared hosting vs Next.js on Vercel.',
+      'Side-by-side performance data from real local business sites on WordPress shared hosting vs Next.js on edge infrastructure.',
     url: 'https://zeroclickstrategies.com/blog/vercel-vs-wordpress-performance',
     type: 'article',
   },
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Vercel vs. WordPress: Real Performance Numbers for Local Businesses',
+  headline: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
   description:
     'We ran the same site on both platforms. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
   datePublished: '2026-02-22',
   dateModified: '2026-02-22',
   wordCount: 900,
-  keywords: 'Vercel vs WordPress, Next.js performance, Core Web Vitals comparison, Lighthouse scores, TTFB, local business website performance, AI crawler accessibility',
+  keywords: 'Next.js vs WordPress, Next.js performance, Core Web Vitals comparison, Lighthouse scores, TTFB, local business website performance, AI crawler accessibility',
   author: {
     '@type': 'Organization',
     name: 'Zero Click Strategies',
@@ -53,7 +53,7 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 3,
-      name: 'Vercel vs. WordPress: Performance Numbers',
+      name: 'Next.js vs. WordPress: Performance Numbers',
       item: 'https://zeroclickstrategies.com/blog/vercel-vs-wordpress-performance',
     },
   ],
@@ -65,10 +65,10 @@ const faqPageSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is Vercel significantly faster than WordPress hosting for local business sites?',
+      name: 'Is Next.js significantly faster than WordPress hosting for local business sites?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In our testing, Next.js on Vercel achieved an average mobile LCP of 1.2 seconds compared to 4.8 seconds for the equivalent WordPress site on managed WordPress hosting. Time to First Byte averaged 42ms on Vercel versus 680ms on WordPress shared hosting — a 16x difference that directly impacts both user experience and AI crawler accessibility.',
+        text: 'In our testing, Next.js on edge infrastructure achieved an average mobile LCP of 1.2 seconds compared to 4.8 seconds for the equivalent WordPress site on managed WordPress hosting. Time to First Byte averaged 42ms on edge infrastructure versus 680ms on WordPress shared hosting — a 16x difference that directly impacts both user experience and AI crawler accessibility.',
       },
     },
     {
@@ -76,7 +76,7 @@ const faqPageSchema = {
       name: 'Is moving from WordPress to Next.js worth the migration cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For businesses where local search visibility directly drives revenue, the migration ROI is consistently positive. The improvement in Core Web Vitals and schema quality typically produces measurable increases in organic visibility within 30 to 60 days of migration. The ongoing hosting cost on Vercel is also typically lower than managed WordPress hosting at comparable traffic levels.',
+        text: 'For businesses where local search visibility directly drives revenue, the migration ROI is consistently positive. The improvement in Core Web Vitals and schema quality typically produces measurable increases in organic visibility within 30 to 60 days of migration. The ongoing hosting cost on edge infrastructure is also typically lower than managed WordPress hosting at comparable traffic levels.',
       },
     },
     {
@@ -84,7 +84,7 @@ const faqPageSchema = {
       name: 'Can I improve my WordPress site performance without migrating?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Significant improvements are possible through aggressive optimization: caching plugins, image optimization, CDN integration, and removing unnecessary plugins. However, the performance ceiling on WordPress is lower than what Next.js on Vercel achieves, and the gap increases as plugin requirements grow. Optimized WordPress typically scores 55 to 70 on mobile PageSpeed Insights, compared to 95 to 98 for a well-built Next.js site.',
+        text: 'Significant improvements are possible through aggressive optimization: caching plugins, image optimization, CDN integration, and removing unnecessary plugins. However, the performance ceiling on WordPress is lower than what custom Next.js achieves, and the gap increases as plugin requirements grow. Optimized WordPress typically scores 55 to 70 on mobile PageSpeed Insights, compared to 95 to 98 for a well-built Next.js site.',
       },
     },
     {
@@ -92,13 +92,13 @@ const faqPageSchema = {
       name: 'What Lighthouse scores should a local business website aim for?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A well-built Next.js site on Vercel should score 90 or higher on all four Lighthouse categories on both desktop and mobile. For AI search visibility specifically, a mobile Performance score above 90 and a passing Core Web Vitals assessment are the most critical benchmarks. Sites below 70 on mobile Performance are at a significant disadvantage for AI Overview citations.',
+        text: 'A well-built Next.js site should score 90 or higher on all four Lighthouse categories on both desktop and mobile. For AI search visibility specifically, a mobile Performance score above 90 and a passing Core Web Vitals assessment are the most critical benchmarks. Sites below 70 on mobile Performance are at a significant disadvantage for AI Overview citations.',
       },
     },
   ],
 };
 
-export default function VercelVsWordPress() {
+export default function NextJsVsWordPress() {
   return (
     <>
       <script
@@ -127,7 +127,7 @@ export default function VercelVsWordPress() {
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-white truncate">Vercel vs. WordPress</span>
+            <span className="text-white truncate">Next.js vs. WordPress</span>
           </nav>
 
           <div className="flex items-center gap-3 mb-6">
@@ -136,7 +136,7 @@ export default function VercelVsWordPress() {
           </div>
 
           <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
-            Vercel vs. WordPress:{' '}
+            Next.js vs. WordPress:{' '}
             <span className="text-[#D4A94A]">Real Performance Numbers for Local Businesses</span>
           </h1>
 
@@ -179,7 +179,7 @@ export default function VercelVsWordPress() {
                   Matching Sites for Accurate Comparison
                 </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
-                  We compared five local service business sites — spanning HVAC, window cleaning, landscaping, plumbing, and window treatments — across both platforms. Each business had both a legacy WordPress site (their existing site, on shared or managed WordPress hosting) and a new Next.js site (rebuilt by our team, deployed on Vercel). Content was equivalent: the same page count, the same number of images, the same volume of text. The only variable was the technical platform.
+                  We compared five local service business sites — spanning HVAC, window cleaning, landscaping, plumbing, and window treatments — across both platforms. Each business had both a legacy WordPress site (their existing site, on shared or managed WordPress hosting) and a new Next.js site (rebuilt by our team, deployed on edge infrastructure). Content was equivalent: the same page count, the same number of images, the same volume of text. The only variable was the technical platform.
                 </p>
                 <p className="text-[#8A9BB5] leading-relaxed mb-6">
                   Testing was conducted using Google PageSpeed Insights (field data from Chrome User Experience Report), Lighthouse CI (lab data, five-run averages), and Google Search Console crawl data. TTFB was measured from six geographic locations using WebPageTest. All tests were run in February 2026, with WordPress sites in their most recently optimized state — caching plugins active, images compressed, unnecessary plugins removed.
@@ -213,7 +213,7 @@ export default function VercelVsWordPress() {
                         <tr className="border-b border-white/10">
                           <th className="text-left text-[#8A9BB5] pb-3 font-medium">Metric</th>
                           <th className="text-right text-red-400 pb-3 font-semibold">WordPress</th>
-                          <th className="text-right text-[#D4A94A] pb-3 font-semibold">Next.js/Vercel</th>
+                          <th className="text-right text-[#D4A94A] pb-3 font-semibold">Next.js/Edge</th>
                         </tr>
                       </thead>
                       <tbody className="space-y-2">
@@ -287,7 +287,7 @@ export default function VercelVsWordPress() {
                   Making the Right Infrastructure Decision
                 </h3>
                 <p className="text-[#8A9BB5] leading-relaxed mb-8">
-                  The data is clear. WordPress on shared or managed hosting is structurally unsuited to the performance requirements of AI search visibility in 2026. The platform was built for a different era of search — one that doesn&apos;t weight LCP, CLS, TTFB, and schema validity as heavily as the current environment does. Next.js on Vercel consistently meets every threshold that AI citation requires. For local service businesses where a single additional customer per month justifies the migration cost, the decision is straightforward.
+                  The data is clear. WordPress on shared or managed hosting is structurally unsuited to the performance requirements of AI search visibility in 2026. The platform was built for a different era of search — one that doesn&apos;t weight LCP, CLS, TTFB, and schema validity as heavily as the current environment does. Custom Next.js consistently meets every threshold that AI citation requires. For local service businesses where a single additional customer per month justifies the migration cost, the decision is straightforward.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-white/10">
@@ -313,7 +313,7 @@ export default function VercelVsWordPress() {
                   <div className="space-y-4">
                     <div className="border-b border-white/10 pb-4">
                       <p className="text-[#D4A94A] font-bold text-3xl font-poppins">16x</p>
-                      <p className="text-[#8A9BB5] text-sm font-poppins mt-1">faster TTFB: Vercel vs shared hosting</p>
+                      <p className="text-[#8A9BB5] text-sm font-poppins mt-1">faster TTFB: edge hosting vs shared hosting</p>
                     </div>
                     <div className="border-b border-white/10 pb-4">
                       <p className="text-[#D4A94A] font-bold text-3xl font-poppins">97</p>

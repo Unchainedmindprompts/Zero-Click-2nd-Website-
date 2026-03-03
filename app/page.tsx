@@ -188,7 +188,7 @@ export default function HomePage() {
                   </svg>
                 ),
                 title: 'Superior Website',
-                desc: 'Fast, clean Next.js sites on Vercel. No WordPress bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
+                desc: 'Fast, clean Next.js sites. No WordPress bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
                 delay: 0,
               },
               {
@@ -278,7 +278,7 @@ export default function HomePage() {
               },
               {
                 company: 'INW Basecamp',
-                category: 'Home Theater & AV',
+                category: 'Real Estate & Relocation',
                 metrics: [
                   { value: '96', label: 'Performance' },
                   { value: '96', label: 'Accessibility' },
@@ -397,7 +397,7 @@ export default function HomePage() {
                 </div>
                 <ul className="space-y-3 mb-8 flex-1">
                   {[
-                    'Next.js website on Vercel',
+                    'Custom Next.js website',
                     'Facebook pixel setup',
                     '3 custom audiences',
                     '3 ad creatives ready to launch',
