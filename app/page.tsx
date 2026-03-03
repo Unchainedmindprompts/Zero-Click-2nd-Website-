@@ -518,6 +518,7 @@ export default function HomePage() {
                 title: 'What Is Zero Click Search and Why Your Business Is Invisible',
                 excerpt:
                   'AI answers questions before users visit your site. If you\'re not structured for AI to read and cite, you\'re invisible to the fastest-growing search channel.',
+                href: '/blog/what-is-zero-click-search',
                 delay: 0,
               },
               {
@@ -525,6 +526,7 @@ export default function HomePage() {
                 title: 'Why WordPress Sites Are Losing the AI Search War',
                 excerpt:
                   'Bloated plugins, slow load times, and poor Core Web Vitals scores are pushing WordPress sites to the back of AI-generated answers. Here\'s what we use instead.',
+                href: '/blog/wordpress-losing-ai-search',
                 delay: 150,
               },
               {
@@ -532,6 +534,7 @@ export default function HomePage() {
                 title: 'How We Indexed 49 New Pages in 48 Hours',
                 excerpt:
                   'The complete breakdown of the technical SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types.',
+                href: '/blog/how-we-indexed-49-pages-48-hours',
                 delay: 300,
               },
             ].map((post, i) => (
@@ -558,7 +561,7 @@ export default function HomePage() {
                       {post.excerpt}
                     </p>
                     <Link
-                      href="/blog"
+                      href={post.href}
                       className="mt-4 text-[#D4A94A] text-sm font-semibold font-poppins hover:text-[#E8C478] transition-colors inline-flex items-center gap-1 group/link"
                     >
                       Read More
