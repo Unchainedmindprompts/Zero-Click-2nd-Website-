@@ -189,24 +189,24 @@ export default function CaseStudiesPage() {
             <ScrollReveal delay={0}>
               <div className="bg-[#162444] rounded-xl p-8 border border-white/5 h-full">
                 <h3 className="font-poppins font-bold text-xl text-white mb-6">
-                  The Launch System
+                  The Build Process
                 </h3>
                 <div className="space-y-6">
                   {[
                     {
-                      phase: 'Phase 1 — Morning',
-                      title: 'Landing Page Build',
-                      desc: 'Next.js landing page built with Arizona-specific copy, imagery, and LocalBusiness schema targeting the Phoenix/Scottsdale market.',
+                      phase: 'Phase 1 — Foundation',
+                      title: 'Site Build',
+                      desc: 'Next.js site built with relocation-focused content, Northern Idaho lifestyle copy, and LocalBusiness schema targeting families relocating from the Pacific Northwest and California.',
                     },
                     {
-                      phase: 'Phase 2 — Afternoon',
+                      phase: 'Phase 2 — Validation',
                       title: 'Schema Validation',
                       desc: 'JSON-LD implemented and validated through Google Rich Results Test. All rich result types returned valid with zero warnings.',
                     },
                     {
-                      phase: 'Phase 3 — Evening',
-                      title: 'Facebook Campaigns Live',
-                      desc: 'Pixel installed, custom audiences built, three campaigns launched targeting homeowners in target zip codes.',
+                      phase: 'Phase 3 — Deployment',
+                      title: 'AI Visibility Confirmed',
+                      desc: 'Sitemap submitted, IndexNow signal sent, rich results firing on launch. Site structured to be cited by AI systems answering relocation queries.',
                     },
                   ].map((phase) => (
                     <div key={phase.phase} className="border-l-2 border-[#D4A94A]/30 pl-4">
