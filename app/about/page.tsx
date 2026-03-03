@@ -109,7 +109,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div>
                   <h2 className="font-poppins font-bold text-3xl text-white mb-4">
-                    20 Years of Getting It Wrong — Then Getting It Right
+                    30 Years of Sales. 23 Years of Building. Here&apos;s What Actually Works.
                   </h2>
                   <p className="text-[#8A9BB5] leading-relaxed font-poppins">
                     After relocating to Northern Idaho, I did what most business owners do — looked for local marketing help to rebuild visibility in a new market. What I found was that most agencies were still selling yesterday&apos;s playbook. Nobody had clear answers about AI search, answer engines, or why the old strategies were losing ground fast.
