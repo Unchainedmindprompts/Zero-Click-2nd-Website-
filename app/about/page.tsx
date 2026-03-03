@@ -61,12 +61,9 @@ export default function AboutPage() {
                 {/* Location badge overlay */}
                 <div className="absolute bottom-6 left-6 right-6 bg-[#0A1628]/90 backdrop-blur-sm rounded-xl p-4 border border-[#D4A94A]/20">
                   <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-[#D4A94A] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
                     <div>
-                      <div className="font-poppins font-semibold text-white text-sm">Post Falls, Idaho</div>
-                      <div className="text-[#8A9BB5] text-xs font-poppins">Serving businesses nationwide</div>
+                      <div className="font-poppins font-semibold text-white text-sm">Mark Abplanalp</div>
+                      <div className="text-[#8A9BB5] text-xs font-poppins">Owner, Zero Click Strategies</div>
                     </div>
                   </div>
                 </div>
