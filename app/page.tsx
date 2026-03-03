@@ -68,7 +68,7 @@ export default function HomePage() {
             className="reveal visible"
             style={{ animation: 'fadeIn 0.8s ease forwards' }}
           >
-            <p className="eyebrow mb-6">AI SEARCH OPTIMIZATION</p>
+            <p className="eyebrow mb-6">AI STRATEGY & SEARCH OPTIMIZATION</p>
           </div>
           <h1
             className="font-poppins font-bold text-[40px] md:text-[64px] text-white leading-tight mb-6"
@@ -82,7 +82,7 @@ export default function HomePage() {
             className="font-poppins font-normal text-base md:text-xl text-[#8A9BB5] max-w-[600px] mx-auto leading-relaxed"
             style={{ marginTop: '24px', opacity: 0, animation: 'heroFadeIn 0.6s ease 0.2s forwards' }}
           >
-            We build the websites, content, and campaigns that make you the answer.
+            We help businesses understand, adapt, and win in an AI-first world.
           </p>
           <div
             style={{ marginTop: '36px', opacity: 0, animation: 'heroFadeIn 0.6s ease 0.4s forwards' }}
