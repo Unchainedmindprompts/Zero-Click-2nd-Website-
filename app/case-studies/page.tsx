@@ -120,11 +120,10 @@ export default function CaseStudiesPage() {
                 <div className="space-y-4">
                   {[
                     { step: '1', action: 'Migrated from WordPress to Next.js App Router' },
-                    { step: '2', action: 'Built 49 service and location pages with unique content' },
-                    { step: '3', action: 'Implemented JSON-LD schema on every page type' },
-                    { step: '4', action: 'Submitted XML sitemap to Google Search Console' },
-                    { step: '5', action: 'Set up Index Now API for instant indexing signals' },
-                    { step: '6', action: 'Validated all rich results in Google Rich Results Test' },
+                    { step: '2', action: 'Implemented JSON-LD schema on every page type' },
+                    { step: '3', action: 'Submitted XML sitemap to Google Search Console' },
+                    { step: '4', action: 'Set up Index Now API for instant indexing signals' },
+                    { step: '5', action: 'Validated all rich results in Google Rich Results Test' },
                   ].map((item) => (
                     <div key={item.step} className="flex items-start gap-4">
                       <div className="w-6 h-6 rounded-full bg-[#D4A94A]/20 flex items-center justify-center flex-shrink-0">
