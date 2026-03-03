@@ -109,31 +109,39 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div>
                   <h2 className="font-poppins font-bold text-3xl text-white mb-4">
-                    20 Years of Getting It Wrong — Then Getting It Right
+                    30 Years of Sales. 23 Years of Building. Here&apos;s What Actually Works.
                   </h2>
                   <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                    Two decades of entrepreneurship teaches you a lot about what doesn&apos;t work. Traditional
-                    SEO that took 12 months to maybe produce results. WordPress, Wix, and Squarespace sites that fell apart every
-                    time a plugin or template updated. Ad campaigns that drained budgets without building anything lasting.
+                    After relocating to Northern Idaho, I did what most business owners do — looked for local marketing help to rebuild visibility in a new market. What I found was that most agencies were still selling yesterday&apos;s playbook. Nobody had clear answers about AI search, answer engines, or why the old strategies were losing ground fast.
                   </p>
                 </div>
 
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  Then AI search happened. And for the first time, the rules of digital marketing started
-                  making sense — if you understood them. The businesses that structured their content and
-                  websites correctly were getting cited by AI. The rest were becoming invisible.
+                  That experience led me to ask the same questions you&apos;re probably asking right now.
                 </p>
 
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  Rather than theorize about it, the approach was to test it — on Luxe Window Works and
-                  INW Basecamp, two real businesses with real customers and real revenue on the line.
-                  The results were immediate and measurable: 49 pages indexed in 48 hours, schema
-                  validated across four rich result types, Facebook campaigns generating leads same week.
+                  Will AI replace what I&apos;ve built? Are my competitors already ahead of me? Is what worked last year even relevant anymore?
                 </p>
 
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  Zero Click Strategies was built from that proof. Not from a marketing playbook, but
-                  from businesses that had to generate leads or close. That&apos;s the difference.
+                  These aren&apos;t irrational fears. The pace of change is unlike anything most of us have experienced in business. And the truth is — most marketing agencies don&apos;t have clear answers because they&apos;re still catching up themselves.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  So I spent a year finding the answers. Testing and implementing on my own businesses with real revenue on the line. What I discovered is that AI isn&apos;t the enemy of small business — it&apos;s actually the great equalizer, if you know how to use it.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  The businesses that adapt now won&apos;t just survive. They&apos;ll have leverage they&apos;ve never had before.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  But believing the AI revolution isn&apos;t coming — or that it won&apos;t affect your business — is a recipe for irrelevance. The only question is whether you get ahead of it or get left behind.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  That&apos;s the conversation I started Zero Click Strategies to have.
                 </p>
 
                 <div className="pt-4">
@@ -162,17 +170,17 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Why Vercel Over WordPress',
+                title: 'Why Next.js Over WordPress',
                 icon: (
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 ),
                 points: [
-                  'WordPress, Wix, and Squarespace sites average 3–5 second load times. Vercel averages under 1 second.',
+                  'WordPress, Wix, and Squarespace sites average 3–5 second load times. Our Next.js sites average under 1 second.',
                   'Plugin dependencies create conflicts that break Core Web Vitals.',
                   'AI crawlers prioritize fast, clean HTML — not plugin-rendered content.',
-                  'Vercel\'s edge network delivers content globally without additional CDN costs.',
+                  'Our edge network delivers content globally without additional CDN costs.',
                 ],
                 delay: 0,
               },
