@@ -171,18 +171,15 @@ export default function HomePage() {
       <section id="solution" className="py-24 md:py-32 bg-[#0F1E3C] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">THE SOLUTION</p>
+            <p className="eyebrow text-center mb-4">HOW WE HELP</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-4 leading-tight">
-              We Build Lead Generation Systems
+            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
+              We Guide Businesses to Win in an AI-First World
             </h2>
-            <p className="font-poppins font-semibold text-2xl md:text-3xl text-[#D4A94A] text-center mb-16">
-              That Work in 2026
-            </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: (
@@ -213,6 +210,16 @@ export default function HomePage() {
                 title: 'Paid Campaigns',
                 desc: 'Facebook ads with dedicated landing pages that match the message exactly. Pixel, audiences, and copy built to convert.',
                 delay: 300,
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                ),
+                title: 'Free Discovery Call',
+                desc: 'Not sure where to start? Book a free 20-minute call. We\'ll listen to your challenges and concerns, assess your current visibility, and tell you honestly whether we can help.',
+                delay: 450,
               },
             ].map((card, i) => (
               <ScrollReveal key={i} delay={card.delay}>
