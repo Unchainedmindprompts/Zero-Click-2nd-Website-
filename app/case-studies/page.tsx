@@ -5,7 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'Case Studies — Real Results from AI Search Optimization',
   description:
-    'See real results: 49 pages indexed in 48 hours for Luxe Window Works, same-day schema validation for INW Basecamp Arizona. Zero Click Strategies proves the methodology first.',
+    'See real results: 49 pages indexed in 48 hours for Luxe Window Works. Zero Click Strategies proves the methodology first.',
 };
 
 const breadcrumbSchema = {
@@ -137,134 +137,6 @@ export default function CaseStudiesPage() {
               </div>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* Case Study 2: INW Basecamp */}
-      <section id="inw" className="py-24 md:py-32 bg-[#0A1628] px-4">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <div className="flex flex-wrap items-center gap-4 mb-8">
-              <span className="category-tag">Real Estate & Relocation</span>
-              <span className="category-tag">Landing Page</span>
-              <span className="category-tag">Facebook Ads</span>
-            </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-4 leading-tight">
-              INW Basecamp — Arizona Market
-            </h2>
-            <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl leading-relaxed mb-12">
-              A new market expansion campaign that went from concept to live landing page, validated
-              schema, and active Facebook campaigns in a single day.
-            </p>
-          </ScrollReveal>
-
-          {/* Big metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {[
-              { value: '1', label: 'Day to full launch', sub: 'concept to live' },
-              { value: '100%', label: 'Schema validation', sub: 'zero errors' },
-              { value: 'Same', label: 'Day rich results', sub: 'firing on launch day' },
-              { value: '3', label: 'Ad campaigns live', sub: 'at launch' },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
-                <div className="bg-[#162444] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
-                  <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="font-poppins font-semibold text-white text-sm mb-1">
-                    {stat.label}
-                  </div>
-                  <div className="text-[#8A9BB5] text-xs font-poppins">
-                    {stat.sub}
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Campaign breakdown */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <ScrollReveal delay={0}>
-              <div className="bg-[#162444] rounded-xl p-8 border border-white/5 h-full">
-                <h3 className="font-poppins font-bold text-xl text-white mb-6">
-                  The Build Process
-                </h3>
-                <div className="space-y-6">
-                  {[
-                    {
-                      phase: 'Phase 1 — Foundation',
-                      title: 'Site Build',
-                      desc: 'Next.js site built with relocation-focused content, Northern Idaho lifestyle copy, and LocalBusiness schema targeting families relocating from the Pacific Northwest and California.',
-                    },
-                    {
-                      phase: 'Phase 2 — Validation',
-                      title: 'Schema Validation',
-                      desc: 'JSON-LD implemented and validated through Google Rich Results Test. All rich result types returned valid with zero warnings.',
-                    },
-                    {
-                      phase: 'Phase 3 — Deployment',
-                      title: 'AI Visibility Confirmed',
-                      desc: 'Sitemap submitted, IndexNow signal sent, rich results firing on launch. Site structured to be cited by AI systems answering relocation queries.',
-                    },
-                  ].map((phase) => (
-                    <div key={phase.phase} className="border-l-2 border-[#D4A94A]/30 pl-4">
-                      <div className="text-[#D4A94A] text-xs font-poppins font-semibold uppercase tracking-wider mb-1">
-                        {phase.phase}
-                      </div>
-                      <div className="font-poppins font-semibold text-white text-sm mb-2">
-                        {phase.title}
-                      </div>
-                      <div className="text-[#8A9BB5] text-xs font-poppins leading-relaxed">
-                        {phase.desc}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={150}>
-              <div className="space-y-6">
-                <div className="bg-[#162444] rounded-xl p-8 border border-[#D4A94A]/20">
-                  <h3 className="font-poppins font-bold text-lg text-white mb-4">
-                    Schema Validation Results
-                  </h3>
-                  <div className="space-y-3">
-                    {[
-                      { type: 'LocalBusiness', result: 'Valid — 0 errors, 0 warnings' },
-                      { type: 'BreadcrumbList', result: 'Valid — 0 errors, 0 warnings' },
-                      { type: 'Service', result: 'Valid — 0 errors, 0 warnings' },
-                    ].map((item) => (
-                      <div key={item.type} className="flex items-center justify-between">
-                        <span className="text-white font-poppins text-sm">{item.type}</span>
-                        <span className="text-green-400 text-xs font-poppins font-semibold">{item.result}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-[#162444] rounded-xl p-8 border border-white/5">
-                  <h3 className="font-poppins font-bold text-lg text-white mb-4">
-                    Ad Campaign Structure
-                  </h3>
-                  <div className="space-y-3">
-                    {[
-                      { campaign: 'Awareness', target: 'Homeowners, HHI $100k+, AZ' },
-                      { campaign: 'Consideration', target: 'Home theater interest, AZ' },
-                      { campaign: 'Retargeting', target: 'Landing page visitors 30-day' },
-                    ].map((item) => (
-                      <div key={item.campaign}>
-                        <div className="font-poppins font-semibold text-white text-sm">{item.campaign}</div>
-                        <div className="text-[#8A9BB5] text-xs font-poppins">{item.target}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
         </div>
       </section>
 
