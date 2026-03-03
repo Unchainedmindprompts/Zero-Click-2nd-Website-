@@ -524,11 +524,11 @@ export default function HomePage() {
                 delay: 150,
               },
               {
-                category: 'Case Studies',
-                title: 'How We Built Sites That Score 93–100 on PageSpeed',
+                category: 'AEO & AI Visibility',
+                title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
                 excerpt:
-                  'The complete breakdown of the technical SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types.',
-                href: '/blog/how-we-indexed-49-pages-48-hours',
+                  'AI agents crawl your site on a token budget. If your site burns through that budget before answering the question, you don\'t get recommended. Here\'s what token-efficient looks like.',
+                href: '/blog/why-website-burning-ai-tokens',
                 delay: 300,
               },
             ].map((post, i) => (
