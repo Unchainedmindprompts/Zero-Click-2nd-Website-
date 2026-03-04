@@ -26,6 +26,7 @@ const projects = [
     category: 'Real Estate & Relocation',
     description:
       'Northern Idaho real estate and relocation resource. Built on Next.js with full schema markup and AEO-optimized content.',
+    buttonText: 'Visit Site',
   },
   {
     url: 'https://www.luxewindowworks.com/',
@@ -34,6 +35,25 @@ const projects = [
     category: 'Home Services',
     description:
       'Custom window treatment company serving Northern Idaho. Built on Next.js with location pages, service schema, and AI-optimized content.',
+    buttonText: 'Visit Site',
+  },
+  {
+    url: 'https://www.inwbasecamp.com/arizona',
+    screenshot: '/images/inwbasecamp-arizona.webp',
+    title: 'INW Basecamp — Arizona Campaign',
+    category: 'REAL ESTATE & RELOCATION',
+    description:
+      'Dedicated landing page targeting North Scottsdale, Cave Creek, and Paradise Valley homeowners. Built for Facebook ad traffic with schema markup and AI-optimized content.',
+    buttonText: 'Visit Page',
+  },
+  {
+    url: 'https://www.inwbasecamp.com/cda-lifestyle.html',
+    screenshot: '/images/inwbasecamp-cda-lifestyle.webp',
+    title: 'INW Basecamp — CDA Lifestyle',
+    category: 'REAL ESTATE & RELOCATION',
+    description:
+      'Hyper-local lifestyle content page built for LLM citation and organic discovery. AEO-optimized long-form content targeting Northern Idaho relocation searches.',
+    buttonText: 'Visit Page',
   },
 ];
 
@@ -96,7 +116,7 @@ export default function OurWorkPage() {
                       rel="noopener noreferrer"
                       className="btn-gold text-sm font-semibold px-6 py-3 rounded-md inline-block text-center"
                     >
-                      Visit Site
+                      {project.buttonText}
                     </Link>
                   </div>
                 </div>
