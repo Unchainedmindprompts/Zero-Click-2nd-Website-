@@ -68,7 +68,7 @@ export default function HomePage() {
             className="reveal visible"
             style={{ animation: 'fadeIn 0.8s ease forwards' }}
           >
-            <p className="eyebrow mb-6">AI SEARCH OPTIMIZATION</p>
+            <p className="eyebrow mb-6">AI STRATEGY & SEARCH OPTIMIZATION</p>
           </div>
           <h1
             className="font-poppins font-bold text-[40px] md:text-[64px] text-white leading-tight mb-6"
@@ -82,7 +82,7 @@ export default function HomePage() {
             className="font-poppins font-normal text-base md:text-xl text-[#8A9BB5] max-w-[600px] mx-auto leading-relaxed"
             style={{ marginTop: '24px', opacity: 0, animation: 'heroFadeIn 0.6s ease 0.2s forwards' }}
           >
-            We build the websites, content, and campaigns that make you the answer.
+            We help businesses understand, adapt, and win in an AI-first world.
           </p>
           <div
             style={{ marginTop: '36px', opacity: 0, animation: 'heroFadeIn 0.6s ease 0.4s forwards' }}
@@ -171,18 +171,15 @@ export default function HomePage() {
       <section id="solution" className="py-24 md:py-32 bg-[#0F1E3C] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">THE SOLUTION</p>
+            <p className="eyebrow text-center mb-4">HOW WE HELP</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-4 leading-tight">
-              We Build Lead Generation Systems
+            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
+              We Guide Businesses to Win in an AI-First World
             </h2>
-            <p className="font-poppins font-semibold text-2xl md:text-3xl text-[#D4A94A] text-center mb-16">
-              That Work in 2026
-            </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: (
@@ -191,7 +188,7 @@ export default function HomePage() {
                   </svg>
                 ),
                 title: 'Superior Website',
-                desc: 'Fast, clean Next.js sites on Vercel. No template platform bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
+                desc: 'Fast, clean Next.js sites. No WordPress bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
                 delay: 0,
               },
               {
@@ -213,6 +210,16 @@ export default function HomePage() {
                 title: 'Paid Campaigns',
                 desc: 'Facebook ads with dedicated landing pages that match the message exactly. Pixel, audiences, and copy built to convert.',
                 delay: 300,
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                ),
+                title: 'Free Discovery Call',
+                desc: 'Not sure where to start? Book a free 20-minute call. We\'ll listen to your challenges and concerns, assess your current visibility, and tell you honestly whether we can help.',
+                delay: 450,
               },
             ].map((card, i) => (
               <ScrollReveal key={i} delay={card.delay}>
@@ -271,7 +278,7 @@ export default function HomePage() {
               },
               {
                 company: 'INW Basecamp',
-                category: 'Home Theater & AV',
+                category: 'Real Estate & Relocation',
                 metrics: [
                   { value: '96', label: 'Performance' },
                   { value: '96', label: 'Accessibility' },
@@ -351,8 +358,8 @@ export default function HomePage() {
 
           <ScrollReveal delay={300}>
             <div className="text-center mt-12">
-              <Link href="/case-studies" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-                See Full Case Studies
+              <Link href="/our-work" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+                See Our Work
               </Link>
             </div>
           </ScrollReveal>
@@ -381,6 +388,7 @@ export default function HomePage() {
                 title: 'What Is Zero Click Search and Why Your Business Is Invisible',
                 excerpt:
                   'AI answers questions before users visit your site. If you\'re not structured for AI to read and cite, you\'re invisible to the fastest-growing search channel.',
+                href: '/blog/what-is-zero-click-search',
                 delay: 0,
               },
               {
@@ -388,13 +396,15 @@ export default function HomePage() {
                 title: 'Why WordPress Sites Are Losing the AI Search War',
                 excerpt:
                   'Bloated plugins, slow load times, and poor Core Web Vitals scores are pushing WordPress sites to the back of AI-generated answers. Here\'s what we use instead.',
+                href: '/blog/wordpress-losing-ai-search',
                 delay: 150,
               },
               {
-                category: 'Case Studies',
-                title: 'How We Built Sites That Score 93–100 on PageSpeed',
+                category: 'AEO & AI Visibility',
+                title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
                 excerpt:
-                  'The complete breakdown of the technical SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types.',
+                  'AI agents crawl your site on a token budget. If your site burns through that budget before answering the question, you don\'t get recommended. Here\'s what token-efficient looks like.',
+                href: '/blog/why-website-burning-ai-tokens',
                 delay: 300,
               },
             ].map((post, i) => (
@@ -421,7 +431,7 @@ export default function HomePage() {
                       {post.excerpt}
                     </p>
                     <Link
-                      href="/blog"
+                      href={post.href}
                       className="mt-4 text-[#D4A94A] text-sm font-semibold font-poppins hover:text-[#E8C478] transition-colors inline-flex items-center gap-1 group/link"
                     >
                       Read More

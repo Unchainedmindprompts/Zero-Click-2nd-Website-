@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const categories = ['All', 'AEO & AI Search', 'Website Performance', 'Facebook Ads', 'Case Studies'];
+const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'Website Performance', 'Facebook Ads'];
 
 const blogPosts = [
   {
@@ -27,8 +27,8 @@ const blogPosts = [
   },
   {
     slug: 'how-we-indexed-49-pages-48-hours',
-    category: 'Case Studies',
-    title: 'How We Indexed 49 New Pages in 48 Hours',
+    category: 'Website Performance',
+    title: 'How We Built Sites That Score 93–100 on PageSpeed',
     excerpt:
       'The complete technical breakdown of the SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types — including the exact schema types we used.',
     date: 'February 1, 2026',
@@ -64,20 +64,11 @@ const blogPosts = [
   {
     slug: 'vercel-vs-wordpress-performance',
     category: 'Website Performance',
-    title: 'Vercel vs. WordPress: Real Performance Numbers for Local Businesses',
+    title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
     excerpt:
       'We ran the same site on both platforms. The results are not close. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
     date: 'February 22, 2026',
     readTime: '8 min read',
-  },
-  {
-    slug: 'inw-basecamp-arizona-launch',
-    category: 'Case Studies',
-    title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
-    excerpt:
-      'From concept to live landing page, validated schema, and active Facebook campaigns in one day. The complete behind-the-scenes story of how we opened a new market for an existing business in hours.',
-    date: 'February 26, 2026',
-    readTime: '7 min read',
   },
   {
     slug: 'custom-audiences-facebook',
@@ -87,6 +78,15 @@ const blogPosts = [
       'Most businesses set up one broad audience and wonder why their ads don\'t convert. These three layered audiences — awareness, intent, and retargeting — are the foundation of every campaign we build.',
     date: 'February 27, 2026',
     readTime: '6 min read',
+  },
+  {
+    slug: 'why-website-burning-ai-tokens',
+    category: 'AEO & AI Visibility',
+    title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
+    excerpt:
+      'AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don\'t get recommended. Here\'s what token-efficient looks like.',
+    date: 'March 3, 2026',
+    readTime: '7 min read',
   },
 ];
 
