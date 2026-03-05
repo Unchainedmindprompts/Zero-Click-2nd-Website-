@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Case Studies — Real Results from AI Search Optimization',
+  title: 'Our Work — Real Results from AI Search Optimization',
   description:
     'See real results: 49 pages indexed in 48 hours for Luxe Window Works, same-day schema validation for INW Basecamp Arizona. Zero Click Strategies proves the methodology first.',
 };
@@ -12,19 +12,20 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://zeroclickstrategies.com/case-studies' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
+    { '@type': 'ListItem', position: 2, name: 'Our Work', item: 'https://www.zeroclickstrategies.com/our-work' },
   ],
 };
 
-export default function CaseStudiesPage() {
+export default function OurWorkPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#080810] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-50 pointer-events-none" />
+      <section className="pt-36 pb-20 bg-[#05050f] px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">CASE STUDIES</p>
           <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
@@ -40,7 +41,7 @@ export default function CaseStudiesPage() {
       <div className="section-divider" />
 
       {/* Case Study 1: Luxe Window Works */}
-      <section id="luxe" className="py-24 md:py-32 bg-[#05050f] px-4">
+      <section id="luxe" className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -85,7 +86,7 @@ export default function CaseStudiesPage() {
           <ScrollReveal delay={200}>
             <div className="bg-[#0d0d1a] rounded-2xl p-8 md:p-12 mb-16 border border-white/5">
               <h3 className="font-poppins font-bold text-2xl text-white mb-8">
-                Pages Indexed — Before & After
+                Pages Indexed — Before &amp; After
               </h3>
               <div className="flex items-end gap-8 md:gap-16">
                 {/* Before bar */}
@@ -93,10 +94,9 @@ export default function CaseStudiesPage() {
                   <div className="text-[#8A9BB5] font-poppins font-bold text-2xl">3</div>
                   <div className="w-full relative" style={{ height: '160px' }}>
                     <div
-                      className="absolute bottom-0 left-0 right-0 bg-[#8A9BB5]/20 rounded-t-lg border border-[#8A9BB5]/30 flex items-start justify-center pt-3"
+                      className="absolute bottom-0 left-0 right-0 bg-[#8A9BB5]/20 rounded-t-lg border border-[#8A9BB5]/30"
                       style={{ height: '12%' }}
-                    >
-                    </div>
+                    />
                   </div>
                   <div className="text-center">
                     <div className="text-[#8A9BB5] text-sm font-poppins font-semibold">BEFORE</div>
@@ -119,7 +119,7 @@ export default function CaseStudiesPage() {
                       className="absolute bottom-0 left-0 right-0 rounded-t-lg"
                       style={{
                         height: '100%',
-                        background: 'linear-gradient(to top, #D4A94A33, #D4A94A66)',
+                        background: 'linear-gradient(to top, rgba(212,169,74,0.2), rgba(212,169,74,0.4))',
                         border: '1px solid #D4A94A',
                       }}
                     />
@@ -195,11 +195,11 @@ export default function CaseStudiesPage() {
       <div className="section-divider" />
 
       {/* Case Study 2: INW Basecamp */}
-      <section id="inw" className="py-24 md:py-32 bg-[#080810] px-4">
+      <section id="inw" className="py-24 md:py-32 bg-[#05050f] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="flex flex-wrap items-center gap-4 mb-8">
-              <span className="category-tag">Real Estate & Relocation</span>
+              <span className="category-tag">Real Estate &amp; Relocation</span>
               <span className="category-tag">Landing Page</span>
               <span className="category-tag">Facebook Ads</span>
             </div>
@@ -323,7 +323,7 @@ export default function CaseStudiesPage() {
       <div className="section-divider" />
 
       {/* CTA */}
-      <section className="py-24 bg-[#05050f] px-4">
+      <section className="py-24 bg-[#080810] px-4">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6">
