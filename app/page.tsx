@@ -568,15 +568,6 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={300}>
-            <Link
-              href="/contact"
-              className="btn-gold font-poppins font-bold text-base inline-block rounded-md"
-              style={{ padding: '18px 44px' }}
-            >
-              Book Your Free AEO Audit — 20 Minutes. No Obligation.
-            </Link>
-          </ScrollReveal>
         </div>
       </section>
 
