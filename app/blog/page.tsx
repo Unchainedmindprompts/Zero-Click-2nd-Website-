@@ -145,69 +145,36 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 50}>
-                <article className="bg-[#0d0d1a] rounded-xl overflow-hidden border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300 group h-full flex flex-col">
-                  {/* Abstract SVG header */}
-                  <div className="h-44 bg-gradient-to-br from-[#05050f] to-[#0d0d1a] flex items-center justify-center relative overflow-hidden flex-shrink-0">
-                    <svg
-                      viewBox="0 0 300 175"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-full h-full opacity-30"
+                <article className="bg-[#0d0d1a] rounded-lg border border-white/5 hover:border-[#D4A94A] hover:-translate-y-0.5 transition-all duration-300 group h-full flex flex-col p-7">
+                  <div className="flex items-center justify-between mb-4">
+                    <span
+                      className={`font-poppins font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-full ${
+                        post.category === 'AEO & AI Search' || post.category === 'AEO & AI Visibility'
+                          ? 'bg-[#D4A94A] text-[#07070f]'
+                          : 'border border-[#D4A94A] text-[#D4A94A] bg-transparent'
+                      }`}
                     >
-                      {i % 3 === 0 && (
-                        <>
-                          <circle cx="150" cy="87" r="60" stroke="#D4A94A" strokeWidth="0.5" />
-                          <circle cx="150" cy="87" r="40" stroke="#D4A94A" strokeWidth="0.5" />
-                          <circle cx="150" cy="87" r="20" stroke="#D4A94A" strokeWidth="0.5" />
-                          <line x1="0" y1="87" x2="300" y2="87" stroke="#D4A94A" strokeWidth="0.3" />
-                          <line x1="150" y1="0" x2="150" y2="175" stroke="#D4A94A" strokeWidth="0.3" />
-                        </>
-                      )}
-                      {i % 3 === 1 && (
-                        <>
-                          <path d="M 0 87 Q 75 20 150 87 T 300 87" fill="none" stroke="#D4A94A" strokeWidth="0.8" />
-                          <path d="M 0 107 Q 75 40 150 107 T 300 107" fill="none" stroke="#D4A94A" strokeWidth="0.5" />
-                          <path d="M 0 67 Q 75 0 150 67 T 300 67" fill="none" stroke="#D4A94A" strokeWidth="0.5" />
-                          <path d="M 0 127 Q 75 60 150 127 T 300 127" fill="none" stroke="#D4A94A" strokeWidth="0.3" />
-                          <path d="M 0 47 Q 75 -20 150 47 T 300 47" fill="none" stroke="#D4A94A" strokeWidth="0.3" />
-                        </>
-                      )}
-                      {i % 3 === 2 && (
-                        <>
-                          <rect x="60" y="27" width="180" height="120" stroke="#D4A94A" strokeWidth="0.5" rx="4" />
-                          <rect x="80" y="47" width="140" height="80" stroke="#D4A94A" strokeWidth="0.5" rx="4" />
-                          <rect x="100" y="67" width="100" height="40" stroke="#D4A94A" strokeWidth="0.5" rx="4" />
-                          <line x1="60" y1="87" x2="240" y2="87" stroke="#D4A94A" strokeWidth="0.3" />
-                          <line x1="150" y1="27" x2="150" y2="147" stroke="#D4A94A" strokeWidth="0.3" />
-                        </>
-                      )}
-                    </svg>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d1a] to-transparent" />
+                      {post.category}
+                    </span>
+                    <span className="text-[#8A9BB5] text-xs font-poppins">{post.readTime}</span>
                   </div>
-
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="category-tag">{post.category}</span>
-                      <span className="text-[#8A9BB5] text-xs font-poppins">{post.readTime}</span>
-                    </div>
-                    <h2 className="font-poppins font-bold text-lg text-white mb-3 leading-snug group-hover:text-[#D4A94A] transition-colors flex-1">
-                      {post.title}
-                    </h2>
-                    <p className="text-[#8A9BB5] text-sm leading-relaxed font-poppins mb-4">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
-                      <span className="text-[#8A9BB5] text-xs font-poppins">{post.date}</span>
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="text-[#D4A94A] text-sm font-semibold font-poppins hover:text-[#E8C478] transition-colors inline-flex items-center gap-1 group/link"
-                      >
-                        Read More
-                        <svg className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
+                  <h2 className="font-poppins font-bold text-lg text-white mb-3 leading-snug group-hover:text-[#D4A94A] transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="text-[#8A9BB5] text-sm leading-relaxed font-poppins mb-4 flex-1">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                    <span className="text-[#8A9BB5] text-xs font-poppins">{post.date}</span>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-[#D4A94A] text-sm font-semibold font-poppins hover:text-[#E8C478] transition-colors inline-flex items-center gap-1 group/link"
+                    >
+                      Read More
+                      <svg className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </article>
               </ScrollReveal>
