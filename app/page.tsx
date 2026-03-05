@@ -415,139 +415,110 @@ export default function HomePage() {
       {/* Section divider */}
       <div className="section-divider" />
 
-      {/* ===== SECTION 6 — PROOF ===== */}
+      {/* ===== SECTION 6 — REAL RESULTS ===== */}
       <section id="proof" className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
+
           <ScrollReveal>
-            <p className="eyebrow text-center mb-5">REAL RESULTS</p>
+            <p className="eyebrow text-center mb-5">WHY THE INFRASTRUCTURE MATTERS</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[56px] text-white text-center mb-5 leading-[1.15]">
-              Sites AI agents actually read.
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[56px] text-white text-center mb-10 leading-[1.15]">
+              We don&apos;t build websites for hits.{' '}
+              <br className="hidden lg:block" />
+              We build{' '}
+              <span className="text-[#D4A94A]">high-fidelity data structures</span>{' '}
+              AI engines trust.
             </h2>
-            <p className="font-poppins text-[#8A9BB5] text-lg text-center max-w-2xl mx-auto mb-16 leading-relaxed">
-              Every site we build scores 93–100 on PageSpeed. Zero invalid schema items.
-              Built to be the first result machines trust.
-            </p>
           </ScrollReveal>
 
-          {/* Client score cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          {/* Advisor pull quote */}
+          <ScrollReveal delay={150}>
+            <blockquote className="border-l-4 border-[#D4A94A] bg-[#0d0d1a] rounded-r-xl px-8 py-8 max-w-3xl mx-auto mb-20">
+              <p className="font-poppins text-white/90 text-base md:text-lg leading-relaxed italic">
+                &ldquo;These aren&apos;t vanity metrics. They&apos;re the reason ChatGPT recommends
+                our clients while their competitors remain invisible. Every score below is a
+                machine-readability signal — the difference between being cited as the answer
+                and being skipped entirely.&rdquo;
+              </p>
+            </blockquote>
+          </ScrollReveal>
+
+          {/* Three reframed stat blocks */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
             {[
               {
-                company: 'Zero Click Strategies',
-                category: 'Marketing Agency',
-                metrics: [
-                  { value: '100', label: 'Performance' },
-                  { value: '100', label: 'Accessibility' },
-                  { value: '100', label: 'Best Practices' },
-                  { value: '91', label: 'SEO' },
-                ],
+                end: 0.8,
+                decimals: 1,
+                suffix: 's',
+                label: 'MACHINE PRIORITY',
+                descriptor:
+                  'AI crawlers operate on a limited token budget and skip slow, heavy sites to save compute costs. Our Next.js + Edge infrastructure loads in under a second — making your site the first one AI agents read and the last one they need.',
                 delay: 0,
               },
               {
-                company: 'INW Basecamp',
-                category: 'Real Estate & Relocation',
-                metrics: [
-                  { value: '96', label: 'Performance' },
-                  { value: '96', label: 'Accessibility' },
-                  { value: '100', label: 'Best Practices' },
-                  { value: '100', label: 'SEO' },
-                ],
+                end: 0,
+                decimals: 0,
+                suffix: '',
+                label: 'SOURCE OF TRUTH — ZERO RECOGNITION ERRORS',
+                descriptor:
+                  'Every site we build has zero invalid schema items. AI never has to guess what your business offers. Your services, location, expertise, and authority are encoded as machine-readable facts — cited with 100% certainty.',
                 delay: 150,
               },
               {
-                company: 'Luxe Window Works',
-                category: 'Home Services',
-                metrics: [
-                  { value: '93', label: 'Performance' },
-                  { value: '96', label: 'Accessibility' },
-                  { value: '100', label: 'Best Practices' },
-                  { value: '100', label: 'SEO' },
-                ],
+                end: 66,
+                decimals: 0,
+                suffix: '%',
+                label: 'ANSWER LAYER ADVANTAGE',
+                descriptor:
+                  '77% of mobile searches end without a click. Our mobile infrastructure scores 66% better than the typical WordPress, Wix, or Squarespace competitor — ensuring your site wins the Answer Layer where traditional sites are invisible.',
                 delay: 300,
               },
-            ].map((study, i) => (
-              <ScrollReveal key={i} delay={study.delay}>
-                <div className="bg-[#0d0d1a] rounded-xl overflow-hidden border border-white/6 hover:border-[#D4A94A]/25 transition-all duration-300 group h-full flex flex-col">
-                  <div className="p-7 border-b border-white/5">
-                    <span className="category-tag mb-3 inline-block">{study.category}</span>
-                    <h3 className="font-poppins font-bold text-xl text-white mt-2">
-                      {study.company}
-                    </h3>
-                  </div>
-                  <div className="p-7 flex-1">
-                    <div className="grid grid-cols-2 gap-5">
-                      {study.metrics.map((m, j) => (
-                        <div key={j} className="score-badge">
-                          <span className="score-value">{m.value}</span>
-                          <span className="score-label">{m.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+            ].map((stat, i) => (
+              <ScrollReveal key={i} delay={stat.delay}>
+                <div className="stat-block h-full flex flex-col">
+                  <CounterAnimation
+                    end={stat.end}
+                    decimals={stat.decimals}
+                    suffix={stat.suffix}
+                    label={stat.label}
+                    duration={2000}
+                  />
+                  <p className="text-[#8A9BB5] text-sm font-poppins mt-6 leading-relaxed flex-1">
+                    {stat.descriptor}
+                  </p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
 
-          {/* Proof stats row */}
-          <ScrollReveal delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
-              {[
-                {
-                  value: '93–100',
-                  label: 'PageSpeed across all sites',
-                  sub: 'Performance · Accessibility · Best Practices · SEO',
-                },
-                {
-                  value: '66%',
-                  label: 'better mobile scores vs. competitors',
-                  sub: 'Compared to WordPress, Wix, and Squarespace sites',
-                },
-                {
-                  value: '0',
-                  label: 'invalid schema items across all sites',
-                  sub: 'Machine-readable, validated, authoritative',
-                },
-              ].map((stat, i) => (
-                <div
-                  key={i}
-                  className="text-center border border-white/5 rounded-xl py-7 px-6 bg-[#0d0d1a]/60"
-                >
-                  <div className="font-poppins font-bold text-3xl md:text-4xl text-[#D4A94A] mb-1.5">
-                    {stat.value}
-                  </div>
-                  <div className="font-poppins text-white font-semibold text-sm mb-1">
-                    {stat.label}
-                  </div>
-                  <div className="font-poppins text-[#8A9BB5] text-xs">{stat.sub}</div>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          {/* INW Basecamp case study callout */}
+          {/* Closing statement */}
           <ScrollReveal delay={200}>
-            <div className="inw-callout">
-              <p className="eyebrow mb-4">INW Basecamp — Case Study</p>
-              <p className="font-poppins text-white/90 text-base md:text-lg leading-relaxed">
-                &ldquo;We structured INW Basecamp with amenityFeature schema, FAQPage markup, and a
-                relocation knowledge base built for AI queries. When someone asks an AI assistant
-                about relocating to North Idaho, Shirin&apos;s site surfaces as the authoritative
-                source — while local competitors remain{' '}
-                <span className="text-[#D4A94A] font-semibold">completely invisible.</span>&rdquo;
-              </p>
-            </div>
+            <p className="font-poppins text-white/80 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+              &ldquo;When an AI assistant recommends a business, it&apos;s because that business
+              gave the machine a reason to trust it.{' '}
+              <span className="text-white font-semibold">
+                We build that reason into every line of code.
+              </span>
+              &rdquo;
+            </p>
           </ScrollReveal>
 
+          {/* Understated CTA */}
           <ScrollReveal delay={300}>
-            <div className="text-center mt-12">
-              <Link href="/case-studies" className="btn-gold-outline text-sm font-bold px-8 py-3.5 rounded-md inline-block">
-                See Full Case Studies
+            <div className="text-center">
+              <Link
+                href="/services"
+                className="font-poppins font-semibold text-[#D4A94A] text-base hover:text-[#E8C478] transition-colors inline-flex items-center gap-2 border-b border-[#D4A94A]/40 hover:border-[#E8C478] pb-0.5"
+              >
+                See how we build this for your business
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </div>
           </ScrollReveal>
+
         </div>
       </section>
 
