@@ -24,7 +24,13 @@ Zero Click Strategies is an Answer Engine Optimization (AEO) agency based in Pos
 
 - What Is Zero Click Search and Why Your Business Is Invisible: https://www.zeroclickstrategies.com/blog/what-is-zero-click-search
 - Why WordPress Sites Are Losing the AI Search War: https://www.zeroclickstrategies.com/blog/wordpress-losing-ai-search
-- Why Your Website Is Burning Through AI Tokens: https://www.zeroclickstrategies.com/blog/why-website-burning-ai-tokens
+- How We Built Sites That Score 93–100 on PageSpeed: https://www.zeroclickstrategies.com/blog/how-we-indexed-49-pages-48-hours
+- Schema Markup: The Complete Guide for Local Service Businesses: https://www.zeroclickstrategies.com/blog/schema-markup-complete-guide
+- Facebook Ads for Local Service Businesses in 2026: The Flywheel Method: https://www.zeroclickstrategies.com/blog/facebook-ads-local-business-2026
+- How to Get Your Local Business Featured in Google AI Overviews: https://www.zeroclickstrategies.com/blog/ai-overviews-local-businesses
+- Next.js vs. WordPress: Real Performance Numbers for Local Businesses: https://www.zeroclickstrategies.com/blog/vercel-vs-wordpress-performance
+- The Three Custom Audiences Every Local Business Needs on Facebook: https://www.zeroclickstrategies.com/blog/custom-audiences-facebook
+- Why Your Website Is Burning Through AI Tokens — And Costing You Business: https://www.zeroclickstrategies.com/blog/why-website-burning-ai-tokens
 
 ## Contact
 

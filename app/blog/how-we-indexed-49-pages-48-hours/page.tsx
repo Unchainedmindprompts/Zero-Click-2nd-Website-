@@ -25,9 +25,9 @@ const articleSchema = {
   wordCount: 950,
   keywords: 'technical SEO, indexing, schema markup, Core Web Vitals, local business SEO, Google Search Console, crawl budget, Luxe Window Works, window treatments',
   author: {
-    '@type': 'Organization',
-    name: 'Zero Click Strategies',
-    url: 'https://zeroclickstrategies.com',
+    '@type': 'Person',
+    name: 'Mark Abplanalp',
+    url: 'https://www.zeroclickstrategies.com/about',
   },
   publisher: {
     '@type': 'Organization',
@@ -52,7 +52,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
     {
       '@type': 'ListItem',
@@ -119,7 +119,7 @@ export default function Indexed49Pages() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#0A1628] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-[#07070f] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
           {/* Breadcrumb */}
@@ -166,7 +166,7 @@ export default function Indexed49Pages() {
       <div className="section-divider" />
 
       {/* Results Banner */}
-      <section className="py-10 bg-[#162444] px-4 border-b border-white/5">
+      <section className="py-10 bg-[#111122] px-4 border-b border-white/5">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
@@ -190,7 +190,7 @@ export default function Indexed49Pages() {
       </section>
 
       {/* Article + Sidebar */}
-      <section className="py-16 bg-[#0F1E3C] px-4">
+      <section className="py-16 bg-[#0d0d1a] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
@@ -247,7 +247,7 @@ export default function Indexed49Pages() {
                 </p>
 
                 {/* Schema types box */}
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">SCHEMA TYPES IMPLEMENTED</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
@@ -256,7 +256,7 @@ export default function Indexed49Pages() {
                       { type: 'FAQPage', desc: 'Common questions on each service page' },
                       { type: 'BreadcrumbList', desc: 'Site hierarchy signal on every page' },
                     ].map((item) => (
-                      <div key={item.type} className="flex items-start gap-3 p-3 bg-[#0F1E3C] rounded-lg border border-white/5">
+                      <div key={item.type} className="flex items-start gap-3 p-3 bg-[#0d0d1a] rounded-lg border border-white/5">
                         <div className="w-2 h-2 rounded-full bg-[#D4A94A] mt-1.5 flex-shrink-0" />
                         <div>
                           <p className="text-white text-sm font-semibold font-poppins">{item.type}</p>
@@ -367,7 +367,7 @@ export default function Indexed49Pages() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Timeline */}
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-5 text-xs">PROJECT TIMELINE</p>
                   <div className="space-y-4">
                     {[
@@ -389,7 +389,7 @@ export default function Indexed49Pages() {
                 </div>
 
                 {/* CTA Card */}
-                <div className="bg-[#162444] rounded-xl border border-[#D4A94A]/20 p-6">
+                <div className="bg-[#111122] rounded-xl border border-[#D4A94A]/20 p-6">
                   <p className="font-poppins font-bold text-white text-lg mb-3 leading-snug">
                     Is Your Site Invisible Like Luxe Was?
                   </p>
@@ -402,7 +402,7 @@ export default function Indexed49Pages() {
                 </div>
 
                 {/* Related Posts */}
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/schema-markup-complete-guide" className="block group">
@@ -432,7 +432,7 @@ export default function Indexed49Pages() {
       <div className="section-divider" />
 
       {/* CTA */}
-      <section className="py-20 bg-[#0A1628] px-4">
+      <section className="py-20 bg-[#07070f] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">GET THE SAME RESULT</p>
           <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-4">

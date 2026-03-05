@@ -25,9 +25,9 @@ const articleSchema = {
   wordCount: 900,
   keywords: 'Next.js vs WordPress, Next.js performance, Core Web Vitals comparison, Lighthouse scores, TTFB, local business website performance, AI crawler accessibility',
   author: {
-    '@type': 'Organization',
-    name: 'Zero Click Strategies',
-    url: 'https://zeroclickstrategies.com',
+    '@type': 'Person',
+    name: 'Mark Abplanalp',
+    url: 'https://www.zeroclickstrategies.com/about',
   },
   publisher: {
     '@type': 'Organization',
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
     {
       '@type': 'ListItem',
@@ -115,7 +115,7 @@ export default function NextJsVsWordPress() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#0A1628] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-[#07070f] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
           <nav className="flex items-center gap-2 text-sm font-poppins text-[#8A9BB5] mb-8">
@@ -161,7 +161,7 @@ export default function NextJsVsWordPress() {
       <div className="section-divider" />
 
       {/* Article + Sidebar */}
-      <section className="py-16 bg-[#0F1E3C] px-4">
+      <section className="py-16 bg-[#0d0d1a] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
@@ -205,7 +205,7 @@ export default function NextJsVsWordPress() {
                 </p>
 
                 {/* Data comparison box */}
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">TEST RESULTS — MOBILE AVERAGES</p>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm font-poppins">
@@ -308,7 +308,7 @@ export default function NextJsVsWordPress() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">KEY NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-white/10 pb-4">
@@ -326,7 +326,7 @@ export default function NextJsVsWordPress() {
                   </div>
                 </div>
 
-                <div className="bg-[#162444] rounded-xl border border-[#D4A94A]/20 p-6">
+                <div className="bg-[#111122] rounded-xl border border-[#D4A94A]/20 p-6">
                   <p className="font-poppins font-bold text-white text-lg mb-3 leading-snug">
                     Ready to See Your Numbers?
                   </p>
@@ -338,7 +338,7 @@ export default function NextJsVsWordPress() {
                   </Link>
                 </div>
 
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/wordpress-losing-ai-search" className="block group">
@@ -367,7 +367,7 @@ export default function NextJsVsWordPress() {
 
       <div className="section-divider" />
 
-      <section className="py-20 bg-[#0A1628] px-4">
+      <section className="py-20 bg-[#07070f] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">THE DATA IS CLEAR</p>
           <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-4">

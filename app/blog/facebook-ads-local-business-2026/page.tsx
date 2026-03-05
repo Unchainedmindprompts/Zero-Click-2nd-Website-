@@ -25,9 +25,9 @@ const articleSchema = {
   wordCount: 950,
   keywords: 'Facebook ads local business, Meta ads, custom audiences, retargeting, lookalike audiences, local service marketing, flywheel method, pixel data',
   author: {
-    '@type': 'Organization',
-    name: 'Zero Click Strategies',
-    url: 'https://zeroclickstrategies.com',
+    '@type': 'Person',
+    name: 'Mark Abplanalp',
+    url: 'https://www.zeroclickstrategies.com/about',
   },
   publisher: {
     '@type': 'Organization',
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
     {
       '@type': 'ListItem',
@@ -115,7 +115,7 @@ export default function FacebookAdsLocalBusiness() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#0A1628] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-[#07070f] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
           <nav className="flex items-center gap-2 text-sm font-poppins text-[#8A9BB5] mb-8">
@@ -161,7 +161,7 @@ export default function FacebookAdsLocalBusiness() {
       <div className="section-divider" />
 
       {/* Article + Sidebar */}
-      <section className="py-16 bg-[#0F1E3C] px-4">
+      <section className="py-16 bg-[#0d0d1a] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
@@ -211,7 +211,7 @@ export default function FacebookAdsLocalBusiness() {
                 </p>
 
                 {/* Flywheel visual */}
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">THE FLYWHEEL LAYERS</p>
                   <div className="space-y-3">
                     {[
@@ -219,7 +219,7 @@ export default function FacebookAdsLocalBusiness() {
                       { layer: 'Layer 2', name: 'Intent', desc: 'Warm retargeting — video viewers, website visitors, estimate page traffic', color: 'text-white' },
                       { layer: 'Layer 3', name: 'Scale', desc: 'Lookalike audiences from customer list — most efficient cold targeting', color: 'text-[#D4A94A]' },
                     ].map((item) => (
-                      <div key={item.layer} className="flex items-start gap-4 p-4 bg-[#0F1E3C] rounded-lg border border-white/5">
+                      <div key={item.layer} className="flex items-start gap-4 p-4 bg-[#0d0d1a] rounded-lg border border-white/5">
                         <div className="flex-shrink-0">
                           <p className="text-[#D4A94A] text-xs font-bold font-poppins">{item.layer}</p>
                           <p className={`${item.color} text-sm font-semibold font-poppins`}>{item.name}</p>
@@ -296,7 +296,7 @@ export default function FacebookAdsLocalBusiness() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">FLYWHEEL BENCHMARKS</p>
                   <div className="space-y-4">
                     <div className="border-b border-white/10 pb-4">
@@ -314,7 +314,7 @@ export default function FacebookAdsLocalBusiness() {
                   </div>
                 </div>
 
-                <div className="bg-[#162444] rounded-xl border border-[#D4A94A]/20 p-6">
+                <div className="bg-[#111122] rounded-xl border border-[#D4A94A]/20 p-6">
                   <p className="font-poppins font-bold text-white text-lg mb-3 leading-snug">
                     Build the Flywheel for Your Business
                   </p>
@@ -326,7 +326,7 @@ export default function FacebookAdsLocalBusiness() {
                   </Link>
                 </div>
 
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/custom-audiences-facebook" className="block group">
@@ -355,7 +355,7 @@ export default function FacebookAdsLocalBusiness() {
 
       <div className="section-divider" />
 
-      <section className="py-20 bg-[#0A1628] px-4">
+      <section className="py-20 bg-[#07070f] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">STOP WASTING AD BUDGET</p>
           <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-4">
