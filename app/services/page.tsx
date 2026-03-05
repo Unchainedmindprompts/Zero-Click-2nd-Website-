@@ -64,7 +64,7 @@ const faqSchema = {
       name: 'What is zero click search?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Zero click search happens when search engines or AI tools answer a query directly on the results page — without the user clicking through to any website. AI Overviews, featured snippets, and knowledge panels are examples. If your business isn\'t structured to be the source of those answers, you\'re invisible.',
+        text: "Zero click search happens when search engines or AI tools answer a query directly on the results page — without the user clicking through to any website. AI Overviews, featured snippets, and knowledge panels are examples. If your business isn't structured to be the source of those answers, you're invisible.",
       },
     },
     {
@@ -96,7 +96,7 @@ const faqSchema = {
       name: 'Do you work with businesses outside of Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Zero Click Strategies is based in Post Falls, Idaho, but serves businesses nationwide. All our work is delivered remotely. We\'ve worked with clients across different states and industries.',
+        text: "Yes. Zero Click Strategies is based in Post Falls, Idaho, but serves businesses nationwide. All our work is delivered remotely. We've worked with clients across different states and industries.",
       },
     },
     {
@@ -127,16 +127,19 @@ export default function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#0A1628] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-50 pointer-events-none" />
+      <section className="pt-36 pb-20 bg-[#05050f] px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">SERVICES</p>
-          <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-            Three Pillars of{' '}
-            <span className="text-[#D4A94A]">AI Visibility</span>
+          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+            Don&apos;t Chase Clicks.{' '}
+            <br className="hidden md:block" />
+            Reclaim Your{' '}
+            <span className="text-[#D4A94A]">Revenue Authority.</span>
           </h1>
           <p className="text-[#8A9BB5] text-xl md:text-2xl font-poppins max-w-3xl mx-auto leading-relaxed">
-            Every service we offer is designed to make your business discoverable, citable, and profitable in the AI search era.
+            Every service we offer is engineered to make your business the source AI cites — not the competitor it buries.
           </p>
         </div>
       </section>
@@ -144,13 +147,13 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* Pillar 1: Website */}
-      <section id="website" className="py-24 md:py-32 bg-[#0F1E3C] px-4">
+      <section id="website" className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
                 <p className="eyebrow mb-4">PILLAR ONE</p>
-                <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
+                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
                   The <span className="text-[#D4A94A]">Superior Website</span>
                 </h2>
                 <p className="text-[#8A9BB5] text-lg leading-relaxed font-poppins mb-8">
@@ -182,7 +185,7 @@ export default function ServicesPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="bg-[#162444] rounded-2xl p-8 border border-[#D4A94A]/20">
+              <div className="bg-[#0d0d1a] rounded-2xl p-8 border border-[#D4A94A]/20">
                 <h3 className="font-poppins font-bold text-lg text-white mb-6">The Vercel Advantage</h3>
                 <div className="space-y-6">
                   {[
@@ -211,11 +214,11 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* Pillar 2: Content */}
-      <section id="content" className="py-24 md:py-32 bg-[#0A1628] px-4">
+      <section id="content" className="py-24 md:py-32 bg-[#05050f] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal delay={200} className="order-2 lg:order-1">
-              <div className="bg-[#162444] rounded-2xl p-8 border border-[#D4A94A]/20">
+              <div className="bg-[#0d0d1a] rounded-2xl p-8 border border-[#D4A94A]/20">
                 <h3 className="font-poppins font-bold text-lg text-white mb-6">Schema Types We Implement</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
@@ -234,7 +237,7 @@ export default function ServicesPage() {
             <ScrollReveal className="order-1 lg:order-2">
               <div>
                 <p className="eyebrow mb-4">PILLAR TWO</p>
-                <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
+                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
                   <span className="text-[#D4A94A]">Structured Content</span>{' '}
                   That Trains AI
                 </h2>
@@ -252,6 +255,31 @@ export default function ServicesPage() {
                   just appear in search — they become the source of truth AI tools cite when your
                   prospects ask for help.
                 </p>
+
+                {/* Proof of Outcome */}
+                <div className="bg-[#0d0d1a] rounded-xl border border-[#D4A94A]/20 p-6 mb-8">
+                  <p className="eyebrow text-xs mb-5">PROOF OF OUTCOME</p>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div>
+                      <div className="font-playfair font-bold text-4xl text-[#D4A94A] leading-none">+40%</div>
+                      <div className="text-white text-sm font-poppins font-semibold mt-2">Session Lift</div>
+                      <div className="text-[#8A9BB5] text-xs font-poppins mt-1 leading-snug">
+                        Avg. engagement increase across AEO-optimized client sites
+                      </div>
+                    </div>
+                    <div>
+                      <div className="font-playfair font-bold text-4xl text-[#D4A94A] leading-none">5x</div>
+                      <div className="text-white text-sm font-poppins font-semibold mt-2">Conversion Rate</div>
+                      <div className="text-[#8A9BB5] text-xs font-poppins mt-1 leading-snug">
+                        vs. template-platform baseline on equivalent traffic
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-[#8A9BB5] text-xs font-poppins mt-5 pt-4 border-t border-white/5 italic">
+                    Our Next.js + Edge stack isn&apos;t an expense — it&apos;s a high-performance lead generation engine.
+                  </p>
+                </div>
+
                 <Link href="/contact" className="btn-gold text-sm font-bold px-6 py-3 rounded-md inline-block">
                   Get an AEO Audit
                 </Link>
@@ -264,13 +292,13 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* Pillar 3: Campaigns */}
-      <section id="campaigns" className="py-24 md:py-32 bg-[#0F1E3C] px-4">
+      <section id="campaigns" className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
                 <p className="eyebrow mb-4">PILLAR THREE</p>
-                <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
+                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
                   The Facebook{' '}
                   <span className="text-[#D4A94A]">Ad Flywheel</span>
                 </h2>
@@ -293,7 +321,7 @@ export default function ServicesPage() {
                     { title: 'Retargeting', desc: 'Sequential follow-up sequences' },
                     { title: 'Lookalike Build', desc: 'Scale to proven converters' },
                   ].map((item) => (
-                    <div key={item.title} className="bg-[#162444] rounded-lg p-4 border border-white/5">
+                    <div key={item.title} className="bg-[#0d0d1a] rounded-lg p-4 border border-white/5">
                       <div className="font-poppins font-semibold text-white text-sm mb-1">{item.title}</div>
                       <div className="text-[#8A9BB5] text-xs font-poppins">{item.desc}</div>
                     </div>
@@ -302,7 +330,7 @@ export default function ServicesPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="bg-[#162444] rounded-2xl p-8 border border-[#D4A94A]/20">
+              <div className="bg-[#0d0d1a] rounded-2xl p-8 border border-[#D4A94A]/20">
                 <h3 className="font-poppins font-bold text-lg text-white mb-2">The Flywheel Effect</h3>
                 <p className="text-[#8A9BB5] text-sm font-poppins mb-8">How paid and organic compound together:</p>
                 <div className="space-y-4">
@@ -332,11 +360,11 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 md:py-32 bg-[#0A1628] px-4">
+      <section id="faq" className="py-24 md:py-32 bg-[#05050f] px-4">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <p className="eyebrow text-center mb-4">FAQ</p>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-16">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white text-center mb-16">
               Common Questions
             </h2>
           </ScrollReveal>
@@ -345,7 +373,7 @@ export default function ServicesPage() {
             {[
               {
                 q: 'What is zero click search?',
-                a: 'Zero click search happens when search engines or AI tools answer a query directly on the results page — without the user clicking through to any website. AI Overviews, featured snippets, and knowledge panels are examples. If your business isn\'t structured to be the source of those answers, you\'re invisible.',
+                a: "Zero click search happens when search engines or AI tools answer a query directly on the results page — without the user clicking through to any website. AI Overviews, featured snippets, and knowledge panels are examples. If your business isn't structured to be the source of those answers, you're invisible.",
               },
               {
                 q: 'Why Next.js instead of WordPress, Wix, or Squarespace?',
@@ -361,7 +389,7 @@ export default function ServicesPage() {
               },
               {
                 q: 'Do you work with businesses outside of Idaho?',
-                a: 'Yes. Zero Click Strategies is based in Post Falls, Idaho, but serves businesses nationwide. All our work is delivered remotely. We\'ve worked with clients across different states and industries.',
+                a: "Yes. Zero Click Strategies is based in Post Falls, Idaho, but serves businesses nationwide. All our work is delivered remotely. We've worked with clients across different states and industries.",
               },
               {
                 q: 'What industries do you specialize in?',
@@ -369,7 +397,7 @@ export default function ServicesPage() {
               },
             ].map((faq, i) => (
               <ScrollReveal key={i} delay={i * 50}>
-                <details className="group bg-[#162444] rounded-xl border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300">
+                <details className="group bg-[#0d0d1a] rounded-xl border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300">
                   <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
                     <h3 className="font-poppins font-semibold text-white pr-4">{faq.q}</h3>
                     <svg
@@ -392,10 +420,10 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#0F1E3C] px-4">
+      <section className="py-20 bg-[#080810] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6">
               Ready to Get <span className="text-[#D4A94A]">Started?</span>
             </h2>
             <p className="text-[#8A9BB5] text-lg font-poppins mb-8">
