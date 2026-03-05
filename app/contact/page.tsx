@@ -218,16 +218,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Value reminder */}
-                <div className="bg-[#080810] rounded-xl p-6 border border-white/5">
-                  <p className="text-[#8A9BB5] text-sm font-poppins leading-relaxed italic">
-                    &ldquo;One closed real estate deal pays for the entire package. One new window
-                    treatment project does the same.&rdquo;
-                  </p>
-                  <p className="text-[#D4A94A] text-xs font-poppins font-semibold mt-3">
-                    — Zero Click Strategies
-                  </p>
-                </div>
               </div>
             </ScrollReveal>
           </div>
