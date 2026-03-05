@@ -25,9 +25,9 @@ const articleSchema = {
   wordCount: 900,
   keywords: 'WordPress AI search, Core Web Vitals, Next.js vs WordPress, plugin bloat, AI search visibility, schema markup, LCP benchmark',
   author: {
-    '@type': 'Organization',
-    name: 'Zero Click Strategies',
-    url: 'https://zeroclickstrategies.com',
+    '@type': 'Person',
+    name: 'Mark Abplanalp',
+    url: 'https://www.zeroclickstrategies.com/about',
   },
   publisher: {
     '@type': 'Organization',
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
     {
       '@type': 'ListItem',
@@ -115,7 +115,7 @@ export default function WordPressLosingAISearch() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#0A1628] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-[#07070f] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
           {/* Breadcrumb */}
@@ -162,7 +162,7 @@ export default function WordPressLosingAISearch() {
       <div className="section-divider" />
 
       {/* Article + Sidebar */}
-      <section className="py-16 bg-[#0F1E3C] px-4">
+      <section className="py-16 bg-[#0d0d1a] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
@@ -188,15 +188,15 @@ export default function WordPressLosingAISearch() {
                 </p>
 
                 {/* Comparison box */}
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">PERFORMANCE COMPARISON</p>
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-4 bg-[#0F1E3C] rounded-lg border border-white/5">
+                    <div className="text-center p-4 bg-[#0d0d1a] rounded-lg border border-white/5">
                       <p className="text-[#8A9BB5] text-sm font-poppins font-semibold mb-2">WordPress + Shared Hosting</p>
                       <p className="text-red-400 font-bold text-2xl font-poppins">4.8s</p>
                       <p className="text-[#8A9BB5] text-xs font-poppins mt-1">Avg. LCP mobile</p>
                     </div>
-                    <div className="text-center p-4 bg-[#0F1E3C] rounded-lg border border-[#D4A94A]/20">
+                    <div className="text-center p-4 bg-[#0d0d1a] rounded-lg border border-[#D4A94A]/20">
                       <p className="text-[#8A9BB5] text-sm font-poppins font-semibold mb-2">Next.js + Edge Hosting</p>
                       <p className="text-[#D4A94A] font-bold text-2xl font-poppins">1.2s</p>
                       <p className="text-[#8A9BB5] text-xs font-poppins mt-1">Avg. LCP mobile</p>
@@ -328,7 +328,7 @@ export default function WordPressLosingAISearch() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Score Comparison */}
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">LIGHTHOUSE SCORES</p>
                   <div className="space-y-4">
                     <div>
@@ -336,7 +336,7 @@ export default function WordPressLosingAISearch() {
                         <span className="text-[#8A9BB5] text-xs font-poppins">WordPress/Wix/Squarespace avg.</span>
                         <span className="text-red-400 text-xs font-bold font-poppins">38/100</span>
                       </div>
-                      <div className="w-full bg-[#0F1E3C] rounded-full h-2">
+                      <div className="w-full bg-[#0d0d1a] rounded-full h-2">
                         <div className="bg-red-400 h-2 rounded-full" style={{ width: '38%' }} />
                       </div>
                     </div>
@@ -345,7 +345,7 @@ export default function WordPressLosingAISearch() {
                         <span className="text-[#8A9BB5] text-xs font-poppins">Next.js + Edge Hosting</span>
                         <span className="text-[#D4A94A] text-xs font-bold font-poppins">97/100</span>
                       </div>
-                      <div className="w-full bg-[#0F1E3C] rounded-full h-2">
+                      <div className="w-full bg-[#0d0d1a] rounded-full h-2">
                         <div className="bg-[#D4A94A] h-2 rounded-full" style={{ width: '97%' }} />
                       </div>
                     </div>
@@ -354,7 +354,7 @@ export default function WordPressLosingAISearch() {
                 </div>
 
                 {/* CTA Card */}
-                <div className="bg-[#162444] rounded-xl border border-[#D4A94A]/20 p-6">
+                <div className="bg-[#111122] rounded-xl border border-[#D4A94A]/20 p-6">
                   <p className="font-poppins font-bold text-white text-lg mb-3 leading-snug">
                     Still on WordPress, Wix, or Squarespace?
                   </p>
@@ -367,7 +367,7 @@ export default function WordPressLosingAISearch() {
                 </div>
 
                 {/* Related Posts */}
-                <div className="bg-[#162444] rounded-xl border border-white/5 p-6">
+                <div className="bg-[#111122] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/vercel-vs-wordpress-performance" className="block group">
@@ -397,7 +397,7 @@ export default function WordPressLosingAISearch() {
       <div className="section-divider" />
 
       {/* CTA */}
-      <section className="py-20 bg-[#0A1628] px-4">
+      <section className="py-20 bg-[#07070f] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">UPGRADE YOUR FOUNDATION</p>
           <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-4">

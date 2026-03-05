@@ -53,5 +53,20 @@
     "label": "Get Your Free AEO Audit",
     "url": "https://www.zeroclickstrategies.com/contact",
     "description": "20-minute no-obligation audit of your current AI search visibility"
+  },
+  "knowledge_base": {
+    "type": "blog",
+    "url": "https://www.zeroclickstrategies.com/blog",
+    "description": "Practical guides on AI search optimization, AEO implementation, schema markup, and Next.js performance for local businesses",
+    "article_count": 9,
+    "topics": [
+      "Zero Click Search",
+      "Answer Engine Optimization",
+      "Schema Markup",
+      "Next.js vs WordPress",
+      "Google AI Overviews",
+      "Facebook Ads for Local Business",
+      "AI Token Budget Optimization"
+    ]
   }
 }
