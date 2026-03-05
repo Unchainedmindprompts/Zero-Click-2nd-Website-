@@ -75,13 +75,6 @@ export default function HomePage() {
             className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
             style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.45s forwards' }}
           >
-            <Link
-              href="/contact"
-              className="btn-gold font-poppins font-bold text-base inline-block rounded-md"
-              style={{ padding: '16px 36px' }}
-            >
-              Get Your Free AEO Audit
-            </Link>
             <a
               href="#problem"
               className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2"
