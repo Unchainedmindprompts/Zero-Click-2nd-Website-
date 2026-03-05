@@ -74,41 +74,63 @@ export default function AboutPage() {
             {/* Story text */}
             <ScrollReveal delay={200}>
               <div className="space-y-6">
-                <div>
-                  <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-                    30 Years of Sales. 23 Years of Building. Here&apos;s What Actually Works.
-                  </h2>
-                  <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                    After relocating to Northern Idaho, I did what most business owners do — looked for local marketing help to rebuild visibility in a new market. What I found was that most agencies were still selling yesterday&apos;s playbook. Nobody had clear answers about AI search, answer engines, or why the old strategies were losing ground fast.
+                <h2 className="font-playfair font-bold text-3xl text-white mb-4">
+                  30 Years of Sales. 23 Years of Building.{' '}
+                  <span className="text-[#D4A94A]">I Was My Own First Client.</span>
+                </h2>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  When my wife and I relocated to North Idaho, I did what you&apos;ve probably done:
+                  I looked for a way to build visibility in a new market. I sat in the same meetings
+                  you&apos;ve likely sat in, hearing the same{' '}
+                  <span className="text-white font-medium">&ldquo;Yesterday&apos;s Playbook&rdquo;</span>
+                  —spend more, wait longer, chase the blue link.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  But while my rankings looked good on paper, the phones weren&apos;t ringing. I felt
+                  that{' '}
+                  <span className="text-white font-medium">&ldquo;quiet panic&rdquo;</span> of knowing
+                  the game was shifting, even if the &ldquo;experts&rdquo; in the room couldn&apos;t
+                  explain why.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  I didn&apos;t start Zero Click Strategies to build an agency. I started it because I
+                  was tired of writing checks for &ldquo;visibility&rdquo; that didn&apos;t turn into
+                  revenue.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  I spent a year digging into the data and realized we are in the middle of{' '}
+                  <span className="text-white font-medium">&ldquo;The Great Decoupling.&rdquo;</span>{' '}
+                  Search volume is higher than ever, but nearly 60% of those searches now end without
+                  a single click to a website. AI and wearables — like the Oakley Meta glasses — are
+                  giving your customers answers before they ever see your link.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  I built the Authority Engine because my own family&apos;s revenue depended on it. I
+                  needed to ensure that when a homebuyer asked their glasses for a &ldquo;realtor in
+                  Coeur d&apos;Alene,&rdquo; my wife&apos;s name was the one they heard in their ear.
+                </p>
+
+                <div className="border-l-4 border-[#D4A94A] bg-[#0d0d1a] rounded-r-xl px-6 py-5">
+                  <p className="text-white/90 leading-relaxed font-poppins text-sm md:text-base">
+                    Here is what I learned: When an AI cites you, it&apos;s a{' '}
+                    <span className="text-[#D4A94A] font-semibold">&ldquo;warm referral&rdquo;</span>{' '}
+                    from the machine. These buyers arrive pre-vetted — they spend 40% more time on
+                    your site and convert at a rate 5x higher than traditional search.
                   </p>
                 </div>
 
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  That experience led me to ask the same questions you&apos;re probably asking right now.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  Will AI replace what I&apos;ve built? Are my competitors already ahead of me? Is what worked last year even relevant anymore?
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  These aren&apos;t irrational fears. The pace of change is unlike anything most of us have experienced in business. And the truth is — most marketing agencies don&apos;t have clear answers because they&apos;re still catching up themselves.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  So I spent a year finding the answers. Testing and implementing on my own businesses with real revenue on the line. What I discovered is that AI isn&apos;t the enemy of small business — it&apos;s actually the great equalizer, if you know how to use it.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  The businesses that adapt now won&apos;t just survive. They&apos;ll have leverage they&apos;ve never had before.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  But believing the AI revolution isn&apos;t coming — or that it won&apos;t affect your business — is a recipe for irrelevance. The only question is whether you get ahead of it or get left behind.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  That&apos;s the conversation I started Zero Click Strategies to have.
+                  I&apos;m not a computer programmer. I&apos;m a business owner who found a way to
+                  stop the bleeding. If you&apos;re feeling the{' '}
+                  <span className="text-white font-medium">&ldquo;quiet panic&rdquo;</span> of
+                  disappearing clicks, I get it. I built this stack to reclaim the{' '}
+                  <span className="text-white font-medium">&ldquo;Answer Real Estate&rdquo;</span> for
+                  my businesses — and I&apos;m here to help you do the same for yours.
                 </p>
 
                 <div className="pt-4">
