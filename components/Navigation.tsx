@@ -30,25 +30,24 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/services', label: 'Services' },
-    { href: '/case-studies', label: 'Case Studies' },
+    { href: '/case-studies', label: 'Our Work' },
     { href: '/about', label: 'About' },
     { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
   ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || menuOpen
-          ? 'bg-[#0A1628]/95 nav-blur border-b border-white/5 shadow-lg'
+          ? 'bg-[#07070f]/95 nav-blur border-b border-white/5 shadow-xl'
           : 'bg-transparent'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 group">
-            <span className="font-poppins font-bold text-xl tracking-tight">
+          <Link href="/" className="flex-shrink-0">
+            <span className="font-poppins font-bold text-lg tracking-tight">
               <span className="text-[#D4A94A]">ZERO</span>
               <span className="text-white"> CLICK</span>
               <span className="text-white"> STRATEGIES</span>
@@ -68,8 +67,11 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact" className="btn-gold text-sm font-semibold px-5 py-2.5 rounded-md">
-              Get Started
+            <Link
+              href="/contact"
+              className="btn-gold text-sm font-bold px-5 py-2.5 rounded-md whitespace-nowrap"
+            >
+              Get Your Free AEO Audit
             </Link>
           </div>
 
@@ -101,7 +103,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`md:hidden fixed inset-0 bg-[#0A1628] z-40 flex flex-col transition-all duration-300 ${
+        className={`md:hidden fixed inset-0 bg-[#07070f] z-40 flex flex-col transition-all duration-300 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         style={{ top: '80px' }}
@@ -120,9 +122,9 @@ export default function Navigation() {
           ))}
           <Link
             href="/contact"
-            className="btn-gold text-lg font-bold px-8 py-3.5 rounded-md mt-4"
+            className="btn-gold text-base font-bold px-8 py-3.5 rounded-md mt-4 text-center"
           >
-            Get Started
+            Get Your Free AEO Audit
           </Link>
         </div>
       </div>

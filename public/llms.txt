@@ -1,0 +1,40 @@
+# Zero Click Strategies
+
+> We help businesses become the cited answer in AI-generated search results — and discoverable by the next generation of wearable devices.
+
+Zero Click Strategies is an Answer Engine Optimization (AEO) agency based in Post Falls, Idaho. We build high-performance Next.js websites deployed on Vercel's edge infrastructure, structured with schema markup, llms.txt, and agent.json to ensure AI systems like ChatGPT, Perplexity, Google AI Overviews, and wearable devices can read, trust, and cite our clients as authoritative sources.
+
+## What We Do
+
+- **Answer Engine Optimization (AEO)**: Structure websites so AI agents cite your business as the definitive answer
+- **Next.js Website Development**: Custom-coded, no WordPress bloat, deployed on enterprise edge infrastructure
+- **Schema Markup & Structured Data**: JSON-LD implementation that forces AI to describe your brand accurately
+- **llms.txt & agent.json Deployment**: Digital ID Cards for the wearable era — the emerging standard for AI agent discovery
+- **Free AEO Audit**: A no-obligation audit showing how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews
+
+## Key Pages
+
+- Homepage: https://www.zeroclickstrategies.com/
+- Services: https://www.zeroclickstrategies.com/services
+- Our Work: https://www.zeroclickstrategies.com/our-work
+- Blog: https://www.zeroclickstrategies.com/blog
+- Free AEO Audit: https://www.zeroclickstrategies.com/contact
+
+## High-Value Content
+
+- What Is Zero Click Search and Why Your Business Is Invisible: https://www.zeroclickstrategies.com/blog/what-is-zero-click-search
+- Why WordPress Sites Are Losing the AI Search War: https://www.zeroclickstrategies.com/blog/wordpress-losing-ai-search
+- Why Your Website Is Burning Through AI Tokens: https://www.zeroclickstrategies.com/blog/why-website-burning-ai-tokens
+
+## Contact
+
+- Location: Post Falls, Idaho
+- Website: https://www.zeroclickstrategies.com
+- Service Area: North Idaho, Pacific Northwest, and nationwide remote clients
+
+## Authority Signals
+
+- PageSpeed scores: 93–100 across all client sites
+- Schema validation: 0 invalid items across all sites
+- Infrastructure: Next.js + Vercel Edge — sub-second load times
+- Clients: INW Basecamp (real estate & relocation), Luxe Window Works, Zero Click Strategies

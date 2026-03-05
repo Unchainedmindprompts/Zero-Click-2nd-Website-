@@ -4,20 +4,21 @@ import ScrollReveal from '@/components/ScrollReveal';
 import CounterAnimation from '@/components/CounterAnimation';
 
 export const metadata: Metadata = {
-  title: 'Zero Click Strategies — AI Search Optimization & Digital Marketing',
+  title: 'Zero Click Strategies — AI Search Optimization & AEO Agency',
   description:
-    'Most businesses are invisible to AI. Zero Click Strategies builds the websites, content, and campaigns that make you the answer — in AI search, Google, and beyond.',
+    '60% of Google searches end without a click. AI answers the question — and your competitor gets the credit. We make sure the machine chooses you. Free AEO Audit available.',
 };
 
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Zero Click Strategies',
-  url: 'https://zeroclickstrategies.com',
-  description: 'AI search optimization and digital marketing micro agency.',
+  url: 'https://www.zeroclickstrategies.com',
+  description:
+    'Answer Engine Optimization agency. We structure websites so AI agents cite your business as the definitive answer.',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://zeroclickstrategies.com/blog?q={search_term_string}',
+    target: 'https://www.zeroclickstrategies.com/blog?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };
@@ -30,136 +31,146 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
-      {/* ===== HERO SECTION ===== */}
+      {/* ===== SECTION 2 — HERO ===== */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden bg-[#0F1E3C] hero-grid-bg"
+        className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden hero-dark-bg hero-grid-bg"
         id="hero"
       >
-        {/* Topographic lines overlay */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <svg
-            className="absolute inset-0 w-full h-full opacity-20"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <defs>
-              <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#D4A94A" stopOpacity="0.08" />
-                <stop offset="100%" stopColor="#D4A94A" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#heroGlow)" />
-            {/* Topographic contour lines */}
-            <path d="M -100 400 Q 200 200 500 400 T 1100 400" fill="none" stroke="#D4A94A" strokeWidth="0.8" opacity="0.3" />
-            <path d="M -100 380 Q 200 180 500 380 T 1100 380" fill="none" stroke="#D4A94A" strokeWidth="0.6" opacity="0.2" />
-            <path d="M -100 420 Q 200 220 500 420 T 1100 420" fill="none" stroke="#D4A94A" strokeWidth="0.6" opacity="0.2" />
-            <path d="M -100 360 Q 200 160 500 360 T 1100 360" fill="none" stroke="#D4A94A" strokeWidth="0.5" opacity="0.15" />
-            <path d="M -100 440 Q 200 240 500 440 T 1100 440" fill="none" stroke="#D4A94A" strokeWidth="0.5" opacity="0.15" />
-            <path d="M -100 340 Q 200 140 500 340 T 1100 340" fill="none" stroke="#D4A94A" strokeWidth="0.4" opacity="0.1" />
-            <path d="M -100 460 Q 200 260 500 460 T 1100 460" fill="none" stroke="#D4A94A" strokeWidth="0.4" opacity="0.1" />
-            <path d="M -100 550 Q 300 350 600 550 T 1200 550" fill="none" stroke="#D4A94A" strokeWidth="0.5" opacity="0.12" />
-            <path d="M -100 250 Q 300 50 600 250 T 1200 250" fill="none" stroke="#D4A94A" strokeWidth="0.5" opacity="0.12" />
-          </svg>
-        </div>
+        {/* Radial glow top */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
 
         {/* Animated content */}
         <div className="relative z-10 max-w-5xl mx-auto">
-          <div
-            className="reveal visible"
-            style={{ animation: 'fadeIn 0.8s ease forwards' }}
-          >
-            <p className="eyebrow mb-6">AI SEARCH OPTIMIZATION</p>
+          {/* Eyebrow */}
+          <div style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0s forwards' }}>
+            <p className="eyebrow mb-6 tracking-[0.3em]">
+              THE GREAT DECOUPLING · 2026
+            </p>
           </div>
+
+          {/* H1 */}
           <h1
-            className="font-poppins font-bold text-[40px] md:text-[64px] text-white leading-tight mb-6"
-            style={{ opacity: 0, animation: 'heroFadeIn 0.6s ease 0s forwards' }}
+            className="font-playfair font-bold text-[38px] md:text-[62px] lg:text-[72px] text-white leading-[1.1] mb-7"
+            style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.15s forwards' }}
           >
-            Most Businesses Are{' '}
-            <span className="text-[#D4A94A]">Invisible</span>
-            {' '}to AI.
+            Your SEO Is Working.{' '}
+            <br className="hidden sm:block" />
+            <span className="text-[#D4A94A]">
+              Your Business Is Still Invisible.
+            </span>
           </h1>
+
+          {/* Subhead */}
           <p
-            className="font-poppins font-normal text-base md:text-xl text-[#8A9BB5] max-w-[600px] mx-auto leading-relaxed"
-            style={{ marginTop: '24px', opacity: 0, animation: 'heroFadeIn 0.6s ease 0.2s forwards' }}
+            className="font-poppins font-normal text-base md:text-xl text-[#8A9BB5] max-w-[640px] mx-auto leading-relaxed"
+            style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.3s forwards' }}
           >
-            We build the websites, content, and campaigns that make you the answer.
+            60% of Google searches now end without a single click. AI answers the
+            question — and your competitor gets the credit. We make sure the machine
+            chooses you.
           </p>
+
+          {/* CTAs */}
           <div
-            style={{ marginTop: '36px', opacity: 0, animation: 'heroFadeIn 0.6s ease 0.4s forwards' }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
+            style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.45s forwards' }}
           >
-            <a
-              href="#problem"
-              className="btn-gold font-poppins font-bold inline-block rounded-md"
+            <Link
+              href="/contact"
+              className="btn-gold font-poppins font-bold text-base inline-block rounded-md"
               style={{ padding: '16px 36px' }}
             >
-              See How It Works
+              Get Your Free AEO Audit
+            </Link>
+            <a
+              href="#problem"
+              className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2"
+              style={{ padding: '16px 24px' }}
+            >
+              See How It Works ↓
             </a>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-          <div className="w-0.5 h-12 bg-gradient-to-b from-transparent to-[#D4A94A] animate-pulse" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+          <div className="w-px h-14 bg-gradient-to-b from-transparent to-[#D4A94A]" style={{ animation: 'pulse-glow 2s ease-in-out infinite' }} />
         </div>
       </section>
 
       {/* Section divider */}
       <div className="section-divider" />
 
-      {/* ===== PROBLEM SECTION ===== */}
-      <section id="problem" className="py-24 md:py-32 bg-[#0A1628] px-4">
+      {/* ===== SECTION 3 — THE PROBLEM ===== */}
+      <section id="problem" className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">THE PROBLEM</p>
+            <p className="eyebrow text-center mb-5">WHY THIS IS HAPPENING</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-white text-center mb-16 leading-tight">
-              Search changed.<br />
-              <span className="text-[#8A9BB5]">Most businesses didn&apos;t.</span>
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[56px] text-white text-center mb-10 leading-[1.15]">
+              The game changed.{' '}
+              <span className="text-[#8A9BB5]">Nobody told your marketing team.</span>
             </h2>
           </ScrollReveal>
 
-          {/* Stats grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <ScrollReveal delay={150}>
+            <div className="max-w-3xl mx-auto text-center mb-20">
+              <p className="text-[#8A9BB5] text-lg md:text-xl leading-relaxed font-poppins mb-5">
+                Your rankings didn&apos;t drop. Your traffic did. That&apos;s not a coincidence
+                — it&apos;s the new reality of AI-driven search.
+              </p>
+              <p className="text-[#8A9BB5] text-base md:text-lg leading-relaxed font-poppins">
+                When someone asks ChatGPT, Perplexity, or Google&apos;s AI Overview a question
+                about your industry, the AI synthesizes an answer from sites it can read, trust,
+                and cite. If your site isn&apos;t structured for machine discovery, you aren&apos;t
+                ranked lower. <span className="text-white font-semibold">You&apos;re not in the conversation at all.</span>
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Animated stat blocks */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {[
               {
-                stat: '60%+',
-                text: 'of Google searches end without a click — Source: SparkToro',
+                end: 60,
+                suffix: '%',
+                label: 'of Google searches end without a click',
                 delay: 0,
               },
               {
-                stat: 'AI',
-                text: 'answers questions before anyone visits your site',
+                end: 77,
+                suffix: '%',
+                label: 'of mobile searches never visit a single website',
                 delay: 150,
               },
               {
-                stat: '0',
-                text: 'traffic if you\'re not the answer — you\'re invisible',
+                end: 25,
+                suffix: '%',
+                label: 'predicted drop in traditional search traffic by 2026 — Gartner',
                 delay: 300,
               },
-            ].map((item, i) => (
-              <ScrollReveal key={i} delay={item.delay}>
-                <div className="text-center p-8 rounded-xl bg-[#162444] border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300">
-                  <div className="font-poppins font-bold text-6xl md:text-7xl text-[#D4A94A] mb-4 leading-none">
-                    {item.stat}
-                  </div>
-                  <p className="text-white font-poppins font-medium text-lg leading-snug">
-                    {item.text}
-                  </p>
+            ].map((stat, i) => (
+              <ScrollReveal key={i} delay={stat.delay}>
+                <div className="stat-block">
+                  <CounterAnimation
+                    end={stat.end}
+                    suffix={stat.suffix}
+                    label={stat.label}
+                    duration={2200}
+                  />
                 </div>
               </ScrollReveal>
             ))}
           </div>
 
           <ScrollReveal delay={200}>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-[#8A9BB5] text-lg md:text-xl leading-relaxed font-poppins">
-                Zero click search means AI tools like ChatGPT, Google&apos;s AI Overviews, and Perplexity
-                answer questions directly — without sending users to your website. If your business
-                isn&apos;t structured for AI to read and cite, you don&apos;t exist in the new search landscape.
-                Traditional SEO is no longer enough.
-              </p>
-            </div>
+            <p className="text-center text-[#8A9BB5] text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed">
+              Traditional SEO gets you to the top of a list nobody is scrolling anymore.{' '}
+              <span className="text-white font-semibold">
+                Answer Engine Optimization makes you the answer itself.
+              </span>
+            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -167,64 +178,78 @@ export default function HomePage() {
       {/* Section divider */}
       <div className="section-divider" />
 
-      {/* ===== SOLUTION SECTION ===== */}
-      <section id="solution" className="py-24 md:py-32 bg-[#0F1E3C] px-4">
+      {/* ===== SECTION 4 — THE SOLUTION (AUTHORITY ENGINE) ===== */}
+      <section id="solution" className="py-24 md:py-32 bg-[#05050f] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">THE SOLUTION</p>
+            <p className="eyebrow text-center mb-5">THE AUTHORITY ENGINE</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-4 leading-tight">
-              We Build Lead Generation Systems
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[56px] text-white text-center mb-6 leading-[1.15]">
+              We don&apos;t build websites.
+              <br />
+              <span className="text-[#D4A94A]">We build Answer Real Estate.</span>
             </h2>
-            <p className="font-poppins font-semibold text-2xl md:text-3xl text-[#D4A94A] text-center mb-16">
-              That Work in 2026
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-[#8A9BB5] text-lg text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+              Every site we build is engineered as a four-layer Authority Engine —
+              structured to be read, trusted, and cited by AI systems today, and
+              discoverable by wearables tomorrow.
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                   </svg>
                 ),
-                title: 'Superior Website',
-                desc: 'Fast, clean Next.js sites on Vercel. No template platform bloat. No plugin conflicts. Built for speed and AI discoverability from day one.',
+                title: 'Stop Lead Leakage',
+                body: 'AI crawlers skip slow sites. A 3-second delay isn\'t a UX problem — it\'s a silent revenue killer. Our Next.js sites on Vercel\'s edge infrastructure load in under a second, making your site the first one AI agents read and the last one they need.',
                 delay: 0,
               },
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
                   </svg>
                 ),
-                title: 'Structured Content',
-                desc: 'Schema markup and AEO-optimized articles that train Google and AI engines to cite your business as the answer.',
-                delay: 150,
+                title: 'Own the Answer',
+                body: 'We force AI models to describe your brand accurately. Custom schema encodes your expertise, location, and authority as machine-readable facts — so when someone asks ChatGPT about your industry, your business is the cited source, not your competitor.',
+                delay: 100,
               },
               {
                 icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
                   </svg>
                 ),
-                title: 'Paid Campaigns',
-                desc: 'Facebook ads with dedicated landing pages that match the message exactly. Pixel, audiences, and copy built to convert.',
+                title: 'The Wearable Fast-Track',
+                body: 'We deploy llms.txt — the Digital ID Card that gives AI agents a direct map to your most valuable content. When a customer asks their Meta glasses a question about your business, this file is the reason they hear your name in their ear.',
+                delay: 200,
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                  </svg>
+                ),
+                title: 'Autonomous Discovery',
+                body: 'We implement agent.json — the emerging "DNS for AI agents" — before your competitors know it exists. When autonomous AI systems are shopping services on behalf of buyers, your site is the one they find and can interact with.',
                 delay: 300,
               },
             ].map((card, i) => (
               <ScrollReveal key={i} delay={card.delay}>
-                <div className="card-gold-border bg-[#162444] rounded-xl p-8 hover:bg-[#1a2d54] transition-all duration-300 group h-full">
-                  <div className="text-[#D4A94A] mb-5 group-hover:scale-110 transition-transform duration-300">
-                    {card.icon}
-                  </div>
-                  <h3 className="font-poppins font-bold text-xl text-white mb-3">
+                <div className="authority-card h-full">
+                  <div className="text-[#D4A94A] mb-5">{card.icon}</div>
+                  <h3 className="font-playfair font-bold text-xl text-[#D4A94A] mb-3 leading-snug">
                     {card.title}
                   </h3>
-                  <p className="text-[#8A9BB5] leading-relaxed font-poppins text-sm">
-                    {card.desc}
+                  <p className="font-poppins text-[#8A9BB5] text-sm leading-relaxed">
+                    {card.body}
                   </p>
                 </div>
               </ScrollReveal>
@@ -236,26 +261,24 @@ export default function HomePage() {
       {/* Section divider */}
       <div className="section-divider" />
 
-      {/* ===== PROOF SECTION ===== */}
-      <section id="proof" className="py-24 md:py-32 bg-[#0A1628] px-4">
+      {/* ===== SECTION 5 — PROOF ===== */}
+      <section id="proof" className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">REAL RESULTS</p>
+            <p className="eyebrow text-center mb-5">REAL RESULTS</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-4 leading-tight">
-              Sites That Score.
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[56px] text-white text-center mb-5 leading-[1.15]">
+              Sites AI agents actually read.
             </h2>
-            <p className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] text-center mb-6">
-              Clients Win.
-            </p>
-            <p className="font-poppins text-lg text-[#8A9BB5] text-center mb-16">
-              Custom-coded. No page builders. No plugins. Deployed on enterprise infrastructure.
+            <p className="font-poppins text-[#8A9BB5] text-lg text-center max-w-2xl mx-auto mb-16 leading-relaxed">
+              Every site we build scores 93–100 on PageSpeed. Zero invalid schema items.
+              Built to be the first result machines trust.
             </p>
           </ScrollReveal>
 
-          {/* Case study cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Client score cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {[
               {
                 company: 'Zero Click Strategies',
@@ -266,92 +289,107 @@ export default function HomePage() {
                   { value: '100', label: 'Best Practices' },
                   { value: '91', label: 'SEO' },
                 ],
-                desc: 'Desktop PageSpeed scores: 100 Performance, 100 Accessibility, 100 Best Practices, 91 SEO.',
                 delay: 0,
               },
               {
                 company: 'INW Basecamp',
-                category: 'Home Theater & AV',
+                category: 'Real Estate & Relocation',
                 metrics: [
                   { value: '96', label: 'Performance' },
                   { value: '96', label: 'Accessibility' },
                   { value: '100', label: 'Best Practices' },
                   { value: '100', label: 'SEO' },
                 ],
-                desc: 'Desktop PageSpeed scores: 96 Performance, 96 Accessibility, 100 Best Practices, 100 SEO.',
                 delay: 150,
               },
               {
                 company: 'Luxe Window Works',
-                category: 'Window Treatments',
+                category: 'Home Services',
                 metrics: [
                   { value: '93', label: 'Performance' },
                   { value: '96', label: 'Accessibility' },
                   { value: '100', label: 'Best Practices' },
                   { value: '100', label: 'SEO' },
                 ],
-                desc: 'Desktop PageSpeed scores: 93 Performance, 96 Accessibility, 100 Best Practices, 100 SEO.',
                 delay: 300,
               },
             ].map((study, i) => (
               <ScrollReveal key={i} delay={study.delay}>
-                <div className="bg-[#162444] rounded-xl overflow-hidden border border-white/5 hover:border-[#D4A94A]/30 transition-all duration-300 group h-full">
-                  <div className="bg-gradient-to-br from-[#D4A94A]/10 to-transparent p-8 border-b border-white/5">
-                    <span className="category-tag mb-3">{study.category}</span>
-                    <h3 className="font-poppins font-bold text-2xl text-white mt-3">
+                <div className="bg-[#0d0d1a] rounded-xl overflow-hidden border border-white/6 hover:border-[#D4A94A]/25 transition-all duration-300 group h-full flex flex-col">
+                  <div className="p-7 border-b border-white/5">
+                    <span className="category-tag mb-3 inline-block">{study.category}</span>
+                    <h3 className="font-poppins font-bold text-xl text-white mt-2">
                       {study.company}
                     </h3>
                   </div>
-                  <div className="p-8">
-                    <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="p-7 flex-1">
+                    <div className="grid grid-cols-2 gap-5">
                       {study.metrics.map((m, j) => (
-                        <div key={j} className="text-center">
-                          <div className="font-poppins font-bold text-2xl text-[#D4A94A]">
-                            {m.value}
-                          </div>
-                          <div className="text-[#8A9BB5] text-xs mt-1 font-poppins">
-                            {m.label}
-                          </div>
+                        <div key={j} className="score-badge">
+                          <span className="score-value">{m.value}</span>
+                          <span className="score-label">{m.label}</span>
                         </div>
                       ))}
                     </div>
-                    <p className="text-[#8A9BB5] text-sm leading-relaxed font-poppins">
-                      {study.desc}
-                    </p>
                   </div>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+
+          {/* Proof stats row */}
           <ScrollReveal delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20 mt-10">
-              <div className="text-center border border-white/5 rounded-xl py-7 px-6 bg-[#162444]/50">
-                <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">93–100</div>
-                <div className="font-poppins text-white font-semibold text-base mb-1">Desktop PageSpeed across all sites</div>
-                <div className="font-poppins text-[#8A9BB5] text-sm">Performance · Accessibility · Best Practices · SEO</div>
-              </div>
-              <div className="text-center border border-white/5 rounded-xl py-7 px-6 bg-[#162444]/50">
-                <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">66% better</div>
-                <div className="font-poppins text-white font-semibold text-base mb-1">Mobile scores vs. the typical competitor</div>
-                <div className="font-poppins text-[#8A9BB5] text-sm">Compared to WordPress, Wix, and Squarespace sites</div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
+              {[
+                {
+                  value: '93–100',
+                  label: 'PageSpeed across all sites',
+                  sub: 'Performance · Accessibility · Best Practices · SEO',
+                },
+                {
+                  value: '66%',
+                  label: 'better mobile scores vs. competitors',
+                  sub: 'Compared to WordPress, Wix, and Squarespace sites',
+                },
+                {
+                  value: '0',
+                  label: 'invalid schema items across all sites',
+                  sub: 'Machine-readable, validated, authoritative',
+                },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  className="text-center border border-white/5 rounded-xl py-7 px-6 bg-[#0d0d1a]/60"
+                >
+                  <div className="font-poppins font-bold text-3xl md:text-4xl text-[#D4A94A] mb-1.5">
+                    {stat.value}
+                  </div>
+                  <div className="font-poppins text-white font-semibold text-sm mb-1">
+                    {stat.label}
+                  </div>
+                  <div className="font-poppins text-[#8A9BB5] text-xs">{stat.sub}</div>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
 
-          {/* Animated counter */}
+          {/* INW Basecamp case study callout */}
           <ScrollReveal delay={200}>
-            <div className="bg-[#162444] rounded-2xl p-12 md:p-16 text-center border border-[#D4A94A]/20">
-              <CounterAnimation
-                end={124}
-                label="Invalid schema items across all sites"
-                duration={2500}
-              />
+            <div className="inw-callout">
+              <p className="eyebrow mb-4">INW Basecamp — Case Study</p>
+              <p className="font-poppins text-white/90 text-base md:text-lg leading-relaxed">
+                &ldquo;We structured INW Basecamp with amenityFeature schema, FAQPage markup, and a
+                relocation knowledge base built for AI queries. When someone asks an AI assistant
+                about relocating to North Idaho, Shirin&apos;s site surfaces as the authoritative
+                source — while local competitors remain{' '}
+                <span className="text-[#D4A94A] font-semibold">completely invisible.</span>&rdquo;
+              </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={300}>
             <div className="text-center mt-12">
-              <Link href="/case-studies" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+              <Link href="/case-studies" className="btn-gold-outline text-sm font-bold px-8 py-3.5 rounded-md inline-block">
                 See Full Case Studies
               </Link>
             </div>
@@ -362,230 +400,134 @@ export default function HomePage() {
       {/* Section divider */}
       <div className="section-divider" />
 
-      {/* ===== PRICING SECTION ===== */}
-      <section id="pricing" className="py-24 md:py-32 bg-[#0F1E3C] px-4">
-        <div className="max-w-6xl mx-auto">
+      {/* ===== SECTION 6 — FREE AEO AUDIT CTA ===== */}
+      <section id="audit" className="py-24 md:py-36 bg-[#0d0d1a] px-4">
+        <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">PACKAGES</p>
+            <p className="eyebrow mb-5">YOUR FIRST STEP</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-4">
-              Simple Pricing.
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[56px] text-white mb-7 leading-[1.15]">
+              Find out if AI knows you exist.
             </h2>
-            <p className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] text-center mb-16">
-              Serious Results.
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-[#8A9BB5] text-lg leading-relaxed mb-5">
+              Most business owners don&apos;t know they&apos;re invisible until we show them. Our free
+              AEO Audit shows you exactly how your business appears — or doesn&apos;t — when
+              someone asks ChatGPT, Perplexity, or Google AI Overviews about your service.
+            </p>
+            <p className="font-poppins text-[#8A9BB5] text-base leading-relaxed mb-10">
+              No pitch. No pressure. Just an honest look at your current AI visibility
+              and a clear explanation of what it would take to fix it.
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            {/* Starter */}
-            <ScrollReveal delay={0}>
-              <div className="bg-[#162444] rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 h-full flex flex-col">
-                <div className="mb-6">
-                  <h3 className="font-poppins font-bold text-xl text-white mb-2">Starter</h3>
-                  <div className="font-poppins font-bold text-5xl text-white mb-1">
-                    $2,500
-                  </div>
-                  <p className="text-[#8A9BB5] text-sm font-poppins">One-time investment</p>
+          {/* Checklist */}
+          <ScrollReveal delay={200}>
+            <div className="text-left max-w-xl mx-auto mb-12 space-y-4">
+              {[
+                'How your business currently appears in ChatGPT, Perplexity, and Google AI Overviews',
+                'Your PageSpeed score vs. your top three competitors',
+                'A plain-English breakdown of your schema gaps',
+                'One specific action you can take today — whether you work with us or not',
+              ].map((item, i) => (
+                <div key={i} className="checklist-item">
+                  <svg
+                    className="w-5 h-5 text-[#D4A94A] flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span className="font-poppins text-white/85 text-sm md:text-base">{item}</span>
                 </div>
-                <ul className="space-y-3 mb-8 flex-1">
-                  {[
-                    'Next.js website on Vercel',
-                    'Facebook pixel setup',
-                    '3 custom audiences',
-                    '3 ad creatives ready to launch',
-                    '3 schema-optimized blog articles',
-                    'Google Business Profile optimization',
-                  ].map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm text-[#8A9BB5] font-poppins">
-                      <svg className="w-4 h-4 text-[#D4A94A] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact" className="btn-gold-outline text-sm font-semibold py-3 px-6 rounded-md text-center w-full block">
-                  Get Started
-                </Link>
-              </div>
-            </ScrollReveal>
+              ))}
+            </div>
+          </ScrollReveal>
 
-            {/* Growth - Most Popular */}
-            <ScrollReveal delay={150}>
-              <div className="pricing-popular bg-[#162444] rounded-2xl p-8 hover:shadow-[0_0_40px_rgba(212,169,74,0.2)] transition-all duration-300 relative flex flex-col h-full">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-[#D4A94A] text-[#0F1E3C] text-xs font-bold px-4 py-1.5 rounded-full font-poppins uppercase tracking-wider">
-                    Most Popular
-                  </span>
-                </div>
-                <div className="mb-6 mt-2">
-                  <h3 className="font-poppins font-bold text-xl text-white mb-2">Growth</h3>
-                  <div className="font-poppins font-bold text-5xl text-[#D4A94A] mb-1">
-                    $4,500
-                  </div>
-                  <p className="text-[#8A9BB5] text-sm font-poppins">One-time investment</p>
-                </div>
-                <ul className="space-y-3 mb-8 flex-1">
-                  {[
-                    'Everything in Starter',
-                    '6 blog articles',
-                    'Retargeting campaign setup',
-                    'Dedicated conversion landing page',
-                    '90 days of indexing monitoring',
-                  ].map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm font-poppins">
-                      <svg className="w-4 h-4 text-[#D4A94A] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className={feature === 'Everything in Starter' ? 'text-[#D4A94A] font-semibold' : 'text-[#8A9BB5]'}>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact" className="btn-gold text-sm font-bold py-3 px-6 rounded-md text-center w-full block">
-                  Get Started
-                </Link>
-              </div>
-            </ScrollReveal>
-
-            {/* Full Launch */}
-            <ScrollReveal delay={300}>
-              <div className="bg-[#162444] rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 h-full flex flex-col">
-                <div className="mb-6">
-                  <h3 className="font-poppins font-bold text-xl text-white mb-2">Full Launch</h3>
-                  <div className="font-poppins font-bold text-5xl text-white mb-1">
-                    $7,500
-                  </div>
-                  <p className="text-[#8A9BB5] text-sm font-poppins">One-time investment</p>
-                </div>
-                <ul className="space-y-3 mb-8 flex-1">
-                  {[
-                    'Everything in Growth',
-                    '90 days ad management',
-                    'Monthly reporting dashboard',
-                    'Lookalike audience build',
-                    'Schema audit & implementation across entire site',
-                  ].map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm font-poppins">
-                      <svg className="w-4 h-4 text-[#D4A94A] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className={feature === 'Everything in Growth' ? 'text-[#D4A94A] font-semibold' : 'text-[#8A9BB5]'}>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact" className="btn-gold-outline text-sm font-semibold py-3 px-6 rounded-md text-center w-full block">
-                  Get Started
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-
+          <ScrollReveal delay={300}>
+            <Link
+              href="/contact"
+              className="btn-gold font-poppins font-bold text-base inline-block rounded-md"
+              style={{ padding: '18px 44px' }}
+            >
+              Book Your Free AEO Audit — 20 Minutes. No Obligation.
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Section divider */}
       <div className="section-divider" />
 
-      {/* ===== BLOG PREVIEW SECTION ===== */}
-      <section id="blog" className="py-24 md:py-32 bg-[#0A1628] px-4">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-4">INSIGHTS</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-16">
-              The Zero Click Playbook
-            </h2>
-          </ScrollReveal>
+      {/* ===== SECTION 7 — FORWARD LOOKING ===== */}
+      <section id="future" className="py-24 md:py-32 bg-[#05050f] px-4 relative overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-[#D4A94A]/4 blur-[140px] pointer-events-none" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                category: 'AEO & AI Search',
-                title: 'What Is Zero Click Search and Why Your Business Is Invisible',
-                excerpt:
-                  'AI answers questions before users visit your site. If you\'re not structured for AI to read and cite, you\'re invisible to the fastest-growing search channel.',
-                delay: 0,
-              },
-              {
-                category: 'Website Performance',
-                title: 'Why WordPress Sites Are Losing the AI Search War',
-                excerpt:
-                  'Bloated plugins, slow load times, and poor Core Web Vitals scores are pushing WordPress sites to the back of AI-generated answers. Here\'s what we use instead.',
-                delay: 150,
-              },
-              {
-                category: 'Case Studies',
-                title: 'How We Built Sites That Score 93–100 on PageSpeed',
-                excerpt:
-                  'The complete breakdown of the technical SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types.',
-                delay: 300,
-              },
-            ].map((post, i) => (
-              <ScrollReveal key={i} delay={post.delay}>
-                <article className="bg-[#162444] rounded-xl overflow-hidden border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300 group h-full flex flex-col">
-                  {/* Card image placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-[#0F1E3C] to-[#162444] flex items-center justify-center relative overflow-hidden">
-                    <svg className="w-full h-full opacity-20" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="200" cy="100" r="80" stroke="#D4A94A" strokeWidth="0.5" />
-                      <circle cx="200" cy="100" r="60" stroke="#D4A94A" strokeWidth="0.5" />
-                      <circle cx="200" cy="100" r="40" stroke="#D4A94A" strokeWidth="0.5" />
-                      <circle cx="200" cy="100" r="20" stroke="#D4A94A" strokeWidth="0.5" />
-                      <line x1="0" y1="100" x2="400" y2="100" stroke="#D4A94A" strokeWidth="0.3" />
-                      <line x1="200" y1="0" x2="200" y2="200" stroke="#D4A94A" strokeWidth="0.3" />
-                    </svg>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#162444] to-transparent" />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <span className="category-tag mb-4 self-start">{post.category}</span>
-                    <h3 className="font-poppins font-bold text-lg text-white mb-3 leading-snug group-hover:text-[#D4A94A] transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-[#8A9BB5] text-sm leading-relaxed font-poppins flex-1">
-                      {post.excerpt}
-                    </p>
-                    <Link
-                      href="/blog"
-                      className="mt-4 text-[#D4A94A] text-sm font-semibold font-poppins hover:text-[#E8C478] transition-colors inline-flex items-center gap-1 group/link"
-                    >
-                      Read More
-                      <svg className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </article>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section divider */}
-      <div className="section-divider" />
-
-      {/* ===== FINAL CTA SECTION ===== */}
-      <section id="cta" className="py-24 md:py-36 bg-[#0F1E3C] px-4 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#D4A94A]/5 blur-3xl" />
-        </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <h2 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+            <p className="eyebrow mb-5">WHAT&apos;S COMING</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[56px] text-white mb-8 leading-[1.15]">
+              The same stack that wins today is the foundation for tomorrow.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-[#8A9BB5] text-lg leading-relaxed mb-5">
+              The technical preparation for Google AI Overviews in 2026 is identical to
+              what&apos;s required for Oakley Meta glasses in 2027. When a potential customer
+              walks down the street and asks their glasses &ldquo;who&apos;s the best [business]
+              near me&rdquo; — the answer comes from structured data, not a website visit.
+            </p>
+            <p className="font-poppins text-[#8A9BB5] text-lg leading-relaxed mb-12">
+              We&apos;re building that infrastructure now. For the clients who move first, the
+              competitive window is open.{' '}
+              <span className="text-white font-semibold">
+                For everyone else, it&apos;s closing.
+              </span>
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={250}>
+            <Link href="/contact" className="btn-gold-outline font-poppins font-semibold text-base inline-block rounded-md" style={{ padding: '15px 40px' }}>
+              Start the Conversation
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Section divider */}
+      <div className="section-divider" />
+
+      {/* ===== SECTION 8 — FOOTER CTA ===== */}
+      <section id="cta" className="py-24 md:py-36 bg-[#080810] px-4 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#D4A94A]/5 blur-[100px] pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <ScrollReveal>
+            <h2 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-5 leading-[1.1]">
               Ready to Become{' '}
               <span className="text-[#D4A94A]">the Answer?</span>
             </h2>
           </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="text-[#8A9BB5] text-xl md:text-2xl font-poppins mb-10">
-              Let&apos;s build your lead generation system.
+          <ScrollReveal delay={120}>
+            <p className="font-poppins text-[#8A9BB5] text-xl md:text-2xl mb-10 leading-relaxed">
+              Stop watching AI recommend your competitors.
             </p>
           </ScrollReveal>
-          <ScrollReveal delay={300}>
-            <Link href="/contact" className="btn-gold text-lg font-bold px-10 py-5 rounded-md inline-block">
-              Start the Conversation
+          <ScrollReveal delay={250}>
+            <Link
+              href="/contact"
+              className="btn-gold font-poppins font-bold text-lg inline-block rounded-md"
+              style={{ padding: '20px 52px' }}
+            >
+              Get Your Free AEO Audit
             </Link>
           </ScrollReveal>
         </div>
