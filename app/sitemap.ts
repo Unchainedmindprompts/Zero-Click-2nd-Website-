@@ -2,106 +2,101 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.zeroclickstrategies.com';
+  const currentDate = new Date().toISOString();
 
-  const routes = [
+  return [
+    // Core pages
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 1,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/our-work`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
       priority: 0.7,
     },
+
     // Blog posts
     {
       url: `${baseUrl}/blog/what-is-zero-click-search`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/wordpress-losing-ai-search-war`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/49-pages-indexed-48-hours`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/how-we-indexed-49-pages-48-hours`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      lastModified: new Date('2026-01-15').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/blog/wordpress-losing-ai-search`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      lastModified: new Date('2026-01-22').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/blog/ai-overviews-local-businesses`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/custom-audiences-facebook`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/facebook-ads-local-business-2026`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/inw-basecamp-arizona-launch`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      url: `${baseUrl}/blog/how-we-indexed-49-pages-48-hours`,
+      lastModified: new Date('2026-02-01').toISOString(),
+      changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/schema-markup-complete-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      lastModified: new Date('2026-02-08').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/facebook-ads-local-business-2026`,
+      lastModified: new Date('2026-02-12').toISOString(),
+      changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/ai-overviews-local-businesses`,
+      lastModified: new Date('2026-02-18').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/vercel-vs-wordpress-performance`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      lastModified: new Date('2026-02-22').toISOString(),
+      changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog/custom-audiences-facebook`,
+      lastModified: new Date('2026-02-27').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/why-website-burning-ai-tokens`,
+      lastModified: new Date('2026-03-03').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
-
-  return routes;
 }
