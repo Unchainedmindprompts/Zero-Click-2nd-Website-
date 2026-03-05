@@ -136,7 +136,7 @@ export default function ServicesPage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">BRAND AUTHORITY ARCHITECTURE</p>
           <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-            Stop Offering Digital Marketing.{' '}
+            Stop Chasing Clicks.{' '}
             <br className="hidden md:block" />
             Start{' '}
             <span className="text-[#D4A94A]">Owning the Answer.</span>
