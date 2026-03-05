@@ -24,11 +24,12 @@ export default function AboutPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#0A1628] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-50 pointer-events-none" />
+      <section className="pt-36 pb-20 bg-[#05050f] px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="eyebrow mb-4">ABOUT</p>
-          <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight max-w-4xl">
+          <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight max-w-4xl">
             Built by Someone Who Did It{' '}
             <span className="text-[#D4A94A]">On Their Own Businesses First</span>
           </h1>
@@ -42,13 +43,13 @@ export default function AboutPage() {
       <div className="section-divider" />
 
       {/* Story */}
-      <section className="py-24 md:py-32 bg-[#0F1E3C] px-4">
+      <section className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Photo placeholder */}
+            {/* Photo */}
             <ScrollReveal>
               <div className="relative">
-                <div className="aspect-[4/5] bg-[#162444] rounded-2xl overflow-hidden border border-white/10 relative">
+                <div className="aspect-[4/5] bg-[#0d0d1a] rounded-2xl overflow-hidden border border-white/10 relative">
                   <Image
                     src="/about-photo.png"
                     alt="Zero Click Strategies founder"
@@ -58,8 +59,8 @@ export default function AboutPage() {
                     priority
                   />
                 </div>
-                {/* Location badge overlay */}
-                <div className="absolute bottom-6 left-6 right-6 bg-[#0A1628]/90 backdrop-blur-sm rounded-xl p-4 border border-[#D4A94A]/20">
+                {/* Name badge overlay */}
+                <div className="absolute bottom-6 left-6 right-6 bg-[#07070f]/90 backdrop-blur-sm rounded-xl p-4 border border-[#D4A94A]/20">
                   <div className="flex items-center gap-3">
                     <div>
                       <div className="font-poppins font-semibold text-white text-sm">Mark Abplanalp</div>
@@ -73,41 +74,63 @@ export default function AboutPage() {
             {/* Story text */}
             <ScrollReveal delay={200}>
               <div className="space-y-6">
-                <div>
-                  <h2 className="font-poppins font-bold text-3xl text-white mb-4">
-                    30 Years of Sales. 23 Years of Building. Here&apos;s What Actually Works.
-                  </h2>
-                  <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                    After relocating to Northern Idaho, I did what most business owners do — looked for local marketing help to rebuild visibility in a new market. What I found was that most agencies were still selling yesterday&apos;s playbook. Nobody had clear answers about AI search, answer engines, or why the old strategies were losing ground fast.
+                <h2 className="font-playfair font-bold text-3xl text-white mb-4">
+                  30 Years of Sales. 23 Years of Building.{' '}
+                  <span className="text-[#D4A94A]">I Was My Own First Client.</span>
+                </h2>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  When my wife and I relocated to North Idaho, I did what you&apos;ve probably done:
+                  I looked for a way to build visibility in a new market. I sat in the same meetings
+                  you&apos;ve likely sat in, hearing the same{' '}
+                  <span className="text-white font-medium">&ldquo;Yesterday&apos;s Playbook&rdquo;</span>
+                  —spend more, wait longer, chase the blue link.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  But while my rankings looked good on paper, the phones weren&apos;t ringing. I felt
+                  that{' '}
+                  <span className="text-white font-medium">&ldquo;quiet panic&rdquo;</span> of knowing
+                  the game was shifting, even if the &ldquo;experts&rdquo; in the room couldn&apos;t
+                  explain why.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  I didn&apos;t start Zero Click Strategies to build an agency. I started it because I
+                  was tired of writing checks for &ldquo;visibility&rdquo; that didn&apos;t turn into
+                  revenue.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  I spent a year digging into the data and realized we are in the middle of{' '}
+                  <span className="text-white font-medium">&ldquo;The Great Decoupling.&rdquo;</span>{' '}
+                  Search volume is higher than ever, but nearly 60% of those searches now end without
+                  a single click to a website. AI and wearables — like the Oakley Meta glasses — are
+                  giving your customers answers before they ever see your link.
+                </p>
+
+                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
+                  I built the Authority Engine because my own family&apos;s revenue depended on it. I
+                  needed to ensure that when a homebuyer asked their glasses for a &ldquo;realtor in
+                  Coeur d&apos;Alene,&rdquo; my wife&apos;s name was the one they heard in their ear.
+                </p>
+
+                <div className="border-l-4 border-[#D4A94A] bg-[#0d0d1a] rounded-r-xl px-6 py-5">
+                  <p className="text-white/90 leading-relaxed font-poppins text-sm md:text-base">
+                    Here is what I learned: When an AI cites you, it&apos;s a{' '}
+                    <span className="text-[#D4A94A] font-semibold">&ldquo;warm referral&rdquo;</span>{' '}
+                    from the machine. These buyers arrive pre-vetted — they spend 40% more time on
+                    your site and convert at a rate 5x higher than traditional search.
                   </p>
                 </div>
 
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  That experience led me to ask the same questions you&apos;re probably asking right now.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  Will AI replace what I&apos;ve built? Are my competitors already ahead of me? Is what worked last year even relevant anymore?
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  These aren&apos;t irrational fears. The pace of change is unlike anything most of us have experienced in business. And the truth is — most marketing agencies don&apos;t have clear answers because they&apos;re still catching up themselves.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  So I spent a year finding the answers. Testing and implementing on my own businesses with real revenue on the line. What I discovered is that AI isn&apos;t the enemy of small business — it&apos;s actually the great equalizer, if you know how to use it.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  The businesses that adapt now won&apos;t just survive. They&apos;ll have leverage they&apos;ve never had before.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  But believing the AI revolution isn&apos;t coming — or that it won&apos;t affect your business — is a recipe for irrelevance. The only question is whether you get ahead of it or get left behind.
-                </p>
-
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  That&apos;s the conversation I started Zero Click Strategies to have.
+                  I&apos;m not a computer programmer. I&apos;m a business owner who found a way to
+                  stop the bleeding. If you&apos;re feeling the{' '}
+                  <span className="text-white font-medium">&ldquo;quiet panic&rdquo;</span> of
+                  disappearing clicks, I get it. I built this stack to reclaim the{' '}
+                  <span className="text-white font-medium">&ldquo;Answer Real Estate&rdquo;</span> for
+                  my businesses — and I&apos;m here to help you do the same for yours.
                 </p>
 
                 <div className="pt-4">
@@ -124,11 +147,11 @@ export default function AboutPage() {
       <div className="section-divider" />
 
       {/* The Methodology */}
-      <section className="py-24 md:py-32 bg-[#0A1628] px-4">
+      <section className="py-24 md:py-32 bg-[#05050f] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <p className="eyebrow text-center mb-4">THE METHODOLOGY</p>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
               Why We Do Things <span className="text-[#D4A94A]">Differently</span>
             </h2>
           </ScrollReveal>
@@ -161,7 +184,7 @@ export default function AboutPage() {
                   'SEO plugins generate generic, often invalid schema that AI ignores.',
                   'Hand-coded JSON-LD is precise, validated, and entity-specific.',
                   'Custom schema tells AI exactly what you do, where, and for whom.',
-                  'Google\'s Rich Results Test confirms valid structured data — we verify everything.',
+                  "Google's Rich Results Test confirms valid structured data — we verify everything.",
                 ],
                 delay: 150,
               },
@@ -176,13 +199,13 @@ export default function AboutPage() {
                   'Traditional SEO targets keywords. AEO targets questions AI is asked.',
                   'AI Overviews pull from structured, authoritative, entity-clear content.',
                   'FAQ schema, How-To schema, and Article schema trigger rich results.',
-                  'The goal isn\'t to rank #1 — it\'s to be the source AI cites.',
+                  "The goal isn't to rank #1 — it's to be the source AI cites.",
                 ],
                 delay: 300,
               },
             ].map((pillar) => (
               <ScrollReveal key={pillar.title} delay={pillar.delay}>
-                <div className="card-gold-border bg-[#162444] rounded-xl p-8 h-full hover:bg-[#1a2d54] transition-all duration-300 group">
+                <div className="card-gold-border bg-[#0d0d1a] rounded-xl p-8 h-full hover:bg-[#111122] transition-all duration-300 border border-white/5 hover:border-[#D4A94A]/25">
                   <div className="text-[#D4A94A] mb-5">{pillar.icon}</div>
                   <h3 className="font-poppins font-bold text-xl text-white mb-5">{pillar.title}</h3>
                   <ul className="space-y-3">
@@ -202,8 +225,8 @@ export default function AboutPage() {
 
       <div className="section-divider" />
 
-      {/* Values / Quick stats */}
-      <section className="py-24 bg-[#0F1E3C] px-4">
+      {/* Stats + CTA */}
+      <section className="py-24 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[
@@ -213,7 +236,7 @@ export default function AboutPage() {
               { value: '0', label: 'Invalid schema items ever' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
-                <div className="text-center p-6 bg-[#162444] rounded-xl border border-white/5">
+                <div className="text-center p-6 bg-[#0d0d1a] rounded-xl border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300">
                   <div className="font-poppins font-bold text-4xl text-[#D4A94A] mb-2">{stat.value}</div>
                   <div className="text-[#8A9BB5] text-sm font-poppins">{stat.label}</div>
                 </div>

@@ -29,12 +29,14 @@ export default function ContactPage() {
   return (
     <>
       {/* No distracting nav elements on contact page — full focus */}
-      <section className="min-h-screen bg-[#0A1628] pt-32 pb-20 px-4">
-        <div className="max-w-4xl mx-auto">
+      <section className="min-h-screen bg-[#05050f] pt-32 pb-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative z-10">
           <ScrollReveal>
             <div className="text-center mb-12">
               <p className="eyebrow mb-4">GET IN TOUCH</p>
-              <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+              <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
                 Let&apos;s Build Your{' '}
                 <span className="text-[#D4A94A]">Lead Generation System</span>
               </h1>
@@ -51,7 +53,7 @@ export default function ContactPage() {
               {!submitted ? (
                 <form
                   onSubmit={handleSubmit}
-                  className="bg-[#162444] rounded-2xl p-8 md:p-10 border border-white/10"
+                  className="bg-[#0d0d1a] rounded-2xl p-8 md:p-10 border border-white/10"
                 >
                   <div className="space-y-6">
                     <div>
@@ -69,7 +71,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="First and last name"
-                        className="w-full bg-[#0F1E3C] border border-white/10 rounded-lg px-4 py-3.5 text-white font-poppins text-sm placeholder-[#8A9BB5]/60 focus:outline-none focus:border-[#D4A94A]/50 focus:ring-1 focus:ring-[#D4A94A]/30 transition-all"
+                        className="w-full bg-[#080810] border border-white/10 rounded-lg px-4 py-3.5 text-white font-poppins text-sm placeholder-[#8A9BB5]/60 focus:outline-none focus:border-[#D4A94A]/50 focus:ring-1 focus:ring-[#D4A94A]/30 transition-all"
                       />
                     </div>
 
@@ -88,7 +90,7 @@ export default function ContactPage() {
                         value={formData.businessName}
                         onChange={handleChange}
                         placeholder="Your company name"
-                        className="w-full bg-[#0F1E3C] border border-white/10 rounded-lg px-4 py-3.5 text-white font-poppins text-sm placeholder-[#8A9BB5]/60 focus:outline-none focus:border-[#D4A94A]/50 focus:ring-1 focus:ring-[#D4A94A]/30 transition-all"
+                        className="w-full bg-[#080810] border border-white/10 rounded-lg px-4 py-3.5 text-white font-poppins text-sm placeholder-[#8A9BB5]/60 focus:outline-none focus:border-[#D4A94A]/50 focus:ring-1 focus:ring-[#D4A94A]/30 transition-all"
                       />
                     </div>
 
@@ -106,7 +108,7 @@ export default function ContactPage() {
                         value={formData.website}
                         onChange={handleChange}
                         placeholder="https://yourbusiness.com"
-                        className="w-full bg-[#0F1E3C] border border-white/10 rounded-lg px-4 py-3.5 text-white font-poppins text-sm placeholder-[#8A9BB5]/60 focus:outline-none focus:border-[#D4A94A]/50 focus:ring-1 focus:ring-[#D4A94A]/30 transition-all"
+                        className="w-full bg-[#080810] border border-white/10 rounded-lg px-4 py-3.5 text-white font-poppins text-sm placeholder-[#8A9BB5]/60 focus:outline-none focus:border-[#D4A94A]/50 focus:ring-1 focus:ring-[#D4A94A]/30 transition-all"
                       />
                     </div>
 
@@ -126,7 +128,7 @@ export default function ContactPage() {
                         value={formData.challenge}
                         onChange={handleChange}
                         placeholder="Tell us what's not working, what you've tried, and what winning looks like for your business..."
-                        className="w-full bg-[#0F1E3C] border border-white/10 rounded-lg px-4 py-3.5 text-white font-poppins text-sm placeholder-[#8A9BB5]/60 focus:outline-none focus:border-[#D4A94A]/50 focus:ring-1 focus:ring-[#D4A94A]/30 transition-all resize-none"
+                        className="w-full bg-[#080810] border border-white/10 rounded-lg px-4 py-3.5 text-white font-poppins text-sm placeholder-[#8A9BB5]/60 focus:outline-none focus:border-[#D4A94A]/50 focus:ring-1 focus:ring-[#D4A94A]/30 transition-all resize-none"
                       />
                     </div>
 
@@ -150,7 +152,7 @@ export default function ContactPage() {
                   </div>
                 </form>
               ) : (
-                <div className="bg-[#162444] rounded-2xl p-10 border border-[#D4A94A]/30 text-center">
+                <div className="bg-[#0d0d1a] rounded-2xl p-10 border border-[#D4A94A]/30 text-center">
                   <div className="w-16 h-16 bg-[#D4A94A]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg className="w-8 h-8 text-[#D4A94A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -171,7 +173,7 @@ export default function ContactPage() {
             <ScrollReveal delay={200} className="lg:col-span-2">
               <div className="space-y-6">
                 {/* Direct contact */}
-                <div className="bg-[#162444] rounded-xl p-6 border border-white/10">
+                <div className="bg-[#0d0d1a] rounded-xl p-6 border border-white/10">
                   <h3 className="font-poppins font-bold text-white mb-4">Direct Contact</h3>
                   <div className="space-y-4">
                     <a
@@ -197,7 +199,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Response time */}
-                <div className="bg-[#162444] rounded-xl p-6 border border-[#D4A94A]/20">
+                <div className="bg-[#0d0d1a] rounded-xl p-6 border border-[#D4A94A]/20">
                   <h3 className="font-poppins font-bold text-white mb-3">What Happens Next</h3>
                   <div className="space-y-4">
                     {[
@@ -215,6 +217,7 @@ export default function ContactPage() {
                     ))}
                   </div>
                 </div>
+
               </div>
             </ScrollReveal>
           </div>

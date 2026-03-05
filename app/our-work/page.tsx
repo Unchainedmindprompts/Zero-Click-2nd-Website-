@@ -66,11 +66,12 @@ export default function OurWorkPage() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#0A1628] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-50 pointer-events-none" />
+      <section className="pt-36 pb-20 bg-[#05050f] px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">RECENT PROJECTS</p>
-          <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
             Our Work
           </h1>
           <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl mx-auto leading-relaxed">
@@ -82,14 +83,14 @@ export default function OurWorkPage() {
       <div className="section-divider" />
 
       {/* Project Cards */}
-      <section className="py-24 md:py-32 bg-[#0F1E3C] px-4">
+      <section className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, i) => (
               <ScrollReveal key={project.url} delay={i * 150}>
-                <div className="bg-[#162444] rounded-2xl overflow-hidden border border-white/5 hover:border-[#D4A94A]/30 transition-all duration-300 flex flex-col h-full card-gold-border">
+                <div className="bg-[#0d0d1a] rounded-2xl overflow-hidden border border-white/5 hover:border-[#D4A94A]/30 transition-all duration-300 flex flex-col h-full card-gold-border">
                   {/* Screenshot Preview */}
-                  <div className="relative w-full aspect-video overflow-hidden bg-[#0A1628]">
+                  <div className="relative w-full aspect-video overflow-hidden bg-[#080810]">
                     <Image
                       src={project.screenshot}
                       alt={`Screenshot of ${project.title}`}
@@ -129,10 +130,10 @@ export default function OurWorkPage() {
       <div className="section-divider" />
 
       {/* CTA */}
-      <section className="py-24 bg-[#0A1628] px-4">
+      <section className="py-24 bg-[#05050f] px-4">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6">
               Your Business Could Be <span className="text-[#D4A94A]">Next</span>
             </h2>
             <p className="text-[#8A9BB5] text-xl font-poppins mb-10 leading-relaxed max-w-2xl mx-auto">

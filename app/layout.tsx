@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Poppins, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -8,6 +8,13 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-poppins',
+  display: 'swap',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-playfair',
   display: 'swap',
 });
 
@@ -118,13 +125,50 @@ const localBusinessSchema = {
   priceRange: '$$',
 };
 
+const professionalServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Zero Click Strategies',
+  description:
+    'Answer Engine Optimization agency helping businesses become the cited source in AI-generated search results and discoverable by wearable devices.',
+  url: 'https://www.zeroclickstrategies.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Post Falls',
+    addressRegion: 'ID',
+    addressCountry: 'US',
+  },
+  areaServed: ['North Idaho', 'Pacific Northwest', 'United States'],
+  knowsAbout: [
+    'Answer Engine Optimization',
+    'AI Search Visibility',
+    'Next.js Development',
+    'Schema Markup',
+    'Wearable Device Discoverability',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'AEO Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Free AEO Audit',
+        description:
+          'No-obligation audit of current AI search visibility in ChatGPT, Perplexity, and Google AI Overviews',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+    ],
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={`${poppins.variable} ${playfair.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -134,8 +178,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        />
       </head>
-      <body className="font-poppins bg-[#0F1E3C] text-white antialiased">
+      <body className="font-poppins bg-[#07070f] text-white antialiased">
         <Navigation />
         <main>{children}</main>
         <Footer />

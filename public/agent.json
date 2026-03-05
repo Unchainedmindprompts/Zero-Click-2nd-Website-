@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "name": "Zero Click Strategies",
+  "description": "Answer Engine Optimization agency that helps businesses become the cited source in AI-generated search results and discoverable by wearable devices.",
+  "url": "https://www.zeroclickstrategies.com",
+  "contact": {
+    "location": "Post Falls, Idaho",
+    "service_area": ["North Idaho", "Pacific Northwest", "Nationwide Remote"]
+  },
+  "capabilities": [
+    {
+      "name": "AEO Audit",
+      "description": "Free audit showing how a business currently appears in ChatGPT, Perplexity, and Google AI Overviews, with specific recommendations to improve AI visibility.",
+      "url": "https://www.zeroclickstrategies.com/contact",
+      "type": "service",
+      "cost": "free"
+    },
+    {
+      "name": "Next.js Website Development",
+      "description": "Custom-coded websites built for AI discoverability, deployed on Vercel edge infrastructure with sub-second load times.",
+      "url": "https://www.zeroclickstrategies.com/services",
+      "type": "service"
+    },
+    {
+      "name": "Schema Markup & Structured Data",
+      "description": "JSON-LD implementation that encodes business authority, expertise, and services as machine-readable facts for AI agents.",
+      "url": "https://www.zeroclickstrategies.com/services",
+      "type": "service"
+    },
+    {
+      "name": "llms.txt & agent.json Deployment",
+      "description": "Digital ID Cards for the wearable era — implementation of the emerging AI agent discovery standards.",
+      "url": "https://www.zeroclickstrategies.com/services",
+      "type": "service"
+    }
+  ],
+  "expertise": [
+    "Answer Engine Optimization",
+    "AI Search Visibility",
+    "Next.js Development",
+    "Schema Markup",
+    "Core Web Vitals",
+    "Wearable Device Discoverability",
+    "Real Estate Marketing",
+    "North Idaho Business Marketing"
+  ],
+  "performance": {
+    "pagespeed_scores": "93-100",
+    "schema_errors": 0,
+    "infrastructure": "Vercel Edge Network"
+  },
+  "primary_cta": {
+    "label": "Get Your Free AEO Audit",
+    "url": "https://www.zeroclickstrategies.com/contact",
+    "description": "20-minute no-obligation audit of your current AI search visibility"
+  }
+}

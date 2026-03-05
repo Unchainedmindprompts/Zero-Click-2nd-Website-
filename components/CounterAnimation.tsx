@@ -8,6 +8,7 @@ interface CounterAnimationProps {
   label: string;
   prefix?: string;
   suffix?: string;
+  decimals?: number;
 }
 
 export default function CounterAnimation({
@@ -16,7 +17,10 @@ export default function CounterAnimation({
   label,
   prefix = '',
   suffix = '',
+  decimals = 0,
 }: CounterAnimationProps) {
+  const factor = Math.pow(10, decimals);
+  const internalEnd = Math.round(end * factor);
   const [count, setCount] = useState(0);
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -48,21 +52,23 @@ export default function CounterAnimation({
       const progress = Math.min(elapsed / duration, 1);
       // Ease out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.floor(eased * end));
+      setCount(Math.floor(eased * internalEnd));
 
       if (progress >= 1) {
-        setCount(end);
+        setCount(internalEnd);
         clearInterval(timer);
       }
     }, 16);
 
     return () => clearInterval(timer);
-  }, [started, end, duration]);
+  }, [started, internalEnd, duration]);
+
+  const display = decimals > 0 ? (count / factor).toFixed(decimals) : count;
 
   return (
     <div ref={ref} className="text-center">
       <div className="text-7xl md:text-8xl font-bold text-[#D4A94A] font-poppins leading-none">
-        {prefix}{count}{suffix}
+        {prefix}{display}{suffix}
       </div>
       <p className="text-[#8A9BB5] text-lg mt-4 font-poppins font-medium max-w-xs mx-auto">
         {label}

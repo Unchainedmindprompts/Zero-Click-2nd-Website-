@@ -12,7 +12,7 @@ const blogPosts = [
     category: 'AEO & AI Search',
     title: 'What Is Zero Click Search and Why Your Business Is Invisible',
     excerpt:
-      'AI answers questions before users visit your site. If you\'re not structured for AI to read and cite, you\'re invisible to the fastest-growing search channel. Here\'s what\'s happening and what to do about it.',
+      "AI answers questions before users visit your site. If you're not structured for AI to read and cite, you're invisible to the fastest-growing search channel. Here's what's happening and what to do about it.",
     date: 'January 15, 2026',
     readTime: '8 min read',
   },
@@ -21,7 +21,7 @@ const blogPosts = [
     category: 'Website Performance',
     title: 'Why WordPress Sites Are Losing the AI Search War',
     excerpt:
-      'Bloated plugins, slow load times, and poor Core Web Vitals scores are pushing WordPress sites to the back of AI-generated answers. Here\'s what we use instead — and why it matters for 2026.',
+      "Bloated plugins, slow load times, and poor Core Web Vitals scores are pushing WordPress sites to the back of AI-generated answers. Here's what we use instead — and why it matters for 2026.",
     date: 'January 22, 2026',
     readTime: '6 min read',
   },
@@ -57,7 +57,7 @@ const blogPosts = [
     category: 'AEO & AI Search',
     title: 'How to Get Your Local Business Featured in Google AI Overviews',
     excerpt:
-      'Google\'s AI Overviews are replacing traditional search results for millions of queries. Here\'s the exact framework we use to get local businesses cited as the source — not buried below it.',
+      "Google's AI Overviews are replacing traditional search results for millions of queries. Here's the exact framework we use to get local businesses cited as the source — not buried below it.",
     date: 'February 18, 2026',
     readTime: '7 min read',
   },
@@ -75,7 +75,7 @@ const blogPosts = [
     category: 'Facebook Ads',
     title: 'The Three Custom Audiences Every Local Business Needs on Facebook',
     excerpt:
-      'Most businesses set up one broad audience and wonder why their ads don\'t convert. These three layered audiences — awareness, intent, and retargeting — are the foundation of every campaign we build.',
+      "Most businesses set up one broad audience and wonder why their ads don't convert. These three layered audiences — awareness, intent, and retargeting — are the foundation of every campaign we build.",
     date: 'February 27, 2026',
     readTime: '6 min read',
   },
@@ -84,7 +84,7 @@ const blogPosts = [
     category: 'AEO & AI Visibility',
     title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
     excerpt:
-      'AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don\'t get recommended. Here\'s what token-efficient looks like.',
+      "AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don't get recommended. Here's what token-efficient looks like.",
     date: 'March 3, 2026',
     readTime: '7 min read',
   },
@@ -93,18 +93,20 @@ const blogPosts = [
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const filtered = activeCategory === 'All'
-    ? blogPosts
-    : blogPosts.filter((p) => p.category === activeCategory);
+  const filtered =
+    activeCategory === 'All'
+      ? blogPosts
+      : blogPosts.filter((p) => p.category === activeCategory);
 
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#0A1628] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-50 pointer-events-none" />
+      <section className="pt-36 pb-20 bg-[#05050f] px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">BLOG</p>
-          <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
             The Zero Click{' '}
             <span className="text-[#D4A94A]">Playbook</span>
           </h1>
@@ -116,8 +118,8 @@ export default function BlogPage() {
 
       <div className="section-divider" />
 
-      {/* Category filter */}
-      <section className="py-8 bg-[#0F1E3C] px-4 sticky top-20 z-30 border-b border-white/5">
+      {/* Category filter — sticky */}
+      <section className="py-8 bg-[#080810] px-4 sticky top-20 z-30 border-b border-white/5">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((cat) => (
@@ -126,8 +128,8 @@ export default function BlogPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`font-poppins font-medium text-sm px-4 py-2 rounded-full transition-all duration-200 ${
                   activeCategory === cat
-                    ? 'bg-[#D4A94A] text-[#0F1E3C] font-semibold'
-                    : 'bg-[#162444] text-[#8A9BB5] border border-white/10 hover:border-[#D4A94A]/40 hover:text-[#D4A94A]'
+                    ? 'bg-[#D4A94A] text-[#07070f] font-semibold'
+                    : 'bg-[#0d0d1a] text-[#8A9BB5] border border-white/10 hover:border-[#D4A94A]/40 hover:text-[#D4A94A]'
                 }`}
               >
                 {cat}
@@ -138,21 +140,20 @@ export default function BlogPage() {
       </section>
 
       {/* Blog grid */}
-      <section className="py-16 md:py-24 bg-[#0F1E3C] px-4">
+      <section className="py-16 md:py-24 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 50}>
-                <article className="bg-[#162444] rounded-xl overflow-hidden border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300 group h-full flex flex-col">
+                <article className="bg-[#0d0d1a] rounded-xl overflow-hidden border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300 group h-full flex flex-col">
                   {/* Abstract SVG header */}
-                  <div className="h-44 bg-gradient-to-br from-[#0A1628] to-[#162444] flex items-center justify-center relative overflow-hidden flex-shrink-0">
+                  <div className="h-44 bg-gradient-to-br from-[#05050f] to-[#0d0d1a] flex items-center justify-center relative overflow-hidden flex-shrink-0">
                     <svg
                       viewBox="0 0 300 175"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-full h-full opacity-30"
                     >
-                      {/* Unique pattern per post based on index */}
                       {i % 3 === 0 && (
                         <>
                           <circle cx="150" cy="87" r="60" stroke="#D4A94A" strokeWidth="0.5" />
@@ -181,7 +182,7 @@ export default function BlogPage() {
                         </>
                       )}
                     </svg>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#162444] to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d1a] to-transparent" />
                   </div>
 
                   <div className="p-6 flex flex-col flex-1">
@@ -222,11 +223,11 @@ export default function BlogPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#0A1628] px-4">
+      <section className="py-20 bg-[#05050f] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <p className="eyebrow mb-4">GET THE STRATEGY</p>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-4">
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-white mb-4">
               Ready to Stop Being Invisible?
             </h2>
             <p className="text-[#8A9BB5] font-poppins mb-8 leading-relaxed">
