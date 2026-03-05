@@ -261,7 +261,161 @@ export default function HomePage() {
       {/* Section divider */}
       <div className="section-divider" />
 
-      {/* ===== SECTION 5 — PROOF ===== */}
+      {/* ===== SECTION 5 — INTENT COMPRESSION ===== */}
+      <section id="intent-compression" className="py-24 md:py-32 bg-[#080810] px-4">
+        <div className="max-w-6xl mx-auto">
+
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">WHY THIS CHANGES EVERYTHING</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[56px] text-white text-center mb-10 leading-[1.15]">
+              AI doesn&apos;t send you traffic.{' '}
+              <span className="text-[#D4A94A]">It sends you buyers.</span>
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={150}>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <p className="text-[#8A9BB5] text-lg md:text-xl leading-relaxed font-poppins mb-5">
+                Visitors who discover your business through an AI citation aren&apos;t browsing —
+                they&apos;ve already been vetted. The AI has evaluated your authority, matched your
+                expertise to the user&apos;s question, and delivered a pre-qualified buyer directly
+                to your door.
+              </p>
+              <p className="text-[#8A9BB5] text-base md:text-lg leading-relaxed font-poppins">
+                This is what we call{' '}
+                <span className="text-white font-semibold">Intent Compression</span>. The research
+                phase that used to take days of Google searches happens inside the AI in seconds.
+                By the time they land on your site, the decision is nearly made.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Comparison table */}
+          <ScrollReveal delay={200}>
+            <div className="mb-16 overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="font-poppins font-semibold text-[#8A9BB5] text-sm py-4 pr-6 min-w-[180px]">
+                      Metric
+                    </th>
+                    <th className="font-poppins font-semibold text-[#8A9BB5] text-sm py-4 pr-6 min-w-[160px]">
+                      Traditional Search
+                    </th>
+                    <th className="font-poppins font-semibold text-[#D4A94A] text-sm py-4 min-w-[200px]">
+                      AI-Cited Traffic
+                      <span className="block text-xs font-normal text-[#8A9BB5] mt-0.5">
+                        Your 4-Layer Stack
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { metric: 'Conversion Rate', traditional: '2.8%', ai: '14.2% — 5x higher' },
+                    { metric: 'Purchase Speed', traditional: 'Standard', ai: '47% faster completion' },
+                    { metric: 'Pages Per Session', traditional: 'Baseline', ai: '50% more pages viewed' },
+                    { metric: 'Order / Transaction Value', traditional: 'Standard', ai: '25% higher per transaction' },
+                    { metric: 'Likelihood to Convert', traditional: 'Baseline', ai: 'Up to 23x more likely' },
+                  ].map((row, i) => (
+                    <tr
+                      key={i}
+                      className="border-b border-white/5 hover:bg-[#D4A94A]/3 transition-colors"
+                    >
+                      <td className="font-poppins text-white font-medium text-sm py-4 pr-6">
+                        {row.metric}
+                      </td>
+                      <td className="font-poppins text-[#8A9BB5] text-sm py-4 pr-6">
+                        {row.traditional}
+                      </td>
+                      <td className="font-poppins text-[#D4A94A] font-semibold text-sm py-4">
+                        {row.ai}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="text-xs text-[#8A9BB5] text-center mt-5 font-poppins italic">
+                Sources: Current AI search traffic analysis, 2025–2026. B2C metrics across retail, real estate, and professional services sectors.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Three animated stat callouts */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {[
+              {
+                end: 14.2,
+                decimals: 1,
+                suffix: '%',
+                label: 'AI citation conversion rate vs. 2.8% traditional search',
+                delay: 0,
+              },
+              {
+                end: 47,
+                decimals: 0,
+                suffix: '%',
+                label: 'faster purchase completion for AI-assisted buyers',
+                delay: 150,
+              },
+              {
+                end: 23,
+                decimals: 0,
+                suffix: 'x',
+                label: 'more likely to convert vs. traditional organic traffic',
+                delay: 300,
+              },
+            ].map((stat, i) => (
+              <ScrollReveal key={i} delay={stat.delay}>
+                <div className="stat-block">
+                  <CounterAnimation
+                    end={stat.end}
+                    decimals={stat.decimals}
+                    suffix={stat.suffix}
+                    label={stat.label}
+                    duration={2200}
+                  />
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Pull quote */}
+          <ScrollReveal delay={200}>
+            <blockquote className="border-l-4 border-[#D4A94A] bg-[#0d0d1a] rounded-r-xl px-8 py-8 max-w-3xl mx-auto mb-12">
+              <p className="font-poppins text-white/90 text-base md:text-lg leading-relaxed italic">
+                &ldquo;When an AI recommends your business, it isn&apos;t sending a curious
+                visitor. It&apos;s sending a pre-educated buyer who already trusts you —
+                before they&apos;ve read a single word on your site.&rdquo;
+              </p>
+            </blockquote>
+          </ScrollReveal>
+
+          {/* Section CTA */}
+          <ScrollReveal delay={300}>
+            <div className="text-center">
+              <Link
+                href="/services"
+                className="btn-gold-outline font-poppins font-semibold text-base inline-flex items-center gap-2 rounded-md"
+                style={{ padding: '15px 36px' }}
+              >
+                See how we build this for your business
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </ScrollReveal>
+
+        </div>
+      </section>
+
+      {/* Section divider */}
+      <div className="section-divider" />
+
+      {/* ===== SECTION 6 — PROOF ===== */}
       <section id="proof" className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
