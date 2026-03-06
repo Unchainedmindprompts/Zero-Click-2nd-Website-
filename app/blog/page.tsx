@@ -101,16 +101,15 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#05050f] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
+      <section className="pt-36 pb-20 bg-[#f8f5f0] px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-30 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">BLOG</p>
-          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-[#0a0806] mb-6 leading-tight">
             The KodeCite{' '}
-            <span className="text-[#D4A94A]">Playbook</span>
+            <span className="text-[#a0723a]">Playbook</span>
           </h1>
-          <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[#6a5a48] text-xl font-poppins max-w-3xl mx-auto leading-relaxed">
             Practical guides on AI search, website performance, and digital marketing — built on real results, not theory.
           </p>
         </div>
@@ -119,7 +118,7 @@ export default function BlogPage() {
       <div className="section-divider" />
 
       {/* Category filter — sticky */}
-      <section className="py-8 bg-[#080810] px-4 sticky top-20 z-30 border-b border-white/5">
+      <section className="py-8 bg-[#f2ede4] px-4 sticky top-20 z-30 border-b border-[rgba(100,70,30,0.15)]">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((cat) => (
@@ -128,8 +127,8 @@ export default function BlogPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`font-poppins font-medium text-sm px-4 py-2 rounded-full transition-all duration-200 ${
                   activeCategory === cat
-                    ? 'bg-[#D4A94A] text-[#07070f] font-semibold'
-                    : 'bg-[#0d0d1a] text-[#8A9BB5] border border-white/10 hover:border-[#D4A94A]/40 hover:text-[#D4A94A]'
+                    ? 'bg-[#a0723a] text-[#f8f5f0] font-semibold'
+                    : 'bg-[#f8f5f0] text-[#6a5a48] border border-[rgba(100,70,30,0.2)] hover:border-[#a0723a] hover:text-[#a0723a]'
                 }`}
               >
                 {cat}
@@ -140,35 +139,29 @@ export default function BlogPage() {
       </section>
 
       {/* Blog grid */}
-      <section className="py-16 md:py-24 bg-[#080810] px-4">
+      <section className="py-16 md:py-24 bg-[#f8f5f0] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 50}>
-                <article className="bg-[#0d0d1a] rounded-lg border border-white/5 hover:border-[#D4A94A] hover:-translate-y-0.5 transition-all duration-300 group h-full flex flex-col p-7">
+                <article className="bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)] hover:bg-[#f2ede4] hover:-translate-y-0.5 transition-all duration-300 group h-full flex flex-col p-7">
                   <div className="flex items-center justify-between mb-4">
-                    <span
-                      className={`font-poppins font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-full ${
-                        post.category === 'AEO & AI Search' || post.category === 'AEO & AI Visibility'
-                          ? 'bg-[#D4A94A] text-[#07070f]'
-                          : 'border border-[#D4A94A] text-[#D4A94A] bg-transparent'
-                      }`}
-                    >
+                    <span className="font-poppins font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-full text-[#a0723a] bg-[rgba(160,114,58,0.1)] border border-[rgba(160,114,58,0.2)]">
                       {post.category}
                     </span>
-                    <span className="text-[#8A9BB5] text-xs font-poppins">{post.readTime}</span>
+                    <span className="text-[#6a5a48] text-xs font-poppins">{post.readTime}</span>
                   </div>
-                  <h2 className="font-poppins font-bold text-lg text-white mb-3 leading-snug group-hover:text-[#D4A94A] transition-colors">
+                  <h2 className="font-poppins font-semibold text-lg text-[#0a0806] mb-3 leading-snug group-hover:text-[#1a56db] transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-[#8A9BB5] text-sm leading-relaxed font-poppins mb-4 flex-1">
+                  <p className="text-[#6a5a48] text-sm leading-relaxed font-poppins mb-4 flex-1">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                    <span className="text-[#8A9BB5] text-xs font-poppins">{post.date}</span>
+                  <div className="flex items-center justify-between pt-4 border-t border-[rgba(100,70,30,0.12)]">
+                    <span className="text-[#a0723a] text-xs font-poppins uppercase tracking-wide">{post.date}</span>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-[#D4A94A] text-sm font-semibold font-poppins hover:text-[#E8C478] transition-colors inline-flex items-center gap-1 group/link"
+                      className="text-[#1a56db] text-sm font-semibold font-poppins hover:underline transition-colors inline-flex items-center gap-1 group/link"
                     >
                       Read More
                       <svg className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,21 +176,21 @@ export default function BlogPage() {
 
           {filtered.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-[#8A9BB5] font-poppins text-lg">No articles in this category yet.</p>
+              <p className="text-[#6a5a48] font-poppins text-lg">No articles in this category yet.</p>
             </div>
           )}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#05050f] px-4">
+      <section className="py-20 bg-[#1c1814] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <p className="eyebrow mb-4">GET THE STRATEGY</p>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-white mb-4">
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[rgba(240,232,216,0.9)] mb-4">
               Ready to Stop Being Invisible?
             </h2>
-            <p className="text-[#8A9BB5] font-poppins mb-8 leading-relaxed">
+            <p className="text-[rgba(240,232,216,0.6)] font-poppins mb-8 leading-relaxed">
               Reading about AEO is one thing. Having us implement it is another.
             </p>
             <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
