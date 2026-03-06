@@ -24,28 +24,28 @@ export const metadata: Metadata = {
   creator: 'KodeCite.ai',
   metadataBase: new URL('https://kodecite.ai'),
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://kodecite.ai',
-    siteName: 'KodeCite.ai',
-    title: 'KodeCite.ai — AI Search Optimization & Digital Marketing',
+    title: 'KodeCite.AI — AI Search Optimization',
     description:
-      'Most businesses are invisible to AI. We build the websites, content, and campaigns that make you the answer.',
+      '60% of searches end without a click. AI answers the question and your competitor gets the credit. We make sure the machine chooses you.',
+    url: 'https://www.kodecite.ai',
+    siteName: 'KodeCite.AI',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://www.kodecite.ai/api/og',
         width: 1200,
         height: 630,
-        alt: 'KodeCite.ai',
+        alt: 'KodeCite.AI — AI Search Optimization',
       },
     ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KodeCite.ai — AI Search Optimization & Digital Marketing',
+    title: 'KodeCite.AI — AI Search Optimization',
     description:
-      'Most businesses are invisible to AI. We build the websites, content, and campaigns that make you the answer.',
-    images: ['/og-image.png'],
+      '60% of searches end without a click. We make sure AI chooses you.',
+    images: ['https://www.kodecite.ai/api/og'],
   },
   robots: {
     index: true,
