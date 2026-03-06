@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Our Work — Zero Click Strategies',
+  title: 'Our Work — KodeCite.ai',
   description:
     'Every site we build is fast, structured for AI, and built to convert. See our recent projects including INW Basecamp and Luxe Window Works.',
 };
@@ -13,8 +13,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Our Work', item: 'https://zeroclickstrategies.com/our-work' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Our Work', item: 'https://kodecite.ai/our-work' },
   ],
 };
 

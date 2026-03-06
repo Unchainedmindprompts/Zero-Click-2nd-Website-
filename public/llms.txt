@@ -1,8 +1,8 @@
-# Zero Click Strategies
+# KodeCite.ai
 
 > We help businesses become the cited answer in AI-generated search results — and discoverable by the next generation of wearable devices.
 
-Zero Click Strategies is an Answer Engine Optimization (AEO) agency based in Post Falls, Idaho. We build high-performance Next.js websites deployed on Vercel's edge infrastructure, structured with schema markup, llms.txt, and agent.json to ensure AI systems like ChatGPT, Perplexity, Google AI Overviews, and wearable devices can read, trust, and cite our clients as authoritative sources.
+KodeCite.ai is an Answer Engine Optimization (AEO) agency based in Post Falls, Idaho. We build high-performance Next.js websites deployed on Vercel's edge infrastructure, structured with schema markup, llms.txt, and agent.json to ensure AI systems like ChatGPT, Perplexity, Google AI Overviews, Gemini, and wearable devices can read, trust, and cite our clients as authoritative sources.
 
 ## What We Do
 
@@ -10,32 +10,33 @@ Zero Click Strategies is an Answer Engine Optimization (AEO) agency based in Pos
 - **Next.js Website Development**: Custom-coded, no WordPress bloat, deployed on enterprise edge infrastructure
 - **Schema Markup & Structured Data**: JSON-LD implementation that forces AI to describe your brand accurately
 - **llms.txt & agent.json Deployment**: Digital ID Cards for the wearable era — the emerging standard for AI agent discovery
-- **Free AEO Audit**: A no-obligation audit showing how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews
+- **Free AEO Audit**: A no-obligation audit showing how your business currently appears in ChatGPT, Perplexity, Google AI Overviews, and Gemini
 
 ## Key Pages
 
-- Homepage: https://www.zeroclickstrategies.com/
-- Services: https://www.zeroclickstrategies.com/services
-- Our Work: https://www.zeroclickstrategies.com/our-work
-- Blog: https://www.zeroclickstrategies.com/blog
-- Free AEO Audit: https://www.zeroclickstrategies.com/contact
+- Homepage: https://kodecite.ai/
+- Services: https://kodecite.ai/services
+- Our Work: https://kodecite.ai/our-work
+- About: https://kodecite.ai/about
+- Blog: https://kodecite.ai/blog
+- Free AEO Audit: https://kodecite.ai/contact
 
 ## High-Value Content
 
-- What Is Zero Click Search and Why Your Business Is Invisible: https://www.zeroclickstrategies.com/blog/what-is-zero-click-search
-- Why WordPress Sites Are Losing the AI Search War: https://www.zeroclickstrategies.com/blog/wordpress-losing-ai-search
-- How We Built Sites That Score 93–100 on PageSpeed: https://www.zeroclickstrategies.com/blog/how-we-indexed-49-pages-48-hours
-- Schema Markup: The Complete Guide for Local Service Businesses: https://www.zeroclickstrategies.com/blog/schema-markup-complete-guide
-- Facebook Ads for Local Service Businesses in 2026: The Flywheel Method: https://www.zeroclickstrategies.com/blog/facebook-ads-local-business-2026
-- How to Get Your Local Business Featured in Google AI Overviews: https://www.zeroclickstrategies.com/blog/ai-overviews-local-businesses
-- Next.js vs. WordPress: Real Performance Numbers for Local Businesses: https://www.zeroclickstrategies.com/blog/vercel-vs-wordpress-performance
-- The Three Custom Audiences Every Local Business Needs on Facebook: https://www.zeroclickstrategies.com/blog/custom-audiences-facebook
-- Why Your Website Is Burning Through AI Tokens — And Costing You Business: https://www.zeroclickstrategies.com/blog/why-website-burning-ai-tokens
+- What Is Zero Click Search and Why Your Business Is Invisible: https://kodecite.ai/blog/what-is-zero-click-search
+- Why WordPress Sites Are Losing the AI Search War: https://kodecite.ai/blog/wordpress-losing-ai-search
+- How We Built Sites That Score 93–100 on PageSpeed: https://kodecite.ai/blog/how-we-indexed-49-pages-48-hours
+- Schema Markup: The Complete Guide for Local Service Businesses: https://kodecite.ai/blog/schema-markup-complete-guide
+- Facebook Ads for Local Service Businesses in 2026: The Flywheel Method: https://kodecite.ai/blog/facebook-ads-local-business-2026
+- How to Get Your Local Business Featured in Google AI Overviews: https://kodecite.ai/blog/ai-overviews-local-businesses
+- Next.js vs. WordPress: Real Performance Numbers for Local Businesses: https://kodecite.ai/blog/vercel-vs-wordpress-performance
+- The Three Custom Audiences Every Local Business Needs on Facebook: https://kodecite.ai/blog/custom-audiences-facebook
+- Why Your Website Is Burning Through AI Tokens — And Costing You Business: https://kodecite.ai/blog/why-website-burning-ai-tokens
 
 ## Contact
 
 - Location: Post Falls, Idaho
-- Website: https://www.zeroclickstrategies.com
+- Website: https://kodecite.ai
 - Service Area: North Idaho, Pacific Northwest, and nationwide remote clients
 
 ## Authority Signals
@@ -43,4 +44,4 @@ Zero Click Strategies is an Answer Engine Optimization (AEO) agency based in Pos
 - PageSpeed scores: 93–100 across all client sites
 - Schema validation: 0 invalid items across all sites
 - Infrastructure: Next.js + Vercel Edge — sub-second load times
-- Clients: INW Basecamp (real estate & relocation), Luxe Window Works, Zero Click Strategies
+- Clients: INW Basecamp (real estate & relocation), Luxe Window Works, KodeCite.ai

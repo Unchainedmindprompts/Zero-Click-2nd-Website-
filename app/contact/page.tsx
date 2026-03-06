@@ -177,7 +177,7 @@ export default function ContactPage() {
                   <h3 className="font-poppins font-bold text-white mb-4">Direct Contact</h3>
                   <div className="space-y-4">
                     <a
-                      href="mailto:hello@zeroclickstrategies.com"
+                      href="mailto:hello@kodecite.ai"
                       className="flex items-center gap-3 text-[#8A9BB5] hover:text-[#D4A94A] transition-colors group"
                     >
                       <div className="w-8 h-8 bg-[#D4A94A]/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4A94A]/20 transition-colors">
@@ -185,7 +185,7 @@ export default function ContactPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                       </div>
-                      <span className="font-poppins text-sm">hello@zeroclickstrategies.com</span>
+                      <span className="font-poppins text-sm">hello@kodecite.ai</span>
                     </a>
                     <div className="flex items-center gap-3 text-[#8A9BB5]">
                       <div className="w-8 h-8 bg-[#D4A94A]/10 rounded-lg flex items-center justify-center flex-shrink-0">

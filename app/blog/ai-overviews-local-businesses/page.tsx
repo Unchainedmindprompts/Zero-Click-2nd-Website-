@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'How to Get Your Local Business Featured in Google AI Overviews',
     description:
       'The technical and content framework that gets local businesses cited in Google AI Overviews instead of being filtered out.',
-    url: 'https://zeroclickstrategies.com/blog/ai-overviews-local-businesses',
+    url: 'https://kodecite.ai/blog/ai-overviews-local-businesses',
     type: 'article',
   },
 };
@@ -27,20 +27,20 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.zeroclickstrategies.com/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Zero Click Strategies',
+    name: 'KodeCite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://zeroclickstrategies.com/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
-  url: 'https://zeroclickstrategies.com/blog/ai-overviews-local-businesses',
+  url: 'https://kodecite.ai/blog/ai-overviews-local-businesses',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://zeroclickstrategies.com/blog/ai-overviews-local-businesses',
+    '@id': 'https://kodecite.ai/blog/ai-overviews-local-businesses',
   },
 };
 
@@ -48,13 +48,13 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'How to Get Featured in Google AI Overviews',
-      item: 'https://zeroclickstrategies.com/blog/ai-overviews-local-businesses',
+      item: 'https://kodecite.ai/blog/ai-overviews-local-businesses',
     },
   ],
 };
@@ -150,7 +150,7 @@ export default function AIOverviewsLocalBusinesses() {
                 <span className="text-[#0F1E3C] font-bold text-sm font-poppins">ZC</span>
               </div>
               <div>
-                <p className="text-white text-sm font-semibold font-poppins">Zero Click Strategies</p>
+                <p className="text-white text-sm font-semibold font-poppins">KodeCite.ai</p>
                 <p className="text-[#8A9BB5] text-xs font-poppins">February 18, 2026</p>
               </div>
             </div>

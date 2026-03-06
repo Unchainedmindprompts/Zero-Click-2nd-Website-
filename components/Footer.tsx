@@ -47,10 +47,8 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="block mb-4">
               <span className="font-poppins font-bold text-lg tracking-tight">
-                <span className="text-[#D4A94A]">ZERO</span>
-                <span className="text-white"> CLICK</span>
-                <br />
-                <span className="text-white">STRATEGIES</span>
+                <span className="text-[#D4A94A]">KODE</span>
+                <span className="text-white">CITE.AI</span>
               </span>
             </Link>
             <p className="text-[#8A9BB5] text-sm leading-relaxed font-poppins">
@@ -83,7 +81,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#8A9BB5] text-sm font-poppins">
-            © {currentYear} Zero Click Strategies · Post Falls, Idaho
+            © {currentYear} KodeCite.ai · Post Falls, Idaho
           </p>
           <p className="text-[#8A9BB5] text-xs font-poppins">
             Most businesses are invisible to AI. We fix that.

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
     description:
       'How we launched a new market landing page with zero schema errors and an active Facebook campaign on the same day — the complete story.',
-    url: 'https://zeroclickstrategies.com/blog/inw-basecamp-arizona-launch',
+    url: 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
     type: 'article',
   },
 };
@@ -27,20 +27,20 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.zeroclickstrategies.com/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Zero Click Strategies',
+    name: 'KodeCite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://zeroclickstrategies.com/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
-  url: 'https://zeroclickstrategies.com/blog/inw-basecamp-arizona-launch',
+  url: 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://zeroclickstrategies.com/blog/inw-basecamp-arizona-launch',
+    '@id': 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
   },
 };
 
@@ -48,13 +48,13 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'INW Basecamp Arizona Launch',
-      item: 'https://zeroclickstrategies.com/blog/inw-basecamp-arizona-launch',
+      item: 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
     },
   ],
 };
@@ -150,7 +150,7 @@ export default function INWBasecampArizonaLaunch() {
                 <span className="text-[#0F1E3C] font-bold text-sm font-poppins">ZC</span>
               </div>
               <div>
-                <p className="text-white text-sm font-semibold font-poppins">Zero Click Strategies</p>
+                <p className="text-white text-sm font-semibold font-poppins">KodeCite.ai</p>
                 <p className="text-[#8A9BB5] text-xs font-poppins">February 26, 2026</p>
               </div>
             </div>

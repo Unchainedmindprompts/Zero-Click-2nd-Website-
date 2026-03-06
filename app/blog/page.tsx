@@ -107,7 +107,7 @@ export default function BlogPage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">BLOG</p>
           <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-            The Zero Click{' '}
+            The KodeCite{' '}
             <span className="text-[#D4A94A]">Playbook</span>
           </h1>
           <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl mx-auto leading-relaxed">

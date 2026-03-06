@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
     description:
       'Side-by-side performance data from real local business sites on WordPress shared hosting vs Next.js on edge infrastructure.',
-    url: 'https://zeroclickstrategies.com/blog/vercel-vs-wordpress-performance',
+    url: 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
     type: 'article',
   },
 };
@@ -27,20 +27,20 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.zeroclickstrategies.com/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Zero Click Strategies',
+    name: 'KodeCite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://zeroclickstrategies.com/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
-  url: 'https://zeroclickstrategies.com/blog/vercel-vs-wordpress-performance',
+  url: 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://zeroclickstrategies.com/blog/vercel-vs-wordpress-performance',
+    '@id': 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
   },
 };
 
@@ -48,13 +48,13 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Next.js vs. WordPress: Performance Numbers',
-      item: 'https://zeroclickstrategies.com/blog/vercel-vs-wordpress-performance',
+      item: 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
     },
   ],
 };
@@ -150,7 +150,7 @@ export default function NextJsVsWordPress() {
                 <span className="text-[#0F1E3C] font-bold text-sm font-poppins">ZC</span>
               </div>
               <div>
-                <p className="text-white text-sm font-semibold font-poppins">Zero Click Strategies</p>
+                <p className="text-white text-sm font-semibold font-poppins">KodeCite.ai</p>
                 <p className="text-[#8A9BB5] text-xs font-poppins">February 22, 2026</p>
               </div>
             </div>

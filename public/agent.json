@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "name": "Zero Click Strategies",
+  "name": "KodeCite.ai",
   "description": "Answer Engine Optimization agency that helps businesses become the cited source in AI-generated search results and discoverable by wearable devices.",
-  "url": "https://www.zeroclickstrategies.com",
+  "url": "https://kodecite.ai",
   "contact": {
     "location": "Post Falls, Idaho",
     "service_area": ["North Idaho", "Pacific Northwest", "Nationwide Remote"]
@@ -10,27 +10,33 @@
   "capabilities": [
     {
       "name": "AEO Audit",
-      "description": "Free audit showing how a business currently appears in ChatGPT, Perplexity, and Google AI Overviews, with specific recommendations to improve AI visibility.",
-      "url": "https://www.zeroclickstrategies.com/contact",
+      "description": "Free audit showing how a business currently appears in ChatGPT, Perplexity, Google AI Overviews, and Gemini, with specific recommendations to improve AI visibility.",
+      "url": "https://kodecite.ai/contact",
       "type": "service",
       "cost": "free"
     },
     {
       "name": "Next.js Website Development",
       "description": "Custom-coded websites built for AI discoverability, deployed on Vercel edge infrastructure with sub-second load times.",
-      "url": "https://www.zeroclickstrategies.com/services",
+      "url": "https://kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "Schema Markup & Structured Data",
       "description": "JSON-LD implementation that encodes business authority, expertise, and services as machine-readable facts for AI agents.",
-      "url": "https://www.zeroclickstrategies.com/services",
+      "url": "https://kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "llms.txt & agent.json Deployment",
       "description": "Digital ID Cards for the wearable era — implementation of the emerging AI agent discovery standards.",
-      "url": "https://www.zeroclickstrategies.com/services",
+      "url": "https://kodecite.ai/services",
+      "type": "service"
+    },
+    {
+      "name": "Spatial SEO & Multi-Modal Discovery",
+      "description": "Wearable-ready structured data for Meta glasses, Apple Vision Pro, and autonomous AI agent discovery via agent.json and llms.txt.",
+      "url": "https://kodecite.ai/services",
       "type": "service"
     }
   ],
@@ -42,7 +48,11 @@
     "Core Web Vitals",
     "Wearable Device Discoverability",
     "Real Estate Marketing",
-    "North Idaho Business Marketing"
+    "North Idaho Business Marketing",
+    "ChatGPT Optimization",
+    "Perplexity Optimization",
+    "Google AI Overviews",
+    "Gemini Search Optimization"
   ],
   "performance": {
     "pagespeed_scores": "93-100",
@@ -51,22 +61,7 @@
   },
   "primary_cta": {
     "label": "Get Your Free AEO Audit",
-    "url": "https://www.zeroclickstrategies.com/contact",
-    "description": "20-minute no-obligation audit of your current AI search visibility"
-  },
-  "knowledge_base": {
-    "type": "blog",
-    "url": "https://www.zeroclickstrategies.com/blog",
-    "description": "Practical guides on AI search optimization, AEO implementation, schema markup, and Next.js performance for local businesses",
-    "article_count": 9,
-    "topics": [
-      "Zero Click Search",
-      "Answer Engine Optimization",
-      "Schema Markup",
-      "Next.js vs WordPress",
-      "Google AI Overviews",
-      "Facebook Ads for Local Business",
-      "AI Token Budget Optimization"
-    ]
+    "url": "https://kodecite.ai/contact",
+    "description": "20-minute no-obligation audit of your current AI search visibility in ChatGPT, Perplexity, Google AI Overviews, and Gemini"
   }
 }
