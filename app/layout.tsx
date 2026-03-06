@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: 'KodeCite.AI',
     images: [
       {
-        url: 'https://www.kodecite.ai/opengraph-image.png',
+        url: 'https://www.kodecite.ai/og-image.png',
         width: 1200,
         height: 630,
         alt: 'KodeCite.AI — AI Search Optimization',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: 'KodeCite.AI — AI Search Optimization',
     description:
       '60% of searches end without a click. We make sure AI chooses you.',
-    images: ['https://www.kodecite.ai/opengraph-image.png'],
+    images: ['https://www.kodecite.ai/og-image.png'],
   },
   robots: {
     index: true,
