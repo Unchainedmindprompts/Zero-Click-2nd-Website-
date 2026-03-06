@@ -33,7 +33,8 @@ const config: Config = {
       },
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'],
-        playfair: ['var(--font-playfair)', 'Georgia', 'serif'],
+        playfair: ['var(--font-playfair)', 'Impact', 'sans-serif'],
+        cormorant: ['var(--font-cormorant)', 'Georgia', 'serif'],
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease forwards',

@@ -67,10 +67,10 @@ export default function CounterAnimation({
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-7xl md:text-8xl font-bold text-[#D4A94A] font-poppins leading-none">
-        {prefix}{display}{suffix}
+      <div className="font-playfair leading-none" style={{ fontSize: '52px', color: '#f8f5f0' }}>
+        {prefix}{display}<span style={{ color: '#1a56db' }}>{suffix}</span>
       </div>
-      <p className="text-[#8A9BB5] text-lg mt-4 font-poppins font-medium max-w-xs mx-auto">
+      <p className="font-poppins font-medium max-w-xs mx-auto mt-4" style={{ fontSize: '12px', color: 'rgba(240,232,216,0.35)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
         {label}
       </p>
     </div>

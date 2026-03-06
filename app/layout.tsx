@@ -1,22 +1,7 @@
 import type { Metadata } from 'next';
-import { Poppins, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-playfair',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -168,8 +153,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${playfair.variable}`}>
+    <html lang="en">
       <head>
+        {/* Google Fonts: Bebas Neue, Cormorant Garamond, DM Sans */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap"
+          rel="stylesheet"
+        />
+        {/* Map Google Font names to the CSS variables used throughout the codebase */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          :root {
+            --font-playfair: 'Bebas Neue', Impact, sans-serif;
+            --font-poppins: 'DM Sans', system-ui, sans-serif;
+            --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+          }
+        ` }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -183,7 +184,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
         />
       </head>
-      <body className="font-poppins bg-[#07070f] text-white antialiased">
+      <body className="font-poppins bg-[#f8f5f0] text-[#0a0806] antialiased">
         <Navigation />
         <main>{children}</main>
         <Footer />

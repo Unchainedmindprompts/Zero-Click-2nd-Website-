@@ -130,18 +130,17 @@ export default function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ===== HERO ===== */}
-      <section className="pt-36 pb-20 bg-[#05050f] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
+      <section className="pt-36 pb-20 bg-[#f8f5f0] px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-30 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">BRAND AUTHORITY ARCHITECTURE</p>
-          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-[#0a0806] mb-6 leading-tight">
             Stop Chasing Clicks.{' '}
             <br className="hidden md:block" />
             Start{' '}
-            <span className="text-[#D4A94A]">Owning the Answer.</span>
+            <span className="text-[#a0723a]">Owning the Answer.</span>
           </h1>
-          <p className="text-[#8A9BB5] text-xl md:text-2xl font-poppins max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[#6a5a48] text-xl md:text-2xl font-poppins max-w-3xl mx-auto leading-relaxed">
             We build the only infrastructure that allows a business to exist in a world where users
             no longer click. Every service below is a layer of your Authority Engine — designed to
             make AI systems read, trust, and cite your brand as the definitive source.
@@ -152,26 +151,26 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* ===== PILLAR ONE — MACHINE-PRIORITY INFRASTRUCTURE ===== */}
-      <section id="website" className="py-24 md:py-32 bg-[#080810] px-4">
+      <section id="website" className="py-24 md:py-32 bg-[#f8f5f0] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
                 <p className="eyebrow mb-4">PILLAR ONE</p>
-                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
-                  <span className="text-[#D4A94A]">Machine-Priority</span>{' '}
+                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-[#0a0806] mb-6 leading-tight">
+                  <span className="text-[#1a56db]">Machine-Priority</span>{' '}
                   Infrastructure
                 </h2>
-                <p className="text-[#8A9BB5] text-lg leading-relaxed font-poppins mb-6">
+                <p className="text-[#6a5a48] text-lg leading-relaxed font-poppins mb-6">
                   AI crawlers operate on a token budget. They skip slow, bloated sites and prioritize
                   the fastest, cleanest signal.
                 </p>
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins mb-6">
-                  Our <strong className="text-white">Next.js</strong> sites deployed on{' '}
-                  <strong className="text-white">Vercel&apos;s edge infrastructure</strong> load in
+                <p className="text-[#6a5a48] leading-relaxed font-poppins mb-6">
+                  Our <strong className="text-[#0a0806]">Next.js</strong> sites deployed on{' '}
+                  <strong className="text-[#0a0806]">Vercel&apos;s edge infrastructure</strong> load in
                   under a second — making your site the first one AI agents read. Not faster than
                   your old site.{' '}
-                  <span className="text-white font-semibold">
+                  <span className="text-[#0a0806] font-semibold">
                     Faster than every competitor in your market.
                   </span>
                 </p>
@@ -184,8 +183,8 @@ export default function ServicesPage() {
                     'Structured data embedded at build time',
                     'AI crawler-friendly URL structure and metadata',
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-[#8A9BB5] font-poppins">
-                      <svg className="w-4 h-4 text-[#D4A94A] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <li key={item} className="flex items-start gap-3 text-sm text-[#6a5a48] font-poppins">
+                      <svg className="w-4 h-4 text-[#a0723a] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       {item}
@@ -195,8 +194,8 @@ export default function ServicesPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="bg-[#0d0d1a] rounded-2xl p-8 border border-[#D4A94A]/20">
-                <h3 className="font-poppins font-bold text-lg text-white mb-6">The Vercel Advantage</h3>
+              <div className="bg-[#f2ede4] rounded-2xl p-8 border border-[rgba(100,70,30,0.15)]">
+                <h3 className="font-poppins font-bold text-lg text-[#0a0806] mb-6">The Vercel Advantage</h3>
                 <div className="space-y-6">
                   {[
                     { label: 'Machine-Priority Indexing', value: '<1s', desc: 'Average first contentful paint vs 3–5s on template platforms' },
@@ -206,11 +205,11 @@ export default function ServicesPage() {
                   ].map((stat) => (
                     <div key={stat.label} className="flex items-start gap-4">
                       <div className="text-right min-w-[4rem]">
-                        <div className="font-poppins font-bold text-2xl text-[#D4A94A]">{stat.value}</div>
+                        <div className="font-poppins font-bold text-2xl text-[#a0723a]">{stat.value}</div>
                       </div>
                       <div>
-                        <div className="font-poppins font-semibold text-white text-sm">{stat.label}</div>
-                        <div className="text-[#8A9BB5] text-xs font-poppins mt-0.5">{stat.desc}</div>
+                        <div className="font-poppins font-semibold text-[#0a0806] text-sm">{stat.label}</div>
+                        <div className="text-[#6a5a48] text-xs font-poppins mt-0.5">{stat.desc}</div>
                       </div>
                     </div>
                   ))}
@@ -224,13 +223,13 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* ===== PILLAR TWO — SOURCE OF TRUTH ENGINE ===== */}
-      <section id="content" className="py-24 md:py-32 bg-[#05050f] px-4">
+      <section id="content" className="py-24 md:py-32 bg-[#f2ede4] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal delay={200} className="order-2 lg:order-1">
-              <div className="bg-[#0d0d1a] rounded-2xl p-8 border border-[#D4A94A]/20">
-                <h3 className="font-poppins font-bold text-lg text-white mb-2">100% Machine Discovery Rate</h3>
-                <p className="text-[#8A9BB5] text-xs font-poppins mb-6">Schema types we implement:</p>
+              <div className="bg-[#f8f5f0] rounded-2xl p-8 border border-[rgba(100,70,30,0.15)]">
+                <h3 className="font-poppins font-bold text-lg text-[#0a0806] mb-2">100% Machine Discovery Rate</h3>
+                <p className="text-[#6a5a48] text-xs font-poppins mb-6">Schema types we implement:</p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     'Organization', 'LocalBusiness', 'WebSite', 'Service',
@@ -238,8 +237,8 @@ export default function ServicesPage() {
                     'Review', 'HowTo', 'Event', 'VideoObject',
                   ].map((schema) => (
                     <div key={schema} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#D4A94A] flex-shrink-0" />
-                      <span className="text-[#8A9BB5] text-sm font-poppins">{schema}</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#a0723a] flex-shrink-0" />
+                      <span className="text-[#6a5a48] text-sm font-poppins">{schema}</span>
                     </div>
                   ))}
                 </div>
@@ -248,41 +247,41 @@ export default function ServicesPage() {
             <ScrollReveal className="order-1 lg:order-2">
               <div>
                 <p className="eyebrow mb-4">PILLAR TWO</p>
-                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
-                  <span className="text-[#D4A94A]">Source of Truth</span>{' '}
+                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-[#0a0806] mb-6 leading-tight">
+                  <span className="text-[#a0723a]">Source of Truth</span>{' '}
                   Engine
                 </h2>
-                <p className="text-[#8A9BB5] text-lg leading-relaxed font-poppins mb-6">
+                <p className="text-[#6a5a48] text-lg leading-relaxed font-poppins mb-6">
                   We force AI models to describe your brand accurately. Custom{' '}
-                  <strong className="text-white">JSON-LD schema</strong> encodes your expertise,
+                  <strong className="text-[#0a0806]">JSON-LD schema</strong> encodes your expertise,
                   location, services, and authority as machine-readable facts.
                 </p>
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins mb-8">
+                <p className="text-[#6a5a48] leading-relaxed font-poppins mb-8">
                   Zero recognition errors means AI never guesses what you offer — it cites you with
                   certainty. When someone asks ChatGPT about your industry,{' '}
-                  <span className="text-white font-semibold">the answer is you.</span>
+                  <span className="text-[#0a0806] font-semibold">the answer is you.</span>
                 </p>
 
                 {/* Proof of Outcome */}
-                <div className="bg-[#0d0d1a] rounded-xl border border-[#D4A94A]/20 p-6 mb-8">
+                <div className="stat-block rounded-xl p-6 mb-8">
                   <p className="eyebrow text-xs mb-5">PROOF OF OUTCOME</p>
                   <div className="grid grid-cols-2 gap-6">
                     <div>
-                      <div className="font-playfair font-bold text-4xl text-[#D4A94A] leading-none">+40%</div>
-                      <div className="text-white text-sm font-poppins font-semibold mt-2">Session Lift</div>
-                      <div className="text-[#8A9BB5] text-xs font-poppins mt-1 leading-snug">
+                      <div className="font-playfair font-bold text-4xl text-[#1a56db] leading-none">+40%</div>
+                      <div className="text-[rgba(240,232,216,0.85)] text-sm font-poppins font-semibold mt-2">Session Lift</div>
+                      <div className="text-[rgba(240,232,216,0.6)] text-xs font-poppins mt-1 leading-snug">
                         Avg. engagement increase across AEO-optimized client sites
                       </div>
                     </div>
                     <div>
-                      <div className="font-playfair font-bold text-4xl text-[#D4A94A] leading-none">5x</div>
-                      <div className="text-white text-sm font-poppins font-semibold mt-2">Conversion Rate</div>
-                      <div className="text-[#8A9BB5] text-xs font-poppins mt-1 leading-snug">
+                      <div className="font-playfair font-bold text-4xl text-[#1a56db] leading-none">5x</div>
+                      <div className="text-[rgba(240,232,216,0.85)] text-sm font-poppins font-semibold mt-2">Conversion Rate</div>
+                      <div className="text-[rgba(240,232,216,0.6)] text-xs font-poppins mt-1 leading-snug">
                         vs. template-platform baseline on equivalent traffic
                       </div>
                     </div>
                   </div>
-                  <p className="text-[#8A9BB5] text-xs font-poppins mt-5 pt-4 border-t border-white/5 italic">
+                  <p className="text-[rgba(240,232,216,0.6)] text-xs font-poppins mt-5 pt-4 border-t border-[rgba(240,232,216,0.08)] italic">
                     Our Next.js + Edge stack isn&apos;t an expense — it&apos;s a high-performance lead generation engine.
                   </p>
                 </div>
@@ -299,24 +298,24 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* ===== PILLAR THREE — PRE-VETTED AUDIENCE CAMPAIGNS ===== */}
-      <section id="campaigns" className="py-24 md:py-32 bg-[#080810] px-4">
+      <section id="campaigns" className="py-24 md:py-32 bg-[#f8f5f0] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
                 <p className="eyebrow mb-4">PILLAR THREE</p>
-                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
+                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-[#0a0806] mb-6 leading-tight">
                   Pre-Vetted{' '}
-                  <span className="text-[#D4A94A]">Audience Campaigns</span>
+                  <span className="text-[#a0723a]">Audience Campaigns</span>
                 </h2>
-                <p className="text-[#8A9BB5] text-lg leading-relaxed font-poppins mb-6">
+                <p className="text-[#6a5a48] text-lg leading-relaxed font-poppins mb-6">
                   Paid campaigns built for the AI era. We combine Facebook&apos;s targeting precision
                   with dedicated landing pages structured for machine discovery — so every dollar spent
                   reaches buyers who are already in research mode.
                 </p>
-                <p className="text-[#8A9BB5] leading-relaxed font-poppins mb-8">
+                <p className="text-[#6a5a48] leading-relaxed font-poppins mb-8">
                   No wasted impressions. No cold audiences. Just high-intent traffic arriving{' '}
-                  <span className="text-white font-semibold">pre-educated and ready to act.</span>
+                  <span className="text-[#0a0806] font-semibold">pre-educated and ready to act.</span>
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
@@ -327,18 +326,18 @@ export default function ServicesPage() {
                     { title: 'Retargeting', desc: 'Sequential follow-up sequences' },
                     { title: 'Lookalike Build', desc: 'Scale to proven converters' },
                   ].map((item) => (
-                    <div key={item.title} className="bg-[#0d0d1a] rounded-lg p-4 border border-white/5">
-                      <div className="font-poppins font-semibold text-white text-sm mb-1">{item.title}</div>
-                      <div className="text-[#8A9BB5] text-xs font-poppins">{item.desc}</div>
+                    <div key={item.title} className="bg-[#f2ede4] rounded-lg p-4 border border-[rgba(100,70,30,0.15)]">
+                      <div className="font-poppins font-semibold text-[#0a0806] text-sm mb-1">{item.title}</div>
+                      <div className="text-[#6a5a48] text-xs font-poppins">{item.desc}</div>
                     </div>
                   ))}
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="bg-[#0d0d1a] rounded-2xl p-8 border border-[#D4A94A]/20">
-                <h3 className="font-poppins font-bold text-lg text-white mb-2">The Flywheel Effect</h3>
-                <p className="text-[#8A9BB5] text-sm font-poppins mb-8">How paid and organic compound together:</p>
+              <div className="bg-[#f2ede4] rounded-2xl p-8 border border-[rgba(100,70,30,0.15)]">
+                <h3 className="font-poppins font-bold text-lg text-[#0a0806] mb-2">The Flywheel Effect</h3>
+                <p className="text-[#6a5a48] text-sm font-poppins mb-8">How paid and organic compound together:</p>
                 <div className="space-y-4">
                   {[
                     { step: '01', title: 'Launch Ads', desc: 'Immediate traffic and lead data from day one' },
@@ -349,10 +348,10 @@ export default function ServicesPage() {
                     { step: '06', title: 'System Compounds', desc: 'Both channels feed each other indefinitely' },
                   ].map((item) => (
                     <div key={item.step} className="flex items-start gap-4">
-                      <div className="font-poppins font-bold text-[#D4A94A] text-sm min-w-[2rem]">{item.step}</div>
+                      <div className="font-poppins font-bold text-[#a0723a] text-sm min-w-[2rem]">{item.step}</div>
                       <div>
-                        <div className="font-poppins font-semibold text-white text-sm">{item.title}</div>
-                        <div className="text-[#8A9BB5] text-xs font-poppins mt-0.5">{item.desc}</div>
+                        <div className="font-poppins font-semibold text-[#0a0806] text-sm">{item.title}</div>
+                        <div className="text-[#6a5a48] text-xs font-poppins mt-0.5">{item.desc}</div>
                       </div>
                     </div>
                   ))}
@@ -366,30 +365,30 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* ===== PRE-VETTED INTENT — THE REVENUE DIFFERENCE ===== */}
-      <section id="revenue-difference" className="py-24 md:py-32 bg-[#05050f] px-4">
+      <section id="revenue-difference" className="py-24 md:py-32 bg-[#1c1814] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <p className="eyebrow text-center mb-5">THE REVENUE DIFFERENCE</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[52px] text-white text-center mb-10 leading-[1.15]">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[52px] text-[rgba(240,232,216,0.9)] text-center mb-10 leading-[1.15]">
               We don&apos;t bring you browsers.{' '}
               <br className="hidden lg:block" />
               We bring you{' '}
-              <span className="text-[#D4A94A]">pre-educated buyers.</span>
+              <span className="text-[#a0723a]">pre-educated buyers.</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <p className="text-[#8A9BB5] text-lg md:text-xl leading-relaxed font-poppins mb-5">
+              <p className="text-[rgba(240,232,216,0.6)] text-lg md:text-xl leading-relaxed font-poppins mb-5">
                 Traditional search sends traffic. AI citations send intent. By the time a visitor
                 arrives from an AI recommendation, the machine has already research-vetted your brand,
                 matched your expertise to their question, and delivered a pre-qualified buyer to your door.
               </p>
-              <p className="text-[#8A9BB5] text-base md:text-lg leading-relaxed font-poppins">
+              <p className="text-[rgba(240,232,216,0.6)] text-base md:text-lg leading-relaxed font-poppins">
                 The difference isn&apos;t clicks.{' '}
-                <span className="text-white font-semibold">It&apos;s conversion velocity.</span>
+                <span className="text-[rgba(240,232,216,0.9)] font-semibold">It&apos;s conversion velocity.</span>
               </p>
             </div>
           </ScrollReveal>
@@ -399,16 +398,16 @@ export default function ServicesPage() {
             <div className="mb-12 overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="font-poppins font-semibold text-[#8A9BB5] text-sm py-4 pr-6 min-w-[200px]">
+                  <tr className="border-b border-[rgba(240,232,216,0.1)]">
+                    <th className="font-poppins font-semibold text-[rgba(240,232,216,0.6)] text-sm py-4 pr-6 min-w-[200px]">
                       Metric
                     </th>
-                    <th className="font-poppins font-semibold text-[#8A9BB5] text-sm py-4 pr-6 min-w-[160px]">
+                    <th className="font-poppins font-semibold text-[rgba(240,232,216,0.6)] text-sm py-4 pr-6 min-w-[160px]">
                       Traditional Search
                     </th>
-                    <th className="font-poppins font-semibold text-[#D4A94A] text-sm py-4 min-w-[220px]">
+                    <th className="font-poppins font-semibold text-[#a0723a] text-sm py-4 min-w-[220px]">
                       AI Citation
-                      <span className="block text-xs font-normal text-[#8A9BB5] mt-0.5">
+                      <span className="block text-xs font-normal text-[rgba(240,232,216,0.5)] mt-0.5">
                         KodeCite Stack
                       </span>
                     </th>
@@ -422,10 +421,10 @@ export default function ServicesPage() {
                     { metric: 'Transaction Value', traditional: 'Baseline', ai: '25% higher per order' },
                     { metric: 'Likelihood to Convert', traditional: 'Baseline', ai: 'Up to 23x more likely' },
                   ].map((row, i) => (
-                    <tr key={i} className="border-b border-white/5 hover:bg-[#D4A94A]/3 transition-colors">
-                      <td className="font-poppins text-white font-medium text-sm py-4 pr-6">{row.metric}</td>
-                      <td className="font-poppins text-[#8A9BB5] text-sm py-4 pr-6">{row.traditional}</td>
-                      <td className="font-poppins text-[#D4A94A] font-semibold text-sm py-4">{row.ai}</td>
+                    <tr key={i} className="border-b border-[rgba(240,232,216,0.06)] hover:bg-[rgba(160,114,58,0.05)] transition-colors">
+                      <td className="font-poppins text-[rgba(240,232,216,0.85)] font-medium text-sm py-4 pr-6">{row.metric}</td>
+                      <td className="font-poppins text-[rgba(240,232,216,0.5)] text-sm py-4 pr-6">{row.traditional}</td>
+                      <td className="font-poppins text-[#a0723a] font-semibold text-sm py-4">{row.ai}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -435,8 +434,8 @@ export default function ServicesPage() {
 
           {/* Pull quote */}
           <ScrollReveal delay={200}>
-            <blockquote className="border-l-4 border-[#D4A94A] bg-[#0d0d1a] rounded-r-xl px-8 py-7 max-w-3xl mx-auto mb-10">
-              <p className="font-poppins text-white/90 text-base md:text-lg leading-relaxed italic">
+            <blockquote className="border-l-4 border-[#a0723a] bg-[#2a2420] rounded-r-xl px-8 py-7 max-w-3xl mx-auto mb-10">
+              <p className="font-poppins text-[rgba(240,232,216,0.9)] text-base md:text-lg leading-relaxed italic">
                 &ldquo;When an AI recommends your business, the research phase is already over.
                 The buyer arrives trusting you before they&apos;ve read a single word.&rdquo;
               </p>
@@ -444,9 +443,9 @@ export default function ServicesPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={250}>
-            <p className="text-[#8A9BB5] text-base md:text-lg font-poppins text-center max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[rgba(240,232,216,0.6)] text-base md:text-lg font-poppins text-center max-w-2xl mx-auto leading-relaxed">
               This is{' '}
-              <span className="text-white font-semibold">Intent Compression</span>. It&apos;s
+              <span className="text-[rgba(240,232,216,0.9)] font-semibold">Intent Compression</span>. It&apos;s
               what happens when your infrastructure is built for machines, not just humans.
             </p>
           </ScrollReveal>
@@ -456,32 +455,32 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* ===== SPATIAL SEO — THE FRONTIER SERVICE ===== */}
-      <section id="spatial-seo" className="py-24 md:py-32 bg-[#0d0d1a] px-4 relative overflow-hidden">
+      <section id="spatial-seo" className="py-24 md:py-32 bg-[#1c1814] px-4 relative overflow-hidden">
         {/* Premium glow treatment */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full bg-[#D4A94A]/6 blur-[150px] pointer-events-none" />
-        <div className="absolute inset-0 border-y border-[#D4A94A]/10 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full bg-[#a0723a]/6 blur-[150px] pointer-events-none" />
+        <div className="absolute inset-0 border-y border-[rgba(160,114,58,0.15)] pointer-events-none" />
 
         <div className="max-w-6xl mx-auto relative z-10">
           <ScrollReveal>
             <div className="text-center mb-14">
-              <span className="inline-block font-poppins font-bold text-xs tracking-[0.3em] text-[#D4A94A] bg-[#D4A94A]/10 border border-[#D4A94A]/30 rounded-full px-5 py-2 mb-6">
+              <span className="inline-block font-poppins font-bold text-xs tracking-[0.3em] text-[#a0723a] bg-[rgba(160,114,58,0.1)] border border-[rgba(160,114,58,0.3)] rounded-full px-5 py-2 mb-6">
                 THE FRONTIER SERVICE
               </span>
-              <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[52px] text-white mb-8 leading-[1.15]">
+              <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-[52px] text-[rgba(240,232,216,0.9)] mb-8 leading-[1.15]">
                 Spatial SEO &amp;{' '}
-                <span className="text-[#D4A94A]">Multi-Modal Discovery</span>
+                <span className="text-[#a0723a]">Multi-Modal Discovery</span>
               </h2>
               <div className="max-w-3xl mx-auto space-y-5">
-                <p className="text-[#8A9BB5] text-lg md:text-xl leading-relaxed font-poppins">
+                <p className="text-[rgba(240,232,216,0.6)] text-lg md:text-xl leading-relaxed font-poppins">
                   Visual search is dying. The next generation of buyers won&apos;t type a query or tap
                   a link — they&apos;ll ask their Oakley Meta glasses a question while standing in front
                   of your building.
                 </p>
-                <p className="text-[#8A9BB5] text-base md:text-lg leading-relaxed font-poppins">
+                <p className="text-[rgba(240,232,216,0.6)] text-base md:text-lg leading-relaxed font-poppins">
                   When that happens, the glasses don&apos;t browse your website. They ingest a
                   structured data layer — and surface the businesses whose digital infrastructure is
                   built to be read in real-time.{' '}
-                  <span className="text-white font-semibold">We build that infrastructure.</span>
+                  <span className="text-[rgba(240,232,216,0.9)] font-semibold">We build that infrastructure.</span>
                 </p>
               </div>
             </div>
@@ -523,12 +522,12 @@ export default function ServicesPage() {
               },
             ].map((feature, i) => (
               <ScrollReveal key={i} delay={feature.delay}>
-                <div className="authority-card h-full">
-                  <div className="text-[#D4A94A] mb-5">{feature.icon}</div>
-                  <h3 className="font-playfair font-bold text-xl text-[#D4A94A] mb-3 leading-snug">
+                <div className="bg-[#2a2420] border border-[rgba(160,114,58,0.15)] rounded-2xl p-8 hover:border-[rgba(160,114,58,0.3)] transition-all duration-300 h-full">
+                  <div className="text-[#a0723a] mb-5">{feature.icon}</div>
+                  <h3 className="font-playfair font-bold text-xl text-[#a0723a] mb-3 leading-snug">
                     {feature.title}
                   </h3>
-                  <p className="font-poppins text-[#8A9BB5] text-sm leading-relaxed">
+                  <p className="font-poppins text-[rgba(240,232,216,0.6)] text-sm leading-relaxed">
                     {feature.body}
                   </p>
                 </div>
@@ -553,11 +552,11 @@ export default function ServicesPage() {
       <div className="section-divider" />
 
       {/* ===== FAQ ===== */}
-      <section id="faq" className="py-24 md:py-32 bg-[#05050f] px-4">
+      <section id="faq" className="py-24 md:py-32 bg-[#f8f5f0] px-4">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <p className="eyebrow text-center mb-4">FAQ</p>
-            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white text-center mb-16">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-[#0a0806] text-center mb-16">
               Common Questions
             </h2>
           </ScrollReveal>
@@ -590,11 +589,11 @@ export default function ServicesPage() {
               },
             ].map((faq, i) => (
               <ScrollReveal key={i} delay={i * 50}>
-                <details className="group bg-[#0d0d1a] rounded-xl border border-white/5 hover:border-[#D4A94A]/20 transition-all duration-300">
+                <details className="group bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.15)] hover:border-[#a0723a] transition-all duration-300">
                   <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                    <h3 className="font-poppins font-semibold text-white pr-4">{faq.q}</h3>
+                    <h3 className="font-poppins font-semibold text-[#0a0806] pr-4">{faq.q}</h3>
                     <svg
-                      className="w-5 h-5 text-[#D4A94A] flex-shrink-0 transition-transform group-open:rotate-180"
+                      className="w-5 h-5 text-[#a0723a] flex-shrink-0 transition-transform group-open:rotate-180"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -603,7 +602,7 @@ export default function ServicesPage() {
                     </svg>
                   </summary>
                   <div className="px-6 pb-6">
-                    <p className="text-[#8A9BB5] font-poppins leading-relaxed text-sm">{faq.a}</p>
+                    <p className="text-[#6a5a48] font-poppins leading-relaxed text-sm">{faq.a}</p>
                   </div>
                 </details>
               </ScrollReveal>
@@ -613,18 +612,18 @@ export default function ServicesPage() {
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="py-20 bg-[#080810] px-4">
+      <section className="py-20 bg-[#1c1814] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <p className="eyebrow mb-4">FREE AEO AUDIT</p>
-            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-[rgba(240,232,216,0.9)] mb-6">
               Not sure where to start?
             </h2>
-            <p className="text-[#8A9BB5] text-lg font-poppins mb-3 leading-relaxed">
+            <p className="text-[rgba(240,232,216,0.6)] text-lg font-poppins mb-3 leading-relaxed">
               We&apos;ll show you exactly how your business appears — or doesn&apos;t — when someone
               asks ChatGPT, Perplexity, or Google AI Overviews about your service.
             </p>
-            <p className="text-[#8A9BB5] text-base font-poppins mb-10 leading-relaxed">
+            <p className="text-[rgba(240,232,216,0.6)] text-base font-poppins mb-10 leading-relaxed">
               20 minutes. No obligation. Just an honest look at your current AI visibility and one
               clear action you can take today.
             </p>

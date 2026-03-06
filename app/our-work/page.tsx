@@ -66,15 +66,14 @@ export default function OurWorkPage() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#05050f] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-[#D4A94A]/5 blur-[120px] pointer-events-none" />
+      <section className="pt-36 pb-20 bg-[#f8f5f0] px-4 relative overflow-hidden">
+        <div className="absolute inset-0 hero-grid-bg opacity-30 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">RECENT PROJECTS</p>
-          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-[#0a0806] mb-6 leading-tight">
             Our Work
           </h1>
-          <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[#6a5a48] text-xl font-poppins max-w-3xl mx-auto leading-relaxed">
             Every site we build is fast, structured for AI, and built to convert. See for yourself.
           </p>
         </div>
@@ -83,14 +82,14 @@ export default function OurWorkPage() {
       <div className="section-divider" />
 
       {/* Project Cards */}
-      <section className="py-24 md:py-32 bg-[#080810] px-4">
+      <section className="py-24 md:py-32 bg-[#f2ede4] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, i) => (
               <ScrollReveal key={project.url} delay={i * 150}>
-                <div className="bg-[#0d0d1a] rounded-2xl overflow-hidden border border-white/5 hover:border-[#D4A94A]/30 transition-all duration-300 flex flex-col h-full card-gold-border">
+                <div className="bg-[#f8f5f0] rounded-2xl overflow-hidden border border-[rgba(100,70,30,0.15)] hover:border-[#a0723a] hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full">
                   {/* Screenshot Preview */}
-                  <div className="relative w-full aspect-video overflow-hidden bg-[#080810]">
+                  <div className="relative w-full aspect-video overflow-hidden bg-[#e8e0d0]">
                     <Image
                       src={project.screenshot}
                       alt={`Screenshot of ${project.title}`}
@@ -105,10 +104,10 @@ export default function OurWorkPage() {
                     <div className="mb-4">
                       <span className="category-tag">{project.category}</span>
                     </div>
-                    <h2 className="font-poppins font-bold text-2xl text-white mb-3 leading-tight">
+                    <h2 className="font-poppins font-bold text-2xl text-[#0a0806] mb-3 leading-tight">
                       {project.title}
                     </h2>
-                    <p className="text-[#8A9BB5] font-poppins text-base leading-relaxed mb-8 flex-1">
+                    <p className="text-[#6a5a48] font-poppins text-base leading-relaxed mb-8 flex-1">
                       {project.description}
                     </p>
                     <Link
@@ -130,13 +129,13 @@ export default function OurWorkPage() {
       <div className="section-divider" />
 
       {/* CTA */}
-      <section className="py-24 bg-[#05050f] px-4">
+      <section className="py-24 bg-[#1c1814] px-4">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6">
-              Your Business Could Be <span className="text-[#D4A94A]">Next</span>
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-[rgba(240,232,216,0.9)] mb-6">
+              Your Business Could Be <span className="text-[#a0723a]">Next</span>
             </h2>
-            <p className="text-[#8A9BB5] text-xl font-poppins mb-10 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-[rgba(240,232,216,0.6)] text-xl font-poppins mb-10 leading-relaxed max-w-2xl mx-auto">
               The same approach that builds fast, AI-ready websites — available for your business right now.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

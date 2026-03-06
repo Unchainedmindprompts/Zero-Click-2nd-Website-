@@ -3,16 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --gold: #D4A94A;
-  --gold-light: #E8C478;
-  --navy: #0F1E3C;
-  --navy-dark: #0A1628;
-  --navy-card: #162444;
-  --charcoal: #07070f;
-  --charcoal-mid: #0d0d1a;
-  --charcoal-card: #111122;
-  --charcoal-light: #16162a;
-  --text-secondary: #8A9BB5;
+  /* Wood palette */
+  --wood:       #a0723a;
+  --wood-light: #c8945a;
+  --wood-pale:  #ddb888;
+  --wood-dark:  #7a5228;
+  --wood-deep:  #3e1f08;
+  /* Charcoal */
+  --charcoal:   #1c1814;
+  --charcoal-mid: #2a2420;
+  /* Black */
+  --black:      #0a0806;
+  /* Cream backgrounds */
+  --cream:      #f8f5f0;
+  --cream-mid:  #f2ede4;
+  --cream-dark: #e8e0d0;
+  /* Blue */
+  --blue:       #1a56db;
+  --blue-dark:  #1340b0;
+  /* Body text */
+  --body-text:  #6a5a48;
+  /* Borders */
+  --border-light: rgba(100,70,30,0.15);
+  --border-dark:  rgba(100,70,30,0.25);
 }
 
 html {
@@ -20,19 +33,18 @@ html {
 }
 
 body {
-  background-color: #07070f;
-  color: #FFFFFF;
-  font-family: var(--font-poppins), sans-serif;
+  background-color: #f8f5f0;
+  color: #0a0806;
+  font-family: var(--font-poppins), system-ui, sans-serif;
 }
 
-/* Section divider gold gradient line */
+/* ─── Section divider ─────────────────────────────────── */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #D4A94A 20%, #D4A94A 80%, transparent);
-  opacity: 0.25;
+  background: linear-gradient(90deg, transparent, rgba(100,70,30,0.25) 20%, rgba(100,70,30,0.25) 80%, transparent);
 }
 
-/* Scroll reveal animations */
+/* ─── Scroll reveal ───────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -50,81 +62,153 @@ body {
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
 
-/* Gold gradient text */
-.text-gold-gradient {
-  background: linear-gradient(135deg, #D4A94A, #E8C478);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Hero background — near-black with subtle noise */
+/* ─── Hero background (now warm cream) ───────────────── */
 .hero-dark-bg {
-  background-color: #050510;
-  background-image:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 169, 74, 0.07) 0%, transparent 70%);
+  background-color: #f8f5f0;
 }
 
-/* Hero grid pattern */
 .hero-grid-bg {
   background-image:
-    linear-gradient(rgba(212, 169, 74, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 169, 74, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(100,70,30,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100,70,30,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
-/* Gold card top border */
-.card-gold-border {
-  border-top: 2px solid #D4A94A;
+/* ─── Wood underline accent (hero h1) ─────────────────── */
+.wood-underline {
+  position: relative;
+  display: inline-block;
 }
 
-/* Authority engine card */
+.wood-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #a0723a, #c8945a, rgba(200,148,90,0));
+  border-radius: 3px;
+}
+
+/* ─── Eyebrow labels ─────────────────────────────────── */
+.eyebrow {
+  font-size: 0.625rem; /* 10px */
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #a0723a;
+  font-family: var(--font-poppins), sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: #a0723a;
+  flex-shrink: 0;
+}
+
+/* ─── Authority / Service Cards ──────────────────────── */
 .authority-card {
-  background: #0d0d1a;
-  border: 1px solid rgba(255,255,255,0.06);
+  background: #f2ede4;
+  border: 1px solid rgba(100,70,30,0.15);
   border-radius: 1rem;
   padding: 2rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Accent bar at top of card via ::before */
+.authority-card::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #a0723a;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .authority-card:hover {
-  border-color: rgba(212, 169, 74, 0.35);
-  box-shadow: 0 0 30px rgba(212, 169, 74, 0.08);
+  background: #1c1814;
+  border-color: rgba(160,114,58,0.20);
 }
 
-/* Eyebrow text */
-.eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #D4A94A;
-  font-family: var(--font-poppins), sans-serif;
+.authority-card:hover::before {
+  width: 48px;
+  background: #1a56db;
 }
 
-/* Gold button */
+.authority-card:hover,
+.authority-card:hover * {
+  color: rgba(240,232,216,0.85) !important;
+}
+
+/* ─── Dark stat / proof blocks ───────────────────────── */
+.stat-block {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: #1c1814;
+  border: 1px solid rgba(160,114,58,0.20);
+  border-radius: 1rem;
+  transition: border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1a56db, #c8945a);
+}
+
+.stat-block:hover {
+  border-color: rgba(160,114,58,0.35);
+}
+
+/* ─── Blockquote (dark card proof) ──────────────────── */
+.inw-callout {
+  border-left: 3px solid #a0723a;
+  background: #f2ede4;
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 2rem 2.5rem;
+}
+
+/* ─── Buttons ─────────────────────────────────────────── */
+
+/* Primary CTA: dark charcoal → hover blue */
 .btn-gold {
-  background-color: #D4A94A;
-  color: #07070f;
-  font-weight: 700;
+  background-color: #1c1814;
+  color: #f8f5f0;
+  font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: 0.375rem;
   display: inline-block;
   transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 .btn-gold:hover {
-  background-color: #E8C478;
+  background-color: #1a56db;
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(212, 169, 74, 0.4);
+  box-shadow: 0 8px 30px rgba(26,86,219,0.35);
 }
 
-/* Gold outline button */
+/* Outline button: wood border */
 .btn-gold-outline {
-  border: 1.5px solid rgba(212, 169, 74, 0.6);
-  color: #D4A94A;
+  border: 1.5px solid rgba(160,114,58,0.5);
+  color: #a0723a;
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: 0.375rem;
@@ -134,87 +218,63 @@ body {
 }
 
 .btn-gold-outline:hover {
-  border-color: #D4A94A;
-  background-color: rgba(212, 169, 74, 0.08);
+  border-color: #1a56db;
+  color: #1a56db;
   transform: translateY(-2px);
 }
 
-/* Ghost/underline secondary button */
+/* Ghost secondary link */
 .btn-ghost {
-  color: rgba(255,255,255,0.7);
+  color: #6a5a48;
   font-weight: 500;
   display: inline-block;
   transition: color 0.2s ease;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(255,255,255,0.3);
+  text-decoration-color: rgba(100,70,30,0.3);
   cursor: pointer;
 }
 
 .btn-ghost:hover {
-  color: #fff;
-  text-decoration-color: rgba(255,255,255,0.7);
+  color: #0a0806;
+  text-decoration-color: rgba(100,70,30,0.6);
 }
 
-/* Sticky nav blur */
+/* ─── Nav blur ─────────────────────────────────────────── */
 .nav-blur {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
-/* Pricing card popular */
-.pricing-popular {
-  border: 2px solid #D4A94A;
-  position: relative;
+/* ─── Gold gradient text (repurposed as wood) ─────────── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #a0723a, #c8945a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Category tag */
-.category-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #D4A94A;
-  background: rgba(212, 169, 74, 0.1);
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  display: inline-block;
+/* ─── Footer links ───────────────────────────────────── */
+.footer-link {
+  color: rgba(240,232,216,0.35);
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: #c8945a;
 }
 
-/* Stat block */
-.stat-block {
-  text-align: center;
-  padding: 2.5rem 2rem;
-  background: #0d0d1a;
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.stat-block:hover {
-  border-color: rgba(212, 169, 74, 0.2);
-}
-
-/* Case study INW callout */
-.inw-callout {
-  border-left: 3px solid #D4A94A;
-  background: #0d0d1a;
-  border-radius: 0 0.75rem 0.75rem 0;
-  padding: 2rem 2.5rem;
-}
-
-/* Checklist item */
+/* ─── Checklist item ─────────────────────────────────── */
 .checklist-item {
   display: flex;
   align-items: flex-start;
   gap: 0.875rem;
-  color: rgba(255,255,255,0.85);
+  color: #6a5a48;
   font-family: var(--font-poppins), sans-serif;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Score badge */
+/* ─── Score badge ─────────────────────────────────────── */
 .score-badge {
   display: flex;
   flex-direction: column;
@@ -223,11 +283,11 @@ body {
 }
 
 .score-value {
-  font-family: var(--font-poppins), sans-serif;
-  font-weight: 700;
+  font-family: var(--font-playfair), Impact, sans-serif;
+  font-weight: 400;
   font-size: 1.75rem;
   line-height: 1;
-  color: #D4A94A;
+  color: #a0723a;
 }
 
 .score-label {
@@ -236,9 +296,29 @@ body {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #8A9BB5;
+  color: #6a5a48;
 }
 
+/* ─── Category tag ────────────────────────────────────── */
+.category-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a0723a;
+  background: rgba(160,114,58,0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* ─── Pricing popular ─────────────────────────────────── */
+.pricing-popular {
+  border: 2px solid #a0723a;
+  position: relative;
+}
+
+/* ─── Animations ──────────────────────────────────────── */
 @keyframes heroFadeIn {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -247,6 +327,11 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes pulse-glow {
@@ -259,6 +344,9 @@ body {
     text-wrap: balance;
   }
   .font-playfair {
-    font-family: var(--font-playfair), Georgia, serif;
+    font-family: var(--font-playfair), Impact, sans-serif;
+  }
+  .font-cormorant {
+    font-family: var(--font-cormorant), Georgia, serif;
   }
 }
