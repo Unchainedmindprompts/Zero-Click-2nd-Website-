@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
       },
       {
         userAgent: 'GPTBot',
@@ -17,7 +16,19 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
-        userAgent: 'CCBot',
+        userAgent: 'PerplexityBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Google-Extended',
+        allow: '/',
+      },
+      {
+        userAgent: 'Gemini',
         allow: '/',
       },
       {
@@ -25,15 +36,18 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
-        userAgent: 'Claude-Web',
+        userAgent: 'ClaudeBot',
         allow: '/',
       },
       {
-        userAgent: 'PerplexityBot',
+        userAgent: 'cohere-ai',
+        allow: '/',
+      },
+      {
+        userAgent: 'YouBot',
         allow: '/',
       },
     ],
-    sitemap: 'https://www.zeroclickstrategies.com/sitemap.xml',
-    host: 'https://www.zeroclickstrategies.com',
-  };
+    sitemap: 'https://kodecite.ai/sitemap.xml',
+  }
 }

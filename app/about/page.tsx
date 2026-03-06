@@ -6,15 +6,15 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'About — Built by Someone Who Did It On Their Own Businesses First',
   description:
-    '20 years of entrepreneurship, from window treatments to home theater to discovering AEO. Zero Click Strategies was built on businesses that proved the methodology works.',
+    '20 years of entrepreneurship, from window treatments to home theater to discovering AEO. KodeCite.ai was built on businesses that proved the methodology works.',
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://zeroclickstrategies.com/about' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://kodecite.ai/about' },
   ],
 };
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
                 <div className="aspect-[4/5] bg-[#0d0d1a] rounded-2xl overflow-hidden border border-white/10 relative">
                   <Image
                     src="/about-photo.png"
-                    alt="Zero Click Strategies founder"
+                    alt="KodeCite.ai founder"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -64,7 +64,7 @@ export default function AboutPage() {
                   <div className="flex items-center gap-3">
                     <div>
                       <div className="font-poppins font-semibold text-white text-sm">Mark Abplanalp</div>
-                      <div className="text-[#8A9BB5] text-xs font-poppins">Owner, Zero Click Strategies</div>
+                      <div className="text-[#8A9BB5] text-xs font-poppins">Owner, KodeCite.ai</div>
                     </div>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-[#8A9BB5] leading-relaxed font-poppins">
-                  I didn&apos;t start Zero Click Strategies to build an agency. I started it because I
+                  I didn&apos;t start KodeCite.ai to build an agency. I started it because I
                   was tired of writing checks for &ldquo;visibility&rdquo; that didn&apos;t turn into
                   revenue.
                 </p>

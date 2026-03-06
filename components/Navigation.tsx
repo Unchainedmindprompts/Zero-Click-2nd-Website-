@@ -48,9 +48,8 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <span className="font-poppins font-bold text-lg tracking-tight">
-              <span className="text-[#D4A94A]">ZERO</span>
-              <span className="text-white"> CLICK</span>
-              <span className="text-white"> STRATEGIES</span>
+              <span className="text-[#D4A94A]">KODE</span>
+              <span className="text-white">CITE.AI</span>
             </span>
           </Link>
 

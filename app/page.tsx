@@ -4,7 +4,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 import CounterAnimation from '@/components/CounterAnimation';
 
 export const metadata: Metadata = {
-  title: 'Zero Click Strategies — AI Search Optimization & AEO Agency',
+  title: 'KodeCite.ai — AI Search Optimization & AEO Agency',
   description:
     '60% of Google searches end without a click. AI answers the question — and your competitor gets the credit. We make sure the machine chooses you. Free AEO Audit available.',
 };
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Zero Click Strategies',
-  url: 'https://www.zeroclickstrategies.com',
+  name: 'KodeCite.ai',
+  url: 'https://kodecite.ai',
   description:
     'Answer Engine Optimization agency. We structure websites so AI agents cite your business as the definitive answer.',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://www.zeroclickstrategies.com/blog?q={search_term_string}',
+    target: 'https://kodecite.ai/blog?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };

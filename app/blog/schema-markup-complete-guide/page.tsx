@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Schema Markup: The Complete Guide for Local Service Businesses',
     description:
       'Learn how to implement the four essential schema types that make your local business visible to Google AI Overviews, ChatGPT, and Perplexity.',
-    url: 'https://zeroclickstrategies.com/blog/schema-markup-complete-guide',
+    url: 'https://kodecite.ai/blog/schema-markup-complete-guide',
     type: 'article',
   },
 };
@@ -27,20 +27,20 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.zeroclickstrategies.com/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Zero Click Strategies',
+    name: 'KodeCite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://zeroclickstrategies.com/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
-  url: 'https://zeroclickstrategies.com/blog/schema-markup-complete-guide',
+  url: 'https://kodecite.ai/blog/schema-markup-complete-guide',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://zeroclickstrategies.com/blog/schema-markup-complete-guide',
+    '@id': 'https://kodecite.ai/blog/schema-markup-complete-guide',
   },
 };
 
@@ -48,13 +48,13 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Schema Markup: The Complete Guide',
-      item: 'https://zeroclickstrategies.com/blog/schema-markup-complete-guide',
+      item: 'https://kodecite.ai/blog/schema-markup-complete-guide',
     },
   ],
 };
@@ -150,7 +150,7 @@ export default function SchemaMarkupGuide() {
                 <span className="text-[#0F1E3C] font-bold text-sm font-poppins">ZC</span>
               </div>
               <div>
-                <p className="text-white text-sm font-semibold font-poppins">Zero Click Strategies</p>
+                <p className="text-white text-sm font-semibold font-poppins">KodeCite.ai</p>
                 <p className="text-[#8A9BB5] text-xs font-poppins">February 8, 2026</p>
               </div>
             </div>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
     description:
       'AI agents operate on a token budget. Legacy platforms like WordPress and Wix burn through it before delivering your content — costing you recommendations.',
-    url: 'https://zeroclickstrategies.com/blog/why-website-burning-ai-tokens',
+    url: 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
     type: 'article',
   },
 };
@@ -27,20 +27,20 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.zeroclickstrategies.com/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Zero Click Strategies',
+    name: 'KodeCite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://zeroclickstrategies.com/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
-  url: 'https://zeroclickstrategies.com/blog/why-website-burning-ai-tokens',
+  url: 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://zeroclickstrategies.com/blog/why-website-burning-ai-tokens',
+    '@id': 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
   },
 };
 
@@ -48,13 +48,13 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Why Your Website Is Burning Through AI Tokens',
-      item: 'https://zeroclickstrategies.com/blog/why-website-burning-ai-tokens',
+      item: 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
     },
   ],
 };
@@ -150,7 +150,7 @@ export default function WhyWebsiteBurningAITokens() {
                 <span className="text-[#0F1E3C] font-bold text-sm font-poppins">ZC</span>
               </div>
               <div>
-                <p className="text-white text-sm font-semibold font-poppins">Zero Click Strategies</p>
+                <p className="text-white text-sm font-semibold font-poppins">KodeCite.ai</p>
                 <p className="text-[#8A9BB5] text-xs font-poppins">March 3, 2026</p>
               </div>
             </div>
@@ -346,7 +346,7 @@ export default function WhyWebsiteBurningAITokens() {
             Stop Burning AI Tokens. Start Getting Recommended.
           </h2>
           <p className="text-[#8A9BB5] font-poppins mb-8 leading-relaxed">
-            Zero Click Strategies builds AI-native websites and content systems designed specifically for how AI discovers and recommends businesses. If you want to understand how your current site performs for AI visibility, let&apos;s talk.
+            KodeCite.ai builds AI-native websites and content systems designed specifically for how AI discovers and recommends businesses. If you want to understand how your current site performs for AI visibility, let&apos;s talk.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">

@@ -20,11 +20,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Zero Click Strategies — AI Search Optimization & Digital Marketing',
-    template: '%s | Zero Click Strategies',
+    default: 'KodeCite.ai — AI Search Optimization & Digital Marketing',
+    template: '%s | KodeCite.ai',
   },
   description:
-    'Most businesses are invisible to AI. Zero Click Strategies builds the websites, content, and campaigns that make you the answer. Based in Post Falls, Idaho.',
+    'Most businesses are invisible to AI. KodeCite.ai builds the websites, content, and campaigns that make you the answer. Based in Post Falls, Idaho.',
   keywords: [
     'AI search optimization',
     'AEO',
@@ -35,15 +35,15 @@ export const metadata: Metadata = {
     'schema markup',
     'Post Falls Idaho',
   ],
-  authors: [{ name: 'Zero Click Strategies' }],
-  creator: 'Zero Click Strategies',
-  metadataBase: new URL('https://zeroclickstrategies.com'),
+  authors: [{ name: 'KodeCite.ai' }],
+  creator: 'KodeCite.ai',
+  metadataBase: new URL('https://kodecite.ai'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://zeroclickstrategies.com',
-    siteName: 'Zero Click Strategies',
-    title: 'Zero Click Strategies — AI Search Optimization & Digital Marketing',
+    url: 'https://kodecite.ai',
+    siteName: 'KodeCite.ai',
+    title: 'KodeCite.ai — AI Search Optimization & Digital Marketing',
     description:
       'Most businesses are invisible to AI. We build the websites, content, and campaigns that make you the answer.',
     images: [
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Zero Click Strategies',
+        alt: 'KodeCite.ai',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zero Click Strategies — AI Search Optimization & Digital Marketing',
+    title: 'KodeCite.ai — AI Search Optimization & Digital Marketing',
     description:
       'Most businesses are invisible to AI. We build the websites, content, and campaigns that make you the answer.',
     images: ['/og-image.png'],
@@ -78,9 +78,9 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Zero Click Strategies',
-  url: 'https://zeroclickstrategies.com',
-  logo: 'https://zeroclickstrategies.com/logo.png',
+  name: 'KodeCite.ai',
+  url: 'https://kodecite.ai',
+  logo: 'https://kodecite.ai/logo.png',
   description:
     'AI search optimization and digital marketing micro agency based in Post Falls, Idaho.',
   address: {
@@ -92,19 +92,19 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
-    email: 'hello@zeroclickstrategies.com',
+    email: 'hello@kodecite.ai',
   },
 };
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Zero Click Strategies',
+  name: 'KodeCite.ai',
   description:
     'AI search optimization and digital marketing micro agency. We build websites, content, and campaigns that make businesses visible to AI search.',
-  url: 'https://zeroclickstrategies.com',
+  url: 'https://kodecite.ai',
   telephone: '',
-  email: 'hello@zeroclickstrategies.com',
+  email: 'hello@kodecite.ai',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '',
@@ -128,10 +128,10 @@ const localBusinessSchema = {
 const professionalServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Zero Click Strategies',
+  name: 'KodeCite.ai',
   description:
     'Answer Engine Optimization agency helping businesses become the cited source in AI-generated search results and discoverable by wearable devices.',
-  url: 'https://www.zeroclickstrategies.com',
+  url: 'https://kodecite.ai',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Post Falls',

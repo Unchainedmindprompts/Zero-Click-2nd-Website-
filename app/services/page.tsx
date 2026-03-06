@@ -3,9 +3,9 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Services — Brand Authority Architecture | Zero Click Strategies',
+  title: 'Services — Brand Authority Architecture | KodeCite.ai',
   description:
-    'Zero Click Strategies builds Brand Authority Architecture — Next.js infrastructure, Source of Truth schema, Pre-Vetted Audience Campaigns, and Spatial SEO that makes AI systems cite your business as the definitive answer.',
+    'KodeCite.ai builds Brand Authority Architecture — Next.js infrastructure, Source of Truth schema, Pre-Vetted Audience Campaigns, and Spatial SEO that makes AI systems cite your business as the definitive answer.',
 };
 
 const serviceSchema = {
@@ -14,8 +14,8 @@ const serviceSchema = {
   serviceType: 'Brand Authority Architecture',
   provider: {
     '@type': 'ProfessionalService',
-    name: 'Zero Click Strategies',
-    url: 'https://www.zeroclickstrategies.com',
+    name: 'KodeCite.ai',
+    url: 'https://kodecite.ai',
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -44,7 +44,7 @@ const serviceSchema = {
         name: 'Spatial SEO & Multi-Modal Discovery',
         description:
           'llms.txt, agent.json, and wearable-ready structured data for Meta glasses, Apple Vision Pro, and autonomous AI agent discovery.',
-        url: 'https://www.zeroclickstrategies.com/services',
+        url: 'https://kodecite.ai/services',
       },
       {
         '@type': 'Offer',
@@ -99,7 +99,7 @@ const faqSchema = {
       name: 'Do you work with businesses outside of Idaho?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. Zero Click Strategies is based in Post Falls, Idaho, but serves businesses nationwide. All our work is delivered remotely. We've worked with clients across different states and industries.",
+        text: "Yes. KodeCite.ai is based in Post Falls, Idaho, but serves businesses nationwide. All our work is delivered remotely. We've worked with clients across different states and industries.",
       },
     },
     {
@@ -117,8 +117,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://zeroclickstrategies.com/services' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kodecite.ai/services' },
   ],
 };
 
@@ -409,7 +409,7 @@ export default function ServicesPage() {
                     <th className="font-poppins font-semibold text-[#D4A94A] text-sm py-4 min-w-[220px]">
                       AI Citation
                       <span className="block text-xs font-normal text-[#8A9BB5] mt-0.5">
-                        Zero Click Stack
+                        KodeCite Stack
                       </span>
                     </th>
                   </tr>
@@ -582,7 +582,7 @@ export default function ServicesPage() {
               },
               {
                 q: 'Do you work with businesses outside of Idaho?',
-                a: "Yes. Zero Click Strategies is based in Post Falls, Idaho, but serves businesses nationwide. All our work is delivered remotely. We've worked with clients across different states and industries.",
+                a: "Yes. KodeCite.ai is based in Post Falls, Idaho, but serves businesses nationwide. All our work is delivered remotely. We've worked with clients across different states and industries.",
               },
               {
                 q: 'What industries do you specialize in?',

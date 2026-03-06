@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'The Three Custom Audiences Every Local Business Needs on Facebook',
     description:
       'The three-audience system that replaces broad interest targeting and makes Facebook ads work for local service businesses.',
-    url: 'https://zeroclickstrategies.com/blog/custom-audiences-facebook',
+    url: 'https://kodecite.ai/blog/custom-audiences-facebook',
     type: 'article',
   },
 };
@@ -27,20 +27,20 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.zeroclickstrategies.com/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Zero Click Strategies',
+    name: 'KodeCite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://zeroclickstrategies.com/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
-  url: 'https://zeroclickstrategies.com/blog/custom-audiences-facebook',
+  url: 'https://kodecite.ai/blog/custom-audiences-facebook',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://zeroclickstrategies.com/blog/custom-audiences-facebook',
+    '@id': 'https://kodecite.ai/blog/custom-audiences-facebook',
   },
 };
 
@@ -48,13 +48,13 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zeroclickstrategies.com/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Three Custom Audiences for Local Businesses',
-      item: 'https://zeroclickstrategies.com/blog/custom-audiences-facebook',
+      item: 'https://kodecite.ai/blog/custom-audiences-facebook',
     },
   ],
 };
@@ -150,7 +150,7 @@ export default function CustomAudiencesFacebook() {
                 <span className="text-[#0F1E3C] font-bold text-sm font-poppins">ZC</span>
               </div>
               <div>
-                <p className="text-white text-sm font-semibold font-poppins">Zero Click Strategies</p>
+                <p className="text-white text-sm font-semibold font-poppins">KodeCite.ai</p>
                 <p className="text-[#8A9BB5] text-xs font-poppins">February 27, 2026</p>
               </div>
             </div>
