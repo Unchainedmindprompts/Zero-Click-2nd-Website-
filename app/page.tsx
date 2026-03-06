@@ -51,9 +51,8 @@ export default function HomePage() {
             className="font-playfair text-[#0a0806] leading-[1.0] mb-7"
             style={{ fontSize: 'clamp(68px, 10vw, 128px)', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.2s forwards' }}
           >
-            Your SEO Is <span className="wood-underline">Working.</span>{' '}
-            <br className="hidden sm:block" />
-            <span style={{ color: '#1c1814' }}>Your Business Is Still Invisible.</span>
+            <span style={{ color: '#0a0806', display: 'block' }}>Your SEO Is <span className="wood-underline">Working.</span></span>
+            <span style={{ color: '#1a56db', display: 'block' }}>Your Business Is Still Invisible.</span>
           </h1>
 
           {/* Subhead */}
