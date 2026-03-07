@@ -68,9 +68,9 @@ const blogPostingSchema = {
     { '@type': 'Thing', name: 'Local Business Marketing' },
   ],
   mentions: [
-    { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-    { '@type': 'SoftwareApplication', name: 'Perplexity' },
-    { '@type': 'SoftwareApplication', name: 'Google AI Overviews' },
+    { '@type': 'Thing', name: 'ChatGPT' },
+    { '@type': 'Thing', name: 'Perplexity' },
+    { '@type': 'Thing', name: 'Google AI Overviews' },
   ],
 };
 
