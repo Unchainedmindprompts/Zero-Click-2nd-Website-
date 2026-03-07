@@ -4,9 +4,19 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'About — Built by Someone Who Did It On Their Own Businesses First',
+  title: 'About | KodeCite.AI — Why We Built This',
   description:
-    '20 years of entrepreneurship, from window treatments to home theater to discovering AEO. KodeCite.ai was built on businesses that proved the methodology works.',
+    "Two thousand hours down a rabbit hole. One simple test that changed everything. Here's the story behind KodeCite.AI and why we exist to help local businesses compete in the AI age.",
+  alternates: {
+    canonical: 'https://www.kodecite.ai/about',
+  },
+  openGraph: {
+    title: 'About KodeCite.AI — Why We Built This',
+    description:
+      "Two thousand hours down a rabbit hole. One simple test that changed everything. Here's the story behind KodeCite.AI.",
+    url: 'https://www.kodecite.ai/about',
+    type: 'website',
+  },
 };
 
 const breadcrumbSchema = {
@@ -18,10 +28,39 @@ const breadcrumbSchema = {
   ],
 };
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mark Abplanalp',
+  jobTitle: 'Founder',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'KodeCite.AI',
+    url: 'https://www.kodecite.ai',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Post Falls',
+    addressRegion: 'ID',
+    addressCountry: 'US',
+  },
+  knowsAbout: [
+    'Answer Engine Optimization',
+    'AI Search Visibility',
+    'Structured Data',
+    'Local Business Marketing',
+    'Agent-to-Agent Economy',
+    'Machine-Readable Content',
+  ],
+  description:
+    'Founder of KodeCite.AI. Spent 2,000+ hours researching how AI systems discover, read, and cite local businesses — and built a consultancy to help independent businesses compete against national chains and PE roll-ups in the AI age.',
+};
+
 export default function AboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
       {/* Hero */}
       <section className="pt-36 pb-20 bg-[#f8f5f0] px-4 relative overflow-hidden">
@@ -29,12 +68,13 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="eyebrow mb-4">ABOUT</p>
           <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight max-w-4xl">
-            Built by Someone Who Did It{' '}
-            <span className="text-[#a0723a]">On Their Own Businesses First</span>
+            Two Thousand Hours Down{' '}
+            <span className="text-[#a0723a]">a Rabbit Hole.</span>
           </h1>
           <p className="text-[#6a5a48] text-xl font-poppins max-w-3xl leading-relaxed">
-            No theory. No agency fluff. Just a 20-year entrepreneur who discovered how AI search
-            works and proved it could generate leads — before offering it to anyone else.
+            What started as curiosity about my own business turned into an obsession with how AI
+            systems discover, read, and decide who to cite. Here&apos;s what I found — and why I
+            built KodeCite.AI.
           </p>
         </div>
       </section>
@@ -73,66 +113,109 @@ export default function AboutPage() {
             {/* Story text */}
             <ScrollReveal delay={200}>
               <div className="space-y-6">
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  A couple of years ago I told myself I needed to figure out AI — not in a vague
+                  &ldquo;keep up with the times&rdquo; way, but really understand how it was going
+                  to change marketing for my business.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  So I started pulling threads.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  Two thousand hours later, I couldn&apos;t stop.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  What started as curiosity about my own business turned into a full obsession with
+                  how AI systems discover, read, and decide who to cite. Then how large language
+                  models actually process information. Then the agent-to-agent economy and why
+                  autonomous agents need digital rails like Solana and Ethereum to buy compute and
+                  settle tasks without human intervention. Then how all of it connects.
+                </p>
+
                 <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-4">
-                  30 Years of Sales. 23 Years of Building.{' '}
-                  <span className="text-[#a0723a]">I Was My Own First Client.</span>
+                  The Test That Changed{' '}
+                  <span className="text-[#a0723a]">Everything</span>
                 </h2>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  When my wife and I relocated to North Idaho, I did what you&apos;ve probably done:
-                  I looked for a way to build visibility in a new market. I sat in the same meetings
-                  you&apos;ve likely sat in, hearing the same{' '}
-                  <span className="text-[#0a0806] font-medium">&ldquo;Yesterday&apos;s Playbook&rdquo;</span>
-                  —spend more, wait longer, chase the blue link.
+                  But one simple test changed the direction of everything.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  But while my rankings looked good on paper, the phones weren&apos;t ringing. I felt
-                  that{' '}
-                  <span className="text-[#0a0806] font-medium">&ldquo;quiet panic&rdquo;</span> of knowing
-                  the game was shifting, even if the &ldquo;experts&rdquo; in the room couldn&apos;t
-                  explain why.
+                  I started running Google Rich Results tests on local businesses. HVAC companies.
+                  Realtors. Window treatment shops. Contractors. All kinds of businesses across all
+                  kinds of markets.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  I didn&apos;t start KodeCite.ai to build an agency. I started it because I
-                  was tired of writing checks for &ldquo;visibility&rdquo; that didn&apos;t turn into
-                  revenue.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  I spent a year digging into the data and realized we are in the middle of{' '}
-                  <span className="text-[#0a0806] font-medium">&ldquo;The Great Decoupling.&rdquo;</span>{' '}
-                  Search volume is higher than ever, but nearly 60% of those searches now end without
-                  a single click to a website. AI and wearables — like the Oakley Meta glasses — are
-                  giving your customers answers before they ever see your link.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  I built the Authority Engine because my own family&apos;s revenue depended on it. I
-                  needed to ensure that when a homebuyer asked their glasses for a &ldquo;realtor in
-                  Coeur d&apos;Alene,&rdquo; my wife&apos;s name was the one they heard in their ear.
+                  Almost nothing. Virtually zero structured data. No schema. No machine-readable
+                  signals. No llms.txt. No agent.json. Just websites built for humans — completely
+                  invisible to the AI systems that are increasingly deciding which businesses get
+                  recommended and which ones don&apos;t.
                 </p>
 
                 <div className="inw-callout">
                   <p className="text-[#6a5a48] leading-relaxed font-poppins text-sm md:text-base italic">
-                    Here is what I learned: When an AI cites you, it&apos;s a{' '}
-                    <span className="text-[#a0723a] font-semibold">&ldquo;warm referral&rdquo;</span>{' '}
-                    from the machine. These buyers arrive pre-vetted — they spend 40% more time on
-                    your site and convert at a rate 5x higher than traditional search.
+                    And I realized:{' '}
+                    <span className="text-[#a0723a] font-semibold">nobody is doing this.</span>{' '}
+                    At least not at the local level.
                   </p>
                 </div>
 
+                <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-4">
+                  The Opportunity{' '}
+                  <span className="text-[#a0723a]">Nobody Saw</span>
+                </h2>
+
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  I&apos;m not a computer programmer. I&apos;m a business owner who found a way to
-                  stop the bleeding. If you&apos;re feeling the{' '}
-                  <span className="text-[#0a0806] font-medium">&ldquo;quiet panic&rdquo;</span> of
-                  disappearing clicks, I get it. I built this stack to reclaim the{' '}
-                  <span className="text-[#0a0806] font-medium">&ldquo;Answer Real Estate&rdquo;</span> for
-                  my businesses — and I&apos;m here to help you do the same for yours.
+                  While national chains and private equity roll-ups are quietly building the
+                  infrastructure to dominate AI search at scale — the independent local businesses
+                  that built their reputations over decades have no idea the ground is shifting
+                  beneath them.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  That&apos;s when it clicked.{' '}
+                  <span className="text-[#0a0806] font-medium">This is a business.</span>
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  Not just any business — a chance to take something I genuinely love and turn it
+                  into something that actually helps people. Independent business owners who have
+                  earned their reputations one customer at a time deserve to know that their local
+                  knowledge, their community trust, their years of real experience — that&apos;s
+                  exactly the raw material AI systems are learning to reward. They just need someone
+                  to help them structure it.
+                </p>
+
+                <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-4">
+                  What We <span className="text-[#a0723a]">Do</span>
+                </h2>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  That&apos;s KodeCite.AI.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  We build the hidden scaffolding that makes AI choose your business — not your
+                  competitor&apos;s. We start with a free AI Scaffolding Audit so you can see
+                  exactly where you stand before the rush really begins.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  If you own a local or regional business and you&apos;ve ever wondered whether AI
+                  is going to help you or hurt you — we&apos;d love to talk.
                 </p>
 
                 <div className="pt-4">
+                  <p className="text-[#6a5a48] font-poppins leading-relaxed mb-6">
+                    — Mark Abplanalp<br />
+                    <span className="text-[#0a0806] font-medium">Founder, KodeCite.AI</span><br />
+                    Post Falls, Idaho
+                  </p>
                   <Link href="/contact" className="btn-gold text-sm font-bold px-6 py-3 rounded-md inline-block">
                     Start the Conversation
                   </Link>
