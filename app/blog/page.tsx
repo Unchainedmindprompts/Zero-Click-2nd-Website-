@@ -4,71 +4,26 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'Website Performance', 'Facebook Ads'];
+const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'AI Search Strategy', 'Website Performance', 'Facebook Ads'];
 
 const blogPosts = [
   {
-    slug: 'what-is-zero-click-search',
-    category: 'AEO & AI Search',
-    title: 'What Is Zero Click Search and Why Your Business Is Invisible',
+    slug: '2026-digital-land-rush-ai-visibility',
+    category: 'AI Search Strategy',
+    title: 'The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything',
     excerpt:
-      "AI answers questions before users visit your site. If you're not structured for AI to read and cite, you're invisible to the fastest-growing search channel. Here's what's happening and what to do about it.",
-    date: 'January 15, 2026',
+      'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
+    date: 'March 7, 2026',
     readTime: '8 min read',
   },
   {
-    slug: 'wordpress-losing-ai-search',
-    category: 'Website Performance',
-    title: 'Why WordPress Sites Are Losing the AI Search War',
+    slug: 'why-website-burning-ai-tokens',
+    category: 'AEO & AI Visibility',
+    title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
     excerpt:
-      "Bloated plugins, slow load times, and poor Core Web Vitals scores are pushing WordPress sites to the back of AI-generated answers. Here's what we use instead — and why it matters for 2026.",
-    date: 'January 22, 2026',
-    readTime: '6 min read',
-  },
-  {
-    slug: 'how-we-indexed-49-pages-48-hours',
-    category: 'Website Performance',
-    title: 'How We Built Sites That Score 93–100 on PageSpeed',
-    excerpt:
-      'The complete technical breakdown of the SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types — including the exact schema types we used.',
-    date: 'February 1, 2026',
-    readTime: '10 min read',
-  },
-  {
-    slug: 'schema-markup-complete-guide',
-    category: 'AEO & AI Search',
-    title: 'Schema Markup: The Complete Guide for Local Service Businesses',
-    excerpt:
-      'A step-by-step guide to implementing JSON-LD schema markup that makes your business visible to AI. Covers LocalBusiness, Service, FAQPage, and BreadcrumbList schemas with real code examples.',
-    date: 'February 8, 2026',
-    readTime: '12 min read',
-  },
-  {
-    slug: 'facebook-ads-local-business-2026',
-    category: 'Facebook Ads',
-    title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
-    excerpt:
-      'Stop running ads that drain budget. Build an ad system that compounds — pixel data feeding audiences, retargeting warming leads, and lookalikes scaling what works. The flywheel method explained.',
-    date: 'February 12, 2026',
-    readTime: '9 min read',
-  },
-  {
-    slug: 'ai-overviews-local-businesses',
-    category: 'AEO & AI Search',
-    title: 'How to Get Your Local Business Featured in Google AI Overviews',
-    excerpt:
-      "Google's AI Overviews are replacing traditional search results for millions of queries. Here's the exact framework we use to get local businesses cited as the source — not buried below it.",
-    date: 'February 18, 2026',
+      "AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don't get recommended. Here's what token-efficient looks like.",
+    date: 'March 3, 2026',
     readTime: '7 min read',
-  },
-  {
-    slug: 'vercel-vs-wordpress-performance',
-    category: 'Website Performance',
-    title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
-    excerpt:
-      'We ran the same site on both platforms. The results are not close. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
-    date: 'February 22, 2026',
-    readTime: '8 min read',
   },
   {
     slug: 'custom-audiences-facebook',
@@ -80,13 +35,67 @@ const blogPosts = [
     readTime: '6 min read',
   },
   {
-    slug: 'why-website-burning-ai-tokens',
-    category: 'AEO & AI Visibility',
-    title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
+    slug: 'vercel-vs-wordpress-performance',
+    category: 'Website Performance',
+    title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
     excerpt:
-      "AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don't get recommended. Here's what token-efficient looks like.",
-    date: 'March 3, 2026',
+      'We ran the same site on both platforms. The results are not close. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
+    date: 'February 22, 2026',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'ai-overviews-local-businesses',
+    category: 'AEO & AI Search',
+    title: 'How to Get Your Local Business Featured in Google AI Overviews',
+    excerpt:
+      "Google's AI Overviews are replacing traditional search results for millions of queries. Here's the exact framework we use to get local businesses cited as the source — not buried below it.",
+    date: 'February 18, 2026',
     readTime: '7 min read',
+  },
+  {
+    slug: 'facebook-ads-local-business-2026',
+    category: 'Facebook Ads',
+    title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
+    excerpt:
+      'Stop running ads that drain budget. Build an ad system that compounds — pixel data feeding audiences, retargeting warming leads, and lookalikes scaling what works. The flywheel method explained.',
+    date: 'February 12, 2026',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'schema-markup-complete-guide',
+    category: 'AEO & AI Search',
+    title: 'Schema Markup: The Complete Guide for Local Service Businesses',
+    excerpt:
+      'A step-by-step guide to implementing JSON-LD schema markup that makes your business visible to AI. Covers LocalBusiness, Service, FAQPage, and BreadcrumbList schemas with real code examples.',
+    date: 'February 8, 2026',
+    readTime: '12 min read',
+  },
+  {
+    slug: 'how-we-indexed-49-pages-48-hours',
+    category: 'Website Performance',
+    title: 'How We Built Sites That Score 93–100 on PageSpeed',
+    excerpt:
+      'The complete technical breakdown of the SEO overhaul that transformed Luxe Window Works from invisible to cited across four rich result types — including the exact schema types we used.',
+    date: 'February 1, 2026',
+    readTime: '10 min read',
+  },
+  {
+    slug: 'wordpress-losing-ai-search',
+    category: 'Website Performance',
+    title: 'Why WordPress Sites Are Losing the AI Search War',
+    excerpt:
+      "Bloated plugins, slow load times, and poor Core Web Vitals scores are pushing WordPress sites to the back of AI-generated answers. Here's what we use instead — and why it matters for 2026.",
+    date: 'January 22, 2026',
+    readTime: '6 min read',
+  },
+  {
+    slug: 'what-is-zero-click-search',
+    category: 'AEO & AI Search',
+    title: 'What Is Zero Click Search and Why Your Business Is Invisible',
+    excerpt:
+      "AI answers questions before users visit your site. If you're not structured for AI to read and cite, you're invisible to the fastest-growing search channel. Here's what's happening and what to do about it.",
+    date: 'January 15, 2026',
+    readTime: '8 min read',
   },
 ];
 

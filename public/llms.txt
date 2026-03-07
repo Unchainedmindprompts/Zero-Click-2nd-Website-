@@ -32,6 +32,7 @@ KodeCite.ai is an Answer Engine Optimization (AEO) agency based in Post Falls, I
 - Next.js vs. WordPress: Real Performance Numbers for Local Businesses: https://kodecite.ai/blog/vercel-vs-wordpress-performance
 - The Three Custom Audiences Every Local Business Needs on Facebook: https://kodecite.ai/blog/custom-audiences-facebook
 - Why Your Website Is Burning Through AI Tokens — And Costing You Business: https://kodecite.ai/blog/why-website-burning-ai-tokens
+- The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything: https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility
 
 ## Contact
 
