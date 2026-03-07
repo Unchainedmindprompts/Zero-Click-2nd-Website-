@@ -98,5 +98,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blog/2026-digital-land-rush-ai-visibility`,
+      lastModified: new Date('2026-03-07').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
 }

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'Website Performance', 'Facebook Ads'];
+const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'AI Search Strategy', 'Website Performance', 'Facebook Ads'];
 
 const blogPosts = [
   {
@@ -87,6 +87,15 @@ const blogPosts = [
       "AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don't get recommended. Here's what token-efficient looks like.",
     date: 'March 3, 2026',
     readTime: '7 min read',
+  },
+  {
+    slug: '2026-digital-land-rush-ai-visibility',
+    category: 'AI Search Strategy',
+    title: 'The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything',
+    excerpt:
+      'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
+    date: 'March 7, 2026',
+    readTime: '8 min read',
   },
 ];
 
