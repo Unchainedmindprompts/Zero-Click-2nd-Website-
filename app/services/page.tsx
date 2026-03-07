@@ -287,7 +287,7 @@ export default function ServicesPage() {
                 </div>
 
                 <Link href="/contact" className="btn-gold text-sm font-bold px-6 py-3 rounded-md inline-block">
-                  Free AEO Audit
+                  Free Scaffolding Audit
                 </Link>
               </div>
             </ScrollReveal>
@@ -615,17 +615,16 @@ export default function ServicesPage() {
       <section className="py-20 bg-[#1c1814] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="eyebrow mb-4">FREE AEO AUDIT</p>
+            <p className="eyebrow mb-4">FREE AI SCAFFOLDING AUDIT</p>
             <h2 className="font-playfair font-bold text-4xl md:text-5xl text-[rgba(240,232,216,0.9)] mb-6">
               Not sure where to start?
             </h2>
             <p className="text-[rgba(240,232,216,0.6)] text-lg font-poppins mb-3 leading-relaxed">
-              We&apos;ll show you exactly how your business appears — or doesn&apos;t — when someone
-              asks ChatGPT, Perplexity, or Google AI Overviews about your service.
+              We&apos;ll audit the hidden structure beneath your AI presence and show you whether
+              you&apos;re visible by design — or just by default.
             </p>
             <p className="text-[rgba(240,232,216,0.6)] text-base font-poppins mb-10 leading-relaxed">
-              20 minutes. No obligation. Just an honest look at your current AI visibility and one
-              clear action you can take today.
+              20 minutes. No obligation. One clear action you can take today.
             </p>
             <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
               Start the Conversation
