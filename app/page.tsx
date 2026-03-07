@@ -424,12 +424,11 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
-              Most business owners don&apos;t know they&apos;re invisible until we show them. Our free
-              AEO Audit shows you exactly how your business appears — or doesn&apos;t — when
-              someone asks ChatGPT, Perplexity, or Google AI Overviews about your service.
+              Visibility in AI doesn&apos;t mean much if the scaffolding is weak. Find out if AI truly
+              trusts, reads, and chooses you — or if you&apos;re one structured competitor away from invisible.
             </p>
             <p className="font-poppins text-base leading-relaxed mb-10" style={{ color: '#6a5a48' }}>
-              No pitch. No pressure. Just an honest look at your current AI visibility
+              No pitch. No pressure. Just an honest look at the hidden structure beneath your AI presence
               and a clear explanation of what it would take to fix it.
             </p>
           </ScrollReveal>
@@ -501,18 +500,18 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal>
             <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl mb-5 leading-[1.0]" style={{ color: '#0a0806' }}>
-              Ready to Become{' '}
-              <span style={{ color: '#a0723a' }}>the Answer?</span>
+              Visible by Default.{' '}
+              <span style={{ color: '#a0723a' }}>Or Visible by Design.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={120}>
             <p className="font-poppins text-xl md:text-2xl mb-10 leading-relaxed" style={{ color: '#6a5a48' }}>
-              Stop watching AI recommend your competitors.
+              Most businesses showing up in AI answers are there because no one else has claimed the space yet. We audit the hidden scaffolding — the structure that determines whether AI truly trusts, reads, and chooses you… or replaces you the moment a structured competitor arrives.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={250}>
             <Link href="/contact" className="btn-gold font-poppins font-semibold text-lg inline-block rounded-md" style={{ padding: '20px 52px' }}>
-              Get Your Free AEO Audit
+              Get My Free Scaffolding Audit →
             </Link>
           </ScrollReveal>
         </div>
