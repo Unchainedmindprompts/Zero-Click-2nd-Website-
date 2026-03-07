@@ -77,7 +77,7 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
-    email: 'hello@kodecite.ai',
+    email: 'mark@kodecite.ai',
   },
 };
 
@@ -89,7 +89,7 @@ const localBusinessSchema = {
     'AI search optimization and digital marketing micro agency. We build websites, content, and campaigns that make businesses visible to AI search.',
   url: 'https://kodecite.ai',
   telephone: '',
-  email: 'hello@kodecite.ai',
+  email: 'mark@kodecite.ai',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '',
