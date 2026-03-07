@@ -8,6 +8,15 @@ const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'AI Search 
 
 const blogPosts = [
   {
+    slug: 'false-legacy-layer-ai-visibility',
+    category: 'AI Search Strategy',
+    title: 'The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow',
+    excerpt:
+      "Your business is showing up in AI answers — but is it earned authority or borrowed time? Here's the truth about the False Legacy Layer and what it means for your market position.",
+    date: 'March 7, 2026',
+    readTime: '9 min read',
+  },
+  {
     slug: '2026-digital-land-rush-ai-visibility',
     category: 'AI Search Strategy',
     title: 'The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything',

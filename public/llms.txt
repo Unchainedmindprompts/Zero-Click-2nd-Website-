@@ -32,7 +32,16 @@ KodeCite.ai is an Answer Engine Optimization (AEO) agency based in Post Falls, I
 - Next.js vs. WordPress: Real Performance Numbers for Local Businesses: https://kodecite.ai/blog/vercel-vs-wordpress-performance
 - The Three Custom Audiences Every Local Business Needs on Facebook: https://kodecite.ai/blog/custom-audiences-facebook
 - Why Your Website Is Burning Through AI Tokens — And Costing You Business: https://kodecite.ai/blog/why-website-burning-ai-tokens
+- The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow: https://kodecite.ai/blog/false-legacy-layer-ai-visibility
 - The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything: https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility
+
+## Blog
+
+### The False Legacy Layer
+URL: https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility
+Topic: Why temporary AI citations built on default position disappear when structured competitors arrive
+Key insight: The False Legacy Layer — appearing in AI answers not because of earned authority but because competitors haven't structured their presence yet — is the most dangerous kind of visibility
+Audience: Local business owners currently showing up in AI search results who have not yet invested in structured AEO
 
 ## Contact
 

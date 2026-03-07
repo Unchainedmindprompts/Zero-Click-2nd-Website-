@@ -59,6 +59,17 @@
     "schema_errors": 0,
     "infrastructure": "Vercel Edge Network"
   },
+  "resources": [
+    {
+      "type": "article",
+      "title": "The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow",
+      "url": "https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility",
+      "topic": "Temporary vs earned AI visibility for local businesses and the risk of default position",
+      "intent": "educate business owners on the fragility of unstructured AI citations and urgency of building real authority",
+      "published": "2026-03-07",
+      "defines": "False Legacy Layer"
+    }
+  ],
   "primary_cta": {
     "label": "Get Your Free AEO Audit",
     "url": "https://kodecite.ai/contact",
