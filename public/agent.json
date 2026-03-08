@@ -62,6 +62,16 @@
   "resources": [
     {
       "type": "article",
+      "title": "AEO + GEO Isn't Replacing SEO — It's Making It Better",
+      "url": "https://www.kodecite.ai/blog/aeo-geo-making-seo-better",
+      "topic": "How AEO and GEO amplify traditional SEO for local service businesses",
+      "intent": "educate business owners that AI optimization and SEO are complementary not competing strategies",
+      "published": "2026-03-08",
+      "contains": ["bar-chart", "stat-cards", "industry-table", "FAQ"],
+      "defines": "Four-Layer Authority Engine"
+    },
+    {
+      "type": "article",
       "title": "The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow",
       "url": "https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility",
       "topic": "Temporary vs earned AI visibility for local businesses and the risk of default position",

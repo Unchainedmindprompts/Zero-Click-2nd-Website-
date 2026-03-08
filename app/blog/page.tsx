@@ -4,9 +4,18 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'AI Search Strategy', 'Website Performance', 'Facebook Ads'];
+const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'AI Search Strategy', 'Search Strategy', 'Website Performance', 'Facebook Ads'];
 
 const blogPosts = [
+  {
+    slug: 'aeo-geo-making-seo-better',
+    category: 'Search Strategy',
+    title: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
+    excerpt:
+      "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
+    date: 'March 8, 2026',
+    readTime: '10 min read',
+  },
   {
     slug: 'false-legacy-layer-ai-visibility',
     category: 'AI Search Strategy',
