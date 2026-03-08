@@ -70,13 +70,6 @@ const blogPostingSchema = {
     { '@type': 'Thing', name: 'Structured Data' },
     { '@type': 'Thing', name: 'Agent-to-Agent Commerce' },
   ],
-  mentions: [
-    { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-    { '@type': 'SoftwareApplication', name: 'Perplexity' },
-    { '@type': 'SoftwareApplication', name: 'Google AI Overviews' },
-    { '@type': 'SoftwareApplication', name: 'Apple Intelligence' },
-    { '@type': 'Brand', name: 'Meta Ray-Ban' },
-  ],
   citation: [
     {
       '@type': 'CreativeWork',
