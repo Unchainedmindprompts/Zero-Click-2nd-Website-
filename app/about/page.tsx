@@ -151,7 +151,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto space-y-16">
 
           {/* The Test That Changed Everything */}
-          <ScrollReveal>
+          <div>
             <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-6">
               The Test That <span className="text-[#a0723a]">Changed Everything</span>
             </h2>
@@ -170,10 +170,10 @@ export default function AboutPage() {
               </p>
               <p>And I realized: nobody is doing this. At least not at the local level.</p>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* The Opportunity Nobody Saw */}
-          <ScrollReveal delay={100}>
+          <div>
             <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-6">
               The Opportunity <span className="text-[#a0723a]">Nobody Saw</span>
             </h2>
@@ -194,10 +194,10 @@ export default function AboutPage() {
               </p>
               <p>They just need someone to help them structure it.</p>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* What We Do */}
-          <ScrollReveal delay={200}>
+          <div>
             <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-6">
               What <span className="text-[#a0723a]">We Do</span>
             </h2>
@@ -218,7 +218,7 @@ export default function AboutPage() {
                 Start the Conversation
               </Link>
             </div>
-          </ScrollReveal>
+          </div>
 
         </div>
       </section>
