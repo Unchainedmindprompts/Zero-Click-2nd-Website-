@@ -168,7 +168,7 @@ export default function WhyNowPage() {
                 <strong className="text-[#0a0806]">$700 billion in 2026 alone</strong> — to make better memes or prettier pictures.
               </p>
               <p>
-                They&apos;re rebuilding how customers find businesses. Piece by piece. Layer by layer. And they&apos;re doing it around AI helpers that discover, compare, book, and pay — without a human typing a single search query.
+                They&apos;re building the highways, the railways, and the electric grid of a new economy. The infrastructure that everything else will run on. And one of the changes that comes with that shift is how people discover and interact with businesses like yours.
               </p>
               <p>
                 This isn&apos;t something coming in five years. It&apos;s happening right now, on every phone in every pocket. The hardware just makes it impossible to ignore.
