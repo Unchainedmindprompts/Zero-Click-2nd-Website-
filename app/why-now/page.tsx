@@ -208,6 +208,9 @@ export default function WhyNowPage() {
                 The first device is expected to <strong className="text-[#0a0806]">unveil in late 2026</strong>, with first shipments no earlier than early 2027.
               </p>
               <p>
+                It&apos;s not replacing your phone — it&apos;s supplementing it with something quieter and smarter.
+              </p>
+              <p>
                 And think about it — Ray-Ban and Oakley AI glasses are already here. People are wearing them right now. This isn&apos;t the beginning of a maybe. It&apos;s the early chapter of something already in motion.
               </p>
               <p>
@@ -220,10 +223,10 @@ export default function WhyNowPage() {
           <ScrollReveal delay={250}>
             <blockquote className="mt-12 border-l-4 border-[#1a56db] pl-6 py-2">
               <p className="font-cormorant italic text-2xl md:text-3xl text-[#0a0806] leading-relaxed mb-4">
-                &ldquo;You trust it over time, and it does have just this incredible contextual awareness of your whole life.&rdquo;
+                &ldquo;Sitting in the most beautiful cabin by a lake and in the mountains and just enjoying the peace and calm&hellip; You trust it over time, and it does have just this incredible contextual awareness of your whole life.&rdquo;
               </p>
               <cite className="font-poppins text-sm text-[#6a5a48] not-italic">
-                — Sam Altman, CEO, OpenAI
+                — Sam Altman, CEO, OpenAI, Emerson Collective Demo Day 2025
               </cite>
             </blockquote>
           </ScrollReveal>
@@ -271,6 +274,31 @@ export default function WhyNowPage() {
               <p className="font-poppins text-[#6a5a48] leading-relaxed">
                 ChatGPT, Perplexity, Grok, and Google&apos;s AI answers are already handling hundreds of millions of searches per day without showing traditional results. The hardware just accelerates what&apos;s already in motion.
               </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Simple Timeline Graphic */}
+          <ScrollReveal delay={350}>
+            <div className="mt-10 rounded-2xl bg-[#f8f5f0] border border-[rgba(100,70,30,0.15)] p-8">
+              <div className="flex flex-col md:flex-row md:items-start relative">
+                <div className="hidden md:block absolute" style={{ top: '16px', left: 'calc(16.666% + 16px)', right: 'calc(16.666% + 16px)', height: '2px', background: '#a0723a', opacity: 0.35 }} />
+                {[
+                  { label: 'NOW', heading: 'AI answers live', lines: ['ChatGPT · Perplexity', 'Google AI Overviews'] },
+                  { label: 'LATE 2026', heading: 'OpenAI device unveils', lines: ['Ray-Ban already here', 'First shipments announced'] },
+                  { label: '2027+', heading: 'Everyday use begins', lines: ['Ambient AI goes mainstream', 'The rush starts'] },
+                ].map((step, i) => (
+                  <div key={step.label} className="flex-1 flex flex-col items-center text-center px-4 relative">
+                    <div className="w-8 h-8 rounded-full border-2 flex items-center justify-center mb-3 relative z-10" style={{ borderColor: '#a0723a', background: '#f8f5f0' }}>
+                      <div className="w-3 h-3 rounded-full" style={{ background: '#a0723a' }} />
+                    </div>
+                    {i < 2 && <div className="md:hidden w-px h-6 mb-3" style={{ background: 'rgba(160,114,58,0.3)' }} />}
+                    <span className="font-poppins font-bold text-xs mb-1" style={{ color: '#a0723a', letterSpacing: '0.18em' }}>{step.label}</span>
+                    <p className="font-poppins font-semibold text-[#0a0806] text-sm mb-1">{step.heading}</p>
+                    {step.lines.map((line) => <p key={line} className="font-poppins text-xs text-[#6a5a48]">{line}</p>)}
+                    {i < 2 && <div className="md:hidden h-4" />}
+                  </div>
+                ))}
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -334,7 +362,7 @@ export default function WhyNowPage() {
               {[
                 {
                   title: 'We build fast websites from scratch.',
-                  body: 'Not patches on slow, outdated platforms. Modern sites that load instantly anywhere in the world. Why does speed matter? AI helpers won\'t wait for slow pages. Think of it like a shop with a long line out the door versus one that\'s quick and easy — customers and AI both go to the fast one.',
+                  body: <>Not patches on slow, outdated platforms. Modern sites that load instantly anywhere in the world. Why does speed matter? AI helpers won&apos;t wait for slow pages. <strong className="text-[#0a0806]">Think of it like a shop with a long line out the door versus one that&apos;s quick and easy — customers and AI both go to the fast one.</strong></>,
                 },
                 {
                   title: 'We give your business a digital ID card.',
@@ -390,6 +418,9 @@ export default function WhyNowPage() {
               </p>
               <p>
                 You have time — if you start soon. The setup that makes you visible to AI happens now, before the devices ship and before everyone rushes to do what you&apos;ve already done.
+              </p>
+              <p>
+                And even if the hardware takes a bit longer to go mainstream — 2027 or 2028 for most people — the AI answers happening on phones today are already shifting recommendations right now.
               </p>
               <p>
                 Waiting until these gadgets are everywhere means higher costs, tougher competition, and markets where the best positions are already taken.
