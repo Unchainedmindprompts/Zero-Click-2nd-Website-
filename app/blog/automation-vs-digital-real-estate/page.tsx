@@ -603,11 +603,7 @@ export default function AutomationVsDigitalRealEstate() {
                 </p>
 
                 {/* FAQ Section */}
-                <section
-                  className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]"
-                  itemScope
-                  itemType="https://schema.org/FAQPage"
-                >
+                <section className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
                   <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mb-6">
                     Frequently Asked Questions
                   </h2>
@@ -615,27 +611,13 @@ export default function AutomationVsDigitalRealEstate() {
                     {faqItems.map((item) => (
                       <div
                         key={item.q}
-                        itemScope
-                        itemProp="mainEntity"
-                        itemType="https://schema.org/Question"
                         className="rounded-xl p-6"
                         style={{ background: '#f2ede4', border: '1px solid rgba(160,114,58,0.2)' }}
                       >
-                        <h3
-                          itemProp="name"
-                          className="font-semibold text-[#0a0806] mb-3 leading-snug"
-                        >
+                        <h3 className="font-semibold text-[#0a0806] mb-3 leading-snug">
                           {item.q}
                         </h3>
-                        <div
-                          itemScope
-                          itemProp="acceptedAnswer"
-                          itemType="https://schema.org/Answer"
-                        >
-                          <p itemProp="text" className="text-[#6a5a48] leading-relaxed text-sm">
-                            {item.a}
-                          </p>
-                        </div>
+                        <p className="text-[#6a5a48] leading-relaxed text-sm">{item.a}</p>
                       </div>
                     ))}
                   </div>
