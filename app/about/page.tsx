@@ -6,14 +6,14 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'About | KodeCite.AI — Why We Built This',
   description:
-    'Two thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI and why we exist to help local businesses compete in the AI age.',
+    'Over a thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI and why we exist to help local businesses compete in the AI age.',
   alternates: {
     canonical: 'https://www.kodecite.ai/about',
   },
   openGraph: {
     title: 'About KodeCite.AI — Why We Built This',
     description:
-      'Two thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI.',
+      'Over a thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI.',
     url: 'https://www.kodecite.ai/about',
     type: 'website',
   },
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <span className="text-[#a0723a]">KodeCite.AI</span>
           </h1>
           <p className="text-[#6a5a48] text-xl font-poppins max-w-3xl leading-relaxed">
-            Two thousand hours down a rabbit hole. One simple test that changed everything. Here&apos;s the story.
+            Over a thousand hours down a rabbit hole. One simple test that changed everything. Here&apos;s the story.
           </p>
         </div>
       </section>
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  Two thousand hours later, I couldn&apos;t stop.
+                  Over a thousand hours later, I couldn&apos;t stop.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
