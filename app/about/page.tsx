@@ -83,9 +83,9 @@ export default function AboutPage() {
       <section className="py-24 md:py-32 bg-[#f2ede4] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Photo */}
+            {/* Photo — sticky so it stays in view while story scrolls */}
             <ScrollReveal>
-              <div className="relative">
+              <div className="relative lg:sticky lg:top-28">
                 <div className="aspect-[4/5] bg-[#e8e0d0] rounded-2xl overflow-hidden border border-[rgba(100,70,30,0.2)] relative">
                   <Image
                     src="/about-photo.png"
@@ -108,10 +108,10 @@ export default function AboutPage() {
               </div>
             </ScrollReveal>
 
-            {/* Story text */}
+            {/* Full continuous story */}
             <ScrollReveal delay={200}>
-              <div className="space-y-6">
-                <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-4">
+              <div className="space-y-8">
+                <h2 className="font-playfair font-bold text-3xl text-[#0a0806]">
                   Two Thousand Hours Later,{' '}
                   <span className="text-[#a0723a]">I Couldn&apos;t Stop.</span>
                 </h2>
@@ -138,88 +138,77 @@ export default function AboutPage() {
                   settle tasks without human intervention. Then how all of it connects.
                 </p>
 
+                <h3 className="font-playfair font-bold text-2xl text-[#0a0806] pt-4">
+                  The Test That <span className="text-[#a0723a]">Changed Everything</span>
+                </h3>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  But one simple test changed the direction of everything.
+                </p>
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  I started running Google Rich Results tests on local businesses. HVAC companies.
+                  Realtors. Window treatment shops. Contractors. All kinds of businesses across all
+                  kinds of markets.
+                </p>
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  Almost nothing. Virtually zero structured data. No schema. No machine-readable
+                  signals. No llms.txt. No agent.json. Just websites built for humans — completely
+                  invisible to the AI systems that are increasingly deciding which businesses get
+                  recommended and which ones don&apos;t.
+                </p>
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  And I realized: nobody is doing this. At least not at the local level.
+                </p>
+
+                <h3 className="font-playfair font-bold text-2xl text-[#0a0806] pt-4">
+                  The Opportunity <span className="text-[#a0723a]">Nobody Saw</span>
+                </h3>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  While national chains and private equity roll-ups are quietly building the
+                  infrastructure to dominate AI search at scale — the independent local businesses
+                  that built their reputations over decades have no idea the ground is shifting
+                  beneath them.
+                </p>
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  That&apos;s when it clicked. This is a business.
+                </p>
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  Not just any business — a chance to take something I genuinely love and turn it
+                  into something that actually helps people. Independent business owners who have
+                  earned their reputations one customer at a time deserve to know that their local
+                  knowledge, their community trust, their years of real experience — that&apos;s
+                  exactly the raw material AI systems are learning to reward.
+                </p>
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  They just need someone to help them structure it.
+                </p>
+
+                <h3 className="font-playfair font-bold text-2xl text-[#0a0806] pt-4">
+                  What <span className="text-[#a0723a]">We Do</span>
+                </h3>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  That&apos;s KodeCite.AI.
+                </p>
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  We build the hidden scaffolding that makes AI choose your business — not your
+                  competitor&apos;s. We start with a free AI Scaffolding Audit so you can see
+                  exactly where you stand before the rush really begins.
+                </p>
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  If you own a local or regional business and you&apos;ve ever wondered whether AI
+                  is going to help you or hurt you — we&apos;d love to talk.
+                </p>
+
+                <div className="pt-2">
+                  <Link href="/contact" className="btn-gold text-sm font-bold px-6 py-3 rounded-md inline-block">
+                    Start the Conversation
+                  </Link>
+                </div>
               </div>
             </ScrollReveal>
           </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* The Story Sections */}
-      <section className="py-24 md:py-32 bg-[#f8f5f0] px-4">
-        <div className="max-w-3xl mx-auto space-y-16">
-
-          {/* The Test That Changed Everything */}
-          <div>
-            <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-6">
-              The Test That <span className="text-[#a0723a]">Changed Everything</span>
-            </h2>
-            <div className="space-y-5 text-[#6a5a48] font-poppins leading-relaxed">
-              <p>But one simple test changed the direction of everything.</p>
-              <p>
-                I started running Google Rich Results tests on local businesses. HVAC companies.
-                Realtors. Window treatment shops. Contractors. All kinds of businesses across all
-                kinds of markets.
-              </p>
-              <p>
-                Almost nothing. Virtually zero structured data. No schema. No machine-readable
-                signals. No llms.txt. No agent.json. Just websites built for humans — completely
-                invisible to the AI systems that are increasingly deciding which businesses get
-                recommended and which ones don&apos;t.
-              </p>
-              <p>And I realized: nobody is doing this. At least not at the local level.</p>
-            </div>
-          </div>
-
-          {/* The Opportunity Nobody Saw */}
-          <div>
-            <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-6">
-              The Opportunity <span className="text-[#a0723a]">Nobody Saw</span>
-            </h2>
-            <div className="space-y-5 text-[#6a5a48] font-poppins leading-relaxed">
-              <p>
-                While national chains and private equity roll-ups are quietly building the
-                infrastructure to dominate AI search at scale — the independent local businesses
-                that built their reputations over decades have no idea the ground is shifting
-                beneath them.
-              </p>
-              <p>That&apos;s when it clicked. This is a business.</p>
-              <p>
-                Not just any business — a chance to take something I genuinely love and turn it
-                into something that actually helps people. Independent business owners who have
-                earned their reputations one customer at a time deserve to know that their local
-                knowledge, their community trust, their years of real experience — that&apos;s
-                exactly the raw material AI systems are learning to reward.
-              </p>
-              <p>They just need someone to help them structure it.</p>
-            </div>
-          </div>
-
-          {/* What We Do */}
-          <div>
-            <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-6">
-              What <span className="text-[#a0723a]">We Do</span>
-            </h2>
-            <div className="space-y-5 text-[#6a5a48] font-poppins leading-relaxed">
-              <p>That&apos;s KodeCite.AI.</p>
-              <p>
-                We build the hidden scaffolding that makes AI choose your business — not your
-                competitor&apos;s. We start with a free AI Scaffolding Audit so you can see
-                exactly where you stand before the rush really begins.
-              </p>
-              <p>
-                If you own a local or regional business and you&apos;ve ever wondered whether AI
-                is going to help you or hurt you — we&apos;d love to talk.
-              </p>
-            </div>
-            <div className="pt-6">
-              <Link href="/contact" className="btn-gold text-sm font-bold px-6 py-3 rounded-md inline-block">
-                Start the Conversation
-              </Link>
-            </div>
-          </div>
-
         </div>
       </section>
 
