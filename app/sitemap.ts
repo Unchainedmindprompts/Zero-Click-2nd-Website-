@@ -110,5 +110,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog/aeo-geo-making-seo-better`,
+      lastModified: new Date('2026-03-08').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/automation-vs-digital-real-estate`,
+      lastModified: new Date('2026-03-10').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 }
