@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
 
   const { error } = await resend.emails.send({
     from: 'KodeCite Contact <onboarding@resend.dev>',
-    to: 'mark@kodecite.ai',
+    to: 'mark@luxewindowworks.com',
     subject: `New contact from ${name} — ${businessName}`,
     text: `Name: ${name}\nBusiness: ${businessName}\nWebsite: ${website || 'Not provided'}\n\nChallenge:\n${challenge}`,
   });
