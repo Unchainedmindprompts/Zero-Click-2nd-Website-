@@ -147,11 +147,11 @@ export default function WhyNowPage() {
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="eyebrow mb-4">WHY NOW</p>
           <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight max-w-4xl">
-            The Land Grab Is{' '}
-            <span className="text-[#a0723a]">Already Underway.</span>
+            The Shift Is{' '}
+            <span className="text-[#a0723a]">Already Here.</span>
           </h1>
           <p className="font-cormorant italic text-2xl md:text-3xl text-[#6a5a48] max-w-3xl leading-relaxed">
-            Most businesses won&apos;t know they&apos;ve lost until the territory is gone.
+            Most businesses don&apos;t see it yet. The ones that do are moving now.
           </p>
         </div>
       </section>
