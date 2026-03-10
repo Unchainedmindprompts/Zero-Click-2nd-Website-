@@ -1,5 +1,7 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   const { name, businessName, website, challenge } = await req.json();
@@ -8,24 +10,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
   }
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_APP_PASSWORD,
-    },
+  const { error } = await resend.emails.send({
+    from: 'KodeCite Contact <onboarding@resend.dev>',
+    to: 'mark@kodecite.ai',
+    subject: `New contact from ${name} — ${businessName}`,
+    text: `Name: ${name}\nBusiness: ${businessName}\nWebsite: ${website || 'Not provided'}\n\nChallenge:\n${challenge}`,
   });
 
-  try {
-    await transporter.sendMail({
-      from: process.env.GMAIL_USER,
-      to: 'mark@kodecite.ai',
-      subject: `New contact from ${name} — ${businessName}`,
-      text: `Name: ${name}\nBusiness: ${businessName}\nWebsite: ${website || 'Not provided'}\n\nChallenge:\n${challenge}`,
-    });
-    return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error('Email error:', error);
+  if (error) {
+    console.error('Resend error:', error);
     return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
   }
+
+  return NextResponse.json({ success: true });
 }
