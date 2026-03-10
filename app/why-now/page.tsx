@@ -205,10 +205,13 @@ export default function WhyNowPage() {
                 Think about what that means. Imagine walking past a business and your pocket AI quietly says: &ldquo;Hey — that&apos;s a great spot for exactly what you need.&rdquo; But only if your business is easy for it to see and trust.
               </p>
               <p>
-                The first device is expected to <strong className="text-[#0a0806]">unveil in late 2026</strong>, with first shipments no earlier than early 2027. Smart glasses and earbuds follow after that.
+                The first device is expected to <strong className="text-[#0a0806]">unveil in late 2026</strong>, with first shipments no earlier than early 2027.
               </p>
               <p>
-                This is funded. Prototyped. Designed. It has a ship date.
+                And think about it — Ray-Ban and Oakley AI glasses are already here. People are wearing them right now. This isn&apos;t the beginning of a maybe. It&apos;s the early chapter of something already in motion.
+              </p>
+              <p>
+                Funded. Prototyped. Designed. With a ship date.
               </p>
             </div>
           </ScrollReveal>
