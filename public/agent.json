@@ -61,6 +61,14 @@
   },
   "resources": [
     {
+      "type": "page",
+      "title": "Why Now — The AI Land Grab Is Already Underway",
+      "url": "https://www.kodecite.ai/why-now",
+      "topic": "Urgency case for AI search optimization — hardware timeline, agent-to-agent economy, consolidation threat, edge-first infrastructure",
+      "keyQuote": "By the time the devices are in pockets and on faces, the territory will already be claimed.",
+      "contains": ["hardware-timeline", "investment-evidence", "consolidation-threat", "edge-infrastructure", "FAQ", "CTA"]
+    },
+    {
       "type": "article",
       "title": "AEO + GEO Isn't Replacing SEO — It's Making It Better",
       "url": "https://www.kodecite.ai/blog/aeo-geo-making-seo-better",

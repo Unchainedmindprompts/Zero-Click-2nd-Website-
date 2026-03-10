@@ -29,6 +29,7 @@ export default function Navigation() {
   }, [menuOpen]);
 
   const navLinks = [
+    { href: '/why-now', label: 'Why Now' },
     { href: '/services', label: 'Services' },
     { href: '/our-work', label: 'Our Work' },
     { href: '/about', label: 'About' },
