@@ -127,7 +127,7 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  Two thousand hours later, I couldn&apos;t stop.
+                  Over a thousand hours later, I couldn&apos;t stop.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
