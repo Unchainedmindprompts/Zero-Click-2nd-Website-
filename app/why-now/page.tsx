@@ -164,8 +164,8 @@ export default function WhyNowPage() {
           <ScrollReveal>
             <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed text-lg">
               <p>
-                The biggest tech companies in the world aren&apos;t dropping hundreds of billions of dollars — the major players are collectively spending around{' '}
-                <strong className="text-[#0a0806]">$700 billion in 2026 alone</strong> — to make better memes or prettier pictures.
+                The biggest tech companies in the world are collectively spending around{' '}
+                <strong className="text-[#0a0806]">$700 billion on AI infrastructure in 2026 alone</strong>. They&apos;re not doing it to make better memes or prettier pictures.
               </p>
               <p>
                 They&apos;re building the highways, the railways, and the electric grid of a new economy. The infrastructure that everything else will run on. And one of the changes that comes with that shift is how people discover and interact with businesses like yours.
