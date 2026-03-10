@@ -5,14 +5,14 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'Why Now | KodeCite.AI — The AI Land Grab Is Already Underway',
   description:
-    "Trillions committed. Hardware shipping. Agents routing around invisible businesses. Here's why the window to claim your AI search territory is open right now — and won't stay open.",
+    "Hundreds of billions committed. Hardware shipping. AI agents routing around invisible businesses. Here's why the window to claim your territory is open right now — and won't stay open.",
   alternates: {
     canonical: 'https://www.kodecite.ai/why-now',
   },
   openGraph: {
     title: 'Why Now — The AI Land Grab Is Already Underway',
     description:
-      "The frontier labs aren't spending trillions to make better memes. They're rebuilding commerce. Here's what that means for your business.",
+      "The biggest companies in the world aren't spending hundreds of billions to make better memes. They're rebuilding how customers find businesses. Here's what that means for yours.",
     url: 'https://www.kodecite.ai/why-now',
     type: 'article',
   },
@@ -23,7 +23,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Why Now — The AI Land Grab Is Already Underway',
   description:
-    "Trillions committed. Hardware shipping. Agents routing around invisible businesses. Here's why the window to claim your AI search territory is open right now.",
+    "Hundreds of billions committed. Hardware shipping. AI agents routing around invisible businesses. Here's why the window to claim your AI search territory is open right now.",
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
@@ -45,6 +45,8 @@ const articleSchema = {
     'Agent-to-Agent Economy',
     'AI Hardware',
     'Local Business Marketing',
+    'llms.txt',
+    'agent.json',
   ],
   mentions: [
     { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
@@ -77,7 +79,7 @@ const faqSchema = {
       name: 'Why do businesses need to optimize for AI search now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI systems including ChatGPT, Perplexity, and Google AI Overviews are already routing hundreds of millions of queries per day. The authority signals these systems use to decide who to recommend are being established now — before AI hardware like the OpenAI/Jony Ive device ships in 2027. Businesses that build machine-readable infrastructure today claim territory before the mainstream wave arrives.',
+        text: 'AI systems including ChatGPT, Perplexity, and Google AI Overviews are already handling hundreds of millions of searches per day. The authority signals these systems use to decide who to recommend are being established now — before AI hardware like the OpenAI/Jony Ive device ships in early 2027. Businesses that build machine-readable infrastructure today claim territory before the mainstream wave arrives.',
       },
     },
     {
@@ -85,23 +87,23 @@ const faqSchema = {
       name: 'What is the OpenAI Jony Ive AI device?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "OpenAI acquired Jony Ive's design studio io for $6.4 billion in 2025 to build a family of AI-native hardware devices. The first is a screenless, pocket-sized device with cameras and microphones that builds contextual awareness of the user's world and routes queries to AI agents. Expected to ship early 2027.",
+        text: "OpenAI acquired Jony Ive's design studio io for $6.4 billion in 2025 to build a family of AI-native hardware devices. The first is a screenless, pocket-sized device with cameras and microphones that builds contextual awareness of the user's world and routes queries to AI agents. Expected to unveil late 2026, first shipments no earlier than early 2027.",
       },
     },
     {
       '@type': 'Question',
-      name: 'What is agent.json and why does it matter?',
+      name: 'What is llms.txt and why does my business need one?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "agent.json is a machine-readable file that tells AI agents what your business does, what it can transact, and how to interact with it. As the agent-to-agent (A2A) economy matures under the Linux Foundation's A2A protocol standard, businesses with agent.json files will be discoverable and transactable by autonomous agents. Adoption is currently under 1% among local businesses.",
+        text: "llms.txt is a plain text file placed at your domain root that acts as a digital ID card for AI systems. It tells every major AI model — ChatGPT, Claude, Gemini, Perplexity — exactly who your business is, what you do, where you're located, and what topics to cite you for. Adoption is currently under 1% among local businesses, making it a significant first-mover opportunity.",
       },
     },
     {
       '@type': 'Question',
-      name: 'What is llms.txt?',
+      name: 'What is agent.json?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'llms.txt is a plain text file placed at your domain root that tells large language models who your business is, what to cite you for, what pages exist, and how to transact with you. Modeled on robots.txt, it functions as a digital identity card written for AI systems rather than humans.',
+        text: 'agent.json is a machine-readable file that tells AI agents what your business offers and how to interact with it — booking, referrals, service queries. As AI helpers become capable of taking actions on behalf of users, this file creates a direct line between your business and the systems making recommendations. Virtually no local businesses have one yet.',
       },
     },
     {
@@ -109,15 +111,15 @@ const faqSchema = {
       name: 'How long does it take to see results from AI search optimization?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Technical wins appear in 30–60 days: schema errors clear, rich results appear, PageSpeed improves. Google entity recognition typically follows in 60–90 days. The AEO and GEO layer compounds over 3–6 months as LLMs begin citing structured entities. Real separation from competitors — AI agent recommendations and compound authority — builds over 6–12 months.',
+        text: 'Technical wins appear in 30–60 days: schema errors clear, rich results appear, page speed improves. AI systems begin recognizing your business as a trusted entity within 60–90 days. The compounding effect — consistent AI recommendations over competitors — builds over 3–6 months and accelerates from there.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is an AI Scaffolding Audit?',
+      name: 'What is a free AI Scaffolding Audit?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "A free assessment of your business's current machine-readability: schema markup health, structured data validation, agent signal presence (llms.txt, agent.json), site speed and edge-readiness, and overall AI citation authority. KodeCite.AI provides this at no cost before any engagement.",
+        text: "A free assessment of what AI systems currently see when they look at your business. KodeCite.AI checks your structured data health, page speed, llms.txt and agent.json presence, and overall AI citation authority — then shows you exactly where you stand compared to competitors in your market. No obligation, takes about 15 minutes.",
       },
     },
   ],
@@ -162,16 +164,14 @@ export default function WhyNowPage() {
           <ScrollReveal>
             <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed text-lg">
               <p>
-                The frontier labs aren&apos;t dropping hundreds of billions — heading toward trillions — to make better memes or pictures.
+                The biggest tech companies in the world aren&apos;t dropping hundreds of billions of dollars — the major players are collectively spending around{' '}
+                <strong className="text-[#0a0806]">$700 billion in 2026 alone</strong> — to make better memes or prettier pictures.
               </p>
               <p>
-                They&apos;re rebuilding commerce. Piece by piece. Layer by layer. And they&apos;re doing it around autonomous agents that discover, negotiate, book, and pay without humans in the loop.
+                They&apos;re rebuilding how customers find businesses. Piece by piece. Layer by layer. And they&apos;re doing it around AI helpers that discover, compare, book, and pay — without a human typing a single search query.
               </p>
               <p>
-                Microsoft committed approximately <strong className="text-[#0a0806]">$80 billion in FY2025 alone</strong> on AI data centers and infrastructure — specifically to accelerate the shift from apps to an agent-to-agent economy.
-              </p>
-              <p>
-                That&apos;s not a bet on a feature. That&apos;s a bet on a new architecture for how business gets done.
+                This isn&apos;t something coming in five years. It&apos;s happening right now, on every phone in every pocket. The hardware just makes it impossible to ignore.
               </p>
             </div>
           </ScrollReveal>
@@ -180,32 +180,35 @@ export default function WhyNowPage() {
 
       <div className="section-divider" />
 
-      {/* OpenAI / Jony Ive Device */}
+      {/* OpenAI / Jony Ive */}
       <section className="py-24 md:py-32 bg-[#f8f5f0] px-4">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow mb-4">THE PROOF POINT</p>
+            <p className="eyebrow mb-4">THE BIG BET: OPENAI&apos;S $6 BILLION MOVE</p>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              OpenAI Just Spent $6.4 Billion on a Pocket-Sized AI Device.{' '}
-              <span className="text-[#a0723a]">Here&apos;s Why It Matters to Your Business.</span>
+              Why Would OpenAI Spend $6.4 Billion on a{' '}
+              <span className="text-[#a0723a]">Pocket-Sized Device?</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
               <p>
-                In 2025, OpenAI acquired Jony Ive&apos;s design studio, io, for $6.4 billion. Their stated mission: build a family of AI-native hardware devices starting with a screenless, pocket-sized, always-aware companion — cameras and microphones on, all the time, building contextual awareness of your world.
+                In 2025, OpenAI — the company behind ChatGPT — paid $6.4 billion to acquire Jony Ive&apos;s design studio. Ive is the designer behind the original iPhone, iPod, and iPad. Their mission: build a family of AI devices starting with something small enough to fit in your pocket, with no screen, always aware of your world through cameras and microphones.
               </p>
               <p>
-                Sam Altman described the device&apos;s intended experience: using today&apos;s phones feels like &ldquo;walking through Times Square with flashing lights and people bumping into you.&rdquo; The new device should feel like &ldquo;sitting in the most beautiful cabin by a lake and in the mountains and just enjoying the peace and calm.&rdquo;
+                Sam Altman, OpenAI&apos;s CEO, described why they&apos;re building it. He said using today&apos;s phones feels like &ldquo;walking through Times Square with flashing lights and people bumping into you.&rdquo; The new device should feel like &ldquo;sitting in the most beautiful cabin by a lake and in the mountains and just enjoying the peace and calm.&rdquo;
               </p>
               <p>
                 He added: <em>&ldquo;You trust it over time, and it does have just this incredible contextual awareness of your whole life.&rdquo;</em>
               </p>
               <p>
-                First device expected to ship: <strong className="text-[#0a0806]">early 2027.</strong> Smart glasses and earbuds follow.
+                Think about what that means. Imagine walking past a business and your pocket AI quietly says: &ldquo;Hey — that&apos;s a great spot for exactly what you need.&rdquo; But only if your business is easy for it to see and trust.
               </p>
               <p>
-                This isn&apos;t science fiction. It&apos;s a funded, prototyped, designed product with a ship date.
+                The first device is expected to <strong className="text-[#0a0806]">unveil in late 2026</strong>, with first shipments no earlier than early 2027. Smart glasses and earbuds follow after that.
+              </p>
+              <p>
+                This is funded. Prototyped. Designed. It has a ship date.
               </p>
             </div>
           </ScrollReveal>
@@ -226,32 +229,32 @@ export default function WhyNowPage() {
 
       <div className="section-divider" />
 
-      {/* What This Means Right Now */}
+      {/* What Happens to Invisible Businesses */}
       <section className="py-24 md:py-32 bg-[#f2ede4] px-4">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow mb-4">WHAT THIS MEANS RIGHT NOW</p>
+            <p className="eyebrow mb-4">WHAT HAPPENS WHEN AI KNOWS YOUR WORLD BETTER THAN YOU DO?</p>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              When a Device Knows Everything About Your World, What Happens to{' '}
-              <span className="text-[#a0723a]">Invisible Businesses?</span>
+              When Someone Asks Their AI for a Recommendation —{' '}
+              <span className="text-[#a0723a]">What Happens to Your Business?</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
               <p>
-                Here&apos;s what those devices will do when someone asks: &ldquo;Find me the best [your service] near me.&rdquo;
+                Here&apos;s the scenario. Someone asks their phone — or soon, their glasses or pocket device: &ldquo;Find me the best [your service] near me.&rdquo;
               </p>
               <p>
-                They&apos;ll query AI systems. Those systems will look for businesses with machine-readable signals — structured data, agent.json files, llms.txt identifiers, edge-fast response times. They&apos;ll evaluate, rank, and recommend in milliseconds. No scroll. No ten blue links. No second page.
+                The AI doesn&apos;t show ten blue links. It picks one or two businesses and says: &ldquo;This one.&rdquo;
               </p>
               <p>
-                Businesses with the right infrastructure get recommended. Businesses without it get skipped.
+                How does it decide? It looks for businesses it can read and trust. Businesses with clean, structured information it can understand — not just a website built for humans to browse, but signals that tell AI systems exactly who you are, what you do, where you are, and why you&apos;re trustworthy.
               </p>
               <p>
-                That decision layer is being built right now — not in 2027 when the hardware ships. The citations, the entity associations, the authority signals AI systems use to make those recommendations? Those are being established today, trained into models today, reinforced by indexed content today.
+                Think of it like having a neon sign vs. a handwritten note in a dark window. Both exist. Only one gets seen.
               </p>
               <p>
-                By the time the devices are in pockets and on faces, the territory will already be claimed.
+                Businesses with the right setup get recommended. Businesses without it get skipped entirely — not penalized, just invisible. And the AI moves on in milliseconds.
               </p>
             </div>
           </ScrollReveal>
@@ -259,11 +262,11 @@ export default function WhyNowPage() {
           {/* Callout Card */}
           <ScrollReveal delay={250}>
             <div className="mt-12 rounded-2xl border-l-4 border-[#1a56db] bg-[#f8f5f0] p-8 shadow-sm">
-              <p className="font-poppins font-semibold text-[#0a0806] text-base mb-3 uppercase tracking-widest text-xs">
-                The Decoupling Has Already Started
+              <p className="font-poppins font-semibold text-[#0a0806] mb-3 uppercase tracking-widest text-xs">
+                This Is Already Happening — Not Just Coming
               </p>
               <p className="font-poppins text-[#6a5a48] leading-relaxed">
-                Traditional search → AI answers and agents. ChatGPT, Perplexity, Grok, Claude, and Google&apos;s AI Overviews are already routing around standard search for hundreds of millions of queries per day. The hardware just accelerates what&apos;s already happening.
+                ChatGPT, Perplexity, Grok, and Google&apos;s AI answers are already handling hundreds of millions of searches per day without showing traditional results. The hardware just accelerates what&apos;s already in motion.
               </p>
             </div>
           </ScrollReveal>
@@ -272,35 +275,35 @@ export default function WhyNowPage() {
 
       <div className="section-divider" />
 
-      {/* Consolidation Threat */}
+      {/* Nationals / Consolidation */}
       <section className="py-24 md:py-32 bg-[#f8f5f0] px-4">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow mb-4">THE CONSOLIDATION THREAT</p>
+            <p className="eyebrow mb-4">BIG CHAINS ARE QUIETLY GETTING AHEAD — HERE&apos;S HOW</p>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              National Chains and PE Roll-Ups Already Know.{' '}
-              <span className="text-[#a0723a]">Do You?</span>
+              The Nationals Already Know.{' '}
+              <span className="text-[#a0723a]">Your Competitors Might Not. Yet.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
               <p>
-                While most independent businesses are focused on running their operations, national chains and private equity roll-ups are quietly building the infrastructure to dominate AI search at scale.
+                While most independent business owners are focused on running their operations — which is exactly what they should be doing — national chains and private equity roll-ups are quietly building the infrastructure to dominate AI recommendations at scale.
               </p>
               <p>
-                They&apos;re migrating to edge stacks. They&apos;re deploying schema markup across thousands of locations simultaneously. They&apos;re building entity authority in AI systems before the mainstream wave arrives.
+                They&apos;re rebuilding their websites on faster platforms. They&apos;re adding machine-readable signals across thousands of locations at once. They&apos;re making themselves easy for AI to find, read, and recommend — before most people even know that&apos;s a thing.
               </p>
               <p>
-                The asymmetry is stark: a PE-backed chain with 200 locations can deploy AI scaffolding across all of them in a week. An independent business owner has to do it one business at a time.
+                Here in Coeur d&apos;Alene, Spokane, and across the Inland Northwest, you&apos;ve built your reputation one neighbor at a time. Real reviews. Real relationships. Real expertise. That&apos;s exactly the raw material AI systems are designed to reward.
               </p>
               <p>
-                But here&apos;s what the nationals can&apos;t replicate: decades of real community trust, authentic local expertise, genuine reviews from real customers, and the kind of E-E-A-T signals — Experience, Expertise, Authoritativeness, Trustworthiness — that AI systems are specifically designed to reward.
+                But only if it&apos;s structured in a way AI can actually read.
               </p>
               <p>
-                That&apos;s your raw material. It&apos;s already there. It just needs to be structured in a language AI can read.
+                A PE-backed chain with 200 locations can deploy this across all of them in a week. You have to do it one business at a time. The good news: you only have to do it once. And the trust you&apos;ve already built? That&apos;s something no national chain can manufacture overnight.
               </p>
               <p>
-                Once the land grab ends — and it ends when mainstream hardware adoption arrives in 2027 — reclaiming territory costs five to ten times more. Some of it won&apos;t be reclaimable at all.
+                Once the rush hits in 2027 and everyone scrambles to catch up, doing this costs significantly more — and in some markets, the best territory will already be gone.
               </p>
             </div>
           </ScrollReveal>
@@ -309,53 +312,44 @@ export default function WhyNowPage() {
 
       <div className="section-divider" />
 
-      {/* Edge-First / Stack */}
+      {/* What We Do (plain language) */}
       <section className="py-24 md:py-32 bg-[#f2ede4] px-4">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow mb-4">THE ONLY LOGICAL RESPONSE</p>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              Edge-First. Agent-Ready.{' '}
-              <span className="text-[#a0723a]">Built Before the Rush.</span>
+            <p className="eyebrow mb-4">THE SIMPLE, SMART WAY TO FIGHT BACK</p>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-4 leading-tight">
+              Fast. Clear.{' '}
+              <span className="text-[#a0723a]">Built So AI Picks You First.</span>
             </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
-              <p>
-                There&apos;s a reason KodeCite.AI builds exclusively on Next.js deployed to Vercel&apos;s edge network. Sub-100ms global response times aren&apos;t a nice-to-have — they&apos;re a requirement for AI agent compatibility. Agents have no patience for slow sites. They move on.
-              </p>
-              <p className="font-semibold text-[#0a0806]">The full stack:</p>
-            </div>
+            <p className="text-[#6a5a48] font-poppins leading-relaxed mb-10">
+              Here&apos;s what we actually do — without the tech jargon.
+            </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={200}>
-            <div className="mt-6 space-y-5">
+          <ScrollReveal delay={150}>
+            <div className="space-y-8">
               {[
                 {
-                  title: 'Edge-speed infrastructure',
-                  body: 'Next.js on Vercel, built for the latency requirements of agentic queries, not 2015 WordPress plugins.',
+                  title: 'We build fast websites from scratch.',
+                  body: 'Not patches on slow, outdated platforms. Modern sites that load instantly anywhere in the world. Why does speed matter? AI helpers won\'t wait for slow pages. Think of it like a shop with a long line out the door versus one that\'s quick and easy — customers and AI both go to the fast one.',
                 },
                 {
-                  title: 'Structured data done right',
-                  body: 'Custom JSON-LD schema on every page: LocalBusiness, Article, FAQPage, BreadcrumbList, Person — validated clean through Google\'s Rich Results Test before anything goes live.',
+                  title: 'We give your business a digital ID card.',
+                  body: 'A simple file that tells every major AI system exactly who you are, what you do, where you\'re located, and why you should be trusted. Most businesses don\'t have one. You will.',
                 },
                 {
-                  title: 'llms.txt',
-                  body: 'Your business\'s digital identity card, written for AI systems, not humans. Tells every major model who you are, what you do, what to cite you for, and how to transact with you.',
+                  title: 'We tell AI agents how to work with your business.',
+                  body: 'A behind-the-scenes file that lets AI helpers understand your services and send customers your way — automatically, without anyone typing a search. Think of it as your business having a direct line to the AI systems making recommendations.',
                 },
                 {
-                  title: 'agent.json',
-                  body: 'The A2A protocol layer. As the agent-to-agent economy matures under the Linux Foundation\'s A2A standard, your business already has a machine-readable capability manifest. Your competitors almost certainly don\'t.',
-                },
-                {
-                  title: 'Content architecture',
-                  body: 'Self-contained, extractable sections written for citation. When an AI system is deciding who to reference, your content is already formatted for the answer.',
+                  title: 'We structure your content so AI cites you.',
+                  body: 'Every page, every article, every FAQ — formatted so that when an AI is deciding who to reference as the local expert, your content is already in the right shape to be chosen.',
                 },
               ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start">
-                  <div className="mt-1.5 w-2 h-2 rounded-full bg-[#1a56db] flex-shrink-0" />
+                <div key={i} className="flex gap-5 items-start">
+                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-[#1a56db] flex-shrink-0" />
                   <p className="text-[#6a5a48] font-poppins leading-relaxed">
-                    <span className="font-semibold text-[#0a0806]">{item.title} — </span>
+                    <span className="font-semibold text-[#0a0806]">{item.title} </span>
                     {item.body}
                   </p>
                 </div>
@@ -363,9 +357,9 @@ export default function WhyNowPage() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={300}>
+          <ScrollReveal delay={250}>
             <p className="mt-10 text-[#6a5a48] font-poppins leading-relaxed">
-              This isn&apos;t about gaming an algorithm. It&apos;s about building the infrastructure that the next era of commerce requires — and building it now, while the cost is low and the territory is still open.
+              This isn&apos;t about gaming anything. It&apos;s about making sure your real expertise and community trust are visible to the systems that are increasingly deciding who gets the call.
             </p>
           </ScrollReveal>
         </div>
@@ -377,28 +371,28 @@ export default function WhyNowPage() {
       <section className="py-24 md:py-32 bg-[#f8f5f0] px-4">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow mb-4">THE TIMELINE</p>
+            <p className="eyebrow mb-4">WHEN IS THIS REALLY HITTING? (SPOILER: THE SETUP STARTS NOW)</p>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              Nobody Knows Exactly When.{' '}
+              Nobody Knows the Exact Date.{' '}
               <span className="text-[#a0723a]">Everybody Knows It&apos;s Coming.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
               <p>
-                Twelve months? Twenty-four? Thirty-six before full mainstream adoption?
+                Will it be twelve months before this reshapes your market? Twenty-four? The honest answer is that hardware timelines have variables — manufacturing, regulations, consumer adoption.
               </p>
               <p>
-                The honest answer: the hardware timeline has variables. Regulatory approvals, manufacturing scale, consumer adoption curves — these things slip.
+                But here&apos;s what doesn&apos;t have variables: the AI systems are live right now. ChatGPT has over <strong className="text-[#0a0806]">300 million weekly users</strong>. Google&apos;s AI answers appear on over a <strong className="text-[#0a0806]">billion searches every day</strong>. Perplexity is growing fast. The recommendations those systems are making today are being shaped by the signals businesses have already put in place.
               </p>
               <p>
-                But the infrastructure timeline doesn&apos;t slip. The AI systems are already live. The agents are already routing. ChatGPT has over 300 million weekly users. Perplexity is processing hundreds of millions of queries. Google&apos;s AI Overviews are appearing on over a billion searches per day.
+                You have time — if you start soon. The setup that makes you visible to AI happens now, before the devices ship and before everyone rushes to do what you&apos;ve already done.
               </p>
               <p>
-                The wearables accelerate a trend that&apos;s already in motion. Every day without the right signals is a day your competitors have a chance to establish the authority you could have claimed first.
+                Waiting until these gadgets are everywhere means higher costs, tougher competition, and markets where the best positions are already taken.
               </p>
               <p>
-                The only real questions are: who builds it, when, and whether you&apos;re first in your market or playing catch-up.
+                The businesses that move in the next 6–12 months are the ones that own their category when the wave fully arrives.
               </p>
             </div>
           </ScrollReveal>
@@ -411,35 +405,36 @@ export default function WhyNowPage() {
       <section className="py-24 bg-[#f2ede4] px-4">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
+            <p className="eyebrow mb-4">QUICK ANSWERS TO COMMON QUESTIONS</p>
             <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-10">
-              Common Questions
+              Things People Ask Us All the Time
             </h2>
           </ScrollReveal>
           <div className="space-y-8">
             {[
               {
-                q: 'Why do businesses need to optimize for AI search now?',
-                a: 'AI systems including ChatGPT, Perplexity, and Google AI Overviews are already routing hundreds of millions of queries per day. The authority signals these systems use to decide who to recommend are being established now — before AI hardware like the OpenAI device ships in 2027. Businesses that build machine-readable infrastructure today claim territory before the mainstream wave arrives.',
+                q: "I'm not very technical. Is this something I can actually understand?",
+                a: "Yes — and that's the whole point. You don't need to understand how any of this works under the hood. You need to understand that your competitors are either already doing it or don't know it exists yet. We handle every technical piece. You just need to decide whether you want to be early or late.",
               },
               {
-                q: 'What is the OpenAI / Jony Ive AI device?',
-                a: "OpenAI acquired Jony Ive's design studio io for $6.4 billion in 2025 to build a family of AI-native hardware devices. The first is a screenless, pocket-sized device with cameras and microphones that builds contextual awareness of the user's world and routes queries to AI agents. Expected to ship early 2027.",
+                q: 'How is this different from regular SEO?',
+                a: "Traditional SEO gets you in front of people who are already searching on Google. AI search optimization gets you recommended by AI systems before someone even thinks to search — and soon, by devices that are proactively surfacing businesses in real-time based on context. They work together, but AI optimization is the newer, less crowded layer.",
               },
               {
-                q: 'What is agent.json and why does it matter?',
-                a: "agent.json is a machine-readable file that tells AI agents what your business does, what it can transact, and how to interact with it. As the A2A economy matures under the Linux Foundation's A2A protocol standard, businesses with agent.json files will be discoverable and transactable by autonomous agents. Adoption is currently under 1% among local businesses.",
+                q: 'What exactly is a "digital ID card" for my business?',
+                a: 'It\'s a simple file that lives on your website called llms.txt. It tells every major AI model — ChatGPT, Claude, Gemini, Perplexity — exactly who you are, what you do, where you\'re located, what topics to cite you for, and how to send customers to you. Think of it like your business\'s entry in an AI-readable directory. Most businesses don\'t have one. Adoption is currently under 1% among local businesses.',
               },
               {
-                q: 'What is llms.txt?',
-                a: 'llms.txt is a plain text file placed at your domain root that tells large language models who your business is, what to cite you for, what pages exist, and how to transact with you. Modeled on robots.txt, it functions as a digital identity card written for AI systems rather than humans.',
+                q: 'What\'s the "AI agent" file you mentioned?',
+                a: "It's called agent.json. As AI helpers become more capable of taking actions — booking appointments, comparing services, routing referrals — this file tells them what your business offers and how to interact with it. It's like setting up a direct line between your business and the AI systems that will be making recommendations. It doesn't exist yet at most businesses.",
               },
               {
-                q: 'How long does it take to see results?',
-                a: 'Technical wins appear in 30–60 days: schema errors clear, rich results appear, PageSpeed improves. Google entity recognition typically follows in 60–90 days. The AEO and GEO layer compounds over 3–6 months as LLMs begin citing structured entities. Real separation from competitors builds over 6–12 months.',
+                q: 'How long before I see results?',
+                a: 'Technical wins show up in 30–60 days — your business starts appearing in rich results, schema errors clear, page speed improves. AI systems start recognizing your business as a trusted entity within 60–90 days. The compounding effect — where AI consistently recommends you over competitors — builds over 3–6 months and accelerates from there.',
               },
               {
-                q: 'What is an AI Scaffolding Audit?',
-                a: "A free assessment of your business's current machine-readability: schema markup health, structured data validation, agent signal presence (llms.txt, agent.json), site speed and edge-readiness, and overall AI citation authority. KodeCite.AI provides this at no cost before any engagement.",
+                q: "What's the free audit?",
+                a: "A straightforward look at what AI systems currently see when they look at your business. We check your structured data, your page speed, whether you have the right signals in place, and how you compare to competitors in your market. No sales pressure. Just an honest picture of where you stand today. Takes about 15 minutes on our end.",
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 80}>
@@ -466,11 +461,10 @@ export default function WhyNowPage() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="text-[rgba(240,232,216,0.7)] font-poppins leading-relaxed text-lg mb-4">
-              Independent businesses like yours built real trust the hard way — one customer, one job, one year at a time. Don&apos;t let it become invisible to the systems deciding tomorrow&apos;s customers.
-            </p>
-            <p className="text-[rgba(240,232,216,0.7)] font-poppins leading-relaxed mb-10">
-              We start every engagement with a free AI Scaffolding Audit. No sales pitch. No obligation. Just an honest look at your current machine-readability, your schema health, your agent signals, and what it would take to make your business the obvious AI recommendation in your market.
+            <p className="text-[rgba(240,232,216,0.7)] font-poppins leading-relaxed text-lg mb-10">
+              You&apos;ve built real trust the hard way — one customer, one job, one year at a time. Don&apos;t let it become invisible to the systems deciding tomorrow&apos;s recommendations.
+              <br /><br />
+              We start every conversation with a free AI Scaffolding Audit. No obligation. No pitch. Just an honest look at your current visibility to AI systems and what it would take to make you the obvious recommendation in your market.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={250}>
