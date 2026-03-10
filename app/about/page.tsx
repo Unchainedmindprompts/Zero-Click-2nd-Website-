@@ -112,7 +112,7 @@ export default function AboutPage() {
             <ScrollReveal delay={200}>
               <div className="space-y-8">
                 <h2 className="font-playfair font-bold text-3xl text-[#0a0806]">
-                  Two Thousand Hours Later,{' '}
+                  Over A Thousand Hours Later,{' '}
                   <span className="text-[#a0723a]">I Couldn&apos;t Stop.</span>
                 </h2>
 
