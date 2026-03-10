@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'how-to-rank-in-google-ai-overviews-for-local-businesses',
+    category: 'AEO & AI Search',
+    title: 'How to Rank in Google AI Overviews for Local Businesses',
+    excerpt:
+      "Google's AI is answering your customers' questions before they reach your website. Most local businesses are invisible to it. Here's exactly how to fix that — schema, content, consistency, and E-E-A-T explained.",
+    date: 'March 10, 2026',
+    readTime: '10 min read',
+  },
+  {
     slug: 'automation-vs-digital-real-estate',
     category: 'AI Strategy',
     title: 'Why Automating Everything Is Failing Most Businesses — And Why Owning Your Digital Real Estate Is the Smarter Play in 2026',
