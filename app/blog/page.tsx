@@ -4,9 +4,18 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const categories = ['All', 'AEO & AI Search', 'AEO & AI Visibility', 'AI Search Strategy', 'Search Strategy', 'Website Performance', 'Facebook Ads'];
+const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibility', 'AI Search Strategy', 'Search Strategy', 'Website Performance', 'Facebook Ads'];
 
 const blogPosts = [
+  {
+    slug: 'automation-vs-digital-real-estate',
+    category: 'AI Strategy',
+    title: 'Why Automating Everything Is Failing Most Businesses — And Why Owning Your Digital Real Estate Is the Smarter Play in 2026',
+    excerpt:
+      "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first.",
+    date: 'March 10, 2026',
+    readTime: '10 min read',
+  },
   {
     slug: 'aeo-geo-making-seo-better',
     category: 'Search Strategy',
