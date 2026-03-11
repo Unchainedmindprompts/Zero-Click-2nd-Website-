@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Your business is showing up in AI answers — but is it earned authority or borrowed time? Here's the truth about the False Legacy Layer and what it means for your market position.",
   alternates: {
-    canonical: 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
+    canonical: 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
   },
   openGraph: {
     title: 'The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow',
     description:
       "Your business is showing up in AI answers — but is it earned authority or borrowed time? Here's the truth about the False Legacy Layer and what it means for your market position.",
-    url: 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
+    url: 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
     type: 'article',
     publishedTime: '2026-03-07',
     authors: ['Mark Abplanalp'],
@@ -29,24 +29,24 @@ const blogPostingSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.kodecite.ai/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://www.kodecite.ai',
+    url: 'https://kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
   datePublished: '2026-03-07',
   dateModified: '2026-03-07',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
+    '@id': 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
   },
-  url: 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
+  url: 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
   keywords: [
     'False Legacy Layer',
     'AI visibility',
@@ -129,9 +129,9 @@ const professionalServiceSchema = {
   name: 'KodeCite.AI',
   description:
     'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
-  url: 'https://www.kodecite.ai',
-  logo: 'https://www.kodecite.ai/logo.png',
-  image: 'https://www.kodecite.ai/og-image.png',
+  url: 'https://kodecite.ai',
+  logo: 'https://kodecite.ai/logo.png',
+  image: 'https://kodecite.ai/og-image.png',
   email: 'sales@kodecite.ai',
   address: {
     '@type': 'PostalAddress',
@@ -512,14 +512,14 @@ export default function FalseLegacyLayer() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  <Link href="https://www.kodecite.ai" className="text-[#1a56db] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
+                  <Link href="https://kodecite.ai" className="text-[#1a56db] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
                   Get your{' '}
                   <Link href="/contact" className="text-[#1a56db] hover:underline">free AEO Audit</Link>{' '}
                   at{' '}
-                  <Link href="https://www.kodecite.ai" className="text-[#1a56db] hover:underline">KodeCite.ai</Link>.
+                  <Link href="https://kodecite.ai" className="text-[#1a56db] hover:underline">KodeCite.ai</Link>.
                   Find out how close you are to losing — or locking in — your position.
                 </p>
 

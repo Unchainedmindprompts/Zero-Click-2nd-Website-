@@ -122,5 +122,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blog/false-legacy-layer-ai-visibility`,
+      lastModified: new Date('2026-03-07').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-rank-in-google-ai-overviews-for-local-businesses`,
+      lastModified: new Date('2026-03-10').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/inw-basecamp-arizona-launch`,
+      lastModified: new Date('2026-03-01').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/why-is-my-website-traffic-dropping-2026`,
+      lastModified: new Date('2026-03-11').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 }

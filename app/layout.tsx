@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     title: 'KodeCite.AI — AI Search Optimization',
     description:
       '60% of searches end without a click. AI answers the question and your competitor gets the credit. We make sure the machine chooses you.',
-    url: 'https://www.kodecite.ai',
+    url: 'https://kodecite.ai',
     siteName: 'KodeCite.AI',
     images: [
       {
-        url: 'https://www.kodecite.ai/og-image.png',
+        url: 'https://kodecite.ai/og-image.png',
         width: 1200,
         height: 630,
         alt: 'KodeCite.AI — AI Search Optimization',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: 'KodeCite.AI — AI Search Optimization',
     description:
       '60% of searches end without a click. We make sure AI chooses you.',
-    images: ['https://www.kodecite.ai/og-image.png'],
+    images: ['https://kodecite.ai/og-image.png'],
   },
   robots: {
     index: true,
