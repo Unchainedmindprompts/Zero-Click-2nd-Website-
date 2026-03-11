@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     'Over a thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI and why we exist to help local businesses compete in the AI age.',
   alternates: {
-    canonical: 'https://www.kodecite.ai/about',
+    canonical: 'https://kodecite.ai/about',
   },
   openGraph: {
     title: 'About KodeCite.AI — Why We Built This',
     description:
       'Over a thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI.',
-    url: 'https://www.kodecite.ai/about',
+    url: 'https://kodecite.ai/about',
     type: 'website',
   },
 };
@@ -23,8 +23,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.kodecite.ai/about' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://kodecite.ai/about' },
   ],
 };
 
@@ -36,7 +36,7 @@ const personSchema = {
   worksFor: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://www.kodecite.ai',
+    url: 'https://kodecite.ai',
   },
   address: {
     '@type': 'PostalAddress',

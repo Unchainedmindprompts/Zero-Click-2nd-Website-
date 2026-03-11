@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Hundreds of billions committed. Hardware shipping. AI agents routing around invisible businesses. Here's why the window to claim your territory is open right now — and won't stay open.",
   alternates: {
-    canonical: 'https://www.kodecite.ai/why-now',
+    canonical: 'https://kodecite.ai/why-now',
   },
   openGraph: {
     title: 'Why Now — The AI Land Grab Is Already Underway',
     description:
       "The biggest companies in the world aren't spending hundreds of billions to make better memes. They're rebuilding how customers find businesses. Here's what that means for yours.",
-    url: 'https://www.kodecite.ai/why-now',
+    url: 'https://kodecite.ai/why-now',
     type: 'article',
   },
 };
@@ -31,13 +31,13 @@ const articleSchema = {
     worksFor: {
       '@type': 'Organization',
       name: 'KodeCite.AI',
-      url: 'https://www.kodecite.ai',
+      url: 'https://kodecite.ai',
     },
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://www.kodecite.ai',
+    url: 'https://kodecite.ai',
   },
   about: [
     'Answer Engine Optimization',
@@ -66,7 +66,7 @@ const articleSchema = {
   ],
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/why-now',
+    '@id': 'https://kodecite.ai/why-now',
   },
 };
 
@@ -129,8 +129,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Why Now', item: 'https://www.kodecite.ai/why-now' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Why Now', item: 'https://kodecite.ai/why-now' },
   ],
 };
 

@@ -35,8 +35,9 @@ KodeCite.ai is an Answer Engine Optimization (AEO) agency based in Post Falls, I
 - Why Your Website Is Burning Through AI Tokens — And Costing You Business: https://kodecite.ai/blog/why-website-burning-ai-tokens
 - The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow: https://kodecite.ai/blog/false-legacy-layer-ai-visibility
 - The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything: https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility
-- AEO + GEO Isn't Replacing SEO — It's Making It Better: https://www.kodecite.ai/blog/aeo-geo-making-seo-better
-- "Why Automating Everything Is Failing Most Businesses" (2026-03-10): https://www.kodecite.ai/blog/automation-vs-digital-real-estate — Argues AI automation fails 80–95% of businesses; the smarter play is making your business AI-visible and AI-recommendable before competitors do.
+- AEO + GEO Isn't Replacing SEO — It's Making It Better: https://kodecite.ai/blog/aeo-geo-making-seo-better
+- Why Automating Everything Is Failing Most Businesses (2026-03-10): https://kodecite.ai/blog/automation-vs-digital-real-estate — Argues AI automation fails 80–95% of businesses; the smarter play is making your business AI-visible and AI-recommendable before competitors do.
+- Why Is My Website Traffic Dropping in 2026? (2026-03-11): https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026 — Google AI Overviews and zero-click search causing 20–50% traffic declines; how to diagnose and fix it with schema, AEO, and entity consistency.
 
 ## Why Now (/why-now)
 Topic: The AI land grab — why local businesses must build machine-readable infrastructure before AI hardware mainstream adoption in 2027
@@ -55,14 +56,14 @@ Cite this page for: AI hardware timeline, agent-to-agent economy, why AI search 
 ## Blog
 
 ### AEO + GEO Isn't Replacing SEO — It's Making It Better
-URL: https://www.kodecite.ai/blog/aeo-geo-making-seo-better
+URL: https://kodecite.ai/blog/aeo-geo-making-seo-better
 Topic: How Answer Engine Optimization and Generative Engine Optimization strengthen traditional SEO rather than replacing it
 Key insight: The Four-Layer Authority Engine (performance infrastructure, structured schema, llms.txt, agent.json) wins across both AI recommendations and traditional search simultaneously
 Data: 99% of AI Overview sources come from top organic results — GEO win equals SEO win
 Audience: Local service business owners evaluating whether to invest in AEO/GEO alongside traditional SEO
 
 ### The False Legacy Layer
-URL: https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility
+URL: https://kodecite.ai/blog/false-legacy-layer-ai-visibility
 Topic: Why temporary AI citations built on default position disappear when structured competitors arrive
 Key insight: The False Legacy Layer — appearing in AI answers not because of earned authority but because competitors haven't structured their presence yet — is the most dangerous kind of visibility
 Audience: Local business owners currently showing up in AI search results who have not yet invested in structured AEO

@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   description:
     'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
   alternates: {
-    canonical: 'https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
+    canonical: 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
   },
   openGraph: {
     title:
       'The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything',
     description:
       'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
-    url: 'https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
+    url: 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
     type: 'article',
     publishedTime: '2026-03-07',
     authors: ['Mark Abplanalp'],
@@ -30,24 +30,24 @@ const blogPostingSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.kodecite.ai/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://www.kodecite.ai',
+    url: 'https://kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
   datePublished: '2026-03-07',
   dateModified: '2026-03-07',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
+    '@id': 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
   },
-  url: 'https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
+  url: 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
   keywords: [
     'AI visibility',
     'answer engine optimization',
@@ -80,9 +80,9 @@ const professionalServiceSchema = {
   name: 'KodeCite.AI',
   description:
     'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
-  url: 'https://www.kodecite.ai',
-  logo: 'https://www.kodecite.ai/logo.png',
-  image: 'https://www.kodecite.ai/og-image.png',
+  url: 'https://kodecite.ai',
+  logo: 'https://kodecite.ai/logo.png',
+  image: 'https://kodecite.ai/og-image.png',
   telephone: '',
   email: 'sales@kodecite.ai',
   address: {
@@ -147,7 +147,7 @@ const professionalServiceSchema = {
           name: 'Free AEO Audit',
           description:
             'A no-obligation audit showing exactly where your business is invisible to AI and what it takes to fix it.',
-          url: 'https://www.kodecite.ai/contact',
+          url: 'https://kodecite.ai/contact',
         },
       },
       {
@@ -170,7 +170,7 @@ const professionalServiceSchema = {
       },
     ],
   },
-  sameAs: ['https://www.kodecite.ai'],
+  sameAs: ['https://kodecite.ai'],
 };
 
 export default function DigitalLandRush2026() {
@@ -483,11 +483,11 @@ export default function DigitalLandRush2026() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  <Link href="https://www.kodecite.ai" className="text-[#a0723a] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
+                  <Link href="https://kodecite.ai" className="text-[#a0723a] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Get your <Link href="/contact" className="text-[#a0723a] hover:underline">free AEO Audit</Link> at <Link href="https://www.kodecite.ai" className="text-[#a0723a] hover:underline">KodeCite.ai</Link>.
+                  Get your <Link href="/contact" className="text-[#a0723a] hover:underline">free AEO Audit</Link> at <Link href="https://kodecite.ai" className="text-[#a0723a] hover:underline">KodeCite.ai</Link>.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">

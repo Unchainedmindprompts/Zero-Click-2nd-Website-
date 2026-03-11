@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
   alternates: {
-    canonical: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
+    canonical: 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
   },
   openGraph: {
     title: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
     description:
       'When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct.',
-    url: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
+    url: 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
     type: 'article',
     publishedTime: '2026-03-08',
     authors: ['Mark Abplanalp'],
@@ -29,24 +29,24 @@ const blogPostingSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://www.kodecite.ai/about',
+    url: 'https://kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://www.kodecite.ai',
+    url: 'https://kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/logo.png',
+      url: 'https://kodecite.ai/logo.png',
     },
   },
   datePublished: '2026-03-08',
   dateModified: '2026-03-08',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
+    '@id': 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
   },
-  url: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
+  url: 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
   keywords: [
     'AEO',
     'GEO',
@@ -150,9 +150,9 @@ const professionalServiceSchema = {
   name: 'KodeCite.AI',
   description:
     'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
-  url: 'https://www.kodecite.ai',
-  logo: 'https://www.kodecite.ai/logo.png',
-  image: 'https://www.kodecite.ai/og-image.png',
+  url: 'https://kodecite.ai',
+  logo: 'https://kodecite.ai/logo.png',
+  image: 'https://kodecite.ai/og-image.png',
   email: 'sales@kodecite.ai',
   address: {
     '@type': 'PostalAddress',
@@ -605,7 +605,7 @@ export default function AeoGeoMakingSEOBetter() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  <Link href="https://www.kodecite.ai" className="text-[#1a56db] hover:underline">KodeCite.ai</Link> builds the complete infrastructure — high-performance Next.js sites, zero-error schema, <Link href="/services" className="text-[#1a56db] hover:underline">llms.txt</Link> and <Link href="/services" className="text-[#1a56db] hover:underline">agent.json</Link> — so local businesses become the trusted default for both AI recommendations and traditional search simultaneously.
+                  <Link href="https://kodecite.ai" className="text-[#1a56db] hover:underline">KodeCite.ai</Link> builds the complete infrastructure — high-performance Next.js sites, zero-error schema, <Link href="/services" className="text-[#1a56db] hover:underline">llms.txt</Link> and <Link href="/services" className="text-[#1a56db] hover:underline">agent.json</Link> — so local businesses become the trusted default for both AI recommendations and traditional search simultaneously.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
