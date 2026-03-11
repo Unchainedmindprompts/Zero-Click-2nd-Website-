@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'why-is-my-website-traffic-dropping-2026',
+    category: 'AEO & AI Search',
+    title: 'Why Is My Website Traffic Dropping in 2026?',
+    excerpt:
+      "Your rankings are fine. Your traffic is falling. Google AI Overviews and zero-click search are causing 20–50% traffic declines for businesses — even when nothing has changed on your end. Here's what's happening and how to fix it.",
+    date: 'March 11, 2026',
+    readTime: '9 min read',
+  },
+  {
     slug: 'how-to-rank-in-google-ai-overviews-for-local-businesses',
     category: 'AEO & AI Search',
     title: 'How to Rank in Google AI Overviews for Local Businesses',
