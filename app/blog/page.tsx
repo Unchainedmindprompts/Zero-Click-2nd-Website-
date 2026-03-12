@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'is-geo-a-replacement-for-seo-or-an-addition',
+    category: 'Search Strategy',
+    title: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',
+    excerpt:
+      "GEO doesn't replace SEO — it builds on top of it. Here's exactly how Generative Engine Optimization works alongside your existing SEO foundation and what you need to add to start appearing in AI-generated answers.",
+    date: 'March 12, 2026',
+    readTime: '11 min read',
+  },
+  {
     slug: 'why-is-my-website-traffic-dropping-2026',
     category: 'AEO & AI Search',
     title: 'Why Is My Website Traffic Dropping in 2026?',
