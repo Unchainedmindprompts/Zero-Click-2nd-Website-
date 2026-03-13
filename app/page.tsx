@@ -257,7 +257,16 @@ export default function HomePage() {
               { number: 'Custom', label: 'Schema markup built per page, per article — never copy-pasted site-wide', delay: 300 },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={stat.delay}>
-                <div className="stat-block">
+                <div style={{
+                  textAlign: 'center',
+                  padding: '2.5rem 2rem',
+                  background: '#ffffff',
+                  border: '1.5px solid rgba(160,114,58,0.35)',
+                  borderRadius: '1rem',
+                  borderTop: '3px solid #a0723a',
+                  transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+                  boxShadow: '0 2px 12px rgba(160,114,58,0.08)',
+                }}>
                   <p className="font-playfair font-bold" style={{ fontSize: 'clamp(40px, 6vw, 64px)', lineHeight: 1, color: '#a0723a' }}>{stat.number}</p>
                   <p className="font-poppins text-sm mt-3 uppercase tracking-wider font-semibold" style={{ color: '#6a5a48' }}>{stat.label}</p>
                 </div>
