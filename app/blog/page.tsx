@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'the-ai-search-stack-nobody-is-building-for-small-businesses',
+    category: 'AEO & AI Search',
+    title: 'The AI Search Stack Nobody Is Building for Small Businesses — And Why That\'s About to Change',
+    excerpt:
+      "Enterprise SEO is built for enterprises. Subscription platforms are built for volume. Neither one gets you recommended by AI. Here's the gap in the market — and what fills it.",
+    date: 'March 13, 2026',
+    readTime: '12 min read',
+  },
+  {
     slug: 'is-geo-a-replacement-for-seo-or-an-addition',
     category: 'Search Strategy',
     title: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',
