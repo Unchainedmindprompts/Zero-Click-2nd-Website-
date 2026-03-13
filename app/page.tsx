@@ -152,7 +152,7 @@ export default function HomePage() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
               The market has two options for AI search visibility. Neither one was built for you.
             </p>
           </ScrollReveal>
@@ -166,10 +166,10 @@ export default function HomePage() {
                 <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools. Built for Fortune 500 marketing departments with dedicated teams and $3,000–$10,000+ monthly budgets. They optimize existing infrastructure — they don&apos;t build it. If your foundation is slow, bloated, and AI-invisible, adding enterprise reporting tools on top doesn&apos;t fix the foundation. It just gives you better visibility into a problem you still can&apos;t solve.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies. Real estate website builders. Monthly SaaS site tools. They promise simplicity. What they deliver is shared infrastructure that typically loads in 3 to 8 seconds on mobile — four times slower than the threshold AI crawlers require to index your content completely. Retrofitting a slow, bloated subscription site for AI discoverability is like installing a jet engine in a station wagon.
+                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies. Real estate website builders. Monthly SaaS site tools. They promise simplicity. What they deliver is shared infrastructure with real-device load times of 3 to 8 seconds on mobile — while our builds deliver the same pages in under a second on a modern iPhone on WiFi or 5G. That&apos;s not a benchmark number. That&apos;s what your visitors and AI crawlers actually experience. Retrofitting a slow, bloated subscription site for AI discoverability is like installing a jet engine in a station wagon. The engine doesn&apos;t fit. The frame wasn&apos;t built for it.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                In between these two options sits the overwhelming majority of small and mid-sized businesses — the local attorney, the independent financial advisor, the real estate agent building their own brand — with no purpose-built solution designed for how AI actually works.
+                In between these two options sits the overwhelming majority of small and mid-sized businesses — the local attorney, the independent financial advisor, the real estate agent building their own brand — with no purpose-built solution designed for how AI actually works. Not one that starts from the foundation up. Not one that owns and compounds instead of renting and churning. Not until now.
               </p>
             </div>
           </ScrollReveal>
@@ -227,7 +227,7 @@ export default function HomePage() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
               We&apos;re not optimizing your current site. We&apos;re building the thing that should have existed all along.
             </p>
           </ScrollReveal>
@@ -238,10 +238,10 @@ export default function HomePage() {
                 A site built from the ground up for AI discoverability looks fundamentally different from anything in either tier above.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                It starts with edge infrastructure — Next.js deployed across a global CDN so your content reaches any user or AI crawler in milliseconds, not seconds. It layers in answer-first content architecture that AI systems can extract and cite. It adds custom schema markup — not copy-pasted templates, but per-page JSON-LD that encodes your expertise, location, and authority as machine-readable facts. And it builds the SEO foundation that everything else depends on before adding a single layer of AEO or GEO on top.
+                It starts with edge infrastructure — Next.js deployed across a global CDN so your content reaches any user or AI crawler in under a second on a real device. Not a simulated stress test. Not a lab benchmark. Actual load time on a 2026 iPhone on WiFi or 5G — 66% faster than the average WordPress site in real-user conditions. It layers in answer-first content architecture that AI systems can extract and cite. It adds custom schema markup — not copy-pasted templates, but per-page JSON-LD that encodes your expertise, location, and authority as machine-readable facts. And it builds the SEO foundation that everything else depends on before adding a single layer of AEO or GEO on top.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                Enterprise tools assume that foundation exists. Subscription platforms can&apos;t build it. We start there — and we don&apos;t move on until it&apos;s right.
+                Enterprise tools assume that foundation exists. Subscription platforms can&apos;t build it — and even if they could, you&apos;d never own it. We start at the foundation, we build it right, and when it&apos;s done it&apos;s yours. No monthly rent. No platform risk. No churn.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
                 <strong style={{ color: '#0a0806' }}>The result:</strong> a site AI systems don&apos;t just crawl. They trust, cite, and recommend.
@@ -252,9 +252,9 @@ export default function HomePage() {
           {/* Stat callout row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
             {[
-              { number: 'Sub-1s', label: 'Edge load time vs. 3–8s on subscription platforms', delay: 0 },
-              { number: '90–100', label: 'PageSpeed score on every build, guaranteed', delay: 150 },
-              { number: 'Custom', label: 'Schema markup built per page, not copy-pasted site-wide', delay: 300 },
+              { number: 'Sub-1s', label: 'Real-device load time on modern iPhone — vs. 3–8s on subscription platforms', delay: 0 },
+              { number: '90–100', label: 'Lighthouse desktop score on every build. Mobile scores in the 80s–90s — because Lighthouse mobile simulates a 2018 device on throttled 4G. Real users are on 5G.', delay: 150 },
+              { number: 'Custom', label: 'Schema markup built per page, per article — never copy-pasted site-wide', delay: 300 },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={stat.delay}>
                 <div className="stat-block">
