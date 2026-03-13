@@ -281,7 +281,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-[rgba(240,232,216,0.6)] text-xs font-poppins mt-5 pt-4 border-t border-[rgba(240,232,216,0.08)] italic">
+                  <p className="text-[rgba(240,232,216,0.80)] text-xs font-poppins mt-5 pt-4 border-t border-[rgba(240,232,216,0.08)] italic">
                     Our Next.js + Edge stack isn&apos;t an expense — it&apos;s a high-performance lead generation engine.
                   </p>
                 </div>
@@ -399,15 +399,15 @@ export default function ServicesPage() {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-[rgba(240,232,216,0.1)]">
-                    <th className="font-poppins font-semibold text-[rgba(240,232,216,0.6)] text-sm py-4 pr-6 min-w-[200px]">
+                    <th className="font-poppins font-semibold text-[rgba(240,232,216,0.82)] text-sm py-4 pr-6 min-w-[200px]">
                       Metric
                     </th>
-                    <th className="font-poppins font-semibold text-[rgba(240,232,216,0.6)] text-sm py-4 pr-6 min-w-[160px]">
+                    <th className="font-poppins font-semibold text-[rgba(240,232,216,0.82)] text-sm py-4 pr-6 min-w-[160px]">
                       Traditional Search
                     </th>
                     <th className="font-poppins font-semibold text-[#a0723a] text-sm py-4 min-w-[220px]">
                       AI Citation
-                      <span className="block text-xs font-normal text-[rgba(240,232,216,0.5)] mt-0.5">
+                      <span className="block text-xs font-normal text-[rgba(240,232,216,0.72)] mt-0.5">
                         KodeCite Stack
                       </span>
                     </th>
@@ -423,7 +423,7 @@ export default function ServicesPage() {
                   ].map((row, i) => (
                     <tr key={i} className="border-b border-[rgba(240,232,216,0.06)] hover:bg-[rgba(160,114,58,0.05)] transition-colors">
                       <td className="font-poppins text-[rgba(240,232,216,0.85)] font-medium text-sm py-4 pr-6">{row.metric}</td>
-                      <td className="font-poppins text-[rgba(240,232,216,0.5)] text-sm py-4 pr-6">{row.traditional}</td>
+                      <td className="font-poppins text-[rgba(240,232,216,0.72)] text-sm py-4 pr-6">{row.traditional}</td>
                       <td className="font-poppins text-[#a0723a] font-semibold text-sm py-4">{row.ai}</td>
                     </tr>
                   ))}

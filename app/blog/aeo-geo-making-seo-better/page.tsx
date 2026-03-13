@@ -408,7 +408,7 @@ export default function AeoGeoMakingSEOBetter() {
                       <p className="text-sm leading-snug mb-2" style={{ color: 'rgba(240,232,216,0.8)' }}>
                         {card.label}
                       </p>
-                      <p className="text-xs" style={{ color: 'rgba(240,232,216,0.4)' }}>{card.source}</p>
+                      <p className="text-xs" style={{ color: 'rgba(240,232,216,0.68)' }}>{card.source}</p>
                     </div>
                   ))}
                 </div>

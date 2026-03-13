@@ -305,7 +305,7 @@ export default function AutomationVsDigitalRealEstate() {
                       <p className="text-sm leading-snug mb-2" style={{ color: 'rgba(240,232,216,0.8)' }}>
                         {card.label}
                       </p>
-                      <p className="text-xs" style={{ color: 'rgba(240,232,216,0.4)' }}>{card.source}</p>
+                      <p className="text-xs" style={{ color: 'rgba(240,232,216,0.68)' }}>{card.source}</p>
                     </div>
                   ))}
                 </div>
@@ -732,7 +732,7 @@ export default function AutomationVsDigitalRealEstate() {
               Read More Articles
             </Link>
           </div>
-          <p className="mt-6 text-sm" style={{ color: 'rgba(240,232,216,0.35)' }}>
+          <p className="mt-6 text-sm" style={{ color: 'rgba(240,232,216,0.72)' }}>
             kodecite.ai · No cost. No pitch. Just clarity on where you stand.
           </p>
         </div>

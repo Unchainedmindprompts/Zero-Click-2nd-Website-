@@ -93,7 +93,7 @@ export default function HomePage() {
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
               The game changed.{' '}
-              <span style={{ color: 'rgba(240,232,216,0.4)' }}>Nobody told your marketing team.</span>
+              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Nobody told your marketing team.</span>
             </h2>
           </ScrollReveal>
 
@@ -527,7 +527,7 @@ export default function HomePage() {
               <ScrollReveal key={i} delay={stat.delay}>
                 <div className="stat-block h-full flex flex-col">
                   <CounterAnimation end={stat.end} decimals={stat.decimals} suffix={stat.suffix} label={stat.label} duration={2000} />
-                  <p className="font-poppins text-sm mt-6 leading-relaxed flex-1" style={{ color: 'rgba(240,232,216,0.45)' }}>
+                  <p className="font-poppins text-sm mt-6 leading-relaxed flex-1" style={{ color: 'rgba(240,232,216,0.78)' }}>
                     {stat.descriptor}
                   </p>
                 </div>

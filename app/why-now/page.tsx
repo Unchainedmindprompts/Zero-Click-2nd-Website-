@@ -509,7 +509,7 @@ export default function WhyNowPage() {
             >
               Get My Free Audit
             </Link>
-            <p className="mt-4 text-[rgba(240,232,216,0.4)] font-poppins text-xs">
+            <p className="mt-4 text-[rgba(240,232,216,0.70)] font-poppins text-xs">
               Takes about 15 minutes. We&apos;ll show you exactly what AI systems see when they look at your business today.
             </p>
           </ScrollReveal>
