@@ -99,11 +99,11 @@ export default function HomePage() {
 
           <ScrollReveal delay={150}>
             <div className="max-w-3xl mx-auto text-center mb-20">
-              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.55)' }}>
+              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.82)' }}>
                 Your rankings didn&apos;t drop. Your traffic did. That&apos;s not a coincidence
                 — it&apos;s the new reality of AI-driven search.
               </p>
-              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.55)' }}>
+              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.82)' }}>
                 When someone asks ChatGPT, Perplexity, or Google&apos;s AI Overview a question
                 about your industry, the AI synthesizes an answer from sites it can read, trust,
                 and cite. If your site isn&apos;t structured for machine discovery, you aren&apos;t
@@ -128,7 +128,7 @@ export default function HomePage() {
           </div>
 
           <ScrollReveal delay={200}>
-            <p className="text-center text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(240,232,216,0.55)' }}>
+            <p className="text-center text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>
               Traditional SEO gets you to the top of a list nobody is scrolling anymore.{' '}
               <span className="font-semibold" style={{ color: '#f8f5f0' }}>
                 Answer Engine Optimization makes you the answer itself.
