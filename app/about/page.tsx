@@ -248,7 +248,7 @@ export default function AboutPage() {
 
           <ScrollReveal delay={300}>
             <div className="max-w-2xl mx-auto text-center mt-16 pt-12 border-t border-[rgba(240,232,216,0.1)]">
-              <p className="text-[rgba(240,232,216,0.6)] font-poppins text-base leading-relaxed">
+              <p className="text-[rgba(240,232,216,0.82)] font-poppins text-base leading-relaxed">
                 — Mark Abplanalp<br />
                 <span className="text-[#a0723a] font-semibold">Founder, KodeCite.AI</span><br />
                 Post Falls, Idaho
