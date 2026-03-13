@@ -140,6 +140,151 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
+      {/* ===== WHY NOTHING ELSE SOLVES THIS ===== */}
+      <section id="why-nothing-else" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">WHY NOTHING ELSE SOLVES THIS</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              Why Nothing Else Solves This
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+              The market has two options for AI search visibility. Neither one was built for you.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={180}>
+            <div className="max-w-3xl mx-auto mb-14 space-y-5">
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                The businesses trying to solve this right now are falling into one of two traps — and spending real money to do it.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools. Built for Fortune 500 marketing departments with dedicated teams and $3,000–$10,000+ monthly budgets. They optimize existing infrastructure — they don&apos;t build it. If your foundation is slow, bloated, and AI-invisible, adding enterprise reporting tools on top doesn&apos;t fix the foundation. It just gives you better visibility into a problem you still can&apos;t solve.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies. Real estate website builders. Monthly SaaS site tools. They promise simplicity. What they deliver is shared infrastructure that typically loads in 3 to 8 seconds on mobile — four times slower than the threshold AI crawlers require to index your content completely. Retrofitting a slow, bloated subscription site for AI discoverability is like installing a jet engine in a station wagon.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                In between these two options sits the overwhelming majority of small and mid-sized businesses — the local attorney, the independent financial advisor, the real estate agent building their own brand — with no purpose-built solution designed for how AI actually works.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Three-tier comparison table */}
+          <ScrollReveal delay={200}>
+            <div className="mb-6 overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr style={{ borderBottom: '1px solid rgba(100,70,30,0.2)' }}>
+                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[160px]" style={{ color: '#6a5a48' }}></th>
+                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Enterprise Platforms</th>
+                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Subscription Builders</th>
+                    <th className="font-poppins font-semibold text-sm py-4 min-w-[200px]" style={{ color: '#a0723a' }}>
+                      KodeCite.AI
+                      <span className="block text-xs font-normal mt-0.5" style={{ color: '#6a5a48' }}>Built for this</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { label: 'Built for', ent: 'Fortune 500 + dedicated team', sub: 'Small business volume', kc: 'Small-mid business serious about AI' },
+                    { label: 'Monthly cost', ent: '$3,000–$10,000+', sub: '$150–$600', kc: '$0 after build — you own it' },
+                    { label: 'Builds the foundation', ent: 'No — assumes you have it', sub: 'No — templated and slow', kc: 'Yes — from the ground up' },
+                    { label: 'PageSpeed scores', ent: 'Depends on existing site', sub: 'Typically 40–65', kc: '90–100, guaranteed' },
+                    { label: 'Schema markup', ent: 'Reporting tools', sub: 'Template-level, site-wide', kc: 'Custom per page and article' },
+                    { label: 'AI citation result', ent: 'Possible if foundation exists', sub: 'Rarely cited', kc: 'Built to be cited' },
+                    { label: 'You own it', ent: 'No — software license', sub: 'No — rented platform', kc: 'Yes — outright' },
+                  ].map((row, i) => (
+                    <tr key={i} className="transition-colors" style={{ borderBottom: '1px solid rgba(100,70,30,0.1)' }}>
+                      <td className="font-poppins font-medium text-sm py-4 pr-6" style={{ color: '#0a0806' }}>{row.label}</td>
+                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.ent}</td>
+                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.sub}</td>
+                      <td className="font-poppins font-semibold text-sm py-4" style={{ color: '#a0723a' }}>{row.kc}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== THE ONE TIER THAT DOESN'T EXIST YET ===== */}
+      <section id="the-missing-tier" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">THE MISSING TIER</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              The One Tier That Doesn&apos;t Exist Yet
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+              We&apos;re not optimizing your current site. We&apos;re building the thing that should have existed all along.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={180}>
+            <div className="max-w-3xl mx-auto mb-16 space-y-5">
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                A site built from the ground up for AI discoverability looks fundamentally different from anything in either tier above.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                It starts with edge infrastructure — Next.js deployed across a global CDN so your content reaches any user or AI crawler in milliseconds, not seconds. It layers in answer-first content architecture that AI systems can extract and cite. It adds custom schema markup — not copy-pasted templates, but per-page JSON-LD that encodes your expertise, location, and authority as machine-readable facts. And it builds the SEO foundation that everything else depends on before adding a single layer of AEO or GEO on top.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                Enterprise tools assume that foundation exists. Subscription platforms can&apos;t build it. We start there — and we don&apos;t move on until it&apos;s right.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                <strong style={{ color: '#0a0806' }}>The result:</strong> a site AI systems don&apos;t just crawl. They trust, cite, and recommend.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Stat callout row */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+            {[
+              { number: 'Sub-1s', label: 'Edge load time vs. 3–8s on subscription platforms', delay: 0 },
+              { number: '90–100', label: 'PageSpeed score on every build, guaranteed', delay: 150 },
+              { number: 'Custom', label: 'Schema markup built per page, not copy-pasted site-wide', delay: 300 },
+            ].map((stat, i) => (
+              <ScrollReveal key={i} delay={stat.delay}>
+                <div className="stat-block">
+                  <p className="font-playfair font-bold" style={{ fontSize: 'clamp(40px, 6vw, 64px)', lineHeight: 1, color: '#a0723a' }}>{stat.number}</p>
+                  <p className="font-poppins text-sm mt-3 uppercase tracking-wider font-semibold" style={{ color: '#6a5a48' }}>{stat.label}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <ScrollReveal delay={300}>
+            <div className="text-center">
+              <a
+                href="#solution"
+                className="font-poppins font-semibold text-base inline-flex items-center gap-2 pb-0.5 transition-colors"
+                style={{ color: '#a0723a', borderBottom: '1px solid rgba(160,114,58,0.4)' }}
+              >
+                See How We Build It
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
       {/* ===== AUTHORITY ENGINE — light, service cards ===== */}
       <section id="solution" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
         <div className="max-w-6xl mx-auto">
