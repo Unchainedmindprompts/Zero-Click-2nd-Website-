@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       'The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything',
     description:
       'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
-    url: 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
+    url: 'https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
     type: 'article',
     publishedTime: '2026-03-07',
     authors: ['Mark Abplanalp'],

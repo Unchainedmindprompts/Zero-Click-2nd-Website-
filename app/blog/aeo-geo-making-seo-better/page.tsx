@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
     description:
       'When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct.',
-    url: 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
+    url: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
     type: 'article',
     publishedTime: '2026-03-08',
     authors: ['Mark Abplanalp'],

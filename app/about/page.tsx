@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'About KodeCite.AI — Why We Built This',
     description:
       'Over a thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI.',
-    url: 'https://kodecite.ai/about',
+    url: 'https://www.kodecite.ai/about',
     type: 'website',
   },
 };

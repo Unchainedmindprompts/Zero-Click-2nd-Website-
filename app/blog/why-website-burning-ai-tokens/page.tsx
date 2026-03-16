@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
     description:
       'AI agents operate on a token budget. Legacy platforms like WordPress and Wix burn through it before delivering your content — costing you recommendations.',
-    url: 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
+    url: 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens',
     type: 'article',
   },
 };

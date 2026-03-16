@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'KodeCite.ai — AI Search Optimization & AEO Agency',
   description:
     '60% of Google searches end without a click. AI answers the question — and your competitor gets the credit. We make sure the machine chooses you. Free AEO Audit available.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/',
+  },
 };
 
 const websiteSchema = {

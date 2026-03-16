@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Why WordPress Sites Are Losing the AI Search War',
     description:
       'Bloated plugins, slow Core Web Vitals, and poor technical structure are making WordPress sites invisible to AI search engines.',
-    url: 'https://kodecite.ai/blog/wordpress-losing-ai-search',
+    url: 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
     type: 'article',
   },
 };

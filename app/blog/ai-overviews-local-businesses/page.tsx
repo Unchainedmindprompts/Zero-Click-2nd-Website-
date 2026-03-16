@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'How to Get Your Local Business Featured in Google AI Overviews',
     description:
       'The technical and content framework that gets local businesses cited in Google AI Overviews instead of being filtered out.',
-    url: 'https://kodecite.ai/blog/ai-overviews-local-businesses',
+    url: 'https://www.kodecite.ai/blog/ai-overviews-local-businesses',
     type: 'article',
   },
 };

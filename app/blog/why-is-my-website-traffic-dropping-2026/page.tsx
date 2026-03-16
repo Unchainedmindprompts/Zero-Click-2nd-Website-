@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Why Is My Website Traffic Dropping in 2026?',
     description:
       'Your rankings are fine. Your traffic is falling. Here\'s the real reason — and what to do about it.',
-    url: 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
+    url: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
     type: 'article',
   },
 };
@@ -125,16 +125,6 @@ const breadcrumbSchema = {
       item: 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
     },
   ],
-};
-
-const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  articleBody:
-    "If your Google Analytics looks like a ski slope heading downhill and nothing has changed on your end, the answer is Google AI Overviews and zero-click search. AI Overviews are responsible for 20% to 50% declines in organic clicks for affected queries — even when rankings haven't moved.",
-  wordCount: '1800',
-  articleSection: 'AI Search Optimization',
-  inLanguage: 'en-US',
 };
 
 // Chart data
@@ -297,10 +287,6 @@ export default function WhyIsMyWebsiteTrafficDropping() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
       {/* Hero */}

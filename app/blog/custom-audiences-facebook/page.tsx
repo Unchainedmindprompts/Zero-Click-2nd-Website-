@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'The Three Custom Audiences Every Local Business Needs on Facebook',
     description:
       'The three-audience system that replaces broad interest targeting and makes Facebook ads work for local service businesses.',
-    url: 'https://kodecite.ai/blog/custom-audiences-facebook',
+    url: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
     type: 'article',
   },
 };
