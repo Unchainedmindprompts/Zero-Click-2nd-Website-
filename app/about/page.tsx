@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Over a thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI and why we exist to help local businesses compete in the AI age.',
   alternates: {
-    canonical: 'https://kodecite.ai/about',
+    canonical: 'https://www.kodecite.ai/about',
   },
   openGraph: {
     title: 'About KodeCite.AI — Why We Built This',

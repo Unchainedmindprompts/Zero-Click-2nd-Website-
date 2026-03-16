@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'How to Get Your Local Business Featured in Google AI Overviews',
   description:
     'Google AI Overviews are replacing traditional search results for millions of queries. Here\'s the exact framework for getting local businesses cited as the source — not buried below it.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/ai-overviews-local-businesses',
+  },
   openGraph: {
     title: 'How to Get Your Local Business Featured in Google AI Overviews',
     description:

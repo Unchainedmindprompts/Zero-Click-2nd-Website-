@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Services — Brand Authority Architecture | KodeCite.ai',
   description:
     'KodeCite.ai builds Brand Authority Architecture — Next.js infrastructure, Source of Truth schema, Pre-Vetted Audience Campaigns, and Spatial SEO that makes AI systems cite your business as the definitive answer.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/services',
+  },
 };
 
 const serviceSchema = {
