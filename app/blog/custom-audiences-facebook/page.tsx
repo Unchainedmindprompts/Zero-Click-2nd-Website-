@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'The Three Custom Audiences Every Local Business Needs on Facebook',
   description:
     'Most businesses set up one broad audience and wonder why their ads don\'t convert. These three layered audiences — awareness, intent, and retargeting — are the foundation of every campaign we build.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
+  },
   openGraph: {
     title: 'The Three Custom Audiences Every Local Business Needs on Facebook',
     description:
