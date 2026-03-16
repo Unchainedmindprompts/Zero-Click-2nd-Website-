@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Why Automating Everything Is Failing Most Businesses — KodeCite.AI',
     description:
       "The real AI opportunity isn't cutting costs — it's making sure AI recommends you first.",
-    url: 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
+    url: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
     type: 'article',
     publishedTime: '2026-03-10',
     authors: ['Mark Abplanalp'],

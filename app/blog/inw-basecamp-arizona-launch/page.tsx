@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
     description:
       'How we launched a new market landing page with zero schema errors and an active Facebook campaign on the same day — the complete story.',
-    url: 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
+    url: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
     type: 'article',
   },
 };

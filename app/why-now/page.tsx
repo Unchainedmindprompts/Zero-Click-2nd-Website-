@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Why Now — The AI Land Grab Is Already Underway',
     description:
       "The biggest companies in the world aren't spending hundreds of billions to make better memes. They're rebuilding how customers find businesses. Here's what that means for yours.",
-    url: 'https://kodecite.ai/why-now',
+    url: 'https://www.kodecite.ai/why-now',
     type: 'article',
   },
 };

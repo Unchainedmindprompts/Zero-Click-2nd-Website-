@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
     description:
       'The complete technical breakdown of the Luxe Window Works SEO overhaul — from 75 to 124 indexed pages in 48 hours, appearing in four rich result types.',
-    url: 'https://kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
+    url: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
     type: 'article',
   },
 };

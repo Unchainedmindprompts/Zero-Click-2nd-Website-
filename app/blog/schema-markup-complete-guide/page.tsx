@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Schema Markup: The Complete Guide for Local Service Businesses',
     description:
       'Learn how to implement the four essential schema types that make your local business visible to Google AI Overviews, ChatGPT, and Perplexity.',
-    url: 'https://kodecite.ai/blog/schema-markup-complete-guide',
+    url: 'https://www.kodecite.ai/blog/schema-markup-complete-guide',
     type: 'article',
   },
 };

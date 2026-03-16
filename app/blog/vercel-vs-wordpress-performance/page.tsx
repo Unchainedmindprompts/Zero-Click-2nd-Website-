@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
     description:
       'Side-by-side performance data from real local business sites on WordPress shared hosting vs Next.js on edge infrastructure.',
-    url: 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
+    url: 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance',
     type: 'article',
   },
 };

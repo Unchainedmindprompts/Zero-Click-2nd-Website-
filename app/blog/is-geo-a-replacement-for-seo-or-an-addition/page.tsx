@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',
     description:
       "The businesses winning AI visibility right now didn't abandon SEO. They added GEO on top of it. Here's the difference and how to do both.",
-    url: 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
+    url: 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
     type: 'article',
     publishedTime: '2026-03-12',
     authors: ['Mark Abplanalp'],

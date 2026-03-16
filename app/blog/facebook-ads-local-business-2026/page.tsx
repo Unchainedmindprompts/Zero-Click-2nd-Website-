@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
     description:
       'The compounding Facebook ad system that local service businesses use to lower cost-per-lead over time instead of staying constant.',
-    url: 'https://kodecite.ai/blog/facebook-ads-local-business-2026',
+    url: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
     type: 'article',
   },
 };

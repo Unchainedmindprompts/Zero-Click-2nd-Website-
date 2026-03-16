@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'KodeCite.AI — AI Search Optimization',
     description:
       '60% of searches end without a click. AI answers the question and your competitor gets the credit. We make sure the machine chooses you.',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
     siteName: 'KodeCite.AI',
     images: [
       {
@@ -77,7 +77,7 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
-    email: 'mark@kodesite.com',
+    email: 'mark@kodecite.ai',
   },
 };
 
@@ -88,8 +88,8 @@ const localBusinessSchema = {
   description:
     'AI search optimization and digital marketing micro agency. We build websites, content, and campaigns that make businesses visible to AI search.',
   url: 'https://kodecite.ai',
-  telephone: '',
-  email: 'mark@kodesite.com',
+  telephone: '+14803239740',
+  email: 'mark@kodecite.ai',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '',

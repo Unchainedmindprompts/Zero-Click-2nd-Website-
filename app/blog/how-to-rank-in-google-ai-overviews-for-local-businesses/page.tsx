@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'How to Rank in Google AI Overviews for Local Businesses',
     description:
       'Most local businesses are invisible to AI search. Here\'s exactly how to change that.',
-    url: 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
+    url: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
     type: 'article',
   },
 };
