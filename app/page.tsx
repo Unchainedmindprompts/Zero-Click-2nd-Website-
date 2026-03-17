@@ -305,7 +305,7 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="font-poppins text-sm md:text-base font-medium" style={{ color: '#0a0806' }}>
-                Subscription builders rent you a template. KodeCite delivers an owned performance asset.
+                We don&apos;t sell SEO retainers. We build the structured, edge-hosted asset that AI assistants rely on to decide who to recommend — and hand you the keys when we&apos;re done.
               </p>
             </div>
           </ScrollReveal>
