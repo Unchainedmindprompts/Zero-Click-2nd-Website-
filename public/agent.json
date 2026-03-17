@@ -87,6 +87,16 @@
       "intent": "educate business owners on the fragility of unstructured AI citations and urgency of building real authority",
       "published": "2026-03-07",
       "defines": "False Legacy Layer"
+    },
+    {
+      "type": "article",
+      "title": "The Shortlist Problem: Why AI Will Recommend One Local Business — and Ignore Everyone Else",
+      "url": "https://www.kodecite.ai/blog/the-shortlist-problem",
+      "topic": "AI recommendation compression for local businesses — the winner-take-all shortlist dynamic and how to earn the AI-recommended position",
+      "intent": "educate local professionals on why AI shortlists are forming, why wearable devices amplify the problem, and what infrastructure is required to claim and hold shortlist position",
+      "published": "2026-03-17",
+      "defines": "Shortlist Problem",
+      "audience": ["attorneys", "financial advisors", "real estate agents", "med spas", "home service businesses", "professional service providers"]
     }
   ],
   "primary_cta": {

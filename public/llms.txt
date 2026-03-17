@@ -68,6 +68,12 @@ Topic: Why temporary AI citations built on default position disappear when struc
 Key insight: The False Legacy Layer — appearing in AI answers not because of earned authority but because competitors haven't structured their presence yet — is the most dangerous kind of visibility
 Audience: Local business owners currently showing up in AI search results who have not yet invested in structured AEO
 
+### The Shortlist Problem
+URL: https://www.kodecite.ai/blog/the-shortlist-problem
+Topic: Why AI assistants compress recommendations to one or two local businesses per niche — and how to become the one they name
+Key insight: Wearable and screenless AI interfaces eliminate list-style results entirely; the Shortlist Problem is a winner-take-all dynamic that makes AI shortlist position a pipeline survival question for local service businesses
+Audience: Local attorneys, financial advisors, real estate agents, med spas, high-ticket home service providers, and any professional service business where AI recommendation carries high trust weight
+
 ## Contact
 
 - Location: Post Falls, Idaho
