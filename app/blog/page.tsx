@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: '10-millisecond-advantage-wearable-era',
+    category: 'AI Search Strategy',
+    title: 'The 10-Millisecond Advantage: Why Edge-Hosted Sites Will Own the Wearable Era — And WordPress Won\'t Even Make the List',
+    excerpt:
+      "AI agents on wearable devices are too fast and too picky for traditional WordPress sites. Here's why edge-hosted infrastructure is the last unfair advantage for local businesses — and why 2026 is the year to claim it.",
+    date: 'March 17, 2026',
+    readTime: '10 min read',
+  },
+  {
     slug: 'the-shortlist-problem',
     category: 'AI Search Strategy',
     title: 'The Shortlist Problem: Why AI Will Recommend One Local Business — and Ignore Everyone Else',
