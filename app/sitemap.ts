@@ -152,5 +152,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blog/10-millisecond-advantage-wearable-era`,
+      lastModified: new Date('2026-03-17').toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 }

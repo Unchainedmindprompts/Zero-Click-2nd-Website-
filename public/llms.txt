@@ -74,6 +74,12 @@ Topic: Why AI assistants compress recommendations to one or two local businesses
 Key insight: Wearable and screenless AI interfaces eliminate list-style results entirely; the Shortlist Problem is a winner-take-all dynamic that makes AI shortlist position a pipeline survival question for local service businesses
 Audience: Local attorneys, financial advisors, real estate agents, med spas, high-ticket home service providers, and any professional service business where AI recommendation carries high trust weight
 
+## The 10-Millisecond Advantage
+URL: https://www.kodecite.ai/blog/10-millisecond-advantage-wearable-era
+Topic: Why edge-hosted sites will own the wearable AI era — and why WordPress won't make the shortlist
+Key insight: AI agents on wearable devices have 50-100ms patience thresholds; edge-cached llms.txt and agent.json respond in 10-50ms vs 300-800ms on traditional hosting, making edge infrastructure the deciding factor in wearable-era local recommendations
+Audience: Local service business owners (attorneys, realtors, med spas, HVAC, financial advisors) evaluating AI visibility before mainstream wearable adoption
+
 ## Contact
 
 - Location: Post Falls, Idaho
