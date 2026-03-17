@@ -14,6 +14,12 @@ const config: Config = {
           dark: '#0A1628',
           card: '#162444',
         },
+        charcoal: {
+          DEFAULT: '#07070f',
+          mid: '#0d0d1a',
+          card: '#111122',
+          light: '#16162a',
+        },
         gold: {
           DEFAULT: '#D4A94A',
           light: '#E8C478',
@@ -27,6 +33,8 @@ const config: Config = {
       },
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'Impact', 'sans-serif'],
+        cormorant: ['var(--font-cormorant)', 'Georgia', 'serif'],
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease forwards',

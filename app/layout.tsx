@@ -1,23 +1,15 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
   title: {
-    default: 'Zero Click Strategies — AI Search Optimization & Digital Marketing',
-    template: '%s | Zero Click Strategies',
+    default: 'KodeCite.ai — AI Search Optimization & Digital Marketing',
+    template: '%s | KodeCite.ai',
   },
   description:
-    'Most businesses are invisible to AI. Zero Click Strategies builds the websites, content, and campaigns that make you the answer. Based in Post Falls, Idaho.',
+    'Most businesses are invisible to AI. KodeCite.ai builds the websites, content, and campaigns that make you the answer. Based in Post Falls, Idaho.',
   keywords: [
     'AI search optimization',
     'AEO',
@@ -28,32 +20,32 @@ export const metadata: Metadata = {
     'schema markup',
     'Post Falls Idaho',
   ],
-  authors: [{ name: 'Zero Click Strategies' }],
-  creator: 'Zero Click Strategies',
-  metadataBase: new URL('https://zeroclickstrategies.com'),
+  authors: [{ name: 'KodeCite.ai' }],
+  creator: 'KodeCite.ai',
+  metadataBase: new URL('https://kodecite.ai'),
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://zeroclickstrategies.com',
-    siteName: 'Zero Click Strategies',
-    title: 'Zero Click Strategies — AI Search Optimization & Digital Marketing',
+    title: 'KodeCite.AI — AI Search Optimization',
     description:
-      'Most businesses are invisible to AI. We build the websites, content, and campaigns that make you the answer.',
+      '60% of searches end without a click. AI answers the question and your competitor gets the credit. We make sure the machine chooses you.',
+    url: 'https://www.kodecite.ai',
+    siteName: 'KodeCite.AI',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://kodecite.ai/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Zero Click Strategies',
+        alt: 'KodeCite.AI — AI Search Optimization',
       },
     ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zero Click Strategies — AI Search Optimization & Digital Marketing',
+    title: 'KodeCite.AI — AI Search Optimization',
     description:
-      'Most businesses are invisible to AI. We build the websites, content, and campaigns that make you the answer.',
-    images: ['/og-image.png'],
+      '60% of searches end without a click. We make sure AI chooses you.',
+    images: ['https://kodecite.ai/og-image.png'],
   },
   robots: {
     index: true,
@@ -71,9 +63,9 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Zero Click Strategies',
-  url: 'https://zeroclickstrategies.com',
-  logo: 'https://zeroclickstrategies.com/logo.png',
+  name: 'KodeCite.ai',
+  url: 'https://kodecite.ai',
+  logo: 'https://kodecite.ai/logo.png',
   description:
     'AI search optimization and digital marketing micro agency based in Post Falls, Idaho.',
   address: {
@@ -85,19 +77,19 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
-    email: 'hello@zeroclickstrategies.com',
+    email: 'mark@kodecite.ai',
   },
 };
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Zero Click Strategies',
+  name: 'KodeCite.ai',
   description:
     'AI search optimization and digital marketing micro agency. We build websites, content, and campaigns that make businesses visible to AI search.',
-  url: 'https://zeroclickstrategies.com',
-  telephone: '',
-  email: 'hello@zeroclickstrategies.com',
+  url: 'https://kodecite.ai',
+  telephone: '+14803239740',
+  email: 'mark@kodecite.ai',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '',
@@ -118,14 +110,67 @@ const localBusinessSchema = {
   priceRange: '$$',
 };
 
+const professionalServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'KodeCite.ai',
+  description:
+    'Answer Engine Optimization agency helping businesses become the cited source in AI-generated search results and discoverable by wearable devices.',
+  url: 'https://kodecite.ai',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Post Falls',
+    addressRegion: 'ID',
+    addressCountry: 'US',
+  },
+  areaServed: ['North Idaho', 'Pacific Northwest', 'United States'],
+  knowsAbout: [
+    'Answer Engine Optimization',
+    'AI Search Visibility',
+    'Next.js Development',
+    'Schema Markup',
+    'Wearable Device Discoverability',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'AEO Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Free AEO Audit',
+        description:
+          'No-obligation audit of current AI search visibility in ChatGPT, Perplexity, and Google AI Overviews',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+    ],
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en">
       <head>
+        {/* Google Fonts: Bebas Neue, Cormorant Garamond, DM Sans */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap"
+          rel="stylesheet"
+        />
+        {/* Map Google Font names to the CSS variables used throughout the codebase */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          :root {
+            --font-playfair: 'Bebas Neue', Impact, sans-serif;
+            --font-poppins: 'DM Sans', system-ui, sans-serif;
+            --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+          }
+        ` }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -134,8 +179,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        />
       </head>
-      <body className="font-poppins bg-[#0F1E3C] text-white antialiased">
+      <body className="font-poppins bg-[#f8f5f0] text-[#0a0806] antialiased">
         <Navigation />
         <main>{children}</main>
         <Footer />

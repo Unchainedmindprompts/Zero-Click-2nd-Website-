@@ -5,15 +5,15 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'Case Studies — Real Results from AI Search Optimization',
   description:
-    'See real results: 49 pages indexed in 48 hours for Luxe Window Works, same-day schema validation for INW Basecamp Arizona. Zero Click Strategies proves the methodology first.',
+    'See real results: 49 pages indexed in 48 hours for Luxe Window Works, same-day schema validation for INW Basecamp Arizona. KodeCite.ai proves the methodology first.',
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeroclickstrategies.com' },
-    { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://zeroclickstrategies.com/case-studies' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://kodecite.ai/case-studies' },
   ],
 };
 
@@ -23,11 +23,11 @@ export default function CaseStudiesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#0A1628] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-20 bg-[#080810] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-50 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">CASE STUDIES</p>
-          <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+          <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
             We Proved It{' '}
             <span className="text-[#D4A94A]">On Our Own Businesses</span>
           </h1>
@@ -40,7 +40,7 @@ export default function CaseStudiesPage() {
       <div className="section-divider" />
 
       {/* Case Study 1: Luxe Window Works */}
-      <section id="luxe" className="py-24 md:py-32 bg-[#0F1E3C] px-4">
+      <section id="luxe" className="py-24 md:py-32 bg-[#05050f] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -48,7 +48,7 @@ export default function CaseStudiesPage() {
               <span className="category-tag">Technical SEO</span>
               <span className="category-tag">Schema Markup</span>
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-4 leading-tight">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-4 leading-tight">
               Luxe Window Works
             </h2>
             <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl leading-relaxed mb-12">
@@ -66,7 +66,7 @@ export default function CaseStudiesPage() {
               { value: '66%', label: 'Better mobile performance', sub: 'than average WordPress site' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
-                <div className="bg-[#162444] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
+                <div className="bg-[#0d0d1a] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
                   <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">
                     {stat.value}
                   </div>
@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
 
           {/* Before/After indexed pages chart */}
           <ScrollReveal delay={200}>
-            <div className="bg-[#162444] rounded-2xl p-8 md:p-12 mb-16 border border-white/5">
+            <div className="bg-[#0d0d1a] rounded-2xl p-8 md:p-12 mb-16 border border-white/5">
               <h3 className="font-poppins font-bold text-2xl text-white mb-8">
                 Pages Indexed — Before & After
               </h3>
@@ -136,7 +136,7 @@ export default function CaseStudiesPage() {
           {/* Schema validation results */}
           <ScrollReveal delay={100}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-              <div className="bg-[#162444] rounded-xl p-8 border border-white/5">
+              <div className="bg-[#0d0d1a] rounded-xl p-8 border border-white/5">
                 <h3 className="font-poppins font-bold text-xl text-white mb-6">
                   Schema Rich Results Validated
                 </h3>
@@ -165,7 +165,7 @@ export default function CaseStudiesPage() {
                 </div>
               </div>
 
-              <div className="bg-[#162444] rounded-xl p-8 border border-white/5">
+              <div className="bg-[#0d0d1a] rounded-xl p-8 border border-white/5">
                 <h3 className="font-poppins font-bold text-xl text-white mb-6">
                   What We Did
                 </h3>
@@ -195,7 +195,7 @@ export default function CaseStudiesPage() {
       <div className="section-divider" />
 
       {/* Case Study 2: INW Basecamp */}
-      <section id="inw" className="py-24 md:py-32 bg-[#0A1628] px-4">
+      <section id="inw" className="py-24 md:py-32 bg-[#080810] px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -203,7 +203,7 @@ export default function CaseStudiesPage() {
               <span className="category-tag">Landing Page</span>
               <span className="category-tag">Facebook Ads</span>
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-4 leading-tight">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-4 leading-tight">
               INW Basecamp — Arizona Market
             </h2>
             <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl leading-relaxed mb-12">
@@ -221,7 +221,7 @@ export default function CaseStudiesPage() {
               { value: '3', label: 'Ad campaigns live', sub: 'at launch' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
-                <div className="bg-[#162444] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
+                <div className="bg-[#0d0d1a] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
                   <div className="font-poppins font-bold text-4xl md:text-5xl text-[#D4A94A] mb-2">
                     {stat.value}
                   </div>
@@ -239,7 +239,7 @@ export default function CaseStudiesPage() {
           {/* Campaign breakdown */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <ScrollReveal delay={0}>
-              <div className="bg-[#162444] rounded-xl p-8 border border-white/5 h-full">
+              <div className="bg-[#0d0d1a] rounded-xl p-8 border border-white/5 h-full">
                 <h3 className="font-poppins font-bold text-xl text-white mb-6">
                   The Launch System
                 </h3>
@@ -279,7 +279,7 @@ export default function CaseStudiesPage() {
 
             <ScrollReveal delay={150}>
               <div className="space-y-6">
-                <div className="bg-[#162444] rounded-xl p-8 border border-[#D4A94A]/20">
+                <div className="bg-[#0d0d1a] rounded-xl p-8 border border-[#D4A94A]/20">
                   <h3 className="font-poppins font-bold text-lg text-white mb-4">
                     Schema Validation Results
                   </h3>
@@ -297,7 +297,7 @@ export default function CaseStudiesPage() {
                   </div>
                 </div>
 
-                <div className="bg-[#162444] rounded-xl p-8 border border-white/5">
+                <div className="bg-[#0d0d1a] rounded-xl p-8 border border-white/5">
                   <h3 className="font-poppins font-bold text-lg text-white mb-4">
                     Ad Campaign Structure
                   </h3>
@@ -323,10 +323,10 @@ export default function CaseStudiesPage() {
       <div className="section-divider" />
 
       {/* CTA */}
-      <section className="py-24 bg-[#0F1E3C] px-4">
+      <section className="py-24 bg-[#05050f] px-4">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-6">
               Your Business Could Be <span className="text-[#D4A94A]">Next</span>
             </h2>
             <p className="text-[#8A9BB5] text-xl font-poppins mb-10 leading-relaxed max-w-2xl mx-auto">
