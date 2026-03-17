@@ -367,71 +367,59 @@ export default function ShortlistProblemPage() {
               <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">How to Become the Name AI Recommends</h2>
               <p className="leading-relaxed mb-8">A simple checklist for where to start:</p>
 
-              <div itemScope itemType="https://schema.org/FAQPage">
-                <div className="mb-6" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+              <div>
+                <div className="mb-6">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Audit your real-world reputation first.
                   </h3>
-                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      Reviews, consistency, service quality. No infrastructure work matters if this foundation is weak.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Reviews, consistency, service quality. No infrastructure work matters if this foundation is weak.
+                  </p>
                 </div>
 
-                <div className="mb-6" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-6">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Benchmark your site speed.
                   </h3>
-                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      Run your homepage through PageSpeed Insights. If your mobile score is below 70 or your load time is above two seconds on desktop, you have a structural problem.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Run your homepage through PageSpeed Insights. If your mobile score is below 70 or your load time is above two seconds on desktop, you have a structural problem.
+                  </p>
                 </div>
 
-                <div className="mb-6" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-6">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Check your schema.
                   </h3>
-                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      Use Google&apos;s Rich Results Test. If you have no structured data, or invalid items, AI systems are guessing about your business.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Use Google&apos;s Rich Results Test. If you have no structured data, or invalid items, AI systems are guessing about your business.
+                  </p>
                 </div>
 
-                <div className="mb-6" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-6">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Verify your directory consistency.
                   </h3>
-                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      Search your business name across GBP, Bing, Apple Maps, and Yelp. Any mismatch in NAP data needs to be corrected.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Search your business name across GBP, Bing, Apple Maps, and Yelp. Any mismatch in NAP data needs to be corrected.
+                  </p>
                 </div>
 
-                <div className="mb-6" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-6">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Evaluate your platform honestly.
                   </h3>
-                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      If you&apos;re on a subscription builder and you&apos;re serious about AI visibility, understand what it can and can&apos;t deliver. Some platforms have hard ceilings on performance and schema depth that can&apos;t be engineered around without rebuilding on a modern edge chassis.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    If you&apos;re on a subscription builder and you&apos;re serious about AI visibility, understand what it can and can&apos;t deliver. Some platforms have hard ceilings on performance and schema depth that can&apos;t be engineered around without rebuilding on a modern edge chassis.
+                  </p>
                 </div>
 
-                <div className="mb-10" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-10">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Add llms.txt.
                   </h3>
-                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      If you have access to your site&apos;s root directory, this is one of the highest-leverage additions you can make today. A clear, honest brief for AI crawlers about who you are and what you do.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    If you have access to your site&apos;s root directory, this is one of the highest-leverage additions you can make today. A clear, honest brief for AI crawlers about who you are and what you do.
+                  </p>
                 </div>
               </div>
 
