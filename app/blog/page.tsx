@@ -10,9 +10,9 @@ const blogPosts = [
   {
     slug: '10-millisecond-advantage-wearable-era',
     category: 'AI Search Strategy',
-    title: 'The 10-Millisecond Advantage: Why Edge-Hosted Sites Will Own the Wearable Era — And WordPress Won\'t Even Make the List',
+    title: 'When Your Customer Stops Searching and Starts Asking — Is Your Business Ready?',
     excerpt:
-      "AI agents on wearable devices are too fast and too picky for traditional WordPress sites. Here's why edge-hosted infrastructure is the last unfair advantage for local businesses — and why 2026 is the year to claim it.",
+      "People are asking AI assistants and wearable devices for local business recommendations instead of searching Google. Here's what that means for your business — and what to do about it.",
     date: 'March 17, 2026',
     readTime: '10 min read',
   },
