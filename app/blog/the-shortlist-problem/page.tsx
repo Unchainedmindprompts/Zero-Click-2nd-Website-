@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'The Shortlist Problem: Why AI Will Recommend One Local Business — and Ignore Everyone Else | KodeCite.AI',
+  title: 'The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours | KodeCite.AI',
   description:
-    'Traditional search shows 10 results. AI gives one or two. Here\'s why local businesses face a winner-take-all shortlist problem — and what you can do about it before the shortlist forms in your market.',
+    'As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here\'s how to become one of them.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/the-shortlist-problem',
   },
   openGraph: {
-    title: 'The Shortlist Problem: Why AI Will Recommend One Local Business — and Ignore Everyone Else',
+    title: 'The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours',
     description:
-      'Traditional search shows 10 results. AI gives one or two. Here\'s why local businesses face a winner-take-all shortlist problem — and what you can do about it before the shortlist forms in your market.',
+      'As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here\'s how to become one of them.',
     url: 'https://www.kodecite.ai/blog/the-shortlist-problem',
     type: 'article',
     publishedTime: '2026-03-17',
@@ -23,64 +23,76 @@ const blogPostingSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline:
-    'The Shortlist Problem: Why AI Will Recommend One Local Business — and Ignore Everyone Else',
+    'The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours',
   description:
-    "Traditional search shows 10 results. AI gives one or two. Here's why local businesses face a winner-take-all shortlist problem — and what you can do about it before the shortlist forms in your market.",
+    'As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here\'s how to become one of them.',
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
+    url: 'https://www.kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
+      url: 'https://www.kodecite.ai/logo.png',
     },
   },
   datePublished: '2026-03-17',
   dateModified: '2026-03-17',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/the-shortlist-problem',
+    '@id': 'https://www.kodecite.ai/blog/the-shortlist-problem',
   },
-  url: 'https://kodecite.ai/blog/the-shortlist-problem',
+  url: 'https://www.kodecite.ai/blog/the-shortlist-problem',
   keywords: [
-    'Shortlist Problem',
-    'AI recommendations local business',
+    'AI recommendation shortlist',
+    'wearable AI discovery',
     'answer engine optimization',
-    'AEO',
-    'wearable AI',
-    'screenless AI',
-    'AI search winner-take-all',
+    'AEO local business',
+    'AI local search',
+    'llms.txt',
+    'agent.json',
+    'zero click search',
     'local business AI visibility',
+    'screenless AI',
+    'Ray-Ban Meta',
     'ChatGPT local recommendations',
     'Perplexity local search',
-    'AI shortlist local business',
-    'OpenAI device',
-    'agent.json',
-    'llms.txt',
+    'Google AI Overviews local',
   ],
   articleSection: 'AI Search Strategy',
   wordCount: 1900,
   about: [
     { '@type': 'Thing', name: 'Answer Engine Optimization' },
-    { '@type': 'Thing', name: 'AI Recommendation Systems' },
-    { '@type': 'Thing', name: 'Local Business AI Visibility' },
-    { '@type': 'Thing', name: 'Wearable Device Discovery' },
-    { '@type': 'Thing', name: 'Structured Data' },
+    { '@type': 'Thing', name: 'AI Search Visibility' },
+    { '@type': 'Thing', name: 'Wearable AI Discovery' },
+    { '@type': 'Thing', name: 'Local Business AI Recommendations' },
+    { '@type': 'Thing', name: 'Structured Data for Local Business' },
+    { '@type': 'Thing', name: 'Zero Click Search' },
   ],
   mentions: [
-    { '@type': 'Thing', name: 'ChatGPT' },
-    { '@type': 'Thing', name: 'Perplexity' },
-    { '@type': 'Thing', name: 'Google AI Overviews' },
-    { '@type': 'Thing', name: 'OpenAI' },
-    { '@type': 'Thing', name: 'llms.txt' },
-    { '@type': 'Thing', name: 'agent.json' },
+    { '@type': 'SoftwareApplication', name: 'ChatGPT' },
+    { '@type': 'SoftwareApplication', name: 'Perplexity' },
+    { '@type': 'SoftwareApplication', name: 'Google AI Overviews' },
+    { '@type': 'Product', name: 'Ray-Ban Meta', manufacturer: { '@type': 'Organization', name: 'Meta' } },
   ],
-  defines: 'Shortlist Problem',
+  defines: [
+    {
+      '@type': 'Thing',
+      name: 'The Shortlist Problem',
+      description:
+        'The compression of AI-generated local business recommendations to one or two names per niche and geography, driven by wearable and screenless AI interfaces that cannot deliver long lists.',
+    },
+    {
+      '@type': 'Thing',
+      name: "Winner's Circle",
+      description:
+        "The small set of local businesses in each niche and geography that meet the threshold for safe, confident AI recommendation — combining excellent real-world reputation with fast, structured web infrastructure.",
+    },
+  ],
 };
 
 const faqSchema = {
@@ -89,56 +101,56 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is the Shortlist Problem for local businesses?',
+      name: 'Why will AI assistants recommend only one or two local businesses instead of a full list?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Shortlist Problem is the structural reality that AI assistants — unlike traditional search engines — compress their recommendations to one or two businesses per category per geography. Where Google once served ten blue links, ChatGPT, Perplexity, and voice-based AI agents give a single confident answer. The businesses that make that shortlist capture the lead. Everyone else is invisible.',
+        text: "Screenless and wearable AI interfaces — smart glasses, earbuds, voice assistants — can't deliver ten options without being unusable. The UX pressure pushes every audio interface toward one high-confidence recommendation. Combined with the reputation risk of bad recommendations, AI systems default to the safest, most verifiable choice. The result is a shortlist of one or two businesses per local niche.",
       },
     },
     {
       '@type': 'Question',
-      name: 'How does AI decide which local business to recommend?',
+      name: 'What makes a local business eligible for AI recommendation?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI systems synthesize signals from structured data (JSON-LD schema), machine-readable identity files (llms.txt and agent.json), review consistency, citation frequency across authoritative directories, website performance, and content depth. The business that has encoded the most accurate, machine-readable authority signals for its category and geography earns the shortlist position. Unstructured businesses with slow, generic websites are skipped — even if they have decades of local experience.',
+        text: 'Two criteria determine AI recommendation eligibility: first, genuine real-world excellence — strong reviews, consistent reputation, and honest operations that AI systems can verify. Second, fast, structured, AI-readable web infrastructure — sub-second load times, custom per-page JSON-LD schema, llms.txt, agent.json, and consistent NAP data across all major directories.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why does wearable AI make the Shortlist Problem worse for local businesses?',
+      name: 'What is llms.txt and why does it matter for local business AI visibility?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Wearable and screenless AI devices — glasses, earbuds, and devices like the anticipated OpenAI hardware — have no room to display a list of results. The interface itself forces a single-answer response: "The best estate planning attorney near you is [name]." There is no second position, no organic result below the fold, no chance to scroll. The Shortlist Problem becomes a winner-take-all problem at the hardware level.',
+        text: "llms.txt is a natural-language brief deployed at your site's root that tells AI crawlers exactly who you are, what you do, where you operate, and which pages contain your most valuable content. It gives AI systems a direct, unambiguous map to your authority signals — making it significantly easier for them to describe and recommend your business accurately.",
       },
     },
     {
       '@type': 'Question',
-      name: 'Can an independent local business make the AI shortlist over a national chain?',
+      name: 'Can I get on the AI recommendation shortlist without rebuilding my website?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — and independent businesses have structural advantages that corporate chains cannot easily replicate. AI systems increasingly reward genuine local expertise, hyper-specific geographic authority, and authentic community depth. A local attorney with 20 years of Idaho estate cases, properly structured schema and llms.txt declaring that expertise, can outrank a national firm\'s generic local page. The key is translating authentic local authority into machine-readable signals before competitors do.',
+        text: "It depends on your current platform. Some improvements — adding llms.txt, fixing directory consistency, improving review signals — can be made without rebuilding. However, if your site is on a subscription platform like WordPress, Wix, or Squarespace with real-device load times above two seconds, there are hard performance and schema ceilings that cannot be engineered around without rebuilding on a modern edge chassis like Next.js on Vercel.",
       },
     },
     {
       '@type': 'Question',
-      name: "What's the first step to becoming the AI-recommended business in my market?",
+      name: 'How soon will wearable AI devices change local search behavior?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Start with a free AEO audit to understand exactly how your business currently appears (or fails to appear) in ChatGPT, Perplexity, Google AI Overviews, and Gemini. This gives you a baseline. From there, the core build requires a high-performance Next.js website, per-page JSON-LD schema encoding your specific services and geography, llms.txt and agent.json declaring your machine-readable identity, and directory scaffolding that creates consistent citations across GBP, Bing Places, Apple Business Connect, and BBB. The businesses that complete this infrastructure while competitors are still debating it claim the shortlist position first.',
+        text: 'The behavior shift is already underway with existing voice assistants and AI Overviews. Wearables like Ray-Ban Meta glasses are accelerating it. The technical infrastructure required to rank in Google AI Overviews in 2026 is identical to what will be required for wearable discovery in 2027 and beyond. Businesses building that infrastructure now are compounding an advantage while the competitive window is still open.',
       },
     },
   ],
 };
 
-const professionalServiceSchema = {
+const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'KodeCite.AI',
   description:
     'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
-  url: 'https://kodecite.ai',
-  logo: 'https://kodecite.ai/logo.png',
-  image: 'https://kodecite.ai/og-image.png',
+  url: 'https://www.kodecite.ai',
+  logo: 'https://www.kodecite.ai/logo.png',
+  image: 'https://www.kodecite.ai/og-image.png',
   email: 'sales@kodecite.ai',
   address: {
     '@type': 'PostalAddress',
@@ -152,26 +164,9 @@ const professionalServiceSchema = {
     longitude: -116.9516,
   },
   areaServed: [
-    {
-      '@type': 'City',
-      name: 'Post Falls',
-      containedInPlace: { '@type': 'State', name: 'Idaho' },
-    },
-    {
-      '@type': 'City',
-      name: "Coeur d'Alene",
-      containedInPlace: { '@type': 'State', name: 'Idaho' },
-    },
-    {
-      '@type': 'City',
-      name: 'Spokane',
-      containedInPlace: { '@type': 'State', name: 'Washington' },
-    },
-    {
-      '@type': 'City',
-      name: 'Spokane Valley',
-      containedInPlace: { '@type': 'State', name: 'Washington' },
-    },
+    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
+    { '@type': 'City', name: 'Spokane', containedInPlace: { '@type': 'State', name: 'Washington' } },
     { '@type': 'AdministrativeArea', name: 'North Idaho' },
     { '@type': 'AdministrativeArea', name: 'Eastern Washington' },
     { '@type': 'AdministrativeArea', name: 'Inland Northwest' },
@@ -193,7 +188,7 @@ const professionalServiceSchema = {
   ],
 };
 
-export default function TheShortlistProblem() {
+export default function ShortlistProblemPage() {
   return (
     <>
       <script
@@ -206,48 +201,35 @@ export default function TheShortlistProblem() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#f8f5f0] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-poppins text-[#6a5a48] mb-8">
+      <section className="bg-[#f8f5f0] pt-36 pb-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <nav className="text-sm text-[#6a5a48] mb-6 font-poppins">
             <Link href="/" className="hover:text-[#a0723a] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="mx-2">/</span>
             <Link href="/blog" className="hover:text-[#a0723a] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[#0a0806] truncate">The Shortlist Problem</span>
+            <span className="mx-2">/</span>
+            <span className="text-[#1c1814]">The Shortlist Problem</span>
           </nav>
-
           <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">AI Search Strategy</span>
-            <span className="text-[#6a5a48] text-sm font-poppins">10 min read</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#a0723a] font-poppins">AI Search Strategy</span>
+            <span className="text-[#6a5a48] text-xs font-poppins">·</span>
+            <span className="text-xs text-[#6a5a48] font-poppins">10 min read</span>
           </div>
-
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight">
-            The Shortlist Problem:{' '}
-            <span className="text-[#a0723a]">Why AI Will Recommend One Local Business — and Ignore Everyone Else</span>
+          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1c1814] leading-tight mb-6">
+            The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours
           </h1>
-
-          <p className="text-[#6a5a48] text-xl font-poppins leading-relaxed max-w-3xl">
-            Traditional search shows 10 results. AI gives one or two. Here&apos;s why local businesses face a winner-take-all shortlist problem — and what you can do about it before the shortlist forms in your market.
+          <p className="font-poppins text-lg text-[#6a5a48] max-w-3xl mb-8 leading-relaxed">
+            As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here&apos;s how to become one of them.
           </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-poppins">MA</span>
-              </div>
-              <div>
-                <p className="text-[#0a0806] text-sm font-semibold font-poppins">Mark Abplanalp</p>
-                <p className="text-[#6a5a48] text-xs font-poppins">March 17, 2026</p>
-              </div>
+          <div className="flex items-center gap-4">
+            <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center text-white font-poppins font-semibold text-sm">MA</div>
+            <div>
+              <p className="font-poppins font-semibold text-sm text-[#1c1814]">Mark Abplanalp</p>
+              <p className="font-poppins text-xs text-[#6a5a48]">March 17, 2026</p>
             </div>
           </div>
         </div>
@@ -256,343 +238,284 @@ export default function TheShortlistProblem() {
       <div className="section-divider" />
 
       {/* Article + Sidebar */}
-      <section className="py-16 bg-[#f8f5f0] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <section className="bg-[#f8f5f0] py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-12">
 
-            <article className="lg:col-span-2">
-              <div className="prose-content font-poppins">
+            {/* Article Body */}
+            <article className="lg:col-span-2 prose-content font-poppins text-[#6a5a48]">
+              <p className="text-lg leading-relaxed mb-6">
+                You&apos;re walking to a meeting. You&apos;re wearing a pair of Ray-Ban Meta glasses. You say, out loud, to no one in particular: <em>&quot;Who&apos;s the best estate planning attorney near me?&quot;</em>
+              </p>
+              <p className="leading-relaxed mb-6">
+                You don&apos;t get a list of ten options. You don&apos;t pull out your phone. You don&apos;t open a browser tab.
+              </p>
+              <p className="leading-relaxed mb-6">
+                You hear a name in your ear.
+              </p>
+              <p className="leading-relaxed mb-10">
+                Maybe two names. Probably one. That&apos;s the direction behavior is heading — and the implications for every local professional who lives by inbound are more significant than most people realize.
+              </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  The Search Engine You Know Is Not the One Running Your Leads Now
-                </h2>
+              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">From Scrolling to Asking</h2>
+              <p className="leading-relaxed mb-6">
+                For twenty years, local search worked the same way. Someone typed a query, got a list of ten blue links, and picked one. The game was: be high enough on the list that they picked you.
+              </p>
+              <p className="leading-relaxed mb-6">
+                That game is changing fast.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Sixty percent of Google searches now end without a single click. AI answers the question directly — synthesizing information from multiple sources and delivering a complete response in the search window itself. Google AI Overviews, ChatGPT, Perplexity — they&apos;ve all moved in the same direction. The answer comes to you. You don&apos;t go looking for it.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Wearables accelerate this by an order of magnitude.
+              </p>
+              <p className="leading-relaxed mb-10">
+                When the interface is audio — smart glasses, earbuds, the AI assistant in your car — the entire interaction model changes. Screens invite browsing. Audio demands decisiveness. Nobody wants five names read out loud while they&apos;re walking down the street. The UX pressure on every screenless AI system pushes hard toward one high-confidence recommendation. One name. Maybe two. That&apos;s the entire decision set.
+              </p>
 
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
-                  Ten Blue Links Built a World of Second Chances
-                </h3>
+              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">Why the List Will Compress</h2>
+              <p className="leading-relaxed mb-6">
+                This isn&apos;t speculation about distant future technology. It&apos;s a logical consequence of how AI recommendation systems work under the constraints of audio interfaces and user patience.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Think about what happens when an AI assistant makes a bad recommendation. The user has a terrible experience. They lose trust in the assistant. They stop using it. For the companies building these systems — Apple, Google, Meta, OpenAI — a bad recommendation is an existential risk to the product.
+              </p>
+              <p className="leading-relaxed mb-6">
+                So the system defaults toward caution. It recommends businesses it can verify. Businesses with consistent signals. Businesses whose online presence matches their real-world reputation. Businesses that are, in the language of machine learning, <em>low risk</em>.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Reading out five options is also cognitively exhausting for the user and reputationally risky for the assistant. One high-confidence answer is better product design.
+              </p>
+              <p className="leading-relaxed mb-10">
+                The result is what you might call a winner&apos;s circle: a small set of local businesses in each niche and geography that meet the threshold for safe recommendation. The businesses outside that circle aren&apos;t ranked lower. They&apos;re simply not in the conversation. The circle is not large. For most local niches in most mid-sized markets, it&apos;s probably three to five businesses at most. In smaller markets, it may be one or two.
+              </p>
 
-                <p className="text-[#6a5a48] text-lg leading-relaxed mb-8">
-                  For twenty-five years, the local business owner who wanted digital leads understood one game: get on the first page of Google. Position one was best, but positions two through ten still converted. A user searching &quot;estate planning attorney Coeur d&apos;Alene&quot; would see your firm at position four, scan your title and meta description, and click through. You had a shot even if you weren&apos;t the top result.
-                </p>
+              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">What AI Can&apos;t Fake</h2>
+              <p className="leading-relaxed mb-6">
+                Before going further, it&apos;s worth being direct about something: none of this infrastructure work matters if the business isn&apos;t genuinely good.
+              </p>
+              <p className="leading-relaxed mb-6">
+                AI systems can&apos;t manufacture integrity. They can read reviews, but they can&apos;t write them — and the signal of authentic, consistent five-star reviews across multiple platforms over multiple years is one that no amount of technical optimization can replicate.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Real-world excellence is the foundation. Consistent NAP data across directories. Genuine client reviews that reflect actual service quality. Real expertise demonstrated through content that answers real questions. Honest operations that hold up to scrutiny.
+              </p>
+              <p className="leading-relaxed mb-10">
+                KodeCite&apos;s work — and any legitimate AEO work — is an amplifier, not a disguise. If the business is excellent, the infrastructure makes sure machines can see and trust that excellence. If the business isn&apos;t excellent, better schema markup won&apos;t save it.
+              </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  That game still exists — but a parallel, higher-stakes game has started running alongside it. And in this new game, there is no position four. There is position one, and there is invisible.
-                </p>
+              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">Why Infrastructure Suddenly Matters Again</h2>
+              <p className="leading-relaxed mb-6">
+                When an AI crawler visits your website, it&apos;s operating on a budget. Not a financial budget — a compute budget. These systems are scanning millions of pages. They spend more time and resources on pages that load quickly, parse cleanly, and communicate their content clearly. They spend less time — or skip entirely — pages that are slow, bloated, and hard to read.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Most local professional websites are slow, bloated, and hard to read. Not because the designers did bad work, but because of the platforms they were built on.
+              </p>
+              <p className="leading-relaxed mb-6">
+                WordPress with a heavy theme, a page builder, and a dozen active plugins routinely delivers real-device load times of three to eight seconds on a modern phone. Wix and Squarespace are better, but still built on shared infrastructure with inherent performance ceilings. Real estate website subscription builders are often the worst of all — generic templates shared across thousands of agents, with thin or nonexistent structured data.
+              </p>
+              <p className="leading-relaxed mb-6">
+                The contrast with a purpose-built edge deployment is stark. A Next.js site deployed on Vercel&apos;s global CDN loads the same pages in under a second on a real device — not a simulated benchmark, but actual load time on a 2026 iPhone on WiFi or 5G. That&apos;s not a marginal improvement. It&apos;s the difference between getting read and getting skipped.
+              </p>
+              <p className="leading-relaxed mb-10">
+                The critique here isn&apos;t about brand names. It&apos;s about architecture and incentives. Subscription platforms are built to serve thousands of customers at acceptable quality. They&apos;re not built to be the fastest, cleanest, most machine-readable site in your local market. That&apos;s not their job. It&apos;s yours — if you want to be on the shortlist.
+              </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  The Shortlist Problem: When AI Compresses the List to One
-                </h2>
+              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">The Machine-Readable Local Expert</h2>
+              <p className="leading-relaxed mb-6">
+                Speed is necessary but not sufficient. The other half of the equation is structured data — the information architecture that tells AI systems exactly who you are, what you do, where you operate, and why you&apos;re trustworthy.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Most local professional websites communicate this information to humans. They do it poorly, or not at all, for machines.
+              </p>
+              <p className="leading-relaxed mb-6">
+                <strong className="text-[#1c1814] font-semibold">llms.txt</strong> is a natural-language brief for AI crawlers. Think of it as the cover letter your website sends to every AI system that visits. It explains in plain English who the business is, what it does, where it operates, which pages contain the most valuable information, and how the AI should describe the business to users. Most websites don&apos;t have one. The ones that do have a meaningful advantage in how accurately AI systems represent them.
+              </p>
+              <p className="leading-relaxed mb-6">
+                <strong className="text-[#1c1814] font-semibold">agent.json</strong> is a structured identity file — think of it as DNS for AI agents. It encodes the business as a machine-readable entity: services offered, geographic coverage, contact information, authority signals, and the capabilities an autonomous AI system would need to recommend or interact with the business. As AI agents become more autonomous — shopping for services, booking appointments, answering questions on behalf of users — this file becomes the handshake that makes discovery possible.
+              </p>
+              <p className="leading-relaxed mb-10">
+                <strong className="text-[#1c1814] font-semibold">Per-page JSON-LD schema</strong> is the granular layer. Every page on the site — homepage, service pages, location pages, articles, FAQs — carries custom structured data that encodes the specific content and context of that page. Not copy-pasted site-wide boilerplate, but bespoke markup that tells a machine exactly what it&apos;s looking at. Zero invalid items at launch, verified before the site goes live. Together, these layers make it easy for an AI system to say, with confidence: <em>Call this business.</em>
+              </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  When someone asks ChatGPT &quot;Who is the best estate planning attorney near me in Coeur d&apos;Alene?&quot; — they do not get a list. They get a name. Maybe two. The AI synthesizes everything it knows about attorneys in that geography, weighs its confidence, and responds with a recommendation it stands behind.
-                </p>
+              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">The Condensation Hypothesis</h2>
+              <p className="leading-relaxed mb-6">
+                Here&apos;s the core argument stated plainly.
+              </p>
+              <p className="leading-relaxed mb-6">
+                As AI assistants and screenless wearables go mainstream over the next two to four years, recommendation lists for local services will compress dramatically. The shortlist for any local niche — best estate planning attorney in Coeur d&apos;Alene, best financial advisor in Boise, best real estate agent in Scottsdale — will shrink to one or two names.
+              </p>
+              <p className="leading-relaxed mb-4">That shortlist will be composed of operators who meet two criteria:</p>
+              <p className="leading-relaxed mb-4">
+                First, they run genuinely excellent businesses. Strong reviews, consistent reputation, real expertise, honest operations. This is non-negotiable and cannot be engineered around.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Second, they&apos;ve invested in fast, structured, AI-readable web infrastructure. Sub-second load times. Clean markup. Custom schema. AI identity files. Consistent directory presence. Content written to answer questions, not fill pages.
+              </p>
+              <p className="leading-relaxed mb-6">
+                Businesses that meet both criteria will be recommended. Businesses that meet only one will struggle. Businesses that meet neither will be invisible.
+              </p>
+              <p className="leading-relaxed mb-10">
+                Picture this: you&apos;re wearing smart glasses and ask, <em>&quot;Who&apos;s the best real estate agent near me?&quot;</em> The assistant evaluates the local market in real time. It finds three agents with strong reviews, then checks their web presence. Two have slow, generic subscription sites with thin schema. One has a sub-second Next.js site with custom per-page JSON-LD, an llms.txt brief, and consistent NAP data across every major directory. The choice, from the assistant&apos;s perspective, is easy. You hear one name.
+              </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  This is what we call the Shortlist Problem: the structural reality that AI assistants are not search engines. They are recommendation engines. And recommendation engines have no obligation to show you ten options. They have one job — give the best answer. One name. One business. The lead goes there.
-                </p>
+              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">What This Means for a Local Professional Today</h2>
+              <p className="leading-relaxed mb-6">
+                The practical implications break down into three areas.
+              </p>
+              <p className="leading-relaxed mb-4">
+                <strong className="text-[#1c1814] font-semibold">Your site needs to load instantly.</strong> Not fast. Instantly. Sub-second on a real device. If you&apos;re on a subscription platform, this may not be achievable without rebuilding. That&apos;s an uncomfortable truth, but it&apos;s the truth.
+              </p>
+              <p className="leading-relaxed mb-4">
+                <strong className="text-[#1c1814] font-semibold">Your expertise needs to be machine-readable.</strong> Schema markup is not optional anymore. Custom per-page JSON-LD that encodes your services, location, credentials, and authority isn&apos;t a nice-to-have — it&apos;s the difference between being understood by AI systems and being guessed at.
+              </p>
+              <p className="leading-relaxed mb-4">
+                <strong className="text-[#1c1814] font-semibold">Your directory presence needs to be consistent.</strong> Google Business Profile, Bing Places, Apple Business Connect, Yelp, BBB — NAP data needs to match exactly across every platform. Inconsistencies create uncertainty for AI systems trying to verify your identity. Uncertainty means you don&apos;t make the shortlist.
+              </p>
+              <p className="leading-relaxed mb-10">
+                <strong className="text-[#1c1814] font-semibold">Your content needs to answer questions, not describe services.</strong> Brochure content tells humans what you do. Answer-first content tells AI systems — and the humans asking them — why you&apos;re the right choice for a specific question in a specific context. The format matters as much as the words.
+              </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  For local service businesses — attorneys, financial advisors, real estate agents, med spas, HVAC companies, roofing contractors — this is a market structure shift of historic proportions. The distribution of leads is moving from a relatively democratic list to a winner-take-most shortlist. And the shortlist is forming right now, in most markets, largely uncontested.
-                </p>
+              {/* FAQ / Checklist Section with microdata */}
+              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">How to Become the Name AI Recommends</h2>
+              <p className="leading-relaxed mb-8">A simple checklist for where to start:</p>
 
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
-                  This Is Not the Same as Ranking Well on Google
-                </h3>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  A common response from business owners who hear this for the first time is: &quot;We rank well on Google. Doesn&apos;t that translate?&quot;
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Partially — but not automatically, and not reliably. Google rankings are one input into AI recommendation systems. But AI shortlist selection also depends on structured data depth, machine-readable identity files, review consistency across platforms, entity disambiguation (does the AI know exactly who you are, where you operate, and what you do?), and citation patterns across authoritative sources.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  A business that ranks #1 on Google for its primary keyword, but has no JSON-LD schema, no <code className="bg-[#e8e0d0] px-1.5 py-0.5 rounded text-sm text-[#0a0806] font-mono">llms.txt</code>, no <code className="bg-[#e8e0d0] px-1.5 py-0.5 rounded text-sm text-[#0a0806] font-mono">agent.json</code>, and inconsistent directory listings, can easily lose the AI shortlist to a competitor ranked #4 on Google who has built machine-readable authority infrastructure. These are different games with different rules.
-                </p>
-
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  Wearable AI Makes the Shortlist Problem a Hardware Problem
-                </h2>
-
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
-                  The Interface Itself Forces a Single Answer
-                </h3>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  The Shortlist Problem is already playing out on smartphones and browsers. But the forces driving it are about to become physically embedded in the next generation of devices.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  OpenAI&apos;s acquisition of Jony Ive&apos;s io studio for $6.4 billion signals an intent to build a screenless AI device — one designed to sit in a pocket or on a wrist and respond to spoken queries with spoken answers. Hyperscalers are collectively spending approximately $700 billion in AI infrastructure capital expenditure in 2026. The hardware is coming.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  When someone asks a screenless AI device &quot;Find me a good financial advisor near Spokane,&quot; there is no screen to display a list. There is a voice response. That voice response names one firm — the one the AI judges most credible, most structurally complete, most authoritative for that category and geography.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  The Shortlist Problem becomes a winner-take-all problem at the interface level. The second-place result does not exist in a voice response. It simply does not come up.
-                </p>
-
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
-                  Smart Glasses and Spatial AI Operate the Same Way
-                </h3>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Meta&apos;s Ray-Ban glasses, Apple Vision Pro, and the next generation of spatial computing devices share the same compression dynamic. Overlaid recommendations — the kind that appear in your field of vision as you walk past a business district — will show one or two highlighted options, not a full list. The real estate in a human&apos;s visual field is finite. AI will curate accordingly.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  The businesses that have established machine-readable authority before mainstream hardware adoption are the businesses that appear in those overlays. The businesses that haven&apos;t simply don&apos;t. There is no middle ground in the spatial interface.
-                </p>
-
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  What Determines Who Makes the Shortlist
-                </h2>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  AI recommendation systems do not make arbitrary choices. They apply consistent weighting to available signals. Understanding those signals is understanding how to earn the shortlist position.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  The core signals are:
-                </p>
-
-                <ul className="space-y-4 mb-8">
-                  {[
-                    { label: 'Structured data completeness', text: 'JSON-LD schema that tells AI exactly who you are, what services you offer, where you operate, and what makes you credible. The more precise and accurate, the more confidently the AI can recommend you.' },
-                    { label: 'Machine-readable identity files', text: 'llms.txt and agent.json serve as digital ID cards for AI agents. Businesses without them force AI to guess. Businesses with them give AI a clear, verified signal to work from.' },
-                    { label: 'Citation consistency', text: 'AI trains on data from across the web. Consistent Name, Address, Phone, and URL information across GBP, Bing Places, Apple Business Connect, Yelp, and BBB reinforces entity confidence. Inconsistency creates ambiguity — and ambiguous businesses get skipped.' },
-                    { label: 'Review quality and recency', text: 'AI systems read reviews as social proof signals. Volume, recency, and specificity of reviews all factor into shortlist decisions. Generic five-star reviews carry less weight than detailed, location- and service-specific reviews.' },
-                    { label: 'Content depth and expertise signals', text: 'Pages that demonstrate real expertise — specific case types, geographic knowledge, service details — give AI more material to work from when constructing a recommendation. Thin, generic content provides weak signals.' },
-                    { label: 'Site performance', text: 'Sub-second load times on real devices signal technical credibility to AI systems that weight Core Web Vitals as proxies for overall site quality.' },
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#a0723a] flex-shrink-0 mt-2.5" />
-                      <p className="text-[#6a5a48] leading-relaxed">
-                        <strong className="text-[#0a0806]">{item.label}:</strong> {item.text}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  The shortlist is not won by one signal. It is won by the business that stacks all of them — completely and consistently — while competitors stack none of them.
-                </p>
-
-                {/* Warning Callout */}
-                <div className="bg-[rgba(160,114,58,0.08)] border border-[rgba(160,114,58,0.3)] rounded-xl p-6 mb-10">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-[rgba(160,114,58,0.15)] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-[#a0723a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="font-poppins font-semibold text-[#0a0806] mb-2">The Window Is Narrowing by the Month</p>
-                      <p className="text-[#6a5a48] text-sm leading-relaxed">
-                        In most local markets in early 2026, the AI shortlist for most professional service categories is still largely uncontested. Most local businesses have no structured data, no llms.txt, no agent.json. The shortlist is available to claim. But PE-backed operators, regional franchises, and early-mover independents are beginning to build this infrastructure. When one competitor in your category and market builds it — you get displaced. The cost of being first is far lower than the cost of catching up.
-                      </p>
-                    </div>
+              <div itemScope itemType="https://schema.org/FAQPage">
+                <div className="mb-6" itemScope itemType="https://schema.org/Question">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                    Audit your real-world reputation first.
+                  </h3>
+                  <div itemScope itemType="https://schema.org/Answer">
+                    <p className="leading-relaxed" itemProp="text">
+                      Reviews, consistency, service quality. No infrastructure work matters if this foundation is weak.
+                    </p>
                   </div>
                 </div>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  The Professional Service Categories Most Exposed to the Shortlist Problem
-                </h2>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Not every business category faces equal risk from the Shortlist Problem. The categories most exposed are those where AI recommendation carries high trust weight — high-value, high-consideration decisions where consumers are actively looking for a confident authority to trust:
-                </p>
-
-                <ul className="space-y-3 mb-8">
-                  {[
-                    'Estate planning, family law, and real estate attorneys',
-                    'Financial advisors and wealth management firms',
-                    'Real estate agents and relocation specialists',
-                    'Med spas, dermatology, and elective procedure providers',
-                    'HVAC, roofing, and high-ticket home services',
-                    'Orthodontists, cosmetic dentists, and specialty dental practices',
-                    'Commercial insurance agents and independent brokers',
-                    'Veterinary practices and specialty pet care providers',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#a0723a] flex-shrink-0 mt-2.5" />
-                      <p className="text-[#6a5a48] leading-relaxed">{item}</p>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  What these categories share: consumers want expertise, trust, and a confident recommendation before they make contact. That is exactly what AI is designed to provide. For these businesses, AI shortlist position is not a marketing advantage — it is a pipeline survival question.
-                </p>
-
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  Independent Businesses Have an Advantage — If They Move First
-                </h2>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Here is the counterintuitive reality of the Shortlist Problem: large national chains are not automatically winning it. AI recommendation systems reward genuine local expertise, specific geographic authority, and authentic community depth. A national firm with a generic &quot;Spokane office&quot; page and boilerplate schema does not automatically outrank a local firm that has properly structured 20 years of real local experience.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  A local estate attorney who has handled 800 Idaho probate cases has material that no national competitor can fake. An HVAC company that has serviced every neighborhood in Post Falls and Coeur d&apos;Alene for 15 winters has geographic depth that a franchise location opened last year cannot replicate.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  The question is whether that authentic local authority is encoded in a format AI can read and trust. If it exists only in the owner&apos;s head, in unsigned Yelp reviews, and in a five-year-old WordPress site with no schema — AI cannot access it. If it is structured into JSON-LD schema, expressed in a machine-readable <code className="bg-[#e8e0d0] px-1.5 py-0.5 rounded text-sm text-[#0a0806] font-mono">llms.txt</code>, declared in <code className="bg-[#e8e0d0] px-1.5 py-0.5 rounded text-sm text-[#0a0806] font-mono">agent.json</code>, and backed by a sub-second site — it becomes the foundation of a shortlist position that corporate money cannot easily dislodge.
-                </p>
-
-                {/* FAQ with HTML microdata */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-6">
-                  How to Become the Name AI Recommends
-                </h2>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Earning the shortlist position is not a single action — it is an infrastructure build. The businesses that complete it now, while most competitors haven&apos;t started, claim a compounding advantage that becomes harder to dislodge with every month that passes.
-                </p>
-
-                <div itemScope itemType="https://schema.org/FAQPage" className="space-y-6 mb-10">
-
-                  <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                    <h3 itemProp="name" className="font-poppins font-semibold text-lg text-[#0a0806] mb-3">
-                      What is the Shortlist Problem for local businesses?
-                    </h3>
-                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text" className="text-[#6a5a48] leading-relaxed text-sm">
-                        The Shortlist Problem is the structural reality that AI assistants — unlike traditional search engines — compress their recommendations to one or two businesses per category per geography. Where Google once served ten blue links, ChatGPT, Perplexity, and voice-based AI agents give a single confident answer. The businesses that make that shortlist capture the lead. Everyone else is invisible.
-                      </p>
-                    </div>
+                <div className="mb-6" itemScope itemType="https://schema.org/Question">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                    Benchmark your site speed.
+                  </h3>
+                  <div itemScope itemType="https://schema.org/Answer">
+                    <p className="leading-relaxed" itemProp="text">
+                      Run your homepage through PageSpeed Insights. If your mobile score is below 70 or your load time is above two seconds on desktop, you have a structural problem.
+                    </p>
                   </div>
-
-                  <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                    <h3 itemProp="name" className="font-poppins font-semibold text-lg text-[#0a0806] mb-3">
-                      How does AI decide which local business to recommend?
-                    </h3>
-                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text" className="text-[#6a5a48] leading-relaxed text-sm">
-                        AI systems synthesize signals from structured data (JSON-LD schema), machine-readable identity files (llms.txt and agent.json), review consistency, citation frequency across authoritative directories, website performance, and content depth. The business that has encoded the most accurate, machine-readable authority signals for its category and geography earns the shortlist position. Unstructured businesses with slow, generic websites are skipped — even if they have decades of local experience.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                    <h3 itemProp="name" className="font-poppins font-semibold text-lg text-[#0a0806] mb-3">
-                      Why does wearable AI make the Shortlist Problem worse for local businesses?
-                    </h3>
-                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text" className="text-[#6a5a48] leading-relaxed text-sm">
-                        Wearable and screenless AI devices — glasses, earbuds, and devices like the anticipated OpenAI hardware — have no room to display a list of results. The interface itself forces a single-answer response: &quot;The best estate planning attorney near you is [name].&quot; There is no second position, no organic result below the fold, no chance to scroll. The Shortlist Problem becomes a winner-take-all problem at the hardware level.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                    <h3 itemProp="name" className="font-poppins font-semibold text-lg text-[#0a0806] mb-3">
-                      Can an independent local business make the AI shortlist over a national chain?
-                    </h3>
-                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text" className="text-[#6a5a48] leading-relaxed text-sm">
-                        Yes — and independent businesses have structural advantages that corporate chains cannot easily replicate. AI systems increasingly reward genuine local expertise, hyper-specific geographic authority, and authentic community depth. A local attorney with 20 years of Idaho estate cases, properly structured schema and llms.txt declaring that expertise, can outrank a national firm&apos;s generic local page. The key is translating authentic local authority into machine-readable signals before competitors do.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                    <h3 itemProp="name" className="font-poppins font-semibold text-lg text-[#0a0806] mb-3">
-                      What&apos;s the first step to becoming the AI-recommended business in my market?
-                    </h3>
-                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text" className="text-[#6a5a48] leading-relaxed text-sm">
-                        Start with a free AEO audit to understand exactly how your business currently appears (or fails to appear) in ChatGPT, Perplexity, Google AI Overviews, and Gemini. This gives you a baseline. From there, the core build requires a high-performance Next.js website, per-page JSON-LD schema encoding your specific services and geography, llms.txt and agent.json declaring your machine-readable identity, and directory scaffolding that creates consistent citations across GBP, Bing Places, Apple Business Connect, and BBB. The businesses that complete this infrastructure while competitors are still debating it claim the shortlist position first.
-                      </p>
-                    </div>
-                  </div>
-
                 </div>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  The Shortlist Problem is not a future concern. It is an active dynamic in every local market in 2026. The AI shortlist for your category in your geography is either going to have your name on it — or a competitor&apos;s. The difference is who builds the infrastructure first.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  <Link href="https://kodecite.ai" className="text-[#1a56db] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build the structured authority infrastructure required to earn and hold the AI shortlist position in their category. Start with a{' '}
-                  <Link href="/contact" className="text-[#1a56db] hover:underline">free AEO Audit</Link>{' '}
-                  — a no-obligation review of exactly how your business appears today in ChatGPT, Perplexity, Google AI Overviews, and Gemini, with a specific roadmap for earning the shortlist.
-                </p>
-
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[#a0723a] font-semibold font-poppins hover:text-[#8a5f2e] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
+                <div className="mb-6" itemScope itemType="https://schema.org/Question">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                    Check your schema.
+                  </h3>
+                  <div itemScope itemType="https://schema.org/Answer">
+                    <p className="leading-relaxed" itemProp="text">
+                      Use Google&apos;s Rich Results Test. If you have no structured data, or invalid items, AI systems are guessing about your business.
+                    </p>
+                  </div>
                 </div>
+
+                <div className="mb-6" itemScope itemType="https://schema.org/Question">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                    Verify your directory consistency.
+                  </h3>
+                  <div itemScope itemType="https://schema.org/Answer">
+                    <p className="leading-relaxed" itemProp="text">
+                      Search your business name across GBP, Bing, Apple Maps, and Yelp. Any mismatch in NAP data needs to be corrected.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mb-6" itemScope itemType="https://schema.org/Question">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                    Evaluate your platform honestly.
+                  </h3>
+                  <div itemScope itemType="https://schema.org/Answer">
+                    <p className="leading-relaxed" itemProp="text">
+                      If you&apos;re on a subscription builder and you&apos;re serious about AI visibility, understand what it can and can&apos;t deliver. Some platforms have hard ceilings on performance and schema depth that can&apos;t be engineered around without rebuilding on a modern edge chassis.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mb-10" itemScope itemType="https://schema.org/Question">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                    Add llms.txt.
+                  </h3>
+                  <div itemScope itemType="https://schema.org/Answer">
+                    <p className="leading-relaxed" itemProp="text">
+                      If you have access to your site&apos;s root directory, this is one of the highest-leverage additions you can make today. A clear, honest brief for AI crawlers about who you are and what you do.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="leading-relaxed mb-6">
+                The businesses that will dominate local AI recommendations over the next three years are largely the ones making these investments now — while the infrastructure is still novel and the competition is still asleep.
+              </p>
+              <p className="leading-relaxed mb-10">
+                The shortlist is forming. The question is whether your name is on it.
+              </p>
+
+              {/* Closing CTA */}
+              <div className="bg-[#1c1814] rounded-xl p-8 mt-12">
+                <p className="font-poppins text-white leading-relaxed">
+                  <strong className="text-[#a0723a]">Not sure where you stand?</strong>{' '}
+                  <Link href="/contact" className="text-[#1a56db] underline hover:text-blue-400 transition-colors">
+                    Get a free AI Scaffolding Audit
+                  </Link>{' '}
+                  — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews, and what it would take to get you on the shortlist.
+                </p>
               </div>
             </article>
 
             {/* Sidebar */}
-            <aside className="lg:col-span-1">
+            <aside className="lg:col-span-1 mt-12 lg:mt-0">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="eyebrow mb-4 text-xs">THE SHORTLIST REALITY</p>
+                {/* Stat Card */}
+                <div className="bg-[#f2ede4] border border-[#e8e0d4] rounded-xl p-6">
+                  <p className="font-poppins text-xs font-semibold uppercase tracking-widest text-[#a0723a] mb-4">The Shortlist Reality</p>
                   <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">1–2</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">businesses AI recommends per local category — not ten</p>
-                    </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">&lt;1%</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">of local businesses have deployed llms.txt or agent.json</p>
-                    </div>
                     <div>
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">2027</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">anticipated mainstream wearable AI hardware — shortlists form before devices ship</p>
+                      <p className="font-playfair text-4xl text-[#1c1814] font-bold">1–2</p>
+                      <p className="font-poppins text-sm text-[#6a5a48] mt-1">businesses AI recommends per local category — not ten</p>
+                    </div>
+                    <div className="border-t border-[#e8e0d4] pt-4">
+                      <p className="font-playfair text-4xl text-[#1c1814] font-bold">&lt;1%</p>
+                      <p className="font-poppins text-sm text-[#6a5a48] mt-1">of local businesses have deployed llms.txt or agent.json</p>
+                    </div>
+                    <div className="border-t border-[#e8e0d4] pt-4">
+                      <p className="font-playfair text-4xl text-[#1c1814] font-bold">2027</p>
+                      <p className="font-poppins text-sm text-[#6a5a48] mt-1">anticipated mainstream wearable AI hardware — shortlists form before devices ship</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(160,114,58,0.3)] p-6">
-                  <p className="font-poppins font-bold text-[#0a0806] text-lg mb-3 leading-snug">
-                    Is Your Business on the Shortlist — or Off It?
-                  </p>
-                  <p className="text-[#6a5a48] text-sm font-poppins leading-relaxed mb-5">
-                    Find out exactly how AI currently describes your business — and what it would take to earn the shortlist position in your market. No obligation.
-                  </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                {/* CTA Card */}
+                <div className="bg-[#1c1814] rounded-xl p-6">
+                  <p className="font-poppins text-xs font-semibold uppercase tracking-widest text-[#a0723a] mb-3">Free Audit</p>
+                  <p className="font-playfair text-xl text-white mb-3">Is Your Business on the Shortlist?</p>
+                  <p className="font-poppins text-sm text-[#a09080] mb-5 leading-relaxed">Find out exactly how AI currently describes your business — and what it would take to earn the shortlist position in your market.</p>
+                  <Link
+                    href="/contact"
+                    className="block text-center bg-[#a0723a] hover:bg-[#8a6030] text-white font-poppins font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
+                  >
                     Get Your Free AEO Audit
                   </Link>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
-                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
+                {/* Related Reading */}
+                <div className="bg-[#f2ede4] border border-[#e8e0d4] rounded-xl p-6">
+                  <p className="font-poppins text-xs font-semibold uppercase tracking-widest text-[#a0723a] mb-4">Related Reading</p>
                   <div className="space-y-4">
                     <Link href="/blog/false-legacy-layer-ai-visibility" className="block group">
-                      <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
-                        The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow
-                      </p>
-                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">9 min read</p>
+                      <p className="font-poppins text-sm font-semibold text-[#1c1814] group-hover:text-[#a0723a] transition-colors leading-snug">The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow</p>
+                      <p className="font-poppins text-xs text-[#6a5a48] mt-1">9 min read</p>
                     </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/why-now" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
-                          Why Now: The AI Land Grab Is Already Underway
-                        </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">7 min read</p>
-                      </Link>
-                    </div>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
+                    <div className="border-t border-[#e8e0d4] pt-4">
                       <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
-                          The 2026 Digital Land Rush: Why Waiting Could Cost You Everything
-                        </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">8 min read</p>
+                        <p className="font-poppins text-sm font-semibold text-[#1c1814] group-hover:text-[#a0723a] transition-colors leading-snug">The 2026 Digital Land Rush: Why Waiting Could Cost You Everything</p>
+                        <p className="font-poppins text-xs text-[#6a5a48] mt-1">8 min read</p>
                       </Link>
                     </div>
                   </div>
@@ -607,22 +530,27 @@ export default function TheShortlistProblem() {
 
       <div className="section-divider" />
 
-      <section className="py-20 bg-[#1c1814] px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">THE SHORTLIST IS FORMING NOW</p>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-[rgba(240,232,216,0.9)] mb-4">
+      {/* Bottom CTA */}
+      <section className="bg-[#1c1814] py-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="font-poppins text-xs font-semibold uppercase tracking-widest text-[#a0723a] mb-4">The Shortlist Is Forming Now</p>
+          <h2 className="font-playfair text-4xl md:text-5xl text-white mb-6 leading-tight">
             Claim Your Position Before a Competitor Does
           </h2>
-          <p className="text-[rgba(240,232,216,0.6)] font-poppins mb-8 leading-relaxed">
-            The AI shortlist for your category in your market is still largely uncontested. Start with a{' '}
-            <Link href="/contact" className="text-[#a0723a] hover:underline">free AEO Audit</Link>{' '}
-            and find out exactly what it would take to become the business AI recommends.
+          <p className="font-poppins text-[#a09080] text-lg mb-10 leading-relaxed">
+            The AI shortlist for your category in your market is still largely uncontested. Start with a free AEO Audit and find out exactly what it would take to become the business AI recommends.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+            <Link
+              href="/contact"
+              className="bg-[#a0723a] hover:bg-[#8a6030] text-white font-poppins font-semibold py-4 px-8 rounded-lg transition-colors"
+            >
               Get Your Free AEO Audit
             </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
+            <Link
+              href="/blog"
+              className="border border-[#6a5a48] hover:border-[#a09080] text-[#a09080] hover:text-white font-poppins font-semibold py-4 px-8 rounded-lg transition-colors"
+            >
               Read More Articles
             </Link>
           </div>
