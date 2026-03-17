@@ -69,10 +69,10 @@ const blogPostingSchema = {
     { '@type': 'Thing', name: 'AI Recommendation Shortlist' },
   ],
   mentions: [
-    { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-    { '@type': 'SoftwareApplication', name: 'Perplexity' },
-    { '@type': 'SoftwareApplication', name: 'Google AI Overviews' },
-    { '@type': 'Product', name: 'Ray-Ban Meta', manufacturer: { '@type': 'Organization', name: 'Meta' } },
+    { '@type': 'Thing', name: 'ChatGPT' },
+    { '@type': 'Thing', name: 'Perplexity' },
+    { '@type': 'Thing', name: 'Google AI Overviews' },
+    { '@type': 'Thing', name: 'Ray-Ban Meta' },
     { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
     { '@type': 'Organization', name: 'Vercel', url: 'https://vercel.com' },
   ],
@@ -377,50 +377,42 @@ export default function TenMillisecondAdvantagePage() {
               </p>
               <p className="leading-relaxed mb-4">The Four-Layer Authority Engine that KodeCite builds into every site:</p>
 
-              <div itemScope itemType="https://schema.org/FAQPage">
+              <div>
 
-                <div className="mb-6" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-6">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Layer 1 — Edge Speed
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      Next.js deployed on Vercel&apos;s global edge network. Real-device load times under one second. llms.txt and agent.json cached globally for 10–50ms response times.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Next.js deployed on Vercel&apos;s global edge network. Real-device load times under one second. llms.txt and agent.json cached globally for 10–50ms response times.
+                  </p>
                 </div>
 
-                <div className="mb-6" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-6">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Layer 2 — Schema Markup
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      Custom per-page JSON-LD on every page — homepage, services, locations, articles, FAQs. Zero invalid items at launch, verified before go-live.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Custom per-page JSON-LD on every page — homepage, services, locations, articles, FAQs. Zero invalid items at launch, verified before go-live.
+                  </p>
                 </div>
 
-                <div className="mb-6" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-6">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Layer 3 — llms.txt
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      Your natural-language brief for AI crawlers. Who you are, what you do, where you operate, which pages matter most. The cover letter your site sends to every AI agent that visits.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Your natural-language brief for AI crawlers. Who you are, what you do, where you operate, which pages matter most. The cover letter your site sends to every AI agent that visits.
+                  </p>
                 </div>
 
-                <div className="mb-10" itemScope itemType="https://schema.org/Question">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
+                <div className="mb-10">
+                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
                     Layer 4 — agent.json
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
-                    <p className="leading-relaxed" itemProp="text">
-                      Your machine-readable identity file. The structured declaration that tells AI agents exactly how to describe you, recommend you, and eventually transact on your behalf.
-                    </p>
-                  </div>
+                  <p className="leading-relaxed">
+                    Your machine-readable identity file. The structured declaration that tells AI agents exactly how to describe you, recommend you, and eventually transact on your behalf.
+                  </p>
                 </div>
 
               </div>
