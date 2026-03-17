@@ -87,6 +87,76 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
+      {/* ===== WHO THIS IS FOR ===== */}
+      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#f8f5f0' }}>
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-4">BUILT FOR</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-10 leading-tight" style={{ color: '#0a0806' }}>
+              Who This Is For
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+              {[
+                'Local Attorneys',
+                'Independent Financial Advisors',
+                'Real Estate Agents',
+                'Med Spas & Aesthetic Practices',
+                'Specialist Service Businesses',
+              ].map((item, i) => (
+                <span
+                  key={i}
+                  className="font-poppins font-medium text-sm md:text-base px-5 py-2.5 rounded-full"
+                  style={{ background: '#ffffff', border: '1.5px solid rgba(160,114,58,0.3)', color: '#0a0806' }}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== IN 10 SECONDS ===== */}
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">IN 10 SECONDS</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-12 leading-[1.05]" style={{ color: '#0a0806' }}>
+              Here&apos;s what we actually do
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <div className="space-y-6">
+              {[
+                'Rebuild your site on a sub-1s Next.js + Vercel edge chassis — no WordPress, no templates, no rented platforms.',
+                'Encode your expertise and location in AI-readable schema and identity files so AI systems cite you by name.',
+                'Ship an owned asset — your code, your domain, your hosting account — built to be cited by AI for years.',
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4">
+                  <div
+                    className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center font-poppins font-bold text-sm"
+                    style={{ background: 'rgba(160,114,58,0.12)', color: '#a0723a', minWidth: '2rem' }}
+                  >
+                    {i + 1}
+                  </div>
+                  <p className="font-poppins text-base md:text-lg leading-relaxed pt-0.5" style={{ color: '#6a5a48' }}>{item}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
       {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
       <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
         <div className="max-w-6xl mx-auto">
@@ -213,6 +283,33 @@ export default function HomePage() {
               </table>
             </div>
           </ScrollReveal>
+
+          {/* ===== YOU OWN THE ASSET ===== */}
+          <ScrollReveal delay={250}>
+            <div className="mt-10 p-8 md:p-10 rounded-2xl" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
+              <p className="eyebrow mb-3">OWNERSHIP</p>
+              <h3 className="font-playfair text-2xl md:text-3xl mb-6 leading-tight" style={{ color: '#0a0806' }}>
+                You Own the Asset
+              </h3>
+              <div className="space-y-3 mb-6">
+                {[
+                  'Built on your own Vercel account — no platform lock-in, ever.',
+                  'Custom Next.js codebase in your GitHub — move it, fork it, extend it.',
+                  'One-time build. Ongoing content and optimization is available, never mandatory.',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-poppins text-sm md:text-base leading-relaxed" style={{ color: '#6a5a48' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="font-poppins text-sm md:text-base font-medium" style={{ color: '#0a0806' }}>
+                Subscription builders rent you a template. KodeCite delivers an owned performance asset.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -277,6 +374,19 @@ export default function HomePage() {
             ))}
           </div>
 
+          {/* CTA — KodeCite Standard */}
+          <ScrollReveal delay={280}>
+            <div className="text-center mb-6">
+              <a
+                href="#kodecite-standard"
+                className="font-poppins font-semibold text-base inline-flex items-center gap-2 pb-0.5 transition-colors"
+                style={{ color: '#a0723a', borderBottom: '1px solid rgba(160,114,58,0.4)' }}
+              >
+                → See the KodeCite Standard
+              </a>
+            </div>
+          </ScrollReveal>
+
           {/* CTA */}
           <ScrollReveal delay={300}>
             <div className="text-center">
@@ -290,6 +400,52 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== KODECITE STANDARD ===== */}
+      <section id="kodecite-standard" className="py-24 md:py-32 px-4 relative overflow-hidden" style={{ backgroundColor: '#1c1814' }}>
+        <div className="absolute top-0 left-0 right-0" style={{ height: '4px', background: 'linear-gradient(90deg, #3e1f08 0%, #7a5228 15%, #a0723a 30%, #c8945a 50%, #a0723a 70%, #7a5228 85%, #3e1f08 100%)' }} />
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>NON-NEGOTIABLES</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-4 leading-[1.05]" style={{ color: '#f8f5f0' }}>
+              The KodeCite Standard
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={120}>
+            <p className="font-poppins text-lg text-center mb-12 leading-relaxed" style={{ color: 'rgba(240,232,216,0.7)' }}>
+              Every build ships with all of this. No exceptions.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <div className="space-y-4">
+              {[
+                'AI identity files (llms.txt + agent.json) deployed on every build — your digital ID for the agent era.',
+                'Sub-1s real-device load time on a modern iPhone — verified before go-live, not simulated.',
+                'Custom per-page JSON-LD schema — homepage, services, locations, articles, and FAQ — never copy-pasted site-wide.',
+                'Zero invalid schema items at launch — machine-verified before delivery.',
+                'Clean NAP and directory scaffolding — Google Business Profile, Bing Places, Apple Business Connect, Yelp, BBB.',
+                'Sitemap.xml generated and submitted to Google Search Console and Bing at launch.',
+                'You own the code, domain, and hosting account outright — we hand over the keys when we\'re done.',
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-4 p-5 rounded-xl"
+                  style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(160,114,58,0.15)' }}
+                >
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <p className="font-poppins text-sm md:text-base leading-relaxed" style={{ color: 'rgba(240,232,216,0.85)' }}>{item}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
@@ -572,7 +728,7 @@ export default function HomePage() {
       <section id="audit" className="py-24 md:py-36 px-4" style={{ backgroundColor: '#f8f5f0' }}>
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="eyebrow mb-5">YOUR FIRST STEP</p>
+            <p className="eyebrow mb-5">FREE AI SCAFFOLDING AUDIT</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] mb-7 leading-[1.05]" style={{ color: '#0a0806' }}>
@@ -593,10 +749,10 @@ export default function HomePage() {
           <ScrollReveal delay={200}>
             <div className="text-left max-w-xl mx-auto mb-12 space-y-4">
               {[
-                'How your business currently appears in ChatGPT, Perplexity, and Google AI Overviews',
-                'Your PageSpeed score vs. your top three competitors',
-                'A plain-English breakdown of your schema gaps',
-                'One specific action you can take today — whether you work with us or not',
+                'How your business currently appears in ChatGPT, Perplexity, and Google AI Overviews — in plain English.',
+                'Your PageSpeed score benchmarked against your top three local competitors.',
+                'A plain-English breakdown of your schema gaps and what AI can\'t read about you right now.',
+                'One specific action you can implement today — whether you work with us or not.',
               ].map((item, i) => (
                 <div key={i} className="checklist-item">
                   <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
