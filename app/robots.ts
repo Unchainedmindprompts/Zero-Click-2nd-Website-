@@ -48,6 +48,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://kodecite.ai/sitemap.xml',
+    sitemap: 'https://www.kodecite.ai/sitemap.xml',
   }
 }
