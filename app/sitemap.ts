@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://kodecite.ai';
+  const baseUrl = 'https://www.kodecite.ai';
   const currentDate = new Date().toISOString();
 
   return [
