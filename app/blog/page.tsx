@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'the-shortlist-problem',
+    category: 'AI Search Strategy',
+    title: 'The Shortlist Problem: Why AI Will Recommend One Local Business — and Ignore Everyone Else',
+    excerpt:
+      "Traditional search shows 10 results. AI gives one or two. Here's why local businesses face a winner-take-all shortlist problem — and what you can do about it before the shortlist forms in your market.",
+    date: 'March 17, 2026',
+    readTime: '10 min read',
+  },
+  {
     slug: 'the-ai-search-stack-nobody-is-building-for-small-businesses',
     category: 'AEO & AI Search',
     title: 'The AI Search Stack Nobody Is Building for Small Businesses — And Why That\'s About to Change',
