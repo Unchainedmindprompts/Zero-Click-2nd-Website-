@@ -212,51 +212,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="section-divider" />
-
-      {/* Stats + CTA */}
-      <section className="py-24 bg-[#1c1814] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {[
-              { value: '2,000+', label: 'Hours researching AI systems' },
-              { value: '0', label: 'Local businesses with schema found' },
-              { value: '100%', label: 'Free AI Scaffolding Audit' },
-              { value: '0', label: 'Invalid schema items ever' },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
-                <div className="stat-block rounded-xl">
-                  <div className="font-playfair font-bold text-4xl text-[#1a56db] mb-2">{stat.value}</div>
-                  <div className="text-[rgba(240,232,216,0.6)] text-sm font-poppins">{stat.label}</div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={200}>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-[rgba(240,232,216,0.6)] text-lg font-poppins leading-relaxed mb-8">
-                Based in Post Falls, Idaho — serving businesses across the United States. Every client
-                gets direct access, honest communication, and results that can be measured in days,
-                not months.
-              </p>
-              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-                Let&apos;s Build Something Together
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={300}>
-            <div className="max-w-2xl mx-auto text-center mt-16 pt-12 border-t border-[rgba(240,232,216,0.1)]">
-              <p className="text-[rgba(240,232,216,0.82)] font-poppins text-base leading-relaxed">
-                — Mark Abplanalp<br />
-                <span className="text-[#a0723a] font-semibold">Founder, KodeCite.AI</span><br />
-                Post Falls, Idaho
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
     </>
   );
 }
