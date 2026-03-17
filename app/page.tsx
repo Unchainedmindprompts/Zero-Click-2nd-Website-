@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -106,13 +107,9 @@ export default function HomePage() {
                 'Real Estate Agents',
                 'Med Spas & Aesthetic Practices',
                 'Specialist Service Businesses',
-              ].map((item, i) => (
-                <span
-                  key={i}
-                  className="font-poppins font-medium text-sm md:text-base px-5 py-2.5 rounded-full"
-                  style={{ background: '#ffffff', border: '1.5px solid rgba(160,114,58,0.3)', color: '#0a0806' }}
-                >
-                  {item}
+              ].map((item, i, arr) => (
+                <span key={i} className="font-poppins font-medium text-sm md:text-base" style={{ color: '#0a0806' }}>
+                  {item}{i < arr.length - 1 && <span style={{ color: '#a0723a', margin: '0 0.5rem' }}>·</span>}
                 </span>
               ))}
             </div>
@@ -136,9 +133,9 @@ export default function HomePage() {
           <ScrollReveal delay={150}>
             <div className="space-y-6">
               {[
-                'Rebuild your site on a sub-1s Next.js + Vercel edge chassis — no WordPress, no templates, no rented platforms.',
-                'Encode your expertise and location in AI-readable schema and identity files so AI systems cite you by name.',
-                'Ship an owned asset — your code, your domain, your hosting account — built to be cited by AI for years.',
+                { bold: 'Rebuild', rest: ' your site on a sub-1s Next.js + Vercel edge chassis. No WordPress. No templates. No rented platforms.' },
+                { bold: 'Encode', rest: ' your expertise and location in AI-readable schema and identity files so AI systems cite you by name.' },
+                { bold: 'Ship', rest: ' an owned asset — your code, your domain, your hosting account — built to be cited by AI for years.' },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4">
                   <div
@@ -147,7 +144,9 @@ export default function HomePage() {
                   >
                     {i + 1}
                   </div>
-                  <p className="font-poppins text-base md:text-lg leading-relaxed pt-0.5" style={{ color: '#6a5a48' }}>{item}</p>
+                  <p className="font-poppins text-base md:text-lg leading-relaxed pt-0.5" style={{ color: '#6a5a48' }}>
+                    <strong style={{ color: '#0a0806' }}>{item.bold}</strong>{item.rest}
+                  </p>
                 </div>
               ))}
             </div>
@@ -236,7 +235,7 @@ export default function HomePage() {
                 The businesses trying to solve this right now are falling into one of two traps — and spending real money to do it.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools. Built for Fortune 500 marketing departments with dedicated teams and $3,000–$10,000+ monthly budgets. They optimize existing infrastructure — they don&apos;t build it. If your foundation is slow, bloated, and AI-invisible, adding enterprise reporting tools on top doesn&apos;t fix the foundation. It just gives you better visibility into a problem you still can&apos;t solve.
+                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools. Built for Fortune 500 marketing departments with dedicated teams and $3,000–$10,000+ monthly budgets. They optimize existing infrastructure — they don&apos;t build it. If your foundation is slow, bloated, and AI-invisible, adding enterprise reporting tools on top doesn&apos;t fix the foundation. It just gives you better data on a problem you still can&apos;t fix.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
                 <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies. Real estate website builders. Monthly SaaS site tools. They promise simplicity. What they deliver is shared infrastructure with real-device load times of 3 to 8 seconds on mobile — while our builds deliver the same pages in under a second on a modern iPhone on WiFi or 5G. That&apos;s not a benchmark number. That&apos;s what your visitors and AI crawlers actually experience. Retrofitting a slow, bloated subscription site for AI discoverability is like installing a jet engine in a station wagon. The engine doesn&apos;t fit. The frame wasn&apos;t built for it.
@@ -426,15 +425,14 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="space-y-4">
-              {[
+              {([
                 'AI identity files (llms.txt + agent.json) deployed on every build — your digital ID for the agent era.',
                 'Sub-1s real-device load time on a modern iPhone — verified before go-live, not simulated.',
                 'Custom per-page JSON-LD schema — homepage, services, locations, articles, and FAQ — never copy-pasted site-wide.',
                 'Zero invalid schema items at launch — machine-verified before delivery.',
-                'Clean NAP and directory scaffolding — Google Business Profile, Bing Places, Apple Business Connect, Yelp, BBB.',
-                'Sitemap.xml generated and submitted to Google Search Console and Bing at launch.',
+                (<><strong style={{ color: '#f8f5f0' }}>Launch indexing checklist</strong> — directory scaffolding across GBP, Bing Places, Apple Business Connect, Yelp, and BBB, plus sitemap.xml submitted to Google Search Console and Bing at go-live.</>),
                 'You own the code, domain, and hosting account outright — we hand over the keys when we\'re done.',
-              ].map((item, i) => (
+              ] as React.ReactNode[]).map((item, i) => (
                 <div
                   key={i}
                   className="flex items-start gap-4 p-5 rounded-xl"
@@ -543,7 +541,7 @@ export default function HomePage() {
               <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: '#6a5a48' }}>
                 This is what we call{' '}
                 <span className="font-semibold" style={{ color: '#0a0806' }}>Intent Compression</span>. The research
-                phase that used to take days of Google searches happens inside the AI in seconds.
+                that used to take days happens inside the AI in seconds.
                 By the time they land on your site, the decision is nearly made.
               </p>
             </div>
@@ -654,9 +652,7 @@ export default function HomePage() {
           <ScrollReveal delay={150}>
             <blockquote className="rounded-r-xl px-8 py-8 max-w-3xl mx-auto mb-20" style={{ borderLeft: '4px solid #a0723a', background: '#2a2420' }}>
               <p className="font-poppins text-base md:text-lg leading-relaxed italic" style={{ color: 'rgba(240,232,216,0.85)' }}>
-                &ldquo;These aren&apos;t vanity metrics. They&apos;re the reason ChatGPT recommends
-                our clients while their competitors remain invisible. Every score below is a
-                machine-readability signal — the difference between being cited as the answer
+                &ldquo;Every metric below is a machine-readability signal — the difference between being cited as the answer
                 and being skipped entirely.&rdquo;
               </p>
             </blockquote>
