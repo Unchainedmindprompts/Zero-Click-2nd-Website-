@@ -74,24 +74,10 @@ const blogPostingSchema = {
     { '@type': 'Thing', name: 'Zero Click Search' },
   ],
   mentions: [
-    { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-    { '@type': 'SoftwareApplication', name: 'Perplexity' },
-    { '@type': 'SoftwareApplication', name: 'Google AI Overviews' },
-    { '@type': 'Product', name: 'Ray-Ban Meta', manufacturer: { '@type': 'Organization', name: 'Meta' } },
-  ],
-  defines: [
-    {
-      '@type': 'Thing',
-      name: 'The Shortlist Problem',
-      description:
-        'The compression of AI-generated local business recommendations to one or two names per niche and geography, driven by wearable and screenless AI interfaces that cannot deliver long lists.',
-    },
-    {
-      '@type': 'Thing',
-      name: "Winner's Circle",
-      description:
-        "The small set of local businesses in each niche and geography that meet the threshold for safe, confident AI recommendation — combining excellent real-world reputation with fast, structured web infrastructure.",
-    },
+    { '@type': 'Thing', name: 'ChatGPT' },
+    { '@type': 'Thing', name: 'Perplexity' },
+    { '@type': 'Thing', name: 'Google AI Overviews' },
+    { '@type': 'Thing', name: 'Ray-Ban Meta' },
   ],
 };
 
@@ -386,7 +372,7 @@ export default function ShortlistProblemPage() {
                   <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
                     Audit your real-world reputation first.
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
+                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
                     <p className="leading-relaxed" itemProp="text">
                       Reviews, consistency, service quality. No infrastructure work matters if this foundation is weak.
                     </p>
@@ -397,7 +383,7 @@ export default function ShortlistProblemPage() {
                   <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
                     Benchmark your site speed.
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
+                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
                     <p className="leading-relaxed" itemProp="text">
                       Run your homepage through PageSpeed Insights. If your mobile score is below 70 or your load time is above two seconds on desktop, you have a structural problem.
                     </p>
@@ -408,7 +394,7 @@ export default function ShortlistProblemPage() {
                   <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
                     Check your schema.
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
+                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
                     <p className="leading-relaxed" itemProp="text">
                       Use Google&apos;s Rich Results Test. If you have no structured data, or invalid items, AI systems are guessing about your business.
                     </p>
@@ -419,7 +405,7 @@ export default function ShortlistProblemPage() {
                   <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
                     Verify your directory consistency.
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
+                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
                     <p className="leading-relaxed" itemProp="text">
                       Search your business name across GBP, Bing, Apple Maps, and Yelp. Any mismatch in NAP data needs to be corrected.
                     </p>
@@ -430,7 +416,7 @@ export default function ShortlistProblemPage() {
                   <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
                     Evaluate your platform honestly.
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
+                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
                     <p className="leading-relaxed" itemProp="text">
                       If you&apos;re on a subscription builder and you&apos;re serious about AI visibility, understand what it can and can&apos;t deliver. Some platforms have hard ceilings on performance and schema depth that can&apos;t be engineered around without rebuilding on a modern edge chassis.
                     </p>
@@ -441,7 +427,7 @@ export default function ShortlistProblemPage() {
                   <h3 className="font-poppins font-semibold text-[#1c1814] mb-2" itemProp="name">
                     Add llms.txt.
                   </h3>
-                  <div itemScope itemType="https://schema.org/Answer">
+                  <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
                     <p className="leading-relaxed" itemProp="text">
                       If you have access to your site&apos;s root directory, this is one of the highest-leverage additions you can make today. A clear, honest brief for AI crawlers about who you are and what you do.
                     </p>
