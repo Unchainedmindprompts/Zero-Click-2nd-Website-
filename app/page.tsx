@@ -133,7 +133,7 @@ export default function HomePage() {
           <ScrollReveal delay={150}>
             <div className="space-y-6">
               {[
-                { bold: 'Build', rest: ' your site on a sub-1s Next.js + Vercel edge chassis. No WordPress. No templates. No rented platforms.' },
+                { bold: 'Build', rest: ' your site on a sub-1s Next.js + Vercel edge chassis. No templates. No rented platforms.' },
                 { bold: 'Encode', rest: ' your expertise and location in AI-readable schema and identity files so AI systems cite you by name.' },
                 { bold: 'Ship', rest: ' an owned asset — your code, your domain, your hosting account — built to be cited by AI for years.' },
               ].map((item, i) => (
