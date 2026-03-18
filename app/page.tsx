@@ -750,8 +750,8 @@ export default function HomePage() {
               {[
                 'How your business currently appears in ChatGPT, Perplexity, and Google AI Overviews — in plain English.',
                 'Your PageSpeed score benchmarked against your top three local competitors.',
-                'A plain-English breakdown of your schema gaps and what AI can\'t read about you right now.',
-                'One specific action you can implement today — whether you work with us or not.',
+                'Where your schema gaps are, which directories are missing, and whether your basic SEO is dragging down your AI visibility.',
+                'What it would take to fix it — even if you don\'t work with us.',
               ].map((item, i) => (
                 <div key={i} className="checklist-item">
                   <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
