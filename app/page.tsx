@@ -343,7 +343,10 @@ export default function HomePage() {
                 Enterprise tools assume that foundation exists. Subscription platforms can&apos;t build it — and even if they could, you&apos;d never own it. We start at the foundation, we build it right, and when it&apos;s done it&apos;s yours. No monthly rent. No platform risk. No churn.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>The result:</strong> a site AI systems don&apos;t just crawl. They trust, cite, and recommend.
+                The one thing nobody can promise about AI is what it looks like six months from now. New protocols. New file standards. New crawlers. The space changes faster than any agency can predict — and anyone who tells you otherwise is overselling. That&apos;s one of the core reasons KodeCite exists. When the standard changes — and it will — we update a line of code, push to GitHub, and it deploys in minutes. No drama. No delays. No plugin conflicts. No waiting for a vendor to release a patch. Your infrastructure adapts as fast as the technology does.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                The result: a site AI systems don&apos;t just crawl. They trust, cite, and recommend.
               </p>
             </div>
           </ScrollReveal>
