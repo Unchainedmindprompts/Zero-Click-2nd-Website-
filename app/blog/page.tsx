@@ -8,6 +8,14 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'video-authority-layer-ai-assets-2026',
+    category: 'AI Search Strategy',
+    title: 'Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026',
+    excerpt: 'Most agents upload videos and hope the algorithm rewards them. It won\'t. Here\'s how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.',
+    date: 'March 23, 2026',
+    readTime: '9 min read',
+  },
+  {
     slug: '10-millisecond-advantage-wearable-era',
     category: 'AI Search Strategy',
     title: 'When Your Customer Stops Searching and Starts Asking — Is Your Business Ready?',
