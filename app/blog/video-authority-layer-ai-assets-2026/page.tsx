@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026 | KodeCite.AI",
-  description: "Most agents upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
   alternates: {
     canonical: 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',
   },
   openGraph: {
     title: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026",
-    description: "Most agents upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+    description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
     url: 'https://www.kodecite.ai/blog/video-authority-layer-ai-assets-2026',
     type: 'article',
     publishedTime: '2026-03-23',
@@ -21,7 +21,7 @@ const blogPostingSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026",
-  description: "Most agents upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
@@ -49,10 +49,10 @@ const blogPostingSchema = {
     'AI video visibility',
     'YouTube AI citations',
     'answer engine optimization',
-    'AEO real estate',
+    'AEO local business',
     'video transcript enrichment',
     'ChatGPT video citations',
-    'Perplexity local video',
+    'Perplexity local business video',
     'owned media strategy 2026',
   ],
   articleSection: 'AI Search Strategy',
@@ -140,7 +140,7 @@ export default function VideoAuthorityLayer2026() {
           </h1>
 
           <p className="text-[#6a5a48] text-xl font-poppins leading-relaxed max-w-3xl">
-            Most agents upload videos and hope the algorithm rewards them. It won&apos;t. Here&apos;s how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.
+            Most service and professional businesses upload videos and hope the algorithm rewards them. It won&apos;t. Here&apos;s how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
@@ -167,15 +167,15 @@ export default function VideoAuthorityLayer2026() {
               <div className="prose-content font-poppins">
 
                 <p className="text-[#6a5a48] text-lg leading-relaxed mb-8">
-                  Video creation has never been easier. iPhone in hand, tripod from Amazon, a CapCut template — and you&apos;ve got a 90-second market update or neighborhood walkthrough ready to post. The problem isn&apos;t production. The problem is distribution architecture.
+                  Video creation has never been easier. iPhone in hand, tripod from Amazon, a CapCut template — and you&apos;ve got a 90-second service walkthrough, process explainer, or expert answer ready to post. The problem isn&apos;t production. The problem is distribution architecture.
                 </p>
 
                 <p className="text-[#6a5a48] text-lg leading-relaxed mb-8">
-                  Right now, thousands of real estate agents are uploading genuinely useful videos to YouTube, boosting them with paid social, watching the spike, watching the flatline, and repeating the cycle. The content exists. The authority it should be building doesn&apos;t.
+                  Right now, thousands of service and professional business owners — contractors, attorneys, financial advisors, real estate agents, healthcare providers, home service pros — are uploading genuinely useful videos to YouTube, boosting them with paid social, watching the spike, watching the flatline, and repeating the cycle. The content exists. The authority it should be building doesn&apos;t.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  In 2026, the agents who win in search — and increasingly in AI — aren&apos;t the ones who create the most content. They&apos;re the ones who&apos;ve built the infrastructure to make that content findable, citable, and trustworthy across every AI system that matters.
+                  In 2026, the businesses that win in search — and increasingly in AI — aren&apos;t the ones who create the most content. They&apos;re the ones who&apos;ve built the infrastructure to make that content findable, citable, and trustworthy across every AI system that matters.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
@@ -183,7 +183,7 @@ export default function VideoAuthorityLayer2026() {
                 </h2>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Let&apos;s be direct about how most agents use video right now. You create a neighborhood tour or a market update. You post it to YouTube. Maybe you run $300 in Meta ads to seed early views. The algorithm gives you a small bump. You get some profile visits, maybe a few DMs. Then it fades.
+                  Let&apos;s be direct about how most service businesses use video right now. You film a process walkthrough, an FAQ answer, or a client testimonial. You post it to YouTube. Maybe you run $300 in Meta ads to seed early views. The algorithm gives you a small bump. You get some profile visits, maybe a few inquiries. Then it fades.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-6">
@@ -191,7 +191,7 @@ export default function VideoAuthorityLayer2026() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Platform-native optimization helps at the margins, but it&apos;s still channel-siloed. Your video might rank on YouTube for a specific search. It will almost certainly never surface when someone asks ChatGPT who the best local real estate agent is, or when Perplexity assembles a response about relocating to your market. That&apos;s the trap — and most agents don&apos;t even know they&apos;re in it.
+                  Platform-native optimization helps at the margins, but it&apos;s still channel-siloed. Your video might rank on YouTube for a specific search. It will almost certainly never surface when someone asks ChatGPT who the best local plumber, attorney, or financial advisor is, or when Perplexity assembles a response about the best service providers in your area. That&apos;s the trap — and most business owners don&apos;t even know they&apos;re in it.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
@@ -203,7 +203,7 @@ export default function VideoAuthorityLayer2026() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Most websites — including expensive subscription platforms like Luxury Presence and Real Geeks — fail this test completely. They serve templated, bloated pages that load slowly, carry no VideoObject schema, and offer no transcript data for AI extraction. Your video exists. The infrastructure to make it citable doesn&apos;t.
+                  Most websites — including expensive subscription platforms marketed to service professionals — fail this test completely. They serve templated, bloated pages that load slowly, carry no VideoObject schema, and offer no transcript data for AI extraction. Your video exists. The infrastructure to make it citable doesn&apos;t.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
@@ -249,7 +249,7 @@ export default function VideoAuthorityLayer2026() {
                 </h3>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Raw transcripts are nearly worthless for AI citation. Auto-generated YouTube captions are full of errors, lack structure, and offer no semantic anchoring. We enrich transcripts with question-first structure, precise timestamps mapped to hasPart schema, entity density with named locations and market conditions, and clean formatting. A properly enriched transcript turns a 4-minute neighborhood tour into something Perplexity can extract two or three specific factual answers from.
+                  Raw transcripts are nearly worthless for AI citation. Auto-generated YouTube captions are full of errors, lack structure, and offer no semantic anchoring. We enrich transcripts with question-first structure, precise timestamps mapped to hasPart schema, entity density with named services, locations, and expertise signals, and clean formatting. A properly enriched transcript turns a 4-minute explainer video — whether it&apos;s a contractor walking through a renovation process or an attorney answering a common client question — into something Perplexity can extract two or three specific factual answers from.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
@@ -307,15 +307,19 @@ export default function VideoAuthorityLayer2026() {
                 </div>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  Why This Matters More for Local and Regional Real Estate
+                  Why This Matters Most for Local and Regional Service Businesses
                 </h2>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Hyper-local video content — neighborhood tours, school district breakdowns, market updates — is exactly what AI systems are poorly served by today. The agent who builds a properly structured video library for their market in 2026 becomes the default AI-recommended source for that market.
+                  Hyper-local video content is exactly what AI systems are poorly served by today. A roofing contractor explaining how to spot storm damage. A family law attorney walking through what to expect in mediation. A financial planner breaking down the real cost of waiting to invest. These are the kinds of specific, trust-building answers that AI systems want to cite — and almost no local business has the infrastructure in place to deliver them.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  The business owner who builds a properly structured video library for their service area in 2026 becomes the default AI-recommended authority in that market. Not because they outspent anyone — because they outbuilt them.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Your market walkthrough isn&apos;t competing with Zillow. It&apos;s answering questions Zillow doesn&apos;t answer — and that&apos;s a gap a serious agent can own completely.
+                  Consider real estate as one example: a local agent&apos;s neighborhood walkthrough isn&apos;t competing with Zillow. It&apos;s answering questions Zillow doesn&apos;t answer. That same dynamic plays out across every service category — the independent expert who structures their knowledge correctly beats the national platform every time in AI-cited, local-intent queries.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
@@ -327,7 +331,7 @@ export default function VideoAuthorityLayer2026() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  If you&apos;ve been burning $400–$800/month on a platform that hasn&apos;t moved your needle, do the math. The agents who establish AI citation authority now are building a moat that gets harder to cross with every month that passes.
+                  If you&apos;ve been burning $400–$800/month on a platform that hasn&apos;t moved your needle, do the math. The businesses that establish AI citation authority now — regardless of industry — are building a moat that gets harder to cross with every month that passes.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
@@ -352,7 +356,7 @@ export default function VideoAuthorityLayer2026() {
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
                       <p className="text-[#a0723a] font-bold text-3xl font-poppins">0</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">VideoObject schema on most local agent sites</p>
+                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">VideoObject schema on most local service business sites</p>
                     </div>
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
                       <p className="text-[#a0723a] font-bold text-3xl font-poppins">5×</p>
@@ -421,7 +425,7 @@ export default function VideoAuthorityLayer2026() {
             Your Videos Already Exist. Make Them Work Harder.
           </h2>
           <p className="text-[rgba(240,232,216,0.6)] font-poppins mb-8 leading-relaxed">
-            The infrastructure to turn your video content into AI authority assets doesn&apos;t exist on any subscription platform. Start with a{' '}
+            Whether you&apos;re a contractor, attorney, financial advisor, real estate professional, or any other service business — the infrastructure to turn your video content into AI authority assets doesn&apos;t exist on any subscription platform. Start with a{' '}
             <Link href="/contact" className="text-[#a0723a] hover:underline">free AEO Audit</Link>{' '}
             and see exactly where your video stack stands.
           </p>
