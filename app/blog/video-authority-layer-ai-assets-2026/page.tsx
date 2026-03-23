@@ -315,7 +315,7 @@ export default function VideoAuthorityLayer2026() {
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  We&apos;ve watched this play out with Luxe Window Works in Post Falls, Idaho — now the #1 ChatGPT recommendation for window treatments in that market. Not because of ad spend. Because of infrastructure built specifically for AI citation. Your market walkthrough isn&apos;t competing with Zillow. It&apos;s answering questions Zillow doesn&apos;t answer — and that&apos;s a gap a serious agent can own completely.
+                  Your market walkthrough isn&apos;t competing with Zillow. It&apos;s answering questions Zillow doesn&apos;t answer — and that&apos;s a gap a serious agent can own completely.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
