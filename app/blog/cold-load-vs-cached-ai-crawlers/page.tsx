@@ -149,9 +149,26 @@ export default function ColdLoadVsCached() {
                   The second is lab data — a simulated cold load run by Lighthouse on a fresh session with no cache. This is where the truth lives. A site that passes Core Web Vitals with a warm field score can score 34 on a cold lab test with an LCP of over 10 seconds and a Total Blocking Time above 4,000 milliseconds — meaning the page loaded but was completely frozen for four full seconds before responding to anything.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
                   We&apos;ve audited sites that showed a &quot;respectable&quot; mobile score for the owner — but delivered a 14-plus second Largest Contentful Paint on a cold load. AI crawlers never got past the first few seconds. Field data tells you how loyal returning visitors experience your site. Lab data tells you how AI crawlers and new customers experience it. For AI visibility, only one of those numbers matters.
                 </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+                  <div className="rounded-xl overflow-hidden border border-[rgba(100,70,30,0.2)]">
+                    <img src="/images/pagespeed-field-data.webp" alt="PageSpeed Insights field data showing Core Web Vitals passing with warm cached load" className="w-full" />
+                    <div className="bg-[#f2ede4] px-4 py-3">
+                      <p className="text-[#a0723a] text-xs font-bold font-poppins">FIELD DATA — WHAT THE OWNER SEES</p>
+                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">Core Web Vitals: Passed. Warm cache, returning visitors. Looks fine.</p>
+                    </div>
+                  </div>
+                  <div className="rounded-xl overflow-hidden border border-[rgba(100,70,30,0.2)]">
+                    <img src="/images/pagespeed-lab-data.webp" alt="PageSpeed Insights lab data showing 34 performance score and 10.9 second LCP on cold load" className="w-full" />
+                    <div className="bg-[#f2ede4] px-4 py-3">
+                      <p className="text-[#a0723a] text-xs font-bold font-poppins">LAB DATA — WHAT AI CRAWLERS SEE</p>
+                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">Performance: 34. LCP: 10.9s. Cold load. This is what GPTBot experiences.</p>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6 my-8">
                   <p className="eyebrow mb-4 text-xs">WARM CACHE VS. COLD CRAWL</p>
