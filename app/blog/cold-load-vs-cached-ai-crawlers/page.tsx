@@ -2,15 +2,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026 | KodeCite.AI",
-  description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  title: "Your Site Feels Fast to You — And That's Exactly the Problem | KodeCite.AI",
+  description: "Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',
+    canonical: 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers',
   },
   openGraph: {
-    title: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026",
-    description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
-    url: 'https://www.kodecite.ai/blog/video-authority-layer-ai-assets-2026',
+    title: "Your Site Feels Fast to You — And That's Exactly the Problem",
+    description: "Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.",
+    url: 'https://www.kodecite.ai/blog/cold-load-vs-cached-ai-crawlers',
     type: 'article',
     publishedTime: '2026-03-23',
     authors: ['Mark Abplanalp'],
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 const blogPostingSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026",
-  description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  headline: "Your Site Feels Fast to You — And That's Exactly the Problem",
+  description: "Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.",
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
@@ -40,25 +40,25 @@ const blogPostingSchema = {
   dateModified: '2026-03-23',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',
+    '@id': 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers',
   },
-  url: 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',
+  url: 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers',
   keywords: [
-    'video authority layer',
-    'VideoObject schema',
-    'AI video visibility',
-    'YouTube AI citations',
+    'cold crawl vs cached load',
+    'AI crawler performance',
+    'Core Web Vitals cold load',
+    'edge hosting AI visibility',
+    'AI citation speed',
     'answer engine optimization',
-    'AEO local business',
-    'video transcript enrichment',
-    'ChatGPT video citations',
-    'Perplexity local business video',
-    'owned media strategy 2026',
+    'cold start performance',
+    'Next.js edge rendering',
+    'AI crawlability 2026',
+    'owned infrastructure AEO',
   ],
   articleSection: 'AI Search Strategy',
-  wordCount: 1600,
+  wordCount: 1500,
   about: [
-    { '@type': 'Thing', name: 'VideoObject Schema' },
+    { '@type': 'Thing', name: 'Cold Crawl Performance' },
     { '@type': 'Thing', name: 'Answer Engine Optimization' },
     { '@type': 'Thing', name: 'AI Search Visibility' },
   ],
@@ -66,8 +66,8 @@ const blogPostingSchema = {
     { '@type': 'Thing', name: 'ChatGPT' },
     { '@type': 'Thing', name: 'Perplexity' },
     { '@type': 'Thing', name: 'Google AI Overviews' },
-    { '@type': 'Thing', name: 'Gemini' },
-    { '@type': 'Thing', name: 'YouTube' },
+    { '@type': 'Thing', name: 'Core Web Vitals' },
+    { '@type': 'Thing', name: 'Vercel Edge Network' },
   ],
 };
 
@@ -101,7 +101,7 @@ const professionalServiceSchema = {
   sameAs: ['https://kodecite.ai'],
 };
 
-export default function VideoAuthorityLayer2026() {
+export default function ColdLoadVsCachedAICrawlers() {
   return (
     <>
       <script
@@ -126,21 +126,21 @@ export default function VideoAuthorityLayer2026() {
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-[#0a0806] truncate">Why Your Videos Stay Trapped on YouTube</span>
+            <span className="text-[#0a0806] truncate">Your Site Feels Fast to You</span>
           </nav>
 
           <div className="flex items-center gap-3 mb-6">
             <span className="category-tag">AI Search Strategy</span>
-            <span className="text-[#6a5a48] text-sm font-poppins">9 min read</span>
+            <span className="text-[#6a5a48] text-sm font-poppins">7 min read</span>
           </div>
 
           <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight">
-            Why Your Videos Stay Trapped on YouTube —{' '}
-            <span className="text-[#a0723a]">And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026</span>
+            Your Site Feels Fast to You —{' '}
+            <span className="text-[#a0723a]">And That&apos;s Exactly the Problem</span>
           </h1>
 
           <p className="text-[#6a5a48] text-xl font-poppins leading-relaxed max-w-3xl">
-            Most service and professional businesses upload videos and hope the algorithm rewards them. It won&apos;t. Here&apos;s how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.
+            Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
@@ -167,109 +167,108 @@ export default function VideoAuthorityLayer2026() {
               <div className="prose-content font-poppins">
 
                 <p className="text-[#6a5a48] text-lg leading-relaxed mb-8">
-                  Video creation has never been easier. iPhone in hand, tripod from Amazon, a CapCut template — and you&apos;ve got a 90-second service walkthrough, process explainer, or expert answer ready to post. The problem isn&apos;t production. The problem is distribution architecture.
+                  Open your website right now. It loads in under a second. Images pop in, fonts render clean, the page feels snappy. You&apos;ve probably even run it through PageSpeed and seen a decent score. So the performance problem must not apply to you, right?
                 </p>
 
                 <p className="text-[#6a5a48] text-lg leading-relaxed mb-8">
-                  Right now, thousands of service and professional business owners — contractors, attorneys, financial advisors, real estate agents, healthcare providers, home service pros — are uploading genuinely useful videos to YouTube, boosting them with paid social, watching the spike, watching the flatline, and repeating the cycle. The content exists. The authority it should be building doesn&apos;t.
+                  Wrong. What you&apos;re experiencing is a warm cached load — your browser already has your fonts, your CSS, your images, your scripts all sitting in local memory from the last time you visited. You&apos;re not seeing your site. You&apos;re seeing a cached snapshot of it.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  In 2026, the businesses that win in search — and increasingly in AI — aren&apos;t the ones who create the most content. They&apos;re the ones who&apos;ve built the infrastructure to make that content findable, citable, and trustworthy across every AI system that matters.
+                  AI crawlers — the bots behind ChatGPT, Perplexity, Google AI Overviews, and Gemini — never get that experience. Every single visit is a cold start. No cache. No shortcuts. Just your server, your code, and a timer running.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  The Trap: Rented Visibility That Vanishes When You Stop Paying
+                  What a Cold Crawl Actually Looks Like
                 </h2>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Let&apos;s be direct about how most service businesses use video right now. You film a process walkthrough, an FAQ answer, or a client testimonial. You post it to YouTube. Maybe you run $300 in Meta ads to seed early views. The algorithm gives you a small bump. You get some profile visits, maybe a few inquiries. Then it fades.
+                  When an AI crawler hits your page for the first time, it has to request every asset from scratch. Your DNS has to resolve. Your server has to spin up (or stay warm). Your HTML has to be sent. Then the crawler has to parse that HTML, find your structured data, extract your content, and decide — in milliseconds — whether your page is worth processing further.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Next month, you do it again. This isn&apos;t a content strategy. It&apos;s a treadmill.
+                  Most WordPress sites, Wix pages, and subscription-platform builds add 800ms to 2+ seconds of overhead before a single byte of useful content reaches the crawler. By the time your page is technically &quot;loaded,&quot; the crawl budget for that session may already be exhausted.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Platform-native optimization helps at the margins, but it&apos;s still channel-siloed. Your video might rank on YouTube for a specific search. It will almost certainly never surface when someone asks ChatGPT who the best local plumber, attorney, or financial advisor is, or when Perplexity assembles a response about the best service providers in your area. That&apos;s the trap — and most business owners don&apos;t even know they&apos;re in it.
+                  The crawler moves on. Your content goes uncited. And you have no idea it happened, because your personal PageSpeed score looked fine.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  The Gap: AI Doesn&apos;t Watch Videos — It Reads Structure
+                  The Two Experiences of Your Website
                 </h2>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Here&apos;s what most video strategies miss entirely: AI systems don&apos;t watch your videos. They read your data. When ChatGPT, Perplexity, Gemini, or Google AI Overviews decide whether to cite your content, they&apos;re not evaluating production quality. They&apos;re evaluating whether there&apos;s structured metadata that accurately describes this content, whether there&apos;s a transcript that answers identifiable questions, whether this content is hosted on a fast trusted crawlable domain, and whether the schema signals who created this, when, and why it&apos;s authoritative.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Most websites — including expensive subscription platforms marketed to service professionals — fail this test completely. They serve templated, bloated pages that load slowly, carry no VideoObject schema, and offer no transcript data for AI extraction. Your video exists. The infrastructure to make it citable doesn&apos;t.
-                </p>
-
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  The Solution: KodeCite.AI&apos;s Video Authority Layer
-                </h2>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  The Video Authority Layer isn&apos;t a plugin or a bolt-on. It&apos;s a foundational build decision. When we build a client&apos;s site, videos aren&apos;t just embedded — they&apos;re architected as citable intelligence assets.
-                </p>
-
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-8 mb-4">
-                  VideoObject Schema: The Full Stack
-                </h3>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  We implement complete VideoObject structured data on every intent-driven page that features video content. Not partial schema — full implementation. Every property is a signal to AI systems about what this content is, who made it, and whether it can be trusted:
-                </p>
 
                 <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6 my-8">
-                  <p className="eyebrow mb-5 text-xs">VIDEOOBJECT SCHEMA PROPERTIES WE IMPLEMENT</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {[
-                      { prop: 'name', desc: 'Question-framed title for AI extraction' },
-                      { prop: 'description', desc: 'Answer-first paragraph AI can cite directly' },
-                      { prop: 'thumbnailUrl', desc: 'High-res, crawlable image URL' },
-                      { prop: 'uploadDate', desc: 'ISO 8601 format — never omitted' },
-                      { prop: 'duration', desc: 'ISO 8601 duration (PT4M32S)' },
-                      { prop: 'embedUrl + contentUrl', desc: 'Both present for max crawler coverage' },
-                      { prop: 'transcript', desc: 'Inline or linked structured transcript' },
-                      { prop: 'hasPart', desc: 'Clip-level schema with timestamps' },
-                      { prop: 'creator + publisher', desc: 'Entity-linked authorship / E-E-A-T signals' },
-                    ].map((item, i) => (
-                      <div key={i} className="p-3 bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)]">
-                        <p className="text-[#a0723a] text-xs font-bold font-poppins mb-1">{item.prop}</p>
-                        <p className="text-[#6a5a48] text-xs font-poppins leading-relaxed">{item.desc}</p>
-                      </div>
-                    ))}
+                  <p className="eyebrow mb-5 text-xs">WARM CACHE VS. COLD CRAWL</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="p-4 bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)]">
+                      <p className="text-[#0a0806] text-sm font-bold font-poppins mb-3">What You Experience</p>
+                      {[
+                        'Fonts already cached locally',
+                        'CSS loaded from memory',
+                        'Images pre-fetched by browser',
+                        'Scripts cached from last visit',
+                        'Sub-second load every time',
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2 mb-2">
+                          <span className="text-[#a0723a] font-bold text-xs mt-0.5">✓</span>
+                          <p className="text-[#6a5a48] text-xs font-poppins">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="p-4 bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)]">
+                      <p className="text-[#0a0806] text-sm font-bold font-poppins mb-3">What AI Crawlers Experience</p>
+                      {[
+                        'No cache — ever',
+                        'Full DNS resolution every time',
+                        'Server cold start latency',
+                        'All assets fetched from scratch',
+                        'Strict token and time budgets',
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2 mb-2">
+                          <span className="text-[#6a5a48] font-bold text-xs mt-0.5">—</span>
+                          <p className="text-[#6a5a48] text-xs font-poppins">{item}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-8 mb-4">
-                  Transcript Enrichment: The Substance AI Actually Reads
-                </h3>
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                  Why This Kills AI Citation Chances
+                </h2>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  AI systems operate on crawl budgets — a ceiling on how much time and processing they spend per domain per crawl cycle. A slow cold load doesn&apos;t just slow down one page visit. It signals to the crawler that your domain is resource-heavy, and it deprioritizes future crawls accordingly.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Beyond budgets, there&apos;s a more immediate problem: if your structured data — your schema, your FAQs, your entity signals — is buried deep in a JavaScript-rendered page, it may never be extracted at all. Crawlers that hit render timeouts simply move on. Your content never enters the citation pipeline.
+                </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Raw transcripts are nearly worthless for AI citation. Auto-generated YouTube captions are full of errors, lack structure, and offer no semantic anchoring. We enrich transcripts with question-first structure, precise timestamps mapped to hasPart schema, entity density with named services, locations, and expertise signals, and clean formatting. A properly enriched transcript turns a 4-minute explainer video — whether it&apos;s a contractor walking through a renovation process or an attorney answering a common client question — into something Perplexity can extract two or three specific factual answers from.
+                  To be cited by ChatGPT, Perplexity, or Google AI Overviews, your page needs to deliver its full structured content — fast, clean, and server-rendered — on the very first request. That&apos;s not a browser problem. That&apos;s an infrastructure problem.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  The Compounding Loop
+                  The Infrastructure Fix: Edge-Rendered, Crawler-First
                 </h2>
 
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  This is why every site we build at KodeCite.AI runs on Next.js deployed to Vercel&apos;s global edge network. The difference isn&apos;t cosmetic — it&apos;s architectural.
+                </p>
+
                 <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6 my-8">
-                  <p className="eyebrow mb-5 text-xs">THE COMPOUNDING LOOP</p>
-                  <div className="space-y-2">
+                  <p className="eyebrow mb-5 text-xs">WHAT EDGE-FIRST INFRASTRUCTURE DELIVERS</p>
+                  <div className="space-y-3">
                     {[
-                      { step: '01', label: 'AI cites your video', desc: 'ChatGPT, Perplexity, AI Overviews surface your structured content in answers' },
-                      { step: '02', label: 'External traffic hits your page', desc: 'Users click through from AI responses to your edge-hosted site' },
-                      { step: '03', label: 'YouTube receives authority signal', desc: 'Off-platform traffic signals to YouTube that your video has real-world relevance' },
-                      { step: '04', label: 'YouTube distributes further', desc: 'Algorithm surfaces your video more broadly within the platform' },
-                      { step: '05', label: 'More citations follow', desc: 'Increased visibility feeds back into AI citation frequency — the loop compounds' },
-                    ].map((item) => (
-                      <div key={item.step} className="flex items-start gap-4 p-4 bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)]">
-                        <div className="flex-shrink-0">
-                          <p className="text-[#a0723a] font-bold text-lg font-poppins">{item.step}</p>
-                        </div>
+                      { label: 'Sub-50ms Time to First Byte', desc: 'Pages served from the nearest global edge node — not a single origin server 1,500 miles away.' },
+                      { label: 'Server-Side Rendered HTML', desc: 'Structured data, schema, and content arrive in the initial HTML response. No JavaScript render required.' },
+                      { label: 'No Cold Start Penalty', desc: 'Edge functions stay warm globally. AI crawlers never hit a spinning server.' },
+                      { label: 'Lean, Token-Efficient Pages', desc: 'No plugin bloat, no unused CSS, no third-party script stacks adding seconds of overhead.' },
+                      { label: 'Schema in the Document Head', desc: 'JSON-LD schema is injected server-side — crawlers see it immediately, not after a JS render cycle.' },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start gap-4 p-4 bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)]">
                         <div>
                           <p className="text-[#0a0806] text-sm font-semibold font-poppins mb-1">{item.label}</p>
                           <p className="text-[#6a5a48] text-xs font-poppins leading-relaxed">{item.desc}</p>
@@ -279,59 +278,32 @@ export default function VideoAuthorityLayer2026() {
                   </div>
                 </div>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  This is the opposite of the paid social treadmill. It doesn&apos;t require ongoing spend. It compounds in the background.
-                </p>
-
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  The Hybrid Ramp Strategy
-                </h2>
-
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6 my-8">
-                  <p className="eyebrow mb-5 text-xs">THREE-PHASE RAMP</p>
-                  <div className="space-y-4">
-                    {[
-                      { phase: 'Phase 1', label: 'Build the foundation first', desc: 'Edge-optimized site, VideoObject schema, enriched transcripts, intent pages. Non-negotiable. Paid traffic to an unstructured page is wasted spend.' },
-                      { phase: 'Phase 2', label: 'Seed with paid early', desc: 'Run targeted campaigns ($500–$1,500) for the first 30–60 days to accelerate initial view counts and engagement signals.' },
-                      { phase: 'Phase 3', label: 'Pull back paid, let owned compound', desc: 'As AI citations accumulate and YouTube distribution picks up organically, reduce paid dependence. You own the infrastructure — not the platform.' },
-                    ].map((item) => (
-                      <div key={item.phase} className="flex items-start gap-4 p-4 bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)]">
-                        <div className="flex-shrink-0 min-w-[80px]">
-                          <p className="text-[#a0723a] text-xs font-bold font-poppins">{item.phase}</p>
-                          <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug mt-0.5">{item.label}</p>
-                        </div>
-                        <p className="text-[#6a5a48] text-xs font-poppins leading-relaxed">{item.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  Why This Matters Most for Local and Regional Service Businesses
+                  The Test Most Business Owners Have Never Run
                 </h2>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  Hyper-local video content is exactly what AI systems are poorly served by today. A roofing contractor explaining how to spot storm damage. A family law attorney walking through what to expect in mediation. A financial planner breaking down the real cost of waiting to invest. These are the kinds of specific, trust-building answers that AI systems want to cite — and almost no local business has the infrastructure in place to deliver them.
-                </p>
-
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  The business owner who builds a properly structured video library for their service area in 2026 becomes the default AI-recommended authority in that market. Not because they outspent anyone — because they outbuilt them.
+                  Open an incognito window — or better, use a tool like WebPageTest set to a cold cache with a location far from your server. That&apos;s closer to what an AI crawler sees. For most WordPress or subscription-platform sites, the difference between their warm personal experience and a cold test is 3–6 seconds of additional load time.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  Consider real estate as one example: a local agent&apos;s neighborhood walkthrough isn&apos;t competing with Zillow. It&apos;s answering questions Zillow doesn&apos;t answer. That same dynamic plays out across every service category — the independent expert who structures their knowledge correctly beats the national platform every time in AI-cited, local-intent queries.
+                  Three to six seconds. That&apos;s often the entire crawl budget for a single page. Businesses spending thousands per year on content and ads are getting passed over by AI systems before a single word of their content is processed — because their server is too slow on first contact.
                 </p>
 
                 <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
-                  If You&apos;re Chasing Cheap Boosts, This Isn&apos;t It
+                  Cold Performance Is a Business Decision
                 </h2>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  We cap at 3–5 clients per month. The Video Authority Layer requires owning your infrastructure: a custom-built Next.js site on edge/Vercel, full schema stack, enriched content architecture, and a site you actually own outright. One-time build. No monthly platform fees. No rented visibility.
+                  Every service and professional business — contractors, attorneys, financial advisors, medical practices, home service companies — is competing to be the answer AI systems recommend when a potential client asks a question in their category.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  The businesses that get cited aren&apos;t necessarily the ones with the best content. They&apos;re the ones whose content is actually reachable — fast, structured, and server-rendered — at the moment the crawler arrives.
                 </p>
 
                 <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  If you&apos;ve been burning $400–$800/month on a platform that hasn&apos;t moved your needle, do the math. The businesses that establish AI citation authority now — regardless of industry — are building a moat that gets harder to cross with every month that passes.
+                  Your site feeling fast to you is irrelevant. The only performance that matters is the one AI sees on a cold start. If you&apos;ve never measured that, you don&apos;t actually know where you stand.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
@@ -352,29 +324,29 @@ export default function VideoAuthorityLayer2026() {
               <div className="sticky top-28 space-y-6">
 
                 <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="eyebrow mb-4 text-xs">THE VIDEO AUTHORITY GAP</p>
+                  <p className="eyebrow mb-4 text-xs">THE COLD CRAWL GAP</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">0</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">VideoObject schema on most local service business sites</p>
+                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">3–6s</p>
+                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">extra cold-load latency on most WordPress and subscription-platform sites</p>
                     </div>
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">5×</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">more AI-citable with enriched transcripts vs raw captions</p>
+                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">&lt;50ms</p>
+                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">Time to First Byte on edge-deployed Next.js — what AI crawlers actually need</p>
                     </div>
                     <div>
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">∞</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">owned infrastructure compounds — paid social doesn&apos;t</p>
+                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">0</p>
+                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">cached assets available to any AI crawler — every visit is a cold start</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-[#f2ede4] rounded-xl border border-[rgba(160,114,58,0.3)] p-6">
                   <p className="font-poppins font-bold text-[#0a0806] text-lg mb-3 leading-snug">
-                    Turn Your Videos Into AI Assets
+                    Find Out What AI Crawlers See
                   </p>
                   <p className="text-[#6a5a48] text-sm font-poppins leading-relaxed mb-5">
-                    Find out exactly what&apos;s missing from your current video infrastructure — and what it would take to make your content citable across every AI system that matters.
+                    Get a cold-crawl audit of your site — and see exactly how your infrastructure looks to the AI systems deciding who to cite.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get Your Free AEO Audit
@@ -384,26 +356,26 @@ export default function VideoAuthorityLayer2026() {
                 <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
+                    <Link href="/blog/why-website-burning-ai-tokens" className="block group">
                       <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
-                        The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything
+                        Why Your Website Is Burning Through AI Tokens — And Costing You Business
                       </p>
-                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">8 min read</p>
+                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">7 min read</p>
                     </Link>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/what-is-zero-click-search" className="block group">
+                      <Link href="/blog/wordpress-losing-ai-search" className="block group">
                         <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
-                          What Is Zero Click Search and Why Your Business Is Invisible
+                          Why WordPress Sites Are Losing the AI Search War
                         </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">8 min read</p>
+                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">6 min read</p>
                       </Link>
                     </div>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/schema-markup-complete-guide" className="block group">
+                      <Link href="/blog/vercel-vs-wordpress-performance" className="block group">
                         <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
-                          Schema Markup: The Complete Guide for Local Service Businesses
+                          Next.js vs. WordPress: Real Performance Numbers for Local Businesses
                         </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">12 min read</p>
+                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">8 min read</p>
                       </Link>
                     </div>
                   </div>
@@ -422,12 +394,12 @@ export default function VideoAuthorityLayer2026() {
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">OWN YOUR AI FUTURE</p>
           <h2 className="font-poppins font-bold text-3xl md:text-4xl text-[rgba(240,232,216,0.9)] mb-4">
-            Your Videos Already Exist. Make Them Work Harder.
+            The Only Speed That Matters Is Cold Speed.
           </h2>
           <p className="text-[rgba(240,232,216,0.6)] font-poppins mb-8 leading-relaxed">
-            Whether you&apos;re a contractor, attorney, financial advisor, real estate professional, or any other service business — the infrastructure to turn your video content into AI authority assets doesn&apos;t exist on any subscription platform. Start with a{' '}
+            Stop measuring your site the way your browser sees it. Start measuring it the way AI crawlers do. A{' '}
             <Link href="/contact" className="text-[#a0723a] hover:underline">free AEO Audit</Link>{' '}
-            and see exactly where your video stack stands.
+            includes a cold-crawl performance review — so you know exactly where you stand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
