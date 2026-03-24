@@ -8,6 +8,14 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'cold-load-vs-cached-ai-crawlers',
+    category: 'AI Search Strategy',
+    title: 'Your Site Feels Fast to You — And That\'s Exactly the Problem',
+    excerpt: 'Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.',
+    date: 'March 23, 2026',
+    readTime: '7 min read',
+  },
+  {
     slug: 'video-authority-layer-ai-assets-2026',
     category: 'AI Search Strategy',
     title: 'Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026',
