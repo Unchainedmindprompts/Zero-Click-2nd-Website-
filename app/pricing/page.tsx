@@ -51,8 +51,7 @@ const pricingSchema = {
           '2 AI authority articles per month with answer-first structure, JSON-LD schema, and inline charts.',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          minPrice: '750',
-          maxPrice: '1200',
+          price: '950',
           priceCurrency: 'USD',
           unitText: 'MONTH',
         },
@@ -64,8 +63,7 @@ const pricingSchema = {
           '4 AI authority articles per month plus quarterly content map and AI visibility check.',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          minPrice: '1500',
-          maxPrice: '2500',
+          price: '1800',
           priceCurrency: 'USD',
           unitText: 'MONTH',
         },
@@ -359,7 +357,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
                   <p className="font-poppins font-semibold" style={{ fontSize: '14px', color: '#0a0806' }}>
-                    $750–$1,200<span className="font-normal" style={{ color: '#6a5a48' }}>/month</span>
+                    $950<span className="font-normal" style={{ color: '#6a5a48' }}>/mo</span>
                   </p>
                 </div>
 
@@ -400,7 +398,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
                   <p className="font-poppins font-semibold" style={{ fontSize: '14px', color: '#f8f5f0' }}>
-                    $1,500–$2,500<span className="font-normal" style={{ color: 'rgba(248,245,240,0.6)' }}>/month</span>
+                    $1,800<span className="font-normal" style={{ color: 'rgba(248,245,240,0.6)' }}>/mo</span>
                   </p>
                 </div>
               </div>
