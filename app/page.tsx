@@ -7,7 +7,7 @@ import CounterAnimation from '@/components/CounterAnimation';
 export const metadata: Metadata = {
   title: 'KodeCite.ai — AI Search Optimization & AEO Agency',
   description:
-    '60% of Google searches end without a click. AI answers the question — and your competitor gets the credit. We help the machine choose you. Free AEO Audit available.',
+    'AI already answers your customers\u2019 questions \u2014 we rebuild your site so it\u2019s the one answer ChatGPT, Perplexity, and Google\u2019s AI trust enough to recommend. Free AEO Audit available.',
   alternates: {
     canonical: 'https://www.kodecite.ai/',
   },
@@ -64,9 +64,9 @@ export default function HomePage() {
             className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed"
             style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.3s forwards' }}
           >
-            60% of Google searches now end without a single click. AI answers the
-            question — and your competitor gets the credit. We help the machine
-            choose you.
+            AI already answers your customers&rsquo; questions &mdash; we rebuild your site so
+            it&rsquo;s the one answer ChatGPT, Perplexity, and Google&rsquo;s AI trust enough to
+            recommend.
           </p>
 
           {/* CTA */}
