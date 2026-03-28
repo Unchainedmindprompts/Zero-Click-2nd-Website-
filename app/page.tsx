@@ -258,7 +258,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              The One Tier That Doesn&apos;t Exist Yet
+              The One Tier That Didn&apos;t Exist Until Now
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
