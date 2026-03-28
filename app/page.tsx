@@ -119,43 +119,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== IN 10 SECONDS ===== */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5">IN 10 SECONDS</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-12 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Here&apos;s what we actually do
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="space-y-6">
-              {[
-                { bold: 'Build', rest: ' your site on a sub-1s Next.js + Vercel edge chassis. No templates. No rented platforms.' },
-                { bold: 'Encode', rest: ' your expertise and location in AI-readable schema and identity files so AI systems cite you by name.' },
-                { bold: 'Ship', rest: ' an owned asset — your code, your domain, your hosting account — built to be cited by AI for years.' },
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <div
-                    className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center font-poppins font-bold text-sm"
-                    style={{ background: 'rgba(160,114,58,0.12)', color: '#a0723a', minWidth: '2rem' }}
-                  >
-                    {i + 1}
-                  </div>
-                  <p className="font-poppins text-base md:text-lg leading-relaxed pt-0.5" style={{ color: '#6a5a48' }}>
-                    <strong style={{ color: '#0a0806' }}>{item.bold}</strong>{item.rest}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
       <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
         <div className="max-w-6xl mx-auto">
