@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'About | KodeCite.AI — Why We Built This',
+  title: 'About | KodeCite.AI — Why I Built This',
   description:
     'Over a thousand hours down a rabbit hole. One simple test that changed everything. Here\'s the story behind KodeCite.AI and why we exist to help local businesses compete in the AI age.',
   alternates: {
@@ -68,7 +68,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="eyebrow mb-4">ABOUT</p>
           <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight max-w-4xl">
-            Why We Built{' '}
+            Why I Built{' '}
             <span className="text-[#a0723a]">KodeCite.AI</span>
           </h1>
           <p className="text-[#6a5a48] text-xl font-poppins max-w-3xl leading-relaxed">
@@ -113,8 +113,15 @@ export default function AboutPage() {
               <div className="space-y-8">
                 <h2 className="font-playfair font-bold text-3xl text-[#0a0806]">
                   Over A Thousand Hours Later,{' '}
-                  <span className="text-[#a0723a]">I Couldn&apos;t Stop.</span>
+                  <span className="text-[#a0723a]">I Couldn&apos;t Stop</span>
                 </h2>
+
+                <p className="text-[#6a5a48] leading-relaxed font-poppins">
+                  I&apos;ve owned a local window treatment business for 23 years. I&apos;ve bought
+                  the websites, the SEO packages, the &ldquo;done-for-you&rdquo; marketing &mdash;
+                  and watched most of them ignore the infrastructure that actually decides who gets
+                  recommended.
+                </p>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
                   A couple of years ago I told myself I needed to figure out AI — not in a vague
@@ -133,9 +140,10 @@ export default function AboutPage() {
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
                   What started as curiosity about my own business turned into a full obsession with
                   how AI systems discover, read, and decide who to cite. Then how large language
-                  models actually process information. Then the agent-to-agent economy and why
-                  autonomous agents need digital rails like Solana and Ethereum to buy compute and
-                  settle tasks without human intervention. Then how all of it connects.
+                  models actually process information. Then the agent&#8209;to&#8209;agent economy
+                  &mdash; how autonomous AI agents will need digital rails like Solana and Ethereum
+                  to buy compute and settle tasks without humans in the loop. Then how all of it
+                  connects.
                 </p>
 
                 <h3 className="font-playfair font-bold text-2xl text-[#0a0806] pt-4">
@@ -143,7 +151,7 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  But one simple test changed the direction of everything.
+                  One simple test changed the direction of everything.
                 </p>
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
                   I started running Google Rich Results tests on local businesses. HVAC companies.
@@ -165,8 +173,8 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  While national chains and private equity roll-ups are quietly building the
-                  infrastructure to dominate AI search at scale — the independent local businesses
+                  While national chains and private equity roll&#8209;ups are quietly building the
+                  infrastructure to dominate AI search at scale, the independent local businesses
                   that built their reputations over decades have no idea the ground is shifting
                   beneath them.
                 </p>
@@ -192,7 +200,8 @@ export default function AboutPage() {
                   That&apos;s KodeCite.AI.
                 </p>
                 <p className="text-[#6a5a48] leading-relaxed font-poppins">
-                  We build the hidden scaffolding that makes AI choose your business — not your
+                  We build the hidden scaffolding &mdash; fast edge infrastructure, clean structure,
+                  and AI&#8209;ready schema &mdash; that makes AI choose your business, not your
                   competitor&apos;s. We start with a free AI Scaffolding Audit so you can see
                   exactly where you stand before the rush really begins.
                 </p>

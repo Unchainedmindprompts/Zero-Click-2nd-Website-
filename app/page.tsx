@@ -7,7 +7,7 @@ import CounterAnimation from '@/components/CounterAnimation';
 export const metadata: Metadata = {
   title: 'KodeCite.ai — AI Search Optimization & AEO Agency',
   description:
-    '60% of Google searches end without a click. AI answers the question — and your competitor gets the credit. We make sure the machine chooses you. Free AEO Audit available.',
+    'AI already answers your customers\u2019 questions \u2014 we rebuild your site so it\u2019s the one answer ChatGPT, Perplexity, and Google\u2019s AI trust enough to recommend. Free AEO Audit available.',
   alternates: {
     canonical: 'https://www.kodecite.ai/',
   },
@@ -64,9 +64,9 @@ export default function HomePage() {
             className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed"
             style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.3s forwards' }}
           >
-            60% of Google searches now end without a single click. AI answers the
-            question — and your competitor gets the credit. We make sure the machine
-            chooses you.
+            AI already answers your customers&rsquo; questions &mdash; we rebuild your site so
+            it&rsquo;s the one answer ChatGPT, Perplexity, and Google&rsquo;s AI trust enough to
+            recommend.
           </p>
 
           {/* CTA */}
@@ -133,7 +133,7 @@ export default function HomePage() {
           <ScrollReveal delay={150}>
             <div className="space-y-6">
               {[
-                { bold: 'Rebuild', rest: ' your site on a sub-1s Next.js + Vercel edge chassis. No WordPress. No templates. No rented platforms.' },
+                { bold: 'Build', rest: ' your site on a sub-1s Next.js + Vercel edge chassis. No templates. No rented platforms.' },
                 { bold: 'Encode', rest: ' your expertise and location in AI-readable schema and identity files so AI systems cite you by name.' },
                 { bold: 'Ship', rest: ' an owned asset — your code, your domain, your hosting account — built to be cited by AI for years.' },
               ].map((item, i) => (
@@ -343,7 +343,10 @@ export default function HomePage() {
                 Enterprise tools assume that foundation exists. Subscription platforms can&apos;t build it — and even if they could, you&apos;d never own it. We start at the foundation, we build it right, and when it&apos;s done it&apos;s yours. No monthly rent. No platform risk. No churn.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>The result:</strong> a site AI systems don&apos;t just crawl. They trust, cite, and recommend.
+                The one thing nobody can promise about AI is what it looks like six months from now. New protocols. New file standards. New crawlers. The space changes faster than any agency can predict — and anyone who tells you otherwise is overselling. That&apos;s one of the core reasons KodeCite exists. When the standard changes — and it will — we update a line of code, push to GitHub, and it deploys in minutes. No drama. No delays. No plugin conflicts. No waiting for a vendor to release a patch. Your infrastructure adapts as fast as the technology does.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                The result: a site AI systems don&apos;t just crawl. They trust, cite, and recommend.
               </p>
             </div>
           </ScrollReveal>
