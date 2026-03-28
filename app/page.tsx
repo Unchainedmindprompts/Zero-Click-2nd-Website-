@@ -119,43 +119,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== IN 10 SECONDS ===== */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5">IN 10 SECONDS</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-12 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Here&apos;s what we actually do
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="space-y-6">
-              {[
-                { bold: 'Build', rest: ' your site on a sub-1s Next.js + Vercel edge chassis. No templates. No rented platforms.' },
-                { bold: 'Encode', rest: ' your expertise and location in AI-readable schema and identity files so AI systems cite you by name.' },
-                { bold: 'Ship', rest: ' an owned asset — your code, your domain, your hosting account — built to be cited by AI for years.' },
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <div
-                    className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center font-poppins font-bold text-sm"
-                    style={{ background: 'rgba(160,114,58,0.12)', color: '#a0723a', minWidth: '2rem' }}
-                  >
-                    {i + 1}
-                  </div>
-                  <p className="font-poppins text-base md:text-lg leading-relaxed pt-0.5" style={{ color: '#6a5a48' }}>
-                    <strong style={{ color: '#0a0806' }}>{item.bold}</strong>{item.rest}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
       <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
         <div className="max-w-6xl mx-auto">
@@ -245,70 +208,6 @@ export default function HomePage() {
               </p>
             </div>
           </ScrollReveal>
-
-          {/* Three-tier comparison table */}
-          <ScrollReveal delay={200}>
-            <div className="mb-6 overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr style={{ borderBottom: '1px solid rgba(100,70,30,0.2)' }}>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[160px]" style={{ color: '#6a5a48' }}></th>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Enterprise Platforms</th>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Subscription Builders</th>
-                    <th className="font-poppins font-semibold text-sm py-4 min-w-[200px]" style={{ color: '#a0723a' }}>
-                      KodeCite.AI
-                      <span className="block text-xs font-normal mt-0.5" style={{ color: '#6a5a48' }}>Built for this</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { label: 'Built for', ent: 'Fortune 500 + dedicated team', sub: 'Small business volume', kc: 'Small-mid business serious about AI' },
-                    { label: 'Monthly cost', ent: '$3,000–$10,000+', sub: '$150–$600', kc: '$0 after build — you own it' },
-                    { label: 'Builds the foundation', ent: 'No — assumes you have it', sub: 'No — templated and slow', kc: 'Yes — from the ground up' },
-                    { label: 'PageSpeed scores', ent: 'Depends on existing site', sub: 'Typically 40–65', kc: '90–100, guaranteed' },
-                    { label: 'Schema markup', ent: 'Reporting tools', sub: 'Template-level, site-wide', kc: 'Custom per page and article' },
-                    { label: 'AI citation result', ent: 'Possible if foundation exists', sub: 'Rarely cited', kc: 'Built to be cited' },
-                    { label: 'You own it', ent: 'No — software license', sub: 'No — rented platform', kc: 'Yes — outright' },
-                  ].map((row, i) => (
-                    <tr key={i} className="transition-colors" style={{ borderBottom: '1px solid rgba(100,70,30,0.1)' }}>
-                      <td className="font-poppins font-medium text-sm py-4 pr-6" style={{ color: '#0a0806' }}>{row.label}</td>
-                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.ent}</td>
-                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.sub}</td>
-                      <td className="font-poppins font-semibold text-sm py-4" style={{ color: '#a0723a' }}>{row.kc}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </ScrollReveal>
-
-          {/* ===== YOU OWN THE ASSET ===== */}
-          <ScrollReveal delay={250}>
-            <div className="mt-10 p-8 md:p-10 rounded-2xl" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
-              <p className="eyebrow mb-3">OWNERSHIP</p>
-              <h3 className="font-playfair text-2xl md:text-3xl mb-6 leading-tight" style={{ color: '#0a0806' }}>
-                You Own the Asset
-              </h3>
-              <div className="space-y-3 mb-6">
-                {[
-                  'Built on your own Vercel account — no platform lock-in, ever.',
-                  'Custom Next.js codebase in your GitHub — move it, fork it, extend it.',
-                  'One-time build. Ongoing content and optimization is available, never mandatory.',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="font-poppins text-sm md:text-base leading-relaxed" style={{ color: '#6a5a48' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="font-poppins text-sm md:text-base font-medium" style={{ color: '#0a0806' }}>
-                We don&apos;t sell SEO retainers. We build the structured, edge-hosted asset that AI assistants rely on to decide who to recommend — and hand you the keys when we&apos;re done.
-              </p>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -322,12 +221,12 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              The One Tier That Doesn&apos;t Exist Yet
+              The Web Was Built for 2005. AI Doesn&apos;t Care.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
-              We&apos;re not optimizing your current site. We&apos;re building the thing that should have existed all along.
+              Most business websites were designed for a world that no longer exists &mdash; static pages built to rank on Google, not to be understood by AI. We build the infrastructure that actually works in the world you&apos;re operating in now.
             </p>
           </ScrollReveal>
 
@@ -402,6 +301,77 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== COMPARISON TABLE + OWNERSHIP ===== */}
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-6xl mx-auto">
+          {/* Three-tier comparison table */}
+          <ScrollReveal delay={200}>
+            <div className="mb-6 overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr style={{ borderBottom: '1px solid rgba(100,70,30,0.2)' }}>
+                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[160px]" style={{ color: '#6a5a48' }}></th>
+                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Enterprise Platforms</th>
+                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Subscription Builders</th>
+                    <th className="font-poppins font-semibold text-sm py-4 min-w-[200px]" style={{ color: '#a0723a' }}>
+                      KodeCite.AI
+                      <span className="block text-xs font-normal mt-0.5" style={{ color: '#6a5a48' }}>Built for this</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { label: 'Built for', ent: 'Fortune 500 + dedicated team', sub: 'Small business volume', kc: 'Small-mid business serious about AI' },
+                    { label: 'Monthly cost', ent: '$3,000–$10,000+', sub: '$150–$600', kc: '$0 after build — you own it' },
+                    { label: 'Builds the foundation', ent: 'No — assumes you have it', sub: 'No — templated and slow', kc: 'Yes — from the ground up' },
+                    { label: 'PageSpeed scores', ent: 'Depends on existing site', sub: 'Typically 40–65', kc: '90–100, guaranteed' },
+                    { label: 'Schema markup', ent: 'Reporting tools', sub: 'Template-level, site-wide', kc: 'Custom per page and article' },
+                    { label: 'AI citation result', ent: 'Possible if foundation exists', sub: 'Rarely cited', kc: 'Built to be cited' },
+                    { label: 'You own it', ent: 'No — software license', sub: 'No — rented platform', kc: 'Yes — outright' },
+                  ].map((row, i) => (
+                    <tr key={i} className="transition-colors" style={{ borderBottom: '1px solid rgba(100,70,30,0.1)' }}>
+                      <td className="font-poppins font-medium text-sm py-4 pr-6" style={{ color: '#0a0806' }}>{row.label}</td>
+                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.ent}</td>
+                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.sub}</td>
+                      <td className="font-poppins font-semibold text-sm py-4" style={{ color: '#a0723a' }}>{row.kc}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </ScrollReveal>
+
+          {/* ===== YOU OWN THE ASSET ===== */}
+          <ScrollReveal delay={250}>
+            <div className="mt-10 p-8 md:p-10 rounded-2xl" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
+              <p className="eyebrow mb-3">OWNERSHIP</p>
+              <h3 className="font-playfair text-2xl md:text-3xl mb-6 leading-tight" style={{ color: '#0a0806' }}>
+                You Own the Asset
+              </h3>
+              <div className="space-y-3 mb-6">
+                {[
+                  'Built on your own Vercel account — no platform lock-in, ever.',
+                  'Custom Next.js codebase in your GitHub — move it, fork it, extend it.',
+                  'One-time build. Ongoing content and optimization is available, never mandatory.',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-poppins text-sm md:text-base leading-relaxed" style={{ color: '#6a5a48' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="font-poppins text-sm md:text-base font-medium" style={{ color: '#0a0806' }}>
+                We don&apos;t sell SEO retainers. We build the structured, edge-hosted asset that AI assistants rely on to decide who to recommend — and hand you the keys when we&apos;re done.
+              </p>
             </div>
           </ScrollReveal>
         </div>
