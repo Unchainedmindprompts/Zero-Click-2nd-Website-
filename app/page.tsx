@@ -258,12 +258,12 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              The One Tier That Didn&apos;t Exist Until Now
+              The Web Was Built for 2005. AI Doesn&apos;t Care.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
-              We&apos;re not optimizing your current site. We&apos;re building the thing that should have existed all along.
+              Most business websites were designed for a world that no longer exists &mdash; static pages built to rank on Google, not to be understood by AI. We build the infrastructure that actually works in the world you&apos;re operating in now.
             </p>
           </ScrollReveal>
 
