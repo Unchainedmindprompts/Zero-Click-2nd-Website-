@@ -165,6 +165,55 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
+      {/* ===== THE HARD TRUTH ===== */}
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">THE HARD TRUTH</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              Most Websites Can&apos;t Be<br />Recommended by AI.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: '#6a5a48' }}>
+              Not because of AI — because of what was broken long before AI arrived. AI doesn&apos;t guess. If it can&apos;t clearly understand and verify your business, it skips you entirely.
+            </p>
+          </ScrollReveal>
+
+          <div className="max-w-2xl mx-auto mb-12 space-y-4">
+            {[
+              { label: 'No structured entity data', body: 'AI agents need machine-readable signals to understand who you are, what you do, and where you operate. Most sites have none.' },
+              { label: 'Inconsistent business signals', body: 'Conflicting NAP data, missing directory listings, and unverified profiles tell AI your business can\'t be trusted.' },
+              { label: 'Generic, templated content', body: 'Content that doesn\'t clearly answer questions about your specific expertise gives AI nothing to cite.' },
+              { label: 'Slow, bloated infrastructure', body: 'AI crawlers deprioritize slow sites. A 4-second load time isn\'t just a UX problem — it\'s a trust signal failure.' },
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 60}>
+                <div className="flex items-start gap-4 p-5 rounded-xl" style={{ background: '#ffffff', border: '1px solid rgba(160,114,58,0.15)' }}>
+                  <svg className="w-5 h-5 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#c0392b' }}>
+                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <p className="font-poppins font-semibold text-sm md:text-base mb-1" style={{ color: '#0a0806' }}>{item.label}</p>
+                    <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={300}>
+            <p className="font-poppins text-base md:text-lg text-center max-w-2xl mx-auto font-medium leading-relaxed" style={{ color: '#0a0806' }}>
+              This isn&apos;t an AI problem. It&apos;s a foundation problem.{' '}
+              <span style={{ color: '#a0723a' }}>We fix it at the root.</span>
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
       {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
       <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
         <div className="max-w-6xl mx-auto">
