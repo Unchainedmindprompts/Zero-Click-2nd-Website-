@@ -145,9 +145,9 @@ export default function HomePage() {
           <ScrollReveal delay={200}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {[
-                { src: '/chatgpt-luxe-first-recommendation.jpg', caption: 'ChatGPT — Luxe First Recommendation' },
-                { src: '/google-ai-mode-luxe-top-rated.jpg', caption: 'Google AI Mode — Luxe Top-Rated Local Specialist' },
-                { src: '/duckduckgo-luxe-map-pack-number-one.jpg', caption: 'DuckDuckGo Map Pack — Luxe #1' },
+                { src: '/chatgpt-luxe-first-recommendation.jpeg', caption: 'ChatGPT — Luxe First Recommendation' },
+                { src: '/google-ai-mode-luxe-top-rated.jpeg', caption: 'Google AI Mode — Luxe Top-Rated Local Specialist' },
+                { src: '/duckduckgo-luxe-map-pack-number-one.jpeg', caption: 'DuckDuckGo Map Pack — Luxe #1' },
               ].map((img, i) => (
                 <figure key={i} className="flex flex-col gap-2">
                   <div className="overflow-hidden rounded-lg border" style={{ borderColor: 'rgba(160,114,58,0.2)' }}>
