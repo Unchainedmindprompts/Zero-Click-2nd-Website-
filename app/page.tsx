@@ -204,10 +204,21 @@ export default function HomePage() {
           </div>
 
           <ScrollReveal delay={300}>
-            <p className="font-poppins text-base md:text-lg text-center max-w-2xl mx-auto font-medium leading-relaxed" style={{ color: '#0a0806' }}>
-              This isn&apos;t an AI problem. It&apos;s a foundation problem.{' '}
-              <span style={{ color: '#a0723a' }}>We fix it at the root.</span>
-            </p>
+            <div className="max-w-2xl mx-auto space-y-5">
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                Most business owners I talk to want to be recommended by AI. They&apos;ve heard the terms — AEO, GEO, answer engine optimization — but most have no idea what they actually mean yet.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                The bigger problem: 80–90% of them have a weak or broken SEO foundation. Without fixing the basics first — fast cold-load performance, proper schema, clean entity signals — no content strategy in the world will help. AI agents simply won&apos;t trust or fully parse the site.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                That&apos;s why we start with the infrastructure. We rebuild the foundation so your site is actually readable and trustworthy to AI systems. Only then does the AEO/GEO layer become truly effective.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed font-medium" style={{ color: '#0a0806' }}>
+                Without fixing the foundation first, every dollar you spend on content, ads, or AI tools is building on sand.{' '}
+                <span style={{ color: '#a0723a' }}>Generic solutions don&apos;t fix structural problems — they just make the bill bigger.</span>
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
