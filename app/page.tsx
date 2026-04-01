@@ -358,49 +358,12 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== COMPARISON TABLE + OWNERSHIP ===== */}
+      {/* ===== OWNERSHIP ===== */}
       <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
         <div className="max-w-6xl mx-auto">
-          {/* Three-tier comparison table */}
-          <ScrollReveal delay={200}>
-            <div className="mb-6 overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr style={{ borderBottom: '1px solid rgba(100,70,30,0.2)' }}>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[160px]" style={{ color: '#6a5a48' }}></th>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Enterprise Platforms</th>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Subscription Builders</th>
-                    <th className="font-poppins font-semibold text-sm py-4 min-w-[200px]" style={{ color: '#a0723a' }}>
-                      KodeCite.AI
-                      <span className="block text-xs font-normal mt-0.5" style={{ color: '#6a5a48' }}>Built for this</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { label: 'Built for', ent: 'Fortune 500 + dedicated team', sub: 'Small business volume', kc: 'Small-mid business serious about AI' },
-                    { label: 'Monthly cost', ent: '$3,000–$10,000+', sub: '$150–$600', kc: '$0 after build — you own it' },
-                    { label: 'Builds the foundation', ent: 'No — assumes you have it', sub: 'No — templated and slow', kc: 'Yes — from the ground up' },
-                    { label: 'PageSpeed scores', ent: 'Depends on existing site', sub: 'Typically 40–65', kc: '90–100, guaranteed' },
-                    { label: 'Schema markup', ent: 'Reporting tools', sub: 'Template-level, site-wide', kc: 'Custom per page and article' },
-                    { label: 'AI citation result', ent: 'Possible if foundation exists', sub: 'Rarely cited', kc: 'Built to be cited' },
-                    { label: 'You own it', ent: 'No — software license', sub: 'No — rented platform', kc: 'Yes — outright' },
-                  ].map((row, i) => (
-                    <tr key={i} className="transition-colors" style={{ borderBottom: '1px solid rgba(100,70,30,0.1)' }}>
-                      <td className="font-poppins font-medium text-sm py-4 pr-6" style={{ color: '#0a0806' }}>{row.label}</td>
-                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.ent}</td>
-                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.sub}</td>
-                      <td className="font-poppins font-semibold text-sm py-4" style={{ color: '#a0723a' }}>{row.kc}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </ScrollReveal>
-
           {/* ===== YOU OWN THE ASSET ===== */}
-          <ScrollReveal delay={250}>
-            <div className="mt-10 p-8 md:p-10 rounded-2xl" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
+          <ScrollReveal delay={100}>
+            <div className="p-8 md:p-10 rounded-2xl" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
               <p className="eyebrow mb-3">OWNERSHIP</p>
               <h3 className="font-playfair text-2xl md:text-3xl mb-6 leading-tight" style={{ color: '#0a0806' }}>
                 You Own the Asset
