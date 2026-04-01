@@ -92,10 +92,10 @@ export default function LuxeWindowWorksCaseStudy() {
           <ScrollReveal delay={150}>
             <div className="font-poppins text-base md:text-lg leading-relaxed space-y-5" style={{ color: '#6a5a48' }}>
               <p>
-                Luxe Window Works is a custom window treatment business in Post Falls, Idaho. When we started working with them, they were competing against established players with 10–20 year head starts, deep review histories, and strong local search presence.
+                Luxe Window Works is our own business — a custom window treatment company in Post Falls, Idaho. Before we built this infrastructure for clients, we proved it on ourselves. We were competing against established players with 10–20 year head starts, deep review histories, and strong local search presence.
               </p>
               <p>
-                We built them a custom Next.js site on Vercel&rsquo;s edge network with full per-page schema, answer-first architecture, and AI identity files — designed from the ground up to be read, trusted, and cited by AI systems.
+                We built a custom Next.js site on Vercel&rsquo;s edge network with full per-page schema, answer-first architecture, and AI identity files — designed from the ground up to be read, trusted, and cited by AI systems.
               </p>
             </div>
           </ScrollReveal>
