@@ -237,7 +237,7 @@ export default function LuxeWindowWorksCaseStudy() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="font-poppins text-base md:text-lg leading-relaxed mb-6" style={{ color: 'rgba(240,232,216,0.75)' }}>
-              These were not cherry-picked moments. They were the natural outcome of a site specifically engineered for how AI agents discover and recommend businesses today. Different models. Different indexes. Same outcome.
+              These were not cherry-picked moments. They were the natural outcome of a site specifically engineered for how AI agents discover and recommend businesses today. Different models. Different indexes. Same outcome. Not because this business is uniquely better — but because it was easier for AI systems to understand and verify.
             </p>
             <p className="font-poppins text-sm italic text-center" style={{ color: 'rgba(240,232,216,0.4)' }}>
               Results vary by platform, query, and crawl cycle. What doesn&rsquo;t vary is the infrastructure that makes this possible.
@@ -271,7 +271,7 @@ export default function LuxeWindowWorksCaseStudy() {
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <h2 className="font-playfair text-3xl md:text-4xl text-center mb-4 leading-tight" style={{ color: '#0a0806' }}>
-              This Wasn&rsquo;t Luck. It Was Infrastructure.
+              This Wasn&rsquo;t Luck. It Was What Happens When One Business Is Clearly Structured and Others Are Not.
             </h2>
             <p className="font-poppins text-base md:text-lg text-center mb-4 leading-relaxed max-w-2xl mx-auto font-medium" style={{ color: '#0a0806' }}>
               Nothing about the business changed. Only how machines understood it.
@@ -309,7 +309,7 @@ export default function LuxeWindowWorksCaseStudy() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-base md:text-lg leading-relaxed text-center" style={{ color: '#6a5a48' }}>
-              Together, these elements meant AI systems could quickly understand exactly who Luxe is, what they do, and why they&rsquo;re the right answer for someone searching locally — faster and more clearly than any competitor on a slower, generic platform.
+              Together, these elements meant AI systems could quickly understand exactly who Luxe is, what they do, and why they&rsquo;re the right answer for someone searching locally — faster and more clearly than any competitor on a slower, generic platform. In AI systems, clarity compounds. When one business is consistently easier to interpret, it gets selected more often — not always, but predictably over time.
             </p>
           </ScrollReveal>
         </div>
