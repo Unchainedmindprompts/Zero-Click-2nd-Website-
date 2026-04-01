@@ -134,117 +134,58 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== WHO THIS IS FOR ===== */}
-      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#f8f5f0' }}>
-        <div className="max-w-6xl mx-auto">
+      {/* ===== THE HARD TRUTH ===== */}
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">BUILT FOR</p>
+            <p className="eyebrow text-center mb-5">THE HARD TRUTH</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-10 leading-tight" style={{ color: '#0a0806' }}>
-              Who This Is For
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              Most Websites Can&apos;t Be<br />Recommended by AI.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-              {[
-                'Local Attorneys',
-                'Independent Financial Advisors',
-                'Real Estate Agents',
-                'Med Spas & Aesthetic Practices',
-                'Specialist Service Businesses',
-              ].map((item, i, arr) => (
-                <span key={i} className="font-poppins font-medium text-sm md:text-base" style={{ color: '#0a0806' }}>
-                  {item}{i < arr.length - 1 && <span style={{ color: '#a0723a', margin: '0 0.5rem' }}>·</span>}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
-      <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>WHY THIS IS HAPPENING</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
-              AI Search Changed How Customers Find You.{' '}
-              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Most businesses haven&apos;t caught up yet.</span>
-            </h2>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: '#6a5a48' }}>
+              Not because of AI — because of what was broken long before AI arrived. AI doesn&apos;t guess. If it can&apos;t clearly understand and verify your business, it skips you entirely.
+            </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={150}>
-            <div className="max-w-3xl mx-auto text-center mb-20">
-              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                Your rankings didn&apos;t drop. Your traffic did. The answer is sitting at the top of the page — and it&apos;s not your website.
-              </p>
-              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                ChatGPT, Perplexity, and Google AI Overviews synthesize answers from sites they can read, trust, and cite.
-                If your site isn&apos;t structured for machine discovery, you aren&apos;t ranked lower.{' '}
-                <span className="font-semibold" style={{ color: '#f8f5f0' }}>You&apos;re not in the conversation at all.</span>
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="max-w-2xl mx-auto mb-12 space-y-4">
             {[
-              { end: 60, suffix: '%', label: 'of Google searches end without a click', delay: 0 },
-              { end: 77, suffix: '%', label: 'of mobile searches never visit a single website', delay: 150 },
-              { end: 47, suffix: '%', label: 'of all Google searches now show AI Overviews — up from 7% in 2023', delay: 300 },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={stat.delay}>
-                <div className="stat-block">
-                  <CounterAnimation end={stat.end} suffix={stat.suffix} label={stat.label} duration={2200} />
+              { label: 'No structured entity data', body: 'AI agents need machine-readable signals to understand who you are, what you do, and where you operate. Most sites have none.' },
+              { label: 'Inconsistent business signals', body: 'Conflicting NAP data, missing directory listings, and unverified profiles tell AI your business can\'t be trusted.' },
+              { label: 'Generic, templated content', body: 'Content that doesn\'t clearly answer questions about your specific expertise gives AI nothing to cite.' },
+              { label: 'Slow, bloated infrastructure', body: 'AI crawlers deprioritize slow sites. A 4-second load time isn\'t just a UX problem — it\'s a trust signal failure.' },
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 60}>
+                <div className="flex items-start gap-4 p-5 rounded-xl" style={{ background: '#ffffff', border: '1px solid rgba(160,114,58,0.15)' }}>
+                  <svg className="w-5 h-5 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#c0392b' }}>
+                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <p className="font-poppins font-semibold text-sm md:text-base mb-1" style={{ color: '#0a0806' }}>{item.label}</p>
+                    <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
           </div>
 
-          <ScrollReveal delay={200}>
-            <p className="text-center text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>
-              Traditional SEO gets you to the top of a list nobody is scrolling anymore.{' '}
-              <span className="font-semibold" style={{ color: '#f8f5f0' }}>
-                Answer Engine Optimization makes you the answer itself.
-              </span>
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ===== WHY NOTHING ELSE SOLVES THIS ===== */}
-      <section id="why-nothing-else" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5">WHY NOTHING ELSE SOLVES THIS</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Why Nothing Else Solves This
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
-              The market has two options for AI search visibility. Neither one was built for you.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={180}>
-            <div className="max-w-3xl mx-auto mb-14 space-y-5">
+          <ScrollReveal delay={300}>
+            <div className="max-w-2xl mx-auto space-y-5">
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools for Fortune 500 teams. They optimize what already exists — they don&apos;t fix a slow, bloated, AI-invisible foundation. If your infrastructure is the problem, better reporting won&apos;t solve it.
+                Most business owners I talk to want to be recommended by AI. They&apos;ve heard the terms — AEO, GEO, answer engine optimization — but most have no idea what they actually mean yet.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies, real estate website builders, and monthly SaaS tools promise simplicity. What they deliver is shared infrastructure that often loads in 3–8 seconds on mobile — while our builds deliver the same pages in under a second on a real iPhone. That&apos;s not a benchmark. That&apos;s what your visitors and AI crawlers actually experience.
+                The bigger problem: 80–90% of them have a weak or broken SEO foundation. Without fixing the basics first — fast cold-load performance, proper schema, clean entity signals — no content strategy in the world will help. AI agents simply won&apos;t trust or fully parse the site.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                In between sits the majority of serious small and mid-sized businesses with no purpose-built solution. We are the missing tier: a site built from the ground up for how AI actually works.
+                That&apos;s why we start with the infrastructure. We rebuild the foundation so your site is actually readable and trustworthy to AI systems. Only then does the AEO/GEO layer become truly effective.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed font-medium" style={{ color: '#0a0806' }}>
+                Without fixing the foundation first, every dollar you spend on content, ads, or AI tools is building on sand.{' '}
+                <span style={{ color: '#a0723a' }}>Generic solutions don&apos;t fix structural problems — they just make the bill bigger.</span>
               </p>
             </div>
           </ScrollReveal>
@@ -338,19 +279,111 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          {/* CTA */}
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== INTENT COMPRESSION — mid warm ===== */}
+      <section id="intent-compression" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">WHY THIS CHANGES EVERYTHING</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#0a0806' }}>
+              AI doesn&apos;t send you traffic.{' '}
+              <span style={{ color: '#a0723a' }}>It sends you buyers.</span>
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={150}>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: '#6a5a48' }}>
+                Visitors who discover your business through an AI citation aren&apos;t browsing —
+                they&apos;ve already been vetted. The AI has evaluated your authority, matched your
+                expertise to the user&apos;s question, and delivered a pre-qualified buyer directly
+                to your door.
+              </p>
+              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: '#6a5a48' }}>
+                This is what we call{' '}
+                <span className="font-semibold" style={{ color: '#0a0806' }}>Intent Compression</span>. The research
+                that used to take days happens inside the AI in seconds.
+                By the time they land on your site, the decision is nearly made.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Comparison table */}
+          <ScrollReveal delay={200}>
+            <div className="mb-16 overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr style={{ borderBottom: '1px solid rgba(100,70,30,0.2)' }}>
+                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Metric</th>
+                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[160px]" style={{ color: '#6a5a48' }}>Traditional Search</th>
+                    <th className="font-poppins font-semibold text-sm py-4 min-w-[200px]" style={{ color: '#a0723a' }}>
+                      AI-Cited Traffic
+                      <span className="block text-xs font-normal mt-0.5" style={{ color: '#6a5a48' }}>KodeCite Stack</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { metric: 'Conversion Rate', traditional: '2.8%', ai: '14.2% — 5x higher' },
+                    { metric: 'Purchase Speed', traditional: 'Standard', ai: '47% faster completion' },
+                    { metric: 'Pages Per Session', traditional: 'Baseline', ai: '50% more pages viewed' },
+                    { metric: 'Order / Transaction Value', traditional: 'Standard', ai: '25% higher per transaction' },
+                    { metric: 'Likelihood to Convert', traditional: 'Baseline', ai: 'Up to 23x more likely' },
+                  ].map((row, i) => (
+                    <tr key={i} className="transition-colors" style={{ borderBottom: '1px solid rgba(100,70,30,0.1)' }}>
+                      <td className="font-poppins font-medium text-sm py-4 pr-6" style={{ color: '#0a0806' }}>{row.metric}</td>
+                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.traditional}</td>
+                      <td className="font-poppins font-semibold text-sm py-4" style={{ color: '#a0723a' }}>{row.ai}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="text-xs text-center mt-5 font-poppins italic" style={{ color: '#6a5a48' }}>
+                Sources: Current AI search traffic analysis, 2025–2026. B2C metrics across retail, real estate, and professional services sectors.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Stat callouts */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {[
+              { end: 14.2, decimals: 1, suffix: '%', label: 'AI citation conversion rate vs. 2.8% traditional search', delay: 0 },
+              { end: 47, decimals: 0, suffix: '%', label: 'faster purchase completion for AI-assisted buyers', delay: 150 },
+              { end: 23, decimals: 0, suffix: 'x', label: 'more likely to convert vs. traditional organic traffic', delay: 300 },
+            ].map((stat, i) => (
+              <ScrollReveal key={i} delay={stat.delay}>
+                <div className="stat-block">
+                  <CounterAnimation end={stat.end} decimals={stat.decimals} suffix={stat.suffix} label={stat.label} duration={2200} />
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Pull quote */}
+          <ScrollReveal delay={200}>
+            <blockquote className="rounded-r-xl px-8 py-8 max-w-3xl mx-auto mb-12" style={{ borderLeft: '4px solid #a0723a', background: '#e8e0d0' }}>
+              <p className="font-poppins text-base md:text-lg leading-relaxed italic" style={{ color: '#1c1814' }}>
+                &ldquo;When an AI recommends your business, it isn&apos;t sending a curious
+                visitor. It&apos;s sending a pre-educated buyer who already trusts you —
+                before they&apos;ve read a single word on your site.&rdquo;
+              </p>
+            </blockquote>
+          </ScrollReveal>
+
           <ScrollReveal delay={300}>
             <div className="text-center">
-              <a
-                href="#solution"
-                className="font-poppins font-semibold text-base inline-flex items-center gap-2 pb-0.5 transition-colors"
-                style={{ color: '#a0723a', borderBottom: '1px solid rgba(160,114,58,0.4)' }}
-              >
-                See How We Build It
+              <Link href="/services" className="btn-gold-outline font-poppins font-semibold text-base inline-flex items-center gap-2 rounded-md" style={{ padding: '15px 36px' }}>
+                See how we build this for your business
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </ScrollReveal>
         </div>
@@ -358,49 +391,100 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== COMPARISON TABLE + OWNERSHIP ===== */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+      {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
+      <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
         <div className="max-w-6xl mx-auto">
-          {/* Three-tier comparison table */}
-          <ScrollReveal delay={200}>
-            <div className="mb-6 overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr style={{ borderBottom: '1px solid rgba(100,70,30,0.2)' }}>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[160px]" style={{ color: '#6a5a48' }}></th>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Enterprise Platforms</th>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Subscription Builders</th>
-                    <th className="font-poppins font-semibold text-sm py-4 min-w-[200px]" style={{ color: '#a0723a' }}>
-                      KodeCite.AI
-                      <span className="block text-xs font-normal mt-0.5" style={{ color: '#6a5a48' }}>Built for this</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { label: 'Built for', ent: 'Fortune 500 + dedicated team', sub: 'Small business volume', kc: 'Small-mid business serious about AI' },
-                    { label: 'Monthly cost', ent: '$3,000–$10,000+', sub: '$150–$600', kc: '$0 after build — you own it' },
-                    { label: 'Builds the foundation', ent: 'No — assumes you have it', sub: 'No — templated and slow', kc: 'Yes — from the ground up' },
-                    { label: 'PageSpeed scores', ent: 'Depends on existing site', sub: 'Typically 40–65', kc: '90–100, guaranteed' },
-                    { label: 'Schema markup', ent: 'Reporting tools', sub: 'Template-level, site-wide', kc: 'Custom per page and article' },
-                    { label: 'AI citation result', ent: 'Possible if foundation exists', sub: 'Rarely cited', kc: 'Built to be cited' },
-                    { label: 'You own it', ent: 'No — software license', sub: 'No — rented platform', kc: 'Yes — outright' },
-                  ].map((row, i) => (
-                    <tr key={i} className="transition-colors" style={{ borderBottom: '1px solid rgba(100,70,30,0.1)' }}>
-                      <td className="font-poppins font-medium text-sm py-4 pr-6" style={{ color: '#0a0806' }}>{row.label}</td>
-                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.ent}</td>
-                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.sub}</td>
-                      <td className="font-poppins font-semibold text-sm py-4" style={{ color: '#a0723a' }}>{row.kc}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>WHY THIS IS HAPPENING</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
+              AI Search Changed How Customers Find You.{' '}
+              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Most businesses haven&apos;t caught up yet.</span>
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={150}>
+            <div className="max-w-3xl mx-auto text-center mb-20">
+              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.82)' }}>
+                Your rankings didn&apos;t drop. Your traffic did. The answer is sitting at the top of the page — and it&apos;s not your website.
+              </p>
+              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.82)' }}>
+                ChatGPT, Perplexity, and Google AI Overviews synthesize answers from sites they can read, trust, and cite.
+                If your site isn&apos;t structured for machine discovery, you aren&apos;t ranked lower.{' '}
+                <span className="font-semibold" style={{ color: '#f8f5f0' }}>You&apos;re not in the conversation at all.</span>
+              </p>
             </div>
           </ScrollReveal>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {[
+              { end: 60, suffix: '%', label: 'of Google searches end without a click', delay: 0 },
+              { end: 77, suffix: '%', label: 'of mobile searches never visit a single website', delay: 150 },
+              { end: 47, suffix: '%', label: 'of all Google searches now trigger an AI Overview', delay: 300 },
+            ].map((stat, i) => (
+              <ScrollReveal key={i} delay={stat.delay}>
+                <div className="stat-block">
+                  <CounterAnimation end={stat.end} suffix={stat.suffix} label={stat.label} duration={2200} />
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={200}>
+            <p className="text-center text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>
+              Traditional SEO gets you to the top of a list nobody is scrolling anymore.{' '}
+              <span className="font-semibold" style={{ color: '#f8f5f0' }}>
+                Answer Engine Optimization makes you the answer itself.
+              </span>
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== WHY NOTHING ELSE SOLVES THIS ===== */}
+      <section id="why-nothing-else" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">WHY NOTHING ELSE SOLVES THIS</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              Why Nothing Else Solves This
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
+              The market has two options for AI search visibility. Neither one was built for you.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={180}>
+            <div className="max-w-3xl mx-auto mb-14 space-y-5">
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools for Fortune 500 teams. They optimize what already exists — they don&apos;t fix a slow, bloated, AI-invisible foundation. If your infrastructure is the problem, better reporting won&apos;t solve it.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies, real estate website builders, and monthly SaaS tools promise simplicity. What they deliver is shared infrastructure that often loads in 3–8 seconds on mobile — while our builds deliver the same pages in under a second on a real iPhone. That&apos;s not a benchmark. That&apos;s what your visitors and AI crawlers actually experience.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                In between sits the majority of serious small and mid-sized businesses with no purpose-built solution. We are the missing tier: a site built from the ground up for how AI actually works.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== OWNERSHIP ===== */}
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-6xl mx-auto">
           {/* ===== YOU OWN THE ASSET ===== */}
-          <ScrollReveal delay={250}>
-            <div className="mt-10 p-8 md:p-10 rounded-2xl" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
+          <ScrollReveal delay={100}>
+            <div className="p-8 md:p-10 rounded-2xl" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
               <p className="eyebrow mb-3">OWNERSHIP</p>
               <h3 className="font-playfair text-2xl md:text-3xl mb-6 leading-tight" style={{ color: '#0a0806' }}>
                 You Own the Asset
@@ -467,119 +551,6 @@ export default function HomePage() {
                   <p className="font-poppins text-sm md:text-base leading-relaxed" style={{ color: 'rgba(240,232,216,0.85)' }}>{item}</p>
                 </div>
               ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ===== INTENT COMPRESSION — mid warm ===== */}
-      <section id="intent-compression" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5">WHY THIS CHANGES EVERYTHING</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#0a0806' }}>
-              AI doesn&apos;t send you traffic.{' '}
-              <span style={{ color: '#a0723a' }}>It sends you buyers.</span>
-            </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={150}>
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: '#6a5a48' }}>
-                Visitors who discover your business through an AI citation aren&apos;t browsing —
-                they&apos;ve already been vetted. The AI has evaluated your authority, matched your
-                expertise to the user&apos;s question, and delivered a pre-qualified buyer directly
-                to your door.
-              </p>
-              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: '#6a5a48' }}>
-                This is what we call{' '}
-                <span className="font-semibold" style={{ color: '#0a0806' }}>Intent Compression</span>. The research
-                that used to take days happens inside the AI in seconds.
-                By the time they land on your site, the decision is nearly made.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Comparison table */}
-          <ScrollReveal delay={200}>
-            <div className="mb-16 overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr style={{ borderBottom: '1px solid rgba(100,70,30,0.2)' }}>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>
-                      Metric
-                    </th>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[160px]" style={{ color: '#6a5a48' }}>
-                      Traditional Search
-                    </th>
-                    <th className="font-poppins font-semibold text-sm py-4 min-w-[200px]" style={{ color: '#a0723a' }}>
-                      AI-Cited Traffic
-                      <span className="block text-xs font-normal mt-0.5" style={{ color: '#6a5a48' }}>
-                        KodeCite Stack
-                      </span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { metric: 'Conversion Rate', traditional: '2.8%', ai: '14.2% — 5x higher' },
-                    { metric: 'Purchase Speed', traditional: 'Standard', ai: '47% faster completion' },
-                    { metric: 'Pages Per Session', traditional: 'Baseline', ai: '50% more pages viewed' },
-                    { metric: 'Order / Transaction Value', traditional: 'Standard', ai: '25% higher per transaction' },
-                    { metric: 'Likelihood to Convert', traditional: 'Baseline', ai: 'Up to 23x more likely' },
-                  ].map((row, i) => (
-                    <tr key={i} className="transition-colors" style={{ borderBottom: '1px solid rgba(100,70,30,0.1)' }}>
-                      <td className="font-poppins font-medium text-sm py-4 pr-6" style={{ color: '#0a0806' }}>{row.metric}</td>
-                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.traditional}</td>
-                      <td className="font-poppins font-semibold text-sm py-4" style={{ color: '#a0723a' }}>{row.ai}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <p className="text-xs text-center mt-5 font-poppins italic" style={{ color: '#6a5a48' }}>
-                Sources: Current AI search traffic analysis, 2025–2026. B2C metrics across retail, real estate, and professional services sectors.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Stat callouts */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {[
-              { end: 14.2, decimals: 1, suffix: '%', label: 'AI citation conversion rate vs. 2.8% traditional search', delay: 0 },
-              { end: 47, decimals: 0, suffix: '%', label: 'faster purchase completion for AI-assisted buyers', delay: 150 },
-              { end: 23, decimals: 0, suffix: 'x', label: 'more likely to convert vs. traditional organic traffic', delay: 300 },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={stat.delay}>
-                <div className="stat-block">
-                  <CounterAnimation end={stat.end} decimals={stat.decimals} suffix={stat.suffix} label={stat.label} duration={2200} />
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Pull quote */}
-          <ScrollReveal delay={200}>
-            <blockquote className="rounded-r-xl px-8 py-8 max-w-3xl mx-auto mb-12" style={{ borderLeft: '4px solid #a0723a', background: '#e8e0d0' }}>
-              <p className="font-poppins text-base md:text-lg leading-relaxed italic" style={{ color: '#1c1814' }}>
-                &ldquo;When an AI recommends your business, it isn&apos;t sending a curious
-                visitor. It&apos;s sending a pre-educated buyer who already trusts you —
-                before they&apos;ve read a single word on your site.&rdquo;
-              </p>
-            </blockquote>
-          </ScrollReveal>
-
-          <ScrollReveal delay={300}>
-            <div className="text-center">
-              <Link href="/services" className="btn-gold-outline font-poppins font-semibold text-base inline-flex items-center gap-2 rounded-md" style={{ padding: '15px 36px' }}>
-                See how we build this for your business
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
             </div>
           </ScrollReveal>
         </div>
