@@ -101,7 +101,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-base md:text-lg text-center leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: '#6a5a48' }}>
-              Luxe Window Works — our own custom window treatment company in Post Falls, Idaho — went from invisible to AI-recommended first across six platforms in 2.5 months with zero ad spend. One year old business. One year old domain. Previously on Wix, then WordPress.
+              Luxe Window Works — our own custom window treatment company in Post Falls, Idaho — went from unknown to AI-recommended first across six platforms in 2.5 months with zero ad spend. One year old business. One year old domain. Previously on Wix, then WordPress.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={180}>
@@ -173,22 +173,19 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
-              The game changed.{' '}
-              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Nobody told your marketing team.</span>
+              AI Search Changed How Customers Find You.{' '}
+              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Most businesses haven&apos;t caught up yet.</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
             <div className="max-w-3xl mx-auto text-center mb-20">
               <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                Your rankings didn&apos;t drop. Your traffic did. That&apos;s not a coincidence
-                — it&apos;s the new reality of AI-driven search.
+                Your rankings didn&apos;t drop. Your traffic did. The answer is sitting at the top of the page — and it&apos;s not your website.
               </p>
               <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                When someone asks ChatGPT, Perplexity, or Google&apos;s AI Overview a question
-                about your industry, the AI synthesizes an answer from sites it can read, trust,
-                and cite. If your site isn&apos;t structured for machine discovery, you aren&apos;t
-                ranked lower.{' '}
+                ChatGPT, Perplexity, and Google AI Overviews synthesize answers from sites they can read, trust, and cite.
+                If your site isn&apos;t structured for machine discovery, you aren&apos;t ranked lower.{' '}
                 <span className="font-semibold" style={{ color: '#f8f5f0' }}>You&apos;re not in the conversation at all.</span>
               </p>
             </div>
@@ -604,7 +601,7 @@ export default function HomePage() {
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
               Visibility in AI doesn&apos;t mean much if the scaffolding is weak. Find out if AI truly
-              trusts, reads, and chooses you — or if you&apos;re one structured competitor away from invisible.
+              trusts, reads, and chooses you — or if you&apos;re one structured competitor away from being passed over entirely.
             </p>
             <p className="font-poppins text-base leading-relaxed mb-10" style={{ color: '#6a5a48' }}>
               No pitch. No pressure. Just an honest look at the hidden structure beneath your AI presence
