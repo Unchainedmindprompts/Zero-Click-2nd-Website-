@@ -338,21 +338,6 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          {/* CTA */}
-          <ScrollReveal delay={300}>
-            <div className="text-center">
-              <a
-                href="#solution"
-                className="font-poppins font-semibold text-base inline-flex items-center gap-2 pb-0.5 transition-colors"
-                style={{ color: '#a0723a', borderBottom: '1px solid rgba(160,114,58,0.4)' }}
-              >
-                See How We Build It
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </a>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
