@@ -195,7 +195,7 @@ export default function HomePage() {
             {[
               { end: 60, suffix: '%', label: 'of Google searches end without a click', delay: 0 },
               { end: 77, suffix: '%', label: 'of mobile searches never visit a single website', delay: 150 },
-              { end: 25, suffix: '%', label: 'predicted drop in traditional search traffic by 2026 — Gartner', delay: 300 },
+              { end: 47, suffix: '%', label: 'of all Google searches now show AI Overviews — up from 7% in 2023', delay: 300 },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={stat.delay}>
                 <div className="stat-block">
