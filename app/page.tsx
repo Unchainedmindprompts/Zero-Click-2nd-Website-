@@ -103,7 +103,7 @@ export default function HomePage() {
           <ScrollReveal delay={150}>
             <div className="font-poppins text-base md:text-lg leading-relaxed space-y-5 mb-10" style={{ color: '#6a5a48' }}>
               <p>
-                Before we built it for clients, we proved it on ourselves. Luxe Window Works — a custom window treatment business in Post Falls, Idaho — is our live case study. A business just one year old. A Next.js deployment only 2.5 months old on the day these screenshots were taken. Competitors with 10–20 year head starts. Zero paid advertising.
+                Before we built it for clients, we proved it on ourselves. Luxe Window Works — a custom window treatment business in Post Falls, Idaho — is our live case study. A business one year old. A domain one year old. A site that started on Wix, moved to WordPress, and only 2.5 months before these screenshots were taken, was rebuilt on a Next.js edge server. Competitors with 10–20 year head starts. Zero paid advertising.
               </p>
               <p>
                 On the morning of April 1, 2026 — within a single 17-minute window — one search query produced this across every major platform:

@@ -78,8 +78,8 @@ export default function LuxeWindowWorksCaseStudy() {
           <ScrollReveal delay={100}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {[
-                { label: 'Business Age', value: '1 Year Old' },
-                { label: 'Deployment Age', value: '2.5 Months' },
+                { label: 'Business & Domain Age', value: '1 Year Old' },
+                { label: 'On Next.js Edge', value: '2.5 Months' },
                 { label: 'Ad Spend', value: '$0' },
               ].map((stat) => (
                 <div key={stat.label} className="text-center p-8 rounded-xl border" style={{ borderColor: 'rgba(160,114,58,0.2)', backgroundColor: '#f8f5f0' }}>
@@ -92,10 +92,10 @@ export default function LuxeWindowWorksCaseStudy() {
           <ScrollReveal delay={150}>
             <div className="font-poppins text-base md:text-lg leading-relaxed space-y-5" style={{ color: '#6a5a48' }}>
               <p>
-                Luxe Window Works is our own business — a custom window treatment company in Post Falls, Idaho. Before we built this infrastructure for clients, we proved it on ourselves. We were competing against established players with 10–20 year head starts, deep review histories, and strong local search presence.
+                Luxe Window Works is our own business — a custom window treatment company in Post Falls, Idaho. Before we built this infrastructure for clients, we proved it on ourselves. The business is one year old. The domain is one year old. The site launched on Wix, moved to WordPress, and only 2.5 months before these screenshots were taken, was rebuilt on a Next.js edge server. We were still competing against established players with 10–20 year head starts, deep review histories, and strong local search presence.
               </p>
               <p>
-                We built a custom Next.js site on Vercel&rsquo;s edge network with full per-page schema, answer-first architecture, and AI identity files — designed from the ground up to be read, trusted, and cited by AI systems.
+                Same URL. Same business. Completely different infrastructure — and these are the consistent results we started getting almost immediately after the switch.
               </p>
             </div>
           </ScrollReveal>
