@@ -110,13 +110,13 @@ export default function LuxeWindowWorksCaseStudy() {
           <ScrollReveal>
             <p className="eyebrow text-center mb-4" style={{ color: '#c8945a' }}>APRIL 1, 2026 · 17-MINUTE WINDOW</p>
             <h2 className="font-playfair text-3xl md:text-4xl text-center mb-10 leading-tight" style={{ color: '#f8f5f0' }}>
-              Six Platforms. One Clear Pattern.
+              Six Platforms. One Consistent Pattern.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <div className="font-poppins text-base md:text-lg leading-relaxed space-y-4 mb-10" style={{ color: 'rgba(240,232,216,0.75)' }}>
               <p>
-                On the morning of April 1, 2026, within a single 17-minute window, one search for window treatments in the Post Falls area produced this across every major platform. All screenshots were captured in incognito mode — no search history, no personalization, no location bias.
+                On the morning of April 1, 2026, within a single 17-minute window, one search for window treatments in the Post Falls area produced consistent results across every major platform. All screenshots were captured in incognito mode — no search history, no personalization, no location bias.
               </p>
             </div>
           </ScrollReveal>
@@ -139,7 +139,7 @@ export default function LuxeWindowWorksCaseStudy() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="font-poppins text-base md:text-lg leading-relaxed mb-6" style={{ color: 'rgba(240,232,216,0.75)' }}>
-              These weren&rsquo;t cherry-picked results. They were the natural outcome of a site built specifically for how AI agents discover and recommend businesses today.
+              These were not cherry-picked moments. They were the natural outcome of a site specifically engineered for how AI agents discover and recommend businesses today.
             </p>
             <p className="font-poppins text-sm italic text-center" style={{ color: 'rgba(240,232,216,0.4)' }}>
               Results vary by platform, query, and crawl cycle. What doesn&rsquo;t vary is the infrastructure that makes this possible.
@@ -191,12 +191,11 @@ export default function LuxeWindowWorksCaseStudy() {
       <section className="py-16 md:py-24 px-4" style={{ backgroundColor: '#faf7f2' }}>
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">THE INFRASTRUCTURE</p>
             <h2 className="font-playfair text-3xl md:text-4xl text-center mb-4 leading-tight" style={{ color: '#0a0806' }}>
               This Wasn&rsquo;t Luck. It Was Infrastructure.
             </h2>
             <p className="font-poppins text-base md:text-lg text-center mb-10 leading-relaxed max-w-2xl mx-auto" style={{ color: '#6a5a48' }}>
-              While most local businesses still rely on traditional platforms that load slowly on cold crawl and have weak or generic schema, Luxe Window Works was built with:
+              While most local businesses still rely on traditional platforms that struggle with cold-load performance and weak schema, Luxe Window Works was built with four key advantages:
             </p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
@@ -204,19 +203,19 @@ export default function LuxeWindowWorksCaseStudy() {
               {[
                 {
                   title: 'Edge-Native Cold-Load Performance',
-                  body: 'AI crawlers don\'t have warm caches. They hit your site cold — and if it\'s slow, they move on. Built on Vercel\'s edge network, the site loads in under a second on real devices with no prior cache, which means crawlers can fully parse every page on every visit.',
+                  body: "AI crawlers don't have warm caches. They hit every site cold. Built on Vercel's global edge network, the site loads in under a second on real devices, allowing crawlers to fully parse every page on every visit.",
                 },
                 {
                   title: 'Custom Per-Page Schema',
-                  body: 'Generic schema tells AI systems almost nothing useful. Every page was built with structured data specific to what that page is about — service type, location, entity relationships — giving AI models a precise, machine-readable map of the business.',
+                  body: 'Generic schema tells AI systems almost nothing useful. Every page was built with structured data specific to its content — giving AI models a precise, machine-readable map of the business.',
                 },
                 {
                   title: 'AI Identity Files (llms.txt + agent.json)',
-                  body: 'These files tell AI systems exactly who the business is, what it does, and how to describe it. Without them, AI models have to guess from unstructured content. With them, the business introduces itself directly to every AI agent that visits.',
+                  body: "These files tell AI systems exactly who the business is and how to describe it. Without them, AI models have to guess from unstructured content. With them, the business introduces itself directly.",
                 },
                 {
                   title: 'Answer-First Content Architecture',
-                  body: 'Most websites are written for humans scrolling a page. This site was written for AI agents scanning for the best answer to a specific question. Every service page leads with the direct answer, then supports it — the structure AI systems are built to reward.',
+                  body: 'Most websites are written for humans scrolling. This site was written for AI agents scanning for the best answer to a specific question. Every service page leads with the direct answer, then supports it.',
                 },
               ].map((item, i) => (
                 <div key={i} className="p-6 rounded-xl border" style={{ borderColor: 'rgba(160,114,58,0.2)', backgroundColor: '#f8f5f0' }}>
