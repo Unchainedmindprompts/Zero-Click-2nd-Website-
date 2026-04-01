@@ -22,6 +22,71 @@ const breadcrumbSchema = {
   ],
 };
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Luxe Window Works: From Unknown to AI-Recommended First in 2.5 Months',
+  description:
+    'How a one-year-old window treatment business in Post Falls, Idaho became the first AI recommendation on ChatGPT, Google AI Mode, Microsoft Copilot, and DuckDuckGo — with zero ad spend — using Next.js edge hosting, custom schema, and AI identity files.',
+  url: 'https://kodecite.ai/our-work/luxe-window-works',
+  datePublished: '2025-11-01',
+  dateModified: '2026-04-01',
+  author: {
+    '@type': 'Organization',
+    name: 'KodeCite.ai',
+    url: 'https://kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'KodeCite.ai',
+    url: 'https://kodecite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://kodecite.ai/logo.png',
+    },
+  },
+  about: {
+    '@type': 'Thing',
+    name: 'Answer Engine Optimization',
+  },
+  keywords: [
+    'AEO case study',
+    'AI search optimization',
+    'ChatGPT local recommendation',
+    'Google AI Overview local business',
+    'Next.js edge hosting',
+    'schema markup results',
+    'Post Falls Idaho window treatments',
+  ],
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Luxe Window Works',
+  description:
+    'Custom window treatments in Post Falls, Idaho. Specializing in shutters, blinds, shades, and drapes for residential and commercial properties.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Post Falls',
+    addressRegion: 'ID',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    'Post Falls, ID',
+    'Coeur d\'Alene, ID',
+    'Spokane, WA',
+    'North Idaho',
+  ],
+  serviceType: [
+    'Custom Window Treatments',
+    'Shutters',
+    'Blinds',
+    'Shades',
+    'Drapes',
+  ],
+};
+
 const screenshots = [
   { src: '/chatgpt-luxe-first-recommendation.jpeg', caption: 'ChatGPT — Luxe recommended first. "Best overall pick locally."' },
   { src: '/chatgpt-luxe-shutters-energy-efficiency.jpeg', caption: 'ChatGPT follow-up on shutters & energy efficiency — Luxe first again.' },
@@ -39,6 +104,14 @@ export default function LuxeWindowWorksCaseStudy() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* Hero */}
