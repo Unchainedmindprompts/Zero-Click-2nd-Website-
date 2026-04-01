@@ -123,12 +123,12 @@ export default function LuxeWindowWorksCaseStudy() {
           <ScrollReveal delay={150}>
             <ul className="space-y-4 mb-10">
               {[
-                { time: '9:36 AM', text: 'ChatGPT recommended Luxe first as the \u201cbest overall pick locally.\u201d' },
-                { time: '9:39 AM', text: 'ChatGPT follow-up on shutters and energy efficiency \u2014 Luxe first again.' },
-                { time: '9:42 AM', text: 'Microsoft Copilot listed Luxe first under \u201cBest Local Specialists.\u201d' },
-                { time: '9:43 AM', text: 'Google Map Pack \u2014 Luxe #1.' },
-                { time: '9:43 AM', text: 'Google AI Mode \u2014 Luxe first under \u201cTop-Rated Local Specialists.\u201d' },
-                { time: '9:53 AM', text: 'DuckDuckGo Map Pack \u2014 Luxe #1.' },
+                { time: '9:36 AM', text: 'ChatGPT \u2014 recommended as the \u201cbest overall pick locally.\u201d' },
+                { time: '9:39 AM', text: 'ChatGPT (follow-up query on shutters and energy efficiency) \u2014 top recommendation again.' },
+                { time: '9:42 AM', text: 'Microsoft Copilot \u2014 listed first under \u201cBest Local Specialists.\u201d' },
+                { time: '9:43 AM', text: 'Google Map Pack \u2014 ranked #1.' },
+                { time: '9:43 AM', text: 'Google AI Mode \u2014 listed first under \u201cTop-Rated Local Specialists.\u201d' },
+                { time: '9:53 AM', text: 'DuckDuckGo Map Pack \u2014 ranked #1.' },
               ].map((item, i) => (
                 <li key={i} className="flex gap-4 items-start p-4 rounded-lg" style={{ backgroundColor: 'rgba(240,232,216,0.05)', borderLeft: '3px solid #a0723a' }}>
                   <span className="font-poppins font-semibold shrink-0 text-sm" style={{ color: '#c8945a' }}>{item.time}</span>
@@ -200,27 +200,35 @@ export default function LuxeWindowWorksCaseStudy() {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {[
-                'Sub-second cold-load performance on real devices',
-                'Custom per-page schema engineered for AI citation',
-                'Clean entity signals (llms.txt + agent.json)',
-                'Answer-first content architecture',
+                {
+                  title: 'Edge-Native Cold-Load Performance',
+                  body: 'AI crawlers don\'t have warm caches. They hit your site cold — and if it\'s slow, they move on. Built on Vercel\'s edge network, the site loads in under a second on real devices with no prior cache, which means crawlers can fully parse every page on every visit.',
+                },
+                {
+                  title: 'Custom Per-Page Schema',
+                  body: 'Generic schema tells AI systems almost nothing useful. Every page was built with structured data specific to what that page is about — service type, location, entity relationships — giving AI models a precise, machine-readable map of the business.',
+                },
+                {
+                  title: 'AI Identity Files (llms.txt + agent.json)',
+                  body: 'These files tell AI systems exactly who the business is, what it does, and how to describe it. Without them, AI models have to guess from unstructured content. With them, the business introduces itself directly to every AI agent that visits.',
+                },
+                {
+                  title: 'Answer-First Content Architecture',
+                  body: 'Most websites are written for humans scrolling a page. This site was written for AI agents scanning for the best answer to a specific question. Every service page leads with the direct answer, then supports it — the structure AI systems are built to reward.',
+                },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 p-5 rounded-xl border" style={{ borderColor: 'rgba(160,114,58,0.2)', backgroundColor: '#f8f5f0' }}>
-                  <span style={{ color: '#a0723a', flexShrink: 0, marginTop: '2px' }}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <p className="font-poppins text-base" style={{ color: '#6a5a48' }}>{item}</p>
+                <div key={i} className="p-6 rounded-xl border" style={{ borderColor: 'rgba(160,114,58,0.2)', backgroundColor: '#f8f5f0' }}>
+                  <h3 className="font-poppins font-semibold text-base mb-2" style={{ color: '#0a0806' }}>{item.title}</h3>
+                  <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
                 </div>
               ))}
             </div>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-base md:text-lg leading-relaxed text-center" style={{ color: '#6a5a48' }}>
-              The result: AI systems could quickly understand exactly who Luxe is, what they do, and why they&rsquo;re the best local choice.
+              Together, these elements meant AI systems could quickly understand exactly who Luxe is, what they do, and why they&rsquo;re the right answer for someone searching locally — faster and more clearly than any competitor on a slower, generic platform.
             </p>
           </ScrollReveal>
         </div>
