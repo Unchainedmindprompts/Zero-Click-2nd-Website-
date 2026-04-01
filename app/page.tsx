@@ -88,93 +88,44 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== PROOF OF CONCEPT ===== */}
-      <section className="py-16 md:py-24 px-4" style={{ backgroundColor: '#faf7f2' }}>
+      {/* ===== PROOF IT WORKS ===== */}
+      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#faf7f2' }}>
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">THE PROOF OF CONCEPT</p>
+            <p className="eyebrow text-center mb-4">PROOF IT WORKS</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-10 leading-tight" style={{ color: '#0a0806' }}>
-              We Built It On Our Own Business First.
+            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-6 leading-tight" style={{ color: '#0a0806' }}>
+              We Proved It On Our Own Business First.
             </h2>
           </ScrollReveal>
-
           <ScrollReveal delay={150}>
-            <div className="font-poppins text-base md:text-lg leading-relaxed space-y-5 mb-10" style={{ color: '#6a5a48' }}>
-              <p>
-                Before we built it for clients, we proved it on ourselves. Luxe Window Works — a custom window treatment business in Post Falls, Idaho — is our live case study. A business just one year old. A Next.js deployment only 2.5 months old on the day these screenshots were taken. Competitors with 10–20 year head starts. Zero paid advertising.
-              </p>
-              <p>
-                On the morning of April 1, 2026 — within a single 17-minute window — one search query produced this across every major platform:
-              </p>
-
-              <ul className="space-y-2 pl-0 list-none">
-                {[
-                  { time: '9:36 AM', text: 'ChatGPT recommended Luxe first. \u201cBest overall pick locally.\u201d' },
-                  { time: '9:39 AM', text: 'ChatGPT follow-up on shutters and energy efficiency. Luxe first again.' },
-                  { time: '9:42 AM', text: 'Microsoft Copilot listed Luxe first under \u201cBest Local Specialists.\u201d' },
-                  { time: '9:43 AM', text: 'Google Map Pack. Luxe #1.' },
-                  { time: '9:43 AM', text: 'Google AI Mode. Luxe first under \u201cTop-Rated Local Specialists.\u201d' },
-                  { time: '9:53 AM', text: 'DuckDuckGo map pack. Luxe #1.' },
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-start">
-                    <span className="font-semibold shrink-0" style={{ color: '#a0723a' }}>{item.time}</span>
-                    <span>— {item.text}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="font-semibold" style={{ color: '#0a0806' }}>
-                Six platforms. One morning. Timestamps don&rsquo;t lie.
-              </p>
-
-              <p>
-                Every screenshot was captured in incognito mode — no search history, no personalization, no location bias. These are the same cold results any potential customer would see searching for the first time.
-              </p>
-              <p>
-                This isn&rsquo;t a ranking report. This is AI recommendation dominance across every major platform your customers are actually using — built in 2.5 months on a one-year-old business with zero ad spend.
-              </p>
-              <p className="text-sm italic" style={{ color: '#a0927a' }}>
-                Results vary by platform, query, and crawl cycle. What doesn&rsquo;t vary is the infrastructure that makes this possible.
-              </p>
-            </div>
+            <p className="font-poppins text-base md:text-lg text-center leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: '#6a5a48' }}>
+              Luxe Window Works — our own custom window treatment company in Post Falls, Idaho — went from unknown to AI-recommended first across six platforms in 2.5 months with zero ad spend. One year old business. One year old domain. Previously on Wix, then WordPress.
+            </p>
           </ScrollReveal>
-
-          {/* Screenshot grid */}
-          <ScrollReveal delay={200}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <ScrollReveal delay={180}>
+            <ul className="space-y-2 max-w-xl mx-auto mb-8">
               {[
-                { src: '/chatgpt-luxe-first-recommendation.jpeg', caption: 'ChatGPT — Luxe First Recommendation' },
-                { src: '/google-ai-mode-luxe-top-rated.jpeg', caption: 'Google AI Mode — Luxe Top-Rated Local Specialist' },
-                { src: '/duckduckgo-luxe-map-pack-number-one.jpeg', caption: 'DuckDuckGo Map Pack — Luxe #1' },
-              ].map((img, i) => (
-                <figure key={i} className="flex flex-col gap-2">
-                  <div className="overflow-hidden rounded-lg border" style={{ borderColor: 'rgba(160,114,58,0.2)' }}>
-                    <img
-                      src={img.src}
-                      alt={img.caption}
-                      className="w-full h-auto object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <figcaption className="font-poppins text-xs text-center" style={{ color: '#a0927a' }}>
-                    {img.caption}
-                  </figcaption>
-                </figure>
+                { time: '9:36 AM', text: 'ChatGPT \u2014 \u201cBest overall pick locally.\u201d' },
+                { time: '9:43 AM', text: 'Google Map Pack \u2014 ranked #1.' },
+                { time: '9:43 AM', text: 'Google AI Mode \u2014 first under \u201cTop-Rated Local Specialists.\u201d' },
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3 items-start font-poppins text-sm md:text-base" style={{ color: '#6a5a48' }}>
+                  <span className="font-semibold shrink-0" style={{ color: '#a0723a' }}>{item.time}</span>
+                  <span>{item.text}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </ScrollReveal>
-
-          {/* CTA */}
-          <ScrollReveal delay={250}>
+          <ScrollReveal delay={210}>
             <div className="text-center">
               <Link
                 href="/our-work/luxe-window-works"
                 className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2"
                 style={{ padding: '16px 32px' }}
               >
-                See Full Case Study →
+                See the Full Case Study →
               </Link>
             </div>
           </ScrollReveal>
@@ -222,22 +173,19 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
-              The game changed.{' '}
-              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Nobody told your marketing team.</span>
+              AI Search Changed How Customers Find You.{' '}
+              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Most businesses haven&apos;t caught up yet.</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
             <div className="max-w-3xl mx-auto text-center mb-20">
               <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                Your rankings didn&apos;t drop. Your traffic did. That&apos;s not a coincidence
-                — it&apos;s the new reality of AI-driven search.
+                Your rankings didn&apos;t drop. Your traffic did. The answer is sitting at the top of the page — and it&apos;s not your website.
               </p>
               <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                When someone asks ChatGPT, Perplexity, or Google&apos;s AI Overview a question
-                about your industry, the AI synthesizes an answer from sites it can read, trust,
-                and cite. If your site isn&apos;t structured for machine discovery, you aren&apos;t
-                ranked lower.{' '}
+                ChatGPT, Perplexity, and Google AI Overviews synthesize answers from sites they can read, trust, and cite.
+                If your site isn&apos;t structured for machine discovery, you aren&apos;t ranked lower.{' '}
                 <span className="font-semibold" style={{ color: '#f8f5f0' }}>You&apos;re not in the conversation at all.</span>
               </p>
             </div>
@@ -247,7 +195,7 @@ export default function HomePage() {
             {[
               { end: 60, suffix: '%', label: 'of Google searches end without a click', delay: 0 },
               { end: 77, suffix: '%', label: 'of mobile searches never visit a single website', delay: 150 },
-              { end: 25, suffix: '%', label: 'predicted drop in traditional search traffic by 2026 — Gartner', delay: 300 },
+              { end: 47, suffix: '%', label: 'of all Google searches now show AI Overviews — up from 7% in 2023', delay: 300 },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={stat.delay}>
                 <div className="stat-block">
@@ -290,16 +238,13 @@ export default function HomePage() {
           <ScrollReveal delay={180}>
             <div className="max-w-3xl mx-auto mb-14 space-y-5">
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The businesses trying to solve this right now are falling into one of two traps — and spending real money to do it.
+                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools for Fortune 500 teams. They optimize what already exists — they don&apos;t fix a slow, bloated, AI-invisible foundation. If your infrastructure is the problem, better reporting won&apos;t solve it.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools. Built for Fortune 500 marketing departments with dedicated teams and $3,000–$10,000+ monthly budgets. They optimize existing infrastructure — they don&apos;t build it. If your foundation is slow, bloated, and AI-invisible, adding enterprise reporting tools on top doesn&apos;t fix the foundation. It just gives you better data on a problem you still can&apos;t fix.
+                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies, real estate website builders, and monthly SaaS tools promise simplicity. What they deliver is shared infrastructure that often loads in 3–8 seconds on mobile — while our builds deliver the same pages in under a second on a real iPhone. That&apos;s not a benchmark. That&apos;s what your visitors and AI crawlers actually experience.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies. Real estate website builders. Monthly SaaS site tools. They promise simplicity. What they deliver is shared infrastructure with real-device load times of 3 to 8 seconds on mobile — while our builds deliver the same pages in under a second on a modern iPhone on WiFi or 5G. That&apos;s not a benchmark number. That&apos;s what your visitors and AI crawlers actually experience. Retrofitting a slow, bloated subscription site for AI discoverability is like installing a jet engine in a station wagon. The engine doesn&apos;t fit. The frame wasn&apos;t built for it.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                In between these two options sits the overwhelming majority of small and mid-sized businesses — the local attorney, the independent financial advisor, the real estate agent building their own brand — with no purpose-built solution designed for how AI actually works. Not one that starts from the foundation up. Not one that owns and compounds instead of renting and churning. Not until now.
+                In between sits the majority of serious small and mid-sized businesses with no purpose-built solution. We are the missing tier: a site built from the ground up for how AI actually works.
               </p>
             </div>
           </ScrollReveal>
@@ -308,40 +253,50 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== THE ONE TIER THAT DOESN'T EXIST YET ===== */}
+      {/* ===== WHAT WE ACTUALLY DO ===== */}
       <section id="the-missing-tier" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-5">THE MISSING TIER</p>
+            <p className="eyebrow text-center mb-5">WHAT WE ACTUALLY DO</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              The Web Was Built for 2005. AI Doesn&apos;t Care.
+              Here&apos;s What We Actually Do
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
-              Most business websites were designed for a world that no longer exists &mdash; static pages built to rank on Google, not to be understood by AI. We build the infrastructure that actually works in the world you&apos;re operating in now.
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+              We don&apos;t optimize existing websites. We build the foundation AI systems can actually trust.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={180}>
-            <div className="max-w-3xl mx-auto mb-16 space-y-5">
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                A site built from the ground up for AI discoverability looks fundamentally different from anything in either tier above.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                It starts with edge infrastructure — Next.js deployed across a global CDN so your content reaches any user or AI crawler in under a second on a real device. Not a simulated stress test. Not a lab benchmark. Actual load time on a 2026 iPhone on WiFi or 5G — 66% faster than the average WordPress site in real-user conditions. It layers in answer-first content architecture that AI systems can extract and cite. It adds custom schema markup — not copy-pasted templates, but per-page JSON-LD that encodes your expertise, location, and authority as machine-readable facts. And it builds the SEO foundation that everything else depends on before adding a single layer of AEO or GEO on top.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                Enterprise tools assume that foundation exists. Subscription platforms can&apos;t build it — and even if they could, you&apos;d never own it. We start at the foundation, we build it right, and when it&apos;s done it&apos;s yours. No monthly rent. No platform risk. No churn.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The one thing nobody can promise about AI is what it looks like six months from now. New protocols. New file standards. New crawlers. The space changes faster than any agency can predict — and anyone who tells you otherwise is overselling. That&apos;s one of the core reasons KodeCite exists. When the standard changes — and it will — we update a line of code, push to GitHub, and it deploys in minutes. No drama. No delays. No plugin conflicts. No waiting for a vendor to release a patch. Your infrastructure adapts as fast as the technology does.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The result: a site AI systems don&apos;t just crawl. They trust, cite, and recommend.
-              </p>
+            <div className="max-w-4xl mx-auto mb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  step: '1',
+                  title: 'Build the Foundation',
+                  body: 'We create a custom Next.js site on your own Vercel edge network — engineered for sub-second cold loads on real devices. No templates. No rented platforms. No bloat.',
+                },
+                {
+                  step: '2',
+                  title: 'Encode Your Authority',
+                  body: 'We embed your expertise, location, and services directly into machine-readable schema and identity files (llms.txt + agent.json) so AI agents can understand exactly who you are — and cite you by name.',
+                },
+                {
+                  step: '3',
+                  title: 'Ship an Asset You Own',
+                  body: 'When we\'re done, you get the full codebase, domain, and hosting account. No monthly rent. No platform lock-in. A high-performance digital foundation built to be discovered and recommended by AI.',
+                },
+              ].map((item) => (
+                <ScrollReveal key={item.step} delay={parseInt(item.step) * 100}>
+                  <div className="p-8 rounded-xl border h-full" style={{ borderColor: 'rgba(160,114,58,0.2)', backgroundColor: '#ffffff', borderTop: '3px solid #a0723a' }}>
+                    <p className="font-playfair text-3xl font-bold mb-3" style={{ color: '#a0723a' }}>{item.step}</p>
+                    <h3 className="font-poppins font-semibold text-lg mb-3" style={{ color: '#0a0806' }}>{item.title}</h3>
+                    <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
           </ScrollReveal>
 
@@ -519,72 +474,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== AUTHORITY ENGINE — light, service cards ===== */}
-      <section id="solution" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5">THE AUTHORITY ENGINE</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              We don&apos;t build websites.
-              <br />
-              <span style={{ color: '#a0723a' }}>We build Answer Real Estate.</span>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-16 leading-relaxed" style={{ color: '#6a5a48' }}>
-              Every site we build is engineered as a four-layer Authority Engine —
-              structured to be read, trusted, and cited by AI systems today, and
-              discoverable by wearables tomorrow.
-            </p>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>,
-                title: 'Stop Lead Leakage',
-                body: "AI crawlers skip slow sites. A 3-second delay isn't a UX problem — it's a silent revenue killer. Our Next.js sites on Vercel's edge infrastructure load in under a second, making your site the first one AI agents read and the last one they need.",
-                delay: 0,
-              },
-              {
-                icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" /></svg>,
-                title: 'Own the Answer',
-                body: "We force AI models to describe your brand accurately. Custom schema encodes your expertise, location, and authority as machine-readable facts — so when someone asks ChatGPT about your industry, your business is the cited source, not your competitor.",
-                delay: 100,
-              },
-              {
-                icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" /></svg>,
-                title: 'The Wearable Fast-Track',
-                body: "We deploy llms.txt — the Digital ID Card that gives AI agents a direct map to your most valuable content. When a customer asks their Meta glasses a question about your business, this file is the reason they hear your name in their ear.",
-                delay: 200,
-              },
-              {
-                icon: <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg>,
-                title: 'Autonomous Discovery',
-                body: 'We implement agent.json — the emerging "DNS for AI agents" — before your competitors know it exists. When autonomous AI systems are shopping services on behalf of buyers, your site is the one they find and can interact with.',
-                delay: 300,
-              },
-            ].map((card, i) => (
-              <ScrollReveal key={i} delay={card.delay}>
-                <div className="authority-card h-full">
-                  <div style={{ color: '#a0723a' }} className="mb-5">{card.icon}</div>
-                  <h3 className="font-playfair text-xl mb-3 leading-snug" style={{ color: '#0a0806' }}>
-                    {card.title}
-                  </h3>
-                  <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>
-                    {card.body}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== INTENT COMPRESSION — mid warm ===== */}
       <section id="intent-compression" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
         <div className="max-w-6xl mx-auto">
@@ -698,96 +587,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== REAL RESULTS — dark proof section ===== */}
-      <section id="proof" className="py-24 md:py-32 px-4 relative overflow-hidden" style={{ backgroundColor: '#1c1814' }}>
-        {/* Top wood band */}
-        <div className="absolute top-0 left-0 right-0" style={{ height: '5px', background: 'linear-gradient(90deg, #3e1f08 0%, #7a5228 15%, #a0723a 30%, #c8945a 50%, #a0723a 70%, #7a5228 85%, #3e1f08 100%)' }} />
-
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>WHY THE INFRASTRUCTURE MATTERS</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
-              We don&apos;t build websites for hits.{' '}
-              <br className="hidden lg:block" />
-              We build{' '}
-              <span style={{ color: '#c8945a' }}>high-fidelity data structures</span>{' '}
-              AI engines trust.
-            </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={150}>
-            <blockquote className="rounded-r-xl px-8 py-8 max-w-3xl mx-auto mb-20" style={{ borderLeft: '4px solid #a0723a', background: '#2a2420' }}>
-              <p className="font-poppins text-base md:text-lg leading-relaxed italic" style={{ color: 'rgba(240,232,216,0.85)' }}>
-                &ldquo;Every metric below is a machine-readability signal — the difference between being cited as the answer
-                and being skipped entirely.&rdquo;
-              </p>
-            </blockquote>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
-            {[
-              {
-                end: 0.8, decimals: 1, suffix: 's',
-                label: 'MACHINE PRIORITY',
-                descriptor: 'AI crawlers operate on a limited token budget and skip slow, heavy sites to save compute costs. Our Next.js + Edge infrastructure loads in under a second — making your site the first one AI agents read and the last one they need.',
-                delay: 0,
-              },
-              {
-                end: 0, decimals: 0, suffix: '',
-                label: 'SOURCE OF TRUTH — ZERO RECOGNITION ERRORS',
-                descriptor: 'Every site we build has zero invalid schema items. AI never has to guess what your business offers. Your services, location, expertise, and authority are encoded as machine-readable facts — cited with 100% certainty.',
-                delay: 150,
-              },
-              {
-                end: 66, decimals: 0, suffix: '%',
-                label: 'ANSWER LAYER ADVANTAGE',
-                descriptor: '77% of mobile searches end without a click. Our mobile infrastructure scores 66% better than the typical WordPress, Wix, or Squarespace competitor — ensuring your site wins the Answer Layer where traditional sites are invisible.',
-                delay: 300,
-              },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={stat.delay}>
-                <div className="stat-block h-full flex flex-col">
-                  <CounterAnimation end={stat.end} decimals={stat.decimals} suffix={stat.suffix} label={stat.label} duration={2000} />
-                  <p className="font-poppins text-sm mt-6 leading-relaxed flex-1" style={{ color: 'rgba(240,232,216,0.78)' }}>
-                    {stat.descriptor}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={200}>
-            <p className="font-poppins text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed" style={{ color: 'rgba(240,232,216,0.7)' }}>
-              &ldquo;When an AI assistant recommends a business, it&apos;s because that business
-              gave the machine a reason to trust it.{' '}
-              <span className="font-semibold" style={{ color: '#f8f5f0' }}>
-                We build that reason into every line of code.
-              </span>
-              &rdquo;
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={300}>
-            <div className="text-center">
-              <Link
-                href="/services"
-                className="font-poppins font-semibold text-base inline-flex items-center gap-2 pb-0.5 transition-colors"
-                style={{ color: '#c8945a', borderBottom: '1px solid rgba(200,148,90,0.4)' }}
-              >
-                See how we build this for your business
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== FREE AEO AUDIT CTA — light ===== */}
       <section id="audit" className="py-24 md:py-36 px-4" style={{ backgroundColor: '#f8f5f0' }}>
         <div className="max-w-3xl mx-auto text-center">
@@ -802,7 +601,7 @@ export default function HomePage() {
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
               Visibility in AI doesn&apos;t mean much if the scaffolding is weak. Find out if AI truly
-              trusts, reads, and chooses you — or if you&apos;re one structured competitor away from invisible.
+              trusts, reads, and chooses you — or if you&apos;re one structured competitor away from being passed over entirely.
             </p>
             <p className="font-poppins text-base leading-relaxed mb-10" style={{ color: '#6a5a48' }}>
               No pitch. No pressure. Just an honest look at the hidden structure beneath your AI presence
