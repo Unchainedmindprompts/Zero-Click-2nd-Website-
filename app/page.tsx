@@ -134,37 +134,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== WHO THIS IS FOR ===== */}
-      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#f8f5f0' }}>
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-4">BUILT FOR</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-10 leading-tight" style={{ color: '#0a0806' }}>
-              Who This Is For
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-              {[
-                'Local Attorneys',
-                'Independent Financial Advisors',
-                'Real Estate Agents',
-                'Med Spas & Aesthetic Practices',
-                'Specialist Service Businesses',
-              ].map((item, i, arr) => (
-                <span key={i} className="font-poppins font-medium text-sm md:text-base" style={{ color: '#0a0806' }}>
-                  {item}{i < arr.length - 1 && <span style={{ color: '#a0723a', margin: '0 0.5rem' }}>·</span>}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== THE HARD TRUTH ===== */}
       <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
         <div className="max-w-4xl mx-auto">
