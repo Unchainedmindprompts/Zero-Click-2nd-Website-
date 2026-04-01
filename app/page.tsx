@@ -194,94 +194,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
-      <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>WHY THIS IS HAPPENING</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
-              AI Search Changed How Customers Find You.{' '}
-              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Most businesses haven&apos;t caught up yet.</span>
-            </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={150}>
-            <div className="max-w-3xl mx-auto text-center mb-20">
-              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                Your rankings didn&apos;t drop. Your traffic did. The answer is sitting at the top of the page — and it&apos;s not your website.
-              </p>
-              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                ChatGPT, Perplexity, and Google AI Overviews synthesize answers from sites they can read, trust, and cite.
-                If your site isn&apos;t structured for machine discovery, you aren&apos;t ranked lower.{' '}
-                <span className="font-semibold" style={{ color: '#f8f5f0' }}>You&apos;re not in the conversation at all.</span>
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {[
-              { end: 60, suffix: '%', label: 'of Google searches end without a click', delay: 0 },
-              { end: 77, suffix: '%', label: 'of mobile searches never visit a single website', delay: 150 },
-              { end: 47, suffix: '%', label: 'of all Google searches now trigger an AI Overview', delay: 300 },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={stat.delay}>
-                <div className="stat-block">
-                  <CounterAnimation end={stat.end} suffix={stat.suffix} label={stat.label} duration={2200} />
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={200}>
-            <p className="text-center text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>
-              Traditional SEO gets you to the top of a list nobody is scrolling anymore.{' '}
-              <span className="font-semibold" style={{ color: '#f8f5f0' }}>
-                Answer Engine Optimization makes you the answer itself.
-              </span>
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ===== WHY NOTHING ELSE SOLVES THIS ===== */}
-      <section id="why-nothing-else" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5">WHY NOTHING ELSE SOLVES THIS</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Why Nothing Else Solves This
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
-              The market has two options for AI search visibility. Neither one was built for you.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={180}>
-            <div className="max-w-3xl mx-auto mb-14 space-y-5">
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools for Fortune 500 teams. They optimize what already exists — they don&apos;t fix a slow, bloated, AI-invisible foundation. If your infrastructure is the problem, better reporting won&apos;t solve it.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies, real estate website builders, and monthly SaaS tools promise simplicity. What they deliver is shared infrastructure that often loads in 3–8 seconds on mobile — while our builds deliver the same pages in under a second on a real iPhone. That&apos;s not a benchmark. That&apos;s what your visitors and AI crawlers actually experience.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                In between sits the majority of serious small and mid-sized businesses with no purpose-built solution. We are the missing tier: a site built from the ground up for how AI actually works.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== WHAT WE ACTUALLY DO ===== */}
       <section id="the-missing-tier" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
         <div className="max-w-6xl mx-auto">
@@ -367,6 +279,94 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
+      <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>WHY THIS IS HAPPENING</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
+              AI Search Changed How Customers Find You.{' '}
+              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Most businesses haven&apos;t caught up yet.</span>
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={150}>
+            <div className="max-w-3xl mx-auto text-center mb-20">
+              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.82)' }}>
+                Your rankings didn&apos;t drop. Your traffic did. The answer is sitting at the top of the page — and it&apos;s not your website.
+              </p>
+              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.82)' }}>
+                ChatGPT, Perplexity, and Google AI Overviews synthesize answers from sites they can read, trust, and cite.
+                If your site isn&apos;t structured for machine discovery, you aren&apos;t ranked lower.{' '}
+                <span className="font-semibold" style={{ color: '#f8f5f0' }}>You&apos;re not in the conversation at all.</span>
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {[
+              { end: 60, suffix: '%', label: 'of Google searches end without a click', delay: 0 },
+              { end: 77, suffix: '%', label: 'of mobile searches never visit a single website', delay: 150 },
+              { end: 47, suffix: '%', label: 'of all Google searches now trigger an AI Overview', delay: 300 },
+            ].map((stat, i) => (
+              <ScrollReveal key={i} delay={stat.delay}>
+                <div className="stat-block">
+                  <CounterAnimation end={stat.end} suffix={stat.suffix} label={stat.label} duration={2200} />
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={200}>
+            <p className="text-center text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>
+              Traditional SEO gets you to the top of a list nobody is scrolling anymore.{' '}
+              <span className="font-semibold" style={{ color: '#f8f5f0' }}>
+                Answer Engine Optimization makes you the answer itself.
+              </span>
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== WHY NOTHING ELSE SOLVES THIS ===== */}
+      <section id="why-nothing-else" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">WHY NOTHING ELSE SOLVES THIS</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              Why Nothing Else Solves This
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
+              The market has two options for AI search visibility. Neither one was built for you.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={180}>
+            <div className="max-w-3xl mx-auto mb-14 space-y-5">
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools for Fortune 500 teams. They optimize what already exists — they don&apos;t fix a slow, bloated, AI-invisible foundation. If your infrastructure is the problem, better reporting won&apos;t solve it.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies, real estate website builders, and monthly SaaS tools promise simplicity. What they deliver is shared infrastructure that often loads in 3–8 seconds on mobile — while our builds deliver the same pages in under a second on a real iPhone. That&apos;s not a benchmark. That&apos;s what your visitors and AI crawlers actually experience.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                In between sits the majority of serious small and mid-sized businesses with no purpose-built solution. We are the missing tier: a site built from the ground up for how AI actually works.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
