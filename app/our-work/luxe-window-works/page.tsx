@@ -95,7 +95,7 @@ export default function LuxeWindowWorksCaseStudy() {
                 Luxe Window Works is our own business — a custom window treatment company in Post Falls, Idaho. Before we built this infrastructure for clients, we proved it on ourselves. The business is one year old. The domain is one year old. The site launched on Wix, moved to WordPress, and only 2.5 months before these screenshots were taken, was rebuilt on a Next.js edge server. We were still competing against established players with 10–20 year head starts, deep review histories, and strong local search presence.
               </p>
               <p>
-                Same URL. Same business. Completely different infrastructure — and these are the consistent results we started getting almost immediately after the switch.
+                Same URL. Same business. Completely different infrastructure — and within weeks of the switch, early signals started appearing. By the 2.5-month mark, the results were consistent across every major platform.
               </p>
             </div>
           </ScrollReveal>
