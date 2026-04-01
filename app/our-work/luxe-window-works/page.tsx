@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import LightboxGallery from '@/components/LightboxGallery';
 
 export const metadata: Metadata = {
   title: 'Luxe Window Works Case Study — KodeCite.ai',
@@ -235,26 +235,7 @@ export default function LuxeWindowWorksCaseStudy() {
               All screenshots captured in incognito mode on April 1, 2026.
             </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {screenshots.map((img, i) => (
-              <ScrollReveal key={i} delay={i * 80}>
-                <figure className="flex flex-col gap-3">
-                  <div className="overflow-hidden rounded-xl border" style={{ borderColor: 'rgba(160,114,58,0.2)' }}>
-                    <Image
-                      src={img.src}
-                      alt={img.caption}
-                      width={800}
-                      height={500}
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                  <figcaption className="font-poppins text-sm text-center px-2" style={{ color: '#a0927a' }}>
-                    {img.caption}
-                  </figcaption>
-                </figure>
-              </ScrollReveal>
-            ))}
-          </div>
+          <LightboxGallery screenshots={screenshots} />
         </div>
       </section>
 
