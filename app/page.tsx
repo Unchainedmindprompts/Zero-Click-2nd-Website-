@@ -88,6 +88,101 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
+      {/* ===== PROOF OF CONCEPT ===== */}
+      <section className="py-16 md:py-24 px-4" style={{ backgroundColor: '#faf7f2' }}>
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-4">THE PROOF OF CONCEPT</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-10 leading-tight" style={{ color: '#0a0806' }}>
+              We Built It On Our Own Business First.
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={150}>
+            <div className="font-poppins text-base md:text-lg leading-relaxed space-y-5 mb-10" style={{ color: '#6a5a48' }}>
+              <p>
+                Before we built it for clients, we proved it on ourselves. Luxe Window Works — a custom window treatment business in Post Falls, Idaho — is our live case study. A business just one year old. A Next.js deployment only 2.5 months old on the day these screenshots were taken. Competitors with 10–20 year head starts. Zero paid advertising.
+              </p>
+              <p>
+                On the morning of April 1, 2026 — within a single 17-minute window — one search query produced this across every major platform:
+              </p>
+
+              <ul className="space-y-2 pl-0 list-none">
+                {[
+                  { time: '9:36 AM', text: 'ChatGPT recommended Luxe first. \u201cBest overall pick locally.\u201d' },
+                  { time: '9:39 AM', text: 'ChatGPT follow-up on shutters and energy efficiency. Luxe first again.' },
+                  { time: '9:42 AM', text: 'Microsoft Copilot listed Luxe first under \u201cBest Local Specialists.\u201d' },
+                  { time: '9:43 AM', text: 'Google Map Pack. Luxe #1.' },
+                  { time: '9:43 AM', text: 'Google AI Mode. Luxe first under \u201cTop-Rated Local Specialists.\u201d' },
+                  { time: '9:53 AM', text: 'DuckDuckGo map pack. Luxe #1.' },
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-3 items-start">
+                    <span className="font-semibold shrink-0" style={{ color: '#a0723a' }}>{item.time}</span>
+                    <span>— {item.text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="font-semibold" style={{ color: '#0a0806' }}>
+                Six platforms. One morning. Timestamps don&rsquo;t lie.
+              </p>
+
+              <p>
+                Every screenshot was captured in incognito mode — no search history, no personalization, no location bias. These are the same cold results any potential customer would see searching for the first time.
+              </p>
+              <p>
+                This isn&rsquo;t a ranking report. This is AI recommendation dominance across every major platform your customers are actually using — built in 2.5 months on a one-year-old business with zero ad spend.
+              </p>
+              <p className="text-sm italic" style={{ color: '#a0927a' }}>
+                Results vary by platform, query, and crawl cycle. What doesn&rsquo;t vary is the infrastructure that makes this possible.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Screenshot grid */}
+          <ScrollReveal delay={200}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {[
+                { src: '/chatgpt-luxe-first-recommendation.jpg', caption: 'ChatGPT — Luxe First Recommendation' },
+                { src: '/google-ai-mode-luxe-top-rated.jpg', caption: 'Google AI Mode — Luxe Top-Rated Local Specialist' },
+                { src: '/duckduckgo-luxe-map-pack-number-one.jpg', caption: 'DuckDuckGo Map Pack — Luxe #1' },
+              ].map((img, i) => (
+                <figure key={i} className="flex flex-col gap-2">
+                  <div className="overflow-hidden rounded-lg border" style={{ borderColor: 'rgba(160,114,58,0.2)' }}>
+                    <img
+                      src={img.src}
+                      alt={img.caption}
+                      className="w-full h-auto object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="font-poppins text-xs text-center" style={{ color: '#a0927a' }}>
+                    {img.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          {/* CTA */}
+          <ScrollReveal delay={250}>
+            <div className="text-center">
+              <Link
+                href="/our-work/luxe-window-works"
+                className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2"
+                style={{ padding: '16px 32px' }}
+              >
+                See Full Case Study →
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
       {/* ===== WHO THIS IS FOR ===== */}
       <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#f8f5f0' }}>
         <div className="max-w-6xl mx-auto">
