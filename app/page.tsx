@@ -88,93 +88,44 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== PROOF OF CONCEPT ===== */}
-      <section className="py-16 md:py-24 px-4" style={{ backgroundColor: '#faf7f2' }}>
+      {/* ===== PROOF IT WORKS ===== */}
+      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#faf7f2' }}>
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">THE PROOF OF CONCEPT</p>
+            <p className="eyebrow text-center mb-4">PROOF IT WORKS</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-10 leading-tight" style={{ color: '#0a0806' }}>
-              We Built It On Our Own Business First.
+            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-6 leading-tight" style={{ color: '#0a0806' }}>
+              We Proved It On Our Own Business First.
             </h2>
           </ScrollReveal>
-
           <ScrollReveal delay={150}>
-            <div className="font-poppins text-base md:text-lg leading-relaxed space-y-5 mb-10" style={{ color: '#6a5a48' }}>
-              <p>
-                Before we built it for clients, we proved it on ourselves. Luxe Window Works — a custom window treatment business in Post Falls, Idaho — is our live case study. A business one year old. A domain one year old. A site that started on Wix, moved to WordPress, and only 2.5 months before these screenshots were taken, was rebuilt on a Next.js edge server. Competitors with 10–20 year head starts. Zero paid advertising.
-              </p>
-              <p>
-                On the morning of April 1, 2026 — within a single 17-minute window — one search query produced this across every major platform:
-              </p>
-
-              <ul className="space-y-2 pl-0 list-none">
-                {[
-                  { time: '9:36 AM', text: 'ChatGPT recommended Luxe first. \u201cBest overall pick locally.\u201d' },
-                  { time: '9:39 AM', text: 'ChatGPT follow-up on shutters and energy efficiency. Luxe first again.' },
-                  { time: '9:42 AM', text: 'Microsoft Copilot listed Luxe first under \u201cBest Local Specialists.\u201d' },
-                  { time: '9:43 AM', text: 'Google Map Pack. Luxe #1.' },
-                  { time: '9:43 AM', text: 'Google AI Mode. Luxe first under \u201cTop-Rated Local Specialists.\u201d' },
-                  { time: '9:53 AM', text: 'DuckDuckGo map pack. Luxe #1.' },
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-start">
-                    <span className="font-semibold shrink-0" style={{ color: '#a0723a' }}>{item.time}</span>
-                    <span>— {item.text}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="font-semibold" style={{ color: '#0a0806' }}>
-                Six platforms. One morning. Timestamps don&rsquo;t lie.
-              </p>
-
-              <p>
-                Every screenshot was captured in incognito mode — no search history, no personalization, no location bias. These are the same cold results any potential customer would see searching for the first time.
-              </p>
-              <p>
-                This isn&rsquo;t a ranking report. This is AI recommendation dominance across every major platform your customers are actually using — built in 2.5 months on a one-year-old business with zero ad spend.
-              </p>
-              <p className="text-sm italic" style={{ color: '#a0927a' }}>
-                Results vary by platform, query, and crawl cycle. What doesn&rsquo;t vary is the infrastructure that makes this possible.
-              </p>
-            </div>
+            <p className="font-poppins text-base md:text-lg text-center leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: '#6a5a48' }}>
+              Luxe Window Works — our own custom window treatment company in Post Falls, Idaho — went from invisible to AI-recommended first across six platforms in 2.5 months with zero ad spend. One year old business. One year old domain. Previously on Wix, then WordPress.
+            </p>
           </ScrollReveal>
-
-          {/* Screenshot grid */}
-          <ScrollReveal delay={200}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <ScrollReveal delay={180}>
+            <ul className="space-y-2 max-w-xl mx-auto mb-8">
               {[
-                { src: '/chatgpt-luxe-first-recommendation.jpeg', caption: 'ChatGPT — Luxe First Recommendation' },
-                { src: '/google-ai-mode-luxe-top-rated.jpeg', caption: 'Google AI Mode — Luxe Top-Rated Local Specialist' },
-                { src: '/duckduckgo-luxe-map-pack-number-one.jpeg', caption: 'DuckDuckGo Map Pack — Luxe #1' },
-              ].map((img, i) => (
-                <figure key={i} className="flex flex-col gap-2">
-                  <div className="overflow-hidden rounded-lg border" style={{ borderColor: 'rgba(160,114,58,0.2)' }}>
-                    <img
-                      src={img.src}
-                      alt={img.caption}
-                      className="w-full h-auto object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <figcaption className="font-poppins text-xs text-center" style={{ color: '#a0927a' }}>
-                    {img.caption}
-                  </figcaption>
-                </figure>
+                { time: '9:36 AM', text: 'ChatGPT \u2014 \u201cBest overall pick locally.\u201d' },
+                { time: '9:43 AM', text: 'Google Map Pack \u2014 ranked #1.' },
+                { time: '9:43 AM', text: 'Google AI Mode \u2014 first under \u201cTop-Rated Local Specialists.\u201d' },
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3 items-start font-poppins text-sm md:text-base" style={{ color: '#6a5a48' }}>
+                  <span className="font-semibold shrink-0" style={{ color: '#a0723a' }}>{item.time}</span>
+                  <span>{item.text}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </ScrollReveal>
-
-          {/* CTA */}
-          <ScrollReveal delay={250}>
+          <ScrollReveal delay={210}>
             <div className="text-center">
               <Link
                 href="/our-work/luxe-window-works"
                 className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2"
                 style={{ padding: '16px 32px' }}
               >
-                See Full Case Study →
+                See the Full Case Study →
               </Link>
             </div>
           </ScrollReveal>
@@ -290,16 +241,13 @@ export default function HomePage() {
           <ScrollReveal delay={180}>
             <div className="max-w-3xl mx-auto mb-14 space-y-5">
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The businesses trying to solve this right now are falling into one of two traps — and spending real money to do it.
+                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools for Fortune 500 teams. They optimize what already exists — they don&apos;t fix a slow, bloated, AI-invisible foundation. If your infrastructure is the problem, better reporting won&apos;t solve it.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools. Built for Fortune 500 marketing departments with dedicated teams and $3,000–$10,000+ monthly budgets. They optimize existing infrastructure — they don&apos;t build it. If your foundation is slow, bloated, and AI-invisible, adding enterprise reporting tools on top doesn&apos;t fix the foundation. It just gives you better data on a problem you still can&apos;t fix.
+                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies, real estate website builders, and monthly SaaS tools promise simplicity. What they deliver is shared infrastructure that often loads in 3–8 seconds on mobile — while our builds deliver the same pages in under a second on a real iPhone. That&apos;s not a benchmark. That&apos;s what your visitors and AI crawlers actually experience.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies. Real estate website builders. Monthly SaaS site tools. They promise simplicity. What they deliver is shared infrastructure with real-device load times of 3 to 8 seconds on mobile — while our builds deliver the same pages in under a second on a modern iPhone on WiFi or 5G. That&apos;s not a benchmark number. That&apos;s what your visitors and AI crawlers actually experience. Retrofitting a slow, bloated subscription site for AI discoverability is like installing a jet engine in a station wagon. The engine doesn&apos;t fit. The frame wasn&apos;t built for it.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                In between these two options sits the overwhelming majority of small and mid-sized businesses — the local attorney, the independent financial advisor, the real estate agent building their own brand — with no purpose-built solution designed for how AI actually works. Not one that starts from the foundation up. Not one that owns and compounds instead of renting and churning. Not until now.
+                In between sits the majority of serious small and mid-sized businesses with no purpose-built solution. We are the missing tier: a site built from the ground up for how AI actually works.
               </p>
             </div>
           </ScrollReveal>
@@ -308,40 +256,50 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== THE ONE TIER THAT DOESN'T EXIST YET ===== */}
+      {/* ===== WHAT WE ACTUALLY DO ===== */}
       <section id="the-missing-tier" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-5">THE MISSING TIER</p>
+            <p className="eyebrow text-center mb-5">WHAT WE ACTUALLY DO</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              The Web Was Built for 2005. AI Doesn&apos;t Care.
+              Here&apos;s What We Actually Do
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
-              Most business websites were designed for a world that no longer exists &mdash; static pages built to rank on Google, not to be understood by AI. We build the infrastructure that actually works in the world you&apos;re operating in now.
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+              We don&apos;t optimize existing websites. We build the foundation AI systems can actually trust.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={180}>
-            <div className="max-w-3xl mx-auto mb-16 space-y-5">
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                A site built from the ground up for AI discoverability looks fundamentally different from anything in either tier above.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                It starts with edge infrastructure — Next.js deployed across a global CDN so your content reaches any user or AI crawler in under a second on a real device. Not a simulated stress test. Not a lab benchmark. Actual load time on a 2026 iPhone on WiFi or 5G — 66% faster than the average WordPress site in real-user conditions. It layers in answer-first content architecture that AI systems can extract and cite. It adds custom schema markup — not copy-pasted templates, but per-page JSON-LD that encodes your expertise, location, and authority as machine-readable facts. And it builds the SEO foundation that everything else depends on before adding a single layer of AEO or GEO on top.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                Enterprise tools assume that foundation exists. Subscription platforms can&apos;t build it — and even if they could, you&apos;d never own it. We start at the foundation, we build it right, and when it&apos;s done it&apos;s yours. No monthly rent. No platform risk. No churn.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The one thing nobody can promise about AI is what it looks like six months from now. New protocols. New file standards. New crawlers. The space changes faster than any agency can predict — and anyone who tells you otherwise is overselling. That&apos;s one of the core reasons KodeCite exists. When the standard changes — and it will — we update a line of code, push to GitHub, and it deploys in minutes. No drama. No delays. No plugin conflicts. No waiting for a vendor to release a patch. Your infrastructure adapts as fast as the technology does.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The result: a site AI systems don&apos;t just crawl. They trust, cite, and recommend.
-              </p>
+            <div className="max-w-4xl mx-auto mb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  step: '1',
+                  title: 'Build the Foundation',
+                  body: 'We create a custom Next.js site on your own Vercel edge network — engineered for sub-second cold loads on real devices. No templates. No rented platforms. No bloat.',
+                },
+                {
+                  step: '2',
+                  title: 'Encode Your Authority',
+                  body: 'We embed your expertise, location, and services directly into machine-readable schema and identity files (llms.txt + agent.json) so AI agents can understand exactly who you are — and cite you by name.',
+                },
+                {
+                  step: '3',
+                  title: 'Ship an Asset You Own',
+                  body: 'When we\'re done, you get the full codebase, domain, and hosting account. No monthly rent. No platform lock-in. A high-performance digital foundation built to be discovered and recommended by AI.',
+                },
+              ].map((item) => (
+                <ScrollReveal key={item.step} delay={parseInt(item.step) * 100}>
+                  <div className="p-8 rounded-xl border h-full" style={{ borderColor: 'rgba(160,114,58,0.2)', backgroundColor: '#ffffff', borderTop: '3px solid #a0723a' }}>
+                    <p className="font-playfair text-3xl font-bold mb-3" style={{ color: '#a0723a' }}>{item.step}</p>
+                    <h3 className="font-poppins font-semibold text-lg mb-3" style={{ color: '#0a0806' }}>{item.title}</h3>
+                    <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
           </ScrollReveal>
 
