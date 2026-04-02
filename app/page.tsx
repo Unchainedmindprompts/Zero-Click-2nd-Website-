@@ -127,7 +127,7 @@ export default function HomePage() {
             className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed"
             style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.3s forwards' }}
           >
-            AI already answers your customers&rsquo; questions &mdash; we rebuild your site so
+            AI already answers your customers&rsquo; questions &mdash; we rebuild your foundation so
             it&rsquo;s the one answer ChatGPT, Perplexity, and Google&rsquo;s AI trust enough to
             recommend.
           </p>
@@ -192,6 +192,11 @@ export default function HomePage() {
               </Link>
             </div>
           </ScrollReveal>
+          <ScrollReveal delay={230}>
+            <p className="font-poppins text-sm text-center mt-6 font-medium" style={{ color: '#a0723a' }}>
+              Nothing about the business changed. Only how machines understood it.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -209,8 +214,11 @@ export default function HomePage() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: '#6a5a48' }}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-5 leading-relaxed" style={{ color: '#6a5a48' }}>
               Not because of AI — because of what was broken long before AI arrived. AI doesn&apos;t guess. If it can&apos;t clearly understand and verify your business, it skips you entirely.
+            </p>
+            <p className="font-poppins text-base md:text-lg text-center max-w-2xl mx-auto mb-12 font-medium leading-relaxed" style={{ color: '#0a0806' }}>
+              AI doesn&apos;t rank the best business. It selects the one it understands with the highest confidence.
             </p>
           </ScrollReveal>
 
