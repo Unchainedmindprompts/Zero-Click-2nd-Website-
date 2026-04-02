@@ -195,13 +195,10 @@ export default function HomePage() {
           <ScrollReveal delay={300}>
             <div className="max-w-2xl mx-auto space-y-5">
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                Most business owners I talk to want to be recommended by AI. They&apos;ve heard the terms — AEO, GEO, answer engine optimization — but most have no idea what they actually mean yet.
+                Most business owners I talk to want to be recommended by AI — they&apos;ve heard the terms, but most have no idea what they actually mean yet.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The bigger problem: 80–90% of them have a weak or broken SEO foundation. Without fixing the basics first — fast cold-load performance, proper schema, clean entity signals — no content strategy in the world will help. AI agents simply won&apos;t trust or fully parse the site.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                That&apos;s why we start with the infrastructure. We rebuild the foundation so your site is actually readable and trustworthy to AI systems. Only then does the AEO/GEO layer become truly effective.
+                The real problem: 80–90% have a weak or broken foundation. Without fast cold-load performance, proper schema, and clean entity signals, AI agents simply won&apos;t trust or fully parse the site — no matter what content strategy you layer on top.
               </p>
               <p className="font-poppins text-base md:text-lg leading-relaxed font-medium" style={{ color: '#0a0806' }}>
                 Without fixing the foundation first, every dollar you spend on content, ads, or AI tools is building on sand.{' '}
@@ -576,6 +573,9 @@ export default function HomePage() {
               </div>
               <p className="font-poppins text-sm md:text-base font-medium" style={{ color: '#0a0806' }}>
                 We don&apos;t sell SEO retainers. We build the structured, edge-hosted asset that AI assistants rely on to decide who to recommend — and hand you the keys when we&apos;re done.
+              </p>
+              <p className="font-poppins text-sm md:text-base leading-relaxed mt-4" style={{ color: '#6a5a48' }}>
+                Because you own the asset, every future improvement — content, schema, location pages, and AI-facing updates — builds on infrastructure you already control.
               </p>
             </div>
           </ScrollReveal>
