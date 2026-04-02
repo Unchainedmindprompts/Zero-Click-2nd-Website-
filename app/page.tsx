@@ -151,57 +151,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== PROOF IT WORKS ===== */}
-      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#faf7f2' }}>
-        <div className="max-w-4xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-4">PROOF IT WORKS</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-6 leading-tight" style={{ color: '#0a0806' }}>
-              We Proved It On Our Own Business First.
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="font-poppins text-base md:text-lg text-center leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: '#6a5a48' }}>
-              Luxe Window Works — our own custom window treatment company in Post Falls, Idaho — went from unknown to AI-recommended first across six platforms in 2.5 months with zero ad spend. One year old business. One year old domain. Previously on Wix, then WordPress.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={180}>
-            <ul className="space-y-2 max-w-xl mx-auto mb-8">
-              {[
-                { time: '9:36 AM', text: 'ChatGPT \u2014 \u201cBest overall pick locally.\u201d' },
-                { time: '9:43 AM', text: 'Google Map Pack \u2014 ranked #1.' },
-                { time: '9:43 AM', text: 'Google AI Mode \u2014 first under \u201cTop-Rated Local Specialists.\u201d' },
-              ].map((item, i) => (
-                <li key={i} className="flex gap-3 items-start font-poppins text-sm md:text-base" style={{ color: '#6a5a48' }}>
-                  <span className="font-semibold shrink-0" style={{ color: '#a0723a' }}>{item.time}</span>
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
-          </ScrollReveal>
-          <ScrollReveal delay={210}>
-            <div className="text-center">
-              <Link
-                href="/our-work/luxe-window-works"
-                className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2"
-                style={{ padding: '16px 32px' }}
-              >
-                See the Full Case Study →
-              </Link>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={230}>
-            <p className="font-poppins text-sm text-center mt-6 font-medium" style={{ color: '#a0723a' }}>
-              Nothing about the business changed. Only how machines understood it.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== THE HARD TRUTH ===== */}
       <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
         <div className="max-w-4xl mx-auto">
@@ -259,6 +208,57 @@ export default function HomePage() {
                 <span style={{ color: '#a0723a' }}>Generic solutions don&apos;t fix structural problems — they just make the bill bigger.</span>
               </p>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== PROOF IT WORKS ===== */}
+      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#faf7f2' }}>
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-4">PROOF IT WORKS</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-6 leading-tight" style={{ color: '#0a0806' }}>
+              We Proved It On Our Own Business First.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-base md:text-lg text-center leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: '#6a5a48' }}>
+              Luxe Window Works — our own custom window treatment company in Post Falls, Idaho — went from unknown to AI-recommended first across six platforms in 2.5 months with zero ad spend. One year old business. One year old domain. Previously on Wix, then WordPress.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={180}>
+            <ul className="space-y-2 max-w-xl mx-auto mb-8">
+              {[
+                { time: '9:36 AM', text: 'ChatGPT \u2014 \u201cBest overall pick locally.\u201d' },
+                { time: '9:43 AM', text: 'Google Map Pack \u2014 ranked #1.' },
+                { time: '9:43 AM', text: 'Google AI Mode \u2014 first under \u201cTop-Rated Local Specialists.\u201d' },
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3 items-start font-poppins text-sm md:text-base" style={{ color: '#6a5a48' }}>
+                  <span className="font-semibold shrink-0" style={{ color: '#a0723a' }}>{item.time}</span>
+                  <span>{item.text}</span>
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
+          <ScrollReveal delay={210}>
+            <div className="text-center">
+              <Link
+                href="/our-work/luxe-window-works"
+                className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2"
+                style={{ padding: '16px 32px' }}
+              >
+                See the Full Case Study →
+              </Link>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={230}>
+            <p className="font-poppins text-sm text-center mt-6 font-medium" style={{ color: '#a0723a' }}>
+              Nothing about the business changed. Only how machines understood it.
+            </p>
           </ScrollReveal>
         </div>
       </section>
