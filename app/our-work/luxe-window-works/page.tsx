@@ -311,6 +311,9 @@ export default function LuxeWindowWorksCaseStudy() {
             <p className="font-poppins text-base md:text-lg leading-relaxed text-center" style={{ color: '#6a5a48' }}>
               Together, these elements meant AI systems could quickly understand exactly who Luxe is, what they do, and why they&rsquo;re the right answer for someone searching locally — faster and more clearly than any competitor on a slower, generic platform. In AI systems, clarity compounds. When one business is consistently easier to interpret, it gets selected more often — not always, but predictably over time.
             </p>
+            <p className="font-poppins text-base md:text-lg leading-relaxed text-center" style={{ color: '#6a5a48' }}>
+              Some businesses appear in AI results today without strong structure — often based on historical signals or limited competition. That visibility tends to erode as AI systems update and structured competitors enter the market. Selection shifts toward businesses that are consistently easier to understand and verify.
+            </p>
           </ScrollReveal>
         </div>
       </section>
