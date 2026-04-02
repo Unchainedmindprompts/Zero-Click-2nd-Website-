@@ -673,31 +673,28 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== FORWARD LOOKING — mid warm ===== */}
+      {/* ===== SHORTLIST IS SHRINKING — mid warm ===== */}
       <section id="future" className="py-24 md:py-32 px-4 relative overflow-hidden" style={{ backgroundColor: '#f2ede4' }}>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full pointer-events-none"
           style={{ background: 'radial-gradient(ellipse, rgba(160,114,58,0.08) 0%, transparent 70%)' }} />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <p className="eyebrow mb-5">WHAT&apos;S COMING</p>
+            <p className="eyebrow mb-5">WHY THE SHORTLIST IS SHRINKING</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] mb-8 leading-[1.05]" style={{ color: '#0a0806' }}>
-              The same stack that wins today is the foundation for tomorrow.
+              AI interfaces don&apos;t show ten results.{' '}
+              <span style={{ color: '#a0723a' }}>They recommend one.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
-              The technical preparation for Google AI Overviews in 2026 is identical to
-              what&apos;s required for Oakley Meta glasses in 2027. When a potential customer
-              walks down the street and asks their glasses &ldquo;who&apos;s the best [business]
-              near me&rdquo; — the answer comes from structured data, not a website visit.
+              Ten blue links gave every business a chance to be clicked. AI interfaces — chat, voice, and ambient — compress that list down to the one answer the system trusts most. Meta is already shipping AI glasses today. As interfaces become more conversational and context-aware, the number of businesses surfaced in any given query shrinks further.
             </p>
             <p className="font-poppins text-lg leading-relaxed mb-12" style={{ color: '#6a5a48' }}>
-              We&apos;re building that infrastructure now. For the clients who move first, the
-              competitive window is open.{' '}
-              <span className="font-semibold" style={{ color: '#0a0806' }}>For everyone else, it&apos;s closing.</span>
+              This isn&apos;t a prediction. It&apos;s the interface trend already underway. The businesses with the clearest machine-readable structure get selected more consistently — across chat, voice, AI Overviews, and whatever interface comes next.{' '}
+              <span className="font-semibold" style={{ color: '#0a0806' }}>Structure built today compounds tomorrow.</span>
             </p>
           </ScrollReveal>
           <ScrollReveal delay={250}>
