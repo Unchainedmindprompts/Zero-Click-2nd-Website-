@@ -172,6 +172,31 @@ export default function LuxeWindowWorksCaseStudy() {
               </p>
             </div>
           </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <div className="mt-10 overflow-x-auto">
+              <table className="w-full text-left border-collapse max-w-2xl mx-auto">
+                <thead>
+                  <tr style={{ borderBottom: '1px solid rgba(160,114,58,0.2)' }}>
+                    <th className="font-poppins font-semibold text-sm py-3 pr-6" style={{ color: '#6a5a48' }}>Phase</th>
+                    <th className="font-poppins font-semibold text-sm py-3 pr-6" style={{ color: '#6a5a48' }}>Platform</th>
+                    <th className="font-poppins font-semibold text-sm py-3" style={{ color: '#6a5a48' }}>AI Visibility</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { phase: 'Before', platform: 'Wix, then WordPress', visibility: 'No AI mentions across any platform' },
+                    { phase: 'After', platform: 'Next.js Edge + Structured Data', visibility: 'Recommended across 6 platforms in 2.5 months' },
+                  ].map((row, i) => (
+                    <tr key={i} style={{ borderBottom: '1px solid rgba(160,114,58,0.1)' }}>
+                      <td className="font-poppins font-medium text-sm py-3 pr-6" style={{ color: '#0a0806' }}>{row.phase}</td>
+                      <td className="font-poppins text-sm py-3 pr-6" style={{ color: '#6a5a48' }}>{row.platform}</td>
+                      <td className="font-poppins font-semibold text-sm py-3" style={{ color: i === 1 ? '#a0723a' : '#6a5a48' }}>{row.visibility}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -189,7 +214,7 @@ export default function LuxeWindowWorksCaseStudy() {
           <ScrollReveal delay={100}>
             <div className="font-poppins text-base md:text-lg leading-relaxed space-y-4 mb-10" style={{ color: 'rgba(240,232,216,0.75)' }}>
               <p>
-                On the morning of April 1, 2026, within a single 17-minute window, one search for window treatments in the Post Falls area produced consistent results across every major platform. All screenshots were captured in incognito mode — no search history, no personalization, no location bias.
+                On the morning of April 1, 2026, within a single 17-minute window, one search for window treatments in the Post Falls area produced consistent results across every major platform. All screenshots were captured in incognito mode — no search history, no account personalization.
               </p>
             </div>
           </ScrollReveal>
@@ -212,7 +237,7 @@ export default function LuxeWindowWorksCaseStudy() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="font-poppins text-base md:text-lg leading-relaxed mb-6" style={{ color: 'rgba(240,232,216,0.75)' }}>
-              These were not cherry-picked moments. They were the natural outcome of a site specifically engineered for how AI agents discover and recommend businesses today.
+              These were not cherry-picked moments. They were the natural outcome of a site specifically engineered for how AI agents discover and recommend businesses today. Different models. Different indexes. Same outcome. Not because this business is uniquely better — but because it was easier for AI systems to understand and verify.
             </p>
             <p className="font-poppins text-sm italic text-center" style={{ color: 'rgba(240,232,216,0.4)' }}>
               Results vary by platform, query, and crawl cycle. What doesn&rsquo;t vary is the infrastructure that makes this possible.
@@ -246,8 +271,11 @@ export default function LuxeWindowWorksCaseStudy() {
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <h2 className="font-playfair text-3xl md:text-4xl text-center mb-4 leading-tight" style={{ color: '#0a0806' }}>
-              This Wasn&rsquo;t Luck. It Was Infrastructure.
+              This Wasn&rsquo;t Luck. It Was What Happens When One Business Is Clearly Structured and Others Are Not.
             </h2>
+            <p className="font-poppins text-base md:text-lg text-center mb-4 leading-relaxed max-w-2xl mx-auto font-medium" style={{ color: '#0a0806' }}>
+              Nothing about the business changed. Only how machines understood it.
+            </p>
             <p className="font-poppins text-base md:text-lg text-center mb-10 leading-relaxed max-w-2xl mx-auto" style={{ color: '#6a5a48' }}>
               While most local businesses still rely on traditional platforms that struggle with cold-load performance and weak schema, Luxe Window Works was built with four key advantages:
             </p>
@@ -281,7 +309,10 @@ export default function LuxeWindowWorksCaseStudy() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-base md:text-lg leading-relaxed text-center" style={{ color: '#6a5a48' }}>
-              Together, these elements meant AI systems could quickly understand exactly who Luxe is, what they do, and why they&rsquo;re the right answer for someone searching locally — faster and more clearly than any competitor on a slower, generic platform.
+              Together, these elements meant AI systems could quickly understand exactly who Luxe is, what they do, and why they&rsquo;re the right answer for someone searching locally — faster and more clearly than any competitor on a slower, generic platform. In AI systems, clarity compounds. When one business is consistently easier to interpret, it gets selected more often — not always, but predictably over time.
+            </p>
+            <p className="font-poppins text-base md:text-lg leading-relaxed text-center" style={{ color: '#6a5a48' }}>
+              Some businesses appear in AI results today without strong structure — often based on historical signals or limited competition. That visibility tends to erode as AI systems update and structured competitors enter the market. Selection shifts toward businesses that are consistently easier to understand and verify.
             </p>
           </ScrollReveal>
         </div>
