@@ -127,9 +127,9 @@ export default function HomePage() {
             className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed"
             style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.3s forwards' }}
           >
-            AI already answers your customers&rsquo; questions &mdash; we rebuild your foundation so
-            it&rsquo;s the one answer ChatGPT, Perplexity, and Google&rsquo;s AI trust enough to
-            recommend.
+            AI already answers your customers&rsquo; questions &mdash; we rebuild your digital foundation so
+            your business is easier for ChatGPT, Perplexity, and Google&apos;s AI to understand, trust,
+            and recommend.
           </p>
 
           {/* CTA */}
@@ -278,7 +278,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
-              We don&apos;t optimize existing websites. We build the foundation AI systems can actually trust.
+              We don&apos;t optimize existing websites. We build the digital infrastructure AI systems can actually trust — an owned asset designed to compound over time, not disappear when ad spend stops.
             </p>
           </ScrollReveal>
 
@@ -288,7 +288,7 @@ export default function HomePage() {
                 {
                   step: '1',
                   title: 'Build the Foundation',
-                  body: 'We create a custom Next.js site on your own Vercel edge network — engineered for sub-second cold loads on real devices. No templates. No rented platforms. No bloat.',
+                  body: 'We create a custom Next.js site on your own Vercel edge network — engineered for sub-second cold loads on real devices. No templates. No rented platforms. No bloat. And because everything is built in code on edge infrastructure, adapting to changes in AI search is faster too — we\'re not waiting on plugins, themes, or bloated platforms to catch up.',
                 },
                 {
                   step: '2',
@@ -298,7 +298,7 @@ export default function HomePage() {
                 {
                   step: '3',
                   title: 'Ship an Asset You Own',
-                  body: 'When we\'re done, you get the full codebase, domain, and hosting account. No monthly rent. No platform lock-in. A high-performance digital foundation built to be discovered and recommended by AI.',
+                  body: 'When we\'re done, you get the full codebase, domain, and hosting account. No monthly rent. No platform lock-in. Just an owned digital asset built to stay fast, adapt quickly, and compound in value as AI-driven discovery evolves.',
                 },
               ].map((item) => (
                 <ScrollReveal key={item.step} delay={parseInt(item.step) * 100}>
@@ -363,8 +363,8 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#0a0806' }}>
-              AI doesn&apos;t send you traffic.{' '}
-              <span style={{ color: '#a0723a' }}>It sends you buyers.</span>
+              AI doesn&apos;t send traffic.{' '}
+              <span style={{ color: '#a0723a' }}>It sends pre-qualified buyers.</span>
             </h2>
           </ScrollReveal>
 
@@ -690,7 +690,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
-              Ten blue links gave every business a chance to be clicked. AI interfaces — chat, voice, and ambient — compress that list down to the one answer the system trusts most. Meta is already shipping AI glasses today. As interfaces become more conversational and context-aware, the number of businesses surfaced in any given query shrinks further.
+              Ten blue links gave every business a chance to be clicked. AI interfaces — chat, voice, and ambient — compress that list down to the few answers a system trusts most. Meta is already shipping AI glasses today, and as interfaces become more conversational and context-aware, the number of businesses surfaced in any given query is likely to shrink further.
             </p>
             <p className="font-poppins text-lg leading-relaxed mb-12" style={{ color: '#6a5a48' }}>
               This isn&apos;t a prediction. It&apos;s the interface trend already underway. The businesses with the clearest machine-readable structure get selected more consistently — across chat, voice, AI Overviews, and whatever interface comes next.{' '}
