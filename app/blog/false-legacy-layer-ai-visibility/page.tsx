@@ -122,10 +122,6 @@ export default function FalseLegacyLayer() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
-      />
 
       {/* Hero */}
       <section className="pt-36 pb-16 bg-[#f8f5f0] px-4 relative overflow-hidden">

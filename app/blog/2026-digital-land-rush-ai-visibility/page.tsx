@@ -69,10 +69,6 @@ export default function DigitalLandRush2026() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
-      />
 
       {/* Hero */}
       <section className="pt-36 pb-16 bg-[#f8f5f0] px-4 relative overflow-hidden">
