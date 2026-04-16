@@ -117,8 +117,9 @@ export default function PricingPage() {
                 className="font-poppins"
                 style={{ fontSize: '1.125rem', lineHeight: '1.8', color: '#6a5a48', maxWidth: '640px' }}
               >
-                You&rsquo;re not buying &ldquo;SEO.&rdquo; You&rsquo;re deciding whether you own the answer in your
-                market or rent it from a platform.
+                You&rsquo;re not buying &ldquo;SEO.&rdquo; You&rsquo;re deciding whether you own
+                the answer in your market&nbsp;&mdash; or keep renting visibility on platforms you
+                don&rsquo;t control.
               </p>
               <p
                 className="font-poppins mt-4"
