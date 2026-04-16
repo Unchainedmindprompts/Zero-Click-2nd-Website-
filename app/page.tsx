@@ -13,64 +13,12 @@ export const metadata: Metadata = {
   },
 };
 
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'KodeCite.ai',
-  url: 'https://kodecite.ai',
-  description:
-    'Answer Engine Optimization agency. We structure websites so AI agents cite your business as the definitive answer.',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://kodecite.ai/blog?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
-};
-
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'KodeCite.ai',
-  url: 'https://kodecite.ai',
-  logo: 'https://kodecite.ai/logo.png',
-  description:
-    'KodeCite.ai builds AI-ready websites for small and mid-sized businesses. We rebuild the digital foundation — fast edge hosting, custom schema, and AI identity files — so AI agents can understand, trust, and recommend your business.',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Post Falls',
-    addressRegion: 'ID',
-    addressCountry: 'US',
-  },
-  areaServed: 'United States',
-  serviceType: [
-    'Answer Engine Optimization',
-    'AI Search Optimization',
-    'Next.js Website Development',
-    'Schema Markup Implementation',
-    'AI Identity File Setup',
-  ],
-  knowsAbout: [
-    'Answer Engine Optimization',
-    'Generative Engine Optimization',
-    'AI Search Visibility',
-    'JSON-LD Schema Markup',
-    'Next.js Edge Hosting',
-    'llms.txt',
-    'agent.json',
-  ],
-  sameAs: [
-    'https://www.kodecite.ai',
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Search Infrastructure Build',
   provider: {
-    '@type': 'ProfessionalService',
-    name: 'KodeCite.ai',
-    url: 'https://kodecite.ai',
+    '@id': 'https://www.kodecite.ai/#service',
   },
   description:
     'We build custom Next.js websites with sub-second load times, per-page JSON-LD schema, and AI identity files (llms.txt + agent.json) so AI systems can read, trust, and recommend your business.',
@@ -85,14 +33,6 @@ const serviceSchema = {
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
