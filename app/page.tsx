@@ -127,9 +127,9 @@ export default function HomePage() {
             className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed"
             style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.3s forwards' }}
           >
-            AI already answers your customers&rsquo; questions &mdash; we rebuild your foundation so
-            it&rsquo;s the one answer ChatGPT, Perplexity, and Google&rsquo;s AI trust enough to
-            recommend.
+            AI already answers your customers&rsquo; questions &mdash; we rebuild your digital foundation so
+            your business is easier for ChatGPT, Perplexity, and Google&apos;s AI to understand, trust,
+            and recommend.
           </p>
 
           {/* CTA */}
@@ -146,6 +146,66 @@ export default function HomePage() {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
           <div className="w-px h-14" style={{ background: 'linear-gradient(to bottom, transparent, #a0723a)', animation: 'pulse-glow 2s ease-in-out infinite' }} />
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== THE HARD TRUTH ===== */}
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">THE HARD TRUTH</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              Most Websites Can&apos;t Be<br />Recommended by AI.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-5 leading-relaxed" style={{ color: '#6a5a48' }}>
+              Not because of AI — because of what was broken long before AI arrived. AI doesn&apos;t guess. If it can&apos;t clearly understand and verify your business, it skips you entirely.
+            </p>
+            <p className="font-poppins text-base md:text-lg text-center max-w-2xl mx-auto mb-12 font-medium leading-relaxed" style={{ color: '#0a0806' }}>
+              AI doesn&apos;t rank the best business. It selects the one it understands with the highest confidence.
+            </p>
+          </ScrollReveal>
+
+          <div className="max-w-2xl mx-auto mb-12 space-y-4">
+            {[
+              { label: 'No structured entity data', body: 'AI agents need machine-readable signals to understand who you are, what you do, and where you operate. Most sites have none.' },
+              { label: 'Inconsistent business signals', body: 'Conflicting NAP data, missing directory listings, and unverified profiles tell AI your business can\'t be trusted.' },
+              { label: 'Generic, templated content', body: 'Content that doesn\'t clearly answer questions about your specific expertise gives AI nothing to cite.' },
+              { label: 'Slow, bloated infrastructure', body: 'AI crawlers deprioritize slow sites. A 4-second load time isn\'t just a UX problem — it\'s a trust signal failure.' },
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 60}>
+                <div className="flex items-start gap-4 p-5 rounded-xl" style={{ background: '#ffffff', border: '1px solid rgba(160,114,58,0.15)' }}>
+                  <svg className="w-5 h-5 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#c0392b' }}>
+                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <p className="font-poppins font-semibold text-sm md:text-base mb-1" style={{ color: '#0a0806' }}>{item.label}</p>
+                    <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={300}>
+            <div className="max-w-2xl mx-auto space-y-5">
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                Most business owners I talk to want to be recommended by AI — they&apos;ve heard the terms, but most have no idea what they actually mean yet.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
+                The real problem: 80–90% have a weak or broken foundation. Without fast cold-load performance, proper schema, and clean entity signals, AI agents simply won&apos;t trust or fully parse the site — no matter what content strategy you layer on top.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed font-medium" style={{ color: '#0a0806' }}>
+                Without fixing the foundation first, every dollar you spend on content, ads, or AI tools is building on sand.{' '}
+                <span style={{ color: '#a0723a' }}>Generic solutions don&apos;t fix structural problems — they just make the bill bigger.</span>
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -202,69 +262,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== THE HARD TRUTH ===== */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-4xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5">THE HARD TRUTH</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Most Websites Can&apos;t Be<br />Recommended by AI.
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-5 leading-relaxed" style={{ color: '#6a5a48' }}>
-              Not because of AI — because of what was broken long before AI arrived. AI doesn&apos;t guess. If it can&apos;t clearly understand and verify your business, it skips you entirely.
-            </p>
-            <p className="font-poppins text-base md:text-lg text-center max-w-2xl mx-auto mb-12 font-medium leading-relaxed" style={{ color: '#0a0806' }}>
-              AI doesn&apos;t rank the best business. It selects the one it understands with the highest confidence.
-            </p>
-          </ScrollReveal>
-
-          <div className="max-w-2xl mx-auto mb-12 space-y-4">
-            {[
-              { label: 'No structured entity data', body: 'AI agents need machine-readable signals to understand who you are, what you do, and where you operate. Most sites have none.' },
-              { label: 'Inconsistent business signals', body: 'Conflicting NAP data, missing directory listings, and unverified profiles tell AI your business can\'t be trusted.' },
-              { label: 'Generic, templated content', body: 'Content that doesn\'t clearly answer questions about your specific expertise gives AI nothing to cite.' },
-              { label: 'Slow, bloated infrastructure', body: 'AI crawlers deprioritize slow sites. A 4-second load time isn\'t just a UX problem — it\'s a trust signal failure.' },
-            ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 60}>
-                <div className="flex items-start gap-4 p-5 rounded-xl" style={{ background: '#ffffff', border: '1px solid rgba(160,114,58,0.15)' }}>
-                  <svg className="w-5 h-5 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#c0392b' }}>
-                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                  <div>
-                    <p className="font-poppins font-semibold text-sm md:text-base mb-1" style={{ color: '#0a0806' }}>{item.label}</p>
-                    <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={300}>
-            <div className="max-w-2xl mx-auto space-y-5">
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                Most business owners I talk to want to be recommended by AI. They&apos;ve heard the terms — AEO, GEO, answer engine optimization — but most have no idea what they actually mean yet.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The bigger problem: 80–90% of them have a weak or broken SEO foundation. Without fixing the basics first — fast cold-load performance, proper schema, clean entity signals — no content strategy in the world will help. AI agents simply won&apos;t trust or fully parse the site.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                That&apos;s why we start with the infrastructure. We rebuild the foundation so your site is actually readable and trustworthy to AI systems. Only then does the AEO/GEO layer become truly effective.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed font-medium" style={{ color: '#0a0806' }}>
-                Without fixing the foundation first, every dollar you spend on content, ads, or AI tools is building on sand.{' '}
-                <span style={{ color: '#a0723a' }}>Generic solutions don&apos;t fix structural problems — they just make the bill bigger.</span>
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== WHAT WE ACTUALLY DO ===== */}
       <section id="the-missing-tier" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
         <div className="max-w-6xl mx-auto">
@@ -278,7 +275,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
-              We don&apos;t optimize existing websites. We build the foundation AI systems can actually trust.
+              We don&apos;t optimize existing websites. We build the digital infrastructure AI systems can actually trust — an owned asset designed to compound over time, not disappear when ad spend stops.
             </p>
           </ScrollReveal>
 
@@ -288,7 +285,7 @@ export default function HomePage() {
                 {
                   step: '1',
                   title: 'Build the Foundation',
-                  body: 'We create a custom Next.js site on your own Vercel edge network — engineered for sub-second cold loads on real devices. No templates. No rented platforms. No bloat.',
+                  body: 'We create a custom Next.js site on your own Vercel edge network — engineered for sub-second cold loads on real devices. No templates. No rented platforms. No bloat. And because everything is built in code on edge infrastructure, adapting to changes in AI search is faster too — we\'re not waiting on plugins, themes, or bloated platforms to catch up.',
                 },
                 {
                   step: '2',
@@ -298,7 +295,7 @@ export default function HomePage() {
                 {
                   step: '3',
                   title: 'Ship an Asset You Own',
-                  body: 'When we\'re done, you get the full codebase, domain, and hosting account. No monthly rent. No platform lock-in. A high-performance digital foundation built to be discovered and recommended by AI.',
+                  body: 'When we\'re done, you get the full codebase, domain, and hosting account. No monthly rent. No platform lock-in. Just an owned digital asset built to stay fast, adapt quickly, and compound in value as AI-driven discovery evolves.',
                 },
               ].map((item) => (
                 <ScrollReveal key={item.step} delay={parseInt(item.step) * 100}>
@@ -363,8 +360,8 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#0a0806' }}>
-              AI doesn&apos;t send you traffic.{' '}
-              <span style={{ color: '#a0723a' }}>It sends you buyers.</span>
+              AI doesn&apos;t send traffic.{' '}
+              <span style={{ color: '#a0723a' }}>It sends pre-qualified buyers.</span>
             </h2>
           </ScrollReveal>
 
@@ -577,6 +574,9 @@ export default function HomePage() {
               <p className="font-poppins text-sm md:text-base font-medium" style={{ color: '#0a0806' }}>
                 We don&apos;t sell SEO retainers. We build the structured, edge-hosted asset that AI assistants rely on to decide who to recommend — and hand you the keys when we&apos;re done.
               </p>
+              <p className="font-poppins text-sm md:text-base leading-relaxed mt-4" style={{ color: '#6a5a48' }}>
+                Because you own the asset, every future improvement — content, schema, location pages, and AI-facing updates — builds on infrastructure you already control.
+              </p>
             </div>
           </ScrollReveal>
         </div>
@@ -673,31 +673,28 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== FORWARD LOOKING — mid warm ===== */}
+      {/* ===== SHORTLIST IS SHRINKING — mid warm ===== */}
       <section id="future" className="py-24 md:py-32 px-4 relative overflow-hidden" style={{ backgroundColor: '#f2ede4' }}>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full pointer-events-none"
           style={{ background: 'radial-gradient(ellipse, rgba(160,114,58,0.08) 0%, transparent 70%)' }} />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <p className="eyebrow mb-5">WHAT&apos;S COMING</p>
+            <p className="eyebrow mb-5">WHY THE SHORTLIST IS SHRINKING</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] mb-8 leading-[1.05]" style={{ color: '#0a0806' }}>
-              The same stack that wins today is the foundation for tomorrow.
+              AI interfaces don&apos;t show ten results.{' '}
+              <span style={{ color: '#a0723a' }}>They recommend one.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
-              The technical preparation for Google AI Overviews in 2026 is identical to
-              what&apos;s required for Oakley Meta glasses in 2027. When a potential customer
-              walks down the street and asks their glasses &ldquo;who&apos;s the best [business]
-              near me&rdquo; — the answer comes from structured data, not a website visit.
+              Ten blue links gave every business a chance to be clicked. AI interfaces — chat, voice, and ambient — compress that list down to the few answers a system trusts most. Meta is already shipping AI glasses today, and as interfaces become more conversational and context-aware, the number of businesses surfaced in any given query is likely to shrink further.
             </p>
             <p className="font-poppins text-lg leading-relaxed mb-12" style={{ color: '#6a5a48' }}>
-              We&apos;re building that infrastructure now. For the clients who move first, the
-              competitive window is open.{' '}
-              <span className="font-semibold" style={{ color: '#0a0806' }}>For everyone else, it&apos;s closing.</span>
+              This isn&apos;t a prediction. It&apos;s the interface trend already underway. The businesses with the clearest machine-readable structure get selected more consistently — across chat, voice, AI Overviews, and whatever interface comes next.{' '}
+              <span className="font-semibold" style={{ color: '#0a0806' }}>Structure built today compounds tomorrow.</span>
             </p>
           </ScrollReveal>
           <ScrollReveal delay={250}>
