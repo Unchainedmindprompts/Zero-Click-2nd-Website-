@@ -26,20 +26,8 @@ const blogPostingSchema = {
   headline: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
   description:
     "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   datePublished: '2026-03-08',
   dateModified: '2026-03-08',
   mainEntityOfPage: {
@@ -141,55 +129,6 @@ const faqPageSchema = {
         text: 'Local services with high-intent, time-sensitive, trust-dependent decisions are most immediately affected: home services (HVAC, plumbing, roofing), professional services (legal, financial, real estate), health and wellness (dentists, chiropractors, physical therapy), restaurants, and auto repair. These are exactly the categories where people are most likely to delegate the discovery decision to an AI agent.',
       },
     },
-  ],
-};
-
-const professionalServiceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'KodeCite.AI',
-  description:
-    'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
-  url: 'https://kodecite.ai',
-  logo: 'https://kodecite.ai/logo.png',
-  image: 'https://kodecite.ai/og-image.png',
-  email: 'sales@kodecite.ai',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Post Falls',
-    addressRegion: 'ID',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 47.7182,
-    longitude: -116.9516,
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Spokane', containedInPlace: { '@type': 'State', name: 'Washington' } },
-    { '@type': 'City', name: 'Spokane Valley', containedInPlace: { '@type': 'State', name: 'Washington' } },
-    { '@type': 'AdministrativeArea', name: 'North Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Eastern Washington' },
-    { '@type': 'AdministrativeArea', name: 'Inland Northwest' },
-    { '@type': 'AdministrativeArea', name: 'Pacific Northwest' },
-  ],
-  knowsAbout: [
-    'Answer Engine Optimization',
-    'Generative Engine Optimization',
-    'AI Search Optimization',
-    'Local Business AI Visibility',
-    'Schema Markup',
-    'llms.txt',
-    'agent.json',
-    'Next.js Performance',
-    'PageSpeed Optimization',
-    'Structured Data',
-    'Google AI Overviews',
-    'ChatGPT Citations',
-    'Perplexity Optimization',
-    'Agent-to-Agent Commerce',
   ],
 };
 

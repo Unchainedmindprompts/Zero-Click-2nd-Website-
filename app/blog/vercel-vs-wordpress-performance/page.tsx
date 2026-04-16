@@ -24,19 +24,8 @@ const articleSchema = {
   dateModified: '2026-02-22',
   wordCount: 900,
   keywords: 'Next.js vs WordPress, Next.js performance, Core Web Vitals comparison, Lighthouse scores, TTFB, local business website performance, AI crawler accessibility',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
   mainEntityOfPage: {
     '@type': 'WebPage',

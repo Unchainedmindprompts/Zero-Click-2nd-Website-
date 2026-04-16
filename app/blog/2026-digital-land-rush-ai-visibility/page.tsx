@@ -27,20 +27,8 @@ const blogPostingSchema = {
     'The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything',
   description:
     'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   datePublished: '2026-03-07',
   dateModified: '2026-03-07',
   mainEntityOfPage: {
@@ -72,105 +60,6 @@ const blogPostingSchema = {
     { '@type': 'Thing', name: 'Perplexity' },
     { '@type': 'Thing', name: 'Google AI Overviews' },
   ],
-};
-
-const professionalServiceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'KodeCite.AI',
-  description:
-    'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
-  url: 'https://kodecite.ai',
-  logo: 'https://kodecite.ai/logo.png',
-  image: 'https://kodecite.ai/og-image.png',
-  telephone: '',
-  email: 'sales@kodecite.ai',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Post Falls',
-    addressRegion: 'ID',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 47.7182,
-    longitude: -116.9516,
-  },
-  areaServed: [
-    {
-      '@type': 'City',
-      name: 'Post Falls',
-      containedInPlace: { '@type': 'State', name: 'Idaho' },
-    },
-    {
-      '@type': 'City',
-      name: "Coeur d'Alene",
-      containedInPlace: { '@type': 'State', name: 'Idaho' },
-    },
-    {
-      '@type': 'City',
-      name: 'Spokane',
-      containedInPlace: { '@type': 'State', name: 'Washington' },
-    },
-    {
-      '@type': 'City',
-      name: 'Spokane Valley',
-      containedInPlace: { '@type': 'State', name: 'Washington' },
-    },
-    { '@type': 'AdministrativeArea', name: 'North Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Eastern Washington' },
-    { '@type': 'AdministrativeArea', name: 'Inland Northwest' },
-    { '@type': 'AdministrativeArea', name: 'Pacific Northwest' },
-  ],
-  knowsAbout: [
-    'Answer Engine Optimization',
-    'AI Search Optimization',
-    'Local Business AI Visibility',
-    'Schema Markup',
-    'llms.txt',
-    'agent.json',
-    'Next.js Performance',
-    'PageSpeed Optimization',
-    'Structured Data',
-    'Google AI Overviews',
-    'ChatGPT Citations',
-    'Perplexity Optimization',
-  ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'AEO Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Free AEO Audit',
-          description:
-            'A no-obligation audit showing exactly where your business is invisible to AI and what it takes to fix it.',
-          url: 'https://kodecite.ai/contact',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Machine-Priority Infrastructure',
-          description:
-            'Next.js websites scoring 100/100 on all PageSpeed metrics, built for AI crawlers first.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Source of Truth Engine',
-          description:
-            'Schema markup, llms.txt, and agent.json that ensure AI models describe your brand accurately.',
-        },
-      },
-    ],
-  },
-  sameAs: ['https://kodecite.ai'],
 };
 
 export default function DigitalLandRush2026() {

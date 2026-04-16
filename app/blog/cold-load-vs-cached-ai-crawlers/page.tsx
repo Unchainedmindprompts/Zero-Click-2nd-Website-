@@ -22,8 +22,8 @@ const blogPostingSchema = {
   '@type': 'BlogPosting',
   headline: 'Your Site Feels Fast to You — But AI Crawlers See Something Very Different',
   description: 'Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.',
-  author: { '@type': 'Person', name: 'Mark Abplanalp', url: 'https://kodecite.ai/about' },
-  publisher: { '@type': 'Organization', name: 'KodeCite.AI', url: 'https://kodecite.ai', logo: { '@type': 'ImageObject', url: 'https://kodecite.ai/logo.png' } },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   datePublished: '2026-03-23',
   dateModified: '2026-03-23',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers' },
@@ -35,29 +35,10 @@ const blogPostingSchema = {
   mentions: [{ '@type': 'Thing', name: 'ChatGPT' }, { '@type': 'Thing', name: 'Perplexity' }, { '@type': 'Thing', name: 'GPTBot' }, { '@type': 'Thing', name: 'Google AI Overviews' }],
 };
 
-const professionalServiceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'KodeCite.AI',
-  description: 'AI Search Optimization and AEO consultancy helping local businesses become the default AI-cited authority in their market.',
-  url: 'https://kodecite.ai',
-  logo: 'https://kodecite.ai/logo.png',
-  email: 'sales@kodecite.ai',
-  address: { '@type': 'PostalAddress', addressLocality: 'Post Falls', addressRegion: 'ID', addressCountry: 'US' },
-  geo: { '@type': 'GeoCoordinates', latitude: 47.7182, longitude: -116.9516 },
-  areaServed: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'AdministrativeArea', name: 'North Idaho' },
-  ],
-  sameAs: ['https://kodecite.ai'],
-};
-
 export default function ColdLoadVsCached() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }} />
 
       <section className="pt-36 pb-16 bg-[#f8f5f0] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
