@@ -121,12 +121,21 @@ const professionalServiceSchema = {
   name: 'KodeCite.ai',
   url: 'https://www.kodecite.ai',
   logo: 'https://www.kodecite.ai/logo.png',
+  image: 'https://www.kodecite.ai/og-image.png',
   description:
     'KodeCite.ai builds AI-ready websites for businesses. We rebuild the digital foundation — fast edge hosting, custom schema, and AI identity files — so AI agents can understand, trust, and recommend your business.',
+  telephone: '+14803239740',
+  email: 'mark@kodecite.ai',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Post Falls',
+    addressRegion: 'ID',
+    addressCountry: 'US',
+  },
   founder: {
     '@id': 'https://www.kodecite.ai/#founder',
   },
-  email: 'mark@kodecite.ai',
   areaServed: {
     '@type': 'Country',
     name: 'United States',
