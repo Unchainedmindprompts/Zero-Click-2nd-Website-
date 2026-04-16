@@ -24,19 +24,8 @@ const articleSchema = {
   dateModified: '2026-02-27',
   wordCount: 950,
   keywords: 'technical SEO, indexing, schema markup, Core Web Vitals, local business SEO, Google Search Console, crawl budget, Luxe Window Works, window treatments',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
   mainEntityOfPage: {
     '@type': 'WebPage',

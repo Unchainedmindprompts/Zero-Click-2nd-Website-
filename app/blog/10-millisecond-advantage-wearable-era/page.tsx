@@ -26,15 +26,7 @@ const blogPostingSchema = {
     name: 'Mark Abplanalp',
     url: 'https://www.kodecite.ai/about',
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.AI',
-    url: 'https://www.kodecite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/logo.png',
-    },
-  },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   datePublished: '2026-03-17',
   dateModified: '2026-03-17',
   mainEntityOfPage: {
@@ -133,53 +125,6 @@ const faqSchema = {
   ],
 }
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'KodeCite.AI',
-  description: 'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
-  url: 'https://www.kodecite.ai',
-  logo: 'https://www.kodecite.ai/logo.png',
-  image: 'https://www.kodecite.ai/og-image.png',
-  email: 'sales@kodecite.ai',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Post Falls',
-    addressRegion: 'ID',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 47.7182,
-    longitude: -116.9516,
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Post Falls', containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: "Coeur d'Alene", containedInPlace: { '@type': 'State', name: 'Idaho' } },
-    { '@type': 'City', name: 'Spokane', containedInPlace: { '@type': 'State', name: 'Washington' } },
-    { '@type': 'AdministrativeArea', name: 'North Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Eastern Washington' },
-    { '@type': 'AdministrativeArea', name: 'Inland Northwest' },
-    { '@type': 'AdministrativeArea', name: 'Pacific Northwest' },
-  ],
-  knowsAbout: [
-    'Answer Engine Optimization',
-    'AI Search Optimization',
-    'Local Business AI Visibility',
-    'Schema Markup',
-    'llms.txt',
-    'agent.json',
-    'Next.js Performance',
-    'PageSpeed Optimization',
-    'Structured Data',
-    'Google AI Overviews',
-    'ChatGPT Citations',
-    'Perplexity Optimization',
-    'Wearable AI Discovery',
-    'Edge Infrastructure',
-  ],
-}
-
 export default function WhenCustomerStopsSearchingPage() {
   return (
     <>
@@ -190,10 +135,6 @@ export default function WhenCustomerStopsSearchingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* Hero */}

@@ -24,19 +24,8 @@ const articleSchema = {
   dateModified: '2026-03-03',
   wordCount: 1100,
   keywords: 'AI token budget, AI agent crawling, token-efficient website, WordPress AI visibility, Next.js AI search, AEO, answer engine optimization, AI recommendations, website performance AI',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
   mainEntityOfPage: {
     '@type': 'WebPage',

@@ -24,19 +24,8 @@ const articleSchema = {
   dateModified: '2026-02-27',
   wordCount: 850,
   keywords: 'zero click search, answer engine optimization, AEO, Google AI Overviews, ChatGPT search, Perplexity AI, local business SEO, schema markup',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/what-is-zero-click-search',
   mainEntityOfPage: {
     '@type': 'WebPage',

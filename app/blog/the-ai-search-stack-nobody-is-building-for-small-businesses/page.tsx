@@ -22,20 +22,8 @@ const blogPostingSchema = {
     'Enterprise SEO is built for enterprises. Subscription platforms are built for volume. Neither one gets you recommended by AI. Here\'s the gap in the market — and what fills it.',
   datePublished: '2026-03-13',
   dateModified: '2026-03-13',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses',

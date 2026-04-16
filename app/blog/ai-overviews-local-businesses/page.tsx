@@ -27,19 +27,8 @@ const articleSchema = {
   dateModified: '2026-02-18',
   wordCount: 950,
   keywords: 'Google AI Overviews, AI search citations, answer engine optimization, AEO, local business AI visibility, featured in AI Overview, entity recognition, Core Web Vitals',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/ai-overviews-local-businesses',
   mainEntityOfPage: {
     '@type': 'WebPage',

@@ -24,19 +24,8 @@ const articleSchema = {
   dateModified: '2026-02-27',
   wordCount: 900,
   keywords: 'WordPress AI search, Core Web Vitals, Next.js vs WordPress, plugin bloat, AI search visibility, schema markup, LCP benchmark',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/wordpress-losing-ai-search',
   mainEntityOfPage: {
     '@type': 'WebPage',

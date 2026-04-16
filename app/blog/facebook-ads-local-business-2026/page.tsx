@@ -24,19 +24,8 @@ const articleSchema = {
   dateModified: '2026-02-12',
   wordCount: 950,
   keywords: 'Facebook ads local business, Meta ads, custom audiences, retargeting, lookalike audiences, local service marketing, flywheel method, pixel data',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/facebook-ads-local-business-2026',
   mainEntityOfPage: {
     '@type': 'WebPage',

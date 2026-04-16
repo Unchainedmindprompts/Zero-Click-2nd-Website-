@@ -24,19 +24,8 @@ const articleSchema = {
   dateModified: '2026-02-26',
   wordCount: 900,
   keywords: 'local business launch, schema markup, new market SEO, Facebook ads launch, same-day indexing, INW Basecamp, LocalBusiness schema, landing page',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
   mainEntityOfPage: {
     '@type': 'WebPage',

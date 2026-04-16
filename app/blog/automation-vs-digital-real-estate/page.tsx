@@ -29,20 +29,8 @@ const blogPostingSchema = {
   url: 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
   datePublished: '2026-03-10',
   dateModified: '2026-03-10',
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/automation-vs-digital-real-estate',

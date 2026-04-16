@@ -30,15 +30,7 @@ const blogPostingSchema = {
     name: 'Mark Abplanalp',
     url: 'https://kodecite.ai',
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   datePublished: '2026-03-12',
   dateModified: '2026-03-12',
   mainEntityOfPage: {

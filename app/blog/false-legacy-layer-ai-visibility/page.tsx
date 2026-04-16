@@ -26,20 +26,8 @@ const blogPostingSchema = {
     'The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow',
   description:
     "Your business is showing up in AI answers — but is it earned authority or borrowed time? Here's the truth about the False Legacy Layer and what it means for your market position.",
-  author: {
-    '@type': 'Person',
-    name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
-    },
-  },
+  author: { '@id': 'https://www.kodecite.ai/#founder' },
+  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   datePublished: '2026-03-07',
   dateModified: '2026-03-07',
   mainEntityOfPage: {
@@ -123,69 +111,6 @@ const faqSchema = {
   ],
 };
 
-const professionalServiceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'KodeCite.AI',
-  description:
-    'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
-  url: 'https://kodecite.ai',
-  logo: 'https://kodecite.ai/logo.png',
-  image: 'https://kodecite.ai/og-image.png',
-  email: 'sales@kodecite.ai',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Post Falls',
-    addressRegion: 'ID',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 47.7182,
-    longitude: -116.9516,
-  },
-  areaServed: [
-    {
-      '@type': 'City',
-      name: 'Post Falls',
-      containedInPlace: { '@type': 'State', name: 'Idaho' },
-    },
-    {
-      '@type': 'City',
-      name: "Coeur d'Alene",
-      containedInPlace: { '@type': 'State', name: 'Idaho' },
-    },
-    {
-      '@type': 'City',
-      name: 'Spokane',
-      containedInPlace: { '@type': 'State', name: 'Washington' },
-    },
-    {
-      '@type': 'City',
-      name: 'Spokane Valley',
-      containedInPlace: { '@type': 'State', name: 'Washington' },
-    },
-    { '@type': 'AdministrativeArea', name: 'North Idaho' },
-    { '@type': 'AdministrativeArea', name: 'Eastern Washington' },
-    { '@type': 'AdministrativeArea', name: 'Inland Northwest' },
-    { '@type': 'AdministrativeArea', name: 'Pacific Northwest' },
-  ],
-  knowsAbout: [
-    'Answer Engine Optimization',
-    'AI Search Optimization',
-    'Local Business AI Visibility',
-    'Schema Markup',
-    'llms.txt',
-    'agent.json',
-    'Next.js Performance',
-    'PageSpeed Optimization',
-    'Structured Data',
-    'Google AI Overviews',
-    'ChatGPT Citations',
-    'Perplexity Optimization',
-  ],
-};
-
 export default function FalseLegacyLayer() {
   return (
     <>
@@ -196,10 +121,6 @@ export default function FalseLegacyLayer() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
       />
 
       {/* Hero */}
