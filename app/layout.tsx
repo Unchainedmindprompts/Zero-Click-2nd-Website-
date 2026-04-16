@@ -131,6 +131,7 @@ const professionalServiceSchema = {
     '@type': 'PostalAddress',
     addressLocality: 'Post Falls',
     addressRegion: 'ID',
+    postalCode: '83854',
     addressCountry: 'US',
   },
   founder: {
