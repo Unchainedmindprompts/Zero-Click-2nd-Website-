@@ -127,12 +127,6 @@ const professionalServiceSchema = {
   telephone: '+14803239740',
   email: 'mark@kodecite.ai',
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Post Falls',
-    addressRegion: 'ID',
-    addressCountry: 'US',
-  },
   founder: {
     '@id': 'https://www.kodecite.ai/#founder',
   },
