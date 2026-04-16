@@ -13,31 +13,9 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'AI Search Infrastructure Build',
-  provider: {
-    '@id': 'https://www.kodecite.ai/#service',
-  },
-  description:
-    'We build custom Next.js websites with sub-second load times, per-page JSON-LD schema, and AI identity files (llms.txt + agent.json) so AI systems can read, trust, and recommend your business.',
-  serviceType: 'Answer Engine Optimization',
-  areaServed: 'United States',
-  offers: {
-    '@type': 'Offer',
-    description: 'One-time website build. No monthly retainer. Client owns the codebase, domain, and hosting account.',
-  },
-};
-
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-
       {/* ===== HERO ===== */}
       <section
         className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden hero-dark-bg hero-grid-bg"
