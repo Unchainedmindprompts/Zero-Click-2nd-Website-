@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'what-is-an-entity-graph',
+    category: 'AEO & AI Search',
+    title: 'What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade',
+    excerpt:
+      "Schema.org launched in 2011 as the standard language of the internet. Over a decade later it's still misunderstood and misused — even by digital marketing practitioners. Here's what schema actually is, what an entity graph is, and why it matters more right now than it ever has.",
+    date: 'April 17, 2026',
+    readTime: '14 min read',
+  },
+  {
     slug: 'cold-load-vs-cached-ai-crawlers',
     category: 'AI Search Strategy',
     title: 'Your Site Feels Fast to You — And That\'s Exactly the Problem',
