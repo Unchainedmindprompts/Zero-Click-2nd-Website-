@@ -62,7 +62,7 @@ export default function HomePage() {
             className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed text-center"
             style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.55s forwards' }}
           >
-            Almost no businesses on the internet have one built correctly —
+            Almost no businesses with a website have one built correctly —
             regardless of what they&apos;re paying, or who built their site.
           </p>
 
@@ -71,7 +71,7 @@ export default function HomePage() {
             className="flex justify-center mt-10"
             style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.65s forwards' }}
           >
-            <Link href="/contact" className="btn-gold font-poppins text-base inline-flex items-center justify-center gap-2" style={{ padding: '16px 32px' }}>
+            <Link href="/contact" className="btn-gold-outline font-poppins text-base inline-flex items-center justify-center gap-2" style={{ padding: '16px 32px' }}>
               Find Out If AI Can Read You →
             </Link>
           </div>
