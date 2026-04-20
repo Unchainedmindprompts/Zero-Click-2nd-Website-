@@ -22,46 +22,57 @@ export default function HomePage() {
         id="hero"
         style={{ paddingTop: '87px' }}
       >
+        {/* Radial gradient — keep exactly as is */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full pointer-events-none"
           style={{ background: 'radial-gradient(ellipse, rgba(160,114,58,0.06) 0%, transparent 70%)' }} />
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          {/* Eyebrow */}
-          <div style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.1s forwards' }}>
-            <p className="eyebrow mb-6">THE GREAT DECOUPLING · 2026</p>
-          </div>
 
-          {/* H1 — Bebas Neue */}
+          {/* Lines 1-4 — not SEO list */}
           <h1
-            className="font-playfair text-[#0a0806] leading-[1.0] mb-7"
-            style={{ fontSize: 'clamp(68px, 10vw, 128px)', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.2s forwards' }}
+            className="font-playfair text-[#0a0806] leading-[1.05] mb-4 text-center"
+            style={{ fontSize: 'clamp(44px, 6.5vw, 88px)', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.2s forwards' }}
           >
-            <span style={{ color: '#0a0806', display: 'block' }}>Your SEO Is <span className="wood-underline">Working.</span></span>
-            <span style={{ color: '#1a56db', display: 'block' }}>Your Business Is Still Invisible.</span>
+            <span style={{ display: 'block' }}>Your website is not SEO.</span>
+            <span style={{ display: 'block' }}>Your content is not SEO.</span>
+            <span style={{ display: 'block' }}>Your copywriter is not SEO.</span>
+            <span style={{ display: 'block' }}>100 social media posts are not SEO.</span>
           </h1>
+
+          {/* Gold rule divider */}
+          <div style={{ width: '80px', height: '2px', background: '#a0723a', margin: '1.5rem auto', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.35s forwards' }} />
+
+          {/* The reveal */}
+          <div style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.45s forwards' }}>
+            <p
+              className="font-playfair leading-[1.0] text-center mb-7"
+              style={{ fontSize: 'clamp(68px, 10vw, 128px)', color: '#1a56db' }}
+            >
+              An entity graph is SEO.
+            </p>
+          </div>
 
           {/* Subhead */}
           <p
-            className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed"
-            style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.3s forwards' }}
+            className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed text-center"
+            style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.55s forwards' }}
           >
-            AI already answers your customers&rsquo; questions &mdash; we rebuild your digital foundation so
-            your business is easier for ChatGPT, Perplexity, and Google&apos;s AI to understand, trust,
-            and recommend.
+            Almost no business on the internet has one built correctly —
+            regardless of what they&apos;re paying, or who built their site.
           </p>
 
           {/* CTA */}
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
-            style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.45s forwards' }}
+            className="flex justify-center mt-10"
+            style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.65s forwards' }}
           >
-            <a href="#problem" className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2" style={{ padding: '16px 24px' }}>
-              See How It Works ↓
-            </a>
+            <Link href="/contact" className="btn-gold font-poppins text-base inline-flex items-center justify-center gap-2" style={{ padding: '16px 32px' }}>
+              Find Out If AI Can Read You →
+            </Link>
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator — keep exactly as is */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
           <div className="w-px h-14" style={{ background: 'linear-gradient(to bottom, transparent, #a0723a)', animation: 'pulse-glow 2s ease-in-out infinite' }} />
         </div>
