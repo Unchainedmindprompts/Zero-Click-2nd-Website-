@@ -135,7 +135,7 @@ export default function HomePage() {
                 Not a new technology. Not a separate system. Schema.org deployed correctly — every element of your business connected, every signal consistent, every page reinforcing the same identity. A single, coherent, machine-readable picture of your business that every search engine and every AI can read, verify, and trust.
               </p>
               <p className="font-poppins text-base font-semibold text-center mt-4" style={{ color: '#c8945a' }}>
-                That entity graph is the foundation of your entire SEO profile. Traditional search has always rewarded it. AI requires it. Almost no business has one.
+                That entity graph is the foundation of your entire SEO profile. Traditional search has always rewarded it. AI requires it. And the industry selling you SEO never built one.
               </p>
             </div>
           </ScrollReveal>
