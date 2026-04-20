@@ -13,6 +13,12 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const Checkmark = () => (
+    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
+      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+    </svg>
+  );
+
   return (
     <>
       {/* ===== HERO ===== */}
@@ -147,6 +153,55 @@ export default function HomePage() {
             <p className="font-poppins text-xl font-semibold text-center leading-relaxed" style={{ color: '#f8f5f0' }}>
               For the first time in 15 years, a correctly built entity graph isn&apos;t a best practice.<br />
               It&apos;s the price of entry.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ===== NOT ROCKET SCIENCE ===== */}
+      <section id="what-is-it" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">NOT ROCKET SCIENCE</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              An entity graph is Schema.org used the way it was always intended.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: '#6a5a48' }}>
+              Not a new technology. Not a proprietary system. The structured identity layer that connects every element of your business into a single, machine-readable truth — built on a 15-year-old standard that almost no one deploys correctly.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={180}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+              {[
+                'Who you are',
+                'Who runs the business',
+                'What services you offer',
+                'Where you operate',
+                'What credentials you hold',
+                'Who verifies you',
+                'How long you\'ve been doing this',
+                'Why you should be trusted',
+              ].map((item, i) => (
+                <div key={i} style={{ borderLeft: '3px solid #a0723a', background: '#e8e0d0', padding: '0.75rem 1rem', borderRadius: '0 0.5rem 0.5rem 0' }}>
+                  <p className="font-poppins text-sm font-medium" style={{ color: '#0a0806' }}>{item}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={220}>
+            <p className="font-poppins text-base md:text-lg leading-relaxed text-center max-w-2xl mx-auto mb-6" style={{ color: '#6a5a48' }}>
+              Every element connected. Every signal consistent. Every page reinforcing the same identity — so when an AI crawler reads your business, it doesn&apos;t find fragments. It finds a complete, verifiable entity it can cite with confidence.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={240}>
+            <p className="font-poppins text-xl font-semibold text-center" style={{ color: '#0a0806' }}>
+              That&apos;s what KodeCite builds. That&apos;s what almost no one else does.
             </p>
           </ScrollReveal>
         </div>
@@ -314,9 +369,7 @@ export default function HomePage() {
                     'You own everything. No monthly rent.',
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
+                      <Checkmark />
                       <span className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item}</span>
                     </div>
                   ))}
@@ -343,9 +396,7 @@ export default function HomePage() {
                     'You serve clients. We build the foundation.',
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
+                      <Checkmark />
                       <span className="font-poppins text-sm leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>{item}</span>
                     </div>
                   ))}
@@ -398,9 +449,7 @@ export default function HomePage() {
                   className="flex items-start gap-4 p-5 rounded-xl"
                   style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(160,114,58,0.15)' }}
                 >
-                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <Checkmark />
                   <p className="font-poppins text-sm md:text-base leading-relaxed" style={{ color: 'rgba(240,232,216,0.85)' }}>{item}</p>
                 </div>
               ))}
@@ -437,9 +486,7 @@ export default function HomePage() {
                 'One specific action you can take today — whether you work with us or not.',
               ].map((item, i) => (
                 <div key={i} className="checklist-item">
-                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                  <Checkmark />
                   <span className="font-poppins text-sm md:text-base" style={{ color: '#6a5a48' }}>{item}</span>
                 </div>
               ))}
