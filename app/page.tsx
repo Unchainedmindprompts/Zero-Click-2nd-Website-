@@ -238,53 +238,42 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== THE PROBLEM — dark charcoal stats bar ===== */}
-      <section id="problem" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
-        <div className="max-w-6xl mx-auto">
+      {/* ===== THE WINDOW ===== */}
+      <section id="the-window" className="py-24 md:py-32 px-4 relative overflow-hidden" style={{ backgroundColor: '#1c1814' }}>
+        <div className="absolute top-0 left-0 right-0" style={{ height: '4px', background: 'linear-gradient(90deg, #3e1f08 0%, #7a5228 15%, #a0723a 30%, #c8945a 50%, #a0723a 70%, #7a5228 85%, #3e1f08 100%)' }} />
+        <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>WHY THIS IS HAPPENING</p>
+            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>THE WINDOW</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
-              AI Search Changed How Customers Find You.{' '}
-              <span style={{ color: 'rgba(240,232,216,0.55)' }}>Most businesses haven&apos;t caught up yet.</span>
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
+              This is a 2–3 year window.<br />It&apos;s open right now.
             </h2>
           </ScrollReveal>
-
           <ScrollReveal delay={150}>
-            <div className="max-w-3xl mx-auto text-center mb-20">
-              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                Your rankings didn&apos;t drop. Your traffic did. The answer is sitting at the top of the page — and it&apos;s not your website.
-              </p>
-              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: 'rgba(240,232,216,0.82)' }}>
-                ChatGPT, Perplexity, and Google AI Overviews synthesize answers from sites they can read, trust, and cite.
-                If your site isn&apos;t structured for machine discovery, you aren&apos;t ranked lower.{' '}
-                <span className="font-semibold" style={{ color: '#f8f5f0' }}>You&apos;re not in the conversation at all.</span>
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {[
-              { end: 60, suffix: '%', label: 'of Google searches end without a click', delay: 0 },
-              { end: 77, suffix: '%', label: 'of mobile searches never visit a single website', delay: 150 },
-              { end: 47, suffix: '%', label: 'of all Google searches now trigger an AI Overview', delay: 300 },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={stat.delay}>
-                <div className="stat-block">
-                  <CounterAnimation end={stat.end} suffix={stat.suffix} label={stat.label} duration={2200} />
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={200}>
-            <p className="text-center text-base md:text-lg font-poppins max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>
-              Traditional SEO gets you to the top of a list nobody is scrolling anymore.{' '}
-              <span className="font-semibold" style={{ color: '#f8f5f0' }}>
-                Answer Engine Optimization makes you the answer itself.
-              </span>
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-6" style={{ color: 'rgba(240,232,216,0.82)' }}>
+              The businesses showing up in AI answers today aren&apos;t there because they outspent anyone. They&apos;re there because they built machine-readable identity before their competitors thought to.
             </p>
+          </ScrollReveal>
+          <ScrollReveal delay={180}>
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-10" style={{ color: 'rgba(240,232,216,0.82)' }}>
+              That advantage compounds. Every month an entity graph exists, it accumulates more citation signals, more cross-platform verification, more AI crawler trust. This isn&apos;t pay-to-play. It&apos;s build-to-earn.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="font-poppins text-xl font-semibold text-center mb-12" style={{ color: '#f8f5f0' }}>
+              In 2–3 years this will be table stakes. The businesses that own the space in their market today will be extraordinarily difficult to displace.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={250}>
+            <div className="text-center">
+              <Link href="/contact" className="btn-gold-outline font-poppins font-semibold text-base inline-flex items-center gap-2 rounded-md" style={{ padding: '15px 36px' }}>
+                Start the Conversation
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>
