@@ -59,12 +59,6 @@ export default function HomePage() {
             >
               So what is SEO?
             </p>
-            <p
-              className="font-playfair leading-[1.0] text-center mb-7"
-              style={{ fontSize: 'clamp(68px, 10vw, 128px)', color: '#1a56db' }}
-            >
-              An entity graph is SEO.
-            </p>
           </div>
 
           {/* Subhead */}
@@ -72,8 +66,7 @@ export default function HomePage() {
             className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed text-center"
             style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.55s forwards' }}
           >
-            Almost no businesses with a website have one built correctly —
-            regardless of what they&apos;re paying, or who built their site.
+            Scroll down. The answer might surprise you.
           </p>
 
           {/* CTA */}
@@ -125,6 +118,26 @@ export default function HomePage() {
             <p className="font-poppins text-xl md:text-2xl font-semibold leading-relaxed text-center" style={{ color: '#0a0806' }}>
               And the overwhelming majority of businesses still don&apos;t use it correctly. Not because the concept is complicated. Because implementing it correctly is software engineering — and for 15 years that locked proper Schema behind a door only enterprises with development budgets could afford to open.
             </p>
+          </ScrollReveal>
+          <ScrollReveal delay={240}>
+            <div style={{
+              marginTop: '2.5rem',
+              padding: '2rem',
+              background: '#1c1814',
+              borderRadius: '1rem',
+              maxWidth: '700px',
+              margin: '2.5rem auto 0'
+            }}>
+              <p className="font-playfair text-2xl md:text-3xl text-center mb-4 leading-snug" style={{ color: '#f8f5f0' }}>
+                That&apos;s called an entity graph.
+              </p>
+              <p className="font-poppins text-base md:text-lg leading-relaxed text-center" style={{ color: 'rgba(240,232,216,0.82)' }}>
+                Not a new technology. Not a separate system. Schema.org deployed correctly — every element of your business connected, every signal consistent, every page reinforcing the same identity. A single, coherent, machine-readable picture of your business that every search engine and every AI can read, verify, and trust.
+              </p>
+              <p className="font-poppins text-base font-semibold text-center mt-4" style={{ color: '#c8945a' }}>
+                That entity graph is the foundation of your entire SEO profile. Traditional search has always rewarded it. AI requires it. Almost no business has one.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
