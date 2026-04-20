@@ -155,91 +155,41 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== WHAT WE ACTUALLY DO ===== */}
-      <section id="the-missing-tier" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
-        <div className="max-w-6xl mx-auto">
+      {/* ===== CATEGORY LEADERS ===== */}
+      <section id="the-gap" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
+        <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-5">WHAT WE ACTUALLY DO</p>
+            <p className="eyebrow text-center mb-5">THIS ISN&apos;T A SMALL BUSINESS PROBLEM</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Here&apos;s What We Actually Do
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-10 leading-[1.05]" style={{ color: '#0a0806' }}>
+              The businesses getting this wrong aren&apos;t just startups.<br />They&apos;re category leaders.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
-              We don&apos;t optimize existing websites. We build the digital infrastructure AI systems can actually trust — an owned asset designed to compound over time, not disappear when ad spend stops.
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-10" style={{ color: '#6a5a48' }}>
+              We&apos;ve audited the digital infrastructure of platforms serving thousands of professionals. Companies with national recognition. Marketing platforms trusted by the highest-producing agents and advisors in the country. Businesses paying tens of thousands of dollars annually for digital presence.
             </p>
           </ScrollReveal>
-
           <ScrollReveal delay={180}>
-            <div className="max-w-4xl mx-auto mb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  step: '1',
-                  title: 'Build the Foundation',
-                  body: 'We create a custom Next.js site on your own Vercel edge network — engineered for sub-second cold loads on real devices. No templates. No rented platforms. No bloat. And because everything is built in code on edge infrastructure, adapting to changes in AI search is faster too — we\'re not waiting on plugins, themes, or bloated platforms to catch up.',
-                },
-                {
-                  step: '2',
-                  title: 'Encode Your Authority',
-                  body: 'We embed your expertise, location, and services directly into machine-readable schema and identity files (llms.txt + agent.json) so AI agents can understand exactly who you are — and cite you by name.',
-                },
-                {
-                  step: '3',
-                  title: 'Ship an Asset You Own',
-                  body: 'When we\'re done, you get the full codebase, domain, and hosting account. No monthly rent. No platform lock-in. Just an owned digital asset built to stay fast, adapt quickly, and compound in value as AI-driven discovery evolves.',
-                },
-              ].map((item) => (
-                <ScrollReveal key={item.step} delay={parseInt(item.step) * 100}>
-                  <div className="p-8 rounded-xl border h-full" style={{ borderColor: 'rgba(160,114,58,0.2)', backgroundColor: '#ffffff', borderTop: '3px solid #a0723a' }}>
-                    <p className="font-playfair text-3xl font-bold mb-3" style={{ color: '#a0723a' }}>{item.step}</p>
-                    <h3 className="font-poppins font-semibold text-lg mb-3" style={{ color: '#0a0806' }}>{item.title}</h3>
-                    <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
-                  </div>
-                </ScrollReveal>
-              ))}
+            <div className="rounded-2xl p-8 mb-10 text-left" style={{ backgroundColor: '#1c1814' }}>
+              <p className="font-playfair text-2xl md:text-3xl mb-4 leading-snug" style={{ color: '#f8f5f0' }}>Zero llms.txt files.</p>
+              <p className="font-playfair text-2xl md:text-3xl mb-4 leading-snug" style={{ color: '#f8f5f0' }}>Zero agent.json files.</p>
+              <p className="font-playfair text-2xl md:text-3xl leading-snug" style={{ color: 'rgba(240,232,216,0.6)' }}>Auto-generated schema with missing fields and broken entity connections.</p>
             </div>
           </ScrollReveal>
-
-          {/* Stat callout row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-            {[
-              { number: 'Sub-1s', label: 'Real-device load time on modern iPhone — vs. 3–8s on subscription platforms', delay: 0 },
-              { number: '90–100', label: 'Lighthouse desktop score on every build. Mobile scores in the 80s–90s — because Lighthouse mobile simulates a 2018 device on throttled 4G. Real users are on 5G.', delay: 150 },
-              { number: 'Custom', label: 'Schema markup built per page, per article — never copy-pasted site-wide', delay: 300 },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={stat.delay}>
-                <div style={{
-                  textAlign: 'center',
-                  padding: '2.5rem 2rem',
-                  background: '#ffffff',
-                  border: '1.5px solid rgba(160,114,58,0.35)',
-                  borderRadius: '1rem',
-                  borderTop: '3px solid #a0723a',
-                  transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
-                  boxShadow: '0 2px 12px rgba(160,114,58,0.08)',
-                }}>
-                  <p className="font-playfair font-bold" style={{ fontSize: 'clamp(40px, 6vw, 64px)', lineHeight: 1, color: '#a0723a' }}>{stat.number}</p>
-                  <p className="font-poppins text-sm mt-3 uppercase tracking-wider font-semibold" style={{ color: '#6a5a48' }}>{stat.label}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* CTA — KodeCite Standard */}
-          <ScrollReveal delay={280}>
-            <div className="text-center mb-6">
-              <a
-                href="#kodecite-standard"
-                className="font-poppins font-semibold text-base inline-flex items-center gap-2 pb-0.5 transition-colors"
-                style={{ color: '#a0723a', borderBottom: '1px solid rgba(160,114,58,0.4)' }}
-              >
-                → See the KodeCite Standard
-              </a>
-            </div>
+          <ScrollReveal delay={200}>
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-8" style={{ color: '#6a5a48' }}>
+              The gap isn&apos;t about budget. It&apos;s about awareness. Schema.org has existed for 15 years and the industry responsible for digital presence has largely ignored the one layer that actually tells machines who you are. They built beautiful brochures. They forgot to build the foundation.
+            </p>
           </ScrollReveal>
-
+          <ScrollReveal delay={220}>
+            <blockquote className="px-8 py-6 rounded-r-xl text-left" style={{ borderLeft: '4px solid #a0723a', background: '#e8e0d0' }}>
+              <p className="font-poppins text-lg font-semibold leading-relaxed" style={{ color: '#0a0806' }}>
+                The window to get there first is open right now. It won&apos;t stay open forever.
+              </p>
+            </blockquote>
+          </ScrollReveal>
         </div>
       </section>
 
