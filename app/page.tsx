@@ -117,50 +117,37 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== PROOF IT WORKS ===== */}
-      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#faf7f2' }}>
-        <div className="max-w-4xl mx-auto">
+      {/* ===== WHAT CHANGED ===== */}
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#1c1814' }}>
+        <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-4">PROOF IT WORKS</p>
+            <p className="eyebrow text-center mb-5" style={{ color: '#c8945a' }}>WHAT CHANGED</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-3xl md:text-4xl text-center mb-6 leading-tight" style={{ color: '#0a0806' }}>
-              We Proved It On Our Own Business First.
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
+              For 14 years, ignoring Schema was a missed opportunity.<br />
+              Today it&apos;s the reason you don&apos;t exist in the answer.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-base md:text-lg text-center leading-relaxed mb-8 max-w-2xl mx-auto" style={{ color: '#6a5a48' }}>
-              Luxe Window Works — our own custom window treatment company in Post Falls, Idaho — went from unknown to AI-recommended first across six platforms in 2.5 months with zero ad spend. One year old business. One year old domain. Previously on Wix, then WordPress.
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-8" style={{ color: 'rgba(240,232,216,0.82)' }}>
+              Traditional search engines were forgiving. Google crawled your site, inferred meaning from your content, filled in the gaps, and ranked you anyway. Ambiguity was tolerable because humans resolved it — they clicked your link and made their own judgment.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={180}>
-            <ul className="space-y-2 max-w-xl mx-auto mb-8">
-              {[
-                { time: '9:36 AM', text: 'ChatGPT \u2014 \u201cBest overall pick locally.\u201d' },
-                { time: '9:43 AM', text: 'Google Map Pack \u2014 ranked #1.' },
-                { time: '9:43 AM', text: 'Google AI Mode \u2014 first under \u201cTop-Rated Local Specialists.\u201d' },
-              ].map((item, i) => (
-                <li key={i} className="flex gap-3 items-start font-poppins text-sm md:text-base" style={{ color: '#6a5a48' }}>
-                  <span className="font-semibold shrink-0" style={{ color: '#a0723a' }}>{item.time}</span>
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="font-playfair text-4xl md:text-5xl text-center mb-8 leading-[1.0]" style={{ color: '#f8f5f0' }}>
+              LLMs are not forgiving.
+            </p>
           </ScrollReveal>
-          <ScrollReveal delay={210}>
-            <div className="text-center">
-              <Link
-                href="/our-work/luxe-window-works"
-                className="btn-ghost font-poppins text-base inline-flex items-center justify-center gap-2"
-                style={{ padding: '16px 32px' }}
-              >
-                See the Full Case Study →
-              </Link>
-            </div>
+          <ScrollReveal delay={200}>
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-10" style={{ color: 'rgba(240,232,216,0.82)' }}>
+              They don&apos;t infer. They don&apos;t fill gaps. They synthesize, select, and recommend — based entirely on what they can structurally verify about your business. If the structured signals aren&apos;t there, they move to the next business that gave them something to work with.
+            </p>
           </ScrollReveal>
-          <ScrollReveal delay={230}>
-            <p className="font-poppins text-sm text-center mt-6 font-medium" style={{ color: '#a0723a' }}>
-              Nothing about the business changed. Only how machines understood it.
+          <ScrollReveal delay={220}>
+            <p className="font-poppins text-xl font-semibold text-center leading-relaxed" style={{ color: '#f8f5f0' }}>
+              For the first time in 15 years, a correctly built entity graph isn&apos;t a best practice.<br />
+              It&apos;s the price of entry.
             </p>
           </ScrollReveal>
         </div>
