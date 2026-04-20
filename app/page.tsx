@@ -113,8 +113,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={220}>
             <p className="font-poppins text-xl md:text-2xl font-semibold leading-relaxed text-center" style={{ color: '#0a0806' }}>
-              And the overwhelming majority of businesses still don&apos;t use it correctly.<br />
-              Not because it&apos;s complicated. Because nobody told them it mattered.
+              And the overwhelming majority of businesses still don&apos;t use it correctly. Not because the concept is complicated. Because implementing it correctly is software engineering — and for 15 years that locked proper Schema behind a door only enterprises with development budgets could afford to open.
             </p>
           </ScrollReveal>
         </div>
@@ -173,7 +172,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: '#6a5a48' }}>
-              Not a new technology. Not a proprietary system. The structured identity layer that connects every element of your business into a single, machine-readable truth — built on a 15-year-old standard that almost no one deploys correctly.
+              The concept is straightforward. The implementation is software engineering. Custom JSON-LD written in code. Stable identity anchors managed across every page. Nested object relationships validated against a formal spec. Server-side delivery that AI crawlers can actually parse. For 15 years that required an enterprise development budget. We build it as a first-class engineering deliverable — at a price point that doesn&apos;t require one.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={180}>
