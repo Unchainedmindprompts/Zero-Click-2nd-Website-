@@ -497,39 +497,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== SHORTLIST IS SHRINKING — mid warm ===== */}
-      <section id="future" className="py-24 md:py-32 px-4 relative overflow-hidden" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse, rgba(160,114,58,0.08) 0%, transparent 70%)' }} />
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <ScrollReveal>
-            <p className="eyebrow mb-5">WHY THE SHORTLIST IS SHRINKING</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] mb-8 leading-[1.05]">
-              <span style={{ color: '#0a0806', display: 'block' }}>The language of the internet has existed for 15 years.</span>
-              <span style={{ color: '#a0723a', display: 'block' }}>We&apos;re the first to use it correctly for your business.</span>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
-              Schema.org was built in 2011 by the four largest search engines on the planet. For 15 years it sat largely unused — a standard without adoption. Then LLMs arrived and made it mandatory.
-            </p>
-            <p className="font-poppins text-lg leading-relaxed mb-12" style={{ color: '#6a5a48' }}>
-              The businesses that build entity graphs now — while their competitors are still paying for brochure sites — will have a compounding structural advantage that latecomers can&apos;t buy their way into quickly. The window is open. It closes a little more every day.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={250}>
-            <Link href="/contact" className="btn-gold-outline font-poppins font-semibold text-base inline-block rounded-md" style={{ padding: '15px 40px' }}>
-              Start the Conversation →
-            </Link>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== FOOTER CTA — warm gradient ===== */}
       <section id="cta" className="py-24 md:py-36 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, #f8f5f0, #e8e0d0)' }}>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
