@@ -80,60 +80,37 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== THE HARD TRUTH ===== */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-4xl mx-auto">
+      {/* ===== LANGUAGE OF THE INTERNET ===== */}
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
+        <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-5">THE HARD TRUTH</p>
+            <p className="eyebrow text-center mb-5">THE LANGUAGE OF THE INTERNET</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Most Websites Can&apos;t Be<br />Recommended by AI.
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-10 leading-[1.05]" style={{ color: '#0a0806' }}>
+              In 2011, the four largest search engines on the planet agreed on something.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-5 leading-relaxed" style={{ color: '#6a5a48' }}>
-              Not because of AI — because of what was broken long before AI arrived. AI doesn&apos;t guess. If it can&apos;t clearly understand and verify your business, it skips you entirely.
-            </p>
-            <p className="font-poppins text-base md:text-lg text-center max-w-2xl mx-auto mb-12 font-medium leading-relaxed" style={{ color: '#0a0806' }}>
-              AI doesn&apos;t rank the best business. It selects the one it understands with the highest confidence.
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-6 text-left" style={{ color: '#6a5a48' }}>
+              Google. Microsoft. Yahoo. Yandex. Four fierce competitors built a shared language — a structured vocabulary that lets machines understand what a business is, who runs it, what it offers, where it operates, and why it should be trusted.
             </p>
           </ScrollReveal>
-
-          <div className="max-w-2xl mx-auto mb-12 space-y-4">
-            {[
-              { label: 'No structured entity data', body: 'AI agents need machine-readable signals to understand who you are, what you do, and where you operate. Most sites have none.' },
-              { label: 'Inconsistent business signals', body: 'Conflicting NAP data, missing directory listings, and unverified profiles tell AI your business can\'t be trusted.' },
-              { label: 'Generic, templated content', body: 'Content that doesn\'t clearly answer questions about your specific expertise gives AI nothing to cite.' },
-              { label: 'Slow, bloated infrastructure', body: 'AI crawlers deprioritize slow sites. A 4-second load time isn\'t just a UX problem — it\'s a trust signal failure.' },
-            ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 60}>
-                <div className="flex items-start gap-4 p-5 rounded-xl" style={{ background: '#ffffff', border: '1px solid rgba(160,114,58,0.15)' }}>
-                  <svg className="w-5 h-5 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#c0392b' }}>
-                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                  <div>
-                    <p className="font-poppins font-semibold text-sm md:text-base mb-1" style={{ color: '#0a0806' }}>{item.label}</p>
-                    <p className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item.body}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={300}>
-            <div className="max-w-2xl mx-auto space-y-5">
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                Most business owners I talk to want to be recommended by AI — they&apos;ve heard the terms, but most have no idea what they actually mean yet.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                The real problem: 80–90% have a weak or broken foundation. Without fast cold-load performance, proper schema, and clean entity signals, AI agents simply won&apos;t trust or fully parse the site — no matter what content strategy you layer on top.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed font-medium" style={{ color: '#0a0806' }}>
-                Without fixing the foundation first, every dollar you spend on content, ads, or AI tools is building on sand.{' '}
-                <span style={{ color: '#a0723a' }}>Generic solutions don&apos;t fix structural problems — they just make the bill bigger.</span>
-              </p>
-            </div>
+          <ScrollReveal delay={180}>
+            <p className="font-playfair italic text-2xl md:text-3xl leading-relaxed mb-6 text-center" style={{ color: '#0a0806' }}>
+              They called it Schema.org.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-8 text-left" style={{ color: '#6a5a48' }}>
+              That was 15 years ago. Schema.org is still the language of the internet today. Every search engine reads it. Every AI crawler depends on it. Every LLM uses it to understand, verify, and decide which businesses to recommend.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={220}>
+            <p className="font-poppins text-xl md:text-2xl font-semibold leading-relaxed text-center" style={{ color: '#0a0806' }}>
+              And the overwhelming majority of businesses still don&apos;t use it correctly.<br />
+              Not because it&apos;s complicated. Because nobody told them it mattered.
+            </p>
           </ScrollReveal>
         </div>
       </section>
