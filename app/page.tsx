@@ -38,10 +38,10 @@ export default function HomePage() {
             className="font-playfair text-[#0a0806] leading-[1.05] mb-4 text-center"
             style={{ fontSize: 'clamp(28px, 4vw, 58px)', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.2s forwards' }}
           >
-            <span style={{ display: 'block' }}>Your website is not SEO.</span>
-            <span style={{ display: 'block' }}>Your content is not SEO.</span>
-            <span style={{ display: 'block' }}>Your copywriter is not SEO.</span>
-            <span style={{ display: 'block' }}>100 social media posts are not SEO.</span>
+            <span style={{ display: 'block', color: '#0a0806' }}>Your website is not SEO.</span>
+            <span style={{ display: 'block', color: '#a0723a' }}>Your content is not SEO.</span>
+            <span style={{ display: 'block', color: '#0a0806' }}>Your copywriter is not SEO.</span>
+            <span style={{ display: 'block', color: '#a0723a' }}>100 social media posts are not SEO.</span>
           </h1>
 
           {/* Gold rule divider */}
