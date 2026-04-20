@@ -329,36 +329,86 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== OWNERSHIP ===== */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-6xl mx-auto">
-          {/* ===== YOU OWN THE ASSET ===== */}
+      {/* ===== TWO PATHS ===== */}
+      <section id="two-paths" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow text-center mb-5">HOW WE WORK</p>
+          </ScrollReveal>
           <ScrollReveal delay={100}>
-            <div className="p-8 md:p-10 rounded-2xl" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
-              <p className="eyebrow mb-3">OWNERSHIP</p>
-              <h3 className="font-playfair text-2xl md:text-3xl mb-6 leading-tight" style={{ color: '#0a0806' }}>
-                You Own the Asset
-              </h3>
-              <div className="space-y-3 mb-6">
-                {[
-                  'Built on your own Vercel account — no platform lock-in, ever.',
-                  'Custom Next.js codebase in your GitHub — move it, fork it, extend it.',
-                  'One-time build. Ongoing content and optimization is available, never mandatory.',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="font-poppins text-sm md:text-base leading-relaxed" style={{ color: '#6a5a48' }}>{item}</span>
-                  </div>
-                ))}
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              One methodology. Two ways to deploy it.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <p className="font-poppins text-lg text-center max-w-xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+              Same entity graph foundation. Same KodeCite Standard. Configured for your situation.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={180}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              {/* For businesses */}
+              <div className="rounded-2xl p-8" style={{ background: '#ffffff', border: '1.5px solid rgba(160,114,58,0.35)' }}>
+                <p className="eyebrow mb-4">FOR BUSINESSES</p>
+                <h3 className="font-playfair text-2xl mb-4 leading-tight" style={{ color: '#0a0806' }}>Custom build</h3>
+                <p className="font-playfair mb-1" style={{ fontSize: '2.5rem', lineHeight: 1, color: '#a0723a' }}>$7,500–$12,000</p>
+                <p className="font-poppins text-sm mb-8" style={{ color: '#6a5a48' }}>one-time · yours forever</p>
+                <div className="space-y-3 mb-8">
+                  {[
+                    'Full entity graph from day one',
+                    'Custom Next.js on your Vercel account',
+                    'GitHub repo in your name',
+                    'llms.txt + agent.json + robots.ts',
+                    'Launch indexing at go-live',
+                    'You own everything. No monthly rent.',
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/contact" className="btn-gold-outline font-poppins font-semibold text-base inline-flex items-center gap-2 rounded-md w-full justify-center" style={{ padding: '14px 24px' }}>
+                  Start the Conversation →
+                </Link>
               </div>
-              <p className="font-poppins text-sm md:text-base font-medium" style={{ color: '#0a0806' }}>
-                We don&apos;t sell SEO retainers. We build the structured, edge-hosted asset that AI assistants rely on to decide who to recommend — and hand you the keys when we&apos;re done.
-              </p>
-              <p className="font-poppins text-sm md:text-base leading-relaxed mt-4" style={{ color: '#6a5a48' }}>
-                Because you own the asset, every future improvement — content, schema, location pages, and AI-facing updates — builds on infrastructure you already control.
-              </p>
+
+              {/* For platforms */}
+              <div className="rounded-2xl p-8" style={{ background: '#1c1814', border: '1.5px solid rgba(160,114,58,0.25)' }}>
+                <p className="eyebrow mb-4" style={{ color: '#c8945a' }}>FOR PLATFORMS &amp; AGENCIES</p>
+                <h3 className="font-playfair text-2xl mb-4 leading-tight" style={{ color: '#f8f5f0' }}>Wholesale partnership</h3>
+                <p className="font-poppins text-base mb-8 leading-relaxed" style={{ color: 'rgba(240,232,216,0.7)' }}>
+                  You serve professional service businesses at scale. Your clients have no entity graph underneath their digital presence. Let&apos;s change that.
+                </p>
+                <div className="space-y-3 mb-8">
+                  {[
+                    'Templated deployment per industry vertical',
+                    'Real estate, law, and financial advisory rule sets',
+                    'Each client gets owned infrastructure',
+                    'Schema validated before every delivery',
+                    'Same methodology — configured for your client base',
+                    'You serve clients. We build the foundation.',
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-poppins text-sm leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="/contact"
+                  className="font-poppins font-semibold text-base inline-flex items-center gap-2 pb-0.5"
+                  style={{ color: '#c8945a', borderBottom: '1px solid rgba(200,148,90,0.4)' }}
+                >
+                  Let&apos;s Talk →
+                </Link>
+              </div>
+
             </div>
           </ScrollReveal>
         </div>
