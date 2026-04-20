@@ -2,7 +2,6 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
-import CounterAnimation from '@/components/CounterAnimation';
 
 export const metadata: Metadata = {
   title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
@@ -280,55 +279,6 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== NOT ROCKET SCIENCE ===== */}
-      <section id="what-is-it" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-4xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow text-center mb-5">NOT ROCKET SCIENCE</p>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              An entity graph is Schema.org used the way it was always intended.
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: '#6a5a48' }}>
-              Not a new technology. Not a proprietary system. The structured identity layer that connects every element of your business into a single, machine-readable truth — built on a 15-year-old standard that almost no one deploys correctly.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={180}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-              {[
-                'Who you are',
-                'Who runs the business',
-                'What services you offer',
-                'Where you operate',
-                'What credentials you hold',
-                'Who verifies you',
-                'How long you&apos;ve been doing this',
-                'Why you should be trusted',
-              ].map((item, i) => (
-                <div key={i} style={{ borderLeft: '3px solid #a0723a', background: '#e8e0d0', padding: '0.75rem 1rem', borderRadius: '0 0.5rem 0.5rem 0' }}>
-                  <p className="font-poppins text-sm font-medium" style={{ color: '#0a0806' }} dangerouslySetInnerHTML={{ __html: item }} />
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={220}>
-            <p className="font-poppins text-base md:text-lg leading-relaxed text-center max-w-2xl mx-auto mb-6" style={{ color: '#6a5a48' }}>
-              Every element connected. Every signal consistent. Every page reinforcing the same identity — so when an AI crawler reads your business, it doesn&apos;t find fragments. It finds a complete, verifiable entity it can cite with confidence.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={240}>
-            <p className="font-poppins text-xl font-semibold text-center" style={{ color: '#0a0806' }}>
-              That&apos;s what KodeCite builds. That&apos;s what almost no one else does.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ===== TWO PATHS ===== */}
       <section id="two-paths" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
         <div className="max-w-5xl mx-auto">
@@ -510,23 +460,22 @@ export default function HomePage() {
             <p className="eyebrow mb-5">WHY THE SHORTLIST IS SHRINKING</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] mb-8 leading-[1.05]" style={{ color: '#0a0806' }}>
-              AI interfaces don&apos;t show ten results.{' '}
-              <span style={{ color: '#a0723a' }}>They recommend one.</span>
+            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] mb-8 leading-[1.05]">
+              <span style={{ color: '#0a0806', display: 'block' }}>The language of the internet has existed for 15 years.</span>
+              <span style={{ color: '#a0723a', display: 'block' }}>We&apos;re the first to use it correctly for your business.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
-              Ten blue links gave every business a chance to be clicked. AI interfaces — chat, voice, and ambient — compress that list down to the few answers a system trusts most. Meta is already shipping AI glasses today, and as interfaces become more conversational and context-aware, the number of businesses surfaced in any given query is likely to shrink further.
+              Schema.org was built in 2011 by the four largest search engines on the planet. For 15 years it sat largely unused — a standard without adoption. Then LLMs arrived and made it mandatory.
             </p>
             <p className="font-poppins text-lg leading-relaxed mb-12" style={{ color: '#6a5a48' }}>
-              This isn&apos;t a prediction. It&apos;s the interface trend already underway. The businesses with the clearest machine-readable structure get selected more consistently — across chat, voice, AI Overviews, and whatever interface comes next.{' '}
-              <span className="font-semibold" style={{ color: '#0a0806' }}>Structure built today compounds tomorrow.</span>
+              The businesses that build entity graphs now — while their competitors are still paying for brochure sites — will have a compounding structural advantage that latecomers can&apos;t buy their way into quickly. The window is open. It closes a little more every day.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={250}>
             <Link href="/contact" className="btn-gold-outline font-poppins font-semibold text-base inline-block rounded-md" style={{ padding: '15px 40px' }}>
-              Start the Conversation
+              Start the Conversation →
             </Link>
           </ScrollReveal>
         </div>
@@ -548,7 +497,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={120}>
             <p className="font-poppins text-xl md:text-2xl mb-10 leading-relaxed" style={{ color: '#6a5a48' }}>
-              Most businesses showing up in AI answers are there because no one else has claimed the space yet. We audit the hidden scaffolding — the structure that determines whether AI truly trusts, reads, and chooses you… or replaces you the moment a structured competitor arrives.
+              Most businesses showing up in AI answers are there because no one else has claimed the space yet. The moment a structured competitor enters your market, the gap becomes permanent. We audit the hidden foundation — and build the one that lasts.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={250}>
