@@ -68,7 +68,7 @@ const organizationSchema = {
   url: 'https://www.kodecite.ai',
   logo: 'https://www.kodecite.ai/logo.png',
   description:
-    'AI search infrastructure agency. We build custom Next.js sites on Vercel edge hosting with full JSON-LD schema stacks and AI identity files so businesses get recommended by ChatGPT, Perplexity, and Google AI Overviews.',
+    'KodeCite.ai builds entity graphs for businesses. An entity graph is Schema.org deployed correctly — every element of a business connected into a single machine-readable identity that search engines and AI systems can read, verify, and cite. We build on Next.js edge infrastructure owned by the client. The language of the internet has existed for 15 years. We\'re the first to use it correctly for your business.',
   email: 'mark@kodecite.ai',
   foundingDate: '2025',
   founder: {
@@ -98,6 +98,8 @@ const founderSchema = {
   description:
     'Founder of KodeCite.ai and Luxe Window Works. 30 years of sales experience, 23 years as an entrepreneur, and 1,000+ hours of AEO and GEO research. Builds AI-ready web infrastructure for businesses that want to be recommended by AI search engines.',
   knowsAbout: [
+    'Entity Graph Infrastructure',
+    'Schema.org Implementation',
     'Answer Engine Optimization',
     'Generative Engine Optimization',
     'AI Search Visibility',
@@ -107,6 +109,8 @@ const founderSchema = {
     'llms.txt',
     'agent.json',
     'Local Business Entity Graphs',
+    'Machine-Readable Business Identity',
+    'Traditional SEO',
   ],
   sameAs: [
     'https://www.linkedin.com/in/mark-abplanalp-46a272371',
@@ -123,7 +127,7 @@ const professionalServiceSchema = {
   logo: 'https://www.kodecite.ai/logo.png',
   image: 'https://www.kodecite.ai/og-image.png',
   description:
-    'KodeCite.ai builds AI-ready websites for businesses. We rebuild the digital foundation — fast edge hosting, custom schema, and AI identity files — so AI agents can understand, trust, and recommend your business.',
+    'KodeCite.ai builds entity graphs — Schema.org deployed correctly as a machine-readable business identity. Custom JSON-LD on every page, AI identity files (llms.txt + agent.json), and sub-1s edge infrastructure owned by the client. The foundation that makes businesses visible in both traditional search and AI discovery.',
   telephone: '+14803239740',
   email: 'mark@kodecite.ai',
   priceRange: '$$',
@@ -135,20 +139,28 @@ const professionalServiceSchema = {
     name: 'United States',
   },
   serviceType: [
+    'Entity Graph Infrastructure',
+    'Schema.org Implementation',
     'Answer Engine Optimization',
     'AI Search Optimization',
     'Next.js Website Development',
-    'Schema Markup Implementation',
+    'JSON-LD Schema Markup',
     'AI Identity File Setup',
   ],
   knowsAbout: [
+    'Entity Graph Infrastructure',
+    'Schema.org',
+    'JSON-LD Schema Markup',
+    'Machine-Readable Business Identity',
     'Answer Engine Optimization',
     'Generative Engine Optimization',
     'AI Search Visibility',
-    'JSON-LD Schema Markup',
     'Next.js Edge Hosting',
     'llms.txt',
     'agent.json',
+    'Traditional SEO',
+    'Local Business Schema',
+    'AI Identity Files',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
