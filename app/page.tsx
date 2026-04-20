@@ -50,6 +50,16 @@ export default function HomePage() {
           {/* The reveal */}
           <div style={{ opacity: 0, animation: 'heroFadeIn 0.7s ease 0.45s forwards' }}>
             <p
+              className="font-playfair text-center mb-4"
+              style={{
+                fontSize: 'clamp(32px, 5vw, 72px)',
+                color: '#0a0806',
+                lineHeight: 1.05
+              }}
+            >
+              So what is SEO?
+            </p>
+            <p
               className="font-playfair leading-[1.0] text-center mb-7"
               style={{ fontSize: 'clamp(68px, 10vw, 128px)', color: '#1a56db' }}
             >
