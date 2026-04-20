@@ -52,7 +52,7 @@ export default function HomePage() {
             <p
               className="font-playfair text-center mb-4"
               style={{
-                fontSize: 'clamp(32px, 5vw, 72px)',
+                fontSize: 'clamp(68px, 10vw, 128px)',
                 color: '#1a56db',
                 lineHeight: 1.05
               }}
