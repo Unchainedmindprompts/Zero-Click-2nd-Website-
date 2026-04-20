@@ -455,18 +455,18 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={120}>
             <p className="font-poppins text-lg text-center mb-12 leading-relaxed" style={{ color: 'rgba(240,232,216,0.7)' }}>
-              Every build ships with all of this. No exceptions.
+              Every build ships with the complete entity graph stack. No exceptions. No upsells.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="space-y-4">
               {([
-                'AI identity files (llms.txt + agent.json) deployed on every build — your digital ID for the agent era.',
-                'Sub-1s real-device load time on a modern iPhone — verified before go-live, not simulated.',
-                'Custom per-page JSON-LD schema — homepage, services, locations, articles, and FAQ — never copy-pasted site-wide.',
-                'Zero invalid schema items at launch — machine-verified before delivery.',
-                (<><strong style={{ color: '#f8f5f0' }}>Launch indexing checklist</strong> — directory scaffolding across GBP, Bing Places, Apple Business Connect, Yelp, and BBB, plus sitemap.xml submitted to Google Search Console and Bing at go-live.</>),
-                'You own the code, domain, and hosting account outright — we hand over the keys when we\'re done.',
+                'Custom entity graph — business, founder, services, credentials, and location. All connected through stable identity anchors every AI crawler can traverse.',
+                'AI identity files (llms.txt + agent.json) deployed on every build — your machine-readable introduction to every LLM that crawls the web.',
+                'Custom JSON-LD schema per page, per article — never copy-pasted site-wide, never conflicting with platform auto-schema.',
+                'Sub-1s real-device load time on a modern iPhone — verified before go-live. Speed is a trust signal, not just UX.',
+                'Launch indexing across GBP, Bing Places, Apple Business Connect, Yelp, and BBB — plus sitemap.xml submitted to Google Search Console at go-live.',
+                'You own the GitHub repo and Vercel account outright — no platform lock-in, no monthly rent on your own digital identity.',
               ] as React.ReactNode[]).map((item, i) => (
                 <div
                   key={i}
