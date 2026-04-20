@@ -130,7 +130,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl text-center mb-10 leading-[1.05]" style={{ color: '#f8f5f0' }}>
-              For 14 years, ignoring Schema was a missed opportunity.<br />
+              For 15 years, ignoring Schema was a missed opportunity.<br />
               Today it&apos;s the reason you don&apos;t exist in the answer.
             </h2>
           </ScrollReveal>
@@ -141,7 +141,7 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={180}>
             <p className="font-playfair text-4xl md:text-5xl text-center mb-8 leading-[1.0]" style={{ color: '#f8f5f0' }}>
-              LLMs are not forgiving.
+              AI is not forgiving.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={200}>
