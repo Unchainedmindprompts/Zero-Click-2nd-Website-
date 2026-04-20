@@ -53,7 +53,7 @@ export default function HomePage() {
               className="font-playfair text-center mb-4"
               style={{
                 fontSize: 'clamp(32px, 5vw, 72px)',
-                color: '#0a0806',
+                color: '#1a56db',
                 lineHeight: 1.05
               }}
             >
