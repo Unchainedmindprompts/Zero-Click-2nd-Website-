@@ -469,17 +469,12 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] mb-7 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Find out if AI knows you exist.
+              Find out if AI can actually read you.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg leading-relaxed mb-5" style={{ color: '#6a5a48' }}>
-              Visibility in AI doesn&apos;t mean much if the scaffolding is weak. Find out if AI truly
-              trusts, reads, and chooses you — or if you&apos;re one structured competitor away from being passed over entirely.
-            </p>
-            <p className="font-poppins text-base leading-relaxed mb-10" style={{ color: '#6a5a48' }}>
-              No pitch. No pressure. Just an honest look at the hidden structure beneath your AI presence
-              and a clear explanation of what it would take to fix it.
+            <p className="font-poppins text-lg leading-relaxed mb-10" style={{ color: '#6a5a48' }}>
+              Most businesses don&apos;t know what their entity graph looks like to a machine. We&apos;ll show you — in plain English, with no pressure and no pitch.
             </p>
           </ScrollReveal>
 
@@ -487,9 +482,9 @@ export default function HomePage() {
             <div className="text-left max-w-xl mx-auto mb-12 space-y-4">
               {[
                 'How your business currently appears in ChatGPT, Perplexity, and Google AI Overviews — in plain English.',
-                'Your PageSpeed score benchmarked against your top three local competitors.',
-                'A plain-English breakdown of your schema gaps and what AI can\'t read about you right now.',
-                'One specific action you can implement today — whether you work with us or not.',
+                'A plain-English breakdown of your schema gaps and what AI can\'t verify about you right now.',
+                'How your infrastructure benchmarks against your top competitors in your market.',
+                'One specific action you can take today — whether you work with us or not.',
               ].map((item, i) => (
                 <div key={i} className="checklist-item">
                   <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
