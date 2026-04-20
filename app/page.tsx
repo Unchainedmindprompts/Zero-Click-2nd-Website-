@@ -405,35 +405,49 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== WHY NOTHING ELSE SOLVES THIS ===== */}
-      <section id="why-nothing-else" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-6xl mx-auto">
+      {/* ===== NOT ROCKET SCIENCE ===== */}
+      <section id="what-is-it" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+        <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-5">WHY NOTHING ELSE SOLVES THIS</p>
+            <p className="eyebrow text-center mb-5">NOT ROCKET SCIENCE</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
-              Why Nothing Else Solves This
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+              An entity graph is Schema.org used the way it was always intended.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#a0723a' }}>
-              The market has two options for AI search visibility. Neither one was built for you.
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: '#6a5a48' }}>
+              Not a new technology. Not a proprietary system. The structured identity layer that connects every element of your business into a single, machine-readable truth — built on a 15-year-old standard that almost no one deploys correctly.
             </p>
           </ScrollReveal>
-
           <ScrollReveal delay={180}>
-            <div className="max-w-3xl mx-auto mb-14 space-y-5">
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap One: Enterprise SEO platforms.</strong> Powerful tools for Fortune 500 teams. They optimize what already exists — they don&apos;t fix a slow, bloated, AI-invisible foundation. If your infrastructure is the problem, better reporting won&apos;t solve it.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                <strong style={{ color: '#0a0806' }}>Trap Two: Subscription website platforms.</strong> WordPress agencies, real estate website builders, and monthly SaaS tools promise simplicity. What they deliver is shared infrastructure that often loads in 3–8 seconds on mobile — while our builds deliver the same pages in under a second on a real iPhone. That&apos;s not a benchmark. That&apos;s what your visitors and AI crawlers actually experience.
-              </p>
-              <p className="font-poppins text-base md:text-lg leading-relaxed" style={{ color: '#6a5a48' }}>
-                In between sits the majority of serious small and mid-sized businesses with no purpose-built solution. We are the missing tier: a site built from the ground up for how AI actually works.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+              {[
+                'Who you are',
+                'Who runs the business',
+                'What services you offer',
+                'Where you operate',
+                'What credentials you hold',
+                'Who verifies you',
+                'How long you&apos;ve been doing this',
+                'Why you should be trusted',
+              ].map((item, i) => (
+                <div key={i} style={{ borderLeft: '3px solid #a0723a', background: '#e8e0d0', padding: '0.75rem 1rem', borderRadius: '0 0.5rem 0.5rem 0' }}>
+                  <p className="font-poppins text-sm font-medium" style={{ color: '#0a0806' }} dangerouslySetInnerHTML={{ __html: item }} />
+                </div>
+              ))}
             </div>
+          </ScrollReveal>
+          <ScrollReveal delay={220}>
+            <p className="font-poppins text-base md:text-lg leading-relaxed text-center max-w-2xl mx-auto mb-6" style={{ color: '#6a5a48' }}>
+              Every element connected. Every signal consistent. Every page reinforcing the same identity — so when an AI crawler reads your business, it doesn&apos;t find fragments. It finds a complete, verifiable entity it can cite with confidence.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={240}>
+            <p className="font-poppins text-xl font-semibold text-center" style={{ color: '#0a0806' }}>
+              That&apos;s what KodeCite builds. That&apos;s what almost no one else does.
+            </p>
           </ScrollReveal>
         </div>
       </section>
