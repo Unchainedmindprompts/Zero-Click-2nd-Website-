@@ -36,7 +36,7 @@ export default function HomePage() {
           {/* Lines 1-4 — not SEO list */}
           <h1
             className="font-playfair text-[#0a0806] leading-[1.05] mb-4 text-center"
-            style={{ fontSize: 'clamp(44px, 6.5vw, 88px)', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.2s forwards' }}
+            style={{ fontSize: 'clamp(28px, 4vw, 58px)', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.2s forwards' }}
           >
             <span style={{ display: 'block' }}>Your website is not SEO.</span>
             <span style={{ display: 'block' }}>Your content is not SEO.</span>
@@ -62,7 +62,7 @@ export default function HomePage() {
             className="font-poppins text-base md:text-xl max-w-[640px] mx-auto leading-relaxed text-center"
             style={{ color: '#6a5a48', opacity: 0, animation: 'heroFadeIn 0.7s ease 0.55s forwards' }}
           >
-            Almost no business on the internet has one built correctly —
+            Almost no businesses on the internet have one built correctly —
             regardless of what they&apos;re paying, or who built their site.
           </p>
 
