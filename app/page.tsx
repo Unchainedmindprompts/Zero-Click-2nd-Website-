@@ -195,107 +195,43 @@ export default function HomePage() {
 
       <div className="section-divider" />
 
-      {/* ===== INTENT COMPRESSION — mid warm ===== */}
-      <section id="intent-compression" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
-        <div className="max-w-6xl mx-auto">
+      {/* ===== BOTH DIRECTIONS ===== */}
+      <section id="both-directions" className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f8f5f0' }}>
+        <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow text-center mb-5">WHY THIS CHANGES EVERYTHING</p>
+            <p className="eyebrow text-center mb-5">THE PART NOBODY TELLS YOU</p>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-[56px] text-center mb-10 leading-[1.05]" style={{ color: '#0a0806' }}>
-              AI doesn&apos;t send traffic.{' '}
-              <span style={{ color: '#a0723a' }}>It sends pre-qualified buyers.</span>
+            <h2 className="font-playfair text-4xl md:text-5xl text-center mb-6 leading-[1.05]">
+              <span style={{ color: '#0a0806', display: 'block' }}>An entity graph doesn&apos;t make you visible to AI instead of Google.</span>
+              <span style={{ color: '#a0723a', display: 'block' }}>It makes both work better. Simultaneously.</span>
             </h2>
           </ScrollReveal>
-
           <ScrollReveal delay={150}>
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <p className="text-lg md:text-xl leading-relaxed font-poppins mb-5" style={{ color: '#6a5a48' }}>
-                Visitors who discover your business through an AI citation aren&apos;t browsing —
-                they&apos;ve already been vetted. The AI has evaluated your authority, matched your
-                expertise to the user&apos;s question, and delivered a pre-qualified buyer directly
-                to your door.
-              </p>
-              <p className="text-base md:text-lg leading-relaxed font-poppins" style={{ color: '#6a5a48' }}>
-                This is what we call{' '}
-                <span className="font-semibold" style={{ color: '#0a0806' }}>Intent Compression</span>. The research
-                that used to take days happens inside the AI in seconds.
-                By the time they land on your site, the decision is nearly made.
-              </p>
+            <p className="font-poppins text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+              Google has rewarded correctly structured Schema for 15 years. LLMs require it. The signals are the same. The foundation is the same. Build it once — compound in both traditional search and AI discovery. Forever.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={180}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+              <div className="rounded-2xl p-8" style={{ background: '#e8e0d0', border: '1.5px solid rgba(160,114,58,0.25)' }}>
+                <p className="eyebrow mb-4">TRADITIONAL SEARCH</p>
+                <p className="font-poppins text-base leading-relaxed" style={{ color: '#6a5a48' }}>
+                  Google has rewarded correct Schema for 15 years. Entity clarity, structured credentials, consistent NAP data, and verified service areas have always been foundational ranking signals. An entity graph makes all of them stronger.
+                </p>
+              </div>
+              <div className="rounded-2xl p-8" style={{ background: '#1c1814', border: '1.5px solid rgba(160,114,58,0.25)' }}>
+                <p className="eyebrow mb-4" style={{ color: '#c8945a' }}>LLM DISCOVERY</p>
+                <p className="font-poppins text-base leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>
+                  LLMs don&apos;t infer. They read your structured identity and either recommend you or skip you. An entity graph gives them everything they need to cite your business with confidence — across ChatGPT, Perplexity, Google AI, and every AI interface being built right now.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
-
-          {/* Comparison table */}
-          <ScrollReveal delay={200}>
-            <div className="mb-16 overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr style={{ borderBottom: '1px solid rgba(100,70,30,0.2)' }}>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[180px]" style={{ color: '#6a5a48' }}>Metric</th>
-                    <th className="font-poppins font-semibold text-sm py-4 pr-6 min-w-[160px]" style={{ color: '#6a5a48' }}>Traditional Search</th>
-                    <th className="font-poppins font-semibold text-sm py-4 min-w-[200px]" style={{ color: '#a0723a' }}>
-                      AI-Cited Traffic
-                      <span className="block text-xs font-normal mt-0.5" style={{ color: '#6a5a48' }}>KodeCite Stack</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { metric: 'Conversion Rate', traditional: '2.8%', ai: '14.2% — 5x higher' },
-                    { metric: 'Purchase Speed', traditional: 'Standard', ai: '47% faster completion' },
-                    { metric: 'Pages Per Session', traditional: 'Baseline', ai: '50% more pages viewed' },
-                    { metric: 'Order / Transaction Value', traditional: 'Standard', ai: '25% higher per transaction' },
-                    { metric: 'Likelihood to Convert', traditional: 'Baseline', ai: 'Up to 23x more likely' },
-                  ].map((row, i) => (
-                    <tr key={i} className="transition-colors" style={{ borderBottom: '1px solid rgba(100,70,30,0.1)' }}>
-                      <td className="font-poppins font-medium text-sm py-4 pr-6" style={{ color: '#0a0806' }}>{row.metric}</td>
-                      <td className="font-poppins text-sm py-4 pr-6" style={{ color: '#6a5a48' }}>{row.traditional}</td>
-                      <td className="font-poppins font-semibold text-sm py-4" style={{ color: '#a0723a' }}>{row.ai}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <p className="text-xs text-center mt-5 font-poppins italic" style={{ color: '#6a5a48' }}>
-                Sources: Current AI search traffic analysis, 2025–2026. B2C metrics across retail, real estate, and professional services sectors.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Stat callouts */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {[
-              { end: 14.2, decimals: 1, suffix: '%', label: 'AI citation conversion rate vs. 2.8% traditional search', delay: 0 },
-              { end: 47, decimals: 0, suffix: '%', label: 'faster purchase completion for AI-assisted buyers', delay: 150 },
-              { end: 23, decimals: 0, suffix: 'x', label: 'more likely to convert vs. traditional organic traffic', delay: 300 },
-            ].map((stat, i) => (
-              <ScrollReveal key={i} delay={stat.delay}>
-                <div className="stat-block">
-                  <CounterAnimation end={stat.end} decimals={stat.decimals} suffix={stat.suffix} label={stat.label} duration={2200} />
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Pull quote */}
-          <ScrollReveal delay={200}>
-            <blockquote className="rounded-r-xl px-8 py-8 max-w-3xl mx-auto mb-12" style={{ borderLeft: '4px solid #a0723a', background: '#e8e0d0' }}>
-              <p className="font-poppins text-base md:text-lg leading-relaxed italic" style={{ color: '#1c1814' }}>
-                &ldquo;When an AI recommends your business, it isn&apos;t sending a curious
-                visitor. It&apos;s sending a pre-educated buyer who already trusts you —
-                before they&apos;ve read a single word on your site.&rdquo;
-              </p>
-            </blockquote>
-          </ScrollReveal>
-
-          <ScrollReveal delay={300}>
-            <div className="text-center">
-              <Link href="/services" className="btn-gold-outline font-poppins font-semibold text-base inline-flex items-center gap-2 rounded-md" style={{ padding: '15px 36px' }}>
-                See how we build this for your business
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
+          <ScrollReveal delay={220}>
+            <p className="font-poppins text-xl font-semibold text-center" style={{ color: '#0a0806' }}>
+              You don&apos;t have to choose. You just have to build it correctly.
+            </p>
           </ScrollReveal>
         </div>
       </section>
