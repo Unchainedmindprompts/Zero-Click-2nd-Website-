@@ -5,9 +5,9 @@ import ScrollReveal from '@/components/ScrollReveal';
 import CounterAnimation from '@/components/CounterAnimation';
 
 export const metadata: Metadata = {
-  title: 'KodeCite.ai — AI Search Optimization & AEO Agency',
+  title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
   description:
-    'AI already answers your customers\u2019 questions \u2014 we rebuild your site so it\u2019s the one answer ChatGPT, Perplexity, and Google\u2019s AI trust enough to recommend. Free AEO Audit available.',
+    'Schema.org has been the language of the internet for 15 years. An entity graph is Schema used correctly — the foundation that makes your business visible in both AI discovery and traditional search. Built on infrastructure you own.',
   alternates: {
     canonical: 'https://www.kodecite.ai/',
   },

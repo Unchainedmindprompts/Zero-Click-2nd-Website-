@@ -191,7 +191,7 @@ const websiteSchema = {
   name: 'KodeCite.ai',
   url: 'https://www.kodecite.ai',
   description:
-    'Answer Engine Optimization agency. We structure websites so AI agents cite your business as the definitive answer.',
+    'Entity graph infrastructure for AI search and traditional SEO. KodeCite builds machine-readable business identities on Next.js edge infrastructure — owned by the client, built to compound.',
   publisher: {
     '@id': 'https://www.kodecite.ai/#organization',
   },
