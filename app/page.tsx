@@ -12,6 +12,54 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://www.kodecite.ai/#faq',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is an entity graph?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An entity graph is Schema.org deployed correctly — every element of a business connected through stable identity anchors into a single machine-readable identity. Business name, founder, services, location, credentials, and verifications all interconnected so every search engine and AI crawler can read, verify, and trust the business with confidence.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between a website and an entity graph?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A website is human-readable. An entity graph is machine-readable. Most businesses have one without the other. A website tells visitors who you are. An entity graph tells search engines and AI systems who you are — in a structured language they can verify and cite.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Why doesn't my business show up in ChatGPT or Perplexity?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI systems like ChatGPT and Perplexity recommend businesses based on structured identity signals — Schema.org data that tells them who you are, what you do, and why you should be trusted. Without a correctly built entity graph, AI has nothing to verify and skips your business entirely.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is Schema.org?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Schema.org is a shared vocabulary built in 2011 by Google, Microsoft, Yahoo, and Yandex — the four largest search engines — to give machines a standardized way to understand what a business is, who runs it, what it offers, and why it should be trusted. It has been the language of the internet for 15 years.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why do most businesses not have an entity graph?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Implementing Schema.org correctly is software engineering — not a plugin setting or a template option. For 15 years it required an enterprise development budget. Most web designers, SEO agencies, and subscription platforms either don't know how to build it or can't access the infrastructure required to do it correctly.",
+      },
+    },
+  ],
+};
+
 export default function HomePage() {
   const Checkmark = () => (
     <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
@@ -21,6 +69,10 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ===== HERO ===== */}
       <section
         className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden hero-dark-bg hero-grid-bg"

@@ -11,22 +11,30 @@ export const metadata: Metadata = {
   description:
     'Most businesses are invisible to AI. KodeCite.ai builds the websites, content, and campaigns that make you the answer. Based in Post Falls, Idaho.',
   keywords: [
-    'AI search optimization',
-    'AEO',
-    'answer engine optimization',
-    'zero click search',
-    'digital marketing',
-    'Next.js website',
+    'SEO',
     'schema markup',
-    'Post Falls Idaho',
+    'entity graph',
+    'Schema.org implementation',
+    'AI search optimization',
+    'answer engine optimization',
+    'why my business doesn\'t show up in ChatGPT',
+    'Google AI Overviews',
+    'AI search visibility',
+    'local SEO',
+    'digital marketing',
+    'website infrastructure',
+    'AEO agency',
+    'Perplexity SEO',
+    'llms.txt',
+    'JSON-LD schema',
   ],
   authors: [{ name: 'KodeCite.ai' }],
   creator: 'KodeCite.ai',
   metadataBase: new URL('https://kodecite.ai'),
   openGraph: {
-    title: 'KodeCite.AI — AI Search Optimization',
+    title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
     description:
-      '60% of searches end without a click. AI answers the question and your competitor gets the credit. We make sure the machine chooses you.',
+      'Schema.org has been the language of the internet for 15 years. An entity graph is Schema used correctly — the foundation that makes your business visible in both AI discovery and traditional search. Built on infrastructure you own.',
     url: 'https://www.kodecite.ai',
     siteName: 'KodeCite.AI',
     images: [
@@ -42,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KodeCite.AI — AI Search Optimization',
+    title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
     description:
-      '60% of searches end without a click. We make sure AI chooses you.',
+      'An entity graph is Schema.org used correctly. Almost no business has one built right. We build it — on infrastructure you own.',
     images: ['https://kodecite.ai/og-image.png'],
   },
   robots: {
