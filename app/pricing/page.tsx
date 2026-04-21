@@ -81,6 +81,12 @@ const breadcrumbSchema = {
   ],
 };
 
+const Checkmark = () => (
+  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" style={{ color: '#a0723a' }}>
+    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+  </svg>
+);
+
 export default function PricingPage() {
   return (
     <>
@@ -109,17 +115,17 @@ export default function PricingPage() {
                 className="font-playfair leading-none mb-8"
                 style={{ fontSize: 'clamp(3rem, 7vw, 5rem)', color: '#0a0806' }}
               >
-                Own the Answer.
+                You now know what an entity graph is.
                 <br />
-                <span style={{ color: '#1a56db' }}>Or Rent It.</span>
+                <span style={{ color: '#a0723a' }}>This is how you get one.</span>
               </h1>
               <p
                 className="font-poppins"
                 style={{ fontSize: '1.125rem', lineHeight: '1.8', color: '#6a5a48', maxWidth: '640px' }}
               >
-                You&rsquo;re not buying &ldquo;SEO.&rdquo; You&rsquo;re deciding whether you own
-                the answer in your market&nbsp;&mdash; or keep renting visibility on platforms you
-                don&rsquo;t control.
+                Every KodeCite build ships with the complete entity graph stack &mdash; Schema.org deployed
+                correctly, AI identity files, edge infrastructure, and launch indexing. The only
+                question is whether you&rsquo;re starting from scratch or protecting what you&rsquo;ve already built.
               </p>
               <p
                 className="font-poppins mt-4"
@@ -132,6 +138,82 @@ export default function PricingPage() {
             </ScrollReveal>
           </div>
         </section>
+
+        {/* HOW WE WORK */}
+        <section className="py-24 md:py-32 px-4" style={{ backgroundColor: '#f2ede4' }}>
+          <div className="max-w-5xl mx-auto">
+            <ScrollReveal>
+              <p className="eyebrow text-center mb-5">HOW WE WORK</p>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <h2 className="font-playfair text-4xl md:text-5xl text-center mb-6 leading-[1.05]" style={{ color: '#0a0806' }}>
+                One methodology. Two ways to deploy it.
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={150}>
+              <p className="font-poppins text-lg text-center max-w-xl mx-auto mb-14 leading-relaxed" style={{ color: '#6a5a48' }}>
+                Same entity graph foundation. Same KodeCite Standard. Configured for your situation.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={180}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div className="rounded-2xl p-8" style={{ background: '#ffffff', border: '1.5px solid rgba(160,114,58,0.35)' }}>
+                  <p className="eyebrow mb-4">FOR BUSINESSES</p>
+                  <h3 className="font-playfair text-2xl mb-4 leading-tight" style={{ color: '#0a0806' }}>Custom build</h3>
+                  <p className="font-playfair mb-1" style={{ fontSize: '2.5rem', lineHeight: 1, color: '#a0723a' }}>$7,500–$12,000</p>
+                  <p className="font-poppins text-sm mb-8" style={{ color: '#6a5a48' }}>one-time · yours forever</p>
+                  <div className="space-y-3 mb-8">
+                    {[
+                      'Full entity graph from day one',
+                      'Custom Next.js on your Vercel account',
+                      'GitHub repo in your name',
+                      'llms.txt + agent.json + robots.ts',
+                      'Launch indexing at go-live',
+                      'You own everything. No monthly rent.',
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <Checkmark />
+                        <span className="font-poppins text-sm leading-relaxed" style={{ color: '#6a5a48' }}>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/contact" className="btn-gold-outline font-poppins font-semibold text-base inline-flex items-center gap-2 rounded-md w-full justify-center" style={{ padding: '14px 24px' }}>
+                    Start the Conversation →
+                  </Link>
+                </div>
+
+                <div className="rounded-2xl p-8" style={{ background: '#1c1814', border: '1.5px solid rgba(160,114,58,0.25)' }}>
+                  <p className="eyebrow mb-4" style={{ color: '#c8945a' }}>FOR PLATFORMS &amp; AGENCIES</p>
+                  <h3 className="font-playfair text-2xl mb-4 leading-tight" style={{ color: '#f8f5f0' }}>Wholesale partnership</h3>
+                  <p className="font-poppins text-base mb-8 leading-relaxed" style={{ color: 'rgba(240,232,216,0.7)' }}>
+                    You serve professional service businesses at scale. Your clients have no entity graph underneath their digital presence. Let&apos;s change that.
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    {[
+                      'Templated deployment per industry vertical',
+                      'Real estate, law, and financial advisory rule sets',
+                      'Each client gets owned infrastructure',
+                      'Schema validated before every delivery',
+                      'Same methodology — configured for your client base',
+                      'You serve clients. We build the foundation.',
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <Checkmark />
+                        <span className="font-poppins text-sm leading-relaxed" style={{ color: 'rgba(240,232,216,0.82)' }}>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/contact" className="font-poppins font-semibold text-base inline-flex items-center gap-2 pb-0.5" style={{ color: '#c8945a', borderBottom: '1px solid rgba(200,148,90,0.4)' }}>
+                    Let&apos;s Talk →
+                  </Link>
+                </div>
+
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+        <div className="section-divider" />
 
         {/* Divider */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,7 +240,7 @@ export default function PricingPage() {
                 className="font-poppins mb-2"
                 style={{ fontSize: '14px', color: '#a0723a', fontStyle: 'italic' }}
               >
-                For new sites or weak existing sites with little to preserve.
+                For businesses without a site, or currently on a platform that can&rsquo;t support a production-grade entity graph. We build from the ground up on infrastructure you own.
               </p>
               <p
                 className="font-poppins mb-8"
@@ -234,7 +316,7 @@ export default function PricingPage() {
                 className="font-poppins mb-2"
                 style={{ fontSize: '14px', color: '#a0723a', fontStyle: 'italic' }}
               >
-                For sites with rankings, backlinks, and content you can&rsquo;t afford to lose.
+                For businesses with existing rankings and backlinks worth protecting. We replace the platform without burning the authority you&rsquo;ve already earned.
               </p>
               <p
                 className="font-poppins mb-8"
@@ -308,7 +390,7 @@ export default function PricingPage() {
                 className="font-poppins mb-2"
                 style={{ fontSize: '14px', color: '#a0723a', fontStyle: 'italic' }}
               >
-                For owners who want ongoing articles that expand their AI footprint.
+                For businesses that want to keep feeding AI systems new, structured answers after the entity graph is live. The infrastructure keeps working either way.
               </p>
               <p
                 className="font-poppins mb-10"
@@ -440,8 +522,9 @@ export default function PricingPage() {
                 className="font-poppins mb-8"
                 style={{ fontSize: '1rem', lineHeight: '1.75', color: '#6a5a48' }}
               >
-                Cheap SEO packages sell reports, backlinks, and blog posts on top of a slow, generic
-                site. We rebuild the property the AI actually reads.
+                Most agencies have been selling content, links, and reports sitting on top of a site
+                with no entity graph underneath. The machine couldn&rsquo;t verify who you were regardless of
+                how much you published. We fix the foundation first. Everything else compounds from there.
               </p>
               <ul className="space-y-4">
                 {[

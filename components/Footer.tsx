@@ -104,7 +104,7 @@ export default function Footer() {
               </svg>
             </a>
             <p className="text-xs font-poppins" style={{ color: 'rgba(240,232,216,0.78)' }}>
-              Most businesses are invisible to AI. We fix that.
+              The language of the internet has existed for 15 years. We&rsquo;re the first to use it correctly for your business.
             </p>
           </div>
         </div>
