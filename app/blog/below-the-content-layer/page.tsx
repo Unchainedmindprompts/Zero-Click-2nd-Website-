@@ -272,6 +272,85 @@ export default function BelowTheContentLayer() {
                   This is exactly why plugin-generated schema — which was adequate for traditional search — fails in the AI era. Traditional search forgave the gaps. AI exposes them.
                 </p>
 
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">The Plugin Problem</h2>
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">Most businesses have schema — and most of it isn&apos;t working</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Most businesses do have schema. It was installed when the website was built. A plugin was configured, an industry was selected, a few options were toggled. For traditional search, that was often enough to get by.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6 font-medium" style={{ color: '#0a0806' }}>
+                  It&apos;s not enough anymore.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  To be fair — plugins like Rank Math, Yoast, and Schema Pro are useful starting points. They lower the barrier to entry and they&apos;re better than nothing. But there&apos;s a meaningful difference between schema that exists and schema that&apos;s engineered.
+                </p>
+
+                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">Plugins generate fragments, not entity graphs</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  What plugins generate are disconnected blocks — a generic LocalBusiness type here, an Article there, no stable <code className="bg-[#f2ede4] px-1.5 py-0.5 rounded text-[#a0723a] text-sm">@id</code> anchors connecting them into a coherent identity across the site. The machine reads it and finds fragments. And even when the initial implementation is passable, plugins drift. Updates break things. A theme generates its own schema that conflicts with the plugin. A second plugin gets installed that creates duplicate markup. Conflicting signals accumulate silently over time.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  A plugin isn&apos;t schema. It&apos;s the start of schema — one that requires ongoing engineering discipline to maintain correctly.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  Schema hygiene isn&apos;t a one-time task. Most plugins weren&apos;t built to support it at that level.
+                </p>
+
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">Why This Happened</h2>
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">The wrong people got handed the most important job</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Schema has always been classified as technical SEO. That classification put schema in the hands of marketers and agencies who treated it as a checklist item — install the plugin, select the industry, move on.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  The problem is that schema implemented correctly has nothing to do with how marketers think or work. Building a coherent entity graph with stable identity anchors, consistent entity relationships across every page, and server-side delivery that AI crawlers can actually parse — that&apos;s software engineering.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
+                  It always was. It just got sold as a plugin setting.
+                </p>
+
+                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">Nobody noticed because traditional search was forgiving</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  The most important layer of SEO got handed to the wrong people with the wrong tools for 15 years. Nobody&apos;s fault. Traditional search was forgiving enough that the gap between adequate and correct was invisible.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  AI makes that gap visible.
+                </p>
+
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">What Correct Implementation Actually Looks Like</h2>
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">Entity graph infrastructure is engineered, not configured</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  A correctly built entity graph isn&apos;t a plugin setting. It&apos;s engineered infrastructure.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  Custom JSON-LD written in code — deliberate, validated, and specific to every page. Stable <code className="bg-[#f2ede4] px-1.5 py-0.5 rounded text-[#a0723a] text-sm">@id</code> anchors that create a consistent identity network the machine can traverse from any entry point. The business entity, the founder, the services, the locations — all connected and consistent across the entire site.
+                </p>
+
+                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">What clean entity graph infrastructure eliminates</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  No conflicts. No duplicates. No platform override generating its own schema on top of yours. No plugin drift creating broken entity relationships over time.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Server-side delivery that AI crawlers can parse on a cold load. And ongoing hygiene — every new page, every content update, every service addition keeps the entity graph consistent because it&apos;s managed in code, not maintained manually through a dashboard.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
+                  This is what it looks like when schema is treated as engineering rather than marketing.
+                </p>
+
                 {/* MORE SECTIONS TO FOLLOW */}
 
               </div>
