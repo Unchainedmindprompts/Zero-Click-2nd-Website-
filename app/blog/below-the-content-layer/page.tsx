@@ -162,9 +162,118 @@ export default function BelowTheContentLayer() {
 
             <article className="lg:col-span-2">
               <div className="prose-content font-poppins">
+
                 <p className="text-[#6a5a48] text-lg leading-relaxed mb-6">
-                  Article body coming in next prompt.
+                  The content layer conversation is everywhere right now — and most of it stops too soon.
                 </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Answer-first structure. Clean heading hierarchy. FAQs that anticipate the question. Semantic depth. Topical authority. Charts, data tables, pull quotes. Write for humans, structure for machines.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  It&apos;s good advice. All of it. And most of the conversation stops there.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Because underneath every piece of content — underneath every carefully structured answer, every FAQ, every semantically rich paragraph — there is a layer that determines whether AI recommends you or skips you. A layer that the content strategy conversation hasn&apos;t fully reached yet.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  That layer is your entity graph. And almost no one has one built correctly.
+                </p>
+
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">What Everyone Is Getting Right</h2>
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">The content layer advice is valid — and incomplete</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  The content layer conversation is happening for good reason. AI search systems reward well-structured, answer-first content. Perplexity, ChatGPT, and Google AI Overviews pull from pages that are organized clearly, answer specific questions directly, and demonstrate genuine topical depth.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  If you&apos;ve been restructuring your content, adding FAQ sections, building semantic clusters — you&apos;re doing the right things. Keep doing them.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  But here&apos;s what that advice can&apos;t explain: why two businesses in the same market, with similar content quality, show up completely differently in AI search. Why one gets cited consistently and the other gets ignored — or worse, gets its credentials hallucinated or its services misrepresented.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  The answer isn&apos;t in the content. It&apos;s in what sits underneath it.
+                </p>
+
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">The Layer Most Conversations Miss</h2>
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">Schema.org has been the language of the internet for 15 years</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  In 2011, the four largest search engines on the planet — Google, Microsoft, Yahoo, and Yandex — built a shared language for the internet. A structured vocabulary that lets machines understand what a business is, who runs it, what it offers, where it operates, and why it should be trusted. They called it Schema.org.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  When implemented correctly Schema.org builds your entity graph — a single, coherent, machine-readable identity connecting every element of your business across every page of your site. Every entity connected through stable identity anchors that AI crawlers can traverse in one pass.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  If you want the full breakdown of what an entity graph is and why it matters, we&apos;ve covered it in depth{' '}
+                  <Link href="/blog/what-is-an-entity-graph" className="text-[#a0723a] hover:underline">here</Link>.
+                  {' '}For this article the important thing is understanding what sits below the content layer — and why most businesses don&apos;t have it built correctly.
+                </p>
+
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">A detailed page tells AI what you know. An entity graph tells AI who you are.</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  Those are completely different problems. And the content layer only solves the first one.
+                </p>
+
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">Why AI Verification Changes Everything</h2>
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">AI doesn&apos;t infer — it verifies</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Traditional search was forgiving. Google crawled your site, inferred meaning from your content, filled in the gaps, and ranked you anyway. Ambiguity was tolerable because humans resolved it — they clicked your link and made their own judgment.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6 font-medium" style={{ color: '#0a0806' }}>
+                  AI isn&apos;t forgiving.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  AI systems don&apos;t infer. They don&apos;t fill gaps. They synthesize, select, and recommend — based entirely on what they can structurally verify about your business. If the structured signals aren&apos;t there, they move to the next business that gave them something to work with.
+                </p>
+
+                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">Retrieval and verification are two different problems</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-4">
+                  There are two distinct things AI does when it encounters your business:
+                </p>
+
+                <ul className="space-y-3 mb-6 pl-4">
+                  <li className="flex items-start gap-3 text-[#6a5a48] leading-relaxed">
+                    <span className="text-[#a0723a] font-bold mt-0.5 flex-shrink-0">1.</span>
+                    <span><strong className="text-[#0a0806]">It reads your content.</strong> Structure, semantics, topical depth — the content layer handles this.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-[#6a5a48] leading-relaxed">
+                    <span className="text-[#a0723a] font-bold mt-0.5 flex-shrink-0">2.</span>
+                    <span><strong className="text-[#0a0806]">It verifies your identity.</strong> Who is behind this content. What business they represent. How long they&apos;ve been doing it. Whether external signals confirm the same identity.</span>
+                  </li>
+                </ul>
+
+                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6 my-8">
+                  <p className="eyebrow mb-3 text-xs">THE VERIFICATION PROBLEM</p>
+                  <p className="text-[#3a2e24] font-poppins text-sm leading-relaxed">
+                    Being retrieved gets you in the room. Being verified gets you cited. Even the richest, most semantically perfect content is authorless to a machine if the identity layer underneath it is broken or missing.
+                  </p>
+                </div>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  AI can extract an answer from your content. But it can&apos;t recommend the business behind it with confidence — because it can&apos;t verify one exists.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  This is exactly why plugin-generated schema — which was adequate for traditional search — fails in the AI era. Traditional search forgave the gaps. AI exposes them.
+                </p>
+
+                {/* MORE SECTIONS TO FOLLOW */}
+
               </div>
             </article>
 
