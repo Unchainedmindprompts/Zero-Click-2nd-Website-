@@ -351,6 +351,38 @@ export default function BelowTheContentLayer() {
                   This is what it looks like when schema is treated as engineering rather than marketing.
                 </p>
 
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">The Window</h2>
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">The entity graph layer is still largely empty</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  The businesses building correct entity graph infrastructure right now are accumulating an advantage that compounds every month.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Every month an entity graph exists, it accumulates more citation signals, more cross-platform verification, more AI crawler trust. This isn&apos;t pay-to-play. It&apos;s build-to-earn.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  The content layer conversation is valuable — but it&apos;s also becoming crowded. Everyone is restructuring their content. Everyone is adding FAQs. Everyone is chasing topical authority.
+                </p>
+
+                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">The first-mover advantage is real and time-limited</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  The entity graph layer is still largely empty. Most businesses don&apos;t know it exists. Most agencies are still developing the capability to build it correctly. Most platforms structurally can&apos;t support it.
+                </p>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                  That gap won&apos;t stay open forever. The businesses that own the identity layer in their market today will be extraordinarily difficult to displace once it closes.
+                </p>
+
+                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">Find Out Where You Stand</h2>
+                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">The fastest way to audit your entity graph</h3>
+
+                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                  Most businesses don&apos;t know what their entity graph looks like to a machine. They don&apos;t know whether AI is reading them clearly, reading them with gaps, or getting them wrong entirely.
+                </p>
+
                 {/* MORE SECTIONS TO FOLLOW */}
 
               </div>
