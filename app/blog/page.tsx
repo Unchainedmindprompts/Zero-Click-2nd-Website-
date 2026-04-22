@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'below-the-content-layer',
+    category: 'AEO & AI Search',
+    title: 'Below The Content Layer — Where Your Real SEO, AEO & GEO Opportunity Lives',
+    excerpt:
+      "The content layer conversation is everywhere right now — and most of it stops too soon. Here is the layer underneath that determines whether AI recommends you or skips you entirely.",
+    date: 'April 22, 2026',
+    readTime: '10 min read',
+  },
+  {
     slug: 'what-is-an-entity-graph',
     category: 'AEO & AI Search',
     title: 'What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade',
