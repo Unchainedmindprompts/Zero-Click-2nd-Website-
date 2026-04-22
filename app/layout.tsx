@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KodeCite.ai' }],
   creator: 'KodeCite.ai',
-  metadataBase: new URL('https://kodecite.ai'),
+  metadataBase: new URL('https://www.kodecite.ai'),
   openGraph: {
     title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
     description:
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: 'KodeCite.ai',
     images: [
       {
-        url: 'https://kodecite.ai/og-image.png',
+        url: 'https://www.kodecite.ai/og-image.png',
         width: 1200,
         height: 630,
         alt: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
     description:
       'An entity graph is Schema.org used correctly. Almost no business has one built right. We build it — on infrastructure you own.',
-    images: ['https://kodecite.ai/og-image.png'],
+    images: ['https://www.kodecite.ai/og-image.png'],
   },
   robots: {
     index: true,
