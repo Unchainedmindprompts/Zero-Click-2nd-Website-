@@ -137,7 +137,7 @@ export default function F1FrameworkForAEO() {
 
           <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight">
             The F1 Framework for AEO:{' '}
-            <span className="text-[#a0723a]">Why Most Businesses Are Trying to Win an AI Race in an Economy Car</span>
+            <span className="text-[#a0723a]">Why Most Businesses Are Trying to Win the AI Race in an Economy Car</span>
           </h1>
 
           <p className="text-[#6a5a48] text-xl font-poppins leading-relaxed max-w-3xl">
