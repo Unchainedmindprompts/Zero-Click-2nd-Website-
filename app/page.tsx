@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollReveal from '@/components/ScrollReveal';
+import CounterAnimation from '@/components/CounterAnimation';
 
 export default function HomePage() {
   return (
@@ -233,6 +234,55 @@ export default function HomePage() {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* Proof */}
+      <section className="bg-[#f2ede4] py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <p className="eyebrow mb-4">PROOF</p>
+              <h2 className="font-poppins font-bold text-[#0a0806]" style={{ fontSize: 'clamp(26px, 3.5vw, 44px)' }}>
+                The Case Study We Built First
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+
+            {/* Left: Story */}
+            <ScrollReveal delay={100}>
+              <div className="flex flex-col justify-center h-full">
+                <p className="font-poppins text-xs font-semibold tracking-widest uppercase text-[#a0723a] mb-4">
+                  Luxe Window Works · Post Falls, Idaho
+                </p>
+                <h3 className="font-poppins font-bold text-[#0a0806] text-3xl leading-snug mb-5">
+                  From Invisible to Cited in 90 Days
+                </h3>
+                <p className="font-poppins text-[#6a5a48] text-base leading-relaxed mb-8">
+                  We built Luxe Window Works on Next.js with a complete entity graph, custom schema, llms.txt, and agent.json deployed at launch. Within 90 days, Luxe was being surfaced in ChatGPT, Perplexity, Google AI Overviews, Copilot, Bing, and DuckDuckGo for North Idaho window treatment queries — outranking nationally-franchised competitors with larger domains and older sites.
+                </p>
+                <div>
+                  <Link href="/case-studies/luxe-window-works" className="btn-gold-outline text-sm font-bold px-6 py-3 rounded-md inline-block">
+                    See the Full Case Study
+                  </Link>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Right: Stats */}
+            <ScrollReveal delay={200}>
+              <div className="bg-[#1c1814] rounded-2xl px-8 py-12 flex flex-col justify-center gap-10">
+                <CounterAnimation end={6}  label="AI Engines Citing Luxe" />
+                <CounterAnimation end={90} label="Days to First Citation" duration={2500} />
+                <CounterAnimation end={4}  label="Pages Cited Per Session — Bing / Copilot Analytics, 3 Months" suffix="x" />
+              </div>
+            </ScrollReveal>
+
           </div>
 
         </div>
