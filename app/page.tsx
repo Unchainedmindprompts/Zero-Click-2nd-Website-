@@ -345,6 +345,24 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* The Window */}
+      <section className="bg-[#1c1814] py-24 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="eyebrow mb-4">THE WINDOW</p>
+            <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-8" style={{ fontSize: 'clamp(26px, 3.5vw, 46px)' }}>
+              This Is a 2–3 Year Window. It&apos;s Open Right Now.
+            </h2>
+            <p className="font-poppins text-[rgba(240,232,216,0.65)] text-lg leading-relaxed mb-10">
+              The businesses showing up in AI answers today aren&apos;t there because they outspent anyone. They&apos;re there because they built machine-readable foundations before their competitors thought to. That advantage compounds — every month an entity graph exists, it accumulates more citation signals, more cross-platform verification, more AI crawler trust. In 2–3 years this will be table stakes. The businesses that own the space in their market today will be extraordinarily difficult to displace.
+            </p>
+            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+              Start the Conversation
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* The Problem */}
       <section className="bg-[#f2ede4] py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
