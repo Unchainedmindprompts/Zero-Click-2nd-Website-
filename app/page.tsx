@@ -420,6 +420,30 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Final CTA */}
+      <section className="bg-[#1c1814] py-28 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="eyebrow mb-5">THE REAL WAR</p>
+            <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-6" style={{ fontSize: 'clamp(28px, 4vw, 52px)' }}>
+              The Battle for AI Visibility Is Being Fought in the{' '}
+              <span className="text-[#a0723a]">Wrong Place.</span>
+            </h2>
+            <p className="font-poppins text-[rgba(240,232,216,0.6)] text-lg leading-relaxed mb-10">
+              Everyone is arguing about content, reviews, Reddit, and mentions. None of that matters if the machine can&apos;t identify your business in the first place. That&apos;s where the real war is — and almost no one is fighting it yet.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
+                Start the Conversation
+              </Link>
+              <Link href="/audit" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
+                Get My Free Scaffolding Audit
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
     </>
   );
 }
