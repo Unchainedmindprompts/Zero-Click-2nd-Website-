@@ -60,6 +60,58 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Foundation Build */}
+      <section className="bg-white py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <p className="eyebrow mb-4">WHAT WE BUILD</p>
+              <h2 className="font-poppins font-bold text-[#0a0806] mb-4" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+                The Foundation Build
+              </h2>
+              <p className="font-poppins text-[#6a5a48] text-lg max-w-2xl mx-auto leading-relaxed">
+                One-time build. Fixed scope. Fixed timeline. You own everything we deliver — forever.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={100}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+              {[
+                'Custom Next.js website engineered for AI readability',
+                'Full entity graph: business, founder, services, credentials, location',
+                'Custom JSON-LD schema per page — no copy-paste, no conflicts',
+                'llms.txt and agent.json deployed on every build',
+                'Sub-1 second load time on modern devices',
+                'Directory launch: Google Business, Bing Places, Apple Business, Yelp, BBB',
+                'You own the GitHub repo and the Vercel account — no platform lock-in',
+                'Built in 6–8 weeks with full transparency',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 bg-[#f8f5f0] rounded-lg px-5 py-4">
+                  <svg className="w-5 h-5 text-[#a0723a] mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-poppins text-[#0a0806] text-sm leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <div className="text-center">
+              <p className="font-poppins text-[#6a5a48] text-sm tracking-wide uppercase mb-6">
+                Fixed scope. Fixed timeline. Transparent pricing.
+              </p>
+              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+                Start the Conversation
+              </Link>
+            </div>
+          </ScrollReveal>
+
+        </div>
+      </section>
+
       {/* The Problem */}
       <section className="bg-[#f2ede4] py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
