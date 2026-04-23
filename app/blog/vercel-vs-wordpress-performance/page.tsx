@@ -23,6 +23,12 @@ const articleSchema = {
   datePublished: '2026-02-22T00:00:00+00:00',
   dateModified: '2026-02-22T00:00:00+00:00',
   wordCount: 900,
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: 'Next.js vs WordPress, Next.js performance, Core Web Vitals comparison, Lighthouse scores, TTFB, local business website performance, AI crawler accessibility',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },

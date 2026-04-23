@@ -35,6 +35,12 @@ const blogPostingSchema = {
     '@id': 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
   },
   url: 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: [
     'False Legacy Layer',
     'AI visibility',

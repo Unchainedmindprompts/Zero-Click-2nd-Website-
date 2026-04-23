@@ -35,7 +35,12 @@ const blogPostingSchema = {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
   },
-  image: 'https://kodecite.ai/images/blog/ai-overviews-local-businesses.jpg',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: [
     'Google AI Overviews',
     'local SEO',

@@ -35,6 +35,12 @@ const blogPostingSchema = {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
   },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: [
     'AI automation',
     'AEO',

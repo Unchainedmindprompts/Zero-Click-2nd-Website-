@@ -23,6 +23,12 @@ const articleSchema = {
   datePublished: '2026-03-03T00:00:00+00:00',
   dateModified: '2026-03-03T00:00:00+00:00',
   wordCount: 1100,
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: 'AI token budget, AI agent crawling, token-efficient website, WordPress AI visibility, Next.js AI search, AEO, answer engine optimization, AI recommendations, website performance AI',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },

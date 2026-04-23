@@ -36,6 +36,12 @@ const blogPostingSchema = {
     '@id': 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
   },
   url: 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: [
     'AI visibility',
     'answer engine optimization',

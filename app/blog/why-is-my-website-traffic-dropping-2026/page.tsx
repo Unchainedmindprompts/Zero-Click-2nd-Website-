@@ -35,7 +35,12 @@ const blogPostingSchema = {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
   },
-  image: 'https://kodecite.ai/images/blog/website-traffic-dropping-2026.jpg',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: [
     'website traffic dropping',
     'Google AI Overviews',

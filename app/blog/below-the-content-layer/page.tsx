@@ -29,6 +29,12 @@ const blogPostingSchema = {
   dateModified: '2026-04-22T00:00:00+00:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/below-the-content-layer' },
   url: 'https://www.kodecite.ai/blog/below-the-content-layer',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: ['entity graph', 'content layer', 'SEO', 'AEO', 'GEO', 'schema markup', 'AI search visibility', 'answer engine optimization', 'generative engine optimization'],
   articleSection: 'AEO & AI Search',
   wordCount: 2400,

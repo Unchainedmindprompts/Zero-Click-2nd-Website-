@@ -26,6 +26,12 @@ const articleSchema = {
   datePublished: '2026-02-27T00:00:00+00:00',
   dateModified: '2026-02-27T00:00:00+00:00',
   wordCount: 900,
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: 'Facebook custom audiences, video view audience, website retargeting, lookalike audiences, Meta pixel, local business Facebook ads, audience segmentation',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },

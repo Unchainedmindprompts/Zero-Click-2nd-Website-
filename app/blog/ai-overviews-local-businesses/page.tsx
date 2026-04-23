@@ -26,6 +26,12 @@ const articleSchema = {
   datePublished: '2026-02-18T00:00:00+00:00',
   dateModified: '2026-02-18T00:00:00+00:00',
   wordCount: 950,
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: 'Google AI Overviews, AI search citations, answer engine optimization, AEO, local business AI visibility, featured in AI Overview, entity recognition, Core Web Vitals',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },

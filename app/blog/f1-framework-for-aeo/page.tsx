@@ -29,6 +29,12 @@ const blogPostingSchema = {
   dateModified: '2026-04-23T00:00:00+00:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/f1-framework-for-aeo' },
   url: 'https://www.kodecite.ai/blog/f1-framework-for-aeo',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: [
     'AEO', 'answer engine optimization', 'AI search visibility', 'entity graph',
     'schema markup', 'GEO', 'generative engine optimization', 'AI search stack',

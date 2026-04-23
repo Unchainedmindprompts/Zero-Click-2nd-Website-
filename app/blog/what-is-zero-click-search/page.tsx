@@ -23,6 +23,12 @@ const articleSchema = {
   datePublished: '2026-01-15T00:00:00+00:00',
   dateModified: '2026-02-27T00:00:00+00:00',
   wordCount: 850,
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: 'zero click search, answer engine optimization, AEO, Google AI Overviews, ChatGPT search, Perplexity AI, local business SEO, schema markup',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },

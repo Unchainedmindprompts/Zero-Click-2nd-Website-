@@ -28,6 +28,12 @@ const blogPostingSchema = {
   dateModified: '2026-03-23T00:00:00+00:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers' },
   url: 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: ['cold load', 'AI crawlers', 'PageSpeed', 'cached pages', 'AI visibility', 'GPTBot', 'answer engine optimization', 'local business AI search', 'Core Web Vitals AI'],
   articleSection: 'AI Search Strategy',
   wordCount: 1100,

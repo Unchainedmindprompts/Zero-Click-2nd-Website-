@@ -39,6 +39,12 @@ const blogPostingSchema = {
     '@id': 'https://www.kodecite.ai/blog/the-shortlist-problem',
   },
   url: 'https://www.kodecite.ai/blog/the-shortlist-problem',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: [
     'AI recommendation shortlist',
     'wearable AI discovery',

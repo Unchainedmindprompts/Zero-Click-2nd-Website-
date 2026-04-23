@@ -23,6 +23,12 @@ const articleSchema = {
   datePublished: '2026-02-08T00:00:00+00:00',
   dateModified: '2026-02-08T00:00:00+00:00',
   wordCount: 1100,
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: 'schema markup, JSON-LD, LocalBusiness schema, FAQPage schema, Service schema, BreadcrumbList, structured data, AI search, local SEO',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },

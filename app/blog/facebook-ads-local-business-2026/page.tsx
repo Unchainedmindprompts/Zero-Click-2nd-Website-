@@ -23,6 +23,12 @@ const articleSchema = {
   datePublished: '2026-02-12T00:00:00+00:00',
   dateModified: '2026-02-12T00:00:00+00:00',
   wordCount: 950,
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: 'Facebook ads local business, Meta ads, custom audiences, retargeting, lookalike audiences, local service marketing, flywheel method, pixel data',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },

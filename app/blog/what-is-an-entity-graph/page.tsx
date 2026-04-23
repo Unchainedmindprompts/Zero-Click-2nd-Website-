@@ -29,6 +29,12 @@ const blogPostingSchema = {
   dateModified: '2026-04-17T00:00:00+00:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/what-is-an-entity-graph' },
   url: 'https://www.kodecite.ai/blog/what-is-an-entity-graph',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: ['entity graph', 'schema markup', 'schema.org', 'JSON-LD', 'AI search visibility', 'structured data', 'AEO', 'answer engine optimization', 'AI search optimization'],
   articleSection: 'AEO & AI Search',
   wordCount: 2100,
