@@ -154,6 +154,90 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Who This Is For */}
+      <section className="bg-[#f8f5f0] py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <p className="eyebrow mb-4">WHO IT&apos;S FOR</p>
+              <h2 className="font-poppins font-bold text-[#0a0806] mb-5" style={{ fontSize: 'clamp(26px, 3.5vw, 44px)' }}>
+                Built for Owner-Operators Who Can&apos;t Afford to Be Invisible
+              </h2>
+              <p className="font-poppins text-[#6a5a48] text-lg max-w-2xl mx-auto leading-relaxed">
+                If your business depends on local trust and high-value client relationships, AI search is already shaping who gets found — and who doesn&apos;t.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l9-3 9 3v6c0 5.25-4 9-9 10.5C7 21 3 17.25 3 12V6z" />
+                  </svg>
+                ),
+                title: 'Law Firms',
+                desc: 'Estate planning, business law, family practice. Clients search before they call. AI either names you or skips you.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 12l3-3 3 3 4-4M5 20h14M5 4h14" />
+                  </svg>
+                ),
+                title: 'Financial Advisors',
+                desc: 'Fiduciary, planning, wealth management. Trust decisions start online. Your digital identity has to earn it.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v1m0 14v1M5.636 6.636l.707.707m11.314 9.9l.707.707M4 12h1m14 0h1M6.343 17.657l-.707.707M18.364 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                  </svg>
+                ),
+                title: 'Medical Practices & Med Spas',
+                desc: 'Private practice, aesthetics, specialty care. Patients research before they book. Visibility is the entire funnel.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l9-9 9 9M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9" />
+                  </svg>
+                ),
+                title: 'Home Services',
+                desc: 'High-ticket residential work. Window treatments, audio/video, specialty trades. Buyers shortlist in AI before they call.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM5 20a7 7 0 0114 0H5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 11h.01M12 11h.01" />
+                    <circle cx="8" cy="14" r="1" fill="currentColor" stroke="none" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l3-3 2 2 4-4 2 2 3-3" />
+                  </svg>
+                ),
+                title: 'Real Estate Teams',
+                desc: 'Buyer agents, listing specialists, relocation pros. AI search is replacing Google as the first stop for buyers.',
+              },
+            ].map(({ icon, title, desc }, i) => (
+              <ScrollReveal key={title} delay={i * 80}>
+                <div className="bg-white rounded-xl border border-[rgba(100,70,30,0.12)] p-7 h-full flex flex-col gap-4 hover:border-[rgba(160,114,58,0.4)] hover:-translate-y-0.5 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-lg bg-[rgba(160,114,58,0.1)] flex items-center justify-center text-[#a0723a]">
+                    {icon}
+                  </div>
+                  <div>
+                    <p className="font-poppins font-bold text-[#0a0806] text-lg mb-2">{title}</p>
+                    <p className="font-poppins text-[#6a5a48] text-sm leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       {/* The Problem */}
       <section className="bg-[#f2ede4] py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
