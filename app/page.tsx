@@ -288,6 +288,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* What's Different */}
+      <section className="bg-white py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <p className="eyebrow mb-4">WHAT&apos;S DIFFERENT</p>
+              <h2 className="font-poppins font-bold text-[#0a0806]" style={{ fontSize: 'clamp(26px, 3.5vw, 44px)' }}>
+                Not Another Agency Retainer
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'You Own Everything',
+                desc: 'The GitHub repo. The Vercel account. The domain. No monthly platform rent. No lock-in. We build it, you keep it.',
+              },
+              {
+                title: 'One-Time Build, Not a Retainer',
+                desc: "Fixed scope. Fixed timeline. Clear deliverables. We're not selling you a subscription to hope.",
+              },
+              {
+                title: 'Built on Modern Infrastructure',
+                desc: 'Next.js on Vercel. Server-rendered. Edge-deployed. Engineered for AI readability from the ground up — not bolted onto a legacy platform.',
+              },
+              {
+                title: 'Schema Done Correctly',
+                desc: 'Custom JSON-LD per page, entity graphs wired to reality, llms.txt and agent.json deployed at launch. Not plugin-generated. Not copy-pasted. Built as code.',
+              },
+              {
+                title: 'Sub-1 Second Load Times',
+                desc: "Speed is a trust signal, not a UX metric. We verify performance on real devices before we go live.",
+              },
+              {
+                title: 'Content and Marketing That Actually Compounds',
+                desc: 'Once your foundation is built, every dollar you spend on content, ads, or mentions starts working harder — because the infrastructure underneath is finally holding them up.',
+              },
+            ].map(({ title, desc }, i) => (
+              <ScrollReveal key={title} delay={i * 80}>
+                <div className="flex flex-col gap-3 p-6 rounded-xl border border-[rgba(100,70,30,0.12)] bg-[#f8f5f0] h-full hover:border-[rgba(160,114,58,0.35)] transition-colors duration-300">
+                  <div className="w-8 h-8 rounded-md bg-[rgba(160,114,58,0.12)] flex items-center justify-center">
+                    <span className="font-poppins font-bold text-[#a0723a] text-sm">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  <p className="font-poppins font-bold text-[#0a0806] text-base leading-snug">{title}</p>
+                  <p className="font-poppins text-[#6a5a48] text-sm leading-relaxed">{desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       {/* The Problem */}
       <section className="bg-[#f2ede4] py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
