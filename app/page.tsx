@@ -112,6 +112,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why It Works */}
+      <section className="bg-[#1c1814] py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <p className="eyebrow mb-4">THE FRAMEWORK</p>
+              <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+                Build in the Right Order
+              </h2>
+              <p className="font-poppins text-[rgba(240,232,216,0.55)] text-lg max-w-2xl mx-auto leading-relaxed">
+                An F1 team doesn&apos;t start with the sponsor logos. They start with the chassis — because the chassis determines everything above it. The AI discovery stack works the same way.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* 4 Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+            {[
+              { num: '01', label: 'CHASSIS', title: 'Foundation', desc: 'The platform itself. Server-rendered. Machine-readable. Built for speed and structural clarity from the ground up.' },
+              { num: '02', label: 'ENGINE',  title: 'Entity',     desc: 'Your identity graph. Schema wired to reality. Every connection, credential, and signal telling AI exactly who you are.' },
+              { num: '03', label: 'AERO',    title: 'Content',    desc: 'Answer-first structure. Built to be extracted, synthesized, and cited by LLMs — not just read by humans.' },
+              { num: '04', label: 'GRAPHICS',title: 'Mentions',   desc: 'Reviews, citations, press, social. The layer that works only after the three underneath are built correctly.' },
+            ].map(({ num, label, title, desc }, i) => (
+              <ScrollReveal key={num} delay={i * 100}>
+                <div className="relative flex flex-col px-8 py-10 border-t border-[rgba(240,232,216,0.1)] lg:border-t-0 lg:border-l first:border-l-0 border-[rgba(240,232,216,0.1)] h-full">
+                  {/* Connector arrow — desktop only, not on last column */}
+                  {i < 3 && (
+                    <span className="hidden lg:block absolute -right-3 top-10 z-10 text-[#a0723a] text-xl select-none">›</span>
+                  )}
+                  <p className="font-poppins font-bold text-[#a0723a] text-4xl mb-3 leading-none">{num}</p>
+                  <p className="font-poppins text-[rgba(240,232,216,0.4)] text-xs tracking-widest uppercase mb-2">{label}</p>
+                  <p className="font-poppins font-bold text-[rgba(240,232,216,0.95)] text-2xl mb-4">{title}</p>
+                  <p className="font-poppins text-[rgba(240,232,216,0.55)] text-sm leading-relaxed">{desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       {/* The Problem */}
       <section className="bg-[#f2ede4] py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
