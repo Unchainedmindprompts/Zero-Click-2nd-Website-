@@ -16,12 +16,6 @@ export default function Footer() {
       ],
     },
     {
-      title: 'Our Work',
-      links: [
-        { href: '/our-work', label: 'Our Work' },
-      ],
-    },
-    {
       title: 'Blog',
       links: [
         { href: '/blog', label: 'All Articles' },

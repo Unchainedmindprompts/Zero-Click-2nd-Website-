@@ -6,7 +6,7 @@ import CounterAnimation from '@/components/CounterAnimation';
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
+      {/* 1. Hero */}
       <section className="bg-[#f8f5f0] pt-32 pb-20 px-4 overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -61,60 +61,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Foundation Build */}
-      <section className="bg-white py-24 px-4">
-        <div className="max-w-5xl mx-auto">
-
+      {/* 2. The Battle for AI Visibility */}
+      <section className="bg-[#1c1814] py-28 px-4">
+        <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <p className="eyebrow mb-4">WHAT WE BUILD</p>
-              <h2 className="font-poppins font-bold text-[#0a0806] mb-4" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
-                The Foundation Build
-              </h2>
-              <p className="font-poppins text-[#6a5a48] text-lg max-w-2xl mx-auto leading-relaxed">
-                One-time build. Fixed scope. Fixed timeline. You own everything we deliver — forever.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-              {[
-                'Custom Next.js website engineered for AI readability',
-                'Full entity graph: business, founder, services, credentials, location',
-                'Custom JSON-LD schema per page — no copy-paste, no conflicts',
-                'llms.txt and agent.json deployed on every build',
-                'Sub-1 second load time on modern devices',
-                'Directory launch: Google Business, Bing Places, Apple Business, Yelp, BBB',
-                'You own the GitHub repo and the Vercel account — no platform lock-in',
-                'Built in 6–8 weeks with full transparency',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 bg-[#f8f5f0] rounded-lg px-5 py-4">
-                  <svg className="w-5 h-5 text-[#a0723a] mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="font-poppins text-[#0a0806] text-sm leading-relaxed">{item}</span>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={200}>
-            <div className="text-center">
-              <p className="font-poppins text-[#6a5a48] text-sm tracking-wide uppercase mb-6">
-                Fixed scope. Fixed timeline. Transparent pricing.
-              </p>
-              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+            <p className="eyebrow mb-5">THE REAL WAR</p>
+            <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-6" style={{ fontSize: 'clamp(28px, 4vw, 52px)' }}>
+              The Battle for AI Visibility Is Being Fought in the{' '}
+              <span className="text-[#a0723a]">Wrong Place.</span>
+            </h2>
+            <p className="font-poppins text-[rgba(240,232,216,0.6)] text-lg leading-relaxed mb-10">
+              Everyone is arguing about content, reviews, Reddit, and mentions. None of that matters if the machine can&apos;t identify your business in the first place. That&apos;s where the real war is — and almost no one is fighting it yet.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
                 Start the Conversation
+              </Link>
+              <Link href="/contact" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
+                Get My Free Scaffolding Audit
               </Link>
             </div>
           </ScrollReveal>
-
         </div>
       </section>
 
-      {/* Why It Works */}
-      <section className="bg-[#1c1814] py-24 px-4">
+      {/* 3. F1 Framework */}
+      <section className="bg-[#1c1814] py-24 px-4 border-t border-[rgba(240,232,216,0.07)]">
         <div className="max-w-6xl mx-auto">
 
           <ScrollReveal>
@@ -129,7 +101,6 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          {/* 4 Columns */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
             {[
               { num: '01', label: 'CHASSIS', title: 'Foundation', desc: 'The platform itself. Server-rendered. Machine-readable. Built for speed and structural clarity from the ground up.' },
@@ -139,7 +110,6 @@ export default function HomePage() {
             ].map(({ num, label, title, desc }, i) => (
               <ScrollReveal key={num} delay={i * 100}>
                 <div className="relative flex flex-col px-8 py-10 border-t border-[rgba(240,232,216,0.1)] lg:border-t-0 lg:border-l first:border-l-0 border-[rgba(240,232,216,0.1)] h-full">
-                  {/* Connector arrow — desktop only, not on last column */}
                   {i < 3 && (
                     <span className="hidden lg:block absolute -right-3 top-10 z-10 text-[#a0723a] text-xl select-none">›</span>
                   )}
@@ -155,7 +125,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Who This Is For */}
+      {/* 4. For Businesses That Can't Afford to Be Skipped */}
       <section className="bg-[#f8f5f0] py-24 px-4">
         <div className="max-w-6xl mx-auto">
 
@@ -163,7 +133,7 @@ export default function HomePage() {
             <div className="text-center mb-14">
               <p className="eyebrow mb-4">WHO IT&apos;S FOR</p>
               <h2 className="font-poppins font-bold text-[#0a0806] mb-5" style={{ fontSize: 'clamp(26px, 3.5vw, 44px)' }}>
-                Built for Owner-Operators Who Can&apos;t Afford to Be Invisible
+                For Businesses That Can&apos;t Afford to Be Skipped
               </h2>
               <p className="font-poppins text-[#6a5a48] text-lg max-w-2xl mx-auto leading-relaxed">
                 If your business depends on local trust and high-value client relationships, AI search is already shaping who gets found — and who doesn&apos;t.
@@ -239,56 +209,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Proof */}
-      <section className="bg-[#f2ede4] py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-
-          <ScrollReveal>
-            <div className="text-center mb-14">
-              <p className="eyebrow mb-4">PROOF</p>
-              <h2 className="font-poppins font-bold text-[#0a0806]" style={{ fontSize: 'clamp(26px, 3.5vw, 44px)' }}>
-                The Case Study We Built First
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-
-            {/* Left: Story */}
-            <ScrollReveal delay={100}>
-              <div className="flex flex-col justify-center h-full">
-                <p className="font-poppins text-xs font-semibold tracking-widest uppercase text-[#a0723a] mb-4">
-                  Luxe Window Works · Post Falls, Idaho
-                </p>
-                <h3 className="font-poppins font-bold text-[#0a0806] text-3xl leading-snug mb-5">
-                  From Invisible to Cited in 90 Days
-                </h3>
-                <p className="font-poppins text-[#6a5a48] text-base leading-relaxed mb-8">
-                  We built Luxe Window Works on Next.js with a complete entity graph, custom schema, llms.txt, and agent.json deployed at launch. Within 90 days, Luxe was being surfaced in ChatGPT, Perplexity, Google AI Overviews, Copilot, Bing, and DuckDuckGo for North Idaho window treatment queries — outranking nationally-franchised competitors with larger domains and older sites.
-                </p>
-                <div>
-                  <Link href="/our-work/luxe-window-works" className="btn-gold-outline text-sm font-bold px-6 py-3 rounded-md inline-block">
-                    See the Full Case Study
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Right: Stats */}
-            <ScrollReveal delay={200}>
-              <div className="bg-[#1c1814] rounded-2xl px-8 py-12 flex flex-col justify-center gap-10">
-                <CounterAnimation end={6}  label="AI Engines Citing Luxe" />
-                <CounterAnimation end={90} label="Days to First Citation" duration={2500} />
-                <CounterAnimation end={4}  label="Pages Cited Per Session — Bing / Copilot Analytics, 3 Months" suffix="x" />
-              </div>
-            </ScrollReveal>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* What's Different */}
+      {/* 5. What's Different */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto">
 
@@ -345,7 +266,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The Window */}
+      {/* 6. The Window */}
       <section className="bg-[#1c1814] py-24 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
@@ -363,12 +284,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Free Audit */}
+      {/* 7. Free Audit */}
       <section className="bg-[#f8f5f0] py-24 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-            {/* Left: Header + subhead */}
             <ScrollReveal>
               <div>
                 <p className="eyebrow mb-4">FREE AUDIT</p>
@@ -384,12 +304,11 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
 
-            {/* Right: Bullets */}
             <ScrollReveal delay={150}>
               <ul className="flex flex-col gap-5">
                 {[
                   'How your business currently appears in ChatGPT, Perplexity, and Google AI Overviews — in plain English',
-                  'A plain-English breakdown of your schema gaps and what AI can\'t verify about you right now',
+                  "A plain-English breakdown of your schema gaps and what AI can't verify about you right now",
                   'How your infrastructure benchmarks against your top competitors in your market',
                   'One specific action you can take today — whether you work with us or not',
                 ].map((item) => (
@@ -409,17 +328,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* 8. Foundation Build */}
+      <section className="bg-white py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <p className="eyebrow mb-4">WHAT WE BUILD</p>
+              <h2 className="font-poppins font-bold text-[#0a0806] mb-4" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+                The Foundation Build
+              </h2>
+              <p className="font-poppins text-[#6a5a48] text-lg max-w-2xl mx-auto leading-relaxed">
+                One-time build. Fixed scope. Fixed timeline. You own everything we deliver — forever.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={100}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+              {[
+                'Custom Next.js website engineered for AI readability',
+                'Full entity graph: business, founder, services, credentials, location',
+                'Custom JSON-LD schema per page — no copy-paste, no conflicts',
+                'llms.txt and agent.json deployed on every build',
+                'Sub-1 second load time on modern devices',
+                'Directory launch: Google Business, Bing Places, Apple Business, Yelp, BBB',
+                'You own the GitHub repo and the Vercel account — no platform lock-in',
+                'Built in 6–8 weeks with full transparency',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 bg-[#f8f5f0] rounded-lg px-5 py-4">
+                  <svg className="w-5 h-5 text-[#a0723a] mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-poppins text-[#0a0806] text-sm leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <div className="text-center">
+              <p className="font-poppins text-[#6a5a48] text-sm tracking-wide uppercase mb-6">
+                Fixed scope. Fixed timeline. Transparent pricing.
+              </p>
+              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+                Start the Conversation
+              </Link>
+            </div>
+          </ScrollReveal>
+
+        </div>
+      </section>
+
+      {/* 9. Final CTA */}
       <section className="bg-[#1c1814] py-28 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="eyebrow mb-5">THE REAL WAR</p>
+            <p className="eyebrow mb-5">GET STARTED</p>
             <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-6" style={{ fontSize: 'clamp(28px, 4vw, 52px)' }}>
-              The Battle for AI Visibility Is Being Fought in the{' '}
-              <span className="text-[#a0723a]">Wrong Place.</span>
+              The window is open.<br />
+              <span className="text-[#a0723a]">Let&apos;s build your foundation.</span>
             </h2>
             <p className="font-poppins text-[rgba(240,232,216,0.6)] text-lg leading-relaxed mb-10">
-              Everyone is arguing about content, reviews, Reddit, and mentions. None of that matters if the machine can&apos;t identify your business in the first place. That&apos;s where the real war is — and almost no one is fighting it yet.
+              One conversation. No pressure. We&apos;ll show you exactly what AI can and can&apos;t verify about your business right now — and what it would take to fix it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">

@@ -32,7 +32,6 @@ export default function Navigation() {
     { href: '/why-now', label: 'Why Now' },
     { href: '/services', label: 'Services' },
     { href: '/pricing', label: 'Pricing' },
-    { href: '/our-work', label: 'Our Work' },
     { href: '/about', label: 'About' },
     { href: '/blog', label: 'Blog' },
   ];
