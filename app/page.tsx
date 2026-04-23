@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollReveal from '@/components/ScrollReveal';
-import CounterAnimation from '@/components/CounterAnimation';
 
 export default function HomePage() {
   return (
@@ -11,7 +10,6 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-            {/* Left: Text */}
             <div>
               <ScrollReveal>
                 <h1 className="font-poppins font-bold text-[#0a0806] leading-tight mb-6" style={{ fontSize: 'clamp(32px, 4vw, 56px)' }}>
@@ -34,7 +32,7 @@ export default function HomePage() {
               <ScrollReveal delay={300}>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
-                    Get My Free Scaffolding Audit
+                    Get My AI Visibility Check
                   </Link>
                   <Link href="/services" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
                     See What&apos;s Included
@@ -43,7 +41,6 @@ export default function HomePage() {
               </ScrollReveal>
             </div>
 
-            {/* Right: Image */}
             <ScrollReveal delay={150}>
               <div className="relative w-full flex items-center justify-center">
                 <Image
@@ -61,32 +58,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. The Battle for AI Visibility */}
-      <section className="bg-[#1c1814] py-28 px-4">
-        <div className="max-w-3xl mx-auto text-center">
+      {/* 2. The Website Problem */}
+      <section className="bg-[#f8f5f0] py-24 px-4 border-t border-[rgba(100,70,30,0.1)]">
+        <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <p className="eyebrow mb-5">THE REAL WAR</p>
-            <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-6" style={{ fontSize: 'clamp(28px, 4vw, 52px)' }}>
-              The Battle for AI Visibility Is Being Fought in the{' '}
-              <span className="text-[#a0723a]">Wrong Place.</span>
+            <p className="eyebrow mb-5">THE PROBLEM</p>
+            <h2 className="font-poppins font-bold text-[#0a0806] mb-8" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+              Your website was never built to compete in AI search.
             </h2>
-            <p className="font-poppins text-[rgba(240,232,216,0.6)] text-lg leading-relaxed mb-10">
-              Everyone is arguing about content, reviews, Reddit, and mentions. None of that matters if the machine can&apos;t identify your business in the first place. That&apos;s where the real war is — and almost no one is fighting it yet.
+            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-6">
+              For most businesses, the website is the single biggest marketing expense — and the single biggest visual asset — yet it has almost zero leverage for discovery. It&apos;s a digital business card. A brochure for visitors who already know you exist.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
-                Start the Conversation
-              </Link>
-              <Link href="/contact" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
-                Get My Free Scaffolding Audit
-              </Link>
-            </div>
+            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed">
+              The platforms powering most business websites — WordPress, Wix, Squarespace — were built long before AI. They were never engineered to give your business the clarity, structure, or machine-readability it needs to be recommended in the age of AI.
+            </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* 3. F1 Framework */}
-      <section className="bg-[#1c1814] py-24 px-4 border-t border-[rgba(240,232,216,0.07)]">
+      {/* 3. The Platform Truth */}
+      <section className="bg-[#f2ede4] py-24 px-4">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <p className="eyebrow mb-5">THE TRUTH</p>
+            <h2 className="font-poppins font-bold text-[#0a0806] mb-8" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+              The truth: you can&apos;t build this on a platform.
+            </h2>
+            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-6">
+              It&apos;s virtually impossible to create real clarity, structure, and positioning on WordPress, Wix, or Squarespace. They weren&apos;t engineered for how AI search evaluates businesses — and in AI discovery, clarity and entity are the two signals everything else is built on.
+            </p>
+            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-12">
+              For local and regional businesses, this is the window. The platforms most of your competitors are on are the reason they&apos;re invisible. The ones who rebuild first will be the ones AI engines recommend — regardless of industry, regardless of market size.
+            </p>
+            <p className="font-poppins font-bold text-[#a0723a]" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
+              Without clarity, you&apos;re just noise.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* 4. F1 Framework */}
+      <section className="bg-[#1c1814] py-24 px-4">
         <div className="max-w-6xl mx-auto">
 
           <ScrollReveal>
@@ -125,7 +137,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. For Businesses That Can't Afford to Be Skipped */}
+      {/* 5. For Businesses That Can't Afford to Be Skipped */}
       <section className="bg-[#f8f5f0] py-24 px-4">
         <div className="max-w-6xl mx-auto">
 
@@ -209,7 +221,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. What's Different */}
+      {/* 6. What's Different */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto">
 
@@ -266,7 +278,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. The Window */}
+      {/* 7. The Window */}
       <section className="bg-[#1c1814] py-24 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
@@ -284,22 +296,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Free Audit */}
+      {/* 8. AI Visibility Check */}
       <section className="bg-[#f8f5f0] py-24 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             <ScrollReveal>
               <div>
-                <p className="eyebrow mb-4">FREE AUDIT</p>
+                <p className="eyebrow mb-4">AI VISIBILITY CHECK</p>
                 <h2 className="font-poppins font-bold text-[#0a0806] mb-5" style={{ fontSize: 'clamp(26px, 3.5vw, 42px)' }}>
-                  Find Out If AI Can Actually Read You
+                  Find Out How Your Business Shows Up in AI
                 </h2>
                 <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-8">
                   Most businesses don&apos;t know what their entity graph looks like to a machine. We&apos;ll show you — in plain English, with no pressure and no pitch.
                 </p>
                 <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-                  Get My Free Scaffolding Audit
+                  Get My AI Visibility Check
                 </Link>
               </div>
             </ScrollReveal>
@@ -328,7 +340,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. Foundation Build */}
+      {/* 9. Foundation Build */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-5xl mx-auto">
 
@@ -380,7 +392,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. Final CTA */}
+      {/* 10. Final CTA */}
       <section className="bg-[#1c1814] py-28 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
@@ -397,7 +409,7 @@ export default function HomePage() {
                 Start the Conversation
               </Link>
               <Link href="/contact" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
-                Get My Free Scaffolding Audit
+                Get My AI Visibility Check
               </Link>
             </div>
           </ScrollReveal>
