@@ -10,7 +10,7 @@ const blogPosts = [
   {
     slug: 'f1-framework-for-aeo',
     category: 'AEO & AI Search',
-    title: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win an AI Race in an Economy Car',
+    title: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win the AI Race in an Economy Car',
     excerpt:
       "Most AEO advice focuses on the wrong layer. The businesses winning AI discovery built the stack in the right order — chassis, engine, aero, graphics. Here is what that means and how to sequence the work.",
     date: 'April 23, 2026',
