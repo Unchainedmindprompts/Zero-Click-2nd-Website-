@@ -363,6 +363,52 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Free Audit */}
+      <section className="bg-[#f8f5f0] py-24 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left: Header + subhead */}
+            <ScrollReveal>
+              <div>
+                <p className="eyebrow mb-4">FREE AUDIT</p>
+                <h2 className="font-poppins font-bold text-[#0a0806] mb-5" style={{ fontSize: 'clamp(26px, 3.5vw, 42px)' }}>
+                  Find Out If AI Can Actually Read You
+                </h2>
+                <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-8">
+                  Most businesses don&apos;t know what their entity graph looks like to a machine. We&apos;ll show you — in plain English, with no pressure and no pitch.
+                </p>
+                <Link href="/audit" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+                  Get My Free Scaffolding Audit
+                </Link>
+              </div>
+            </ScrollReveal>
+
+            {/* Right: Bullets */}
+            <ScrollReveal delay={150}>
+              <ul className="flex flex-col gap-5">
+                {[
+                  'How your business currently appears in ChatGPT, Perplexity, and Google AI Overviews — in plain English',
+                  'A plain-English breakdown of your schema gaps and what AI can\'t verify about you right now',
+                  'How your infrastructure benchmarks against your top competitors in your market',
+                  'One specific action you can take today — whether you work with us or not',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-4">
+                    <div className="mt-0.5 w-6 h-6 rounded-full bg-[rgba(160,114,58,0.15)] flex items-center justify-center shrink-0">
+                      <svg className="w-3.5 h-3.5 text-[#a0723a]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="font-poppins text-[#0a0806] text-base leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </ScrollReveal>
+
+          </div>
+        </div>
+      </section>
+
       {/* The Problem */}
       <section className="bg-[#f2ede4] py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
