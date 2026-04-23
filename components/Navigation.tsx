@@ -91,7 +91,7 @@ export default function Navigation() {
                 className="font-poppins font-semibold text-sm text-white px-5 py-2.5 rounded-md whitespace-nowrap transition-colors duration-200 hover:opacity-90"
                 style={{ backgroundColor: '#1a56db' }}
               >
-                Free Scaffolding Audit
+                AI Visibility Check
               </Link>
             </div>
 
@@ -152,7 +152,7 @@ export default function Navigation() {
             className="font-poppins font-semibold text-base text-white px-8 py-3.5 rounded-md mt-4 text-center"
             style={{ backgroundColor: '#1a56db' }}
           >
-            Free Scaffolding Audit
+            AI Visibility Check
           </Link>
         </div>
       </div>
