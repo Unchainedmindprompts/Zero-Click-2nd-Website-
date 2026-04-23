@@ -59,6 +59,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* The Problem */}
+      <section className="bg-[#f2ede4] py-20 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="eyebrow mb-6">THE PROBLEM</p>
+            <p className="font-poppins text-[#0a0806] text-xl leading-relaxed">
+              You&apos;ve been sold SEO. You&apos;ve been sold content. You&apos;ve been sold reviews, Reddit tactics, mentions, and retainer after retainer. None of it is compounding the way it&apos;s supposed to. That&apos;s not because you picked the wrong agency. It&apos;s because the ground has shifted — and almost no one in the industry is telling you the truth about what&apos;s actually happening.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
     </>
   );
 }
