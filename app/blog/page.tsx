@@ -8,6 +8,15 @@ const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibilit
 
 const blogPosts = [
   {
+    slug: 'f1-framework-for-aeo',
+    category: 'AEO & AI Search',
+    title: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win an AI Race in an Economy Car',
+    excerpt:
+      "Most AEO advice focuses on the wrong layer. The businesses winning AI discovery built the stack in the right order — chassis, engine, aero, graphics. Here is what that means and how to sequence the work.",
+    date: 'April 23, 2026',
+    readTime: '12 min read',
+  },
+  {
     slug: 'below-the-content-layer',
     category: 'AEO & AI Search',
     title: 'Below The Content Layer — Where Your Real SEO, AEO & GEO Opportunity Lives',
