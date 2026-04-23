@@ -28,8 +28,8 @@ const blogPostingSchema = {
     "Your business is showing up in AI answers — but is it earned authority or borrowed time? Here's the truth about the False Legacy Layer and what it means for your market position.",
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-07',
-  dateModified: '2026-03-07',
+  datePublished: '2026-03-07T00:00:00+00:00',
+  dateModified: '2026-03-07T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',

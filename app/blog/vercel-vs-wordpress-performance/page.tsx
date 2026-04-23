@@ -20,8 +20,8 @@ const articleSchema = {
   headline: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
   description:
     'We ran the same site on both platforms. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
-  datePublished: '2026-02-22',
-  dateModified: '2026-02-22',
+  datePublished: '2026-02-22T00:00:00+00:00',
+  dateModified: '2026-02-22T00:00:00+00:00',
   wordCount: 900,
   keywords: 'Next.js vs WordPress, Next.js performance, Core Web Vitals comparison, Lighthouse scores, TTFB, local business website performance, AI crawler accessibility',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

@@ -23,8 +23,8 @@ const articleSchema = {
   headline: 'How to Get Your Local Business Featured in Google AI Overviews',
   description:
     'Google AI Overviews are replacing traditional search results for millions of queries. Here\'s the exact framework for getting local businesses cited as the source — not buried below it.',
-  datePublished: '2026-02-18',
-  dateModified: '2026-02-18',
+  datePublished: '2026-02-18T00:00:00+00:00',
+  dateModified: '2026-02-18T00:00:00+00:00',
   wordCount: 950,
   keywords: 'Google AI Overviews, AI search citations, answer engine optimization, AEO, local business AI visibility, featured in AI Overview, entity recognition, Core Web Vitals',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

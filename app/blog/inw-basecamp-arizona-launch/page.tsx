@@ -20,8 +20,8 @@ const articleSchema = {
   headline: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
   description:
     'From concept to live landing page, validated schema, and active Facebook campaigns in one day. The complete story of a new market launch done correctly from hour one.',
-  datePublished: '2026-02-26',
-  dateModified: '2026-02-26',
+  datePublished: '2026-02-26T00:00:00+00:00',
+  dateModified: '2026-02-26T00:00:00+00:00',
   wordCount: 900,
   keywords: 'local business launch, schema markup, new market SEO, Facebook ads launch, same-day indexing, INW Basecamp, LocalBusiness schema, landing page',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

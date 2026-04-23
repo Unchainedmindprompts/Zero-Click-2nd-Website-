@@ -27,8 +27,8 @@ const blogPostingSchema = {
   description:
     "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first.",
   url: 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
-  datePublished: '2026-03-10',
-  dateModified: '2026-03-10',
+  datePublished: '2026-03-10T00:00:00+00:00',
+  dateModified: '2026-03-10T00:00:00+00:00',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   mainEntityOfPage: {

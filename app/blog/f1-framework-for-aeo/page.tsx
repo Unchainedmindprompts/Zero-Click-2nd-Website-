@@ -25,8 +25,8 @@ const blogPostingSchema = {
     'Most AEO advice focuses on the wrong layer. The businesses winning AI discovery built the stack in the right order — chassis, engine, aero, graphics. Here is what that means and how to sequence the work.',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-04-23',
-  dateModified: '2026-04-23',
+  datePublished: '2026-04-23T00:00:00+00:00',
+  dateModified: '2026-04-23T00:00:00+00:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/f1-framework-for-aeo' },
   url: 'https://www.kodecite.ai/blog/f1-framework-for-aeo',
   keywords: [

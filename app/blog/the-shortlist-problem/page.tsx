@@ -32,8 +32,8 @@ const blogPostingSchema = {
     url: 'https://www.kodecite.ai/about',
   },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-17',
-  dateModified: '2026-03-17',
+  datePublished: '2026-03-17T00:00:00+00:00',
+  dateModified: '2026-03-17T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.kodecite.ai/blog/the-shortlist-problem',

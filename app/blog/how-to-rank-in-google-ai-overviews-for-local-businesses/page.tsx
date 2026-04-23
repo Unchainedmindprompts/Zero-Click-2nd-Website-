@@ -29,8 +29,8 @@ const blogPostingSchema = {
     url: 'https://kodecite.ai',
   },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-10',
-  dateModified: '2026-03-10',
+  datePublished: '2026-03-10T00:00:00+00:00',
+  dateModified: '2026-03-10T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',

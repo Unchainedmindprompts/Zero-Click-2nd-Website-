@@ -20,8 +20,8 @@ const blogPostingSchema = {
   headline: 'The AI Search Stack Nobody Is Building for Small Businesses — And Why That\'s About to Change',
   description:
     'Enterprise SEO is built for enterprises. Subscription platforms are built for volume. Neither one gets you recommended by AI. Here\'s the gap in the market — and what fills it.',
-  datePublished: '2026-03-13',
-  dateModified: '2026-03-13',
+  datePublished: '2026-03-13T00:00:00+00:00',
+  dateModified: '2026-03-13T00:00:00+00:00',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   mainEntityOfPage: {

@@ -29,8 +29,8 @@ const blogPostingSchema = {
     url: 'https://kodecite.ai',
   },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-11',
-  dateModified: '2026-03-11',
+  datePublished: '2026-03-11T00:00:00+00:00',
+  dateModified: '2026-03-11T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',

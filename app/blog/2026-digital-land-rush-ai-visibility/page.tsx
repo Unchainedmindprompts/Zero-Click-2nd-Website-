@@ -29,8 +29,8 @@ const blogPostingSchema = {
     'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-07',
-  dateModified: '2026-03-07',
+  datePublished: '2026-03-07T00:00:00+00:00',
+  dateModified: '2026-03-07T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',

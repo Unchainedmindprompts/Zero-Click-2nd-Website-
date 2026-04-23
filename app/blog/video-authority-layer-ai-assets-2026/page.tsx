@@ -24,8 +24,8 @@ const blogPostingSchema = {
   description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-23',
-  dateModified: '2026-03-23',
+  datePublished: '2026-03-23T00:00:00+00:00',
+  dateModified: '2026-03-23T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',

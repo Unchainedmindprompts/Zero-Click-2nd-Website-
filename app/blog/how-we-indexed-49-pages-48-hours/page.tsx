@@ -20,8 +20,8 @@ const articleSchema = {
   headline: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
   description:
     'The complete technical breakdown of the Luxe Window Works SEO overhaul — how a Post Falls, Idaho window treatments business went from 75 to 124 indexed pages in 48 hours with zero schema errors.',
-  datePublished: '2026-02-01',
-  dateModified: '2026-02-27',
+  datePublished: '2026-02-01T00:00:00+00:00',
+  dateModified: '2026-02-27T00:00:00+00:00',
   wordCount: 950,
   keywords: 'technical SEO, indexing, schema markup, Core Web Vitals, local business SEO, Google Search Console, crawl budget, Luxe Window Works, window treatments',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

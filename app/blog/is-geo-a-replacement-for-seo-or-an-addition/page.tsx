@@ -31,8 +31,8 @@ const blogPostingSchema = {
     url: 'https://kodecite.ai',
   },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-12',
-  dateModified: '2026-03-12',
+  datePublished: '2026-03-12T00:00:00+00:00',
+  dateModified: '2026-03-12T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',

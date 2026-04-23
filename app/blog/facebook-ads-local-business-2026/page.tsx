@@ -20,8 +20,8 @@ const articleSchema = {
   headline: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
   description:
     'Stop running ads that drain budget. Build a Facebook ad system that compounds — pixel data feeding audiences, retargeting warming leads, and lookalikes scaling what works.',
-  datePublished: '2026-02-12',
-  dateModified: '2026-02-12',
+  datePublished: '2026-02-12T00:00:00+00:00',
+  dateModified: '2026-02-12T00:00:00+00:00',
   wordCount: 950,
   keywords: 'Facebook ads local business, Meta ads, custom audiences, retargeting, lookalike audiences, local service marketing, flywheel method, pixel data',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

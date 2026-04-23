@@ -20,8 +20,8 @@ const articleSchema = {
   headline: 'Schema Markup: The Complete Guide for Local Service Businesses',
   description:
     'A step-by-step guide to implementing JSON-LD schema markup that makes your business visible to AI. Covers LocalBusiness, Service, FAQPage, and BreadcrumbList schemas with real implementation details.',
-  datePublished: '2026-02-08',
-  dateModified: '2026-02-08',
+  datePublished: '2026-02-08T00:00:00+00:00',
+  dateModified: '2026-02-08T00:00:00+00:00',
   wordCount: 1100,
   keywords: 'schema markup, JSON-LD, LocalBusiness schema, FAQPage schema, Service schema, BreadcrumbList, structured data, AI search, local SEO',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

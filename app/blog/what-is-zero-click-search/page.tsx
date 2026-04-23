@@ -20,8 +20,8 @@ const articleSchema = {
   headline: 'What Is Zero Click Search and Why Your Business Is Invisible',
   description:
     'AI Overviews, ChatGPT, and Perplexity are answering questions without sending traffic to websites. Learn what zero click search means for your business and the exact steps to stay visible.',
-  datePublished: '2026-01-15',
-  dateModified: '2026-02-27',
+  datePublished: '2026-01-15T00:00:00+00:00',
+  dateModified: '2026-02-27T00:00:00+00:00',
   wordCount: 850,
   keywords: 'zero click search, answer engine optimization, AEO, Google AI Overviews, ChatGPT search, Perplexity AI, local business SEO, schema markup',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

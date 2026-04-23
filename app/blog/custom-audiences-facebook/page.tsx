@@ -23,8 +23,8 @@ const articleSchema = {
   headline: 'The Three Custom Audiences Every Local Business Needs on Facebook',
   description:
     'Most businesses set up one broad audience and wonder why their ads don\'t convert. These three layered audiences — awareness, intent, and retargeting — are the foundation of every campaign we build.',
-  datePublished: '2026-02-27',
-  dateModified: '2026-02-27',
+  datePublished: '2026-02-27T00:00:00+00:00',
+  dateModified: '2026-02-27T00:00:00+00:00',
   wordCount: 900,
   keywords: 'Facebook custom audiences, video view audience, website retargeting, lookalike audiences, Meta pixel, local business Facebook ads, audience segmentation',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

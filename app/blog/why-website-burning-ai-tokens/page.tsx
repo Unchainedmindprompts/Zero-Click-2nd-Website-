@@ -20,8 +20,8 @@ const articleSchema = {
   headline: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
   description:
     'AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don\'t get recommended. Here\'s what token-efficient looks like.',
-  datePublished: '2026-03-03',
-  dateModified: '2026-03-03',
+  datePublished: '2026-03-03T00:00:00+00:00',
+  dateModified: '2026-03-03T00:00:00+00:00',
   wordCount: 1100,
   keywords: 'AI token budget, AI agent crawling, token-efficient website, WordPress AI visibility, Next.js AI search, AEO, answer engine optimization, AI recommendations, website performance AI',
   author: { '@id': 'https://www.kodecite.ai/#founder' },

@@ -28,8 +28,8 @@ const blogPostingSchema = {
     "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-08',
-  dateModified: '2026-03-08',
+  datePublished: '2026-03-08T00:00:00+00:00',
+  dateModified: '2026-03-08T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/aeo-geo-making-seo-better',

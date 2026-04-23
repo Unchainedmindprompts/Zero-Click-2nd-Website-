@@ -20,8 +20,8 @@ const articleSchema = {
   headline: 'Why WordPress Sites Are Losing the AI Search War',
   description:
     'Bloated plugins, slow Core Web Vitals, and poor technical structure are making WordPress sites invisible to AI search engines. Here\'s why custom Next.js wins — and what the numbers say.',
-  datePublished: '2026-01-22',
-  dateModified: '2026-02-27',
+  datePublished: '2026-01-22T00:00:00+00:00',
+  dateModified: '2026-02-27T00:00:00+00:00',
   wordCount: 900,
   keywords: 'WordPress AI search, Core Web Vitals, Next.js vs WordPress, plugin bloat, AI search visibility, schema markup, LCP benchmark',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
