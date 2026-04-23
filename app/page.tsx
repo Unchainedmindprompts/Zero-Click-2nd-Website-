@@ -33,7 +33,7 @@ export default function HomePage() {
 
               <ScrollReveal delay={300}>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/audit" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
+                  <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
                     Get My Free Scaffolding Audit
                   </Link>
                   <Link href="/services" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
@@ -267,7 +267,7 @@ export default function HomePage() {
                   We built Luxe Window Works on Next.js with a complete entity graph, custom schema, llms.txt, and agent.json deployed at launch. Within 90 days, Luxe was being surfaced in ChatGPT, Perplexity, Google AI Overviews, Copilot, Bing, and DuckDuckGo for North Idaho window treatment queries — outranking nationally-franchised competitors with larger domains and older sites.
                 </p>
                 <div>
-                  <Link href="/case-studies/luxe-window-works" className="btn-gold-outline text-sm font-bold px-6 py-3 rounded-md inline-block">
+                  <Link href="/our-work/luxe-window-works" className="btn-gold-outline text-sm font-bold px-6 py-3 rounded-md inline-block">
                     See the Full Case Study
                   </Link>
                 </div>
@@ -378,7 +378,7 @@ export default function HomePage() {
                 <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-8">
                   Most businesses don&apos;t know what their entity graph looks like to a machine. We&apos;ll show you — in plain English, with no pressure and no pitch.
                 </p>
-                <Link href="/audit" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+                <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
                   Get My Free Scaffolding Audit
                 </Link>
               </div>
@@ -409,18 +409,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The Problem */}
-      <section className="bg-[#f2ede4] py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <ScrollReveal>
-            <p className="eyebrow mb-6">THE PROBLEM</p>
-            <p className="font-poppins text-[#0a0806] text-xl leading-relaxed">
-              You&apos;ve been sold SEO. You&apos;ve been sold content. You&apos;ve been sold reviews, Reddit tactics, mentions, and retainer after retainer. None of it is compounding the way it&apos;s supposed to. That&apos;s not because you picked the wrong agency. It&apos;s because the ground has shifted — and almost no one in the industry is telling you the truth about what&apos;s actually happening.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="bg-[#1c1814] py-28 px-4">
         <div className="max-w-3xl mx-auto text-center">
@@ -437,7 +425,7 @@ export default function HomePage() {
               <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
                 Start the Conversation
               </Link>
-              <Link href="/audit" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
+              <Link href="/contact" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
                 Get My Free Scaffolding Audit
               </Link>
             </div>
