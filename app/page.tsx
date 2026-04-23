@@ -7,7 +7,7 @@ export default function HomePage() {
       {/* 1. Hero */}
       <section
         className="pt-36 pb-24 px-4 overflow-hidden"
-        style={{ background: 'linear-gradient(160deg, #f8f5f0 0%, #f0e4cc 100%)' }}
+        style={{ background: 'linear-gradient(155deg, #f8f5f0 0%, #f3e8d6 60%, #eedec4 100%)' }}
       >
         <div className="max-w-4xl mx-auto">
 
@@ -15,7 +15,7 @@ export default function HomePage() {
             {/* Copper accent line */}
             <div className="w-12 h-0.5 bg-[#a0723a] mb-8" />
             <h1 className="font-poppins font-bold text-[#0a0806] leading-tight mb-8" style={{ fontSize: 'clamp(38px, 6vw, 76px)' }}>
-              Stop competing with a broken foundation.
+              Stop competing with a <span style={{ color: '#a0723a' }}>broken</span> foundation.
             </h1>
           </ScrollReveal>
 
