@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -170,6 +171,20 @@ export default function FalseLegacyLayer() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Hero Image */}
+      <section className="bg-[#f8f5f0] px-4 pb-12">
+        <div className="max-w-4xl mx-auto">
+          <Image
+            src="/images/false-legacy-hero.png"
+            alt="The False Legacy Layer — AI visibility and earned authority"
+            width={1200}
+            height={630}
+            className="w-full rounded-xl shadow-sm"
+            priority
+          />
         </div>
       </section>
 

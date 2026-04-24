@@ -132,6 +132,7 @@ const blogPosts = [
       "Your business is showing up in AI answers — but is it earned authority or borrowed time? Here's the truth about the False Legacy Layer and what it means for your market position.",
     date: 'March 7, 2026',
     readTime: '9 min read',
+    image: '/images/false-legacy-hero.png',
   },
   {
     slug: '2026-digital-land-rush-ai-visibility',
