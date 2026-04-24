@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const categories = ['All', 'AI Strategy', 'AEO & AI Search', 'AEO & AI Visibility', 'AI Search Strategy', 'Search Strategy', 'Website Performance', 'Facebook Ads'];
@@ -15,6 +16,7 @@ const blogPosts = [
       "Most AEO advice focuses on the wrong layer. The businesses winning AI discovery built the stack in the right order — chassis, engine, aero, graphics. Here is what that means and how to sequence the work.",
     date: 'April 23, 2026',
     readTime: '12 min read',
+    image: '/images/f1-hero.png',
   },
   {
     slug: 'below-the-content-layer',
@@ -277,30 +279,43 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 50}>
-                <article className="bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)] hover:bg-[#f2ede4] hover:-translate-y-0.5 transition-all duration-300 group h-full flex flex-col p-7">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-poppins font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-full text-[#a0723a] bg-[rgba(160,114,58,0.1)] border border-[rgba(160,114,58,0.2)]">
-                      {post.category}
-                    </span>
-                    <span className="text-[#6a5a48] text-xs font-poppins">{post.readTime}</span>
-                  </div>
-                  <h2 className="font-poppins font-semibold text-lg text-[#0a0806] mb-3 leading-snug group-hover:text-[#1a56db] transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-[#6a5a48] text-sm leading-relaxed font-poppins mb-4 flex-1">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between pt-4 border-t border-[rgba(100,70,30,0.12)]">
-                    <span className="text-[#a0723a] text-xs font-poppins uppercase tracking-wide">{post.date}</span>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="text-[#1a56db] text-sm font-semibold font-poppins hover:underline transition-colors inline-flex items-center gap-1 group/link"
-                    >
-                      Read More
-                      <svg className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                <article className="bg-[#f8f5f0] rounded-lg border border-[rgba(100,70,30,0.15)] hover:bg-[#f2ede4] hover:-translate-y-0.5 transition-all duration-300 group h-full flex flex-col overflow-hidden">
+                  {'image' in post && post.image && (
+                    <Link href={`/blog/${post.slug}`} className="block overflow-hidden">
+                      <Image
+                        src={post.image as string}
+                        alt={post.title}
+                        width={800}
+                        height={420}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </Link>
+                  )}
+                  <div className="flex flex-col flex-1 p-7">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="font-poppins font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-full text-[#a0723a] bg-[rgba(160,114,58,0.1)] border border-[rgba(160,114,58,0.2)]">
+                        {post.category}
+                      </span>
+                      <span className="text-[#6a5a48] text-xs font-poppins">{post.readTime}</span>
+                    </div>
+                    <h2 className="font-poppins font-semibold text-lg text-[#0a0806] mb-3 leading-snug group-hover:text-[#1a56db] transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-[#6a5a48] text-sm leading-relaxed font-poppins mb-4 flex-1">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between pt-4 border-t border-[rgba(100,70,30,0.12)]">
+                      <span className="text-[#a0723a] text-xs font-poppins uppercase tracking-wide">{post.date}</span>
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="text-[#1a56db] text-sm font-semibold font-poppins hover:underline transition-colors inline-flex items-center gap-1 group/link"
+                      >
+                        Read More
+                        <svg className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </article>
               </ScrollReveal>
