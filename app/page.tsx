@@ -19,14 +19,14 @@ export default function HomePage() {
                 className="font-inter font-semibold mb-7"
                 style={{
                   fontSize: 'clamp(48px, 6.5vw, 84px)',
-                  lineHeight: 1.02,
+                  lineHeight: 1.08,
                   letterSpacing: '-0.035em',
                   color: 'var(--d-fg)',
                 }}
               >
-                Your business<br />
-                needs to be<br />
-                <em className="serif">found by AI.</em>
+                Built once.<br />
+                Owned forever.<br />
+                <em className="serif">Found by AI.</em>
               </h1>
 
               <p
@@ -54,7 +54,10 @@ export default function HomePage() {
             </div>
 
             {/* Right: Entity Graph SVG */}
-            <div className="flex-shrink-0 w-full lg:w-auto" style={{ maxWidth: '480px' }}>
+            <div
+              className="flex-shrink-0 w-full lg:w-auto"
+              style={{ width: 'min(100%, 560px)' }}
+            >
               <EntityGraph />
             </div>
 
@@ -143,7 +146,7 @@ export default function HomePage() {
             {/* Left: EntityGraph */}
             <div
               className="flex-shrink-0 w-full lg:w-auto order-2 lg:order-1"
-              style={{ maxWidth: '420px' }}
+              style={{ width: 'min(100%, 520px)' }}
             >
               <EntityGraph />
             </div>
@@ -175,12 +178,22 @@ export default function HomePage() {
               </p>
 
               <p
-                className="font-inter mb-8"
+                className="font-inter mb-5"
                 style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
               >
                 An entity graph connects every piece of structured data about your business —
                 schema, directories, citations, credentials — into a single machine-readable identity
                 that AI systems can traverse, verify, and trust.
+              </p>
+
+              <p
+                className="font-inter mb-8"
+                style={{ fontSize: '15px', lineHeight: 1.7, color: 'var(--d-fg-mute)', fontWeight: 300 }}
+              >
+                This isn&apos;t just an AI play. The same structure that wins AI Overview citations
+                is what&apos;s been quietly winning Google rankings since 2012 — Google has been an
+                entity-based search engine for over a decade. Most marketers just stopped pretending
+                content was the leverage.
               </p>
 
               <div
@@ -343,6 +356,7 @@ export default function HomePage() {
                 <div className="flex flex-col gap-4">
                   {[
                     'Custom Next.js site — server-rendered, edge-deployed, AI-readable on cold load',
+                    'Built for AI Overviews. Wins traditional Google + Bing as a byproduct.',
                     'Full entity graph: business, founder, services, credentials, location, @id anchors',
                     'Custom JSON-LD per page — built as code, not plugin output',
                     'llms.txt + agent.json deployed on every build',

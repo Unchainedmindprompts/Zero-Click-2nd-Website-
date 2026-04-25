@@ -72,7 +72,7 @@ export default function AIVisibilityCheck() {
   return (
     <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)' }}>
       <div style={{ maxWidth: '720px', margin: '0 auto' }}>
-        <div className="d-eyebrow mb-6">THE TOOL</div>
+        <div className="d-eyebrow mb-6">MACHINE READ — SAMPLE</div>
 
         <h2
           className="font-inter font-semibold mb-4"
@@ -83,16 +83,16 @@ export default function AIVisibilityCheck() {
             color: 'var(--d-fg)',
           }}
         >
-          How visible are you<br />
-          to AI <em className="serif">right now?</em>
+          See where you<br />
+          <em className="serif">actually stand.</em>
         </h2>
 
         <p
           className="font-inter mb-10"
           style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
         >
-          Paste your website URL and get a simulated F1 Framework audit — grade by grade across
-          the four layers that determine whether AI recommends you.
+          Paste your URL. We&apos;ll show you a simulated grade card across the four F1 layers.
+          Want the real audit? Run a Machine Read.
         </p>
 
         {/* Input row */}
