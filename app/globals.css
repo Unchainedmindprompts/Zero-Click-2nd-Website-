@@ -522,9 +522,10 @@ em.serif {
 
 /* ─── v2 Card border ───────────────────────────────────── */
 .d-card {
-  background: var(--d-bg3);
+  background: var(--d-bg-3);
   border: 1px solid var(--d-line);
   border-radius: 14px;
+  padding: 24px 28px;
   transition: border-color 200ms ease, transform 200ms ease;
 }
 
@@ -559,6 +560,25 @@ em.serif {
   transition: transform 200ms ease;
 }
 
+/* ─── Entity graph SVG animations ──────────────────────── */
+@keyframes svgDrawEdge {
+  from { stroke-dashoffset: 100; }
+  to   { stroke-dashoffset: 0;   }
+}
+@keyframes svgPulseNode {
+  0%, 100% { opacity: 0.25; }
+  50%       { opacity: 0.9;  }
+}
+
+.svg-edge {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: svgDrawEdge 1.5s ease forwards;
+}
+.svg-node {
+  animation: svgPulseNode 3s ease-in-out infinite;
+}
+
 /* ─── prefers-reduced-motion ────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .d-btn:hover,
@@ -566,14 +586,11 @@ em.serif {
   .d-post-row:hover {
     transform: none !important;
   }
+  .d-post-row:hover { padding-left: 0 !important; }
+  .d-post-row:hover .d-post-arrow { transform: none !important; }
 
-  .d-post-row:hover {
-    padding-left: 0 !important;
-  }
-
-  .d-post-row:hover .d-post-arrow {
-    transform: none !important;
-  }
+  .svg-edge   { stroke-dashoffset: 0; animation: none; }
+  .svg-node   { animation: none; opacity: 0.6; }
 
   *,
   *::before,

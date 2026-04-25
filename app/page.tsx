@@ -1,406 +1,494 @@
 import Link from 'next/link';
-import ScrollReveal from '@/components/ScrollReveal';
+import EntityGraph from '@/components/home/EntityGraph';
+import F1Stack from '@/components/home/F1Stack';
+import AIVisibilityCheck from '@/components/home/AIVisibilityCheck';
 
 export default function HomePage() {
   return (
     <>
-      {/* 1. Hero */}
-      <section
-        className="pt-36 pb-24 px-4 overflow-hidden"
-        style={{ background: 'linear-gradient(155deg, #f8f5f0 0%, #f3e8d6 60%, #eedec4 100%)' }}
-      >
-        <div className="max-w-4xl mx-auto">
+      {/* ─── 1. Hero ─────────────────────────────────────────── */}
+      <section style={{ padding: '140px 32px 100px', backgroundColor: 'var(--d-bg)' }}>
+        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+          <div className="flex flex-col lg:flex-row items-center gap-16">
 
-          <ScrollReveal>
-            {/* Copper accent line */}
-            <div className="w-12 h-0.5 bg-[#a0723a] mb-8" />
-            <h1 className="font-poppins font-bold text-[#0a0806] leading-tight mb-8" style={{ fontSize: 'clamp(38px, 6vw, 76px)' }}>
-              Stop competing with a <span style={{ color: '#a0723a' }}>broken</span> foundation.
-            </h1>
-          </ScrollReveal>
+            {/* Left: text */}
+            <div className="flex-1 min-w-0">
+              <div className="d-eyebrow mb-6">AI VISIBILITY ENGINEERING</div>
 
-          <ScrollReveal delay={100}>
-            <p className="font-poppins text-[#6a5a48] text-xl leading-relaxed mb-5 max-w-3xl">
-              Your WordPress, Squarespace, or Wix site was built for an era that&apos;s ending. AI search doesn&apos;t reward content volume, review counts, or mention equity — it rewards businesses whose digital foundation is built for{' '}
-              <span style={{ color: '#1a56db' }} className="font-semibold">machine clarity</span>.
+              <h1
+                className="font-inter font-semibold mb-7"
+                style={{
+                  fontSize: 'clamp(48px, 6.5vw, 84px)',
+                  lineHeight: 1.02,
+                  letterSpacing: '-0.035em',
+                  color: 'var(--d-fg)',
+                }}
+              >
+                Your business<br />
+                needs to be<br />
+                <em className="serif">found by AI.</em>
+              </h1>
+
+              <p
+                className="font-inter mb-10"
+                style={{
+                  fontSize: '18px',
+                  lineHeight: 1.65,
+                  color: 'var(--d-fg-dim)',
+                  fontWeight: 300,
+                  maxWidth: '480px',
+                }}
+              >
+                We rebuild your digital foundation on Next.js — engineered for AI readability,
+                structured for machine clarity, and owned by you forever.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/contact" className="d-btn d-btn-primary">
+                  Get My Machine Read →
+                </Link>
+                <Link href="#framework" className="d-btn d-btn-ghost">
+                  See The Framework
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: Entity Graph SVG */}
+            <div className="flex-shrink-0 w-full lg:w-auto" style={{ maxWidth: '480px' }}>
+              <EntityGraph />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 2. Problem — stat band ───────────────────────────── */}
+      <section style={{ padding: '80px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+
+          {/* Three stats */}
+          <div className="flex flex-col md:flex-row gap-10 md:gap-0 mb-16">
+            {([
+              { stat: '73%',   label: 'of AI answers cite fewer than 3 sources' },
+              { stat: '< 2s',  label: 'is all the time AI takes to decide if you\'re credible' },
+              { stat: '0 / 10', label: 'most business sites score on a structured entity test' },
+            ] as const).map(({ stat, label }, i) => (
+              <div
+                key={stat}
+                className="flex-1"
+                style={{
+                  paddingLeft:  i > 0 ? '48px' : '0',
+                  borderLeft:   i > 0 ? '1px solid var(--d-line)' : 'none',
+                }}
+              >
+                <div
+                  className="font-inter font-semibold mb-2"
+                  style={{
+                    fontSize: 'clamp(40px, 5vw, 60px)',
+                    lineHeight: 1,
+                    letterSpacing: '-0.03em',
+                    color: 'var(--d-accent)',
+                  }}
+                >
+                  {stat}
+                </div>
+                <p
+                  className="font-inter"
+                  style={{ fontSize: '15px', color: 'var(--d-fg-dim)', lineHeight: 1.55 }}
+                >
+                  {label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Narrative */}
+          <div style={{ maxWidth: '720px' }}>
+            <div className="d-eyebrow mb-5">THE PROBLEM</div>
+            <h2
+              className="font-inter font-semibold mb-5"
+              style={{
+                fontSize: 'clamp(28px, 3.5vw, 42px)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.025em',
+                color: 'var(--d-fg)',
+              }}
+            >
+              WordPress, Wix, and Squarespace were never<br className="hidden md:block" />
+              built for AI search.
+            </h2>
+            <p
+              className="font-inter"
+              style={{ fontSize: '17px', lineHeight: 1.7, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              AI systems don&apos;t reward content volume or review count — they reward businesses
+              with machine-readable foundations: server-rendered infrastructure, structured entity
+              graphs, and answer-first content architecture. Your platform can&apos;t build that. We can.
             </p>
-          </ScrollReveal>
+          </div>
 
-          <ScrollReveal delay={200}>
-            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-10 max-w-3xl">
-              We rebuild the foundation on Next.js — engineered for clarity, speed, and AI readability. You own it. Forever. And every dollar you spend on content or marketing after that actually starts compounding.
+        </div>
+      </section>
+
+      {/* ─── 3. F1 Framework ─────────────────────────────────── */}
+      <div id="framework">
+        <F1Stack />
+      </div>
+
+      {/* ─── 4. Entity Differentiator ────────────────────────── */}
+      <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)' }}>
+        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+
+            {/* Left: EntityGraph */}
+            <div
+              className="flex-shrink-0 w-full lg:w-auto order-2 lg:order-1"
+              style={{ maxWidth: '420px' }}
+            >
+              <EntityGraph />
+            </div>
+
+            {/* Right: text */}
+            <div className="flex-1 order-1 lg:order-2 min-w-0">
+              <div className="d-eyebrow mb-6">THE DIFFERENCE</div>
+
+              <h2
+                className="font-inter font-semibold mb-5"
+                style={{
+                  fontSize: 'clamp(32px, 4vw, 52px)',
+                  lineHeight: 1.07,
+                  letterSpacing: '-0.025em',
+                  color: 'var(--d-fg)',
+                }}
+              >
+                Keywords are guesses.<br />
+                <em className="serif">Entity graphs</em> are facts.
+              </h2>
+
+              <p
+                className="font-inter mb-5"
+                style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+              >
+                Traditional SEO asks: what words will humans type? AI search asks: who is this
+                business, what do they do, where do they operate, and are they verified across
+                independent sources?
+              </p>
+
+              <p
+                className="font-inter mb-8"
+                style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+              >
+                An entity graph connects every piece of structured data about your business —
+                schema, directories, citations, credentials — into a single machine-readable identity
+                that AI systems can traverse, verify, and trust.
+              </p>
+
+              <div
+                style={{
+                  background: 'var(--d-bg-3)',
+                  border: '1px solid var(--d-line)',
+                  borderLeft: '3px solid var(--d-accent)',
+                  borderRadius: '12px',
+                  padding: '20px 24px',
+                }}
+              >
+                <p
+                  className="font-mono text-xs mb-2"
+                  style={{ color: 'var(--d-accent)', letterSpacing: '0.12em' }}
+                >
+                  ENTITY GRAPH vs KEYWORD TARGETING
+                </p>
+                <p
+                  className="font-inter text-sm"
+                  style={{ color: 'var(--d-fg-dim)', lineHeight: 1.65 }}
+                >
+                  Without an entity graph, AI cannot verify your business exists. With one,
+                  every AI system can confirm who you are, what you do, and why you&apos;re credible —
+                  before a single user asks.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 5. Who It's For ──────────────────────────────────── */}
+      <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)' }}>
+        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+          <div className="d-eyebrow mb-6">WHO IT&apos;S FOR</div>
+
+          <h2
+            className="font-inter font-semibold mb-4"
+            style={{
+              fontSize: 'clamp(32px, 4vw, 52px)',
+              lineHeight: 1.07,
+              letterSpacing: '-0.025em',
+              color: 'var(--d-fg)',
+              maxWidth: '560px',
+            }}
+          >
+            For businesses that can&apos;t afford<br />
+            to be <em className="serif">skipped.</em>
+          </h2>
+
+          <p
+            className="font-inter mb-12"
+            style={{
+              fontSize: '17px',
+              lineHeight: 1.65,
+              color: 'var(--d-fg-dim)',
+              fontWeight: 300,
+              maxWidth: '520px',
+            }}
+          >
+            If your clients research before they commit, AI search is already deciding
+            whether you get the call or your competitor does.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { label: 'Law Firms',                    note: 'Estate planning, business law, family practice' },
+              { label: 'Financial Advisors',            note: 'Fiduciary, planning, wealth management' },
+              { label: 'Medical Practices & Med Spas', note: 'Private practice, aesthetics, specialty care' },
+              { label: 'Home Services',                 note: 'High-ticket residential: audio/video, window treatments, specialty trades' },
+              { label: 'Real Estate Teams',             note: 'Buyer agents, listing specialists, relocation pros' },
+              { label: 'Consultants & Coaches',         note: 'Any professional whose credibility is the product' },
+            ].map((c) => (
+              <div key={c.label} className="d-card">
+                <p
+                  className="font-inter font-semibold mb-2"
+                  style={{ fontSize: '15px', color: 'var(--d-fg)', letterSpacing: '-0.01em' }}
+                >
+                  {c.label}
+                </p>
+                <p
+                  className="font-inter text-sm"
+                  style={{ color: 'var(--d-fg-mute)', lineHeight: 1.55 }}
+                >
+                  {c.note}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 6. Foundation Build ──────────────────────────────── */}
+      <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)' }}>
+        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+          <div className="flex flex-col lg:flex-row gap-16">
+
+            {/* Left: pitch */}
+            <div className="flex-1">
+              <div className="d-eyebrow mb-6">THE OFFER</div>
+
+              <h2
+                className="font-inter font-semibold mb-5"
+                style={{
+                  fontSize: 'clamp(32px, 4vw, 52px)',
+                  lineHeight: 1.07,
+                  letterSpacing: '-0.025em',
+                  color: 'var(--d-fg)',
+                }}
+              >
+                The Foundation Build.<br />
+                <em className="serif">Built once. Owned forever.</em>
+              </h2>
+
+              <p
+                className="font-inter mb-6"
+                style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+              >
+                One fixed-scope engagement. We build your complete AI-visible digital foundation —
+                infrastructure, entity graph, content architecture, and authority signals —
+                then hand you the keys. No retainer. No lock-in. No platform rent.
+              </p>
+
+              <p
+                className="font-inter mb-10"
+                style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-mute)' }}
+              >
+                Starting from{' '}
+                <span style={{ color: 'var(--d-fg)', fontWeight: 600 }}>$8,500</span>
+                {' '}— fixed price, 6–8 week delivery.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/contact" className="d-btn d-btn-primary">
+                  Get My Machine Read →
+                </Link>
+                <Link href="/services" className="d-btn d-btn-ghost">
+                  See Full Scope
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: checklist */}
+            <div className="flex-1">
+              <div
+                style={{
+                  background: 'var(--d-bg-2)',
+                  border: '1px solid var(--d-line)',
+                  borderRadius: '16px',
+                  padding: '36px 40px',
+                }}
+              >
+                <p
+                  className="font-mono text-xs mb-6"
+                  style={{ color: 'var(--d-fg-mute)', letterSpacing: '0.12em' }}
+                >
+                  WHAT&apos;S INCLUDED
+                </p>
+                <div className="flex flex-col gap-4">
+                  {[
+                    'Custom Next.js site — server-rendered, edge-deployed, AI-readable on cold load',
+                    'Full entity graph: business, founder, services, credentials, location, @id anchors',
+                    'Custom JSON-LD per page — built as code, not plugin output',
+                    'llms.txt + agent.json deployed on every build',
+                    'Sub-1s verified load time on real devices',
+                    'FAQPage schema + answer-first content architecture',
+                    'Directory launch: Google, Bing, Apple, Yelp, BBB',
+                    'You own the GitHub repo + Vercel account — no lock-in, ever',
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <span
+                        style={{
+                          color: 'var(--d-ok)',
+                          flexShrink: 0,
+                          marginTop: '2px',
+                          fontSize: '14px',
+                          lineHeight: 1,
+                        }}
+                      >
+                        ✓
+                      </span>
+                      <span
+                        className="font-inter text-sm"
+                        style={{ color: 'var(--d-fg-dim)', lineHeight: 1.6 }}
+                      >
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 7. AI Visibility Check ───────────────────────────── */}
+      <AIVisibilityCheck />
+
+      {/* ─── 8. Window Urgency ───────────────────────────────── */}
+      <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)' }}>
+        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+          <div className="d-eyebrow mb-6">THE WINDOW</div>
+
+          <h2
+            className="font-inter font-semibold mb-6"
+            style={{
+              fontSize: 'clamp(32px, 4.5vw, 56px)',
+              lineHeight: 1.05,
+              letterSpacing: '-0.025em',
+              color: 'var(--d-fg)',
+            }}
+          >
+            First movers in AI visibility<br />
+            <em className="serif">compound every month.</em>
+          </h2>
+
+          <p
+            className="font-inter mb-5"
+            style={{ fontSize: '17px', lineHeight: 1.7, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+          >
+            The businesses showing up in AI answers today aren&apos;t there because they outspent anyone.
+            They built machine-readable foundations before their competitors thought to.
+            That advantage compounds — every month an entity graph exists, it accumulates more
+            citation signals, more cross-platform verification, more AI crawler trust.
+          </p>
+
+          <p
+            className="font-inter mb-10"
+            style={{ fontSize: '17px', lineHeight: 1.7, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+          >
+            In 2–3 years this will be table stakes. The businesses that own the space in their
+            market today will be extraordinarily difficult to displace.
+          </p>
+
+          <div
+            style={{
+              background: 'rgba(93,213,255,0.06)',
+              border: '1px solid rgba(93,213,255,0.2)',
+              borderRadius: '12px',
+              padding: '20px 24px',
+            }}
+          >
+            <p
+              className="font-inter"
+              style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-dim)' }}
+            >
+              <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>
+                This is a 2–3 year window.
+              </strong>
+              {' '}It&apos;s open right now. Every month you wait, a competitor in your market
+              gets a head start that will be hard to close.
             </p>
-          </ScrollReveal>
+          </div>
+        </div>
+      </section>
 
-          <ScrollReveal delay={300}>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
-                Get My AI Visibility Check
+      {/* ─── 9. Final CTA ─────────────────────────────────────── */}
+      <section style={{ padding: '120px 32px', backgroundColor: 'var(--d-bg)' }}>
+        <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="d-eyebrow d-eyebrow-center mb-6">GET STARTED</div>
+
+          <h2
+            className="font-inter font-semibold mb-5"
+            style={{
+              fontSize: 'clamp(36px, 5vw, 60px)',
+              lineHeight: 1.05,
+              letterSpacing: '-0.03em',
+              color: 'var(--d-fg)',
+            }}
+          >
+            The window is open.<br />
+            <em className="serif">Let&apos;s build your foundation.</em>
+          </h2>
+
+          <p
+            className="font-inter mb-10"
+            style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+          >
+            One conversation. No pitch. We&apos;ll show you exactly what AI can and can&apos;t verify
+            about your business right now — and what it would take to fix it.
+          </p>
+
+          <div
+            style={{
+              background: 'rgba(93,213,255,0.04)',
+              border: '1px solid rgba(93,213,255,0.25)',
+              borderRadius: '20px',
+              padding: '44px 40px',
+            }}
+          >
+            <p
+              className="font-mono text-xs mb-6"
+              style={{ color: 'var(--d-fg-mute)', letterSpacing: '0.12em' }}
+            >
+              THE MACHINE READ — FREE, NO PITCH, JUST DATA
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link href="/contact" className="d-btn d-btn-primary">
+                Get My Machine Read →
               </Link>
-              <Link href="/services" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
+              <Link href="/services" className="d-btn d-btn-ghost">
                 See What&apos;s Included
               </Link>
             </div>
-          </ScrollReveal>
-
-        </div>
-      </section>
-
-      {/* 2. The Website Problem */}
-      <section className="bg-[#f8f5f0] py-24 px-4 border-t border-[rgba(100,70,30,0.1)]">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow mb-5">THE PROBLEM</p>
-            <h2 className="font-poppins font-bold text-[#0a0806] mb-8" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
-              Your website was never built to compete in AI search.
-            </h2>
-            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-6">
-              For most businesses, the website is the single biggest marketing expense — and the single biggest visual asset — yet it has almost zero leverage for discovery. It&apos;s a digital business card. A brochure for visitors who already know you exist.
-            </p>
-            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed">
-              The platforms powering most business websites — WordPress, Wix, Squarespace — were built long before AI. They were never engineered to give your business the clarity, structure, or machine-readability it needs to be recommended in the age of AI.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* 3. The Platform Truth */}
-      <section className="bg-[#f2ede4] py-24 px-4">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow mb-5">THE TRUTH</p>
-            <h2 className="font-poppins font-bold text-[#0a0806] mb-8" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
-              The truth: you can&apos;t build this on a platform.
-            </h2>
-            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-6">
-              It&apos;s virtually impossible to create real clarity, structure, and positioning on WordPress, Wix, or Squarespace. They weren&apos;t engineered for how AI search evaluates businesses — and in AI discovery, clarity and entity are the two signals everything else is built on.
-            </p>
-            <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-12">
-              For local and regional businesses, this is the window. The platforms most of your competitors are on are the reason they&apos;re invisible. The ones who rebuild first will be the ones AI engines recommend — regardless of industry, regardless of market size.
-            </p>
-            <p className="font-poppins font-bold text-[#a0723a]" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-              Without clarity, you&apos;re just noise.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* 4. F1 Framework */}
-      <section className="bg-[#1c1814] py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <p className="eyebrow mb-4">THE FRAMEWORK</p>
-              <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
-                Build in the Right Order
-              </h2>
-              <p className="font-poppins text-[rgba(240,232,216,0.55)] text-lg max-w-2xl mx-auto leading-relaxed">
-                An F1 team doesn&apos;t start with the sponsor logos. They start with the chassis — because the chassis determines everything above it. The AI discovery stack works the same way.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
-            {[
-              { num: '01', label: 'CHASSIS', title: 'Foundation', desc: 'The platform itself. Server-rendered. Machine-readable. Built for speed and structural clarity from the ground up.' },
-              { num: '02', label: 'ENGINE',  title: 'Entity',     desc: 'Your identity graph. Schema wired to reality. Every connection, credential, and signal telling AI exactly who you are.' },
-              { num: '03', label: 'AERO',    title: 'Content',    desc: 'Answer-first structure. Built to be extracted, synthesized, and cited by LLMs — not just read by humans.' },
-              { num: '04', label: 'GRAPHICS',title: 'Mentions',   desc: 'Reviews, citations, press, social. The layer that works only after the three underneath are built correctly.' },
-            ].map(({ num, label, title, desc }, i) => (
-              <ScrollReveal key={num} delay={i * 100}>
-                <div className="relative flex flex-col px-8 py-10 border-t border-[rgba(240,232,216,0.1)] lg:border-t-0 lg:border-l first:border-l-0 border-[rgba(240,232,216,0.1)] h-full">
-                  {i < 3 && (
-                    <span className="hidden lg:block absolute -right-3 top-10 z-10 text-[#a0723a] text-xl select-none">›</span>
-                  )}
-                  <p className="font-poppins font-bold text-[#a0723a] text-4xl mb-3 leading-none">{num}</p>
-                  <p className="font-poppins text-[rgba(240,232,216,0.4)] text-xs tracking-widest uppercase mb-2">{label}</p>
-                  <p className="font-poppins font-bold text-[rgba(240,232,216,0.95)] text-2xl mb-4">{title}</p>
-                  <p className="font-poppins text-[rgba(240,232,216,0.55)] text-sm leading-relaxed">{desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
           </div>
-
-        </div>
-      </section>
-
-      {/* 5. For Businesses That Can't Afford to Be Skipped */}
-      <section className="bg-[#f8f5f0] py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-
-          <ScrollReveal>
-            <div className="text-center mb-14">
-              <p className="eyebrow mb-4">WHO IT&apos;S FOR</p>
-              <h2 className="font-poppins font-bold text-[#0a0806] mb-5" style={{ fontSize: 'clamp(26px, 3.5vw, 44px)' }}>
-                For Businesses That Can&apos;t Afford to Be Skipped
-              </h2>
-              <p className="font-poppins text-[#6a5a48] text-lg max-w-2xl mx-auto leading-relaxed">
-                If your business depends on local trust and high-value client relationships, AI search is already shaping who gets found — and who doesn&apos;t.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 6l9-3 9 3v6c0 5.25-4 9-9 10.5C7 21 3 17.25 3 12V6z" />
-                  </svg>
-                ),
-                title: 'Law Firms',
-                desc: 'Estate planning, business law, family practice. Clients search before they call. AI either names you or skips you.',
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 12l3-3 3 3 4-4M5 20h14M5 4h14" />
-                  </svg>
-                ),
-                title: 'Financial Advisors',
-                desc: 'Fiduciary, planning, wealth management. Trust decisions start online. Your digital identity has to earn it.',
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v1m0 14v1M5.636 6.636l.707.707m11.314 9.9l.707.707M4 12h1m14 0h1M6.343 17.657l-.707.707M18.364 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
-                  </svg>
-                ),
-                title: 'Medical Practices & Med Spas',
-                desc: 'Private practice, aesthetics, specialty care. Patients research before they book. Visibility is the entire funnel.',
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l9-9 9 9M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9" />
-                  </svg>
-                ),
-                title: 'Home Services',
-                desc: 'High-ticket residential work. Window treatments, audio/video, specialty trades. Buyers shortlist in AI before they call.',
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM5 20a7 7 0 0114 0H5z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 11h.01M12 11h.01" />
-                    <circle cx="8" cy="14" r="1" fill="currentColor" stroke="none" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l3-3 2 2 4-4 2 2 3-3" />
-                  </svg>
-                ),
-                title: 'Real Estate Teams',
-                desc: 'Buyer agents, listing specialists, relocation pros. AI search is replacing Google as the first stop for buyers.',
-              },
-            ].map(({ icon, title, desc }, i) => (
-              <ScrollReveal key={title} delay={i * 80}>
-                <div className="bg-white rounded-xl border border-[rgba(100,70,30,0.12)] p-7 h-full flex flex-col gap-4 hover:border-[rgba(160,114,58,0.4)] hover:-translate-y-0.5 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-lg bg-[rgba(160,114,58,0.1)] flex items-center justify-center text-[#a0723a]">
-                    {icon}
-                  </div>
-                  <div>
-                    <p className="font-poppins font-bold text-[#0a0806] text-lg mb-2">{title}</p>
-                    <p className="font-poppins text-[#6a5a48] text-sm leading-relaxed">{desc}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 6. What's Different */}
-      <section className="bg-white py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-
-          <ScrollReveal>
-            <div className="text-center mb-14">
-              <p className="eyebrow mb-4">WHAT&apos;S DIFFERENT</p>
-              <h2 className="font-poppins font-bold text-[#0a0806]" style={{ fontSize: 'clamp(26px, 3.5vw, 44px)' }}>
-                Not Another Agency Retainer
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'You Own Everything',
-                desc: 'The GitHub repo. The Vercel account. The domain. No monthly platform rent. No lock-in. We build it, you keep it.',
-              },
-              {
-                title: 'One-Time Build, Not a Retainer',
-                desc: "Fixed scope. Fixed timeline. Clear deliverables. We're not selling you a subscription to hope.",
-              },
-              {
-                title: 'Built on Modern Infrastructure',
-                desc: 'Next.js on Vercel. Server-rendered. Edge-deployed. Engineered for AI readability from the ground up — not bolted onto a legacy platform.',
-              },
-              {
-                title: 'Schema Done Correctly',
-                desc: 'Custom JSON-LD per page, entity graphs wired to reality, llms.txt and agent.json deployed at launch. Not plugin-generated. Not copy-pasted. Built as code.',
-              },
-              {
-                title: 'Sub-1 Second Load Times',
-                desc: "Speed is a trust signal, not a UX metric. We verify performance on real devices before we go live.",
-              },
-              {
-                title: 'Content and Marketing That Actually Compounds',
-                desc: 'Once your foundation is built, every dollar you spend on content, ads, or mentions starts working harder — because the infrastructure underneath is finally holding them up.',
-              },
-            ].map(({ title, desc }, i) => (
-              <ScrollReveal key={title} delay={i * 80}>
-                <div className="flex flex-col gap-3 p-6 rounded-xl border border-[rgba(100,70,30,0.12)] bg-[#f8f5f0] h-full hover:border-[rgba(160,114,58,0.35)] transition-colors duration-300">
-                  <div className="w-8 h-8 rounded-md bg-[rgba(160,114,58,0.12)] flex items-center justify-center">
-                    <span className="font-poppins font-bold text-[#a0723a] text-sm">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                  </div>
-                  <p className="font-poppins font-bold text-[#0a0806] text-base leading-snug">{title}</p>
-                  <p className="font-poppins text-[#6a5a48] text-sm leading-relaxed">{desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 7. The Window */}
-      <section className="bg-[#1c1814] py-24 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">THE WINDOW</p>
-            <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-8" style={{ fontSize: 'clamp(26px, 3.5vw, 46px)' }}>
-              This Is a 2–3 Year Window. It&apos;s Open Right Now.
-            </h2>
-            <p className="font-poppins text-[rgba(240,232,216,0.65)] text-lg leading-relaxed mb-10">
-              The businesses showing up in AI answers today aren&apos;t there because they outspent anyone. They&apos;re there because they built machine-readable foundations before their competitors thought to. That advantage compounds — every month an entity graph exists, it accumulates more citation signals, more cross-platform verification, more AI crawler trust. In 2–3 years this will be table stakes. The businesses that own the space in their market today will be extraordinarily difficult to displace.
-            </p>
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Start the Conversation
-            </Link>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* 8. AI Visibility Check */}
-      <section className="bg-[#f8f5f0] py-24 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-            <ScrollReveal>
-              <div>
-                <p className="eyebrow mb-4">AI VISIBILITY CHECK</p>
-                <h2 className="font-poppins font-bold text-[#0a0806] mb-5" style={{ fontSize: 'clamp(26px, 3.5vw, 42px)' }}>
-                  Find Out How Your Business Shows Up in AI
-                </h2>
-                <p className="font-poppins text-[#6a5a48] text-lg leading-relaxed mb-8">
-                  Most businesses don&apos;t know what their entity graph looks like to a machine. We&apos;ll show you — in plain English, with no pressure and no pitch.
-                </p>
-                <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-                  Get My AI Visibility Check
-                </Link>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={150}>
-              <ul className="flex flex-col gap-5">
-                {[
-                  'How your business currently appears in ChatGPT, Perplexity, and Google AI Overviews — in plain English',
-                  "A plain-English breakdown of your schema gaps and what AI can't verify about you right now",
-                  'How your infrastructure benchmarks against your top competitors in your market',
-                  'One specific action you can take today — whether you work with us or not',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-4">
-                    <div className="mt-0.5 w-6 h-6 rounded-full bg-[rgba(160,114,58,0.15)] flex items-center justify-center shrink-0">
-                      <svg className="w-3.5 h-3.5 text-[#a0723a]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="font-poppins text-[#0a0806] text-base leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </ScrollReveal>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Foundation Build */}
-      <section className="bg-white py-24 px-4">
-        <div className="max-w-5xl mx-auto">
-
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <p className="eyebrow mb-4">WHAT WE BUILD</p>
-              <h2 className="font-poppins font-bold text-[#0a0806] mb-4" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
-                The Foundation Build
-              </h2>
-              <p className="font-poppins text-[#6a5a48] text-lg max-w-2xl mx-auto leading-relaxed">
-                One-time build. Fixed scope. Fixed timeline. You own everything we deliver — forever.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-              {[
-                'Custom Next.js website engineered for AI readability',
-                'Full entity graph: business, founder, services, credentials, location',
-                'Custom JSON-LD schema per page — no copy-paste, no conflicts',
-                'llms.txt and agent.json deployed on every build',
-                'Sub-1 second load time on modern devices',
-                'Directory launch: Google Business, Bing Places, Apple Business, Yelp, BBB',
-                'You own the GitHub repo and the Vercel account — no platform lock-in',
-                'Built in 6–8 weeks with full transparency',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 bg-[#f8f5f0] rounded-lg px-5 py-4">
-                  <svg className="w-5 h-5 text-[#a0723a] mt-0.5 shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="font-poppins text-[#0a0806] text-sm leading-relaxed">{item}</span>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={200}>
-            <div className="text-center">
-              <p className="font-poppins text-[#6a5a48] text-sm tracking-wide uppercase mb-6">
-                Fixed scope. Fixed timeline. Transparent pricing.
-              </p>
-              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-                Start the Conversation
-              </Link>
-            </div>
-          </ScrollReveal>
-
-        </div>
-      </section>
-
-      {/* 10. Final CTA */}
-      <section className="bg-[#1c1814] py-28 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <ScrollReveal>
-            <p className="eyebrow mb-5">GET STARTED</p>
-            <h2 className="font-poppins font-bold text-[rgba(240,232,216,0.95)] mb-6" style={{ fontSize: 'clamp(28px, 4vw, 52px)' }}>
-              The window is open.<br />
-              <span className="text-[#a0723a]">Let&apos;s build your foundation.</span>
-            </h2>
-            <p className="font-poppins text-[rgba(240,232,216,0.6)] text-lg leading-relaxed mb-10">
-              One conversation. No pressure. We&apos;ll show you exactly what AI can and can&apos;t verify about your business right now — and what it would take to fix it.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block text-center">
-                Start the Conversation
-              </Link>
-              <Link href="/contact" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block text-center">
-                Get My AI Visibility Check
-              </Link>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
     </>
