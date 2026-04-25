@@ -579,30 +579,45 @@ em.serif {
   animation: svgPulseNode 3s ease-in-out infinite;
 }
 
-/* ─── Hero 3D cube ─────────────────────────────────────── */
-@keyframes cubeOuter {
-  0%   { transform: rotateX(-15deg) rotateY(0deg);   }
-  25%  { transform: rotateX(-8deg)  rotateY(90deg);  }
-  50%  { transform: rotateX(-15deg) rotateY(180deg); }
-  75%  { transform: rotateX(-8deg)  rotateY(270deg); }
-  100% { transform: rotateX(-15deg) rotateY(360deg); }
+/* ─── Foundation blueprint animation ───────────────────── */
+@keyframes bpDraw {
+  from { stroke-dashoffset: 100; }
+  to   { stroke-dashoffset: 0;   }
 }
 
-@keyframes cubeInner {
-  0%   { transform: rotateX(15deg)  rotateY(0deg);    }
-  25%  { transform: rotateX(8deg)   rotateY(-90deg);  }
-  50%  { transform: rotateX(15deg)  rotateY(-180deg); }
-  75%  { transform: rotateX(8deg)   rotateY(-270deg); }
-  100% { transform: rotateX(15deg)  rotateY(-360deg); }
+@keyframes bpFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-/* Only animate when the user hasn't requested reduced motion */
+/* Rebar pulse: one dot at a time brightens across the 6s cycle */
+@keyframes bpRebarPulse {
+  0%, 3%, 100% { opacity: 0.6; }
+  1.5%         { opacity: 1.0; }
+}
+
+/* Base (reduced-motion) state — everything immediately visible */
+.bp-rebar { opacity: 0.6; }
+
+/* Animated draw-in — only when motion is acceptable */
 @media (prefers-reduced-motion: no-preference) {
-  .hero-cube-outer {
-    animation: cubeOuter 24s linear infinite;
+  .bp-draw {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: bpDraw 0.6s ease forwards;
   }
-  .hero-cube-inner {
-    animation: cubeInner 16s linear infinite;
+  .bp-fade {
+    opacity: 0;
+    animation: bpFadeIn 0.4s ease forwards;
+  }
+  .bp-rebar {
+    opacity: 0;
+    animation-name: bpFadeIn, bpRebarPulse;
+    animation-duration: 0.3s, 6s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-fill-mode: both, none;
+    animation-iteration-count: 1, infinite;
+    /* animation-delay is set per-element via inline style: "fadeDelay, pulseDelay" */
   }
 }
 
@@ -619,9 +634,10 @@ em.serif {
   .svg-edge   { stroke-dashoffset: 0; animation: none; }
   .svg-node   { animation: none; opacity: 0.6; }
 
-  /* Cube stays at static flattering angle — set via inline transform on component */
-  .hero-cube-outer,
-  .hero-cube-inner { animation: none; }
+  /* Blueprint: no animation — elements render in final visible state via base CSS */
+  .bp-draw  { stroke-dasharray: none; stroke-dashoffset: 0; animation: none; }
+  .bp-fade  { opacity: 1; animation: none; }
+  .bp-rebar { opacity: 0.6; animation: none; }
 
   *,
   *::before,
