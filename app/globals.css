@@ -55,9 +55,9 @@ html {
 }
 
 body {
-  background-color: #f8f5f0;
-  color: #0a0806;
-  font-family: var(--font-poppins), system-ui, sans-serif;
+  background-color: var(--d-bg);
+  color: var(--d-fg);
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
 /* ─── Section divider ─────────────────────────────────── */
@@ -387,7 +387,7 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -417,7 +417,7 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   background-image:
     linear-gradient(var(--d-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--d-line) 1px, transparent 1px);
@@ -530,6 +530,15 @@ em.serif {
 
 .d-card:hover {
   border-color: var(--d-accent);
+}
+
+/* ─── Footer link hover ─────────────────────────────────── */
+.d-footer-link {
+  color: var(--d-fg-dim);
+  transition: color 200ms ease;
+}
+.d-footer-link:hover {
+  color: var(--d-fg);
 }
 
 /* ─── Post row hover ────────────────────────────────────── */
