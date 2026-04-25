@@ -225,11 +225,11 @@ export default function HomePage() {
               lineHeight: 1.07,
               letterSpacing: '-0.025em',
               color: 'var(--d-fg)',
-              maxWidth: '560px',
+              maxWidth: '680px',
             }}
           >
-            For businesses that can&apos;t afford<br />
-            to be <em className="serif">skipped.</em>
+            Built for the operators{' '}
+            <em className="serif">PE is coming for next.</em>
           </h2>
 
           <p
@@ -239,21 +239,22 @@ export default function HomePage() {
               lineHeight: 1.65,
               color: 'var(--d-fg-dim)',
               fontWeight: 300,
-              maxWidth: '520px',
+              maxWidth: '560px',
             }}
           >
-            If your clients research before they commit, AI search is already deciding
-            whether you get the call or your competitor does.
+            Independent and owner-operated businesses serving a specific geography.
+            The ones private equity is rolling up — because they dominate local markets
+            and haven&apos;t built the digital infrastructure to prove it yet.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { label: 'Law Firms',                    note: 'Estate planning, business law, family practice' },
-              { label: 'Financial Advisors',            note: 'Fiduciary, planning, wealth management' },
-              { label: 'Medical Practices & Med Spas', note: 'Private practice, aesthetics, specialty care' },
-              { label: 'Home Services',                 note: 'High-ticket residential: audio/video, window treatments, specialty trades' },
-              { label: 'Real Estate Teams',             note: 'Buyer agents, listing specialists, relocation pros' },
-              { label: 'Consultants & Coaches',         note: 'Any professional whose credibility is the product' },
+              { label: 'Home Services',                   note: 'HVAC, plumbing, roofing, window installation, electrical' },
+              { label: 'Real Estate',                      note: 'Independent agents and owner-operated brokerages' },
+              { label: 'Property Management',              note: 'Residential and commercial — local operators, not nationals' },
+              { label: 'Specialty Trades',                 note: 'General contractors, landscape design, custom builds' },
+              { label: 'Local Professional Services',      note: 'Law, accounting, medical practices — owner-operator scale' },
+              { label: 'Regional Independent Operators',   note: 'Any local/regional SMB with 1–3 locations being targeted by PE roll-ups' },
             ].map((c) => (
               <div key={c.label} className="d-card">
                 <p
@@ -307,11 +308,10 @@ export default function HomePage() {
 
               <p
                 className="font-inter mb-10"
-                style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-mute)' }}
+                style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-dim)' }}
               >
-                Starting from{' '}
-                <span style={{ color: 'var(--d-fg)', fontWeight: 600 }}>$8,500</span>
-                {' '}— fixed price, 6–8 week delivery.
+                A defined-scope, fixed-price engagement. No retainers.
+                You own everything we build.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
