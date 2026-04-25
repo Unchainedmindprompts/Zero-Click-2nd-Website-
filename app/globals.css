@@ -26,6 +26,28 @@
   /* Borders */
   --border-light: rgba(100,70,30,0.15);
   --border-dark:  rgba(100,70,30,0.25);
+
+  /* ─── Design system v2 tokens ────────────────────────────── */
+  --d-bg:           #0a0c1f;
+  --d-bg-2:         #0e1130;
+  --d-bg-3:         #141845;
+  --d-fg:           #e9ecff;
+  --d-fg-dim:       #8a90c4;
+  --d-fg-mute:      #5a608f;
+  --d-line:         rgba(140, 160, 255, 0.14);
+  --d-line-s:       rgba(140, 160, 255, 0.28);
+  --d-accent:       #5dd5ff;
+  --d-accent-2:     #8ab4ff;
+  --d-accent-glow:  rgba(93, 213, 255, 0.5);
+  --d-warn:         #ff6b8a;
+  --d-ok:           #7af0c2;
+  --d-glow:         0 0 0 1px rgba(93,213,255,0.3), 0 12px 40px -12px rgba(93,213,255,0.5);
+  --d-glow-hover:   0 0 0 1px rgba(93,213,255,0.5), 0 18px 50px -10px rgba(93,213,255,0.5);
+
+  /* ─── Design system v2 fonts (set by next/font in layout) ── */
+  --font-inter:  'Inter', system-ui, sans-serif;
+  --font-mono:   'JetBrains Mono', monospace;
+  --font-serif:  'Instrument Serif', Georgia, serif;
 }
 
 html {
@@ -348,5 +370,207 @@ body {
   }
   .font-cormorant {
     font-family: var(--font-cormorant), Georgia, serif;
+  }
+  /* ─── v2 font utilities ────────────────────────────────── */
+  .font-inter  { font-family: var(--font-inter);  }
+  .font-mono   { font-family: var(--font-mono);   }
+  .font-serif  { font-family: var(--font-serif);  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DESIGN SYSTEM V2 — dark nav theme
+   All rules below are additive. Nothing above is removed.
+═══════════════════════════════════════════════════════════ */
+
+/* ─── Atmospheric background ───────────────────────────── */
+.d-atmos {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.d-atmos::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(93,213,255,0.07) 0%, transparent 65%);
+  border-radius: 50%;
+}
+
+.d-atmos::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(138,90,255,0.06) 0%, transparent 65%);
+  border-radius: 50%;
+}
+
+.d-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--d-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--d-line) 1px, transparent 1px);
+  background-size: 80px 80px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 30%, transparent 100%);
+}
+
+/* ─── Instrument Serif italic accent ───────────────────── */
+em.serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ─── Eyebrow (v2) ─────────────────────────────────────── */
+.d-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--d-accent);
+  line-height: 1;
+}
+
+.d-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  flex-shrink: 0;
+  background: var(--d-accent);
+  box-shadow: 0 0 8px var(--d-accent-glow), 0 0 16px var(--d-accent-glow);
+}
+
+.d-eyebrow-center {
+  justify-content: center;
+}
+
+.d-eyebrow-center::before {
+  display: none;
+}
+
+/* ─── Glow shadow utilities ────────────────────────────── */
+.d-glow {
+  box-shadow: var(--d-glow);
+}
+
+.d-glow:hover,
+.d-glow-hover {
+  box-shadow: var(--d-glow-hover);
+}
+
+/* ─── v2 Buttons ───────────────────────────────────────── */
+.d-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 100px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, border-color 200ms ease;
+  white-space: nowrap;
+}
+
+.d-btn-sm {
+  font-size: 13px;
+  padding: 9px 18px;
+}
+
+.d-btn-primary {
+  background: var(--d-accent);
+  color: var(--d-bg);
+  box-shadow: var(--d-glow);
+}
+
+.d-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--d-glow-hover);
+}
+
+.d-btn-ghost {
+  background: transparent;
+  color: var(--d-fg-dim);
+  border: 1px solid var(--d-line-s);
+}
+
+.d-btn-ghost:hover {
+  border-color: var(--d-accent);
+  color: var(--d-accent);
+  transform: translateY(-1px);
+}
+
+/* ─── v2 Card border ───────────────────────────────────── */
+.d-card {
+  background: var(--d-bg3);
+  border: 1px solid var(--d-line);
+  border-radius: 14px;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.d-card:hover {
+  border-color: var(--d-accent);
+}
+
+/* ─── Post row hover ────────────────────────────────────── */
+.d-post-row {
+  transition: background-color 200ms ease, padding-left 200ms ease, border-color 200ms ease;
+}
+
+.d-post-row:hover {
+  background: rgba(93, 213, 255, 0.04);
+  padding-left: 8px;
+}
+
+.d-post-row:hover .d-post-arrow {
+  transform: translateX(4px);
+}
+
+.d-post-arrow {
+  transition: transform 200ms ease;
+}
+
+/* ─── prefers-reduced-motion ────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .d-btn:hover,
+  .d-card:hover,
+  .d-post-row:hover {
+    transform: none !important;
+  }
+
+  .d-post-row:hover {
+    padding-left: 0 !important;
+  }
+
+  .d-post-row:hover .d-post-arrow {
+    transform: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -1,14 +1,14 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: NextRequest) {
   const { name, businessName, website, challenge } = await req.json();
 
   if (!name || !businessName || !challenge) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
   }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { error } = await resend.emails.send({
     from: 'KodeCite Contact <onboarding@resend.dev>',
