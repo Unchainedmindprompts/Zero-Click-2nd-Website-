@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroCube from '@/components/home/HeroCube';
 import EntityGraph from '@/components/home/EntityGraph';
 import F1Stack from '@/components/home/F1Stack';
 import AIVisibilityCheck from '@/components/home/AIVisibilityCheck';
@@ -53,12 +54,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Entity Graph SVG */}
-            <div
-              className="flex-shrink-0 w-full lg:w-auto"
-              style={{ width: 'min(100%, 560px)' }}
-            >
-              <EntityGraph />
+            {/* Right: 3D rotating cube */}
+            <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:justify-end">
+              <HeroCube />
             </div>
 
           </div>
