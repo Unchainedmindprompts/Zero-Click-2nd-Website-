@@ -542,6 +542,12 @@ em.serif {
   color: var(--d-fg);
 }
 
+/* ─── Featured blog card hover ─────────────────────────── */
+.d-featured-card:hover {
+  border-left-color: var(--d-accent);
+  background: var(--d-bg-3);
+}
+
 /* ─── Post row hover ────────────────────────────────────── */
 .d-post-row {
   transition: background-color 200ms ease, padding-left 200ms ease, border-color 200ms ease;
