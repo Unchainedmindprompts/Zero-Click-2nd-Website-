@@ -64,9 +64,9 @@ const beliefs = [
 
 const practiceCards = [
   {
-    tag: 'SOLO + DELIBERATE',
-    h: 'One operator. Two clients at a time.',
-    d: "I run a deliberately small book. Two Foundation Build engagements concurrent — no more. That's how the work stays personally read, personally written, and personally accountable. If I can't take you on, I'll tell you when I can.",
+    tag: 'CRAFT + OWNERSHIP',
+    h: 'Engineered, not assembled.',
+    d: "Every KodeCite build is written as code, not configured from templates. Schema, entity architecture, server-rendered infrastructure — all crafted for your specific business, not output from a plugin. You own the GitHub repo, the Vercel account, and every line of code we ship. When the work is done, the asset is yours.",
   },
   {
     tag: 'SCOPED · NOT SUBSCRIBED',
@@ -450,8 +450,9 @@ export default function AboutPage() {
               maxWidth: '560px',
             }}
           >
-            A small, deliberate practice. I&apos;m good at a narrow set of things — and I say
-            no to a lot of work that doesn&apos;t fit. Here&apos;s what it actually looks like.
+            A deliberate practice with a clear methodology. I&apos;m good at a narrow set of
+            things — and I say no to a lot of work that doesn&apos;t fit. Here&apos;s what it actually
+            looks like.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
