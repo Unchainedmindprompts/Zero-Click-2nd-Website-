@@ -68,7 +68,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: 3D rotating cube */}
+            {/* Right: entity graph */}
             <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:justify-end">
               <HeroCube />
             </div>

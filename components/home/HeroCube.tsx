@@ -1,215 +1,197 @@
-// Foundation cross-section blueprint — pure SVG, server component, CSS-only animation
-// Coordinates:  viewBox 0 0 480 480
-//   y=0–88   sky band
-//   y=88–222 house elevation (grade line at y=222)
-//   y=222–400 foundation rectangle
-//   y=400–432 footing trapezoid
-//   y=432–480 earth below footing
+// Animated schema.org entity graph — hero visual, server component, CSS-only animation
 
-const ac = 'rgba(93,213,255,';  // cyan accent helper
+type Anchor = 'left' | 'right' | 'above' | 'below';
 
-// Rebar grid — 4 cols × 6 rows inside foundation rect (x=98–382, y=222–400)
-const RX = [155, 212, 269, 326];
-const RY = [247, 272, 298, 323, 349, 374];
+interface GNode {
+  id: string;
+  x: number;
+  y: number;
+  r: number;
+  color: string;
+  label: string;
+  anchor: Anchor;
+  pulseDelay: string;
+}
+
+const NODES: GNode[] = [
+  { id: 'org',    x: 240, y: 258, r: 14, color: '#5dd5ff', label: 'ORGANIZATION', anchor: 'below',  pulseDelay: '0s'   },
+  { id: 'person', x: 148, y: 168, r: 10, color: '#8ab4ff', label: 'PERSON',       anchor: 'left',   pulseDelay: '0.5s' },
+  { id: 'svc1',   x: 335, y: 170, r: 10, color: '#7af0c2', label: 'SERVICE',      anchor: 'right',  pulseDelay: '1.0s' },
+  { id: 'svc2',   x: 362, y: 318, r: 10, color: '#7af0c2', label: 'SERVICE',      anchor: 'right',  pulseDelay: '1.5s' },
+  { id: 'place',  x: 128, y: 318, r: 10, color: '#ff9b8a', label: 'PLACE',        anchor: 'left',   pulseDelay: '2.0s' },
+  { id: 'art1',   x: 200, y: 415, r:  9, color: '#b89bff', label: 'ARTICLE',      anchor: 'below',  pulseDelay: '2.5s' },
+  { id: 'art2',   x: 322, y: 408, r:  9, color: '#b89bff', label: 'ARTICLE',      anchor: 'right',  pulseDelay: '3.0s' },
+  { id: 'art3',   x:  78, y: 238, r:  9, color: '#b89bff', label: 'ARTICLE',      anchor: 'left',   pulseDelay: '3.5s' },
+  { id: 'offer1', x: 392, y: 232, r:  9, color: '#5dd5ff', label: 'OFFER',        anchor: 'right',  pulseDelay: '4.0s' },
+  { id: 'offer2', x: 380, y: 395, r:  9, color: '#5dd5ff', label: 'OFFER',        anchor: 'right',  pulseDelay: '4.5s' },
+  { id: 'faq',    x: 110, y: 442, r:  8, color: '#8a90c4', label: 'FAQPAGE',      anchor: 'left',   pulseDelay: '5.0s' },
+  { id: 'web',    x: 275, y: 110, r:  8, color: '#8a90c4', label: 'WEBSITE',      anchor: 'above',  pulseDelay: '5.5s' },
+];
+
+// [fromId, toId, ctrlX, ctrlY, hasArrow]
+type EdgeDef = [string, string, number, number, boolean];
+
+const EDGE_DEFS: EdgeDef[] = [
+  ['web',    'org',    250, 200, true ],
+  ['person', 'org',    175, 230, true ],
+  ['svc1',   'org',    300, 220, true ],
+  ['svc2',   'org',    320, 290, true ],
+  ['place',  'org',    170, 290, true ],
+  ['art1',   'org',    215, 340, true ],
+  ['svc1',   'offer1', 380, 190, true ],
+  ['svc2',   'offer2', 390, 355, true ],
+  ['org',    'art2',   310, 350, false],
+  ['org',    'art3',   150, 230, false],
+  ['person', 'art3',    95, 195, false],
+  ['art1',   'faq',    145, 425, false],
+  ['web',    'svc1',   325, 130, false],
+  ['place',  'art2',   230, 390, false],
+  ['art2',   'faq',    210, 460, false],
+];
+
+function getNode(id: string): GNode {
+  return NODES.find(n => n.id === id)!;
+}
+
+function buildPath(fromId: string, toId: string, cx: number, cy: number, arrow: boolean): string {
+  const f = getNode(fromId), t = getNode(toId);
+  if (arrow) {
+    const dx = t.x - cx, dy = t.y - cy;
+    const len = Math.hypot(dx, dy) || 1;
+    const ex = +(t.x - (dx / len) * (t.r + 4)).toFixed(1);
+    const ey = +(t.y - (dy / len) * (t.r + 4)).toFixed(1);
+    return `M${f.x} ${f.y} Q${cx} ${cy} ${ex} ${ey}`;
+  }
+  return `M${f.x} ${f.y} Q${cx} ${cy} ${t.x} ${t.y}`;
+}
+
+const EDGES = EDGE_DEFS.map(([from, to, cx, cy, arrow], i) => ({
+  d: buildPath(from, to, cx, cy, arrow),
+  arrow,
+  delay: `${(i * 0.2).toFixed(1)}s`,
+}));
+
+type TextAnchor = 'end' | 'start' | 'middle';
+
+function labelPos(n: GNode): { x: number; y: number; textAnchor: TextAnchor } {
+  switch (n.anchor) {
+    case 'left':  return { x: n.x - n.r - 6, y: n.y + 3.5,      textAnchor: 'end'    };
+    case 'right': return { x: n.x + n.r + 6, y: n.y + 3.5,      textAnchor: 'start'  };
+    case 'above': return { x: n.x,            y: n.y - n.r - 8,  textAnchor: 'middle' };
+    case 'below': return { x: n.x,            y: n.y + n.r + 14, textAnchor: 'middle' };
+  }
+}
+
+const CSS = `
+.eg-edge{stroke-dasharray:200;stroke-dashoffset:200;animation:egDraw 0.9s ease-out forwards}
+@keyframes egDraw{to{stroke-dashoffset:0}}
+.eg-glow{animation:egPulse 6s ease-in-out infinite}
+@keyframes egPulse{0%,100%{opacity:.7}50%{opacity:1}}
+.eg-chip{animation:egDrift 8s ease-in-out infinite}
+@keyframes egDrift{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media(prefers-reduced-motion:reduce){
+  .eg-edge{stroke-dasharray:none;stroke-dashoffset:0;animation:none}
+  .eg-glow{animation:none;opacity:1}
+  .eg-chip{animation:none}
+}
+`;
 
 export default function HeroCube() {
-  // Dots ordered left-to-right, top-to-bottom (reading order) for sequential pulse
-  const dots = RY.flatMap((y, row) =>
-    RX.map((x, col) => ({ x, y, idx: row * RX.length + col })),
-  );
-
   return (
-    <div
-      aria-hidden="true"
-      style={{ width: 'min(100%, 480px)', aspectRatio: '1 / 1' }}
-    >
+    <div aria-hidden="true" style={{ width: '100%', maxWidth: '540px' }}>
       <svg
-        viewBox="0 0 480 480"
+        viewBox="0 0 480 500"
         fill="none"
-        style={{ width: '100%', height: '100%', display: 'block' }}
+        style={{ width: '100%', height: 'auto', display: 'block' }}
       >
-        <defs>
-          {/* 45° earth hatching */}
-          <pattern
-            id="bp-hatch" width="8" height="8"
-            patternUnits="userSpaceOnUse" patternTransform="rotate(45 0 0)"
-          >
-            <line x1="0" y1="0" x2="0" y2="8"
-              stroke={`${ac}0.2)`} strokeWidth="0.5" />
-          </pattern>
+        <style>{CSS}</style>
 
-          {/* Concrete stipple — two staggered dot positions per tile */}
-          <pattern id="bp-concrete" width="8" height="8" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="0.7" fill={`${ac}0.08)`} />
-            <circle cx="6" cy="6" r="0.7" fill={`${ac}0.08)`} />
-          </pattern>
+        <defs>
+          <radialGradient id="egBg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stopColor="#5dd5ff" stopOpacity="0.12" />
+            <stop offset="100%" stopColor="#5dd5ff" stopOpacity="0"    />
+          </radialGradient>
+          <marker id="egArr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+            <path d="M0 0 L6 2 L0 4 Z" fill="#5dd5ff" fillOpacity="0.55" />
+          </marker>
         </defs>
 
-        {/* ── Sky horizon lines ────────────────────────── */}
-        <line className="bp-fade" style={{ animationDelay: '0.3s' }}
-          x1="24" y1="32" x2="456" y2="32"
-          stroke={`${ac}0.14)`} strokeWidth="0.5" />
-        <line className="bp-fade" style={{ animationDelay: '0.36s' }}
-          x1="24" y1="52" x2="456" y2="52"
-          stroke={`${ac}0.09)`} strokeWidth="0.5" />
+        {/* Background ambient glow */}
+        <ellipse
+          cx="240" cy="270" rx="220" ry="200"
+          fill="url(#egBg)"
+          style={{ filter: 'blur(32px)' }}
+        />
 
-        {/* ── Earth hatching — left zone, right zone, below footing ── */}
-        <rect className="bp-fade" style={{ animationDelay: '0.7s' }}
-          x="0" y="222" width="98" height="258" fill="url(#bp-hatch)" />
-        <rect className="bp-fade" style={{ animationDelay: '0.7s' }}
-          x="382" y="222" width="98" height="258" fill="url(#bp-hatch)" />
-        <rect className="bp-fade" style={{ animationDelay: '1.1s' }}
-          x="0" y="432" width="480" height="48" fill="url(#bp-hatch)" />
-
-        {/* ── Grade line — dashes rendered as presentation attr,
-               CSS .bp-draw overrides to solid during animation  ── */}
-        <line className="bp-draw bp-grade-line"
-          style={{ animationDelay: '0s', animationDuration: '0.8s' }}
-          x1="0" y1="222" x2="480" y2="222"
-          stroke={`${ac}0.5)`} strokeWidth="1.5"
-          strokeDasharray="8 5"
-          pathLength="100" />
-
-        {/* ── House outline ─────────────────────────── */}
-        {/* Left roof slope */}
-        <line className="bp-draw" style={{ animationDelay: '0.4s', animationDuration: '0.4s' }}
-          x1="108" y1="152" x2="240" y2="90"
-          stroke={`${ac}0.7)`} strokeWidth="1.5" pathLength="100" />
-        {/* Right roof slope */}
-        <line className="bp-draw" style={{ animationDelay: '0.5s', animationDuration: '0.4s' }}
-          x1="240" y1="90" x2="372" y2="152"
-          stroke={`${ac}0.7)`} strokeWidth="1.5" pathLength="100" />
-        {/* Wall body */}
-        <rect className="bp-draw" style={{ animationDelay: '0.6s', animationDuration: '0.65s' }}
-          x="114" y="152" width="252" height="70"
-          stroke={`${ac}0.7)`} strokeWidth="1.5" pathLength="100" />
-        {/* Door */}
-        <rect className="bp-draw" style={{ animationDelay: '0.78s', animationDuration: '0.28s' }}
-          x="211" y="187" width="36" height="35"
-          stroke={`${ac}0.7)`} strokeWidth="1.5" pathLength="100" />
-        {/* Left window */}
-        <rect className="bp-draw" style={{ animationDelay: '0.82s', animationDuration: '0.25s' }}
-          x="137" y="169" width="32" height="24"
-          stroke={`${ac}0.7)`} strokeWidth="1.5" pathLength="100" />
-        {/* Right window */}
-        <rect className="bp-draw" style={{ animationDelay: '0.87s', animationDuration: '0.25s' }}
-          x="311" y="169" width="32" height="24"
-          stroke={`${ac}0.7)`} strokeWidth="1.5" pathLength="100" />
-
-        {/* ── Concrete fill (no animation — texture behind rebar) ── */}
-        <rect x="98" y="222" width="284" height="178" fill="url(#bp-concrete)" />
-
-        {/* ── Foundation perimeter rectangle ──────────── */}
-        <rect className="bp-draw" style={{ animationDelay: '0.7s', animationDuration: '0.9s' }}
-          x="98" y="222" width="284" height="178"
-          stroke={`${ac}0.85)`} strokeWidth="2" pathLength="100" />
-
-        {/* ── Footing trapezoid ────────────────────────── */}
-        <polygon className="bp-draw" style={{ animationDelay: '1.1s', animationDuration: '0.55s' }}
-          points="83,400 397,400 418,432 62,432"
-          stroke={`${ac}0.85)`} strokeWidth="2" pathLength="100" />
-
-        {/* ── Rebar grid connecting lines ──────────────── */}
-        {/* Horizontal */}
-        {RY.map((y, ri) => (
-          <line key={`rh${ri}`}
-            className="bp-fade" style={{ animationDelay: `${1.0 + ri * 0.04}s` }}
-            x1="155" y1={y} x2="326" y2={y}
-            stroke={`${ac}0.22)`} strokeWidth="0.5" />
-        ))}
-        {/* Vertical */}
-        {RX.map((x, ci) => (
-          <line key={`rv${ci}`}
-            className="bp-fade" style={{ animationDelay: `${1.08 + ci * 0.04}s` }}
-            x1={x} y1="247" x2={x} y2="374"
-            stroke={`${ac}0.22)`} strokeWidth="0.5" />
+        {/* Edges */}
+        {EDGES.map((e, i) => (
+          <path
+            key={i}
+            className="eg-edge"
+            d={e.d}
+            stroke="#5dd5ff"
+            strokeOpacity="0.38"
+            strokeWidth="0.75"
+            markerEnd={e.arrow ? 'url(#egArr)' : undefined}
+            style={{ animationDelay: e.delay }}
+          />
         ))}
 
-        {/* ── Rebar dots (cross-section circles) ─────── */}
-        {dots.map(({ x, y, idx }) => (
-          <circle key={`rd${idx}`}
-            className="bp-rebar"
-            style={{
-              animationDelay: `${1.2 + idx * 0.08}s, ${3.5 + idx * 0.25}s`,
-            }}
-            cx={x} cy={y} r="3"
-            fill={`${ac}0.6)`}
-            stroke={`${ac}0.35)`} strokeWidth="0.5" />
-        ))}
+        {/* Nodes */}
+        {NODES.map((n) => {
+          const lp = labelPos(n);
+          return (
+            <g key={n.id}>
+              <circle cx={n.x} cy={n.y} r={n.r + 8} fill={n.color} fillOpacity="0.07" />
+              <circle
+                cx={n.x} cy={n.y} r={n.r + 3}
+                fill={n.color} fillOpacity="0.10"
+                className="eg-glow"
+                style={{ animationDelay: n.pulseDelay }}
+              />
+              <circle
+                cx={n.x} cy={n.y} r={n.r}
+                stroke={n.color} strokeWidth="1.5"
+                fill={n.color} fillOpacity="0.12"
+              />
+              <text
+                x={lp.x} y={lp.y}
+                textAnchor={lp.textAnchor}
+                fontFamily="var(--font-mono)"
+                fontSize="7.5"
+                letterSpacing="0.14em"
+                fill={n.color}
+                fillOpacity="0.75"
+              >
+                {n.label}
+              </text>
+            </g>
+          );
+        })}
 
-        {/* ── Dimension bracket — STRUCTURE (house top → grade) ── */}
-        <g className="bp-fade" style={{ animationDelay: '1.8s' }}>
-          <line x1="92" y1="90"  x2="84" y2="90"  stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="92" y1="222" x2="84" y2="222" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="86" y1="90"  x2="86" y2="222" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          {/* Arrow ticks — top */}
-          <line x1="82" y1="95"  x2="86" y2="90"  stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="90" y1="95"  x2="86" y2="90"  stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          {/* Arrow ticks — bottom */}
-          <line x1="82" y1="217" x2="86" y2="222" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="90" y1="217" x2="86" y2="222" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <text
-            transform="rotate(-90 68 156)" x="68" y="156"
-            textAnchor="middle" fontFamily="var(--font-mono)"
-            fontSize="8" letterSpacing="0.18em" fill="var(--d-fg-mute)"
-          >
-            STRUCTURE
-          </text>
+        {/* Schema chips — phase-offset drift */}
+        <g className="eg-chip" style={{ animationDelay: '0s' }} opacity="0.5">
+          <rect x="305" y="56" width="156" height="20" rx="4"
+            fill="none" stroke="rgba(93,213,255,0.35)" strokeWidth="0.75" />
+          <text x="383" y="70" textAnchor="middle"
+            fontFamily="var(--font-mono)" fontSize="7.5" letterSpacing="0.10em"
+            fill="rgba(93,213,255,0.7)">@type: Organization</text>
         </g>
 
-        {/* ── Dimension bracket — FOUNDATION (grade → footing top) ── */}
-        <g className="bp-fade" style={{ animationDelay: '1.9s' }}>
-          <line x1="76" y1="222" x2="68" y2="222" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="76" y1="400" x2="68" y2="400" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="70" y1="222" x2="70" y2="400" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="66" y1="227" x2="70" y2="222" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="74" y1="227" x2="70" y2="222" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="66" y1="395" x2="70" y2="400" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="74" y1="395" x2="70" y2="400" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <text
-            transform="rotate(-90 52 311)" x="52" y="311"
-            textAnchor="middle" fontFamily="var(--font-mono)"
-            fontSize="8" letterSpacing="0.18em" fill="var(--d-fg-mute)"
-          >
-            FOUNDATION
-          </text>
+        <g className="eg-chip" style={{ animationDelay: '-2.5s' }} opacity="0.5">
+          <rect x="18" y="136" width="110" height="20" rx="4"
+            fill="none" stroke="rgba(93,213,255,0.35)" strokeWidth="0.75" />
+          <text x="73" y="150" textAnchor="middle"
+            fontFamily="var(--font-mono)" fontSize="7.5" letterSpacing="0.10em"
+            fill="rgba(93,213,255,0.7)">@id: #founder</text>
         </g>
 
-        {/* ── Dimension bracket — FOOTING ─────────────── */}
-        <g className="bp-fade" style={{ animationDelay: '2.0s' }}>
-          <line x1="58" y1="400" x2="52" y2="400" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="58" y1="432" x2="52" y2="432" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="54" y1="400" x2="54" y2="432" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="50" y1="404" x2="54" y2="400" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="58" y1="404" x2="54" y2="400" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="50" y1="428" x2="54" y2="432" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <line x1="58" y1="428" x2="54" y2="432" stroke={`${ac}0.38)`} strokeWidth="0.75" />
-          <text
-            transform="rotate(-90 36 416)" x="36" y="416"
-            textAnchor="middle" fontFamily="var(--font-mono)"
-            fontSize="7.5" letterSpacing="0.16em" fill="var(--d-fg-mute)"
-          >
-            FOOTING
-          </text>
-        </g>
-
-        {/* ── Title block ─────────────────────────────── */}
-        <g className="bp-fade" style={{ animationDelay: '2.1s' }}>
-          <rect x="378" y="435" width="96" height="42"
-            stroke={`${ac}0.35)`} strokeWidth="1" />
-          <line x1="378" y1="449" x2="474" y2="449"
-            stroke={`${ac}0.2)`} strokeWidth="0.5" />
-          <line x1="378" y1="462" x2="474" y2="462"
-            stroke={`${ac}0.2)`} strokeWidth="0.5" />
-          <text x="426" y="445" textAnchor="middle"
-            fontFamily="var(--font-mono)" fontSize="7" letterSpacing="0.14em"
-            fill="var(--d-fg-dim)">REV 01</text>
-          <text x="426" y="458" textAnchor="middle"
-            fontFamily="var(--font-mono)" fontSize="6.5" letterSpacing="0.1em"
-            fill="var(--d-fg-dim)">FOUNDATION DETAIL</text>
-          <text x="426" y="471" textAnchor="middle"
-            fontFamily="var(--font-mono)" fontSize="6.5" letterSpacing="0.14em"
-            fill={`${ac}0.55)`}>KODECITE.AI</text>
+        <g className="eg-chip" style={{ animationDelay: '-5s' }} opacity="0.5">
+          <rect x="312" y="438" width="136" height="20" rx="4"
+            fill="none" stroke="rgba(93,213,255,0.35)" strokeWidth="0.75" />
+          <text x="380" y="452" textAnchor="middle"
+            fontFamily="var(--font-mono)" fontSize="7.5" letterSpacing="0.10em"
+            fill="rgba(93,213,255,0.7)">schema.org/Service</text>
         </g>
       </svg>
     </div>

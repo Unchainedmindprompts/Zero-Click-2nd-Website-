@@ -639,47 +639,7 @@ em.serif {
   animation: svgPulseNode 3s ease-in-out infinite;
 }
 
-/* ─── Foundation blueprint animation ───────────────────── */
-@keyframes bpDraw {
-  from { stroke-dashoffset: 100; }
-  to   { stroke-dashoffset: 0;   }
-}
 
-@keyframes bpFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Rebar pulse: one dot at a time brightens across the 6s cycle */
-@keyframes bpRebarPulse {
-  0%, 3%, 100% { opacity: 0.6; }
-  1.5%         { opacity: 1.0; }
-}
-
-/* Base (reduced-motion) state — everything immediately visible */
-.bp-rebar { opacity: 0.6; }
-
-/* Animated draw-in — only when motion is acceptable */
-@media (prefers-reduced-motion: no-preference) {
-  .bp-draw {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
-    animation: bpDraw 0.6s ease forwards;
-  }
-  .bp-fade {
-    opacity: 0;
-    animation: bpFadeIn 0.4s ease forwards;
-  }
-  .bp-rebar {
-    opacity: 0;
-    animation-name: bpFadeIn, bpRebarPulse;
-    animation-duration: 0.3s, 6s;
-    animation-timing-function: ease-out, ease-in-out;
-    animation-fill-mode: both, none;
-    animation-iteration-count: 1, infinite;
-    /* animation-delay is set per-element via inline style: "fadeDelay, pulseDelay" */
-  }
-}
 
 /* ─── prefers-reduced-motion ────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
@@ -693,11 +653,6 @@ em.serif {
 
   .svg-edge   { stroke-dashoffset: 0; animation: none; }
   .svg-node   { animation: none; opacity: 0.6; }
-
-  /* Blueprint: no animation — elements render in final visible state via base CSS */
-  .bp-draw  { stroke-dasharray: none; stroke-dashoffset: 0; animation: none; }
-  .bp-fade  { opacity: 1; animation: none; }
-  .bp-rebar { opacity: 0.6; animation: none; }
 
   *,
   *::before,
