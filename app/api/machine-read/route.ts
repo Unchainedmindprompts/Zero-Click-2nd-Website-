@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
   const { error } = await resend.emails.send({
     from: 'KodeCite Contact <onboarding@resend.dev>',
-    to: 'mark@kodecite.ai',
+    to: 'mark@luxewindowworks.com',
     subject: `Machine Read request: ${website}`,
     text: [
       'MACHINE READ REQUEST',
