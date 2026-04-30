@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -174,29 +175,17 @@ export default function AboutPage() {
                   aspectRatio: '4/5',
                   borderRadius: '14px',
                   border: '1px solid var(--d-line)',
-                  background: 'var(--d-bg-2)',
                   overflow: 'hidden',
                 }}
               >
-                <div
-                  className="flex flex-col items-center justify-center gap-4"
-                  style={{ position: 'absolute', inset: 0 }}
-                >
-                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                    <circle cx="32" cy="24" r="10" stroke="var(--d-fg-mute)" strokeWidth="1.5" />
-                    <path
-                      d="M14 52c0-9.94 8.06-18 18-18s18 8.06 18 18"
-                      stroke="var(--d-fg-mute)"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
-                  <span
-                    className="font-mono"
-                    style={{ fontSize: '9px', letterSpacing: '0.2em', color: 'var(--d-fg-mute)' }}
-                  >
-                    PORTRAIT · PLACEHOLDER
-                  </span>
-                </div>
+                <Image
+                  src="/mark-abplanalp.png"
+                  alt="Mark Abplanalp — Founder, KodeCite.ai"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 360px"
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                  priority
+                />
                 {/* Corner label */}
                 <div
                   className="font-mono"
@@ -206,11 +195,13 @@ export default function AboutPage() {
                     right: '16px',
                     fontSize: '10px',
                     letterSpacing: '0.12em',
-                    color: 'var(--d-fg-mute)',
-                    background: 'var(--d-bg-2)',
+                    color: 'var(--d-fg)',
+                    background: 'rgba(10,12,31,0.75)',
+                    backdropFilter: 'blur(8px)',
+                    WebkitBackdropFilter: 'blur(8px)',
                     padding: '3px 8px',
                     borderRadius: '4px',
-                    border: '1px solid var(--d-line)',
+                    border: '1px solid var(--d-line-s)',
                   }}
                 >
                   M.A.
