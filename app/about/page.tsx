@@ -99,8 +99,8 @@ const trackItems = [
     l: 'Spent studying the AI search shift, schema, llms.txt, and what actually moves the needle.',
   },
   {
-    n: '2', u: 'BUSINESSES',
-    l: "Of my own running on this stack — Luxe Window Works and my wife's real estate practice.",
+    n: '100+', u: 'PAGES VALIDATED',
+    l: "Every KodeCite-built page validated against Google Rich Results before sign-off. Methodology proven across hundreds of live pages.",
   },
 ];
 
