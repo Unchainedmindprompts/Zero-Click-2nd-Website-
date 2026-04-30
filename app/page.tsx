@@ -194,8 +194,8 @@ export default function HomePage() {
               className="font-inter mb-0"
               style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--d-fg)', fontWeight: 500 }}
             >
-              The ones that can? Those are the names the AI says out loud.
-              KodeCite makes sure that&apos;s your name.
+              The ones that can? Those are the businesses AI can confidently recommend.
+              KodeCite makes sure that&apos;s you.
             </p>
           </div>
         </div>
