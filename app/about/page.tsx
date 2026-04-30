@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'About — Mark Abplanalp | KodeCite.ai',
   description:
-    "Mark Abplanalp built KodeCite.ai after spending a year figuring out why the phones stopped ringing — even while rankings looked fine on paper. 30 years in sales. 23 years as an entrepreneur. Based in North Idaho.",
+    "Mark Abplanalp built KodeCite.ai after spending a year figuring out why the rules changed — not just for his own businesses, but for every owner-operator watching their digital presence quietly stop working. 23 years in business. Based in North Idaho.",
   alternates: { canonical: 'https://www.kodecite.ai/about' },
 };
 
@@ -134,8 +134,8 @@ export default function AboutPage() {
                   color: 'var(--d-fg)',
                 }}
               >
-                I built this for{' '}
-                <em className="serif">my own family</em> first.
+                The infrastructure most websites{' '}
+                <em className="serif">were never built on.</em>
               </h1>
               <p
                 className="font-inter mb-8"
@@ -147,9 +147,10 @@ export default function AboutPage() {
                   maxWidth: '500px',
                 }}
               >
-                KodeCite.ai didn&apos;t start as an agency. It started because the phones in
-                my own businesses stopped ringing — even though the rankings looked fine on paper.
-                I spent a year figuring out why. This is what I built to fix it.
+                KodeCite.ai didn&apos;t start as an agency. It started because the rules I&apos;d been
+                operating under for two decades had stopped working — and the experts in the room
+                couldn&apos;t explain why. I spent a year figuring out what changed. This is what
+                I built.
               </p>
               <div
                 className="flex flex-wrap items-center gap-2 font-mono"
