@@ -98,7 +98,7 @@ const CSS = `
 
 export default function HeroCube() {
   return (
-    <div aria-hidden="true" style={{ width: '100%', maxWidth: '540px' }}>
+    <div aria-hidden="true" style={{ width: '100%', maxWidth: '620px' }}>
       <svg
         viewBox="0 0 480 500"
         fill="none"
