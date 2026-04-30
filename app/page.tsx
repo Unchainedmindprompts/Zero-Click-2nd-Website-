@@ -55,7 +55,7 @@ export default function HomePage() {
                 }}
               >
                 So when someone asks an AI assistant &ldquo;who should I hire in my city?&rdquo;,
-                your name is the one it says.
+                you&apos;re the kind of business it can confidently recommend.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
