@@ -104,10 +104,6 @@ const trackItems = [
   },
 ];
 
-const namedStyle = {
-  color: 'rgba(93,213,255,0.8)',
-  fontStyle: 'italic',
-} as const;
 
 export default function AboutPage() {
   return (
@@ -247,148 +243,91 @@ export default function AboutPage() {
               className="font-inter mb-6"
               style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
             >
-              When my wife and I relocated to North Idaho, I did what you&apos;ve probably done:
-              I looked for a way to build visibility in a new market. I sat in the same meetings
-              you&apos;ve likely sat in, hearing the same{' '}
-              <span style={namedStyle}>Yesterday&apos;s Playbook</span>
-              {' '}— spend more, wait longer, chase the blue link.
-            </p>
-
-            <p
-              className="font-inter mb-8"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              But while my rankings looked good on paper, the phones weren&apos;t ringing.
-              I felt that{' '}
-              <span style={namedStyle}>quiet panic</span>{' '}
-              of knowing the game was shifting,
-              even if the experts in the room couldn&apos;t explain why.
-            </p>
-
-            {/* Pull-quote */}
-            <blockquote
-              style={{
-                margin: '0 0 32px',
-                padding: '32px 40px',
-                background: 'var(--d-bg-3)',
-                border: '1px solid var(--d-line)',
-                borderLeft: '3px solid var(--d-accent)',
-                borderRadius: '12px',
-              }}
-            >
-              <p
-                className="font-inter"
-                style={{
-                  fontSize: '64px',
-                  lineHeight: 0.75,
-                  color: 'var(--d-accent)',
-                  marginBottom: '16px',
-                }}
-              >
-                &ldquo;
-              </p>
-              <p
-                className="font-inter"
-                style={{
-                  fontSize: '18px',
-                  lineHeight: 1.65,
-                  color: 'var(--d-fg)',
-                  fontWeight: 400,
-                }}
-              >
-                I didn&apos;t start KodeCite.ai to build an agency.<br />
-                I started it because I was{' '}
-                <em className="serif">tired of writing checks</em>{' '}
-                for visibility that didn&apos;t turn into revenue.
-              </p>
-            </blockquote>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              I spent a year digging into the data and realized we are in the middle of
-              {' '}<span style={namedStyle}>The Great Decoupling</span>. Search volume is higher than ever —
-              but nearly{' '}
-              <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>
-                60% of those searches now end without a single click
-              </strong>{' '}
-              to a website.
-              AI and wearables — like the Oakley Meta glasses — are giving your customers answers
-              before they ever see your link.
-            </p>
-
-            {/* Stat row */}
-            <div
-              className="grid grid-cols-1 sm:grid-cols-3 gap-px mb-8"
-              style={{
-                background: 'var(--d-line)',
-                border: '1px solid var(--d-line)',
-                borderRadius: '12px',
-                overflow: 'hidden',
-              }}
-            >
-              {[
-                { num: '60%', label: 'of searches end without a click' },
-                { num: '5×',  label: 'higher conversion when AI cites you' },
-                { num: '40%', label: 'more time on site from AI-referred buyers' },
-              ].map((stat) => (
-                <div
-                  key={stat.num}
-                  style={{ padding: '28px 24px', background: 'var(--d-bg-3)' }}
-                >
-                  <p
-                    className="font-inter font-semibold mb-1"
-                    style={{
-                      fontSize: 'clamp(28px, 4vw, 40px)',
-                      lineHeight: 1,
-                      letterSpacing: '-0.025em',
-                      color: 'var(--d-accent)',
-                    }}
-                  >
-                    {stat.num}
-                  </p>
-                  <p
-                    className="font-inter"
-                    style={{ fontSize: '13px', lineHeight: 1.5, color: 'var(--d-fg-mute)', fontWeight: 300 }}
-                  >
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              I built the Foundation Build because my own family&apos;s revenue depended on it.
-              I needed to ensure that when a homebuyer asked their glasses for a &ldquo;realtor in
-              Coeur d&apos;Alene,&rdquo; my wife&apos;s name was the one they heard in their ear. That when
-              someone asked an AI for a window installer, my company came up — not the
-              national chain that outspent me on ads.
+              I&apos;ve been building businesses in the trades since 2002. I started a window
+              treatment company in Issaquah, expanded it to Bend, Oregon in 2015, and did
+              commercial work on Apple&apos;s retail locations across the country.
             </p>
 
             <p
               className="font-inter mb-6"
               style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
             >
-              Here is what I learned: when an AI cites you, it&apos;s a{' '}
-              <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>warm referral from the machine</strong>.
-              These buyers arrive pre-vetted. They spend 40% more time on your site and convert
-              at a rate 5× higher than traditional search. They aren&apos;t comparison-shopping —
-              they were already told you were the answer.
+              Through all of that, I&apos;ve watched the rules of how customers find businesses
+              change four or five times. From Yellow Pages to Google to social media to review
+              sites to AI-driven recommendations. Each shift created a window where the operators
+              who saw it early and built for it gained ground that took the rest of the market
+              years to close.
+            </p>
+
+            <p
+              className="font-inter mb-6"
+              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              The current shift is bigger than any of those.
+            </p>
+
+            <p
+              className="font-inter mb-6"
+              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              Nearly 60% of searches now end without a single click to any website. People are
+              asking ChatGPT, Perplexity, and Google&apos;s AI Overviews for recommendations and
+              getting them — before any traditional search result loads. Voice assistants are
+              skipping search entirely. The playbook every agency is still selling is optimizing
+              for behavior that&apos;s quietly disappearing.
+            </p>
+
+            <p
+              className="font-inter mb-6"
+              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              I started looking into this not because I wanted to start an agency, but because
+              I run businesses that depend on being found. The rules I&apos;d been operating under
+              for two decades had stopped applying, and the experts in the room couldn&apos;t explain
+              why.
+            </p>
+
+            <p
+              className="font-inter mb-6"
+              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              What I learned: the websites being recommended in AI answers aren&apos;t winning
+              because of better content or bigger budgets. They&apos;re winning because they were
+              built on infrastructure that AI tools can actually read — server-rendered pages,
+              structured entity data, machine-readable identity, and architectures designed for
+              extraction rather than just for human eyes. Most websites — including most agency
+              builds — aren&apos;t built for any of that. They were built for the search era
+              that&apos;s ending.
+            </p>
+
+            <p
+              className="font-inter mb-6"
+              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              KodeCite.ai is the stack I built once I understood what was actually happening.
+              It&apos;s a foundation rebuild for owner-operators whose digital presence has stopped
+              working — or who can feel that it&apos;s about to.
+            </p>
+
+            <p
+              className="font-inter mb-6"
+              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              I run KodeCite from North Idaho but have deep roots and active relationships across
+              the Pacific Northwest — primarily Eastside Seattle, Bend, and the
+              Coeur d&apos;Alene/Spokane corridor. If you&apos;re in any of those markets and want to talk
+              in person, that&apos;s possible. Anywhere else, the work happens remote, deliberate,
+              and grounded in 23 years of understanding what owner-operated businesses actually
+              need.
             </p>
 
             <p
               className="font-inter mb-10"
               style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
             >
-              I&apos;m a business owner who found a way to stop the bleeding. If you&apos;re feeling the
-              quiet panic of disappearing clicks, I get it. I built this stack to reclaim the
-              {' '}<span style={namedStyle}>Answer Real Estate</span>{' '}
-              for my own businesses — and I&apos;m here
-              to help you do the same for yours.
+              I&apos;m not selling innovation theater. I&apos;m an operator who watched the rules change,
+              dug into the technical reasons why, and built the thing I wished someone had built
+              for me.
             </p>
 
             {/* Sign-off */}
