@@ -9,6 +9,7 @@ const layers = [
     label: 'Infrastructure',
     color: '#5dd5ff',
     desc: 'Next.js on Vercel edge — server-side rendered, sub-1s load globally, cold-crawl readable. AI systems see your complete content on the first request. No JavaScript execution required.',
+    payoff: 'So crawlers and AI see your full page on first request — they don\'t have to guess what\'s there.',
   },
   {
     num: '02',
@@ -16,6 +17,7 @@ const layers = [
     label: 'Entity Graph',
     color: '#8ab4ff',
     desc: 'Schema.org deployed correctly — every element of your business connected through stable @id anchors into a single machine-readable identity. Not a plugin output. A real entity graph AI systems can traverse and verify.',
+    payoff: 'So machines never confuse your business with anyone else in your category.',
   },
   {
     num: '03',
@@ -23,6 +25,7 @@ const layers = [
     label: 'Answer-First Content',
     color: '#7af0c2',
     desc: 'Content structured for extraction: answer-first H1s, FAQ schema wired to FAQPage markup, short extractable paragraphs, internal linking that reinforces entity relationships. Each page answers one question clearly.',
+    payoff: 'So your pages are easy for AI to quote and recommend, not just for humans to skim.',
   },
   {
     num: '04',
@@ -30,6 +33,7 @@ const layers = [
     label: 'Authority Signals',
     color: '#a78bfa',
     desc: 'Off-site trust: llms.txt, agent.json, consistent NAP data across directories, citations in industry sources. The layer that tells AI you\'re real, established, and worth recommending.',
+    payoff: 'So off-site signals reinforce a foundation that\'s actually ready for them.',
   },
 ];
 
@@ -111,17 +115,30 @@ export default function F1Stack() {
                 </div>
 
                 {/* Description */}
-                <p
-                  className="font-inter"
-                  style={{
-                    fontSize: '16px',
-                    lineHeight: 1.65,
-                    color: 'var(--d-fg-dim)',
-                    fontWeight: 300,
-                  }}
-                >
-                  {layer.desc}
-                </p>
+                <div>
+                  <p
+                    className="font-inter mb-3"
+                    style={{
+                      fontSize: '16px',
+                      lineHeight: 1.65,
+                      color: 'var(--d-fg-dim)',
+                      fontWeight: 300,
+                    }}
+                  >
+                    {layer.desc}
+                  </p>
+                  <p
+                    className="font-inter"
+                    style={{
+                      fontSize: '14px',
+                      lineHeight: 1.6,
+                      color: 'var(--d-fg-mute)',
+                      fontStyle: 'italic',
+                    }}
+                  >
+                    {layer.payoff}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

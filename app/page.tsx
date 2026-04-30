@@ -31,7 +31,7 @@ export default function HomePage() {
               </h1>
 
               <p
-                className="font-inter mb-10"
+                className="font-inter mb-5"
                 style={{
                   fontSize: '18px',
                   lineHeight: 1.65,
@@ -42,6 +42,20 @@ export default function HomePage() {
               >
                 We rebuild your digital foundation on Next.js — engineered for AI readability,
                 structured for machine clarity, and owned by you forever.
+              </p>
+
+              <p
+                className="font-inter mb-10"
+                style={{
+                  fontSize: '17px',
+                  lineHeight: 1.6,
+                  color: 'var(--d-fg)',
+                  fontWeight: 400,
+                  maxWidth: '460px',
+                }}
+              >
+                So when someone asks an AI assistant &ldquo;who should I hire in my city?&rdquo;,
+                your name is the one it says.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -135,6 +149,97 @@ export default function HomePage() {
       <div id="framework">
         <F1Stack />
       </div>
+
+      {/* ─── 3a. Scenario vignette ───────────────────────────── */}
+      <section style={{ padding: '80px 32px', backgroundColor: 'var(--d-bg-2)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div className="d-eyebrow mb-8">WHAT THIS LOOKS LIKE IN REAL LIFE</div>
+
+          <div
+            style={{
+              background: 'var(--d-bg-3)',
+              border: '1px solid var(--d-line)',
+              borderLeft: '3px solid var(--d-accent)',
+              borderRadius: '16px',
+              padding: '40px 44px',
+            }}
+          >
+            <p
+              className="font-inter mb-6"
+              style={{ fontSize: '17px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              Someone in Bellevue asks their phone:{' '}
+              <span style={{ color: 'var(--d-fg)', fontWeight: 500 }}>
+                &ldquo;Who&apos;s the best estate planning attorney near me?&rdquo;
+              </span>
+            </p>
+
+            <p
+              className="font-inter mb-4"
+              style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              The AI doesn&apos;t search keywords. It checks which firms exist as clean, verified
+              entities — business, attorney, services, location, credentials, reviews — all
+              connected and machine-readable.
+            </p>
+
+            <p
+              className="font-inter mb-4"
+              style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            >
+              Most firms can&apos;t be confidently identified. They get skipped.
+            </p>
+
+            <p
+              className="font-inter mb-0"
+              style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--d-fg)', fontWeight: 500 }}
+            >
+              The ones that can? Those are the names the AI says out loud.
+              KodeCite makes sure that&apos;s your name.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 3b. What You Get — abbreviated checklist ────────── */}
+      <section style={{ padding: '64px 32px 80px', backgroundColor: 'var(--d-bg-2)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p
+            className="font-mono mb-6"
+            style={{ fontSize: '11px', letterSpacing: '0.18em', color: 'var(--d-fg-mute)' }}
+          >
+            WHAT YOU GET
+          </p>
+
+          <div className="flex flex-col gap-3">
+            {[
+              'Custom Next.js site, server-rendered, AI-readable on cold load',
+              'Full entity graph: business, founder, services, credentials, location',
+              'llms.txt + agent.json deployed (machine-readable identity for AI agents)',
+              'Sub-1s verified load time, edge-deployed globally',
+              'You own everything: GitHub repo + Vercel account, no lock-in',
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <span style={{ color: 'var(--d-ok)', flexShrink: 0, fontSize: '14px', marginTop: '2px' }}>
+                  ✓
+                </span>
+                <span
+                  className="font-inter"
+                  style={{ fontSize: '15px', color: 'var(--d-fg-dim)', lineHeight: 1.6, fontWeight: 300 }}
+                >
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8">
+            <Link href="/services" className="d-btn d-btn-ghost">
+              See Full Scope →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ─── 4. Entity Differentiator ────────────────────────── */}
       <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)' }}>
@@ -230,7 +335,7 @@ export default function HomePage() {
           <div className="d-eyebrow mb-6">WHO IT&apos;S FOR</div>
 
           <h2
-            className="font-inter font-semibold mb-4"
+            className="font-inter font-semibold mb-3"
             style={{
               fontSize: 'clamp(32px, 4vw, 52px)',
               lineHeight: 1.07,
@@ -244,11 +349,25 @@ export default function HomePage() {
           </h2>
 
           <p
-            className="font-inter mb-12"
+            className="font-inter mb-5"
             style={{
               fontSize: '17px',
-              lineHeight: 1.65,
+              lineHeight: 1.5,
               color: 'var(--d-fg-dim)',
+              fontWeight: 400,
+              maxWidth: '600px',
+            }}
+          >
+            Independent and owner-operated businesses that want to own their local category
+            before roll-ups and nationals dominate AI recommendations.
+          </p>
+
+          <p
+            className="font-inter mb-12"
+            style={{
+              fontSize: '15px',
+              lineHeight: 1.65,
+              color: 'var(--d-fg-mute)',
               fontWeight: 300,
               maxWidth: '560px',
             }}
@@ -471,11 +590,19 @@ export default function HomePage() {
           </h2>
 
           <p
-            className="font-inter mb-10"
+            className="font-inter mb-6"
             style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
           >
             One conversation. No pitch. We&apos;ll show you exactly what AI can and can&apos;t verify
             about your business right now — and what it would take to fix it.
+          </p>
+
+          <p
+            className="font-inter mb-10"
+            style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-mute)', fontWeight: 300 }}
+          >
+            If some of this feels abstract, that&apos;s normal. The Machine Read shows you in plain
+            English what AI can and can&apos;t see about your business today.
           </p>
 
           <div
