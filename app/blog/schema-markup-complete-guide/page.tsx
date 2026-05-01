@@ -298,7 +298,7 @@ export default function SchemaMarkupGuide() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">SCHEMA TYPES COVERED</p>
                   <div className="space-y-3">
                     {[
@@ -318,7 +318,7 @@ export default function SchemaMarkupGuide() {
                   </div>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Get Your Schema Validated
                   </p>
@@ -330,7 +330,7 @@ export default function SchemaMarkupGuide() {
                   </Link>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/what-is-zero-click-search" className="block group">

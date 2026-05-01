@@ -206,7 +206,7 @@ export default function FacebookAdsLocalBusiness() {
                 </p>
 
                 {/* Flywheel visual */}
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">THE FLYWHEEL LAYERS</p>
                   <div className="space-y-3">
                     {[
@@ -291,7 +291,7 @@ export default function FacebookAdsLocalBusiness() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">FLYWHEEL BENCHMARKS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
@@ -309,7 +309,7 @@ export default function FacebookAdsLocalBusiness() {
                   </div>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Build the Flywheel for Your Business
                   </p>
@@ -321,7 +321,7 @@ export default function FacebookAdsLocalBusiness() {
                   </Link>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/custom-audiences-facebook" className="block group">

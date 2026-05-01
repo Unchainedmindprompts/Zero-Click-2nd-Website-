@@ -183,7 +183,7 @@ export default function WordPressLosingAISearch() {
                 </p>
 
                 {/* Comparison box */}
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">PERFORMANCE COMPARISON</p>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-4 bg-[var(--d-bg)] rounded-lg border border-white/5">
@@ -323,7 +323,7 @@ export default function WordPressLosingAISearch() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Score Comparison */}
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">LIGHTHOUSE SCORES</p>
                   <div className="space-y-4">
                     <div>
@@ -349,7 +349,7 @@ export default function WordPressLosingAISearch() {
                 </div>
 
                 {/* CTA Card */}
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Still on WordPress, Wix, or Squarespace?
                   </p>
@@ -362,7 +362,7 @@ export default function WordPressLosingAISearch() {
                 </div>
 
                 {/* Related Posts */}
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/vercel-vs-wordpress-performance" className="block group">

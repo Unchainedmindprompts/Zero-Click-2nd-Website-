@@ -349,7 +349,7 @@ export default function WhenCustomerStopsSearchingPage() {
               </p>
 
               {/* Closing CTA */}
-              <div className="bg-[var(--d-bg-3)] rounded-xl p-8 mt-12 mb-8">
+              <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-8 mt-12 mb-8">
                 <p className="font-inter font-semibold text-[var(--d-accent)] mb-3">Not sure where you stand?</p>
                 <p className="font-inter text-[var(--d-fg-mute)] leading-relaxed mb-5">
                   Get a free AI Scaffolding Audit — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews. By the end of the audit, you&apos;ll know whether you can get away with tuning what you already have or whether you&apos;re better off with a rebuild. No pitch. No pressure.
@@ -392,7 +392,7 @@ export default function WhenCustomerStopsSearchingPage() {
                   </div>
                 </div>
 
-                <div className="bg-[var(--d-bg-3)] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-3">Free Audit</p>
                   <p className="font-inter text-xl text-white mb-3">Find Out Where You Stand</p>
                   <p className="font-inter text-sm text-[var(--d-fg-mute)] mb-5 leading-relaxed">See exactly how your business appears in AI today — and whether your infrastructure is ready for what&apos;s coming.</p>

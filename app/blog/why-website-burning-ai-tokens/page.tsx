@@ -271,7 +271,7 @@ export default function WhyWebsiteBurningAITokens() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">TOKEN EFFICIENCY CHECKLIST</p>
                   <div className="space-y-3">
                     {[
@@ -293,7 +293,7 @@ export default function WhyWebsiteBurningAITokens() {
                   </div>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Is Your Site Burning AI Tokens?
                   </p>
@@ -305,7 +305,7 @@ export default function WhyWebsiteBurningAITokens() {
                   </Link>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/wordpress-losing-ai-search" className="block group">

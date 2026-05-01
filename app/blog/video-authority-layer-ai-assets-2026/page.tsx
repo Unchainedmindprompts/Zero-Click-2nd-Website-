@@ -182,7 +182,7 @@ export default function VideoAuthorityLayer2026() {
                   We implement complete VideoObject structured data on every intent-driven page that features video content. Not partial schema — full implementation. Every property is a signal to AI systems about what this content is, who made it, and whether it can be trusted:
                 </p>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">VIDEOOBJECT SCHEMA PROPERTIES WE IMPLEMENT</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
@@ -216,7 +216,7 @@ export default function VideoAuthorityLayer2026() {
                   The Compounding Loop
                 </h2>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">THE COMPOUNDING LOOP</p>
                   <div className="space-y-2">
                     {[
@@ -247,7 +247,7 @@ export default function VideoAuthorityLayer2026() {
                   The Hybrid Ramp Strategy
                 </h2>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">THREE-PHASE RAMP</p>
                   <div className="space-y-4">
                     {[
@@ -311,7 +311,7 @@ export default function VideoAuthorityLayer2026() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">THE VIDEO AUTHORITY GAP</p>
                   <div className="space-y-4">
                     <div className="border-b border-[var(--d-line)] pb-4">
@@ -329,7 +329,7 @@ export default function VideoAuthorityLayer2026() {
                   </div>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(160,114,58,0.3)] p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Turn Your Videos Into AI Assets
                   </p>
@@ -341,7 +341,7 @@ export default function VideoAuthorityLayer2026() {
                   </Link>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">

@@ -200,7 +200,7 @@ export default function NextJsVsWordPress() {
                 </p>
 
                 {/* Data comparison box */}
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">TEST RESULTS — MOBILE AVERAGES</p>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm font-inter">
@@ -303,7 +303,7 @@ export default function NextJsVsWordPress() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">KEY NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
@@ -321,7 +321,7 @@ export default function NextJsVsWordPress() {
                   </div>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Ready to See Your Numbers?
                   </p>
@@ -333,7 +333,7 @@ export default function NextJsVsWordPress() {
                   </Link>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/wordpress-losing-ai-search" className="block group">
