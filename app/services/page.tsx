@@ -59,27 +59,27 @@ const breadcrumbSchema = {
 const pillars = [
   {
     n: '01', t: 'CHASSIS',
-    h: 'The structural foundation.',
-    d: 'Next.js 14 App Router. Server-rendered. Vercel hosting. Your code, your repo, your domain — handed off at completion.',
-    specs: ['Next.js 14 · TypeScript · Tailwind', 'Vercel deployment + domain config', 'GitHub repo transferred to your account'],
+    h: 'Infrastructure',
+    d: 'Next.js, Vercel edge deployment, server-side rendering, repository setup, deployment pipeline, domain configuration, performance budgets.',
+    specs: ['Next.js · App Router · TypeScript · Tailwind', 'Vercel deployment + domain config', 'Real Core Web Vitals — not Lighthouse cosplay'],
   },
   {
     n: '02', t: 'ENGINE',
-    h: 'How machines understand you.',
-    d: 'Anchored JSON-LD entity graph. Four root @id nodes (Organization, Person, Service, WebSite) cross-referenced from every page. llms.txt and agent.json at the root. AI-legible by construction.',
+    h: 'Entity Graph',
+    d: 'Schema.org deployed correctly, anchored @id references, JSON-LD per page, llms.txt, agent.json, BlogPosting, FAQPage, BreadcrumbList schema.',
     specs: ['Schema.org · anchored entity graph', 'llms.txt + agent.json deployed', 'BlogPosting · FAQPage · BreadcrumbList per post'],
   },
   {
     n: '03', t: 'AERO',
-    h: 'How fast it actually moves.',
-    d: 'Performance budgets enforced at build. Static generation where possible. Real Core Web Vitals — not Lighthouse cosplay. Sub-second perceived load on the routes that matter.',
-    specs: ['LCP < 1.8s · CLS < 0.05 · INP < 200ms', 'Static generation + edge runtime', 'Image optimization + font subsetting'],
+    h: 'Answer-First Content Architecture',
+    d: 'Route map, page structure, FAQ blocks, internal linking, extraction-ready pages, content migration.',
+    specs: ['Answer-first H1 structure · FAQ blocks', 'Internal linking + entity references', 'Extraction-ready pages + content migration'],
   },
   {
     n: '04', t: 'GRAPHICS',
-    h: 'How humans experience it.',
-    d: 'A design system, not a template. Every page built from a documented set of tokens, primitives, and patterns — so future edits stay consistent and you (or your dev) can extend it without it falling apart.',
-    specs: ['Design system + component library', 'Documented tokens + patterns', 'Editorial content surfaces, not blog templates'],
+    h: 'Authority Signals',
+    d: 'Design system, component library, visual trust elements, directory launch, NAP and citation alignment across authoritative sources.',
+    specs: ['Design system + component library', 'Directory launch: Google, Bing, Apple, Yelp, BBB', 'NAP + citation alignment'],
   },
 ];
 
@@ -349,6 +349,64 @@ export default function ServicesPage() {
                 </ul>
               </article>
             ))}
+          </div>
+
+          {/* Verification — fifth concept, not a fifth F1 layer */}
+          <div
+            style={{
+              borderTop: '1px solid var(--d-line-s)',
+              marginBottom: '16px',
+              paddingTop: '16px',
+            }}
+          >
+            <article
+              style={{
+                background: 'var(--d-bg-3)',
+                border: '1px solid var(--d-line)',
+                borderLeft: '3px solid var(--d-ok)',
+                borderRadius: '12px',
+                padding: '28px 32px',
+                marginBottom: '16px',
+              }}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-ok)' }}>
+                  VERIFICATION
+                </span>
+              </div>
+              <h3
+                className="font-inter font-semibold mb-3"
+                style={{ fontSize: '17px', lineHeight: 1.25, letterSpacing: '-0.01em', color: 'var(--d-fg)' }}
+              >
+                The trust layer.
+              </h3>
+              <p
+                className="font-inter mb-5"
+                style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+              >
+                Schema alone isn&apos;t trust. The entity graph has to match the real business across
+                every authoritative source. We review and align Google Business Profile, Bing Places,
+                Apple Maps, Yelp, BBB, licensing profiles, NAP consistency, and address and
+                service-area strategy so AI systems and search engines see one coherent identity,
+                not contradictions.
+              </p>
+              <ul className="flex flex-col gap-1">
+                {[
+                  'Directory and profile audit across Google, Bing, Apple, Yelp, BBB',
+                  'NAP and sameAs alignment across all authoritative sources',
+                  'GBP and service-area risk review for licensed and shared-office practitioners',
+                  'Address strategy verification (storefront vs. service-area vs. brokerage location)',
+                ].map((s) => (
+                  <li
+                    key={s}
+                    className="font-mono"
+                    style={{ fontSize: '10px', letterSpacing: '0.08em', color: 'var(--d-fg-mute)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </article>
           </div>
 
           {/* Deliverables */}
