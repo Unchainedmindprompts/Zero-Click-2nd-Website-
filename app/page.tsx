@@ -167,7 +167,7 @@ export default function HomePage() {
             >
               AI systems don&apos;t reward content volume or review count — they reward businesses
               with machine-readable foundations: server-rendered infrastructure, structured entity
-              graphs, and answer-first content architecture. Your platform can&apos;t build that. We can.
+              graphs, and answer-first content architecture. Your platform was not designed for that. KodeCite is.
             </p>
           </div>
 
@@ -532,7 +532,7 @@ export default function HomePage() {
                 <div className="flex flex-col gap-4">
                   {[
                     'Custom Next.js site — server-rendered, edge-deployed, AI-readable on cold load',
-                    'Built for AI Overviews. Wins traditional Google + Bing as a byproduct.',
+                    'Built for AI Overviews. Strengthens traditional Google + Bing visibility as a byproduct.',
                     'Full entity graph: business, founder, services, credentials, location, @id anchors',
                     'Custom JSON-LD per page — built as code, not plugin output',
                     'llms.txt + agent.json deployed on every build',
