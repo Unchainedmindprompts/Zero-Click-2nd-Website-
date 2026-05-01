@@ -366,7 +366,7 @@ export default function HomePage() {
               >
                 This isn&apos;t just an AI play. The same structure that wins AI Overview citations
                 is what&apos;s been quietly winning Google rankings since 2012 — Google has been an
-                entity-based search engine for over a decade. Most marketers just stopped pretending
+                entity-based search engine for over a decade. Most marketers just kept pretending
                 content was the leverage.
               </p>
 
@@ -389,9 +389,9 @@ export default function HomePage() {
                   className="font-inter text-sm"
                   style={{ color: 'var(--d-fg-dim)', lineHeight: 1.65 }}
                 >
-                  Without an entity graph, AI cannot verify your business exists. With one,
-                  every AI system can confirm who you are, what you do, and why you&apos;re credible —
-                  before a single user asks.
+                  Without a clean entity graph, AI has to infer who you are from scattered signals.
+                  With one, every major system gets a clear, consistent path to confirm who you are,
+                  what you do, where you operate, and why you&apos;re credible — before a single user asks.
                 </p>
               </div>
             </div>
@@ -502,17 +502,17 @@ export default function HomePage() {
                 className="font-inter mb-6"
                 style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
               >
-                One fixed-scope engagement. We build your complete AI-visible digital foundation —
-                infrastructure, entity graph, content architecture, and authority signals —
-                then hand you the keys. No retainer. No lock-in. No platform rent.
+                The Foundation Build is a defined-scope, fixed-price engagement. We build your
+                complete AI-visible digital foundation — infrastructure, entity graph, content
+                architecture, and authority signals — then hand you the keys.
               </p>
 
               <p
                 className="font-inter mb-10"
                 style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-dim)' }}
               >
-                A defined-scope, fixed-price engagement. No retainers.
-                You own everything we build.
+                No retainer. No lock-in. No platform rent. You own everything: the codebase,
+                the GitHub repo, and the Vercel account.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
