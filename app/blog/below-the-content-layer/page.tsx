@@ -120,39 +120,39 @@ export default function BelowTheContentLayer() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#f8f5f0] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-poppins text-[#6a5a48] mb-8">
-            <Link href="/" className="hover:text-[#a0723a] transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
+            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            <Link href="/blog" className="hover:text-[#a0723a] transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            <span className="text-[#0a0806] truncate">Below The Content Layer</span>
+            <span className="text-[var(--d-fg)] truncate">Below The Content Layer</span>
           </nav>
 
           <div className="flex items-center gap-3 mb-6">
             <span className="category-tag">AEO &amp; AI Search</span>
-            <span className="text-[#6a5a48] text-sm font-poppins">10 min read</span>
+            <span className="text-[var(--d-fg-dim)] text-sm font-inter">10 min read</span>
           </div>
 
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight">
+          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
             Below The Content Layer —{' '}
-            <span className="text-[#a0723a]">Where Your Real SEO, AEO &amp; GEO Opportunity Lives</span>
+            <span className="text-[var(--d-accent)]">Where Your Real SEO, AEO &amp; GEO Opportunity Lives</span>
           </h1>
 
-          <p className="text-[#6a5a48] text-xl font-poppins leading-relaxed max-w-3xl">
+          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
             The content layer conversation is everywhere right now — and most of it stops too soon. Here is the layer underneath that determines whether AI recommends you or skips you entirely.
           </p>
 
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
+          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[var(--d-line)]">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-poppins">MA</span>
+                <span className="text-[#f8f5f0] font-bold text-sm font-inter">MA</span>
               </div>
               <div>
-                <p className="text-[#0a0806] text-sm font-semibold font-poppins">Mark Abplanalp</p>
-                <p className="text-[#6a5a48] text-xs font-poppins">April 22, 2026</p>
+                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
+                <p className="text-[var(--d-fg-dim)] text-xs font-inter">April 22, 2026</p>
               </div>
             </div>
           </div>
@@ -162,275 +162,275 @@ export default function BelowTheContentLayer() {
       <div className="section-divider" />
 
       {/* Body + Sidebar — placeholder */}
-      <section className="py-16 bg-[#f8f5f0] px-4">
+      <section className="py-16 bg-[var(--d-bg)] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
             <article className="lg:col-span-2">
-              <div className="prose-content font-poppins">
+              <div className="prose-content font-inter">
 
-                <p className="text-[#6a5a48] text-lg leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-6">
                   The content layer conversation is everywhere right now — and most of it stops too soon.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Answer-first structure. Clean heading hierarchy. FAQs that anticipate the question. Semantic depth. Topical authority. Charts, data tables, pull quotes. Write for humans, structure for machines.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   It&apos;s good advice. All of it. And most of the conversation stops there.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Because underneath every piece of content — underneath every carefully structured answer, every FAQ, every semantically rich paragraph — there is a layer that determines whether AI recommends you or skips you. A layer that the content strategy conversation hasn&apos;t fully reached yet.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   That layer is your entity graph. And almost no one has one built correctly.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">What Everyone Is Getting Right</h2>
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">The content layer advice is valid — and incomplete</h3>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-2">What Everyone Is Getting Right</h2>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">The content layer advice is valid — and incomplete</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The content layer conversation is happening for good reason. AI search systems reward well-structured, answer-first content. Perplexity, ChatGPT, and Google AI Overviews pull from pages that are organized clearly, answer specific questions directly, and demonstrate genuine topical depth.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   If you&apos;ve been restructuring your content, adding FAQ sections, building semantic clusters — you&apos;re doing the right things. Keep doing them.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   But here&apos;s what that advice can&apos;t explain: why two businesses in the same market, with similar content quality, show up completely differently in AI search. Why one gets cited consistently and the other gets ignored — or worse, gets its credentials hallucinated or its services misrepresented.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   The answer isn&apos;t in the content. It&apos;s in what sits underneath it.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">The Layer Most Conversations Miss</h2>
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">Schema.org has been the language of the internet for 15 years</h3>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-2">The Layer Most Conversations Miss</h2>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">Schema.org has been the language of the internet for 15 years</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   In 2011, the four largest search engines on the planet — Google, Microsoft, Yahoo, and Yandex — built a shared language for the internet. A structured vocabulary that lets machines understand what a business is, who runs it, what it offers, where it operates, and why it should be trusted. They called it Schema.org.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   When implemented correctly Schema.org builds your entity graph — a single, coherent, machine-readable identity connecting every element of your business across every page of your site. Every entity connected through stable identity anchors that AI crawlers can traverse in one pass.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   If you want the full breakdown of what an entity graph is and why it matters, we&apos;ve covered it in depth{' '}
-                  <Link href="/blog/what-is-an-entity-graph" className="text-[#a0723a] hover:underline">here</Link>.
+                  <Link href="/blog/what-is-an-entity-graph" className="text-[var(--d-accent)] hover:underline">here</Link>.
                   {' '}For this article the important thing is understanding what sits below the content layer — and why most businesses don&apos;t have it built correctly.
                 </p>
 
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">A detailed page tells AI what you know. An entity graph tells AI who you are.</h3>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">A detailed page tells AI what you know. An entity graph tells AI who you are.</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   Those are completely different problems. And the content layer only solves the first one.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">Why AI Verification Changes Everything</h2>
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">AI doesn&apos;t infer — it verifies</h3>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-2">Why AI Verification Changes Everything</h2>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">AI doesn&apos;t infer — it verifies</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Traditional search was forgiving. Google crawled your site, inferred meaning from your content, filled in the gaps, and ranked you anyway. Ambiguity was tolerable because humans resolved it — they clicked your link and made their own judgment.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6 font-medium" style={{ color: '#0a0806' }}>
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6 font-medium" style={{ color: '#0a0806' }}>
                   AI isn&apos;t forgiving.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   AI systems don&apos;t infer. They don&apos;t fill gaps. They synthesize, select, and recommend — based entirely on what they can structurally verify about your business. If the structured signals aren&apos;t there, they move to the next business that gave them something to work with.
                 </p>
 
-                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">Retrieval and verification are two different problems</h3>
+                <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">Retrieval and verification are two different problems</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-4">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
                   There are two distinct things AI does when it encounters your business:
                 </p>
 
                 <ul className="space-y-3 mb-6 pl-4">
-                  <li className="flex items-start gap-3 text-[#6a5a48] leading-relaxed">
-                    <span className="text-[#a0723a] font-bold mt-0.5 flex-shrink-0">1.</span>
-                    <span><strong className="text-[#0a0806]">It reads your content.</strong> Structure, semantics, topical depth — the content layer handles this.</span>
+                  <li className="flex items-start gap-3 text-[var(--d-fg-dim)] leading-relaxed">
+                    <span className="text-[var(--d-accent)] font-bold mt-0.5 flex-shrink-0">1.</span>
+                    <span><strong className="text-[var(--d-fg)]">It reads your content.</strong> Structure, semantics, topical depth — the content layer handles this.</span>
                   </li>
-                  <li className="flex items-start gap-3 text-[#6a5a48] leading-relaxed">
-                    <span className="text-[#a0723a] font-bold mt-0.5 flex-shrink-0">2.</span>
-                    <span><strong className="text-[#0a0806]">It verifies your identity.</strong> Who is behind this content. What business they represent. How long they&apos;ve been doing it. Whether external signals confirm the same identity.</span>
+                  <li className="flex items-start gap-3 text-[var(--d-fg-dim)] leading-relaxed">
+                    <span className="text-[var(--d-accent)] font-bold mt-0.5 flex-shrink-0">2.</span>
+                    <span><strong className="text-[var(--d-fg)]">It verifies your identity.</strong> Who is behind this content. What business they represent. How long they&apos;ve been doing it. Whether external signals confirm the same identity.</span>
                   </li>
                 </ul>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6 my-8">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6 my-8">
                   <p className="eyebrow mb-3 text-xs">THE VERIFICATION PROBLEM</p>
-                  <p className="text-[#3a2e24] font-poppins text-sm leading-relaxed">
+                  <p className="text-[#3a2e24] font-inter text-sm leading-relaxed">
                     Being retrieved gets you in the room. Being verified gets you cited. Even the richest, most semantically perfect content is authorless to a machine if the identity layer underneath it is broken or missing.
                   </p>
                 </div>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   AI can extract an answer from your content. But it can&apos;t recommend the business behind it with confidence — because it can&apos;t verify one exists.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   This is exactly why plugin-generated schema — which was adequate for traditional search — fails in the AI era. Traditional search forgave the gaps. AI exposes them.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">The Plugin Problem</h2>
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">Most businesses have schema — and most of it isn&apos;t working</h3>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-2">The Plugin Problem</h2>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">Most businesses have schema — and most of it isn&apos;t working</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Most businesses do have schema. It was installed when the website was built. A plugin was configured, an industry was selected, a few options were toggled. For traditional search, that was often enough to get by.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6 font-medium" style={{ color: '#0a0806' }}>
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6 font-medium" style={{ color: '#0a0806' }}>
                   It&apos;s not enough anymore.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   To be fair — plugins like Rank Math, Yoast, and Schema Pro are useful starting points. They lower the barrier to entry and they&apos;re better than nothing. But there&apos;s a meaningful difference between schema that exists and schema that&apos;s engineered.
                 </p>
 
-                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">Plugins generate fragments, not entity graphs</h3>
+                <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">Plugins generate fragments, not entity graphs</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
-                  What plugins generate are disconnected blocks — a generic LocalBusiness type here, an Article there, no stable <code className="bg-[#f2ede4] px-1.5 py-0.5 rounded text-[#a0723a] text-sm">@id</code> anchors connecting them into a coherent identity across the site. The machine reads it and finds fragments. And even when the initial implementation is passable, plugins drift. Updates break things. A theme generates its own schema that conflicts with the plugin. A second plugin gets installed that creates duplicate markup. Conflicting signals accumulate silently over time.
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
+                  What plugins generate are disconnected blocks — a generic LocalBusiness type here, an Article there, no stable <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code> anchors connecting them into a coherent identity across the site. The machine reads it and finds fragments. And even when the initial implementation is passable, plugins drift. Updates break things. A theme generates its own schema that conflicts with the plugin. A second plugin gets installed that creates duplicate markup. Conflicting signals accumulate silently over time.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   A plugin isn&apos;t schema. It&apos;s the start of schema — one that requires ongoing engineering discipline to maintain correctly.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   Schema hygiene isn&apos;t a one-time task. Most plugins weren&apos;t built to support it at that level.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">Why This Happened</h2>
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">The wrong people got handed the most important job</h3>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-2">Why This Happened</h2>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">The wrong people got handed the most important job</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Schema has always been classified as technical SEO. That classification put schema in the hands of marketers and agencies who treated it as a checklist item — install the plugin, select the industry, move on.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The problem is that schema implemented correctly has nothing to do with how marketers think or work. Building a coherent entity graph with stable identity anchors, consistent entity relationships across every page, and server-side delivery that AI crawlers can actually parse — that&apos;s software engineering.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
                   It always was. It just got sold as a plugin setting.
                 </p>
 
-                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">Nobody noticed because traditional search was forgiving</h3>
+                <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">Nobody noticed because traditional search was forgiving</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The most important layer of SEO got handed to the wrong people with the wrong tools for 15 years. Nobody&apos;s fault. Traditional search was forgiving enough that the gap between adequate and correct was invisible.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   AI makes that gap visible.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">What Correct Implementation Actually Looks Like</h2>
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">Entity graph infrastructure is engineered, not configured</h3>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-2">What Correct Implementation Actually Looks Like</h2>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">Entity graph infrastructure is engineered, not configured</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   A correctly built entity graph isn&apos;t a plugin setting. It&apos;s engineered infrastructure.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
-                  Custom JSON-LD written in code — deliberate, validated, and specific to every page. Stable <code className="bg-[#f2ede4] px-1.5 py-0.5 rounded text-[#a0723a] text-sm">@id</code> anchors that create a consistent identity network the machine can traverse from any entry point. The business entity, the founder, the services, the locations — all connected and consistent across the entire site.
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
+                  Custom JSON-LD written in code — deliberate, validated, and specific to every page. Stable <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code> anchors that create a consistent identity network the machine can traverse from any entry point. The business entity, the founder, the services, the locations — all connected and consistent across the entire site.
                 </p>
 
-                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">What clean entity graph infrastructure eliminates</h3>
+                <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">What clean entity graph infrastructure eliminates</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   No conflicts. No duplicates. No platform override generating its own schema on top of yours. No plugin drift creating broken entity relationships over time.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Server-side delivery that AI crawlers can parse on a cold load. And ongoing hygiene — every new page, every content update, every service addition keeps the entity graph consistent because it&apos;s managed in code, not maintained manually through a dashboard.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
                   This is what it looks like when schema is treated as engineering rather than marketing.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">The Window</h2>
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">The entity graph layer is still largely empty</h3>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-2">The Window</h2>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">The entity graph layer is still largely empty</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The businesses building correct entity graph infrastructure right now are accumulating an advantage that compounds every month.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Every month an entity graph exists, it accumulates more citation signals, more cross-platform verification, more AI crawler trust. This isn&apos;t pay-to-play. It&apos;s build-to-earn.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   The content layer conversation is valuable — but it&apos;s also becoming crowded. Everyone is restructuring their content. Everyone is adding FAQs. Everyone is chasing topical authority.
                 </p>
 
-                <h3 className="font-playfair font-bold text-xl text-[#0a0806] mt-8 mb-4">The first-mover advantage is real and time-limited</h3>
+                <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">The first-mover advantage is real and time-limited</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The entity graph layer is still largely empty. Most businesses don&apos;t know it exists. Most agencies are still developing the capability to build it correctly. Most platforms structurally can&apos;t support it.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   That gap won&apos;t stay open forever. The businesses that own the identity layer in their market today will be extraordinarily difficult to displace once it closes.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-2">Find Out Where You Stand</h2>
-                <h3 className="font-poppins text-base font-semibold text-[#a0723a] mb-4 leading-snug">The fastest way to audit your entity graph</h3>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-2">Find Out Where You Stand</h2>
+                <h3 className="font-inter text-base font-semibold text-[var(--d-accent)] mb-4 leading-snug">The fastest way to audit your entity graph</h3>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Most businesses don&apos;t know what their entity graph looks like to a machine. They don&apos;t know whether AI is reading them clearly, reading them with gaps, or getting them wrong entirely.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The fastest way to audit it: paste your current schema markup into any major LLM — ChatGPT, Claude, Perplexity — and ask it to tell you what it can verify about your business. If it can clearly identify who runs the business, what services you offer, where you operate, what credentials you hold, and how long you&apos;ve been doing it, your entity graph is functioning. If it returns gaps, contradictions, or generic information pulled from somewhere else — your schema is producing noise, not signal.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-10">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
                   That test takes five minutes. What you do about the result is what separates the businesses that get cited from the ones that get skipped.
                 </p>
 
-                <div className="bg-[#1c1814] rounded-xl p-8 my-10">
-                  <p className="font-poppins font-bold text-xl text-[rgba(240,232,216,0.9)] mb-4 leading-snug">&ldquo;SEO gets you found. Entity infrastructure gets you cited.&rdquo;</p>
-                  <p className="text-[rgba(240,232,216,0.6)] text-sm font-poppins leading-relaxed">
+                <div className="bg-[var(--d-bg-3)] rounded-xl p-8 my-10">
+                  <p className="font-inter font-bold text-xl text-[var(--d-fg)] mb-4 leading-snug">&ldquo;SEO gets you found. Entity infrastructure gets you cited.&rdquo;</p>
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed">
                     The content layer is the conversation happening now. The identity layer below it is where the actual competitive gap is forming — and where most businesses haven&apos;t looked yet.
                   </p>
                 </div>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-6">Frequently Asked Questions</h2>
 
                 <div className="space-y-6 mb-10">
-                  <div className="border-b border-[rgba(100,70,30,0.2)] pb-6">
-                    <h3 className="font-poppins font-semibold text-[#0a0806] text-base mb-3">What is the content layer in SEO and why isn&apos;t it enough for AI search?</h3>
-                    <p className="text-[#6a5a48] leading-relaxed text-sm">The content layer refers to everything visible on your pages — structured answers, FAQ sections, heading hierarchy, semantic depth, and topical authority. It&apos;s necessary and AI search systems do reward it. But it only solves half the problem. AI systems don&apos;t just read your content — they verify the identity behind it. Without a correctly built entity graph underneath your content, AI can find your pages but can&apos;t confirm who&apos;s behind them — which means it won&apos;t recommend your business with confidence.</p>
+                  <div className="border-b border-[var(--d-line)] pb-6">
+                    <h3 className="font-inter font-semibold text-[var(--d-fg)] text-base mb-3">What is the content layer in SEO and why isn&apos;t it enough for AI search?</h3>
+                    <p className="text-[var(--d-fg-dim)] leading-relaxed text-sm">The content layer refers to everything visible on your pages — structured answers, FAQ sections, heading hierarchy, semantic depth, and topical authority. It&apos;s necessary and AI search systems do reward it. But it only solves half the problem. AI systems don&apos;t just read your content — they verify the identity behind it. Without a correctly built entity graph underneath your content, AI can find your pages but can&apos;t confirm who&apos;s behind them — which means it won&apos;t recommend your business with confidence.</p>
                   </div>
-                  <div className="border-b border-[rgba(100,70,30,0.2)] pb-6">
-                    <h3 className="font-poppins font-semibold text-[#0a0806] text-base mb-3">What is an entity graph and how does it differ from regular schema?</h3>
-                    <p className="text-[#6a5a48] leading-relaxed text-sm">An entity graph is Schema.org deployed correctly — every element of a business connected through stable identity anchors into a single machine-readable identity. Regular schema, typically generated by plugins, produces disconnected blocks that the machine reads as fragments. An entity graph connects every entity across every page into a coherent, traversable identity network.</p>
+                  <div className="border-b border-[var(--d-line)] pb-6">
+                    <h3 className="font-inter font-semibold text-[var(--d-fg)] text-base mb-3">What is an entity graph and how does it differ from regular schema?</h3>
+                    <p className="text-[var(--d-fg-dim)] leading-relaxed text-sm">An entity graph is Schema.org deployed correctly — every element of a business connected through stable identity anchors into a single machine-readable identity. Regular schema, typically generated by plugins, produces disconnected blocks that the machine reads as fragments. An entity graph connects every entity across every page into a coherent, traversable identity network.</p>
                   </div>
-                  <div className="border-b border-[rgba(100,70,30,0.2)] pb-6">
-                    <h3 className="font-poppins font-semibold text-[#0a0806] text-base mb-3">Why do plugins like Rank Math and Yoast fail to create a proper entity graph?</h3>
-                    <p className="text-[#6a5a48] leading-relaxed text-sm">Plugins are a useful starting point but they generate disconnected blocks rather than a connected identity network. They produce generic markup that drifts over time as updates break things, themes conflict, and duplicate signals accumulate. Schema hygiene — keeping the entity graph consistent, conflict-free, and current — requires ongoing engineering discipline that plugins weren&apos;t designed to provide.</p>
+                  <div className="border-b border-[var(--d-line)] pb-6">
+                    <h3 className="font-inter font-semibold text-[var(--d-fg)] text-base mb-3">Why do plugins like Rank Math and Yoast fail to create a proper entity graph?</h3>
+                    <p className="text-[var(--d-fg-dim)] leading-relaxed text-sm">Plugins are a useful starting point but they generate disconnected blocks rather than a connected identity network. They produce generic markup that drifts over time as updates break things, themes conflict, and duplicate signals accumulate. Schema hygiene — keeping the entity graph consistent, conflict-free, and current — requires ongoing engineering discipline that plugins weren&apos;t designed to provide.</p>
                   </div>
-                  <div className="border-b border-[rgba(100,70,30,0.2)] pb-6">
-                    <h3 className="font-poppins font-semibold text-[#0a0806] text-base mb-3">Why is proper schema implementation considered software engineering rather than SEO or marketing?</h3>
-                    <p className="text-[#6a5a48] leading-relaxed text-sm">Building a coherent entity graph requires custom JSON-LD written in code, stable identity anchors managed across every page, nested object relationships validated against a formal spec, and server-side delivery that AI crawlers can parse on a cold load. These are development tasks — not marketing tasks. Schema was classified as technical SEO which put it in the hands of practitioners who implemented it as a checkbox rather than an engineering deliverable. That mismatch is why most schema implementations fail.</p>
+                  <div className="border-b border-[var(--d-line)] pb-6">
+                    <h3 className="font-inter font-semibold text-[var(--d-fg)] text-base mb-3">Why is proper schema implementation considered software engineering rather than SEO or marketing?</h3>
+                    <p className="text-[var(--d-fg-dim)] leading-relaxed text-sm">Building a coherent entity graph requires custom JSON-LD written in code, stable identity anchors managed across every page, nested object relationships validated against a formal spec, and server-side delivery that AI crawlers can parse on a cold load. These are development tasks — not marketing tasks. Schema was classified as technical SEO which put it in the hands of practitioners who implemented it as a checkbox rather than an engineering deliverable. That mismatch is why most schema implementations fail.</p>
                   </div>
                   <div className="pb-6">
-                    <h3 className="font-poppins font-semibold text-[#0a0806] text-base mb-3">How do I know if my entity graph is working correctly?</h3>
-                    <p className="text-[#6a5a48] leading-relaxed text-sm">Paste your site&apos;s schema into an LLM and ask it what it can verify about your business. If it can clearly identify who runs the business, what services you offer, where you operate, what credentials you hold, and how long you&apos;ve been doing it — your entity graph is working. If it returns gaps, contradictions, or generic information — your schema is producing noise rather than signal.</p>
+                    <h3 className="font-inter font-semibold text-[var(--d-fg)] text-base mb-3">How do I know if my entity graph is working correctly?</h3>
+                    <p className="text-[var(--d-fg-dim)] leading-relaxed text-sm">Paste your site&apos;s schema into an LLM and ask it what it can verify about your business. If it can clearly identify who runs the business, what services you offer, where you operate, what credentials you hold, and how long you&apos;ve been doing it — your entity graph is working. If it returns gaps, contradictions, or generic information — your schema is producing noise rather than signal.</p>
                   </div>
                 </div>
 
                 <div className="mt-8">
-                  <Link href="/blog" className="inline-flex items-center gap-2 text-[#a0723a] font-semibold font-poppins text-sm hover:underline">
+                  <Link href="/blog" className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter text-sm hover:underline">
                     <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                     Back to The Playbook
                   </Link>
@@ -442,49 +442,49 @@ export default function BelowTheContentLayer() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6">
                   <p className="eyebrow mb-4 text-xs">THE NUMBERS</p>
                   <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-2xl font-poppins">15 yrs</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">Schema.org has been the language of the internet — almost no business uses it correctly</p>
+                    <div className="border-b border-[var(--d-line)] pb-4">
+                      <p className="text-[var(--d-accent)] font-bold text-2xl font-inter">15 yrs</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">Schema.org has been the language of the internet — almost no business uses it correctly</p>
                     </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-2xl font-poppins">&lt;10%</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">of businesses have a properly connected entity graph underneath their content</p>
+                    <div className="border-b border-[var(--d-line)] pb-4">
+                      <p className="text-[var(--d-accent)] font-bold text-2xl font-inter">&lt;10%</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of businesses have a properly connected entity graph underneath their content</p>
                     </div>
                     <div>
-                      <p className="text-[#a0723a] font-bold text-2xl font-poppins">2 problems</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">content layer + identity layer — most strategies only address one</p>
+                      <p className="text-[var(--d-accent)] font-bold text-2xl font-inter">2 problems</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">content layer + identity layer — most strategies only address one</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(160,114,58,0.3)] p-6">
-                  <p className="font-poppins font-bold text-[#0a0806] text-lg mb-3 leading-snug">Find Out If AI Can Read You</p>
-                  <p className="text-[#6a5a48] text-sm font-poppins leading-relaxed mb-5">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(160,114,58,0.3)] p-6">
+                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">Find Out If AI Can Read You</p>
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your entity graph and show you exactly what AI systems can and can&apos;t verify about your business right now.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get Your Free AEO Audit</Link>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/f1-framework-for-aeo" className="block group">
-                      <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">The F1 Framework for AEO: Why Most Businesses Are Trying to Win the AI Race in an Economy Car</p>
-                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">12 min read</p>
+                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">The F1 Framework for AEO: Why Most Businesses Are Trying to Win the AI Race in an Economy Car</p>
+                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                     </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
+                    <div className="border-t border-[var(--d-line)] pt-4">
                       <Link href="/blog/what-is-an-entity-graph" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight</p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">14 min read</p>
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">14 min read</p>
                       </Link>
                     </div>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
+                    <div className="border-t border-[var(--d-line)] pt-4">
                       <Link href="/blog/the-shortlist-problem" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">The Shortlist Problem: Why AI Recommends Three Businesses — and Why Yours Isn&apos;t One of Them</p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">9 min read</p>
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">The Shortlist Problem: Why AI Recommends Three Businesses — and Why Yours Isn&apos;t One of Them</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
                       </Link>
                     </div>
                   </div>
@@ -500,15 +500,15 @@ export default function BelowTheContentLayer() {
       <div className="section-divider" />
 
       {/* CTA */}
-      <section className="py-20 bg-[#1c1814] px-4">
+      <section className="py-20 bg-[var(--d-bg-3)] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">THE CONTENT LAYER IS NECESSARY — IT&apos;S JUST NOT SUFFICIENT</p>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-[rgba(240,232,216,0.9)] mb-4">
+          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
             Below the Content Layer Is Where Your Real Opportunity Lives
           </h2>
-          <p className="text-[rgba(240,232,216,0.6)] font-poppins mb-8 leading-relaxed">
+          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
             Most of your competitors haven&apos;t looked there yet. Start with a{' '}
-            <Link href="/contact" className="text-[#a0723a] hover:underline">free AEO Audit</Link>{' '}
+            <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
             and find out exactly what AI can and can&apos;t verify about your business right now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

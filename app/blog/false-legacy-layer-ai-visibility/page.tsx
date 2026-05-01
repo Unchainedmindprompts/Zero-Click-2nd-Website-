@@ -160,7 +160,7 @@ export default function FalseLegacyLayer() {
             Your business is showing up in AI answers — but is it earned authority or borrowed time? Here&apos;s the truth about the False Legacy Layer and what it means for your market position.
           </p>
 
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
+          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[var(--d-line)]">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
                 <span className="text-[#f8f5f0] font-bold text-sm font-inter">MA</span>
@@ -175,7 +175,7 @@ export default function FalseLegacyLayer() {
       </section>
 
       {/* Hero Image */}
-      <section className="bg-[#f8f5f0] px-4 pb-12">
+      <section className="bg-[var(--d-bg)] px-4 pb-12">
         <div className="max-w-4xl mx-auto">
           <Image
             src="/images/false-legacy-hero.png"
@@ -465,7 +465,7 @@ export default function FalseLegacyLayer() {
                   Find out how close you are to losing — or locking in — your position.
                 </p>
 
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
+                <div className="mt-12 pt-8 border-t border-[var(--d-line)]">
                   <Link
                     href="/blog"
                     className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
@@ -483,14 +483,14 @@ export default function FalseLegacyLayer() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6">
                   <p className="eyebrow mb-4 text-xs">THE RISK REALITY</p>
                   <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
+                    <div className="border-b border-[var(--d-line)] pb-4">
                       <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">1</p>
                       <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">structured competitor can erase your AI position overnight</p>
                     </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
+                    <div className="border-b border-[var(--d-line)] pb-4">
                       <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">0</p>
                       <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">days of warning before AI citations shift away</p>
                     </div>
@@ -513,7 +513,7 @@ export default function FalseLegacyLayer() {
                   </Link>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[var(--d-line)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
@@ -522,7 +522,7 @@ export default function FalseLegacyLayer() {
                       </p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                     </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
+                    <div className="border-t border-[var(--d-line)] pt-4">
                       <Link href="/blog/what-is-zero-click-search" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                           What Is Zero Click Search and Why Your Business Is Invisible
@@ -530,7 +530,7 @@ export default function FalseLegacyLayer() {
                         <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                       </Link>
                     </div>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
+                    <div className="border-t border-[var(--d-line)] pt-4">
                       <Link href="/blog/schema-markup-complete-guide" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                           Schema Markup: The Complete Guide for Local Service Businesses
@@ -553,10 +553,10 @@ export default function FalseLegacyLayer() {
       <section className="py-20 bg-[var(--d-bg-3)] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">THE CLOCK IS RUNNING</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[rgba(240,232,216,0.9)] mb-4">
+          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
             Convert Your Placeholder Into Permanent Authority
           </h2>
-          <p className="text-[rgba(240,232,216,0.6)] font-inter mb-8 leading-relaxed">
+          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
             The False Legacy Layer is real — and it has an expiration date. Start with a{' '}
             <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
             and find out exactly how close you are to losing your position.
