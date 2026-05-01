@@ -88,7 +88,7 @@ export default function Navigation() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="d-btn d-btn-primary d-btn-sm hidden sm:inline-flex"
+              className="d-btn d-btn-primary d-btn-sm hidden md:inline-flex"
             >
               Machine Read →
             </Link>
