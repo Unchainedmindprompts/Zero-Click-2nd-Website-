@@ -509,7 +509,7 @@ export default function FalseLegacyLayer() {
                     Find out exactly where your business is invisible to AI — and what it takes to build real authority. No obligation.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get Your Free AEO Audit
+                    Get My Free Machine Read
                   </Link>
                 </div>
 
@@ -552,18 +552,16 @@ export default function FalseLegacyLayer() {
 
       <section className="py-20 bg-[var(--d-bg-3)] px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">THE CLOCK IS RUNNING</p>
+          <p className="eyebrow mb-4">THE WINDOW IS OPEN</p>
           <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            Convert Your Placeholder Into Permanent Authority
+            Find out where you actually stand.
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The False Legacy Layer is real — and it has an expiration date. Start with a{' '}
-            <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
-            and find out exactly how close you are to losing your position.
+            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get Your Free AEO Audit
+              Get My Free Machine Read
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

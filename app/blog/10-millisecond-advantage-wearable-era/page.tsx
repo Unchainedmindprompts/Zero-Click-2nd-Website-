@@ -358,7 +358,7 @@ export default function WhenCustomerStopsSearchingPage() {
                   href="/contact"
                   className="inline-block bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
-                  Get Your Free AEO Audit
+                  Get My Free Machine Read
                 </a>
               </div>
 
@@ -400,7 +400,7 @@ export default function WhenCustomerStopsSearchingPage() {
                     href="/contact"
                     className="block text-center bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
                   >
-                    Get Your Free AEO Audit
+                    Get My Free Machine Read
                   </a>
                 </div>
 
@@ -442,14 +442,14 @@ export default function WhenCustomerStopsSearchingPage() {
             Find Out If Your Business Is Ready
           </h2>
           <p className="font-inter text-[var(--d-fg-mute)] text-lg mb-10 leading-relaxed">
-            A free AEO Audit shows you exactly how your business appears in AI today — and what it would take to become the business AI recommends by default.
+            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
             >
-              Get Your Free AEO Audit
+              Get My Free Machine Read
             </a>
             <a
               href="/blog"

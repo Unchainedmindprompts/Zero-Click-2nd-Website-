@@ -255,7 +255,7 @@ export default function ColdLoadVsCached() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your cold load performance, schema stack, and AI crawler accessibility — and show you exactly what GPTBot sees when it lands on your site.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get Your Free AEO Audit</Link>
+                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get My Free Machine Read</Link>
                 </div>
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
@@ -290,12 +290,10 @@ export default function ColdLoadVsCached() {
             By the Time Someone Asks AI About Your Business, It&apos;s Already Too Late to Fix a Slow Site
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            Cold load performance is the foundation everything else is built on. Start with a{' '}
-            <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
-            and find out what AI crawlers actually see when they land on your site.
+            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Get Your Free AEO Audit</Link>
+            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Get My Free Machine Read</Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read More Articles</Link>
           </div>
         </div>

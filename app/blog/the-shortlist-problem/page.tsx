@@ -422,7 +422,7 @@ export default function ShortlistProblemPage() {
                     href="/contact"
                     className="block text-center bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
                   >
-                    Get Your Free AEO Audit
+                    Get My Free Machine Read
                   </Link>
                 </div>
 
@@ -460,14 +460,14 @@ export default function ShortlistProblemPage() {
             Claim Your Position Before a Competitor Does
           </h2>
           <p className="font-inter text-[var(--d-fg-mute)] text-lg mb-10 leading-relaxed">
-            The AI shortlist for your category in your market is still largely uncontested. Start with a free AEO Audit and find out exactly what it would take to become the business AI recommends.
+            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
             >
-              Get Your Free AEO Audit
+              Get My Free Machine Read
             </Link>
             <Link
               href="/blog"

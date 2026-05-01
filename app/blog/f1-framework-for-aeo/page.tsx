@@ -448,7 +448,7 @@ export default function F1FrameworkForAEO() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your chassis, engine, and aero — and show you exactly where the gaps are before you spend another dollar on graphics.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get Your Free AEO Audit</Link>
+                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get My Free Machine Read</Link>
                 </div>
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
@@ -490,12 +490,10 @@ export default function F1FrameworkForAEO() {
             Fix the Foundation. Then Everything Else Compounds.
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            Most businesses are spending on graphics while the chassis is broken. A{' '}
-            <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
-            shows you exactly which layers need work — and in what order.
+            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Get Your Free AEO Audit</Link>
+            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Get My Free Machine Read</Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read More Articles</Link>
           </div>
         </div>

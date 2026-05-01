@@ -337,7 +337,7 @@ export default function VideoAuthorityLayer2026() {
                     Find out exactly what&apos;s missing from your current video infrastructure — and what it would take to make your content citable across every AI system that matters.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get Your Free AEO Audit
+                    Get My Free Machine Read
                   </Link>
                 </div>
 
@@ -385,13 +385,11 @@ export default function VideoAuthorityLayer2026() {
             Your Videos Already Exist. Make Them Work Harder.
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            Whether you&apos;re a contractor, attorney, financial advisor, real estate professional, or any other service business — the infrastructure to turn your video content into AI authority assets doesn&apos;t exist on any subscription platform. Start with a{' '}
-            <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
-            and see exactly where your video stack stands.
+            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get Your Free AEO Audit
+              Get My Free Machine Read
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles
