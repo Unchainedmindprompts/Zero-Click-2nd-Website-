@@ -225,7 +225,7 @@ export default function HowToRankInGoogleAIOverviews() {
 
                 {/* Comparison Table */}
                 <div className="my-10 rounded-xl overflow-hidden border border-[rgba(100,70,30,0.2)]">
-                  <div className="bg-[var(--d-bg-3)] px-6 py-4">
+                  <div className="bg-[rgba(255,255,255,0.05)] px-6 py-4">
                     <p className="font-inter font-bold text-[rgba(240,232,216,0.9)] text-base tracking-wide">
                       Traditional SEO vs AI Overview Optimization
                     </p>

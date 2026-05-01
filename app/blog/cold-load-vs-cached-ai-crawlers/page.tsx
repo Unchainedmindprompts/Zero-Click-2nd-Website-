@@ -143,14 +143,14 @@ export default function ColdLoadVsCached() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                   <div className="rounded-xl overflow-hidden border border-[var(--d-line)]">
                     <img src="/images/pagespeed-field-data.webp" alt="PageSpeed Insights field data showing Core Web Vitals passing with warm cached load" className="w-full" />
-                    <div className="bg-[var(--d-bg-2)] px-4 py-3">
+                    <div className="bg-[rgba(255,255,255,0.04)] px-4 py-3">
                       <p className="text-[var(--d-accent)] text-xs font-bold font-inter">FIELD DATA — WHAT THE OWNER SEES</p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">Core Web Vitals: Passed. Warm cache, returning visitors. Looks fine.</p>
                     </div>
                   </div>
                   <div className="rounded-xl overflow-hidden border border-[var(--d-line)]">
                     <img src="/images/pagespeed-lab-data.webp" alt="PageSpeed Insights lab data showing 34 performance score and 10.9 second LCP on cold load" className="w-full" />
-                    <div className="bg-[var(--d-bg-2)] px-4 py-3">
+                    <div className="bg-[rgba(255,255,255,0.04)] px-4 py-3">
                       <p className="text-[var(--d-accent)] text-xs font-bold font-inter">LAB DATA — WHAT AI CRAWLERS SEE</p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">Performance: 34. LCP: 10.9s. Cold load. This is what GPTBot experiences.</p>
                     </div>

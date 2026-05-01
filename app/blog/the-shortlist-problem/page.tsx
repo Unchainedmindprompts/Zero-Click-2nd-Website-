@@ -395,18 +395,18 @@ export default function ShortlistProblemPage() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Stat Card */}
-                <div className="bg-[var(--d-bg-2)] border border-[#e8e0d4] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">The Shortlist Reality</p>
                   <div className="space-y-4">
                     <div>
                       <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">1–2</p>
                       <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">businesses AI recommends per local category — not ten</p>
                     </div>
-                    <div className="border-t border-[#e8e0d4] pt-4">
+                    <div className="border-t border-[var(--d-line-s)] pt-4">
                       <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">&lt;1%</p>
                       <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">of local businesses have deployed llms.txt or agent.json</p>
                     </div>
-                    <div className="border-t border-[#e8e0d4] pt-4">
+                    <div className="border-t border-[var(--d-line-s)] pt-4">
                       <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">2027</p>
                       <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">anticipated mainstream wearable AI hardware — shortlists form before devices ship</p>
                     </div>
@@ -427,14 +427,14 @@ export default function ShortlistProblemPage() {
                 </div>
 
                 {/* Related Reading */}
-                <div className="bg-[var(--d-bg-2)] border border-[#e8e0d4] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">Related Reading</p>
                   <div className="space-y-4">
                     <Link href="/blog/false-legacy-layer-ai-visibility" className="block group">
                       <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow</p>
                       <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">9 min read</p>
                     </Link>
-                    <div className="border-t border-[#e8e0d4] pt-4">
+                    <div className="border-t border-[var(--d-line-s)] pt-4">
                       <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
                         <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The 2026 Digital Land Rush: Why Waiting Could Cost You Everything</p>
                         <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">8 min read</p>

@@ -214,26 +214,26 @@ export default function WhenCustomerStopsSearchingPage() {
               </p>
 
               <div className="space-y-4 mb-10">
-                <div className="bg-[var(--d-bg-2)] rounded-lg p-5 border border-[#e8e0d4]">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Structured data.</p>
                   <p className="leading-relaxed mb-2">JSON-LD schema tells AI systems exactly who you are, what services you offer, where you operate, and what makes you credible. Businesses with custom per-page schema give AI systems clear, machine-readable facts to work from.</p>
                   <p className="leading-relaxed text-sm italic">So what: pages with clear schema are easier for AI to cite with confidence than pages without it.</p>
                 </div>
-                <div className="bg-[var(--d-bg-2)] rounded-lg p-5 border border-[#e8e0d4]">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Machine-readable identity files.</p>
                   <p className="leading-relaxed mb-2">llms.txt is a plain-language brief that tells AI crawlers who you are, what you do, and which pages matter most. agent.json is a structured identity file that encodes your business for autonomous AI agents. Together, they&apos;re the &quot;about us&quot; and &quot;business card&quot; your website hands to AI systems before they decide who to recommend. Most local business websites have neither.</p>
                   <p className="leading-relaxed text-sm italic">So what: without these files, AI systems have to guess who you are and what you do. They usually don&apos;t bother guessing.</p>
                 </div>
-                <div className="bg-[var(--d-bg-2)] rounded-lg p-5 border border-[#e8e0d4]">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Directory consistency.</p>
                   <p className="leading-relaxed mb-2">AI systems cross-reference your business information across Google Business Profile, Bing Places, Apple Business Connect, Yelp, and BBB. Inconsistencies in your name, address, or phone number create ambiguity.</p>
                   <p className="leading-relaxed text-sm italic">So what: if your naming is messy across directories, the AI has to guess which version is right — and it usually just skips the guess entirely.</p>
                 </div>
-                <div className="bg-[var(--d-bg-2)] rounded-lg p-5 border border-[#e8e0d4]">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Review signals.</p>
                   <p className="leading-relaxed">Volume, recency, and specificity of reviews all factor in. Detailed, location-specific reviews carry more weight than generic five-star ratings.</p>
                 </div>
-                <div className="bg-[var(--d-bg-2)] rounded-lg p-5 border border-[#e8e0d4]">
+                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Site performance.</p>
                   <p className="leading-relaxed">AI crawlers prioritize sources that respond quickly and cleanly. This is where most small business owners have a blind spot — and it&apos;s worth examining honestly.</p>
                 </div>
@@ -363,7 +363,7 @@ export default function WhenCustomerStopsSearchingPage() {
               </div>
 
               {/* Personal closing note */}
-              <p className="leading-relaxed italic text-[var(--d-fg-dim)] border-t border-[#e8e0d4] pt-8">
+              <p className="leading-relaxed italic text-[var(--d-fg-dim)] border-t border-[var(--d-line-s)] pt-8">
                 I&apos;m not trying to sell you on a crisis that doesn&apos;t exist. I&apos;m trying to give you an honest picture of where local business discovery is heading — and the same foundation my clients are already building. The window is open. Whether you walk through it is your call.
               </p>
               <p className="font-inter font-semibold text-[var(--d-fg)] mt-2">— Mark, KodeCite.ai</p>
@@ -374,18 +374,18 @@ export default function WhenCustomerStopsSearchingPage() {
             <aside className="lg:col-span-1 mt-12 lg:mt-0">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[var(--d-bg-2)] border border-[#e8e0d4] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">The Discovery Shift</p>
                   <div className="space-y-4">
                     <div>
                       <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">7M+</p>
                       <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">Ray-Ban Meta glasses already sold — voice AI queries are happening now</p>
                     </div>
-                    <div className="border-t border-[#e8e0d4] pt-4">
+                    <div className="border-t border-[var(--d-line-s)] pt-4">
                       <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">1–2</p>
                       <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">names AI recommends per local query — not a list of ten</p>
                     </div>
-                    <div className="border-t border-[#e8e0d4] pt-4">
+                    <div className="border-t border-[var(--d-line-s)] pt-4">
                       <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">&lt;1%</p>
                       <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">of local businesses have deployed llms.txt or agent.json</p>
                     </div>
@@ -404,20 +404,20 @@ export default function WhenCustomerStopsSearchingPage() {
                   </a>
                 </div>
 
-                <div className="bg-[var(--d-bg-2)] border border-[#e8e0d4] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">Related Reading</p>
                   <div className="space-y-4">
                     <a href="/blog/the-shortlist-problem" className="block group">
                       <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours</p>
                       <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">10 min read</p>
                     </a>
-                    <div className="border-t border-[#e8e0d4] pt-4">
+                    <div className="border-t border-[var(--d-line-s)] pt-4">
                       <a href="/blog/false-legacy-layer-ai-visibility" className="block group">
                         <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow</p>
                         <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">9 min read</p>
                       </a>
                     </div>
-                    <div className="border-t border-[#e8e0d4] pt-4">
+                    <div className="border-t border-[var(--d-line-s)] pt-4">
                       <a href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
                         <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The 2026 Digital Land Rush: Why Waiting Could Cost You Everything</p>
                         <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">8 min read</p>
