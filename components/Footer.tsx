@@ -10,7 +10,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ borderTop: '1px solid var(--d-line)', backgroundColor: 'var(--d-bg)' }}>
+    <footer style={{ borderTop: '2px solid var(--d-line-s)', backgroundColor: 'var(--d-bg-3)' }}>
       <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 32px 40px' }}>
 
         {/* Top — brand + links */}
@@ -59,17 +59,17 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-8"
-          style={{ borderTop: '1px solid var(--d-line)' }}
+          style={{ borderTop: '1px solid var(--d-line-s)' }}
         >
           <p
             className="font-mono text-xs"
-            style={{ color: 'var(--d-fg-mute)', letterSpacing: '0.12em' }}
+            style={{ color: 'var(--d-fg-dim)', letterSpacing: '0.12em' }}
           >
             © 2026 KODECITE.AI
           </p>
           <p
             className="font-mono text-xs"
-            style={{ color: 'var(--d-fg-mute)', letterSpacing: '0.1em' }}
+            style={{ color: 'var(--d-fg-dim)', letterSpacing: '0.1em' }}
           >
             FOUNDATION BUILD · NO RETAINER · YOU OWN IT
           </p>
