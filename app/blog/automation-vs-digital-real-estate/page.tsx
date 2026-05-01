@@ -635,7 +635,7 @@ export default function AutomationVsDigitalRealEstate() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="eyebrow mb-4 text-xs">BY THE NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
@@ -653,7 +653,7 @@ export default function AutomationVsDigitalRealEstate() {
                   </div>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Is AI Finding You — Or Skipping You?
                   </p>
@@ -665,7 +665,7 @@ export default function AutomationVsDigitalRealEstate() {
                   </Link>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/aeo-geo-making-seo-better" className="block group">

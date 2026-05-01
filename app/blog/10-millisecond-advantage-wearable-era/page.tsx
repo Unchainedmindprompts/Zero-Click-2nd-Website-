@@ -214,26 +214,26 @@ export default function WhenCustomerStopsSearchingPage() {
               </p>
 
               <div className="space-y-4 mb-10">
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Structured data.</p>
                   <p className="leading-relaxed mb-2">JSON-LD schema tells AI systems exactly who you are, what services you offer, where you operate, and what makes you credible. Businesses with custom per-page schema give AI systems clear, machine-readable facts to work from.</p>
                   <p className="leading-relaxed text-sm italic">So what: pages with clear schema are easier for AI to cite with confidence than pages without it.</p>
                 </div>
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Machine-readable identity files.</p>
                   <p className="leading-relaxed mb-2">llms.txt is a plain-language brief that tells AI crawlers who you are, what you do, and which pages matter most. agent.json is a structured identity file that encodes your business for autonomous AI agents. Together, they&apos;re the &quot;about us&quot; and &quot;business card&quot; your website hands to AI systems before they decide who to recommend. Most local business websites have neither.</p>
                   <p className="leading-relaxed text-sm italic">So what: without these files, AI systems have to guess who you are and what you do. They usually don&apos;t bother guessing.</p>
                 </div>
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Directory consistency.</p>
                   <p className="leading-relaxed mb-2">AI systems cross-reference your business information across Google Business Profile, Bing Places, Apple Business Connect, Yelp, and BBB. Inconsistencies in your name, address, or phone number create ambiguity.</p>
                   <p className="leading-relaxed text-sm italic">So what: if your naming is messy across directories, the AI has to guess which version is right — and it usually just skips the guess entirely.</p>
                 </div>
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Review signals.</p>
                   <p className="leading-relaxed">Volume, recency, and specificity of reviews all factor in. Detailed, location-specific reviews carry more weight than generic five-star ratings.</p>
                 </div>
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-lg p-5 border border-[var(--d-line-s)]">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-lg p-5 border border-[var(--d-line-s)]">
                   <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">Site performance.</p>
                   <p className="leading-relaxed">AI crawlers prioritize sources that respond quickly and cleanly. This is where most small business owners have a blind spot — and it&apos;s worth examining honestly.</p>
                 </div>
@@ -349,7 +349,7 @@ export default function WhenCustomerStopsSearchingPage() {
               </p>
 
               {/* Closing CTA */}
-              <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-8 mt-12 mb-8">
+              <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-8 mt-12 mb-8">
                 <p className="font-inter font-semibold text-[var(--d-accent)] mb-3">Not sure where you stand?</p>
                 <p className="font-inter text-[var(--d-fg-mute)] leading-relaxed mb-5">
                   Get a free AI Scaffolding Audit — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews. By the end of the audit, you&apos;ll know whether you can get away with tuning what you already have or whether you&apos;re better off with a rebuild. No pitch. No pressure.
@@ -374,7 +374,7 @@ export default function WhenCustomerStopsSearchingPage() {
             <aside className="lg:col-span-1 mt-12 lg:mt-0">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">The Discovery Shift</p>
                   <div className="space-y-4">
                     <div>
@@ -392,7 +392,7 @@ export default function WhenCustomerStopsSearchingPage() {
                   </div>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-3">Free Audit</p>
                   <p className="font-inter text-xl text-white mb-3">Find Out Where You Stand</p>
                   <p className="font-inter text-sm text-[var(--d-fg-mute)] mb-5 leading-relaxed">See exactly how your business appears in AI today — and whether your infrastructure is ready for what&apos;s coming.</p>
@@ -404,7 +404,7 @@ export default function WhenCustomerStopsSearchingPage() {
                   </a>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">Related Reading</p>
                   <div className="space-y-4">
                     <a href="/blog/the-shortlist-problem" className="block group">

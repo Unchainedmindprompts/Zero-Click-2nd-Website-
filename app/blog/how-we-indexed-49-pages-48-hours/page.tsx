@@ -242,7 +242,7 @@ export default function Indexed49Pages() {
                 </p>
 
                 {/* Schema types box */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">SCHEMA TYPES IMPLEMENTED</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
@@ -362,7 +362,7 @@ export default function Indexed49Pages() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Timeline */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-5 text-xs">PROJECT TIMELINE</p>
                   <div className="space-y-4">
                     {[
@@ -384,7 +384,7 @@ export default function Indexed49Pages() {
                 </div>
 
                 {/* CTA Card */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Is Your Site Invisible Like Luxe Was?
                   </p>
@@ -397,7 +397,7 @@ export default function Indexed49Pages() {
                 </div>
 
                 {/* Related Posts */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/schema-markup-complete-guide" className="block group">

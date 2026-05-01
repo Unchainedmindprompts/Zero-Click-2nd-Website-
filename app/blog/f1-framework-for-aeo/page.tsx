@@ -215,7 +215,7 @@ export default function F1FrameworkForAEO() {
                   And then, only at the end, do the sponsor logos get applied. Because graphics without performance are just expensive decoration.
                 </p>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-3 text-xs">THE BUILD ORDER</p>
                   <p className="text-[#3a2e24] font-inter text-sm leading-relaxed">
                     Every serious F1 team builds in this order: chassis, engine, aero, graphics. Reverse the order and you get a car that looks fast and loses every race.
@@ -268,7 +268,7 @@ export default function F1FrameworkForAEO() {
                   And for the minority of businesses that have decent schema, there&apos;s still enormous room for improvement. Schema isn&apos;t just about whether it exists. It&apos;s about whether it&apos;s wired to reality — whether the entities declared in code actually match the entities on the page, and whether the relationships between them (author to article, business to employee, product to offer) are declared cleanly enough for a machine to resolve without hedging.
                 </p>
 
-                <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-6 my-8">
                   <p className="font-inter leading-relaxed" style={{ color: 'rgba(240,232,216,0.85)' }}>
                     Without a clean entity graph, AI systems can&apos;t confidently identify who you are. And if they can&apos;t identify you, they won&apos;t recommend you. They&apos;ll recommend whoever has the clearer signal — even if that business is objectively worse than yours.
                   </p>
@@ -421,7 +421,7 @@ export default function F1FrameworkForAEO() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">THE F1 STACK</p>
                   <div className="space-y-4">
                     <div className="border-b border-[var(--d-line)] pb-4">
@@ -443,7 +443,7 @@ export default function F1FrameworkForAEO() {
                   </div>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">Find Out Where Your Stack Breaks Down</p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your chassis, engine, and aero — and show you exactly where the gaps are before you spend another dollar on graphics.
@@ -451,7 +451,7 @@ export default function F1FrameworkForAEO() {
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get Your Free AEO Audit</Link>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/below-the-content-layer" className="block group">

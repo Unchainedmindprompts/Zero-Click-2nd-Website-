@@ -188,7 +188,7 @@ export default function WhatIsAnEntityGraph() {
                   The second most common failure is disconnected schema — multiple blocks on the same site that don&apos;t reference each other. A LocalBusiness block that doesn&apos;t connect to the Person who owns it. Blog articles with author fields that point to a flat name string rather than a verified identity. An Organization block that has no relationship to the services it offers or the expert behind them.
                 </p>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-3 text-xs">THE IDENTITY GAP</p>
                   <p className="text-[#3a2e24] font-inter text-sm leading-relaxed">
                     Disconnected schema is the digital equivalent of a business card with no name on it. The information is present. The identity isn&apos;t.
@@ -263,7 +263,7 @@ export default function WhatIsAnEntityGraph() {
                   An AI engine encountering a business with a complete, connected entity graph — verified identity, linked expertise, corroborated by external sources, consistent across every page — has everything it needs to make a confident recommendation. An AI engine encountering a website with no schema, template schema, or disconnected schema has to guess. And when AI engines guess, they default to the sources they can verify.
                 </p>
 
-                <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-6 my-8">
                   <p className="font-inter leading-relaxed" style={{ color: 'rgba(240,232,216,0.85)' }}>
                     Your competitor with better entity infrastructure gets recommended. You don&apos;t. Not because their content is better. Not because their business is better. Because the machine knows who they are and isn&apos;t sure about you.
                   </p>
@@ -330,7 +330,7 @@ export default function WhatIsAnEntityGraph() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">ENTITY GRAPH BY THE NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[var(--d-line)] pb-4">
@@ -348,7 +348,7 @@ export default function WhatIsAnEntityGraph() {
                   </div>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">See Your Entity Graph Gaps</p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your schema stack and entity signals — and show you exactly what AI systems can and can&apos;t understand about your business right now.
@@ -356,7 +356,7 @@ export default function WhatIsAnEntityGraph() {
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get Your Free AEO Audit</Link>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/schema-markup-complete-guide" className="block group">

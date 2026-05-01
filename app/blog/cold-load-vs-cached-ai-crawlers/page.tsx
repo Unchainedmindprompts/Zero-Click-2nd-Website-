@@ -143,21 +143,21 @@ export default function ColdLoadVsCached() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                   <div className="rounded-xl overflow-hidden border border-[var(--d-line)]">
                     <img src="/images/pagespeed-field-data.webp" alt="PageSpeed Insights field data showing Core Web Vitals passing with warm cached load" className="w-full" />
-                    <div className="bg-[rgba(255,255,255,0.04)] px-4 py-3">
+                    <div className="bg-[rgba(255,255,255,0.08)] px-4 py-3">
                       <p className="text-[var(--d-accent)] text-xs font-bold font-inter">FIELD DATA — WHAT THE OWNER SEES</p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">Core Web Vitals: Passed. Warm cache, returning visitors. Looks fine.</p>
                     </div>
                   </div>
                   <div className="rounded-xl overflow-hidden border border-[var(--d-line)]">
                     <img src="/images/pagespeed-lab-data.webp" alt="PageSpeed Insights lab data showing 34 performance score and 10.9 second LCP on cold load" className="w-full" />
-                    <div className="bg-[rgba(255,255,255,0.04)] px-4 py-3">
+                    <div className="bg-[rgba(255,255,255,0.08)] px-4 py-3">
                       <p className="text-[var(--d-accent)] text-xs font-bold font-inter">LAB DATA — WHAT AI CRAWLERS SEE</p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">Performance: 34. LCP: 10.9s. Cold load. This is what GPTBot experiences.</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-4 text-xs">WARM CACHE VS. COLD CRAWL</p>
                   <div className="space-y-2 font-inter text-sm">
                     <div className="flex gap-4 py-2 border-b border-[var(--d-line)]">
@@ -232,7 +232,7 @@ export default function ColdLoadVsCached() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">THE COLD CRAWL REALITY</p>
                   <div className="space-y-4">
                     <div className="border-b border-[var(--d-line)] pb-4">
@@ -250,7 +250,7 @@ export default function ColdLoadVsCached() {
                   </div>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">See What AI Crawlers See</p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your cold load performance, schema stack, and AI crawler accessibility — and show you exactly what GPTBot sees when it lands on your site.
@@ -258,7 +258,7 @@ export default function ColdLoadVsCached() {
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get Your Free AEO Audit</Link>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">

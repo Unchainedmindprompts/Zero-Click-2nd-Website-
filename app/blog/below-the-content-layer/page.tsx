@@ -263,7 +263,7 @@ export default function BelowTheContentLayer() {
                   </li>
                 </ul>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-3 text-xs">THE VERIFICATION PROBLEM</p>
                   <p className="text-[#3a2e24] font-inter text-sm leading-relaxed">
                     Being retrieved gets you in the room. Being verified gets you cited. Even the richest, most semantically perfect content is authorless to a machine if the identity layer underneath it is broken or missing.
@@ -397,7 +397,7 @@ export default function BelowTheContentLayer() {
                   That test takes five minutes. What you do about the result is what separates the businesses that get cited from the ones that get skipped.
                 </p>
 
-                <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-8 my-10">
+                <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-8 my-10">
                   <p className="font-inter font-bold text-xl text-[var(--d-fg)] mb-4 leading-snug">&ldquo;SEO gets you found. Entity infrastructure gets you cited.&rdquo;</p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed">
                     The content layer is the conversation happening now. The identity layer below it is where the actual competitive gap is forming — and where most businesses haven&apos;t looked yet.
@@ -442,7 +442,7 @@ export default function BelowTheContentLayer() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">THE NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[var(--d-line)] pb-4">
@@ -460,7 +460,7 @@ export default function BelowTheContentLayer() {
                   </div>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">Find Out If AI Can Read You</p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your entity graph and show you exactly what AI systems can and can&apos;t verify about your business right now.
@@ -468,7 +468,7 @@ export default function BelowTheContentLayer() {
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get Your Free AEO Audit</Link>
                 </div>
 
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[var(--d-line-s)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/f1-framework-for-aeo" className="block group">

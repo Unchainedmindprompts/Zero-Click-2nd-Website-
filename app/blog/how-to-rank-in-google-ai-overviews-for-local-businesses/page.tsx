@@ -225,7 +225,7 @@ export default function HowToRankInGoogleAIOverviews() {
 
                 {/* Comparison Table */}
                 <div className="my-10 rounded-xl overflow-hidden border border-[rgba(100,70,30,0.2)]">
-                  <div className="bg-[rgba(255,255,255,0.05)] px-6 py-4">
+                  <div className="bg-[rgba(255,255,255,0.10)] px-6 py-4">
                     <p className="font-inter font-bold text-[rgba(240,232,216,0.9)] text-base tracking-wide">
                       Traditional SEO vs AI Overview Optimization
                     </p>
@@ -413,7 +413,7 @@ export default function HowToRankInGoogleAIOverviews() {
                 </p>
 
                 {/* ── Quick-Start Checklist ── */}
-                <div className="my-10 bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-8">
+                <div className="my-10 bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-8">
                   <p className="eyebrow mb-6 text-xs justify-start">YOUR AI OVERVIEW QUICK-START CHECKLIST</p>
                   <ul className="space-y-4">
                     {[
@@ -485,7 +485,7 @@ export default function HowToRankInGoogleAIOverviews() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Key Stats */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
                   <p className="eyebrow mb-4 text-xs justify-start">BY THE NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
@@ -504,7 +504,7 @@ export default function HowToRankInGoogleAIOverviews() {
                 </div>
 
                 {/* CTA Card */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Is Your Business Invisible to AI?
                   </p>
@@ -517,7 +517,7 @@ export default function HowToRankInGoogleAIOverviews() {
                 </div>
 
                 {/* Related Posts */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
                   <p className="eyebrow mb-4 text-xs justify-start">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/schema-markup-complete-guide" className="block group">

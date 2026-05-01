@@ -379,7 +379,7 @@ export default function ShortlistProblemPage() {
               </p>
 
               {/* Closing CTA */}
-              <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-8 mt-12">
+              <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-8 mt-12">
                 <p className="font-inter text-white leading-relaxed">
                   <strong className="text-[var(--d-accent)]">Not sure where you stand?</strong>{' '}
                   <Link href="/contact" className="text-[var(--d-accent)] underline hover:text-blue-400 transition-colors">
@@ -395,7 +395,7 @@ export default function ShortlistProblemPage() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Stat Card */}
-                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">The Shortlist Reality</p>
                   <div className="space-y-4">
                     <div>
@@ -414,7 +414,7 @@ export default function ShortlistProblemPage() {
                 </div>
 
                 {/* CTA Card */}
-                <div className="bg-[rgba(255,255,255,0.05)] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-3">Free Audit</p>
                   <p className="font-inter text-xl text-white mb-3">Is Your Business on the Shortlist?</p>
                   <p className="font-inter text-sm text-[var(--d-fg-mute)] mb-5 leading-relaxed">Find out exactly how AI currently describes your business — and what it would take to earn the shortlist position in your market.</p>
@@ -427,7 +427,7 @@ export default function ShortlistProblemPage() {
                 </div>
 
                 {/* Related Reading */}
-                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6">
                   <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">Related Reading</p>
                   <div className="space-y-4">
                     <Link href="/blog/false-legacy-layer-ai-visibility" className="block group">

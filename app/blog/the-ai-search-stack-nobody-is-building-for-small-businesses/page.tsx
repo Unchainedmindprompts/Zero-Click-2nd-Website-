@@ -360,7 +360,7 @@ export default function AISearchStackNobodyIsBuilding() {
                   Source: Google/Deloitte Mobile Speed Study; Core Web Vitals 2025–2026 benchmarks
                 </p>
 
-                <div className="bg-[rgba(255,255,255,0.07)] border-l-4 border-[var(--d-accent)] p-5 rounded-r-lg mb-8">
+                <div className="bg-[rgba(255,255,255,0.14)] border-l-4 border-[var(--d-accent)] p-5 rounded-r-lg mb-8">
                   <p className="text-[var(--d-fg)] font-semibold font-inter mb-1">Worth noting:</p>
                   <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed">
                     2025–2026 retail and travel data continues to confirm the pattern — a 0.1-second improvement in load time lifts conversions 8–10% in high-intent verticals. The compounding effect of building fast from the start is not marginal.
@@ -521,7 +521,7 @@ export default function AISearchStackNobodyIsBuilding() {
                   Until now.
                 </p>
 
-                <div className="bg-[rgba(255,255,255,0.07)] border border-[var(--d-line-s)] rounded-xl p-6 mb-8">
+                <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6 mb-8">
                   <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed italic">
                     KodeCite.AI builds AI-native digital foundations for small and mid-sized businesses — from edge infrastructure to generative engine optimization. We work with 3 to 5 new clients per month. If you&apos;re ready to stop being invisible to AI,{' '}
                     <Link href="/contact" className="text-[var(--d-accent)] hover:text-[var(--d-accent)] transition-colors font-semibold">
@@ -551,7 +551,7 @@ export default function AISearchStackNobodyIsBuilding() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Key Stats */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">BY THE NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
@@ -570,7 +570,7 @@ export default function AISearchStackNobodyIsBuilding() {
                 </div>
 
                 {/* CTA Card */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Ready to Stop Being Invisible to AI?
                   </p>
@@ -583,7 +583,7 @@ export default function AISearchStackNobodyIsBuilding() {
                 </div>
 
                 {/* Related Posts */}
-                <div className="bg-[rgba(255,255,255,0.07)] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/vercel-vs-wordpress-performance" className="block group">
