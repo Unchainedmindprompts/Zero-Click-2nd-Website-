@@ -1,42 +1,49 @@
-// Pure server component — CSS-only animations, no JS needed
+// Colorized entity graph — matches hero visual style, CSS-only animation
+
+type Anchor = 'middle' | 'start' | 'end';
+
+const CSS = `
+.eg2-edge{stroke-dasharray:300;stroke-dashoffset:300;animation:eg2Draw 1s ease-out forwards}
+@keyframes eg2Draw{to{stroke-dashoffset:0}}
+.eg2-glow{animation:eg2Pulse 5s ease-in-out infinite}
+@keyframes eg2Pulse{0%,100%{opacity:.65}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .eg2-edge{stroke-dasharray:none;stroke-dashoffset:0;animation:none}
+  .eg2-glow{animation:none;opacity:1}
+}
+`;
+
+const cx = 240, cy = 240;
+
+const midNodes = [
+  { x: 240, y: 135, r: 18, color: '#8a90c4', label: 'SCHEMA.ORG', delay: '0.2s',  pulse: '0s'   },
+  { x: 340, y: 207, r: 18, color: '#7af0c2', label: 'INFRA',       delay: '0.5s',  pulse: '1s'   },
+  { x: 302, y: 325, r: 18, color: '#b89bff', label: 'CONTENT',     delay: '0.8s',  pulse: '2s'   },
+  { x: 178, y: 325, r: 18, color: '#8ab4ff', label: 'IDENTITY',    delay: '1.1s',  pulse: '3s'   },
+  { x: 140, y: 207, r: 18, color: '#ff9b8a', label: 'SIGNALS',     delay: '1.4s',  pulse: '4s'   },
+];
+
+const outerNodes = [
+  { x: 316, y:  58, r: 12, color: '#5dd5ff', label: 'CHATGPT',    delay: '0.4s', pulse: '0.5s', tx:   0, ty: -20, anchor: 'middle' as Anchor },
+  { x: 445, y: 200, r: 12, color: '#7af0c2', label: 'PERPLEXITY', delay: '1.0s', pulse: '1.5s', tx:  17, ty:   4, anchor: 'start'  as Anchor },
+  { x: 430, y: 368, r: 12, color: '#ff9b8a', label: 'GOOGLE AI',  delay: '1.6s', pulse: '2.5s', tx:  17, ty:   4, anchor: 'start'  as Anchor },
+];
+
+const edges = [
+  { x1: cx,  y1: cy,  x2: 240, y2: 135, delay: '0s'    },
+  { x1: cx,  y1: cy,  x2: 340, y2: 207, delay: '0.15s' },
+  { x1: cx,  y1: cy,  x2: 302, y2: 325, delay: '0.3s'  },
+  { x1: cx,  y1: cy,  x2: 178, y2: 325, delay: '0.45s' },
+  { x1: cx,  y1: cy,  x2: 140, y2: 207, delay: '0.6s'  },
+  { x1: 240, y1: 135, x2: 316, y2:  58, delay: '0.75s' },
+  { x1: 240, y1: 135, x2: 445, y2: 200, delay: '0.9s'  },
+  { x1: 340, y1: 207, x2: 445, y2: 200, delay: '1.05s' },
+  { x1: 340, y1: 207, x2: 430, y2: 368, delay: '1.2s'  },
+  { x1: 302, y1: 325, x2: 430, y2: 368, delay: '1.35s' },
+  { x1: 178, y1: 325, x2: 430, y2: 368, delay: '1.5s'  },
+];
+
 export default function EntityGraph() {
-  const accent = 'rgba(93,213,255,';
-  const dim    = 'rgba(138,180,255,';
-
-  // Node positions
-  const cx = 240;
-  const cy = 240;
-  // Middle ring (r≈105)
-  const mid = [
-    { x: 240, y: 135, label: 'SCHEMA.ORG',   delay: '0s'    },
-    { x: 340, y: 207, label: 'INFRA',         delay: '0.4s'  },
-    { x: 302, y: 325, label: 'CONTENT',       delay: '0.8s'  },
-    { x: 178, y: 325, label: 'IDENTITY',      delay: '1.2s'  },
-    { x: 140, y: 207, label: 'SIGNALS',       delay: '1.6s'  },
-  ];
-  // Outer nodes (AI citation destinations)
-  const outer = [
-    { x: 316, y: 58,  label: 'CHATGPT',    anchor: 'middle', delay: '0.2s' },
-    { x: 445, y: 200, label: 'PERPLEXITY', anchor: 'start',  delay: '0.9s' },
-    { x: 430, y: 368, label: 'GOOGLE AI',  anchor: 'start',  delay: '1.4s' },
-  ];
-  // Edges: [x1,y1,x2,y2,delay]
-  const edges: [number,number,number,number,string][] = [
-    // center → middle
-    [cx, cy, 240, 135, '0s'],
-    [cx, cy, 340, 207, '0.15s'],
-    [cx, cy, 302, 325, '0.3s'],
-    [cx, cy, 178, 325, '0.45s'],
-    [cx, cy, 140, 207, '0.6s'],
-    // middle → outer
-    [240, 135, 316,  58, '0.75s'],
-    [240, 135, 445, 200, '0.9s'],
-    [340, 207, 445, 200, '1.05s'],
-    [340, 207, 430, 368, '1.2s'],
-    [302, 325, 430, 368, '1.35s'],
-    [178, 325, 430, 368, '1.5s'],
-  ];
-
   return (
     <svg
       viewBox="0 0 480 480"
@@ -44,70 +51,85 @@ export default function EntityGraph() {
       aria-hidden="true"
       style={{ width: '100%', maxWidth: '480px', display: 'block' }}
     >
-      {/* Subtle guide ring */}
-      <circle cx={cx} cy={cy} r="107" stroke={`${accent}0.06)`} strokeWidth="1" />
-      <circle cx={cx} cy={cy} r="200" stroke={`${dim}0.04)`} strokeWidth="1" />
+      <style>{CSS}</style>
+
+      <defs>
+        <radialGradient id="eg2Bg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stopColor="#5dd5ff" stopOpacity="0.12" />
+          <stop offset="100%" stopColor="#5dd5ff" stopOpacity="0"    />
+        </radialGradient>
+      </defs>
+
+      {/* Ambient glow */}
+      <ellipse cx={cx} cy={cy} rx="210" ry="210" fill="url(#eg2Bg)" style={{ filter: 'blur(30px)' }} />
+
+      {/* Guide rings — dashed */}
+      <circle cx={cx} cy={cy} r="107" stroke="rgba(93,213,255,0.08)"  strokeWidth="1" strokeDasharray="4 7" />
+      <circle cx={cx} cy={cy} r="200" stroke="rgba(138,180,255,0.05)" strokeWidth="1" strokeDasharray="3 9" />
 
       {/* Edges */}
-      {edges.map(([x1, y1, x2, y2, delay], i) => (
+      {edges.map((e, i) => (
         <line
           key={i}
-          x1={x1} y1={y1} x2={x2} y2={y2}
-          stroke={`${accent}0.28)`}
-          strokeWidth="1"
-          pathLength="100"
-          className="svg-edge"
-          style={{ animationDelay: delay }}
+          x1={e.x1} y1={e.y1} x2={e.x2} y2={e.y2}
+          stroke="#5dd5ff" strokeOpacity="0.40" strokeWidth="0.85"
+          className="eg2-edge"
+          style={{ animationDelay: e.delay }}
         />
       ))}
 
       {/* Outer nodes */}
-      {outer.map((n) => (
+      {outerNodes.map((n) => (
         <g key={n.label}>
+          <circle cx={n.x} cy={n.y} r={n.r + 9} fill={n.color} fillOpacity="0.06" />
           <circle
-            cx={n.x} cy={n.y} r="11"
-            fill={`${dim}0.1)`}
-            stroke={`${dim}0.45)`}
-            strokeWidth="1"
-            className="svg-node"
-            style={{ animationDelay: n.delay }}
+            cx={n.x} cy={n.y} r={n.r + 4}
+            fill={n.color} fillOpacity="0.10"
+            className="eg2-glow"
+            style={{ animationDelay: n.pulse }}
+          />
+          <circle
+            cx={n.x} cy={n.y} r={n.r}
+            stroke={n.color} strokeWidth="1.5"
+            fill={n.color} fillOpacity="0.13"
           />
           <text
-            x={n.x + (n.anchor === 'start' ? 16 : 0)}
-            y={n.anchor === 'middle' ? n.y - 18 : n.y + 4}
-            textAnchor={n.anchor === 'start' ? 'start' : 'middle'}
-            fill={`${dim}0.6)`}
-            fontSize="8"
-            fontFamily="monospace"
-            letterSpacing="0.1em"
+            x={n.x + n.tx} y={n.y + n.ty}
+            textAnchor={n.anchor}
+            fontFamily="var(--font-mono)"
+            fontSize="8" letterSpacing="0.12em"
+            fill={n.color} fillOpacity="0.82"
           >
             {n.label}
           </text>
         </g>
       ))}
 
-      {/* Middle ring nodes */}
-      {mid.map((n, i) => {
-        const textY   = n.y < cy ? n.y - 22 : n.y + 26;
-        const textX   = n.x < cx - 20 ? n.x - 8 : n.x > cx + 20 ? n.x + 8 : n.x;
-        const anchor  = n.x < cx - 20 ? 'end' : n.x > cx + 20 ? 'start' : 'middle';
+      {/* Mid ring nodes */}
+      {midNodes.map((n) => {
+        const textY  = n.y < cy ? n.y - 27 : n.y + 31;
+        const textX  = n.x < cx - 20 ? n.x - 6 : n.x > cx + 20 ? n.x + 6 : n.x;
+        const anchor: Anchor = n.x < cx - 20 ? 'end' : n.x > cx + 20 ? 'start' : 'middle';
         return (
           <g key={n.label}>
+            <circle cx={n.x} cy={n.y} r={n.r + 10} fill={n.color} fillOpacity="0.06" />
             <circle
-              cx={n.x} cy={n.y} r="17"
-              fill={`${accent}0.08)`}
-              stroke={`${accent}0.4)`}
-              strokeWidth="1.5"
-              className="svg-node"
-              style={{ animationDelay: n.delay }}
+              cx={n.x} cy={n.y} r={n.r + 4}
+              fill={n.color} fillOpacity="0.11"
+              className="eg2-glow"
+              style={{ animationDelay: n.pulse }}
+            />
+            <circle
+              cx={n.x} cy={n.y} r={n.r}
+              stroke={n.color} strokeWidth="1.5"
+              fill={n.color} fillOpacity="0.14"
             />
             <text
               x={textX} y={textY}
               textAnchor={anchor}
-              fill={`${accent}0.6)`}
-              fontSize="8"
-              fontFamily="monospace"
-              letterSpacing="0.1em"
+              fontFamily="var(--font-mono)"
+              fontSize="8" letterSpacing="0.12em"
+              fill={n.color} fillOpacity="0.82"
             >
               {n.label}
             </text>
@@ -115,18 +137,37 @@ export default function EntityGraph() {
         );
       })}
 
-      {/* Center node */}
-      <circle cx={cx} cy={cy} r="36" fill={`${accent}0.06)`} stroke={`${accent}0.25)`} strokeWidth="1" />
+      {/* Center node — 3-layer treatment */}
+      <circle cx={cx} cy={cy} r="42" fill="#5dd5ff" fillOpacity="0.05" />
       <circle
-        cx={cx} cy={cy} r="24"
-        fill={`${accent}0.14)`}
-        stroke={`${accent}0.55)`}
-        strokeWidth="1.5"
-        className="svg-node"
-        style={{ animationDelay: '0.5s' }}
+        cx={cx} cy={cy} r="34"
+        fill="#5dd5ff" fillOpacity="0.09"
+        className="eg2-glow"
+        style={{ animationDelay: '2s' }}
       />
-      <text x={cx} y={cy - 4} textAnchor="middle" fill={`${accent}0.9)`} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">ENTITY</text>
-      <text x={cx} y={cy + 7} textAnchor="middle" fill={`${accent}0.9)`} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">GRAPH</text>
+      <circle
+        cx={cx} cy={cy} r="26"
+        stroke="#5dd5ff" strokeWidth="2"
+        fill="#5dd5ff" fillOpacity="0.16"
+      />
+      <text
+        x={cx} y={cy - 4}
+        textAnchor="middle"
+        fontFamily="var(--font-mono)"
+        fontSize="8.5" letterSpacing="0.10em"
+        fill="#5dd5ff" fillOpacity="0.95"
+      >
+        ENTITY
+      </text>
+      <text
+        x={cx} y={cy + 8}
+        textAnchor="middle"
+        fontFamily="var(--font-mono)"
+        fontSize="8.5" letterSpacing="0.10em"
+        fill="#5dd5ff" fillOpacity="0.95"
+      >
+        GRAPH
+      </text>
     </svg>
   );
 }
