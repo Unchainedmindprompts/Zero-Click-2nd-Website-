@@ -119,7 +119,7 @@ export default function ContactPage() {
       {/* ── Machine Read Form ────────────────────────────── */}
       <section
         id="machine-read"
-        style={{ padding: '80px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}
+        style={{ padding: '80px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}
       >
         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
           <ContactForm />

@@ -184,8 +184,8 @@ export default function ContactForm() {
       noValidate
       style={{
         position: 'relative',
-        background: 'var(--d-bg-2)',
-        border: '1px solid var(--d-line)',
+        background: 'var(--d-bg-3)',
+        border: '1px solid var(--d-line-s)',
         borderRadius: '16px',
         padding: '36px 40px 40px',
         overflow: 'hidden',
@@ -194,11 +194,11 @@ export default function ContactForm() {
       {/* Form header */}
       <div
         className="flex items-center justify-between mb-8"
-        style={{ borderBottom: '1px solid var(--d-line)', paddingBottom: '20px' }}
+        style={{ borderBottom: '1px solid var(--d-line-s)', paddingBottom: '20px' }}
       >
         <span
           className="font-mono"
-          style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-fg-mute)' }}
+          style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-fg-dim)' }}
         >
           READ.v1 / NEW REQUEST
         </span>
@@ -221,7 +221,7 @@ export default function ContactForm() {
         <label>
           <span
             className="font-mono block mb-2"
-            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-mute)' }}
+            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
           >
             Your name
           </span>
@@ -238,7 +238,7 @@ export default function ContactForm() {
         <label>
           <span
             className="font-mono block mb-2"
-            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-mute)' }}
+            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
           >
             Business name
           </span>
@@ -258,7 +258,7 @@ export default function ContactForm() {
       <label className="block mb-4">
         <span
           className="font-mono block mb-2"
-          style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-mute)' }}
+          style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
         >
           Website URL
         </span>
@@ -290,13 +290,13 @@ export default function ContactForm() {
       <label className="block mb-6">
         <span
           className="font-mono block mb-1"
-          style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-mute)' }}
+          style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
         >
           What made you look us up?
         </span>
         <span
           className="font-inter block mb-2"
-          style={{ fontSize: '12px', color: 'var(--d-fg-mute)', fontWeight: 300 }}
+          style={{ fontSize: '12px', color: 'var(--d-fg-dim)', fontWeight: 300 }}
         >
           A few sentences. The more specific, the more useful the read.
         </span>

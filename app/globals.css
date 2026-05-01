@@ -567,8 +567,8 @@ em.serif {
 /* ─── Form inputs ────────────────────────────────────────── */
 .d-input {
   width: 100%;
-  background: var(--d-bg-3);
-  border: 1px solid var(--d-line);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--d-line-s);
   border-radius: 8px;
   padding: 12px 16px;
   font-family: var(--font-inter);
@@ -578,24 +578,24 @@ em.serif {
   transition: border-color 150ms ease, box-shadow 150ms ease;
   resize: none;
 }
-.d-input::placeholder { color: var(--d-fg-mute); }
+.d-input::placeholder { color: var(--d-fg-dim); }
 .d-input:focus {
   border-color: var(--d-accent);
-  box-shadow: 0 0 0 3px rgba(93,213,255,0.08);
+  box-shadow: 0 0 0 3px rgba(93,213,255,0.12);
 }
 
 .d-url-field {
   display: flex;
   align-items: stretch;
-  background: var(--d-bg-3);
-  border: 1px solid var(--d-line);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--d-line-s);
   border-radius: 8px;
   overflow: hidden;
   transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 .d-url-field:focus-within {
   border-color: var(--d-accent);
-  box-shadow: 0 0 0 3px rgba(93,213,255,0.08);
+  box-shadow: 0 0 0 3px rgba(93,213,255,0.12);
 }
 .d-url-field input {
   flex: 1;
@@ -608,7 +608,7 @@ em.serif {
   outline: none;
   min-width: 0;
 }
-.d-url-field input::placeholder { color: var(--d-fg-mute); }
+.d-url-field input::placeholder { color: var(--d-fg-dim); }
 
 .d-contact-card {
   transition: border-color 200ms ease, background-color 200ms ease;
