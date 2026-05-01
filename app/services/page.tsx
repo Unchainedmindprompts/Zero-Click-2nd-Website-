@@ -351,38 +351,45 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          {/* Verification — fifth concept, not a fifth F1 layer */}
-          <div
-            style={{
-              borderTop: '1px solid var(--d-line-s)',
-              marginBottom: '16px',
-              paddingTop: '16px',
-            }}
-          >
+          {/* Verification — separate component, equally important */}
+          <div style={{ marginTop: '40px', marginBottom: '16px' }}>
+            {/* Section break banner */}
+            <div
+              className="flex items-center gap-4 mb-6"
+              style={{ paddingTop: '40px', borderTop: '1px solid var(--d-line-s)' }}
+            >
+              <span
+                className="font-mono flex-shrink-0"
+                style={{ fontSize: '9px', letterSpacing: '0.22em', color: 'var(--d-ok)' }}
+              >
+                ALSO INCLUDED IN EVERY FOUNDATION BUILD
+              </span>
+              <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(122,240,194,0.3), transparent)' }} />
+            </div>
+
             <article
               style={{
-                background: 'var(--d-bg-3)',
-                border: '1px solid var(--d-line)',
+                background: 'rgba(122,240,194,0.04)',
+                border: '1px solid rgba(122,240,194,0.18)',
                 borderLeft: '3px solid var(--d-ok)',
                 borderRadius: '12px',
-                padding: '28px 32px',
-                marginBottom: '16px',
+                padding: '36px 40px',
               }}
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-5">
                 <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-ok)' }}>
                   VERIFICATION
                 </span>
               </div>
               <h3
-                className="font-inter font-semibold mb-3"
-                style={{ fontSize: '17px', lineHeight: 1.25, letterSpacing: '-0.01em', color: 'var(--d-fg)' }}
+                className="font-inter font-semibold mb-4"
+                style={{ fontSize: '22px', lineHeight: 1.2, letterSpacing: '-0.015em', color: 'var(--d-fg)' }}
               >
                 The trust layer.
               </h3>
               <p
-                className="font-inter mb-5"
-                style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+                className="font-inter mb-6"
+                style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300, maxWidth: '680px' }}
               >
                 Schema alone isn&apos;t trust. The entity graph has to match the real business across
                 every authoritative source. We review and align Google Business Profile, Bing Places,
@@ -390,19 +397,21 @@ export default function ServicesPage() {
                 service-area strategy so AI systems and search engines see one coherent identity,
                 not contradictions.
               </p>
-              <ul className="flex flex-col gap-1">
+              <ul className="flex flex-col gap-2">
                 {[
                   'Directory and profile audit across Google, Bing, Apple, Yelp, BBB',
                   'NAP and sameAs alignment across all authoritative sources',
                   'GBP and service-area risk review for licensed and shared-office practitioners',
                   'Address strategy verification (storefront vs. service-area vs. brokerage location)',
                 ].map((s) => (
-                  <li
-                    key={s}
-                    className="font-mono"
-                    style={{ fontSize: '10px', letterSpacing: '0.08em', color: 'var(--d-fg-mute)' }}
-                  >
-                    {s}
+                  <li key={s} className="flex items-start gap-2">
+                    <span style={{ color: 'var(--d-ok)', flexShrink: 0, fontSize: '12px', marginTop: '1px' }}>✓</span>
+                    <span
+                      className="font-mono"
+                      style={{ fontSize: '10px', letterSpacing: '0.08em', color: 'var(--d-fg-mute)', lineHeight: 1.6 }}
+                    >
+                      {s}
+                    </span>
                   </li>
                 ))}
               </ul>
