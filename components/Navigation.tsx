@@ -51,10 +51,10 @@ export default function Navigation() {
         >
           {/* Brand mark */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <span style={{ color: 'var(--d-accent)', fontSize: '15px', lineHeight: 1 }}>▸</span>
+            <span style={{ color: 'var(--d-accent)', fontSize: '13px', lineHeight: 1 }}>▸</span>
             <span
               className="font-inter font-semibold"
-              style={{ fontSize: '16px', letterSpacing: '-0.02em' }}
+              style={{ fontSize: '14px', letterSpacing: '-0.02em' }}
             >
               <span style={{ color: 'var(--d-fg)' }}>KODECITE</span>
               <span style={{ color: 'var(--d-fg-mute)' }}>.AI</span>
