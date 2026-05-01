@@ -265,7 +265,7 @@ export default function BelowTheContentLayer() {
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-3 text-xs">THE VERIFICATION PROBLEM</p>
-                  <p className="text-[#3a2e24] font-inter text-sm leading-relaxed">
+                  <p className="text-[var(--d-fg-dim)] font-inter text-sm leading-relaxed">
                     Being retrieved gets you in the room. Being verified gets you cited. Even the richest, most semantically perfect content is authorless to a machine if the identity layer underneath it is broken or missing.
                   </p>
                 </div>

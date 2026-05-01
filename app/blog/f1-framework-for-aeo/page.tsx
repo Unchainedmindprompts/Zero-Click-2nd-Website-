@@ -217,7 +217,7 @@ export default function F1FrameworkForAEO() {
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-3 text-xs">THE BUILD ORDER</p>
-                  <p className="text-[#3a2e24] font-inter text-sm leading-relaxed">
+                  <p className="text-[var(--d-fg-dim)] font-inter text-sm leading-relaxed">
                     Every serious F1 team builds in this order: chassis, engine, aero, graphics. Reverse the order and you get a car that looks fast and loses every race.
                   </p>
                 </div>

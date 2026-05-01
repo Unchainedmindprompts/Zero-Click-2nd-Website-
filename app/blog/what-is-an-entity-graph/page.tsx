@@ -190,7 +190,7 @@ export default function WhatIsAnEntityGraph() {
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
                   <p className="eyebrow mb-3 text-xs">THE IDENTITY GAP</p>
-                  <p className="text-[#3a2e24] font-inter text-sm leading-relaxed">
+                  <p className="text-[var(--d-fg-dim)] font-inter text-sm leading-relaxed">
                     Disconnected schema is the digital equivalent of a business card with no name on it. The information is present. The identity isn&apos;t.
                   </p>
                 </div>
