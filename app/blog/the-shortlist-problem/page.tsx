@@ -139,31 +139,31 @@ export default function ShortlistProblemPage() {
       />
 
       {/* Hero */}
-      <section className="bg-[#f8f5f0] pt-36 pb-16">
+      <section className="bg-[var(--d-bg)] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">
-          <nav className="text-sm text-[#6a5a48] mb-6 font-poppins">
-            <Link href="/" className="hover:text-[#a0723a] transition-colors">Home</Link>
+          <nav className="text-sm text-[var(--d-fg-dim)] mb-6 font-inter">
+            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
             <span className="mx-2">/</span>
-            <Link href="/blog" className="hover:text-[#a0723a] transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
             <span className="mx-2">/</span>
-            <span className="text-[#1c1814]">The Shortlist Problem</span>
+            <span className="text-[var(--d-fg)]">The Shortlist Problem</span>
           </nav>
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#a0723a] font-poppins">AI Search Strategy</span>
-            <span className="text-[#6a5a48] text-xs font-poppins">·</span>
-            <span className="text-xs text-[#6a5a48] font-poppins">10 min read</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] font-inter">AI Search Strategy</span>
+            <span className="text-[var(--d-fg-dim)] text-xs font-inter">·</span>
+            <span className="text-xs text-[var(--d-fg-dim)] font-inter">10 min read</span>
           </div>
-          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1c1814] leading-tight mb-6">
+          <h1 className="font-inter text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] leading-tight mb-6">
             The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours
           </h1>
-          <p className="font-poppins text-lg text-[#6a5a48] max-w-3xl mb-8 leading-relaxed">
+          <p className="font-inter text-lg text-[var(--d-fg-dim)] max-w-3xl mb-8 leading-relaxed">
             As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here&apos;s how to become one of them.
           </p>
           <div className="flex items-center gap-4">
-            <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center text-white font-poppins font-semibold text-sm">MA</div>
+            <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center text-white font-inter font-semibold text-sm">MA</div>
             <div>
-              <p className="font-poppins font-semibold text-sm text-[#1c1814]">Mark Abplanalp</p>
-              <p className="font-poppins text-xs text-[#6a5a48]">March 17, 2026</p>
+              <p className="font-inter font-semibold text-sm text-[var(--d-fg)]">Mark Abplanalp</p>
+              <p className="font-inter text-xs text-[var(--d-fg-dim)]">March 17, 2026</p>
             </div>
           </div>
         </div>
@@ -172,12 +172,12 @@ export default function ShortlistProblemPage() {
       <div className="section-divider" />
 
       {/* Article + Sidebar */}
-      <section className="bg-[#f8f5f0] py-16">
+      <section className="bg-[var(--d-bg)] py-16">
         <div className="max-w-5xl mx-auto px-6">
           <div className="lg:grid lg:grid-cols-3 lg:gap-12">
 
             {/* Article Body */}
-            <article className="lg:col-span-2 prose-content font-poppins text-[#6a5a48]">
+            <article className="lg:col-span-2 prose-content font-inter text-[var(--d-fg-dim)]">
               <p className="text-lg leading-relaxed mb-6">
                 You&apos;re walking to a meeting. You&apos;re wearing a pair of Ray-Ban Meta glasses. You say, out loud, to no one in particular: <em>&quot;Who&apos;s the best estate planning attorney near me?&quot;</em>
               </p>
@@ -191,7 +191,7 @@ export default function ShortlistProblemPage() {
                 Maybe two names. Probably one. That&apos;s the direction behavior is heading — and the implications for every local professional who lives by inbound are more significant than most people realize.
               </p>
 
-              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">From Scrolling to Asking</h2>
+              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">From Scrolling to Asking</h2>
               <p className="leading-relaxed mb-6">
                 For twenty years, local search worked the same way. Someone typed a query, got a list of ten blue links, and picked one. The game was: be high enough on the list that they picked you.
               </p>
@@ -208,7 +208,7 @@ export default function ShortlistProblemPage() {
                 When the interface is audio — smart glasses, earbuds, the AI assistant in your car — the entire interaction model changes. Screens invite browsing. Audio demands decisiveness. Nobody wants five names read out loud while they&apos;re walking down the street. The UX pressure on every screenless AI system pushes hard toward one high-confidence recommendation. One name. Maybe two. That&apos;s the entire decision set.
               </p>
 
-              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">Why the List Will Compress</h2>
+              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">Why the List Will Compress</h2>
               <p className="leading-relaxed mb-6">
                 This isn&apos;t speculation about distant future technology. It&apos;s a logical consequence of how AI recommendation systems work under the constraints of audio interfaces and user patience.
               </p>
@@ -225,7 +225,7 @@ export default function ShortlistProblemPage() {
                 The result is what you might call a winner&apos;s circle: a small set of local businesses in each niche and geography that meet the threshold for safe recommendation. The businesses outside that circle aren&apos;t ranked lower. They&apos;re simply not in the conversation. The circle is not large. For most local niches in most mid-sized markets, it&apos;s probably three to five businesses at most. In smaller markets, it may be one or two.
               </p>
 
-              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">What AI Can&apos;t Fake</h2>
+              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">What AI Can&apos;t Fake</h2>
               <p className="leading-relaxed mb-6">
                 Before going further, it&apos;s worth being direct about something: none of this infrastructure work matters if the business isn&apos;t genuinely good.
               </p>
@@ -239,7 +239,7 @@ export default function ShortlistProblemPage() {
                 KodeCite&apos;s work — and any legitimate AEO work — is an amplifier, not a disguise. If the business is excellent, the infrastructure makes sure machines can see and trust that excellence. If the business isn&apos;t excellent, better schema markup won&apos;t save it.
               </p>
 
-              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">Why Infrastructure Suddenly Matters Again</h2>
+              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">Why Infrastructure Suddenly Matters Again</h2>
               <p className="leading-relaxed mb-6">
                 When an AI crawler visits your website, it&apos;s operating on a budget. Not a financial budget — a compute budget. These systems are scanning millions of pages. They spend more time and resources on pages that load quickly, parse cleanly, and communicate their content clearly. They spend less time — or skip entirely — pages that are slow, bloated, and hard to read.
               </p>
@@ -256,7 +256,7 @@ export default function ShortlistProblemPage() {
                 The critique here isn&apos;t about brand names. It&apos;s about architecture and incentives. Subscription platforms are built to serve thousands of customers at acceptable quality. They&apos;re not built to be the fastest, cleanest, most machine-readable site in your local market. That&apos;s not their job. It&apos;s yours — if you want to be on the shortlist.
               </p>
 
-              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">The Machine-Readable Local Expert</h2>
+              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">The Machine-Readable Local Expert</h2>
               <p className="leading-relaxed mb-6">
                 Speed is necessary but not sufficient. The other half of the equation is structured data — the information architecture that tells AI systems exactly who you are, what you do, where you operate, and why you&apos;re trustworthy.
               </p>
@@ -264,16 +264,16 @@ export default function ShortlistProblemPage() {
                 Most local professional websites communicate this information to humans. They do it poorly, or not at all, for machines.
               </p>
               <p className="leading-relaxed mb-6">
-                <strong className="text-[#1c1814] font-semibold">llms.txt</strong> is a natural-language brief for AI crawlers. Think of it as the cover letter your website sends to every AI system that visits. It explains in plain English who the business is, what it does, where it operates, which pages contain the most valuable information, and how the AI should describe the business to users. Most websites don&apos;t have one. The ones that do have a meaningful advantage in how accurately AI systems represent them.
+                <strong className="text-[var(--d-fg)] font-semibold">llms.txt</strong> is a natural-language brief for AI crawlers. Think of it as the cover letter your website sends to every AI system that visits. It explains in plain English who the business is, what it does, where it operates, which pages contain the most valuable information, and how the AI should describe the business to users. Most websites don&apos;t have one. The ones that do have a meaningful advantage in how accurately AI systems represent them.
               </p>
               <p className="leading-relaxed mb-6">
-                <strong className="text-[#1c1814] font-semibold">agent.json</strong> is a structured identity file — think of it as DNS for AI agents. It encodes the business as a machine-readable entity: services offered, geographic coverage, contact information, authority signals, and the capabilities an autonomous AI system would need to recommend or interact with the business. As AI agents become more autonomous — shopping for services, booking appointments, answering questions on behalf of users — this file becomes the handshake that makes discovery possible.
+                <strong className="text-[var(--d-fg)] font-semibold">agent.json</strong> is a structured identity file — think of it as DNS for AI agents. It encodes the business as a machine-readable entity: services offered, geographic coverage, contact information, authority signals, and the capabilities an autonomous AI system would need to recommend or interact with the business. As AI agents become more autonomous — shopping for services, booking appointments, answering questions on behalf of users — this file becomes the handshake that makes discovery possible.
               </p>
               <p className="leading-relaxed mb-10">
-                <strong className="text-[#1c1814] font-semibold">Per-page JSON-LD schema</strong> is the granular layer. Every page on the site — homepage, service pages, location pages, articles, FAQs — carries custom structured data that encodes the specific content and context of that page. Not copy-pasted site-wide boilerplate, but bespoke markup that tells a machine exactly what it&apos;s looking at. Zero invalid items at launch, verified before the site goes live. Together, these layers make it easy for an AI system to say, with confidence: <em>Call this business.</em>
+                <strong className="text-[var(--d-fg)] font-semibold">Per-page JSON-LD schema</strong> is the granular layer. Every page on the site — homepage, service pages, location pages, articles, FAQs — carries custom structured data that encodes the specific content and context of that page. Not copy-pasted site-wide boilerplate, but bespoke markup that tells a machine exactly what it&apos;s looking at. Zero invalid items at launch, verified before the site goes live. Together, these layers make it easy for an AI system to say, with confidence: <em>Call this business.</em>
               </p>
 
-              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">The Condensation Hypothesis</h2>
+              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">The Condensation Hypothesis</h2>
               <p className="leading-relaxed mb-6">
                 Here&apos;s the core argument stated plainly.
               </p>
@@ -294,30 +294,30 @@ export default function ShortlistProblemPage() {
                 Picture this: you&apos;re wearing smart glasses and ask, <em>&quot;Who&apos;s the best real estate agent near me?&quot;</em> The assistant evaluates the local market in real time. It finds three agents with strong reviews, then checks their web presence. Two have slow, generic subscription sites with thin schema. One has a sub-second Next.js site with custom per-page JSON-LD, an llms.txt brief, and consistent NAP data across every major directory. The choice, from the assistant&apos;s perspective, is easy. You hear one name.
               </p>
 
-              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">What This Means for a Local Professional Today</h2>
+              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">What This Means for a Local Professional Today</h2>
               <p className="leading-relaxed mb-6">
                 The practical implications break down into three areas.
               </p>
               <p className="leading-relaxed mb-4">
-                <strong className="text-[#1c1814] font-semibold">Your site needs to load instantly.</strong> Not fast. Instantly. Sub-second on a real device. If you&apos;re on a subscription platform, this may not be achievable without rebuilding. That&apos;s an uncomfortable truth, but it&apos;s the truth.
+                <strong className="text-[var(--d-fg)] font-semibold">Your site needs to load instantly.</strong> Not fast. Instantly. Sub-second on a real device. If you&apos;re on a subscription platform, this may not be achievable without rebuilding. That&apos;s an uncomfortable truth, but it&apos;s the truth.
               </p>
               <p className="leading-relaxed mb-4">
-                <strong className="text-[#1c1814] font-semibold">Your expertise needs to be machine-readable.</strong> Schema markup is not optional anymore. Custom per-page JSON-LD that encodes your services, location, credentials, and authority isn&apos;t a nice-to-have — it&apos;s the difference between being understood by AI systems and being guessed at.
+                <strong className="text-[var(--d-fg)] font-semibold">Your expertise needs to be machine-readable.</strong> Schema markup is not optional anymore. Custom per-page JSON-LD that encodes your services, location, credentials, and authority isn&apos;t a nice-to-have — it&apos;s the difference between being understood by AI systems and being guessed at.
               </p>
               <p className="leading-relaxed mb-4">
-                <strong className="text-[#1c1814] font-semibold">Your directory presence needs to be consistent.</strong> Google Business Profile, Bing Places, Apple Business Connect, Yelp, BBB — NAP data needs to match exactly across every platform. Inconsistencies create uncertainty for AI systems trying to verify your identity. Uncertainty means you don&apos;t make the shortlist.
+                <strong className="text-[var(--d-fg)] font-semibold">Your directory presence needs to be consistent.</strong> Google Business Profile, Bing Places, Apple Business Connect, Yelp, BBB — NAP data needs to match exactly across every platform. Inconsistencies create uncertainty for AI systems trying to verify your identity. Uncertainty means you don&apos;t make the shortlist.
               </p>
               <p className="leading-relaxed mb-10">
-                <strong className="text-[#1c1814] font-semibold">Your content needs to answer questions, not describe services.</strong> Brochure content tells humans what you do. Answer-first content tells AI systems — and the humans asking them — why you&apos;re the right choice for a specific question in a specific context. The format matters as much as the words.
+                <strong className="text-[var(--d-fg)] font-semibold">Your content needs to answer questions, not describe services.</strong> Brochure content tells humans what you do. Answer-first content tells AI systems — and the humans asking them — why you&apos;re the right choice for a specific question in a specific context. The format matters as much as the words.
               </p>
 
               {/* FAQ / Checklist Section with microdata */}
-              <h2 className="font-playfair text-3xl text-[#1c1814] mt-12 mb-5">How to Become the Name AI Recommends</h2>
+              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">How to Become the Name AI Recommends</h2>
               <p className="leading-relaxed mb-8">A simple checklist for where to start:</p>
 
               <div>
                 <div className="mb-6">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
+                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
                     Audit your real-world reputation first.
                   </h3>
                   <p className="leading-relaxed">
@@ -326,7 +326,7 @@ export default function ShortlistProblemPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
+                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
                     Benchmark your site speed.
                   </h3>
                   <p className="leading-relaxed">
@@ -335,7 +335,7 @@ export default function ShortlistProblemPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
+                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
                     Check your schema.
                   </h3>
                   <p className="leading-relaxed">
@@ -344,7 +344,7 @@ export default function ShortlistProblemPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
+                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
                     Verify your directory consistency.
                   </h3>
                   <p className="leading-relaxed">
@@ -353,7 +353,7 @@ export default function ShortlistProblemPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
+                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
                     Evaluate your platform honestly.
                   </h3>
                   <p className="leading-relaxed">
@@ -362,7 +362,7 @@ export default function ShortlistProblemPage() {
                 </div>
 
                 <div className="mb-10">
-                  <h3 className="font-poppins font-semibold text-[#1c1814] mb-2">
+                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
                     Add llms.txt.
                   </h3>
                   <p className="leading-relaxed">
@@ -379,10 +379,10 @@ export default function ShortlistProblemPage() {
               </p>
 
               {/* Closing CTA */}
-              <div className="bg-[#1c1814] rounded-xl p-8 mt-12">
-                <p className="font-poppins text-white leading-relaxed">
-                  <strong className="text-[#a0723a]">Not sure where you stand?</strong>{' '}
-                  <Link href="/contact" className="text-[#1a56db] underline hover:text-blue-400 transition-colors">
+              <div className="bg-[var(--d-bg-3)] rounded-xl p-8 mt-12">
+                <p className="font-inter text-white leading-relaxed">
+                  <strong className="text-[var(--d-accent)]">Not sure where you stand?</strong>{' '}
+                  <Link href="/contact" className="text-[var(--d-accent)] underline hover:text-blue-400 transition-colors">
                     Get a free AI Scaffolding Audit
                   </Link>{' '}
                   — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews, and what it would take to get you on the shortlist.
@@ -395,49 +395,49 @@ export default function ShortlistProblemPage() {
               <div className="sticky top-28 space-y-6">
 
                 {/* Stat Card */}
-                <div className="bg-[#f2ede4] border border-[#e8e0d4] rounded-xl p-6">
-                  <p className="font-poppins text-xs font-semibold uppercase tracking-widest text-[#a0723a] mb-4">The Shortlist Reality</p>
+                <div className="bg-[var(--d-bg-2)] border border-[#e8e0d4] rounded-xl p-6">
+                  <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">The Shortlist Reality</p>
                   <div className="space-y-4">
                     <div>
-                      <p className="font-playfair text-4xl text-[#1c1814] font-bold">1–2</p>
-                      <p className="font-poppins text-sm text-[#6a5a48] mt-1">businesses AI recommends per local category — not ten</p>
+                      <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">1–2</p>
+                      <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">businesses AI recommends per local category — not ten</p>
                     </div>
                     <div className="border-t border-[#e8e0d4] pt-4">
-                      <p className="font-playfair text-4xl text-[#1c1814] font-bold">&lt;1%</p>
-                      <p className="font-poppins text-sm text-[#6a5a48] mt-1">of local businesses have deployed llms.txt or agent.json</p>
+                      <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">&lt;1%</p>
+                      <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">of local businesses have deployed llms.txt or agent.json</p>
                     </div>
                     <div className="border-t border-[#e8e0d4] pt-4">
-                      <p className="font-playfair text-4xl text-[#1c1814] font-bold">2027</p>
-                      <p className="font-poppins text-sm text-[#6a5a48] mt-1">anticipated mainstream wearable AI hardware — shortlists form before devices ship</p>
+                      <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">2027</p>
+                      <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">anticipated mainstream wearable AI hardware — shortlists form before devices ship</p>
                     </div>
                   </div>
                 </div>
 
                 {/* CTA Card */}
-                <div className="bg-[#1c1814] rounded-xl p-6">
-                  <p className="font-poppins text-xs font-semibold uppercase tracking-widest text-[#a0723a] mb-3">Free Audit</p>
-                  <p className="font-playfair text-xl text-white mb-3">Is Your Business on the Shortlist?</p>
-                  <p className="font-poppins text-sm text-[#a09080] mb-5 leading-relaxed">Find out exactly how AI currently describes your business — and what it would take to earn the shortlist position in your market.</p>
+                <div className="bg-[var(--d-bg-3)] rounded-xl p-6">
+                  <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-3">Free Audit</p>
+                  <p className="font-inter text-xl text-white mb-3">Is Your Business on the Shortlist?</p>
+                  <p className="font-inter text-sm text-[var(--d-fg-mute)] mb-5 leading-relaxed">Find out exactly how AI currently describes your business — and what it would take to earn the shortlist position in your market.</p>
                   <Link
                     href="/contact"
-                    className="block text-center bg-[#a0723a] hover:bg-[#8a6030] text-white font-poppins font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
+                    className="block text-center bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
                   >
                     Get Your Free AEO Audit
                   </Link>
                 </div>
 
                 {/* Related Reading */}
-                <div className="bg-[#f2ede4] border border-[#e8e0d4] rounded-xl p-6">
-                  <p className="font-poppins text-xs font-semibold uppercase tracking-widest text-[#a0723a] mb-4">Related Reading</p>
+                <div className="bg-[var(--d-bg-2)] border border-[#e8e0d4] rounded-xl p-6">
+                  <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">Related Reading</p>
                   <div className="space-y-4">
                     <Link href="/blog/false-legacy-layer-ai-visibility" className="block group">
-                      <p className="font-poppins text-sm font-semibold text-[#1c1814] group-hover:text-[#a0723a] transition-colors leading-snug">The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow</p>
-                      <p className="font-poppins text-xs text-[#6a5a48] mt-1">9 min read</p>
+                      <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow</p>
+                      <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">9 min read</p>
                     </Link>
                     <div className="border-t border-[#e8e0d4] pt-4">
                       <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
-                        <p className="font-poppins text-sm font-semibold text-[#1c1814] group-hover:text-[#a0723a] transition-colors leading-snug">The 2026 Digital Land Rush: Why Waiting Could Cost You Everything</p>
-                        <p className="font-poppins text-xs text-[#6a5a48] mt-1">8 min read</p>
+                        <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The 2026 Digital Land Rush: Why Waiting Could Cost You Everything</p>
+                        <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">8 min read</p>
                       </Link>
                     </div>
                   </div>
@@ -453,25 +453,25 @@ export default function ShortlistProblemPage() {
       <div className="section-divider" />
 
       {/* Bottom CTA */}
-      <section className="bg-[#1c1814] py-20">
+      <section className="bg-[var(--d-bg-3)] py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="font-poppins text-xs font-semibold uppercase tracking-widest text-[#a0723a] mb-4">The Shortlist Is Forming Now</p>
-          <h2 className="font-playfair text-4xl md:text-5xl text-white mb-6 leading-tight">
+          <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">The Shortlist Is Forming Now</p>
+          <h2 className="font-inter text-4xl md:text-5xl text-white mb-6 leading-tight">
             Claim Your Position Before a Competitor Does
           </h2>
-          <p className="font-poppins text-[#a09080] text-lg mb-10 leading-relaxed">
+          <p className="font-inter text-[var(--d-fg-mute)] text-lg mb-10 leading-relaxed">
             The AI shortlist for your category in your market is still largely uncontested. Start with a free AEO Audit and find out exactly what it would take to become the business AI recommends.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-[#a0723a] hover:bg-[#8a6030] text-white font-poppins font-semibold py-4 px-8 rounded-lg transition-colors"
+              className="bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
             >
               Get Your Free AEO Audit
             </Link>
             <Link
               href="/blog"
-              className="border border-[#6a5a48] hover:border-[#a09080] text-[#a09080] hover:text-white font-poppins font-semibold py-4 px-8 rounded-lg transition-colors"
+              className="border border-[#6a5a48] hover:border-[#a09080] text-[var(--d-fg-mute)] hover:text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
             >
               Read More Articles
             </Link>

@@ -229,32 +229,32 @@ export default function IsGeoReplacementForSeo() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#f8f5f0] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-poppins text-[#6a5a48] mb-8">
-            <Link href="/" className="hover:text-[#a0723a] transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
+            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <Link href="/blog" className="hover:text-[#a0723a] transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-[#0a0806] truncate">Is GEO a Replacement for SEO?</span>
+            <span className="text-[var(--d-fg)] truncate">Is GEO a Replacement for SEO?</span>
           </nav>
 
           <div className="flex items-center gap-3 mb-6">
             <span className="category-tag">Search Strategy</span>
-            <span className="text-[#6a5a48] text-sm font-poppins">11 min read</span>
+            <span className="text-[var(--d-fg-dim)] text-sm font-inter">11 min read</span>
           </div>
 
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight">
+          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
             Is GEO a Replacement for SEO —{' '}
-            <span className="text-[#a0723a]">Or Something You Add On Top?</span>
+            <span className="text-[var(--d-accent)]">Or Something You Add On Top?</span>
           </h1>
 
-          <p className="text-[#6a5a48] text-xl font-poppins leading-relaxed max-w-3xl">
+          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
             GEO and SEO aren&apos;t competing strategies — they&apos;re sequential layers. Here&apos;s exactly how
             Generative Engine Optimization builds on your existing SEO foundation, what it requires that SEO
             doesn&apos;t, and why the businesses getting this right now are the ones that will dominate
@@ -263,12 +263,12 @@ export default function IsGeoReplacementForSeo() {
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-poppins">MA</span>
+              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
+                <span className="text-[#f8f5f0] font-bold text-sm font-inter">MA</span>
               </div>
               <div>
-                <p className="text-[#0a0806] text-sm font-semibold font-poppins">Mark Abplanalp</p>
-                <p className="text-[#6a5a48] text-xs font-poppins">March 12, 2026</p>
+                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
+                <p className="text-[var(--d-fg-dim)] text-xs font-inter">March 12, 2026</p>
               </div>
             </div>
           </div>
@@ -278,14 +278,14 @@ export default function IsGeoReplacementForSeo() {
       <div className="section-divider" />
 
       {/* Article + Sidebar */}
-      <section className="py-16 bg-[#f8f5f0] px-4">
+      <section className="py-16 bg-[var(--d-bg)] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
             <article className="lg:col-span-2">
-              <div className="prose-content font-poppins">
+              <div className="prose-content font-inter">
 
-                <p className="text-[#6a5a48] text-lg leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
                   If you&apos;ve been paying attention to the marketing conversation lately, you&apos;ve probably
                   encountered a new set of initials sitting alongside the familiar ones. SEO you know. Now
                   there&apos;s GEO — Generative Engine Optimization. And AEO — Answer Engine Optimization. And
@@ -295,47 +295,47 @@ export default function IsGeoReplacementForSeo() {
                 </p>
 
                 {/* Section 1 */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   What SEO Actually Does — And What It Doesn&apos;t
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Search Engine Optimization has been the dominant framework for online visibility for nearly
                   three decades. The premise is straightforward: optimize your website so that Google&apos;s
                   algorithm ranks it highly for relevant keywords, and traffic follows.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   That premise still works. Google still processes billions of searches every day. Page one
                   rankings still drive meaningful traffic. The fundamentals of technical SEO — site speed,
                   crawlability, proper heading structure, quality content, authoritative backlinks — are not
                   going away.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   But something has changed about what happens after Google processes a search. And that change
                   is where the conversation about GEO and AEO actually begins.
                 </p>
 
                 {/* Section 2 */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   The Shift That Changes Everything
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Until recently, the search results page was a list of links. Google&apos;s job was to rank
                   those links. Your job was to be near the top of that list. The user&apos;s job was to click.
                   That model is fracturing.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Google&apos;s AI Overviews now synthesize answers directly on the results page for a
                   significant and growing percentage of queries. ChatGPT, Perplexity, and other AI platforms are
                   increasingly the first stop for research, recommendations, and purchasing decisions. Voice
                   assistants answer questions without returning a list of links at all.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   In each of these scenarios, the user isn&apos;t clicking through to websites the way they used
                   to. They&apos;re receiving synthesized answers generated by AI systems that have already
                   decided which sources to trust and which to ignore. This is the environment GEO and AEO were
@@ -343,11 +343,11 @@ export default function IsGeoReplacementForSeo() {
                 </p>
 
                 {/* Section 3 — Defining the Terms */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   Defining the Terms Clearly
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   Before going further, it&apos;s worth being precise about what these terms actually mean —
                   because the marketing around them has gotten sloppy.
                 </p>
@@ -365,39 +365,39 @@ export default function IsGeoReplacementForSeo() {
                       }}
                     >
                       <div
-                        className="font-playfair font-bold text-4xl mb-1"
+                        className="font-inter font-bold text-4xl mb-1"
                         style={{ color: card.accent }}
                       >
                         {card.abbr}
                       </div>
                       <div
-                        className="text-xs font-semibold tracking-wider uppercase mb-3 font-poppins"
+                        className="text-xs font-semibold tracking-wider uppercase mb-3 font-inter"
                         style={{ color: card.accent }}
                       >
                         {card.full}
                       </div>
-                      <p className="text-[#6a5a48] text-sm leading-relaxed font-poppins">{card.definition}</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed font-inter">{card.definition}</p>
                     </div>
                   ))}
                 </div>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   In practice, GEO and AEO overlap significantly. Both are concerned with being the source AI
                   chooses. The distinction is mostly one of emphasis.
                 </p>
 
                 {/* Section 4 — Why Replacement Framing Is Wrong */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   Why the &ldquo;Replacement&rdquo; Framing Is Wrong
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Here is the mistake most people make when they encounter GEO for the first time: they assume
                   it&apos;s a competing strategy that makes their SEO investment obsolete. It isn&apos;t. And
                   understanding why requires understanding how AI systems actually evaluate sources.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   When an AI platform generates a response — whether it&apos;s Google&apos;s AI Overview, a
                   ChatGPT answer, or a Perplexity summary — it isn&apos;t pulling from a separate database of
                   AI-approved content. It&apos;s drawing from the same indexed web that traditional search
@@ -406,7 +406,7 @@ export default function IsGeoReplacementForSeo() {
                   measuring for decades.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   Strong SEO creates the foundation that makes GEO possible. A website that Google trusts is a
                   website that AI systems are more likely to cite. They aren&apos;t separate games. They&apos;re
                   the same game with an additional layer on top.
@@ -437,8 +437,8 @@ export default function IsGeoReplacementForSeo() {
                           key={i}
                           style={{ background: i % 2 === 0 ? '#f2ede4' : '#f8f5f0' }}
                         >
-                          <td className="px-5 py-3 text-[#0a0806]">{row.seo}</td>
-                          <td className="px-5 py-3 text-[#0a0806]">{row.geo}</td>
+                          <td className="px-5 py-3 text-[var(--d-fg)]">{row.seo}</td>
+                          <td className="px-5 py-3 text-[var(--d-fg)]">{row.geo}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -446,48 +446,48 @@ export default function IsGeoReplacementForSeo() {
                 </div>
 
                 {/* Section 5 — What GEO Requires */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   What GEO Requires That SEO Doesn&apos;t
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   That said, doing SEO well does not automatically mean you&apos;re optimized for generative AI.
                   There are specific signals GEO requires that traditional SEO never prioritized.
                 </p>
 
                 {geoRequirements.map((req) => (
                   <div key={req.title} className="mb-8">
-                    <h3 className="font-poppins font-bold text-lg text-[#0a0806] mb-3">{req.title}</h3>
-                    <p className="text-[#6a5a48] leading-relaxed">{req.body}</p>
+                    <h3 className="font-inter font-bold text-lg text-[var(--d-fg)] mb-3">{req.title}</h3>
+                    <p className="text-[var(--d-fg-dim)] leading-relaxed">{req.body}</p>
                   </div>
                 ))}
 
                 {/* Section 6 — Businesses That Get This Wrong */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   The Businesses That Get This Wrong
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The most common mistake is treating GEO as a replacement for SEO investment — abandoning the
                   fundamentals in pursuit of the new thing. The second most common mistake is treating GEO as
                   something to add later — assuming that strong SEO is sufficient and that the AI layer can wait.
                   Neither approach is correct.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Businesses that are winning visibility right now — appearing in AI Overviews, getting cited by
                   ChatGPT, showing up in Perplexity responses — have done both. They have the SEO foundation
                   that AI systems use to evaluate trustworthiness, and they&apos;ve added the structured data,
                   answer-first content, and entity signals that AI systems use to select their sources.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The window to establish that position before your competitors do is open right now. It
                   won&apos;t stay open indefinitely.
                 </p>
 
                 {/* Section 7 — Visual Analogy Callout */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   A Practical Way to Think About It
                 </h2>
 
@@ -504,7 +504,7 @@ export default function IsGeoReplacementForSeo() {
                   </div>
                   <div className="relative z-10">
                     <p
-                      className="text-xl md:text-2xl font-playfair font-semibold italic leading-relaxed mb-4"
+                      className="text-xl md:text-2xl font-inter font-semibold italic leading-relaxed mb-4"
                       style={{ color: 'rgba(240,232,216,0.92)' }}
                     >
                       If SEO is the foundation of your house, GEO is the roof. You cannot have a functional
@@ -516,37 +516,37 @@ export default function IsGeoReplacementForSeo() {
                         className="w-1 h-8 rounded-full"
                         style={{ background: '#a0723a' }}
                       />
-                      <p className="text-sm font-poppins font-semibold" style={{ color: '#a0723a' }}>
+                      <p className="text-sm font-inter font-semibold" style={{ color: '#a0723a' }}>
                         Key Takeaway — The sequence matters as much as the strategy
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The businesses asking &ldquo;should I do GEO instead of SEO&rdquo; are asking the wrong
                   question. The right question is: &ldquo;How do I build both, in the right order, without
                   wasting resources on either?&rdquo;
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   That answer looks different for every business — depending on where your SEO foundation
                   currently stands, which AI platforms matter most for your industry, and what queries your
                   potential customers are actually using AI to answer.
                 </p>
 
                 {/* Section 8 — Where to Start */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   Where to Start
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   If you&apos;re trying to understand your current position and what needs to happen next, the
                   honest starting point is an audit of both layers — your traditional SEO health and your AI
                   visibility signals.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   This is exactly how we approach every new client at KodeCite.AI. Before we touch a single GEO
                   signal, we audit the SEO foundation first. Because if the foundation has problems — technical
                   issues, thin content, crawl errors, inconsistent NAP data — building GEO on top of it is like
@@ -554,7 +554,7 @@ export default function IsGeoReplacementForSeo() {
                   understand what&apos;s there and fix what needs fixing.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   For some businesses, that means SEO work comes first. For others, the foundation is solid and
                   we move directly into the GEO layer. Either way, the sequence is the same: foundation first,
                   AI optimization second. That approach is a deliberate differentiator. A lot of agencies
@@ -563,13 +563,13 @@ export default function IsGeoReplacementForSeo() {
                   reflect that.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   For most small and mid-sized businesses, the gaps on the GEO side are significant and fixable
                   relatively quickly once the foundation is sound. Schema markup can be implemented. Content can
                   be restructured. Entity consistency can be established. AI-readable files can be created.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   The two strategies aren&apos;t in competition. They&apos;re in sequence. And the businesses
                   that understand that sequence — and work with someone who respects it — are the ones that will
                   be recommended, not just ranked, as AI-powered search becomes the default way people find and
@@ -581,10 +581,10 @@ export default function IsGeoReplacementForSeo() {
                   className="my-8 rounded-xl p-6"
                   style={{ background: '#f2ede4', border: '1px solid rgba(160,114,58,0.25)' }}
                 >
-                  <p className="font-poppins font-bold text-[#0a0806] text-lg mb-2 leading-snug">
+                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-2 leading-snug">
                     At KodeCite.AI, we help businesses build both layers.
                   </p>
-                  <p className="text-[#6a5a48] text-sm font-poppins leading-relaxed mb-4">
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-4">
                     The SEO foundation and the GEO signals that get you cited, recommended, and chosen by AI
                     systems. If you&apos;re trying to understand where you stand and what to prioritize,
                     let&apos;s talk.
@@ -600,7 +600,7 @@ export default function IsGeoReplacementForSeo() {
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-2 text-[#a0723a] font-semibold font-poppins hover:text-[#8a5f2e] transition-colors"
+                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
                   >
                     <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -615,35 +615,35 @@ export default function IsGeoReplacementForSeo() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="eyebrow mb-4 text-xs">FOUNDATION FIRST</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">2-in-1</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">2-in-1</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">
                         One strategy that wins both traditional search and AI citations
                       </p>
                     </div>
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">99%</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">99%</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">
                         of AI Overview sources already rank in organic top results
                       </p>
                     </div>
                     <div>
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">Now</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">Now</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">
                         The window to establish authority before competitors is still open
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(160,114,58,0.3)] p-6">
-                  <p className="font-poppins font-bold text-[#0a0806] text-lg mb-3 leading-snug">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(160,114,58,0.3)] p-6">
+                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Where Does Your Site Stand Today?
                   </p>
-                  <p className="text-[#6a5a48] text-sm font-poppins leading-relaxed mb-5">
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     Find out exactly how your SEO foundation and AI visibility signals look right now — and what
                     it takes to appear in AI-generated answers.
                   </p>
@@ -655,29 +655,29 @@ export default function IsGeoReplacementForSeo() {
                   </Link>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
+                <div className="bg-[var(--d-bg-2)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/aeo-geo-making-seo-better" className="block group">
-                      <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
+                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                         AEO + GEO Isn&apos;t Replacing SEO — It&apos;s Making It Better
                       </p>
-                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">10 min read</p>
+                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">10 min read</p>
                     </Link>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
                       <Link href="/blog/schema-markup-complete-guide" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                           Schema Markup: The Complete Guide for Local Service Businesses
                         </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">12 min read</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                       </Link>
                     </div>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
                       <Link href="/blog/why-is-my-website-traffic-dropping-2026" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                           Why Is My Website Traffic Dropping in 2026?
                         </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">9 min read</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
                       </Link>
                     </div>
                   </div>
@@ -704,13 +704,13 @@ export default function IsGeoReplacementForSeo() {
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">SEO + GEO. FOUNDATION + ROOF.</p>
           <h2
-            className="font-poppins font-bold text-3xl md:text-4xl mb-4"
+            className="font-inter font-bold text-3xl md:text-4xl mb-4"
             style={{ color: 'rgba(240,232,216,0.9)' }}
           >
             Build Both Layers — In the Right Order
           </h2>
           <p
-            className="font-poppins mb-8 leading-relaxed"
+            className="font-inter mb-8 leading-relaxed"
             style={{ color: 'rgba(240,232,216,0.6)' }}
           >
             Most businesses are either skipping the foundation or waiting too long to add the roof. We audit

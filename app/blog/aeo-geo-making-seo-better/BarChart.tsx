@@ -36,7 +36,7 @@ export default function BarChart() {
         {bars.map((bar) => (
           <div key={bar.label}>
             <div className="flex justify-between items-baseline mb-1">
-              <span className="text-sm font-semibold" style={{ color: '#0a0806', fontFamily: 'var(--font-poppins)' }}>
+              <span className="text-sm font-semibold" style={{ color: '#0a0806', fontFamily: 'var(--font-inter)' }}>
                 {bar.label}
               </span>
               <span className="text-sm font-bold ml-4 flex-shrink-0" style={{ color: '#a0723a' }}>
