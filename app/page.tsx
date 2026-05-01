@@ -45,6 +45,21 @@ export default function HomePage() {
               </p>
 
               <p
+                className="font-inter mb-5"
+                style={{
+                  fontSize: '17px',
+                  lineHeight: 1.65,
+                  color: 'var(--d-fg-dim)',
+                  fontWeight: 300,
+                  maxWidth: '480px',
+                }}
+              >
+                We replace slow, plugin-dependent websites with fast, AI-readable infrastructure
+                that helps Google, ChatGPT, Perplexity, and AI search tools understand and
+                recommend your business.
+              </p>
+
+              <p
                 className="font-inter mb-10"
                 style={{
                   fontSize: '17px',
@@ -60,12 +75,26 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/contact" className="d-btn d-btn-primary">
-                  Get My Machine Read →
+                  Get My Free Machine Read →
                 </Link>
                 <Link href="#framework" className="d-btn d-btn-ghost">
                   See The Framework
                 </Link>
               </div>
+
+              <p
+                className="font-inter mt-4"
+                style={{
+                  fontSize: '13px',
+                  lineHeight: 1.6,
+                  color: 'var(--d-fg-mute)',
+                  fontWeight: 300,
+                  maxWidth: '440px',
+                }}
+              >
+                A Machine Read shows what AI systems can verify about your business — and where
+                your website, schema, citations, and profiles are breaking trust.
+              </p>
             </div>
 
             {/* Right: entity graph */}
@@ -241,7 +270,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── 4. Entity Differentiator ────────────────────────── */}
+      {/* ─── 4. Verification ─────────────────────────────────── */}
+      <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}>
+        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+          <div className="d-eyebrow mb-6">VERIFICATION</div>
+
+          <h2
+            className="font-inter font-semibold mb-6"
+            style={{
+              fontSize: 'clamp(32px, 4vw, 52px)',
+              lineHeight: 1.07,
+              letterSpacing: '-0.025em',
+              color: 'var(--d-fg)',
+            }}
+          >
+            Schema alone isn&apos;t trust.<br />
+            <em className="serif">Verification is.</em>
+          </h2>
+
+          <p
+            className="font-inter mb-6"
+            style={{ fontSize: '17px', lineHeight: 1.7, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+          >
+            AI visibility only works when the entity graph matches the real business. For local and
+            owner-operated businesses, that means your website, schema, Google Business Profile,
+            Apple Maps, Bing, BBB, Yelp, licensing profiles, service areas, and address strategy
+            all have to agree. When even one of those layers contradicts another, AI systems lose
+            confidence — and confidence is the entire trust layer.
+          </p>
+
+          <p
+            className="font-inter"
+            style={{ fontSize: '17px', lineHeight: 1.7, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+          >
+            KodeCite doesn&apos;t just inject JSON-LD into your site. We architect the verification
+            system around it: matching identity signals across every authoritative source, resolving
+            inconsistencies before they become flags, and structuring address and service-area
+            strategy so it holds up under Google&apos;s verification scrutiny. The work that protects
+            you from suspension is the same work that makes AI tools confident enough to recommend you.
+          </p>
+        </div>
+      </section>
+
+      {/* ─── 5. Entity Differentiator ────────────────────────── */}
       <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -329,7 +400,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── 5. Who It's For ──────────────────────────────────── */}
+      {/* ─── 6. Who It's For ──────────────────────────────────── */}
       <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
           <div className="d-eyebrow mb-6">WHO IT&apos;S FOR</div>
@@ -405,7 +476,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── 6. Foundation Build ──────────────────────────────── */}
+      {/* ─── 7. Foundation Build ──────────────────────────────── */}
       <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
           <div className="flex flex-col lg:flex-row gap-16">
@@ -446,7 +517,7 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/contact" className="d-btn d-btn-primary">
-                  Get My Machine Read →
+                  Get My Free Machine Read →
                 </Link>
                 <Link href="/services" className="d-btn d-btn-ghost">
                   See Full Scope
@@ -510,10 +581,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── 7. AI Visibility Check ───────────────────────────── */}
+      {/* ─── 8. AI Visibility Check ───────────────────────────── */}
       <AIVisibilityCheck />
 
-      {/* ─── 8. Window Urgency ───────────────────────────────── */}
+      {/* ─── 9. Window Urgency ───────────────────────────────── */}
       <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)' }}>
         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
           <div className="d-eyebrow mb-6">THE WINDOW</div>
@@ -571,7 +642,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── 9. Final CTA ─────────────────────────────────────── */}
+      {/* ─── 10. Final CTA ────────────────────────────────────── */}
       <section style={{ padding: '120px 32px', backgroundColor: 'var(--d-bg)' }}>
         <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">GET STARTED</div>
@@ -621,12 +692,25 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/contact" className="d-btn d-btn-primary">
-                Get My Machine Read →
+                Get My Free Machine Read →
               </Link>
               <Link href="/services" className="d-btn d-btn-ghost">
                 See What&apos;s Included
               </Link>
             </div>
+
+            <p
+              className="font-inter mt-5"
+              style={{
+                fontSize: '13px',
+                lineHeight: 1.6,
+                color: 'var(--d-fg-mute)',
+                fontWeight: 300,
+              }}
+            >
+              A Machine Read shows what AI systems can verify about your business — and where
+              your website, schema, citations, and profiles are breaking trust.
+            </p>
           </div>
         </div>
       </section>

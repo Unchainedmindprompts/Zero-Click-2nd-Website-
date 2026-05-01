@@ -9,8 +9,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY);
-
   const { error } = await resend.emails.send({
     from: 'KodeCite Contact <onboarding@resend.dev>',
     to: 'mark@luxewindowworks.com',
