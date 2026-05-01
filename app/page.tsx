@@ -420,32 +420,20 @@ export default function HomePage() {
           </h2>
 
           <p
-            className="font-inter mb-5"
+            className="font-inter mb-12"
             style={{
               fontSize: '17px',
-              lineHeight: 1.5,
+              lineHeight: 1.65,
               color: 'var(--d-fg-dim)',
-              fontWeight: 400,
+              fontWeight: 300,
               maxWidth: '600px',
             }}
           >
-            Independent and owner-operated businesses that want to own their local category
-            before roll-ups and nationals dominate AI recommendations.
-          </p>
-
-          <p
-            className="font-inter mb-12"
-            style={{
-              fontSize: '15px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-mute)',
-              fontWeight: 300,
-              maxWidth: '560px',
-            }}
-          >
-            Independent and owner-operated businesses serving a specific geography.
-            The ones private equity is rolling up — because they dominate local markets
-            and haven&apos;t built the digital infrastructure to prove it yet.
+            Independent and owner-operated businesses serving a specific geography — the ones
+            private equity is rolling up because they dominate local markets and haven&apos;t built
+            the digital infrastructure to prove it yet. The operators who win the next decade are
+            the ones who own their local category before roll-ups and nationals dominate AI
+            recommendations.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
