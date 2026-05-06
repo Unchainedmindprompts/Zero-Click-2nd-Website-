@@ -18,7 +18,7 @@ const faqSchema = {
       name: 'What is Answer Engine Optimization (AEO)?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Answer Engine Optimization is the practice of building your website and online presence so that AI tools — like ChatGPT, Perplexity, Google AI Overview, Microsoft Copilot, and Bing — recommend your business by name when someone asks a relevant question. Traditional SEO was built for Google's blue links. AEO is built for the way people actually search now: asking questions and trusting the answer they get back. Most businesses have zero AEO infrastructure. That's the gap KodeCite closes.",
+        text: "Answer Engine Optimization is the practice of building your website and online presence so that AI tools — like ChatGPT, Perplexity, Google AI Overview, Microsoft Copilot, and Bing — surface your business when someone asks a relevant question. Traditional SEO was built for Google's blue links. AEO is built for the way people actually search now: asking questions and trusting the answer they get back. Most businesses have zero AEO infrastructure. That's the gap KodeCite closes.",
       },
     },
     {
@@ -26,7 +26,7 @@ const faqSchema = {
       name: 'How do I get my business to show up in ChatGPT or Google AI Overview?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "AI engines don't rank websites the way Google traditionally does. They look for verified, consistent, structured information about a business across multiple trusted sources — your website, your Google Business Profile, your directories, your reviews, and the structured data markup on every page. When all of those signals point to the same entity and tell the same story, AI engines treat your business as credible and cite it in responses. When they don't, you're invisible. KodeCite builds the full infrastructure that makes that consistency possible.",
+        text: "AI engines don't rank websites the way Google traditionally does. They look for verified, consistent, structured information about a business across multiple trusted sources — your website, your Google Business Profile, your directories, your reviews, and the structured data markup on every page. When all of those signals point to the same entity and tell the same story, AI engines are far more likely to treat your business as credible and surface it in responses. When they don't, you're invisible. KodeCite builds the full infrastructure that makes that consistency possible.",
       },
     },
     {
@@ -106,7 +106,15 @@ const faqSchema = {
       name: 'How long does it take to see results?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "It depends on the query, the competition, and how established the business already is — but KodeCite clients have seen AI citation results in as little as 30 days on a brand new domain. Entity graph signals like directory listings typically start surfacing in Bing and Google within 60–90 days as crawlers verify the cross-platform consistency. The compounding effect builds over months and years, not overnight. What makes KodeCite different from paid advertising is that the results don't stop when a budget runs out — the infrastructure keeps working.",
+        text: "It depends on the query, the competition, and how established the business already is — but KodeCite clients have seen early AI visibility signals in as little as 30 days on a brand new domain. Entity graph signals like directory listings typically start surfacing in Bing and Google within 60–90 days as crawlers verify the cross-platform consistency. The compounding effect builds over months and years, not overnight. What makes KodeCite different from paid advertising is that the foundation doesn't disappear when a budget runs out — the infrastructure keeps working.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Isn't AEO just rebranded SEO?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Partially — and that's a fair question. The foundational practices overlap: consistent directory listings, structured data, helpful content, strong reviews. Good SEO has always included these things. What's genuinely new is where visibility now happens. A growing share of people never click a search result at all — they ask ChatGPT, Perplexity, or Google AI Overview and trust the answer they get back. Those systems evaluate businesses differently than Google's traditional crawler does. They weight entity consistency, structured data signals, and authoritative content in ways that most small business websites aren't built to support. So yes — the practices are related. What's changed is the destination. KodeCite builds for both.",
       },
     },
   ],
@@ -124,11 +132,11 @@ const breadcrumbSchema = {
 const faqs: { q: string; a: string | string[] }[] = [
   {
     q: 'What is Answer Engine Optimization (AEO)?',
-    a: "Answer Engine Optimization is the practice of building your website and online presence so that AI tools — like ChatGPT, Perplexity, Google AI Overview, Microsoft Copilot, and Bing — recommend your business by name when someone asks a relevant question. Traditional SEO was built for Google's blue links. AEO is built for the way people actually search now: asking questions and trusting the answer they get back. Most businesses have zero AEO infrastructure. That's the gap KodeCite closes.",
+    a: "Answer Engine Optimization is the practice of building your website and online presence so that AI tools — like ChatGPT, Perplexity, Google AI Overview, Microsoft Copilot, and Bing — surface your business when someone asks a relevant question. Traditional SEO was built for Google's blue links. AEO is built for the way people actually search now: asking questions and trusting the answer they get back. Most businesses have zero AEO infrastructure. That's the gap KodeCite closes.",
   },
   {
     q: 'How do I get my business to show up in ChatGPT or Google AI Overview?',
-    a: "AI engines don't rank websites the way Google traditionally does. They look for verified, consistent, structured information about a business across multiple trusted sources — your website, your Google Business Profile, your directories, your reviews, and the structured data markup on every page. When all of those signals point to the same entity and tell the same story, AI engines treat your business as credible and cite it in responses. When they don't, you're invisible. KodeCite builds the full infrastructure that makes that consistency possible.",
+    a: "AI engines don't rank websites the way Google traditionally does. They look for verified, consistent, structured information about a business across multiple trusted sources — your website, your Google Business Profile, your directories, your reviews, and the structured data markup on every page. When all of those signals point to the same entity and tell the same story, AI engines are far more likely to treat your business as credible and surface it in responses. When they don't, you're invisible. KodeCite builds the full infrastructure that makes that consistency possible.",
   },
   {
     q: 'What is an entity graph and why does it matter for my business?',
@@ -192,8 +200,17 @@ const faqs: { q: string; a: string | string[] }[] = [
   {
     q: 'How long does it take to see results?',
     a: [
-      "It depends on the query, the competition, and how established the business already is — but KodeCite clients have seen AI citation results in as little as 30 days on a brand new domain. Entity graph signals like directory listings typically start surfacing in Bing and Google within 60–90 days as crawlers verify the cross-platform consistency.",
-      "The compounding effect builds over months and years, not overnight. What makes KodeCite different from paid advertising is that the results don't stop when a budget runs out — the infrastructure keeps working.",
+      "It depends on the query, the competition, and how established the business already is — but KodeCite clients have seen early AI visibility signals in as little as 30 days on a brand new domain. Entity graph signals like directory listings typically start surfacing in Bing and Google within 60–90 days as crawlers verify the cross-platform consistency.",
+      "The compounding effect builds over months and years, not overnight. What makes KodeCite different from paid advertising is that the foundation doesn't disappear when a budget runs out — the infrastructure keeps working.",
+    ],
+  },
+  {
+    q: "Isn't AEO just rebranded SEO?",
+    a: [
+      "Partially — and that's a fair question.",
+      "The foundational practices overlap: consistent directory listings, structured data, helpful content, strong reviews. Good SEO has always included these things. If an agency tells you AEO has nothing to do with SEO, they're overselling.",
+      "What's genuinely new is where visibility now happens. A growing share of people never click a search result at all — they ask ChatGPT, Perplexity, or Google AI Overview and trust the answer they get back. Those systems evaluate businesses differently than Google's traditional crawler does. They weight entity consistency, structured data signals, and authoritative content in ways that most small business websites aren't built to support.",
+      "So yes — the practices are related. What's changed is the destination. KodeCite builds for both.",
     ],
   },
 ];
