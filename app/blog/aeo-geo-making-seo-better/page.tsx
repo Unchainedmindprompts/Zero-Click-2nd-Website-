@@ -28,13 +28,19 @@ const blogPostingSchema = {
     "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-08',
-  dateModified: '2026-03-08',
+  datePublished: '2026-03-08T00:00:00+00:00',
+  dateModified: '2026-03-08T00:00:00+00:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
   },
   url: 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: [
     'AEO',
     'GEO',
@@ -185,43 +191,43 @@ export default function AeoGeoMakingSEOBetter() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#f8f5f0] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-poppins text-[#6a5a48] mb-8">
-            <Link href="/" className="hover:text-[#a0723a] transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
+            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <Link href="/blog" className="hover:text-[#a0723a] transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-[#0a0806] truncate">AEO + GEO Making SEO Better</span>
+            <span className="text-[var(--d-fg)] truncate">AEO + GEO Making SEO Better</span>
           </nav>
 
           <div className="flex items-center gap-3 mb-6">
             <span className="category-tag">Search Strategy</span>
-            <span className="text-[#6a5a48] text-sm font-poppins">10 min read</span>
+            <span className="text-[var(--d-fg-dim)] text-sm font-inter">10 min read</span>
           </div>
 
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight">
+          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
             AEO + GEO Isn&apos;t Replacing SEO —{' '}
-            <span className="text-[#a0723a]">It&apos;s Making It Better</span>
+            <span className="text-[var(--d-accent)]">It&apos;s Making It Better</span>
           </h1>
 
-          <p className="text-[#6a5a48] text-xl font-poppins leading-relaxed max-w-3xl">
+          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
             When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here&apos;s exactly why local businesses should act now.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-poppins">MA</span>
+              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
+                <span className="text-[#f8f5f0] font-bold text-sm font-inter">MA</span>
               </div>
               <div>
-                <p className="text-[#0a0806] text-sm font-semibold font-poppins">Mark Abplanalp</p>
-                <p className="text-[#6a5a48] text-xs font-poppins">March 8, 2026</p>
+                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
+                <p className="text-[var(--d-fg-dim)] text-xs font-inter">March 8, 2026</p>
               </div>
             </div>
           </div>
@@ -231,19 +237,19 @@ export default function AeoGeoMakingSEOBetter() {
       <div className="section-divider" />
 
       {/* Article + Sidebar */}
-      <section className="py-16 bg-[#f8f5f0] px-4">
+      <section className="py-16 bg-[var(--d-bg)] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
             <article className="lg:col-span-2">
-              <div className="prose-content font-poppins">
+              <div className="prose-content font-inter">
 
-                <p className="text-[#6a5a48] text-lg leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
                   Every week, a local business owner asks some version of the same question: &ldquo;Should I be doing AEO and GEO instead of SEO — or in addition to it?&rdquo; The answer reframes the question entirely. AEO and GEO do not compete with SEO. They are SEO, upgraded. When you build websites that language models can truly parse and trust, traditional search rewards you too. It is one investment that wins every channel simultaneously.
                 </p>
 
                 {/* Section 1: The Moment Everything Changed */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   The Moment Everything Changed
                 </h2>
 
@@ -271,16 +277,16 @@ export default function AeoGeoMakingSEOBetter() {
                   </div>
                 </div>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   This scenario is not a projection. It is already happening via Meta Ray-Ban glasses, Perplexity, ChatGPT, and Google AI Overviews today. The businesses that win these recommendations share one characteristic: they have built websites that machines can read as clearly as humans do.
                 </p>
 
                 {/* Section 2: Why Rankings Are Becoming Secondary */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   Why Rankings Are Becoming Secondary — And Why That Helps You
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   BrightEdge research found that 99% of AI Overview sources come from the top organic results. That single data point rewrites the conventional wisdom. A GEO win — being cited in an AI-generated answer — is nearly always also an SEO win. The infrastructure that earns AI trust earns ranking trust simultaneously. Here is why:
                 </p>
 
@@ -315,8 +321,8 @@ export default function AeoGeoMakingSEOBetter() {
                         {item.n}
                       </div>
                       <div>
-                        <p className="font-semibold text-[#0a0806] mb-1">{item.title}</p>
-                        <p className="text-[#6a5a48] leading-relaxed text-sm">{item.body}</p>
+                        <p className="font-semibold text-[var(--d-fg)] mb-1">{item.title}</p>
+                        <p className="text-[var(--d-fg-dim)] leading-relaxed text-sm">{item.body}</p>
                       </div>
                     </li>
                   ))}
@@ -337,7 +343,7 @@ export default function AeoGeoMakingSEOBetter() {
                       className="rounded-xl p-5 text-center"
                       style={{ background: '#1a2940', border: '1px solid rgba(255,255,255,0.07)' }}
                     >
-                      <p className="font-playfair text-4xl font-bold mb-1" style={{ color: '#a0723a' }}>
+                      <p className="font-inter text-4xl font-bold mb-1" style={{ color: '#a0723a' }}>
                         {card.stat}
                       </p>
                       <p className="text-sm leading-snug mb-2" style={{ color: 'rgba(240,232,216,0.8)' }}>
@@ -349,14 +355,14 @@ export default function AeoGeoMakingSEOBetter() {
                 </div>
 
                 {/* Section 3: Four-Layer Authority Engine */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   The{' '}
-                  <Link href="/services" className="text-[#1a56db] hover:underline">
+                  <Link href="/services" className="text-[var(--d-accent)] hover:underline">
                     Four-Layer Authority Engine
                   </Link>
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   KodeCite.AI&apos;s framework for making a local business the trusted default for both AI agents and traditional search is built on four layers that reinforce each other. Each layer independently improves traditional SEO metrics. Together, they create the machine-readable authority that AI systems cite and recommend.
                 </p>
 
@@ -371,29 +377,29 @@ export default function AeoGeoMakingSEOBetter() {
                         border: '1px solid rgba(160,114,58,0.2)',
                       }}
                     >
-                      <p className="font-playfair text-3xl font-bold mb-3" style={{ color: 'rgba(160,114,58,0.4)' }}>
+                      <p className="font-inter text-3xl font-bold mb-3" style={{ color: 'rgba(160,114,58,0.4)' }}>
                         {pillar.number}
                       </p>
-                      <p className="font-semibold text-[#0a0806] mb-2 leading-snug">{pillar.title}</p>
-                      <p className="text-[#6a5a48] text-sm leading-relaxed">{pillar.body}</p>
+                      <p className="font-semibold text-[var(--d-fg)] mb-2 leading-snug">{pillar.title}</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed">{pillar.body}</p>
                     </div>
                   ))}
                 </div>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   Notice what every one of these layers does in parallel: it improves your traditional search performance. A faster site ranks better. Zero-error schema earns rich snippets. Consistent entity signals boost local pack visibility. Content that answers questions directly wins featured snippets. The{' '}
-                  <Link href="/services" className="text-[#1a56db] hover:underline">
+                  <Link href="/services" className="text-[var(--d-accent)] hover:underline">
                     Four-Layer Authority Engine
                   </Link>{' '}
                   is not a separate strategy from SEO. It is SEO done at the level AI demands.
                 </p>
 
                 {/* Section 4: Local Service Businesses */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   Local Service Businesses: Who Gets Hit First — And Who Wins First
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Not all businesses are equally affected by AI agent discovery. The categories most immediately impacted share three characteristics: high intent (the user has already decided to buy), time sensitivity (the decision has to be made now), and trust dependence (the wrong choice has real consequences). These are exactly the categories where people delegate the discovery decision to an AI agent.
                 </p>
 
@@ -457,8 +463,8 @@ export default function AeoGeoMakingSEOBetter() {
                           key={row.industry}
                           style={{ background: i % 2 === 0 ? '#f2ede4' : '#f8f5f0' }}
                         >
-                          <td className="px-5 py-3 font-semibold text-[#0a0806]">{row.industry}</td>
-                          <td className="px-5 py-3 text-[#6a5a48]">{row.examples}</td>
+                          <td className="px-5 py-3 font-semibold text-[var(--d-fg)]">{row.industry}</td>
+                          <td className="px-5 py-3 text-[var(--d-fg-dim)]">{row.examples}</td>
                           <td className="px-5 py-3">
                             <span
                               className="px-2 py-0.5 rounded text-xs font-semibold"
@@ -485,11 +491,11 @@ export default function AeoGeoMakingSEOBetter() {
                 </div>
 
                 {/* Section 5: The Beautiful Side Effect */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   The Beautiful Side Effect
                 </h2>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Here is what makes the AEO + GEO + SEO convergence so powerful for local businesses right now: every action you take to become AI-readable automatically improves your traditional search performance. There is no tradeoff. When you fix your AEO infrastructure, you get a traditional SEO upgrade as a free side effect.
                 </p>
 
@@ -504,17 +510,17 @@ export default function AeoGeoMakingSEOBetter() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <p className="text-[#6a5a48] leading-relaxed">{item}</p>
+                      <p className="text-[var(--d-fg-dim)] leading-relaxed">{item}</p>
                     </div>
                   ))}
                 </div>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   Each one of those actions is an AEO action. Each one also improves your Google rankings, your rich snippet eligibility, your local pack visibility, and your Core Web Vitals scores. One infrastructure investment. Every channel rewarded.
                 </p>
 
                 {/* Section 6: What This Means Right Now */}
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   What This Means Right Now
                 </h2>
 
@@ -531,22 +537,22 @@ export default function AeoGeoMakingSEOBetter() {
                   </footer>
                 </blockquote>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Local service businesses in North Idaho, Eastern Washington, and markets like yours are still in the early window. Most competitors have not structured their presence for machine discovery. The businesses that move now get compounding advantages — AI citations build trust signals that improve rankings, which generate more AI citations. The flywheel starts with the first correctly implemented schema tag.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The businesses that wait are not just late to a new channel. They are watching their traditional SEO positions get eroded by competitors who built the infrastructure that wins both games simultaneously.
                 </p>
 
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
-                  <Link href="https://kodecite.ai" className="text-[#1a56db] hover:underline">KodeCite.ai</Link> builds the complete infrastructure — high-performance Next.js sites, zero-error schema, <Link href="/services" className="text-[#1a56db] hover:underline">llms.txt</Link> and <Link href="/services" className="text-[#1a56db] hover:underline">agent.json</Link> — so local businesses become the trusted default for both AI recommendations and traditional search simultaneously.
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
+                  <Link href="https://kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> builds the complete infrastructure — high-performance Next.js sites, zero-error schema, <Link href="/services" className="text-[var(--d-accent)] hover:underline">llms.txt</Link> and <Link href="/services" className="text-[var(--d-accent)] hover:underline">agent.json</Link> — so local businesses become the trusted default for both AI recommendations and traditional search simultaneously.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-2 text-[#a0723a] font-semibold font-poppins hover:text-[#8a5f2e] transition-colors"
+                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
                   >
                     <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -561,29 +567,29 @@ export default function AeoGeoMakingSEOBetter() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="eyebrow mb-4 text-xs">AEO + GEO WIN = SEO WIN</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">99%</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">of AI Overview sources rank in organic top results</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">99%</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of AI Overview sources rank in organic top results</p>
                     </div>
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">1×</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">infrastructure investment wins AI and traditional search</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">1×</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">infrastructure investment wins AI and traditional search</p>
                     </div>
                     <div>
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">Now</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">the window is still open in most local markets</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">Now</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">the window is still open in most local markets</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(160,114,58,0.3)] p-6">
-                  <p className="font-poppins font-bold text-[#0a0806] text-lg mb-3 leading-snug">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Ready to Win Both Channels?
                   </p>
-                  <p className="text-[#6a5a48] text-sm font-poppins leading-relaxed mb-5">
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     Find out exactly how your site looks to AI right now — and what it takes to become the trusted default in your market.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
@@ -591,29 +597,29 @@ export default function AeoGeoMakingSEOBetter() {
                   </Link>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/false-legacy-layer-ai-visibility" className="block group">
-                      <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
+                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                         The False Legacy Layer: Why Your AI Citations Could Disappear Tomorrow
                       </p>
-                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">9 min read</p>
+                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
                     </Link>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
                       <Link href="/blog/schema-markup-complete-guide" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                           Schema Markup: The Complete Guide for Local Service Businesses
                         </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">12 min read</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                       </Link>
                     </div>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
                       <Link href="/blog/ai-overviews-local-businesses" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                           How to Get Your Local Business Featured in Google AI Overviews
                         </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">7 min read</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">7 min read</p>
                       </Link>
                     </div>
                   </div>
@@ -638,10 +644,10 @@ export default function AeoGeoMakingSEOBetter() {
         />
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">ONE STRATEGY. EVERY CHANNEL.</p>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl mb-4" style={{ color: 'rgba(240,232,216,0.9)' }}>
+          <h2 className="font-inter font-bold text-3xl md:text-4xl mb-4" style={{ color: 'rgba(240,232,216,0.9)' }}>
             Build the Infrastructure That Wins AI <em>and</em> Google Simultaneously
           </h2>
-          <p className="font-poppins mb-8 leading-relaxed" style={{ color: 'rgba(240,232,216,0.6)' }}>
+          <p className="font-inter mb-8 leading-relaxed" style={{ color: 'rgba(240,232,216,0.6)' }}>
             Most businesses still think they have to choose. They don&apos;t. Let&apos;s show you exactly where your current site falls short — and what it takes to become the cited, recommended, and ranked authority in your market.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

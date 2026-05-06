@@ -20,9 +20,15 @@ const articleSchema = {
   headline: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
   description:
     'We ran the same site on both platforms. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
-  datePublished: '2026-02-22',
-  dateModified: '2026-02-22',
+  datePublished: '2026-02-22T00:00:00+00:00',
+  dateModified: '2026-02-22T00:00:00+00:00',
   wordCount: 900,
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/blog-hero.png',
+    width: 1200,
+    height: 630,
+  },
   keywords: 'Next.js vs WordPress, Next.js performance, Core Web Vitals comparison, Lighthouse scores, TTFB, local business website performance, AI crawler accessibility',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
@@ -104,43 +110,43 @@ export default function NextJsVsWordPress() {
       />
 
       {/* Hero */}
-      <section className="pt-36 pb-16 bg-[#f8f5f0] px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-poppins text-[#6a5a48] mb-8">
-            <Link href="/" className="hover:text-[#a0723a] transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
+            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <Link href="/blog" className="hover:text-[#a0723a] transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-[#0a0806] truncate">Next.js vs. WordPress</span>
+            <span className="text-[var(--d-fg)] truncate">Next.js vs. WordPress</span>
           </nav>
 
           <div className="flex items-center gap-3 mb-6">
             <span className="category-tag">Website Performance</span>
-            <span className="text-[#6a5a48] text-sm font-poppins">8 min read</span>
+            <span className="text-[var(--d-fg-dim)] text-sm font-inter">8 min read</span>
           </div>
 
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight">
+          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
             Next.js vs. WordPress:{' '}
-            <span className="text-[#a0723a]">Real Performance Numbers for Local Businesses</span>
+            <span className="text-[var(--d-accent)]">Real Performance Numbers for Local Businesses</span>
           </h1>
 
-          <p className="text-[#6a5a48] text-xl font-poppins leading-relaxed max-w-3xl">
+          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
             We ran the same site on both platforms. The results are not close. Here&apos;s the actual data — Core Web Vitals, Lighthouse scores, TTFB, and AI crawler accessibility — that should inform your infrastructure decision.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-poppins">ZC</span>
+              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
+                <span className="text-[#f8f5f0] font-bold text-sm font-inter">ZC</span>
               </div>
               <div>
-                <p className="text-[#0a0806] text-sm font-semibold font-poppins">KodeCite.ai</p>
-                <p className="text-[#6a5a48] text-xs font-poppins">February 22, 2026</p>
+                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">KodeCite.ai</p>
+                <p className="text-[var(--d-fg-dim)] text-xs font-inter">February 22, 2026</p>
               </div>
             </div>
           </div>
@@ -150,59 +156,59 @@ export default function NextJsVsWordPress() {
       <div className="section-divider" />
 
       {/* Article + Sidebar */}
-      <section className="py-16 bg-[#f8f5f0] px-4">
+      <section className="py-16 bg-[var(--d-bg)] px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
             <article className="lg:col-span-2">
-              <div className="prose-content font-poppins">
+              <div className="prose-content font-inter">
 
-                <p className="text-[#6a5a48] text-lg leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
                   There&apos;s no shortage of opinion on the WordPress versus modern stack debate. What&apos;s harder to find is actual data from real sites, tested in identical conditions, with numbers that apply to local service businesses rather than enterprise tech companies. We ran both. Here&apos;s what the numbers say.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   The Test Setup
                 </h2>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   Matching Sites for Accurate Comparison
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   We compared five local service business sites — spanning HVAC, window cleaning, landscaping, plumbing, and window treatments — across both platforms. Each business had both a legacy WordPress site (their existing site, on shared or managed WordPress hosting) and a new Next.js site (rebuilt by our team, deployed on edge infrastructure). Content was equivalent: the same page count, the same number of images, the same volume of text. The only variable was the technical platform.
                 </p>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Testing was conducted using Google PageSpeed Insights (field data from Chrome User Experience Report), Lighthouse CI (lab data, five-run averages), and Google Search Console crawl data. TTFB was measured from six geographic locations using WebPageTest. All tests were run in February 2026, with WordPress sites in their most recently optimized state — caching plugins active, images compressed, unnecessary plugins removed.
                 </p>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   Testing Conditions and Tools Used
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Mobile testing used a Moto G4 profile with 4G connection simulation — the standard Lighthouse mobile testing condition and roughly equivalent to the median mobile connection speed in the US. Desktop testing used an unthrottled connection. All Lighthouse tests are averages of five consecutive runs to control for variance. PageSpeed Insights field data reflects real user experience over the 28-day collection window preceding testing.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   Core Web Vitals: Side by Side
                 </h2>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   LCP — Where the Gap Is Largest
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Largest Contentful Paint is where the performance gap is most pronounced. Across all five sites, the WordPress versions averaged 4.8 seconds on mobile LCP — placing every one of them in Google&apos;s &ldquo;poor&rdquo; category (above 4 seconds). The Next.js versions averaged 1.2 seconds — well within Google&apos;s &ldquo;good&rdquo; threshold of under 2.5 seconds. The fastest WordPress site tested came in at 3.1 seconds, still in the &ldquo;needs improvement&rdquo; range. The slowest Next.js site was 1.6 seconds — good by a significant margin.
                 </p>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The primary driver of WordPress&apos;s LCP lag is render-blocking JavaScript. Even with aggressive caching, the browser must download, parse, and execute multiple plugin JavaScript files before it can render the main content. Next.js server-side rendering means the HTML arrives at the browser fully formed — there&apos;s no JavaScript execution chain blocking the first meaningful paint.
                 </p>
 
                 {/* Data comparison box */}
-                <div className="bg-[#f2ede4] rounded-xl border border-white/5 p-6 my-8">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6 my-8">
                   <p className="eyebrow mb-5 text-xs">TEST RESULTS — MOBILE AVERAGES</p>
                   <div className="overflow-x-auto">
-                    <table className="w-full text-sm font-poppins">
+                    <table className="w-full text-sm font-inter">
                       <thead>
                         <tr className="border-b border-[rgba(100,70,30,0.2)]">
-                          <th className="text-left text-[#6a5a48] pb-3 font-medium">Metric</th>
+                          <th className="text-left text-[var(--d-fg-dim)] pb-3 font-medium">Metric</th>
                           <th className="text-right text-red-400 pb-3 font-semibold">WordPress</th>
-                          <th className="text-right text-[#a0723a] pb-3 font-semibold">Next.js/Edge</th>
+                          <th className="text-right text-[var(--d-accent)] pb-3 font-semibold">Next.js/Edge</th>
                         </tr>
                       </thead>
                       <tbody className="space-y-2">
@@ -214,9 +220,9 @@ export default function NextJsVsWordPress() {
                           { metric: 'Core Web Vitals Pass', wp: '0/5 sites', next: '5/5 sites' },
                         ].map((row) => (
                           <tr key={row.metric} className="border-b border-white/5">
-                            <td className="text-[#6a5a48] py-2.5">{row.metric}</td>
+                            <td className="text-[var(--d-fg-dim)] py-2.5">{row.metric}</td>
                             <td className="text-red-400 text-right py-2.5 font-medium">{row.wp}</td>
-                            <td className="text-[#a0723a] text-right py-2.5 font-medium">{row.next}</td>
+                            <td className="text-[var(--d-accent)] text-right py-2.5 font-medium">{row.next}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -224,65 +230,65 @@ export default function NextJsVsWordPress() {
                   </div>
                 </div>
 
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   CLS and INP Compared
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Cumulative Layout Shift averaged 0.28 across the WordPress sites — a score Google rates as &ldquo;poor.&rdquo; The primary causes were theme-injected elements that load asynchronously (cookie banners, chat widgets, sticky headers) and images without explicit dimensions that cause layout reflow when they load. The Next.js sites averaged 0.02 — well within the &ldquo;good&rdquo; threshold of 0.1. When you control the rendering process at the framework level, CLS issues that are structural in WordPress simply don&apos;t arise.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   Crawler Accessibility and Crawl Budget
                 </h2>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   Time to First Byte Under Crawl Conditions
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   TTFB is the metric that most directly affects AI crawler behavior. Googlebot allocates crawl budget based partly on how quickly a site responds — fast-responding sites get more crawl requests per cycle, slow-responding sites get fewer. Across the six test locations, the WordPress sites averaged 680ms TTFB. The Next.js sites averaged 42ms. That&apos;s a 16x difference in crawler response time. When Google allocates crawl budget, the Next.js sites are getting an order of magnitude more crawl capacity than their WordPress counterparts.
                 </p>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   JavaScript Execution and Content Availability
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   AI crawlers — particularly those from Google and Bing — do execute JavaScript, but they allocate limited compute resources to it. A site where the core content is only accessible after JavaScript execution consumes more crawl budget per page and risks having content missed if the crawler reaches its resource limit. Next.js server-side rendering means the complete page content is in the initial HTML response — no JavaScript required. This gives AI crawlers everything they need in the cheapest possible way, which is why Next.js sites get crawled more completely and more frequently.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   Schema Markup Quality Comparison
                 </h2>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   Plugin-Generated vs Hand-Coded Validation Results
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   We ran every homepage through Google&apos;s Rich Results Test. WordPress sites using Yoast SEO or RankMath for schema generation produced an average of 3.4 errors or warnings per page. Common issues included missing required properties (telephone not in E.164 format, openingHoursSpecification incorrectly structured), conflicting schema objects from multiple active plugins, and generic entity types that didn&apos;t reflect the actual business category. The hand-coded Next.js schema implementations produced zero errors and zero warnings across all five sites.
                 </p>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   Rich Results Test Scores Compared
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Four of the five WordPress sites had schema errors that disqualified them from at least one rich result type. The business with three competing SEO plugins active had schema conflicts severe enough that Google couldn&apos;t determine the correct entity type for the homepage — it was alternately interpreted as a LocalBusiness and a WebSite depending on which plugin&apos;s output was processed first. All five Next.js sites qualified for every rich result type their schema was designed to produce.
                 </p>
 
-                <h2 className="font-playfair font-bold text-2xl text-[#0a0806] mt-10 mb-4">
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
                   What the Numbers Mean for AI Search Visibility
                 </h2>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   The Citation Correlation
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-6">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Across the five businesses in our test group, none of the WordPress versions appeared in Google AI Overviews for their primary service-plus-city queries. All five Next.js versions appeared in AI Overviews for at least two of their primary queries within 30 days of launch. This is a direct performance effect: fast sites with valid schema get cited. Slow sites with schema errors do not. The correlation is strong enough that we now consider Core Web Vitals performance the single most important factor in AI Overview eligibility for local businesses.
                 </p>
-                <h3 className="font-poppins font-semibold text-xl text-[#0a0806] mt-6 mb-3">
+                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
                   Making the Right Infrastructure Decision
                 </h3>
-                <p className="text-[#6a5a48] leading-relaxed mb-8">
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   The data is clear. WordPress on shared or managed hosting is structurally unsuited to the performance requirements of AI search visibility in 2026. The platform was built for a different era of search — one that doesn&apos;t weight LCP, CLS, TTFB, and schema validity as heavily as the current environment does. The same structural limitations apply to Wix and Squarespace sites — platforms that share WordPress&apos;s performance ceiling despite different architectures. Custom Next.js consistently meets every threshold that AI citation requires. For local service businesses where a single additional customer per month justifies the migration cost, the decision is straightforward.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-2 text-[#a0723a] font-semibold font-poppins hover:text-[#E8C478] transition-colors"
+                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
                   >
                     <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -297,29 +303,29 @@ export default function NextJsVsWordPress() {
             <aside className="lg:col-span-1">
               <div className="sticky top-28 space-y-6">
 
-                <div className="bg-[#f2ede4] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">KEY NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">16x</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">faster TTFB: edge hosting vs shared hosting</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">16x</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">faster TTFB: edge hosting vs shared hosting</p>
                     </div>
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">97</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">avg Lighthouse mobile score, Next.js</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">97</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">avg Lighthouse mobile score, Next.js</p>
                     </div>
                     <div>
-                      <p className="text-[#a0723a] font-bold text-3xl font-poppins">0</p>
-                      <p className="text-[#6a5a48] text-sm font-poppins mt-1">schema errors, hand-coded JSON-LD</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">0</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">schema errors, hand-coded JSON-LD</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="font-poppins font-bold text-[#0a0806] text-lg mb-3 leading-snug">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
+                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
                     Ready to See Your Numbers?
                   </p>
-                  <p className="text-[#6a5a48] text-sm font-poppins leading-relaxed mb-5">
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We&apos;ll run your current site through the same test battery and show you exactly where the performance gaps are — and what a migration would produce.
                   </p>
                   <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
@@ -327,21 +333,21 @@ export default function NextJsVsWordPress() {
                   </Link>
                 </div>
 
-                <div className="bg-[#f2ede4] rounded-xl border border-white/5 p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
                     <Link href="/blog/wordpress-losing-ai-search" className="block group">
-                      <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
+                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                         Why WordPress Sites Are Losing the AI Search War
                       </p>
-                      <p className="text-[#6a5a48] text-xs font-poppins mt-1">6 min read</p>
+                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">6 min read</p>
                     </Link>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
                       <Link href="/blog/how-we-indexed-49-pages-48-hours" className="block group">
-                        <p className="text-[#0a0806] text-sm font-semibold font-poppins leading-snug group-hover:text-[#a0723a] transition-colors">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
                           How We Built Sites That Score 93–100 on PageSpeed
                         </p>
-                        <p className="text-[#6a5a48] text-xs font-poppins mt-1">10 min read</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">10 min read</p>
                       </Link>
                     </div>
                   </div>
@@ -356,13 +362,13 @@ export default function NextJsVsWordPress() {
 
       <div className="section-divider" />
 
-      <section className="py-20 bg-[#f8f5f0] px-4">
+      <section className="py-20 bg-[var(--d-bg)] px-4">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">THE DATA IS CLEAR</p>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-[#0a0806] mb-4">
+          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
             Your Platform Is Either Working for You or Against You
           </h2>
-          <p className="text-[#6a5a48] font-poppins mb-8 leading-relaxed">
+          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
             The performance gap between platforms is too large to close with optimization. Let&apos;s run your numbers and show you what the right foundation looks like for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
