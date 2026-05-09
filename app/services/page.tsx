@@ -761,8 +761,8 @@ export default function ServicesPage() {
               maxWidth: '560px',
             }}
           >
-            We&apos;re a small, focused practice. We&apos;re good at a few things and we don&apos;t
-            pretend to be good at the rest. Here&apos;s where we stop — so you know who else to hire.
+            We&apos;re focused on doing one thing exceptionally well: building AI-native web infrastructure.
+            We don&apos;t dabble in the rest, and we won&apos;t pretend to. Here&apos;s where we stop — so you know who else to hire.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
