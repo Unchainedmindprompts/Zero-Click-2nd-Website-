@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     publishedTime: '2026-05-09',
     authors: ['Mark Abplanalp'],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Compressed Search Is Coming: Why Entity Trust Will Matter More Than Content Volume',
+    description:
+      'Search interfaces are compressing from ten blue links to map packs to AI answers to a single spoken recommendation. When the list gets shorter, entity trust determines who gets recommended.',
+    images: ['https://www.kodecite.ai/images/compressed-search-hero.png'],
+  },
 };
 
 const blogPostingSchema = {
@@ -26,6 +33,7 @@ const blogPostingSchema = {
     'Search interfaces are compressing from ten blue links to map packs to AI answers to a single spoken recommendation. When the list gets shorter, entity trust determines who gets recommended.',
   author: { '@id': 'https://www.kodecite.ai/#founder' },
   publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  isPartOf: { '@id': 'https://www.kodecite.ai/#website' },
   datePublished: '2026-05-09T00:00:00+00:00',
   dateModified: '2026-05-09T00:00:00+00:00',
   mainEntityOfPage: {
