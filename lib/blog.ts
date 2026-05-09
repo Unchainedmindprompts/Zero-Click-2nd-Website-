@@ -14,6 +14,15 @@ export type BlogPost = {
 // STRATEGY | FRAMEWORK | FOUNDATIONS | TECHNICAL | PLATFORM | PAID MEDIA | CASE STUDY | DIAGNOSTIC
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'compressed-search-entity-trust',
+    title: 'Compressed Search Is Coming: Why Entity Trust Will Matter More Than Content Volume',
+    category: 'STRATEGY',
+    date: 'May 9, 2026',
+    readTime: '18 min read',
+    excerpt: 'Search interfaces are compressing from ten blue links to map packs to AI answers to a single spoken recommendation. When the list gets shorter, entity trust — not content volume — determines who gets recommended.',
+    featured: true,
+  },
+  {
     slug: 'f1-framework-for-aeo',
     title: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win the AI Race in an Economy Car',
     category: 'FRAMEWORK',
