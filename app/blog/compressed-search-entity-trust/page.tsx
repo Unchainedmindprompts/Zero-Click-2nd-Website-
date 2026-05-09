@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ const blogPostingSchema = {
   url: 'https://www.kodecite.ai/blog/compressed-search-entity-trust',
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
+    url: 'https://www.kodecite.ai/images/compressed-search-hero.png',
     width: 1200,
     height: 630,
   },
@@ -185,6 +186,20 @@ export default function CompressedSearchEntityTrust() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Hero Image ──────────────────────────────────────── */}
+      <section className="bg-[var(--d-bg)] px-4 pb-12">
+        <div className="max-w-4xl mx-auto">
+          <Image
+            src="/images/compressed-search-hero.png"
+            alt="Compressed Search Is Coming — search results compressing from many links to a single AI recommendation"
+            width={1200}
+            height={630}
+            className="w-full rounded-xl shadow-sm"
+            priority
+          />
         </div>
       </section>
 
