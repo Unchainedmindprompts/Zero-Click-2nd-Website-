@@ -75,7 +75,7 @@ const blogPostingSchema = {
     { '@type': 'Thing', name: 'Zillow' },
     { '@type': 'Thing', name: 'YouTube' },
     { '@type': 'Thing', name: 'Schema.org' },
-    { '@type': 'SoftwareApplication', name: 'WordPress' },
+    { '@type': 'Thing', name: 'WordPress' },
   ],
 };
 
