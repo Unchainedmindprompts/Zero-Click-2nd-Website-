@@ -14,6 +14,15 @@ export type BlogPost = {
 // STRATEGY | FRAMEWORK | FOUNDATIONS | TECHNICAL | PLATFORM | PAID MEDIA | CASE STUDY | DIAGNOSTIC
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'entity-first-search-local-businesses',
+    title: 'Entity-First Search: How Local Businesses Become the Answer AI Systems Recommend',
+    category: 'FOUNDATIONS',
+    date: 'May 9, 2026',
+    readTime: '16 min read',
+    excerpt: 'AI systems do not search through text — they query structured representations of real-world entities. Understanding that distinction, and building a complete entity graph, is how local businesses become the answer AI recommends.',
+    featured: true,
+  },
+  {
     slug: 'compressed-search-entity-trust',
     title: 'Compressed Search Is Coming: Why Entity Trust Will Matter More Than Content Volume',
     category: 'STRATEGY',
