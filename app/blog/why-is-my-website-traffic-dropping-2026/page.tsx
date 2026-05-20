@@ -17,20 +17,33 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026#article',
   headline: 'Why Is My Website Traffic Dropping in 2026?',
   description:
     'If your organic traffic is declining in 2025 or 2026 and nothing has changed on your end, Google AI Overviews and zero-click search are almost certainly the cause. Here\'s what\'s happening and how to fix it.',
   author: {
     '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
   },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-11T00:00:00+00:00',
-  dateModified: '2026-03-11T00:00:00+00:00',
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-03-11T00:00:00-07:00',
+  dateModified: '2026-03-11T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
@@ -49,6 +62,17 @@ const blogPostingSchema = {
     'answer engine optimization',
     'AI search optimization',
     'organic traffic decline 2026',
+  ],
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  citation: [
+    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
+    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'CreativeWork', name: 'Google Search Console Help', url: 'https://support.google.com/webmasters' },
   ],
 };
 
@@ -102,6 +126,7 @@ const faqPageSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026#breadcrumb',
   itemListElement: [
     {
       '@type': 'ListItem',
@@ -275,7 +300,7 @@ export default function WhyIsMyWebsiteTrafficDropping() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

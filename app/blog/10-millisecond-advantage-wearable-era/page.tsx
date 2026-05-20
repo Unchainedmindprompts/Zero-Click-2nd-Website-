@@ -16,19 +16,32 @@ export const metadata: Metadata = {
   },
 }
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/10-millisecond-advantage-wearable-era#article',
   headline: 'When Your Customer Stops Searching and Starts Asking — Is Your Business Ready?',
   description: 'People are asking AI assistants and wearable devices for local business recommendations instead of searching Google. Here\'s what that means for your business — and what to do about it.',
   author: {
     '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
     name: 'Mark Abplanalp',
-    url: 'https://www.kodecite.ai/about',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
   },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-17T00:00:00+00:00',
-  dateModified: '2026-03-17T00:00:00+00:00',
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-03-17T00:00:00-07:00',
+  dateModified: '2026-03-17T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.kodecite.ai/blog/10-millisecond-advantage-wearable-era',
@@ -39,6 +52,12 @@ const blogPostingSchema = {
     url: 'https://www.kodecite.ai/blog-hero.png',
     width: 1200,
     height: 630,
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
   },
   keywords: [
     'wearable AI local business',
@@ -59,13 +78,13 @@ const blogPostingSchema = {
   articleSection: 'AI Search Strategy',
   wordCount: 1700,
   about: [
-    { '@type': 'Thing', name: 'Wearable AI Discovery' },
-    { '@type': 'Thing', name: 'Edge Infrastructure for Local Business' },
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
-    { '@type': 'Thing', name: 'llms.txt' },
-    { '@type': 'Thing', name: 'agent.json' },
-    { '@type': 'Thing', name: 'AI Recommendation Shortlist' },
-    { '@type': 'Thing', name: 'WordPress Performance Maintenance' },
+    { '@type': 'DefinedTerm', name: 'Wearable AI Discovery' },
+    { '@type': 'DefinedTerm', name: 'Edge Infrastructure for Local Business' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'llms.txt' },
+    { '@type': 'DefinedTerm', name: 'agent.json' },
+    { '@type': 'DefinedTerm', name: 'AI Recommendation Shortlist' },
+    { '@type': 'DefinedTerm', name: 'WordPress Performance Maintenance' },
   ],
   mentions: [
     { '@type': 'SoftwareApplication', name: 'ChatGPT' },
@@ -74,6 +93,11 @@ const blogPostingSchema = {
     { '@type': 'Product', name: 'Ray-Ban Meta', manufacturer: { '@type': 'Organization', name: 'Meta' } },
     { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
     { '@type': 'Organization', name: 'Vercel', url: 'https://vercel.com' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
   ],
   defines: [
     {
@@ -136,7 +160,7 @@ export default function WhenCustomerStopsSearchingPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

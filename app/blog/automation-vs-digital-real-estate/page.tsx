@@ -19,18 +19,35 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate#article',
   headline:
     'Why Automating Everything Is Failing Most Businesses — And Why Owning Your Digital Real Estate Is the Smarter Play in 2026',
   description:
     "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first.",
   url: 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
-  datePublished: '2026-03-10T00:00:00+00:00',
-  dateModified: '2026-03-10T00:00:00+00:00',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  datePublished: '2026-03-10T00:00:00-07:00',
+  dateModified: '2026-03-10T00:00:00-07:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
@@ -40,6 +57,12 @@ const blogPostingSchema = {
     url: 'https://www.kodecite.ai/blog-hero.png',
     width: 1200,
     height: 630,
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
   },
   keywords: [
     'AI automation',
@@ -53,18 +76,23 @@ const blogPostingSchema = {
     'agent.json',
   ],
   about: [
-    { '@type': 'Thing', name: 'AI Automation Failure Rates' },
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
-    { '@type': 'Thing', name: 'Digital Real Estate' },
-    { '@type': 'Thing', name: 'llms.txt' },
-    { '@type': 'Thing', name: 'agent.json' },
-    { '@type': 'Thing', name: 'Local Business AI Visibility' },
+    { '@type': 'DefinedTerm', name: 'AI Automation Failure Rates' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'Digital Real Estate' },
+    { '@type': 'DefinedTerm', name: 'llms.txt' },
+    { '@type': 'DefinedTerm', name: 'agent.json' },
+    { '@type': 'DefinedTerm', name: 'Local Business AI Visibility' },
   ],
   mentions: [
     { '@type': 'Person', name: 'Sam Altman', jobTitle: 'CEO, OpenAI' },
     { '@type': 'Person', name: 'Jony Ive', jobTitle: 'Designer, io' },
     { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
     { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'CreativeWork', name: 'McKinsey — The State of AI', url: 'https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai' },
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
   ],
 };
 
@@ -204,7 +232,7 @@ export default function AutomationVsDigitalRealEstate() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

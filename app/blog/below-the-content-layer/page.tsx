@@ -17,16 +17,33 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/below-the-content-layer#article',
   headline: 'Below The Content Layer — Where Your Real SEO, AEO & GEO Opportunity Lives',
   description:
     'The content layer conversation is everywhere right now — and most of it stops too soon. Here is the layer underneath that determines whether AI recommends you or skips you entirely.',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-04-22T00:00:00+00:00',
-  dateModified: '2026-04-22T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-04-22T00:00:00-07:00',
+  dateModified: '2026-04-22T00:00:00-07:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/below-the-content-layer' },
   url: 'https://www.kodecite.ai/blog/below-the-content-layer',
   image: {
@@ -35,22 +52,33 @@ const blogPostingSchema = {
     width: 1200,
     height: 630,
   },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
   keywords: ['entity graph', 'content layer', 'SEO', 'AEO', 'GEO', 'schema markup', 'AI search visibility', 'answer engine optimization', 'generative engine optimization'],
   articleSection: 'AEO & AI Search',
   wordCount: 2400,
   about: [
-    { '@type': 'Thing', name: 'Entity Graph' },
-    { '@type': 'Thing', name: 'Content Layer' },
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
-    { '@type': 'Thing', name: 'Schema Markup' },
+    { '@type': 'DefinedTerm', name: 'Entity Graph' },
+    { '@type': 'DefinedTerm', name: 'Content Layer' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'Schema Markup' },
   ],
   mentions: [
-    { '@type': 'Thing', name: 'Schema.org' },
-    { '@type': 'Thing', name: 'ChatGPT' },
-    { '@type': 'Thing', name: 'Perplexity' },
-    { '@type': 'Thing', name: 'Google AI Overviews' },
-    { '@type': 'Thing', name: 'Rank Math' },
-    { '@type': 'Thing', name: 'Yoast' },
+    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
+    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
+    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Organization', name: 'Rank Math', url: 'https://rankmath.com' },
+    { '@type': 'Organization', name: 'Yoast', url: 'https://yoast.com' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Specification (W3C)', url: 'https://www.w3.org/TR/json-ld11/' },
   ],
 };
 
@@ -105,6 +133,7 @@ const faqSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/below-the-content-layer#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
@@ -115,7 +144,7 @@ const breadcrumbSchema = {
 export default function BelowTheContentLayer() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 

@@ -104,10 +104,15 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://www.kodecite.ai/#organization',
+  '@id': 'https://www.kodecite.ai/#business',
   name: 'KodeCite.ai',
   url: 'https://www.kodecite.ai',
-  logo: 'https://www.kodecite.ai/logo.png',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://www.kodecite.ai/og-image.png',
+    width: 1200,
+    height: 630,
+  },
   description:
     "KodeCite.ai builds entity graphs for businesses — Schema.org deployed correctly, every element of a business connected into a single machine-readable identity that AI systems can read, verify, and cite.",
   email: 'mark@kodecite.ai',
@@ -127,7 +132,7 @@ const founderSchema = {
   '@id': 'https://www.kodecite.ai/#founder',
   name: 'Mark Abplanalp',
   jobTitle: 'Founder',
-  worksFor: { '@id': 'https://www.kodecite.ai/#organization' },
+  worksFor: { '@id': 'https://www.kodecite.ai/#business' },
   url: 'https://www.kodecite.ai',
   description:
     'Founder of KodeCite.ai. 30 years of sales experience, 23 years as an entrepreneur, 1,000+ hours of AEO and GEO research. Builds AI-ready web infrastructure for businesses that want to be recommended by AI search engines.',
@@ -174,7 +179,7 @@ const websiteSchema = {
   '@id': 'https://www.kodecite.ai/#website',
   name: 'KodeCite.ai',
   url: 'https://www.kodecite.ai',
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  publisher: { '@id': 'https://www.kodecite.ai/#business' },
   potentialAction: {
     '@type': 'SearchAction',
     target: 'https://www.kodecite.ai/blog?q={search_term_string}',

@@ -25,17 +25,39 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/compressed-search-entity-trust#article',
   headline: 'Compressed Search Is Coming: Why Entity Trust Will Matter More Than Content Volume',
   description:
     'Search interfaces are compressing from ten blue links to map packs to AI answers to a single spoken recommendation. When the list gets shorter, entity trust determines who gets recommended.',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  isPartOf: { '@id': 'https://www.kodecite.ai/#website' },
-  datePublished: '2026-05-09T00:00:00+00:00',
-  dateModified: '2026-05-09T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  datePublished: '2026-05-09T00:00:00-07:00',
+  dateModified: '2026-05-09T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.kodecite.ai/blog/compressed-search-entity-trust',
@@ -67,23 +89,28 @@ const blogPostingSchema = {
   articleSection: 'AI Search Strategy',
   wordCount: 4800,
   about: [
-    { '@type': 'Thing', name: 'Compressed Search' },
-    { '@type': 'Thing', name: 'Entity Trust' },
-    { '@type': 'Thing', name: 'Agentic Search' },
-    { '@type': 'Thing', name: 'Local Business AI Visibility' },
-    { '@type': 'Thing', name: 'Machine-Readable Web Infrastructure' },
-    { '@type': 'Thing', name: 'Voice Search and Wearable Discovery' },
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'Compressed Search' },
+    { '@type': 'DefinedTerm', name: 'Entity Trust' },
+    { '@type': 'DefinedTerm', name: 'Agentic Search' },
+    { '@type': 'DefinedTerm', name: 'Local Business AI Visibility' },
+    { '@type': 'DefinedTerm', name: 'Machine-Readable Web Infrastructure' },
+    { '@type': 'DefinedTerm', name: 'Voice Search and Wearable Discovery' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
   ],
   mentions: [
-    { '@type': 'Thing', name: 'ChatGPT' },
-    { '@type': 'Thing', name: 'Perplexity' },
-    { '@type': 'Thing', name: 'Google AI Overviews' },
-    { '@type': 'Thing', name: 'Microsoft Copilot' },
-    { '@type': 'Thing', name: 'Zillow' },
-    { '@type': 'Thing', name: 'YouTube' },
-    { '@type': 'Thing', name: 'Schema.org' },
-    { '@type': 'Thing', name: 'WordPress' },
+    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
+    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Organization', name: 'Microsoft Copilot', url: 'https://copilot.microsoft.com' },
+    { '@type': 'Organization', name: 'Zillow', url: 'https://www.zillow.com' },
+    { '@type': 'Organization', name: 'YouTube', url: 'https://www.youtube.com' },
+    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
+    { '@type': 'Organization', name: 'WordPress', url: 'https://wordpress.org' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
+    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
   ],
 };
 
@@ -138,6 +165,7 @@ const faqSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/compressed-search-entity-trust#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
@@ -153,7 +181,7 @@ const breadcrumbSchema = {
 export default function CompressedSearchEntityTrust() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 

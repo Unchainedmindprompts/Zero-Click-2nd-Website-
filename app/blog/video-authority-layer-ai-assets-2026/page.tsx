@@ -17,15 +17,32 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/video-authority-layer-ai-assets-2026#article',
   headline: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026",
   description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-23T00:00:00+00:00',
-  dateModified: '2026-03-23T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-03-23T00:00:00-07:00',
+  dateModified: '2026-03-23T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',
@@ -51,17 +68,28 @@ const blogPostingSchema = {
   ],
   articleSection: 'AI Search Strategy',
   wordCount: 1600,
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
   about: [
-    { '@type': 'Thing', name: 'VideoObject Schema' },
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
-    { '@type': 'Thing', name: 'AI Search Visibility' },
+    { '@type': 'DefinedTerm', name: 'VideoObject Schema' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'AI Search Visibility' },
   ],
   mentions: [
-    { '@type': 'Thing', name: 'ChatGPT' },
-    { '@type': 'Thing', name: 'Perplexity' },
-    { '@type': 'Thing', name: 'Google AI Overviews' },
-    { '@type': 'Thing', name: 'Gemini' },
-    { '@type': 'Thing', name: 'YouTube' },
+    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
+    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Organization', name: 'Gemini', url: 'https://gemini.google.com' },
+    { '@type': 'Organization', name: 'YouTube', url: 'https://www.youtube.com' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Schema.org — VideoObject', url: 'https://schema.org/VideoObject' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Video Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/video' },
+    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
   ],
 };
 
@@ -70,7 +98,7 @@ export default function VideoAuthorityLayer2026() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
       {/* Hero */}

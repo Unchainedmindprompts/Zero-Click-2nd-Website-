@@ -14,19 +14,42 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses#article',
   headline: 'The AI Search Stack Nobody Is Building for Small Businesses — And Why That\'s About to Change',
   description:
     'Enterprise SEO is built for enterprises. Subscription platforms are built for volume. Neither one gets you recommended by AI. Here\'s the gap in the market — and what fills it.',
-  datePublished: '2026-03-13T00:00:00+00:00',
-  dateModified: '2026-03-13T00:00:00+00:00',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  datePublished: '2026-03-13T00:00:00-07:00',
+  dateModified: '2026-03-13T00:00:00-07:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses',
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
   },
   image: {
     '@type': 'ImageObject',
@@ -45,6 +68,11 @@ const blogPostingSchema = {
     'AI crawlers',
   ],
   articleSection: 'AEO & AI Search',
+  citation: [
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
+  ],
 };
 
 const faqPageSchema = {
@@ -97,6 +125,7 @@ const faqPageSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
@@ -114,7 +143,7 @@ export default function AISearchStackNobodyIsBuilding() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

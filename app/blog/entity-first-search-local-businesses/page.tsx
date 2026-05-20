@@ -25,17 +25,39 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/entity-first-search-local-businesses#article',
   headline: 'Entity-First Search: How Local Businesses Become the Answer AI Systems Recommend',
   description:
     'Entity-first search is how AI systems decide who to recommend. This guide explains what an entity graph is, the most common entity gaps, and how to build machine-readable authority that gets local businesses cited by AI.',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  isPartOf: { '@id': 'https://www.kodecite.ai/#website' },
-  datePublished: '2026-05-09T00:00:00+00:00',
-  dateModified: '2026-05-09T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  datePublished: '2026-05-09T00:00:00-07:00',
+  dateModified: '2026-05-09T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.kodecite.ai/blog/entity-first-search-local-businesses',
@@ -67,26 +89,32 @@ const blogPostingSchema = {
   articleSection: 'AI Search Foundations',
   wordCount: 4600,
   about: [
-    { '@type': 'Thing', name: 'Entity-First Search' },
-    { '@type': 'Thing', name: 'Entity Graph for Local Business' },
-    { '@type': 'Thing', name: 'Machine-Readable Business Identity' },
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
-    { '@type': 'Thing', name: 'AI Discovery for Local Businesses' },
-    { '@type': 'Thing', name: 'Structured Data and Schema.org' },
-    { '@type': 'Thing', name: 'Local Business AI Visibility' },
+    { '@type': 'DefinedTerm', name: 'Entity-First Search' },
+    { '@type': 'DefinedTerm', name: 'Entity Graph for Local Business' },
+    { '@type': 'DefinedTerm', name: 'Machine-Readable Business Identity' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'AI Discovery for Local Businesses' },
+    { '@type': 'DefinedTerm', name: 'Structured Data and Schema.org' },
+    { '@type': 'DefinedTerm', name: 'Local Business AI Visibility' },
   ],
   mentions: [
-    { '@type': 'Thing', name: 'WordPress' },
-    { '@type': 'Thing', name: 'Wix' },
-    { '@type': 'Thing', name: 'Squarespace' },
-    { '@type': 'Thing', name: 'Google Business Profile' },
-    { '@type': 'Thing', name: 'Bing Places' },
-    { '@type': 'Thing', name: 'Apple Business Connect' },
-    { '@type': 'Thing', name: 'Better Business Bureau' },
-    { '@type': 'Thing', name: 'Yelp' },
-    { '@type': 'Thing', name: 'Yellow Pages' },
-    { '@type': 'Thing', name: 'Reddit' },
-    { '@type': 'Thing', name: 'Houzz' },
+    { '@type': 'Organization', name: 'WordPress', url: 'https://wordpress.org' },
+    { '@type': 'Organization', name: 'Wix', url: 'https://www.wix.com' },
+    { '@type': 'Organization', name: 'Squarespace', url: 'https://www.squarespace.com' },
+    { '@type': 'Organization', name: 'Google Business Profile', url: 'https://business.google.com' },
+    { '@type': 'Organization', name: 'Bing Places', url: 'https://www.bingplaces.com' },
+    { '@type': 'Organization', name: 'Apple Business Connect', url: 'https://businessconnect.apple.com' },
+    { '@type': 'Organization', name: 'Better Business Bureau', url: 'https://www.bbb.org' },
+    { '@type': 'Organization', name: 'Yelp', url: 'https://www.yelp.com' },
+    { '@type': 'Organization', name: 'Yellow Pages', url: 'https://www.yellowpages.com' },
+    { '@type': 'Organization', name: 'Reddit', url: 'https://www.reddit.com' },
+    { '@type': 'Organization', name: 'Houzz', url: 'https://www.houzz.com' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Specification (W3C)', url: 'https://www.w3.org/TR/json-ld11/' },
+    { '@type': 'CreativeWork', name: 'Google Knowledge Graph API', url: 'https://developers.google.com/knowledge-graph' },
   ],
 };
 
@@ -181,6 +209,7 @@ const faqSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/entity-first-search-local-businesses#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
@@ -196,7 +225,7 @@ const breadcrumbSchema = {
 export default function EntityFirstSearchLocalBusinesses() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
