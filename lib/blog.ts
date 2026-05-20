@@ -14,6 +14,15 @@ export type BlogPost = {
 // STRATEGY | FRAMEWORK | FOUNDATIONS | TECHNICAL | PLATFORM | PAID MEDIA | CASE STUDY | DIAGNOSTIC
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'google-ai-search-smb-entity-infrastructure',
+    title: 'Google Is Turning Search Into an Answer Engine. Most SMB Websites Are Not Built for What Comes Next.',
+    category: 'STRATEGY',
+    date: 'May 20, 2026',
+    readTime: '14 min read',
+    excerpt: 'AI Overviews, AI Mode, and Gemini-powered search are compressing the journey from question to recommendation. The businesses that win are not the ones with the most content — they are the ones with the clearest machine-readable identity.',
+    featured: true,
+  },
+  {
     slug: 'entity-first-search-local-businesses',
     title: 'Entity-First Search: How Local Businesses Become the Answer AI Systems Recommend',
     category: 'FOUNDATIONS',
