@@ -100,22 +100,19 @@ const articleSchema = {
       url: 'https://schema.org',
     },
     {
-      '@type': 'SoftwareApplication',
+      '@type': 'Organization',
       name: 'Google AI Mode',
-      applicationCategory: 'SearchApplication',
-      publisher: { '@type': 'Organization', name: 'Google' },
+      url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/',
     },
     {
-      '@type': 'SoftwareApplication',
+      '@type': 'Organization',
       name: 'Google AI Overviews',
-      applicationCategory: 'SearchApplication',
-      publisher: { '@type': 'Organization', name: 'Google' },
+      url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/',
     },
     {
-      '@type': 'SoftwareApplication',
+      '@type': 'Organization',
       name: 'Gemini',
-      applicationCategory: 'AIApplication',
-      publisher: { '@type': 'Organization', name: 'Google' },
+      url: 'https://gemini.google.com',
     },
     {
       '@type': 'Organization',
