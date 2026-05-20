@@ -17,15 +17,32 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/cold-load-vs-cached-ai-crawlers#article',
   headline: 'Your Site Feels Fast to You — But AI Crawlers See Something Very Different',
   description: 'Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-23T00:00:00+00:00',
-  dateModified: '2026-03-23T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-03-23T00:00:00-07:00',
+  dateModified: '2026-03-23T00:00:00-07:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers' },
   url: 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers',
   image: {
@@ -34,17 +51,33 @@ const blogPostingSchema = {
     width: 1200,
     height: 630,
   },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
   keywords: ['cold load', 'AI crawlers', 'PageSpeed', 'cached pages', 'AI visibility', 'GPTBot', 'answer engine optimization', 'local business AI search', 'Core Web Vitals AI'],
   articleSection: 'AI Search Strategy',
   wordCount: 1100,
-  about: [{ '@type': 'Thing', name: 'AI Crawler Behavior' }, { '@type': 'Thing', name: 'Cold Load Performance' }, { '@type': 'Thing', name: 'Answer Engine Optimization' }],
-  mentions: [{ '@type': 'Thing', name: 'ChatGPT' }, { '@type': 'Thing', name: 'Perplexity' }, { '@type': 'Thing', name: 'GPTBot' }, { '@type': 'Thing', name: 'Google AI Overviews' }],
+  about: [{ '@type': 'DefinedTerm', name: 'AI Crawler Behavior' }, { '@type': 'DefinedTerm', name: 'Cold Load Performance' }, { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' }],
+  mentions: [
+    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
+    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'GPTBot', url: 'https://openai.com/gptbot' },
+    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Google — Core Web Vitals', url: 'https://web.dev/articles/vitals' },
+    { '@type': 'CreativeWork', name: 'Google PageSpeed Insights', url: 'https://pagespeed.web.dev/' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Crawling and Indexing', url: 'https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers' },
+  ],
 };
 
 export default function ColdLoadVsCached() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
         <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />

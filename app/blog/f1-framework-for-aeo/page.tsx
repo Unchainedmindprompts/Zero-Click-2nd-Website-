@@ -18,16 +18,39 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/f1-framework-for-aeo#article',
   headline: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win an AI Race in an Economy Car',
   description:
     'Most AEO advice focuses on the wrong layer. The businesses winning AI discovery built the stack in the right order — chassis, engine, aero, graphics. Here is what that means and how to sequence the work.',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-04-23T00:00:00+00:00',
-  dateModified: '2026-04-23T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  datePublished: '2026-04-23T00:00:00-07:00',
+  dateModified: '2026-04-23T00:00:00-07:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/f1-framework-for-aeo' },
   url: 'https://www.kodecite.ai/blog/f1-framework-for-aeo',
   image: {
@@ -44,19 +67,25 @@ const blogPostingSchema = {
   articleSection: 'AEO & AI Search',
   wordCount: 2600,
   about: [
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
-    { '@type': 'Thing', name: 'Entity Graph' },
-    { '@type': 'Thing', name: 'AI Search Visibility' },
-    { '@type': 'Thing', name: 'Schema Markup' },
-    { '@type': 'Thing', name: 'Website Infrastructure' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'Entity Graph' },
+    { '@type': 'DefinedTerm', name: 'AI Search Visibility' },
+    { '@type': 'DefinedTerm', name: 'Schema Markup' },
+    { '@type': 'DefinedTerm', name: 'Website Infrastructure' },
   ],
   mentions: [
-    { '@type': 'Thing', name: 'ChatGPT' },
-    { '@type': 'Thing', name: 'Perplexity' },
-    { '@type': 'Thing', name: 'Google AI Overviews' },
-    { '@type': 'Thing', name: 'Schema.org' },
-    { '@type': 'Thing', name: 'Next.js' },
-    { '@type': 'Thing', name: 'Vercel' },
+    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
+    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
+    { '@type': 'Organization', name: 'Next.js', url: 'https://nextjs.org' },
+    { '@type': 'Organization', name: 'Vercel', url: 'https://vercel.com' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'CreativeWork', name: 'Google — Core Web Vitals', url: 'https://web.dev/articles/vitals' },
+    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
   ],
 };
 
@@ -111,6 +140,7 @@ const faqSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/f1-framework-for-aeo#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
@@ -121,7 +151,7 @@ const breadcrumbSchema = {
 export default function F1FrameworkForAEO() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
