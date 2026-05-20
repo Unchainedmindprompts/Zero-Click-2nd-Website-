@@ -17,20 +17,39 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses#article',
   headline: 'How to Rank in Google AI Overviews for Local Businesses',
   description:
     'Learn how local businesses can appear in Google AI Overviews through structured data, schema markup, E-E-A-T signals, and AI-first content strategies.',
   author: {
     '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
   },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-10T00:00:00+00:00',
-  dateModified: '2026-03-10T00:00:00+00:00',
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  datePublished: '2026-03-10T00:00:00-07:00',
+  dateModified: '2026-03-10T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
@@ -48,6 +67,11 @@ const blogPostingSchema = {
     'schema markup',
     'AEO',
     'answer engine optimization',
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — E-E-A-T', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
   ],
 };
 
@@ -93,6 +117,7 @@ const faqPageSchema = {
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses#breadcrumb',
   itemListElement: [
     {
       '@type': 'ListItem',
@@ -120,7 +145,7 @@ export default function HowToRankInGoogleAIOverviews() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"
