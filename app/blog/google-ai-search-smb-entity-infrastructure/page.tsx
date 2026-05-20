@@ -29,9 +29,9 @@ const articleSchema = {
     'Google Search is moving toward AI-generated answers, AI Mode, Gemini-powered assistance, and compressed recommendations. Here is why SMB websites need entity clarity, structured trust, and AI-readable infrastructure.',
   image: {
     '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/images/google-ai-search-smb-entity-infrastructure.webp',
-    width: 1600,
-    height: 900,
+    url: 'https://www.kodecite.ai/images/google-ai-search-smb-entity-infrastructure.png',
+    width: 1672,
+    height: 941,
   },
   datePublished: '2026-05-20T00:00:00-07:00',
   dateModified: '2026-05-20T00:00:00-07:00',
@@ -323,10 +323,10 @@ export default function GoogleAISearchSMBPage() {
       <section className="bg-[var(--d-bg)] px-4 pb-12">
         <div className="max-w-4xl mx-auto">
           <Image
-            src="/images/google-ai-search-smb-entity-infrastructure.webp"
+            src="/images/google-ai-search-smb-entity-infrastructure.png"
             alt="Google AI search turning into an answer engine — SMB entity infrastructure"
-            width={1600}
-            height={900}
+            width={1672}
+            height={941}
             className="w-full rounded-xl shadow-sm"
             priority
           />
