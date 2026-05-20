@@ -15,9 +15,9 @@ const serviceSchema = {
   serviceType: 'AI Visibility Infrastructure',
   provider: {
     '@type': 'ProfessionalService',
-    '@id': 'https://kodecite.ai/#organization',
+    '@id': 'https://www.kodecite.ai/#business',
     name: 'KodeCite.ai',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
   },
   description:
     "A complete rebuild of your business website on infrastructure that's actually legible to the systems people now use to find you. Engineered once. Owned forever. No retainer.",
@@ -51,8 +51,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai/' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kodecite.ai/services' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.kodecite.ai/services' },
   ],
 };
 

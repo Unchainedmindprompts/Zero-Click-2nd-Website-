@@ -17,11 +17,30 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/wordpress-losing-ai-search#article',
   headline: 'Why WordPress Sites Are Losing the AI Search War',
   description:
     'Bloated plugins, slow Core Web Vitals, and poor technical structure are making WordPress sites invisible to AI search engines. Here\'s why custom Next.js wins — and what the numbers say.',
-  datePublished: '2026-01-22T00:00:00+00:00',
-  dateModified: '2026-02-27T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-01-22T00:00:00-07:00',
+  dateModified: '2026-02-27T00:00:00-07:00',
   wordCount: 900,
   image: {
     '@type': 'ImageObject',
@@ -30,18 +49,39 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'WordPress AI search, Core Web Vitals, Next.js vs WordPress, plugin bloat, AI search visibility, schema markup, LCP benchmark',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/wordpress-losing-ai-search',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/wordpress-losing-ai-search',
   },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  about: [
+    { '@type': 'DefinedTerm', name: 'Core Web Vitals' },
+    { '@type': 'DefinedTerm', name: 'AI Search Visibility' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+  ],
+  mentions: [
+    { '@type': 'Organization', name: 'WordPress', url: 'https://wordpress.org' },
+    { '@type': 'Organization', name: 'Wix', url: 'https://www.wix.com' },
+    { '@type': 'Organization', name: 'Squarespace', url: 'https://www.squarespace.com' },
+    { '@type': 'Organization', name: 'Google', url: 'https://www.google.com' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Google — Core Web Vitals', url: 'https://web.dev/articles/vitals' },
+    { '@type': 'CreativeWork', name: 'Google PageSpeed Insights', url: 'https://pagespeed.web.dev/' },
+    { '@type': 'CreativeWork', name: 'Next.js Documentation', url: 'https://nextjs.org/docs' },
+  ],
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/wordpress-losing-ai-search#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },

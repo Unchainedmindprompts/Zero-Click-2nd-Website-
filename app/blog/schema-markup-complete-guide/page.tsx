@@ -17,11 +17,12 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/schema-markup-complete-guide#article',
   headline: 'Schema Markup: The Complete Guide for Local Service Businesses',
   description:
     'A step-by-step guide to implementing JSON-LD schema markup that makes your business visible to AI. Covers LocalBusiness, Service, FAQPage, and BreadcrumbList schemas with real implementation details.',
-  datePublished: '2026-02-08T00:00:00+00:00',
-  dateModified: '2026-02-08T00:00:00+00:00',
+  datePublished: '2026-02-08T00:00:00-07:00',
+  dateModified: '2026-02-08T00:00:00-07:00',
   wordCount: 1100,
   image: {
     '@type': 'ImageObject',
@@ -30,18 +31,47 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'schema markup, JSON-LD, LocalBusiness schema, FAQPage schema, Service schema, BreadcrumbList, structured data, AI search, local SEO',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
   url: 'https://kodecite.ai/blog/schema-markup-complete-guide',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/schema-markup-complete-guide',
   },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  citation: [
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Specification (W3C)', url: 'https://www.w3.org/TR/json-ld11/' },
+    { '@type': 'CreativeWork', name: 'Schema.org — LocalBusiness', url: 'https://schema.org/LocalBusiness' },
+  ],
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/schema-markup-complete-guide#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },

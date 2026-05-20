@@ -20,16 +20,33 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better#article',
   headline: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
   description:
     "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-08T00:00:00+00:00',
-  dateModified: '2026-03-08T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-03-08T00:00:00-07:00',
+  dateModified: '2026-03-08T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
@@ -40,6 +57,12 @@ const blogPostingSchema = {
     url: 'https://www.kodecite.ai/blog-hero.png',
     width: 1200,
     height: 630,
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
   },
   keywords: [
     'AEO',
@@ -57,29 +80,17 @@ const blogPostingSchema = {
   articleSection: 'Search Strategy',
   wordCount: 1800,
   about: [
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
-    { '@type': 'Thing', name: 'Generative Engine Optimization' },
-    { '@type': 'Thing', name: 'Search Engine Optimization' },
-    { '@type': 'Thing', name: 'Local Business Marketing' },
-    { '@type': 'Thing', name: 'Structured Data' },
-    { '@type': 'Thing', name: 'Agent-to-Agent Commerce' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'Generative Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'Search Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'Local Business Marketing' },
+    { '@type': 'DefinedTerm', name: 'Structured Data' },
+    { '@type': 'DefinedTerm', name: 'Agent-to-Agent Commerce' },
   ],
   citation: [
-    {
-      '@type': 'CreativeWork',
-      name: 'BrightEdge AI Search Research 2025',
-      publisher: { '@type': 'Organization', name: 'BrightEdge' },
-    },
-    {
-      '@type': 'CreativeWork',
-      name: 'Semrush AI Visibility Report',
-      publisher: { '@type': 'Organization', name: 'Semrush' },
-    },
-    {
-      '@type': 'CreativeWork',
-      name: 'Gartner Digital Markets Research',
-      publisher: { '@type': 'Organization', name: 'Gartner' },
-    },
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
   ],
 };
 
@@ -183,7 +194,7 @@ export default function AeoGeoMakingSEOBetter() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

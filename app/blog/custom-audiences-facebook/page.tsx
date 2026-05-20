@@ -20,11 +20,12 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/custom-audiences-facebook#article',
   headline: 'The Three Custom Audiences Every Local Business Needs on Facebook',
   description:
     'Most businesses set up one broad audience and wonder why their ads don\'t convert. These three layered audiences — awareness, intent, and retargeting — are the foundation of every campaign we build.',
-  datePublished: '2026-02-27T00:00:00+00:00',
-  dateModified: '2026-02-27T00:00:00+00:00',
+  datePublished: '2026-02-27T00:00:00-07:00',
+  dateModified: '2026-02-27T00:00:00-07:00',
   wordCount: 900,
   image: {
     '@type': 'ImageObject',
@@ -33,18 +34,46 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'Facebook custom audiences, video view audience, website retargeting, lookalike audiences, Meta pixel, local business Facebook ads, audience segmentation',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
   url: 'https://kodecite.ai/blog/custom-audiences-facebook',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/custom-audiences-facebook',
   },
+  citation: [
+    { '@type': 'CreativeWork', name: 'Meta Business Help Center — Custom Audiences', url: 'https://www.facebook.com/business/help/744354708981227' },
+    { '@type': 'CreativeWork', name: 'Meta Ads Manager Guide', url: 'https://www.facebook.com/business/help/200000840044554' },
+    { '@type': 'CreativeWork', name: 'Meta Business Help Center', url: 'https://www.facebook.com/business/help' },
+  ],
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/custom-audiences-facebook#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },

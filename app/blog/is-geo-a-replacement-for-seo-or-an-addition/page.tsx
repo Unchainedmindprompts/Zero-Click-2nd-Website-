@@ -19,23 +19,42 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition#article',
   headline: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',
   description:
     "GEO and SEO aren't competing strategies — they're sequential layers. Here's exactly how Generative Engine Optimization builds on your existing SEO foundation, what it requires that SEO doesn't, and why the businesses getting this right now are the ones that will dominate AI-powered search.",
   author: {
     '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
   },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-03-12T00:00:00+00:00',
-  dateModified: '2026-03-12T00:00:00+00:00',
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-03-12T00:00:00-07:00',
+  dateModified: '2026-03-12T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
   },
   image: {
     '@type': 'ImageObject',
@@ -55,6 +74,11 @@ const blogPostingSchema = {
   ],
   articleSection: 'Search Strategy',
   wordCount: 2100,
+  citation: [
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
+  ],
 };
 
 const faqPageSchema = {
@@ -134,6 +158,7 @@ const definedTermSchema = [
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition#breadcrumb',
   itemListElement: [
     {
       '@type': 'ListItem',
@@ -213,7 +238,7 @@ export default function IsGeoReplacementForSeo() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

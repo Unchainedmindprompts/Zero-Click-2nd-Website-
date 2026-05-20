@@ -17,11 +17,30 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens#article',
   headline: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
   description:
     'AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don\'t get recommended. Here\'s what token-efficient looks like.',
-  datePublished: '2026-03-03T00:00:00+00:00',
-  dateModified: '2026-03-03T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-03-03T00:00:00-07:00',
+  dateModified: '2026-03-03T00:00:00-07:00',
   wordCount: 1100,
   image: {
     '@type': 'ImageObject',
@@ -30,18 +49,40 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'AI token budget, AI agent crawling, token-efficient website, WordPress AI visibility, Next.js AI search, AEO, answer engine optimization, AI recommendations, website performance AI',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
   url: 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
   },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  about: [
+    { '@type': 'DefinedTerm', name: 'AI Token Budget' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'AI Search Visibility' },
+  ],
+  mentions: [
+    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
+    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'WordPress', url: 'https://wordpress.org' },
+    { '@type': 'Organization', name: 'Wix', url: 'https://www.wix.com' },
+    { '@type': 'Organization', name: 'Squarespace', url: 'https://www.squarespace.com' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Google — Core Web Vitals', url: 'https://web.dev/articles/vitals' },
+    { '@type': 'CreativeWork', name: 'Google PageSpeed Insights', url: 'https://pagespeed.web.dev/' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Crawling and Indexing', url: 'https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers' },
+  ],
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },

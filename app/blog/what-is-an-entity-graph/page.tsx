@@ -17,16 +17,33 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPostingSchema = {
+const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
+  '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/what-is-an-entity-graph#article',
   headline: 'What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade',
   description:
     "Schema.org launched in 2011 as the standard language of the internet. Over a decade later it's still misunderstood and misused — even by digital marketing practitioners. Here's what schema actually is, what an entity graph is, and why it matters more right now than it ever has.",
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
-  datePublished: '2026-04-17T00:00:00+00:00',
-  dateModified: '2026-04-17T00:00:00+00:00',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  datePublished: '2026-04-17T00:00:00-07:00',
+  dateModified: '2026-04-17T00:00:00-07:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/what-is-an-entity-graph' },
   url: 'https://www.kodecite.ai/blog/what-is-an-entity-graph',
   image: {
@@ -38,25 +55,37 @@ const blogPostingSchema = {
   keywords: ['entity graph', 'schema markup', 'schema.org', 'JSON-LD', 'AI search visibility', 'structured data', 'AEO', 'answer engine optimization', 'AI search optimization'],
   articleSection: 'AEO & AI Search',
   wordCount: 2100,
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
   about: [
-    { '@type': 'Thing', name: 'Entity Graph' },
-    { '@type': 'Thing', name: 'Schema Markup' },
-    { '@type': 'Thing', name: 'JSON-LD' },
-    { '@type': 'Thing', name: 'Answer Engine Optimization' },
+    { '@type': 'DefinedTerm', name: 'Entity Graph' },
+    { '@type': 'DefinedTerm', name: 'Schema Markup' },
+    { '@type': 'DefinedTerm', name: 'JSON-LD' },
+    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
   ],
   mentions: [
-    { '@type': 'Thing', name: 'Schema.org' },
-    { '@type': 'Thing', name: 'ChatGPT' },
-    { '@type': 'Thing', name: 'Perplexity' },
-    { '@type': 'Thing', name: 'Google AI Overviews' },
-    { '@type': 'Thing', name: 'Google Knowledge Graph' },
+    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
+    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
+    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Organization', name: 'Google Knowledge Graph', url: 'https://developers.google.com/knowledge-graph' },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Specification (W3C)', url: 'https://www.w3.org/TR/json-ld11/' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'CreativeWork', name: 'Google Knowledge Graph API', url: 'https://developers.google.com/knowledge-graph' },
   ],
 };
 
 export default function WhatIsAnEntityGraph() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       {/* Hero */}
       <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">

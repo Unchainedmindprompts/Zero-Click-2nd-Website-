@@ -17,11 +17,12 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours#article',
   headline: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
   description:
     'The complete technical breakdown of the Luxe Window Works SEO overhaul — how a Post Falls, Idaho window treatments business went from 75 to 124 indexed pages in 48 hours with zero schema errors.',
-  datePublished: '2026-02-01T00:00:00+00:00',
-  dateModified: '2026-02-27T00:00:00+00:00',
+  datePublished: '2026-02-01T00:00:00-07:00',
+  dateModified: '2026-02-27T00:00:00-07:00',
   wordCount: 950,
   image: {
     '@type': 'ImageObject',
@@ -30,22 +31,52 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'technical SEO, indexing, schema markup, Core Web Vitals, local business SEO, Google Search Console, crawl budget, Luxe Window Works, window treatments',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
   url: 'https://kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
   },
-  about: {
-    '@type': 'Thing',
-    name: 'Technical SEO',
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
   },
+  about: [
+    {
+      '@type': 'DefinedTerm',
+      name: 'Technical SEO',
+    },
+  ],
+  citation: [
+    { '@type': 'CreativeWork', name: 'Google Search Console Help', url: 'https://support.google.com/webmasters' },
+    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'CreativeWork', name: 'Google Search Central — Sitemaps', url: 'https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview' },
+  ],
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },

@@ -12,16 +12,16 @@ const contactPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Machine Read — KodeCite.ai',
-  url: 'https://kodecite.ai/contact',
-  publisher: { '@id': 'https://kodecite.ai/#organization' },
+  url: 'https://www.kodecite.ai/contact',
+  publisher: { '@id': 'https://www.kodecite.ai/#business' },
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai/' },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://kodecite.ai/contact' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.kodecite.ai/contact' },
   ],
 };
 
