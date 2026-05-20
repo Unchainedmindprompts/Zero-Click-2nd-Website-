@@ -17,11 +17,12 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance#article',
   headline: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
   description:
     'We ran the same site on both platforms. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
-  datePublished: '2026-02-22T00:00:00+00:00',
-  dateModified: '2026-02-22T00:00:00+00:00',
+  datePublished: '2026-02-22T00:00:00-07:00',
+  dateModified: '2026-02-22T00:00:00-07:00',
   wordCount: 900,
   image: {
     '@type': 'ImageObject',
@@ -30,18 +31,47 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'Next.js vs WordPress, Next.js performance, Core Web Vitals comparison, Lighthouse scores, TTFB, local business website performance, AI crawler accessibility',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
   url: 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
   },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
+  citation: [
+    { '@type': 'CreativeWork', name: 'Google — Core Web Vitals', url: 'https://web.dev/articles/vitals' },
+    { '@type': 'CreativeWork', name: 'Google PageSpeed Insights', url: 'https://pagespeed.web.dev/' },
+    { '@type': 'CreativeWork', name: 'Next.js Documentation', url: 'https://nextjs.org/docs' },
+    { '@type': 'CreativeWork', name: 'Vercel Edge Network', url: 'https://vercel.com/docs/edge-network/overview' },
+  ],
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },

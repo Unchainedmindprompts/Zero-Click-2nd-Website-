@@ -17,11 +17,12 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026#article',
   headline: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
   description:
     'Stop running ads that drain budget. Build a Facebook ad system that compounds — pixel data feeding audiences, retargeting warming leads, and lookalikes scaling what works.',
-  datePublished: '2026-02-12T00:00:00+00:00',
-  dateModified: '2026-02-12T00:00:00+00:00',
+  datePublished: '2026-02-12T00:00:00-07:00',
+  dateModified: '2026-02-12T00:00:00-07:00',
   wordCount: 950,
   image: {
     '@type': 'ImageObject',
@@ -30,18 +31,46 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'Facebook ads local business, Meta ads, custom audiences, retargeting, lookalike audiences, local service marketing, flywheel method, pixel data',
-  author: { '@id': 'https://www.kodecite.ai/#founder' },
-  publisher: { '@id': 'https://www.kodecite.ai/#organization' },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.kodecite.ai/#founder',
+    name: 'Mark Abplanalp',
+    jobTitle: 'Founder',
+    url: 'https://www.kodecite.ai',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://www.kodecite.ai/#business',
+    name: 'KodeCite.ai',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.kodecite.ai/og-image.png',
+      width: 1200,
+      height: 630,
+    },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    '@id': 'https://www.kodecite.ai/blog',
+    name: 'KodeCite.ai Blog',
+    url: 'https://www.kodecite.ai/blog',
+  },
   url: 'https://kodecite.ai/blog/facebook-ads-local-business-2026',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://kodecite.ai/blog/facebook-ads-local-business-2026',
   },
+  citation: [
+    { '@type': 'CreativeWork', name: 'Meta Business Help Center', url: 'https://www.facebook.com/business/help' },
+    { '@type': 'CreativeWork', name: 'Meta Ads Manager Guide', url: 'https://www.facebook.com/business/help/200000840044554' },
+    { '@type': 'CreativeWork', name: 'Meta Business — Pixel Setup', url: 'https://www.facebook.com/business/help/952192354843755' },
+  ],
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
