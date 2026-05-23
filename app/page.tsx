@@ -25,9 +25,8 @@ export default function HomePage() {
                   color: 'var(--d-fg)',
                 }}
               >
-                Built once.<br />
-                Owned forever.<br />
-                <em className="serif">Found by AI.</em>
+                Own the answer,<br />
+                <em className="serif">not the ad.</em>
               </h1>
 
               <p
