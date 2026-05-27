@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026 | KodeCite.AI",
   description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',
+    canonical: 'https://www.kodecite.ai/blog/video-authority-layer-ai-assets-2026',
   },
   openGraph: {
     title: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026",
@@ -45,9 +45,9 @@ const articleSchema = {
   dateModified: '2026-03-23T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',
+    '@id': 'https://www.kodecite.ai/blog/video-authority-layer-ai-assets-2026',
   },
-  url: 'https://kodecite.ai/blog/video-authority-layer-ai-assets-2026',
+  url: 'https://www.kodecite.ai/blog/video-authority-layer-ai-assets-2026',
   image: {
     '@type': 'ImageObject',
     url: 'https://www.kodecite.ai/blog-hero.png',

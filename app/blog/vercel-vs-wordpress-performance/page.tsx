@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
   description:
     'We ran the same site on both platforms. The results are not close. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance',
+  },
   openGraph: {
     title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
     description:
@@ -49,10 +52,10 @@ const articleSchema = {
       height: 630,
     },
   },
-  url: 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
+  url: 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
+    '@id': 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -73,13 +76,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Next.js vs. WordPress: Performance Numbers',
-      item: 'https://kodecite.ai/blog/vercel-vs-wordpress-performance',
+      item: 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance',
     },
   ],
 };

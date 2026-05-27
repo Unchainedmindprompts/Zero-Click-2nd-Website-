@@ -124,8 +124,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai/' },
-    { '@type': 'ListItem', position: 2, name: 'FAQ',  item: 'https://kodecite.ai/faq' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'FAQ',  item: 'https://www.kodecite.ai/faq' },
   ],
 };
 

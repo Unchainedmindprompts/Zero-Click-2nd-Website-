@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Learn how local businesses can appear in Google AI Overviews through structured data, schema markup, E-E-A-T signals, and AI-first content strategies.',
   alternates: {
-    canonical: 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
+    canonical: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
   },
   openGraph: {
     title: 'How to Rank in Google AI Overviews for Local Businesses',
@@ -52,7 +52,7 @@ const articleSchema = {
   dateModified: '2026-03-10T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
+    '@id': 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
   },
   image: {
     '@type': 'ImageObject',
@@ -123,19 +123,19 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://kodecite.ai',
+      item: 'https://www.kodecite.ai',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: 'https://kodecite.ai/blog',
+      item: 'https://www.kodecite.ai/blog',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'How to Rank in Google AI Overviews for Local Businesses',
-      item: 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
+      item: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
     },
   ],
 };

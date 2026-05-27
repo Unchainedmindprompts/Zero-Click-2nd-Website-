@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
   description:
     'Stop running ads that drain budget. Build a Facebook ad system that compounds — pixel data feeding audiences, retargeting warming leads, and lookalikes scaling what works. The Flywheel Method explained.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
+  },
   openGraph: {
     title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
     description:
@@ -55,10 +58,10 @@ const articleSchema = {
     name: 'KodeCite.ai Blog',
     url: 'https://www.kodecite.ai/blog',
   },
-  url: 'https://kodecite.ai/blog/facebook-ads-local-business-2026',
+  url: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/facebook-ads-local-business-2026',
+    '@id': 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
   },
   citation: [
     { '@type': 'CreativeWork', name: 'Meta Business Help Center', url: 'https://www.facebook.com/business/help' },
@@ -72,13 +75,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Facebook Ads: The Flywheel Method',
-      item: 'https://kodecite.ai/blog/facebook-ads-local-business-2026',
+      item: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
     },
   ],
 };

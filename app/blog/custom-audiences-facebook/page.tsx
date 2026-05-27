@@ -58,10 +58,10 @@ const articleSchema = {
     name: 'KodeCite.ai Blog',
     url: 'https://www.kodecite.ai/blog',
   },
-  url: 'https://kodecite.ai/blog/custom-audiences-facebook',
+  url: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/custom-audiences-facebook',
+    '@id': 'https://www.kodecite.ai/blog/custom-audiences-facebook',
   },
   citation: [
     { '@type': 'CreativeWork', name: 'Meta Business Help Center — Custom Audiences', url: 'https://www.facebook.com/business/help/744354708981227' },
@@ -75,13 +75,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/custom-audiences-facebook#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Three Custom Audiences for Local Businesses',
-      item: 'https://kodecite.ai/blog/custom-audiences-facebook',
+      item: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
     },
   ],
 };

@@ -4,6 +4,12 @@ import EntityGraph from '@/components/home/EntityGraph';
 import F1Stack from '@/components/home/F1Stack';
 import AIVisibilityCheck from '@/components/home/AIVisibilityCheck';
 
+export const metadata = {
+  alternates: {
+    canonical: 'https://www.kodecite.ai/',
+  },
+};
+
 export default function HomePage() {
   return (
     <>

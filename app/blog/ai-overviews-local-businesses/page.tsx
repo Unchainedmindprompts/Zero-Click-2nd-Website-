@@ -58,10 +58,10 @@ const articleSchema = {
       height: 630,
     },
   },
-  url: 'https://kodecite.ai/blog/ai-overviews-local-businesses',
+  url: 'https://www.kodecite.ai/blog/ai-overviews-local-businesses',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/ai-overviews-local-businesses',
+    '@id': 'https://www.kodecite.ai/blog/ai-overviews-local-businesses',
   },
   citation: [
     { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
@@ -75,13 +75,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/ai-overviews-local-businesses#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'How to Get Featured in Google AI Overviews',
-      item: 'https://kodecite.ai/blog/ai-overviews-local-businesses',
+      item: 'https://www.kodecite.ai/blog/ai-overviews-local-businesses',
     },
   ],
 };

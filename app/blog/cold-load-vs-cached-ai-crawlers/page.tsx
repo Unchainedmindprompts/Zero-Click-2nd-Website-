@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Your Site Feels Fast to You — But AI Crawlers See Something Very Different | KodeCite.AI',
   description:
     'Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.',
-  alternates: { canonical: 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers' },
+  alternates: { canonical: 'https://www.kodecite.ai/blog/cold-load-vs-cached-ai-crawlers' },
   openGraph: {
     title: 'Your Site Feels Fast to You — But AI Crawlers See Something Very Different',
     description:
@@ -43,8 +43,8 @@ const articleSchema = {
   },
   datePublished: '2026-03-23T00:00:00-07:00',
   dateModified: '2026-03-23T00:00:00-07:00',
-  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers' },
-  url: 'https://kodecite.ai/blog/cold-load-vs-cached-ai-crawlers',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/cold-load-vs-cached-ai-crawlers' },
+  url: 'https://www.kodecite.ai/blog/cold-load-vs-cached-ai-crawlers',
   image: {
     '@type': 'ImageObject',
     url: 'https://www.kodecite.ai/blog-hero.png',
