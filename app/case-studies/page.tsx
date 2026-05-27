@@ -6,14 +6,15 @@ export const metadata: Metadata = {
   title: 'Case Studies — Real Results from AI Search Optimization',
   description:
     'See real results: 49 pages indexed in 48 hours for Luxe Window Works, same-day schema validation for INW Basecamp Arizona. KodeCite.ai proves the methodology first.',
+  alternates: { canonical: 'https://www.kodecite.ai/case-studies' },
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://kodecite.ai/case-studies' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://www.kodecite.ai/case-studies' },
   ],
 };
 

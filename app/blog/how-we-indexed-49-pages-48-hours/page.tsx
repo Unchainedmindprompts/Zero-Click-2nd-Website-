@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
   description:
     'The complete technical breakdown of the Luxe Window Works SEO overhaul — how a Post Falls, Idaho window treatments business went from 75 to 124 indexed pages in 48 hours with zero schema errors.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
+  },
   openGraph: {
     title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
     description:
@@ -49,10 +52,10 @@ const articleSchema = {
       height: 630,
     },
   },
-  url: 'https://kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
+  url: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
+    '@id': 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -78,13 +81,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'How We Indexed 49 New Pages in 48 Hours',
-      item: 'https://kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
+      item: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
     },
   ],
 };

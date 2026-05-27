@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  '@id': 'https://kodecite.ai/#founder',
+  '@id': 'https://www.kodecite.ai/#founder',
   name: 'Mark Abplanalp',
   jobTitle: 'Founder',
-  worksFor: { '@id': 'https://kodecite.ai/#organization' },
+  worksFor: { '@id': 'https://www.kodecite.ai/#organization' },
   address: {
     '@type': 'PostalAddress',
     addressLocality: "Coeur d'Alene",
@@ -29,8 +29,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai/' },
-    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://kodecite.ai/about' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.kodecite.ai/about' },
   ],
 };
 

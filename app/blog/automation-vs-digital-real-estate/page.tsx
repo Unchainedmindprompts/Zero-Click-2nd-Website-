@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first. For local businesses in the Inland Northwest.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
+    canonical: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   },
   openGraph: {
     title: 'Why Automating Everything Is Failing Most Businesses — KodeCite.AI',
@@ -27,7 +27,7 @@ const articleSchema = {
     'Why Automating Everything Is Failing Most Businesses — And Why Owning Your Digital Real Estate Is the Smarter Play in 2026',
   description:
     "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first.",
-  url: 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
+  url: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   datePublished: '2026-03-10T00:00:00-07:00',
   dateModified: '2026-03-10T00:00:00-07:00',
   author: {
@@ -50,7 +50,7 @@ const articleSchema = {
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
+    '@id': 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   },
   image: {
     '@type': 'ImageObject',

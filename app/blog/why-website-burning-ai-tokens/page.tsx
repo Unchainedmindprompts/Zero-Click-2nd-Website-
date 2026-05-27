@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
   description:
     'AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don\'t get recommended. Here\'s what token-efficient looks like.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens',
+  },
   openGraph: {
     title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
     description:
@@ -49,10 +52,10 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'AI token budget, AI agent crawling, token-efficient website, WordPress AI visibility, Next.js AI search, AEO, answer engine optimization, AI recommendations, website performance AI',
-  url: 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
+  url: 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
+    '@id': 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -84,13 +87,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Why Your Website Is Burning Through AI Tokens',
-      item: 'https://kodecite.ai/blog/why-website-burning-ai-tokens',
+      item: 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens',
     },
   ],
 };

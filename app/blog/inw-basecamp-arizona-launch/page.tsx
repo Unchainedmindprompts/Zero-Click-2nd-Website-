@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
   description:
     'From concept to live landing page, validated schema, and active Facebook campaigns in one day. The complete behind-the-scenes story of how we opened a new market for an existing business in hours.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
+  },
   openGraph: {
     title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
     description:
@@ -49,10 +52,10 @@ const articleSchema = {
       height: 630,
     },
   },
-  url: 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
+  url: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
+    '@id': 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -72,13 +75,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'INW Basecamp Arizona Launch',
-      item: 'https://kodecite.ai/blog/inw-basecamp-arizona-launch',
+      item: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
     },
   ],
 };

@@ -6,6 +6,7 @@ export const metadata = {
   title: 'The Playbook — KodeCite.AI',
   description:
     'Strategic thinking on AI visibility, entity architecture, and the infrastructure decisions that compound.',
+  alternates: { canonical: 'https://www.kodecite.ai/blog' },
 };
 
 export default function BlogPage() {

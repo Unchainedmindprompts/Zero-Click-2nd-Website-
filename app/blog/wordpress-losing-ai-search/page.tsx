@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Why WordPress Sites Are Losing the AI Search War',
   description:
     'Bloated plugins, slow Core Web Vitals, and poor technical structure are making WordPress sites invisible to AI search engines. Here\'s why custom Next.js wins — and what the numbers say.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
+  },
   openGraph: {
     title: 'Why WordPress Sites Are Losing the AI Search War',
     description:
@@ -49,10 +52,10 @@ const articleSchema = {
     height: 630,
   },
   keywords: 'WordPress AI search, Core Web Vitals, Next.js vs WordPress, plugin bloat, AI search visibility, schema markup, LCP benchmark',
-  url: 'https://kodecite.ai/blog/wordpress-losing-ai-search',
+  url: 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/wordpress-losing-ai-search',
+    '@id': 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -83,13 +86,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/wordpress-losing-ai-search#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Why WordPress Sites Are Losing the AI Search War',
-      item: 'https://kodecite.ai/blog/wordpress-losing-ai-search',
+      item: 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
     },
   ],
 };

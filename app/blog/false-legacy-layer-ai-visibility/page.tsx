@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Your business is showing up in AI answers — but is it earned authority or borrowed time? Here's the truth about the False Legacy Layer and what it means for your market position.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
+    canonical: 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
   },
   openGraph: {
     title: 'The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow',
@@ -56,9 +56,9 @@ const articleSchema = {
   dateModified: '2026-03-07T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
+    '@id': 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
   },
-  url: 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
+  url: 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
   image: {
     '@type': 'ImageObject',
     url: 'https://www.kodecite.ai/blog-hero.png',
@@ -482,14 +482,14 @@ export default function FalseLegacyLayer() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  <Link href="https://kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
+                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   Get your{' '}
                   <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
                   at{' '}
-                  <Link href="https://kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
+                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
                   Find out how close you are to losing — or locking in — your position.
                 </p>
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
+    canonical: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
   },
   openGraph: {
     title: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
@@ -49,9 +49,9 @@ const articleSchema = {
   dateModified: '2026-03-08T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
+    '@id': 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
   },
-  url: 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
+  url: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
   image: {
     '@type': 'ImageObject',
     url: 'https://www.kodecite.ai/blog-hero.png',
@@ -557,7 +557,7 @@ export default function AeoGeoMakingSEOBetter() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  <Link href="https://kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> builds the complete infrastructure — high-performance Next.js sites, zero-error schema, <Link href="/services" className="text-[var(--d-accent)] hover:underline">llms.txt</Link> and <Link href="/services" className="text-[var(--d-accent)] hover:underline">agent.json</Link> — so local businesses become the trusted default for both AI recommendations and traditional search simultaneously.
+                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> builds the complete infrastructure — high-performance Next.js sites, zero-error schema, <Link href="/services" className="text-[var(--d-accent)] hover:underline">llms.txt</Link> and <Link href="/services" className="text-[var(--d-accent)] hover:underline">agent.json</Link> — so local businesses become the trusted default for both AI recommendations and traditional search simultaneously.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">

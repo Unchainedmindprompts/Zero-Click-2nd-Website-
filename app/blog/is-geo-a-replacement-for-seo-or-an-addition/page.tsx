@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "GEO doesn't replace SEO — it builds on top of it. Here's exactly how Generative Engine Optimization works alongside your existing SEO foundation and what you need to add to start appearing in AI-generated answers.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
+    canonical: 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
   },
   openGraph: {
     title: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',
@@ -48,7 +48,7 @@ const articleSchema = {
   dateModified: '2026-03-12T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
+    '@id': 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -164,19 +164,19 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://kodecite.ai',
+      item: 'https://www.kodecite.ai',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: 'https://kodecite.ai/blog',
+      item: 'https://www.kodecite.ai/blog',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',
-      item: 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
+      item: 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
     },
   ],
 };

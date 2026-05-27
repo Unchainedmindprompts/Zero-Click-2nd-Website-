@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Schema Markup: The Complete Guide for Local Service Businesses',
   description:
     'A step-by-step guide to implementing JSON-LD schema markup that makes your business visible to AI. Covers LocalBusiness, Service, FAQPage, and BreadcrumbList schemas with real implementation details.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/schema-markup-complete-guide',
+  },
   openGraph: {
     title: 'Schema Markup: The Complete Guide for Local Service Businesses',
     description:
@@ -49,10 +52,10 @@ const articleSchema = {
       height: 630,
     },
   },
-  url: 'https://kodecite.ai/blog/schema-markup-complete-guide',
+  url: 'https://www.kodecite.ai/blog/schema-markup-complete-guide',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/schema-markup-complete-guide',
+    '@id': 'https://www.kodecite.ai/blog/schema-markup-complete-guide',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -73,13 +76,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/schema-markup-complete-guide#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Schema Markup: The Complete Guide',
-      item: 'https://kodecite.ai/blog/schema-markup-complete-guide',
+      item: 'https://www.kodecite.ai/blog/schema-markup-complete-guide',
     },
   ],
 };

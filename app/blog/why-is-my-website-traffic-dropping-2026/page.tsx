@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Organic traffic dropping with no clear reason? Google AI Overviews and zero-click search are causing 20-50% traffic declines for businesses. Here\'s what\'s happening and how to fix it.',
   alternates: {
-    canonical: 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
+    canonical: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
   },
   openGraph: {
     title: 'Why Is My Website Traffic Dropping in 2026?',
@@ -46,7 +46,7 @@ const articleSchema = {
   dateModified: '2026-03-11T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
+    '@id': 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
   },
   image: {
     '@type': 'ImageObject',
@@ -132,19 +132,19 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://kodecite.ai',
+      item: 'https://www.kodecite.ai',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: 'https://kodecite.ai/blog',
+      item: 'https://www.kodecite.ai/blog',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Why Is My Website Traffic Dropping in 2026?',
-      item: 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
+      item: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
     },
   ],
 };

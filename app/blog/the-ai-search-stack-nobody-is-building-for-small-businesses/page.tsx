@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'The AI Search Stack Nobody Is Building for Small Businesses — And Why That\'s About to Change',
   description:
     'Enterprise SEO is built for enterprises. Subscription platforms are built for volume. Neither one gets you recommended by AI. Here\'s the gap in the market — and what fills it.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses',
+  },
   openGraph: {
     title: 'The AI Search Stack Nobody Is Building for Small Businesses — And Why That\'s About to Change',
     description:
@@ -43,7 +46,7 @@ const articleSchema = {
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses',
+    '@id': 'https://www.kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -127,13 +130,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'The AI Search Stack Nobody Is Building for Small Businesses',
-      item: 'https://kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses',
+      item: 'https://www.kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses',
     },
   ],
 };

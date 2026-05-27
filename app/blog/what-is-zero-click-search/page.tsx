@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'What Is Zero Click Search and Why Your Business Is Invisible',
   description:
     'AI Overviews, ChatGPT, and Perplexity are answering questions without sending traffic to websites. Learn what zero click search means for your business and the exact steps to stay visible.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/what-is-zero-click-search',
+  },
   openGraph: {
     title: 'What Is Zero Click Search and Why Your Business Is Invisible',
     description:
@@ -49,10 +52,10 @@ const articleSchema = {
       height: 630,
     },
   },
-  url: 'https://kodecite.ai/blog/what-is-zero-click-search',
+  url: 'https://www.kodecite.ai/blog/what-is-zero-click-search',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/what-is-zero-click-search',
+    '@id': 'https://www.kodecite.ai/blog/what-is-zero-click-search',
   },
   isPartOf: {
     '@type': 'CollectionPage',
@@ -72,13 +75,13 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   '@id': 'https://www.kodecite.ai/blog/what-is-zero-click-search#breadcrumb',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'What Is Zero Click Search',
-      item: 'https://kodecite.ai/blog/what-is-zero-click-search',
+      item: 'https://www.kodecite.ai/blog/what-is-zero-click-search',
     },
   ],
 };
