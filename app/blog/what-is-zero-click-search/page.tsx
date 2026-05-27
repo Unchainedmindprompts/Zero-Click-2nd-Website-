@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'What Is Zero Click Search and Why Your Business Is Invisible',
   description:
     'AI Overviews, ChatGPT, and Perplexity are answering questions without sending traffic to websites. Learn what zero click search means for your business and the exact steps to stay visible.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/what-is-zero-click-search',
+  },
   openGraph: {
     title: 'What Is Zero Click Search and Why Your Business Is Invisible',
     description:

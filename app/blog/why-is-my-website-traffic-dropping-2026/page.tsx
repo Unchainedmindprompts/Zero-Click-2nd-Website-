@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Organic traffic dropping with no clear reason? Google AI Overviews and zero-click search are causing 20-50% traffic declines for businesses. Here\'s what\'s happening and how to fix it.',
   alternates: {
-    canonical: 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
+    canonical: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
   },
   openGraph: {
     title: 'Why Is My Website Traffic Dropping in 2026?',

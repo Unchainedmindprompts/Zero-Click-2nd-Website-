@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Our Work — KodeCite.ai',
   description:
     'Every site we build is fast, structured for AI, and built to convert. See our recent projects including INW Basecamp and Luxe Window Works.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/our-work',
+  },
 };
 
 const breadcrumbSchema = {

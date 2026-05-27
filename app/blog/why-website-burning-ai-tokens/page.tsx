@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
   description:
     'AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don\'t get recommended. Here\'s what token-efficient looks like.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/why-website-burning-ai-tokens',
+  },
   openGraph: {
     title: 'Why Your Website Is Burning Through AI Tokens — And Costing You Business',
     description:

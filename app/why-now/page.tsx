@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Hundreds of billions committed. Hardware shipping. AI agents routing around invisible businesses. Here's why the window to claim your territory is open right now — and won't stay open.",
   alternates: {
-    canonical: 'https://kodecite.ai/why-now',
+    canonical: 'https://www.kodecite.ai/why-now',
   },
   openGraph: {
     title: 'Why Now — The AI Land Grab Is Already Underway',

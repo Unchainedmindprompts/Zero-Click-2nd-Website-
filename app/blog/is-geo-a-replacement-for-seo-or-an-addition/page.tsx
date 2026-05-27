@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "GEO doesn't replace SEO — it builds on top of it. Here's exactly how Generative Engine Optimization works alongside your existing SEO foundation and what you need to add to start appearing in AI-generated answers.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
+    canonical: 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
   },
   openGraph: {
     title: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/aeo-geo-making-seo-better',
+    canonical: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
   },
   openGraph: {
     title: "AEO + GEO Isn't Replacing SEO — It's Making It Better",

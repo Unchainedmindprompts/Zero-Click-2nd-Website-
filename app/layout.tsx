@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KodeCite.ai' }],
   creator: 'KodeCite.ai',
-  metadataBase: new URL('https://kodecite.ai'),
+  metadataBase: new URL('https://www.kodecite.ai'),
   openGraph: {
     title: 'KodeCite.AI — AI Search Optimization',
     description:
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: 'KodeCite.AI',
     images: [
       {
-        url: 'https://kodecite.ai/og-image.png',
+        url: 'https://www.kodecite.ai/og-image.png',
         width: 1200,
         height: 630,
         alt: 'KodeCite.AI — AI Search Optimization',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: 'KodeCite.AI — AI Search Optimization',
     description:
       '60% of searches end without a click. We make sure AI chooses you.',
-    images: ['https://kodecite.ai/og-image.png'],
+    images: ['https://www.kodecite.ai/og-image.png'],
   },
   robots: {
     index: true,
@@ -64,8 +64,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'KodeCite.ai',
-  url: 'https://kodecite.ai',
-  logo: 'https://kodecite.ai/logo.png',
+  url: 'https://www.kodecite.ai',
+  logo: 'https://www.kodecite.ai/logo.png',
   description:
     'AI search optimization and digital marketing micro agency based in Post Falls, Idaho.',
   address: {
@@ -87,7 +87,7 @@ const localBusinessSchema = {
   name: 'KodeCite.ai',
   description:
     'AI search optimization and digital marketing micro agency. We build websites, content, and campaigns that make businesses visible to AI search.',
-  url: 'https://kodecite.ai',
+  url: 'https://www.kodecite.ai',
   telephone: '+14803239740',
   email: 'mark@kodecite.ai',
   address: {
@@ -116,7 +116,7 @@ const professionalServiceSchema = {
   name: 'KodeCite.ai',
   description:
     'Answer Engine Optimization agency helping businesses become the cited source in AI-generated search results and discoverable by wearable devices.',
-  url: 'https://kodecite.ai',
+  url: 'https://www.kodecite.ai',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Post Falls',

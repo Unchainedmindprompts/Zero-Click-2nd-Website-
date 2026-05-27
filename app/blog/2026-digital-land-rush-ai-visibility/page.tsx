@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
   alternates: {
-    canonical: 'https://kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
+    canonical: 'https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
   },
   openGraph: {
     title:

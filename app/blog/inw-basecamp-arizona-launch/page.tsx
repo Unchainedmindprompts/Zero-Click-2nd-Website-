@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
   description:
     'From concept to live landing page, validated schema, and active Facebook campaigns in one day. The complete behind-the-scenes story of how we opened a new market for an existing business in hours.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
+  },
   openGraph: {
     title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
     description:

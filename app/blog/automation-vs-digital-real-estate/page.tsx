@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first. For local businesses in the Inland Northwest.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
+    canonical: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   },
   openGraph: {
     title: 'Why Automating Everything Is Failing Most Businesses — KodeCite.AI',

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Schema Markup: The Complete Guide for Local Service Businesses',
   description:
     'A step-by-step guide to implementing JSON-LD schema markup that makes your business visible to AI. Covers LocalBusiness, Service, FAQPage, and BreadcrumbList schemas with real implementation details.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/schema-markup-complete-guide',
+  },
   openGraph: {
     title: 'Schema Markup: The Complete Guide for Local Service Businesses',
     description:

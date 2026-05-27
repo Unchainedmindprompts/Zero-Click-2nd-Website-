@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Case Studies — Real Results from AI Search Optimization',
   description:
     'See real results: 49 pages indexed in 48 hours for Luxe Window Works, same-day schema validation for INW Basecamp Arizona. KodeCite.ai proves the methodology first.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/case-studies',
+  },
 };
 
 const breadcrumbSchema = {

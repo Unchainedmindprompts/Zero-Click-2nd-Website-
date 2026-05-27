@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
   description:
     'Stop running ads that drain budget. Build a Facebook ad system that compounds — pixel data feeding audiences, retargeting warming leads, and lookalikes scaling what works. The Flywheel Method explained.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
+  },
   openGraph: {
     title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
     description:

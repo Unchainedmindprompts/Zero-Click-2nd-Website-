@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Learn how local businesses can appear in Google AI Overviews through structured data, schema markup, E-E-A-T signals, and AI-first content strategies.',
   alternates: {
-    canonical: 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
+    canonical: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
   },
   openGraph: {
     title: 'How to Rank in Google AI Overviews for Local Businesses',

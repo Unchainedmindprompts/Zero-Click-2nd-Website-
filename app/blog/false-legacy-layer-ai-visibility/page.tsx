@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Your business is showing up in AI answers — but is it earned authority or borrowed time? Here's the truth about the False Legacy Layer and what it means for your market position.",
   alternates: {
-    canonical: 'https://kodecite.ai/blog/false-legacy-layer-ai-visibility',
+    canonical: 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
   },
   openGraph: {
     title: 'The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow',

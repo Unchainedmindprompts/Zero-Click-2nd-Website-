@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Why WordPress Sites Are Losing the AI Search War',
   description:
     'Bloated plugins, slow Core Web Vitals, and poor technical structure are making WordPress sites invisible to AI search engines. Here\'s why custom Next.js wins — and what the numbers say.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
+  },
   openGraph: {
     title: 'Why WordPress Sites Are Losing the AI Search War',
     description:

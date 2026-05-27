@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
   description:
     'The complete technical breakdown of the Luxe Window Works SEO overhaul — how a Post Falls, Idaho window treatments business went from 75 to 124 indexed pages in 48 hours with zero schema errors.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
+  },
   openGraph: {
     title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
     description:

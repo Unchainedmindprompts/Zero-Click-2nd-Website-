@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
   description:
     'We ran the same site on both platforms. The results are not close. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
+  alternates: {
+    canonical: 'https://www.kodecite.ai/blog/vercel-vs-wordpress-performance',
+  },
   openGraph: {
     title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
     description:
