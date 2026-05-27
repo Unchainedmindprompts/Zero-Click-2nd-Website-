@@ -37,7 +37,7 @@ const blogPostingSchema = {
     url: 'https://www.kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/logo.png',
+      url: 'https://www.kodecite.ai/og-image.png',
     },
   },
   datePublished: '2026-03-17',
@@ -135,7 +135,7 @@ const localBusinessSchema = {
   description:
     'AI Search Optimization and Answer Engine Optimization (AEO) consultancy helping local and regional businesses become the default AI-cited authority in their market.',
   url: 'https://www.kodecite.ai',
-  logo: 'https://www.kodecite.ai/logo.png',
+  logo: 'https://www.kodecite.ai/og-image.png',
   image: 'https://www.kodecite.ai/og-image.png',
   email: 'sales@kodecite.ai',
   address: {

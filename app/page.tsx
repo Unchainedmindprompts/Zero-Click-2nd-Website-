@@ -17,12 +17,12 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'KodeCite.ai',
-  url: 'https://kodecite.ai',
+  url: 'https://www.kodecite.ai',
   description:
     'Answer Engine Optimization agency. We structure websites so AI agents cite your business as the definitive answer.',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://kodecite.ai/blog?q={search_term_string}',
+    target: 'https://www.kodecite.ai/blog?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };

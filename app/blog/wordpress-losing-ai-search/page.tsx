@@ -30,20 +30,20 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
+    url: 'https://www.kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
+      url: 'https://www.kodecite.ai/og-image.png',
     },
   },
-  url: 'https://kodecite.ai/blog/wordpress-losing-ai-search',
+  url: 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/wordpress-losing-ai-search',
+    '@id': 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
   },
 };
 
@@ -51,13 +51,13 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Why WordPress Sites Are Losing the AI Search War',
-      item: 'https://kodecite.ai/blog/wordpress-losing-ai-search',
+      item: 'https://www.kodecite.ai/blog/wordpress-losing-ai-search',
     },
   ],
 };

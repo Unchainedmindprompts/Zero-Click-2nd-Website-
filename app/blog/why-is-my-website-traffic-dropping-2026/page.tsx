@@ -26,24 +26,24 @@ const blogPostingSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
+      url: 'https://www.kodecite.ai/og-image.png',
     },
   },
   datePublished: '2026-03-11',
   dateModified: '2026-03-11',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
+    '@id': 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
   },
-  image: 'https://kodecite.ai/images/blog/website-traffic-dropping-2026.jpg',
+  image: 'https://www.kodecite.ai/images/blog/website-traffic-dropping-2026.jpg',
   keywords: [
     'website traffic dropping',
     'Google AI Overviews',
@@ -110,19 +110,19 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://kodecite.ai',
+      item: 'https://www.kodecite.ai',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: 'https://kodecite.ai/blog',
+      item: 'https://www.kodecite.ai/blog',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Why Is My Website Traffic Dropping in 2026?',
-      item: 'https://kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
+      item: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
     },
   ],
 };

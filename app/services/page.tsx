@@ -18,7 +18,7 @@ const serviceSchema = {
   provider: {
     '@type': 'ProfessionalService',
     name: 'KodeCite.ai',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -47,7 +47,7 @@ const serviceSchema = {
         name: 'Spatial SEO & Multi-Modal Discovery',
         description:
           'llms.txt, agent.json, and wearable-ready structured data for Meta glasses, Apple Vision Pro, and autonomous AI agent discovery.',
-        url: 'https://kodecite.ai/services',
+        url: 'https://www.kodecite.ai/services',
       },
       {
         '@type': 'Offer',
@@ -120,8 +120,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kodecite.ai/services' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.kodecite.ai/services' },
   ],
 };
 

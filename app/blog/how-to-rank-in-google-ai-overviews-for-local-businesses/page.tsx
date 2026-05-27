@@ -26,24 +26,24 @@ const blogPostingSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
+      url: 'https://www.kodecite.ai/og-image.png',
     },
   },
   datePublished: '2026-03-10',
   dateModified: '2026-03-10',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
+    '@id': 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
   },
-  image: 'https://kodecite.ai/images/blog/ai-overviews-local-businesses.jpg',
+  image: 'https://www.kodecite.ai/images/blog/ai-overviews-local-businesses.jpg',
   keywords: [
     'Google AI Overviews',
     'local SEO',
@@ -101,19 +101,19 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://kodecite.ai',
+      item: 'https://www.kodecite.ai',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: 'https://kodecite.ai/blog',
+      item: 'https://www.kodecite.ai/blog',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'How to Rank in Google AI Overviews for Local Businesses',
-      item: 'https://kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
+      item: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
     },
   ],
 };

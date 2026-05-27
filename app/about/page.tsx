@@ -23,8 +23,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://kodecite.ai/about' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.kodecite.ai/about' },
   ],
 };
 
@@ -36,7 +36,7 @@ const personSchema = {
   worksFor: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
   },
   address: {
     '@type': 'PostalAddress',

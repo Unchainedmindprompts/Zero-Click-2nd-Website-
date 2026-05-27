@@ -28,22 +28,22 @@ const blogPostingSchema = {
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
+      url: 'https://www.kodecite.ai/og-image.png',
     },
   },
   datePublished: '2026-03-12',
   dateModified: '2026-03-12',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
+    '@id': 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
   },
   keywords: [
     'GEO',
@@ -141,19 +141,19 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://kodecite.ai',
+      item: 'https://www.kodecite.ai',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: 'https://kodecite.ai/blog',
+      item: 'https://www.kodecite.ai/blog',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',
-      item: 'https://kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
+      item: 'https://www.kodecite.ai/blog/is-geo-a-replacement-for-seo-or-an-addition',
     },
   ],
 };

@@ -65,7 +65,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'KodeCite.ai',
   url: 'https://www.kodecite.ai',
-  logo: 'https://www.kodecite.ai/logo.png',
+  logo: 'https://www.kodecite.ai/og-image.png',
   description:
     'AI search optimization and digital marketing micro agency based in Post Falls, Idaho.',
   address: {

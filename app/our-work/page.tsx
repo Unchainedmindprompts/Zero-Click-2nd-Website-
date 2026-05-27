@@ -16,8 +16,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Our Work', item: 'https://kodecite.ai/our-work' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Our Work', item: 'https://www.kodecite.ai/our-work' },
   ],
 };
 

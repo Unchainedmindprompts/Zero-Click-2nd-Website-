@@ -26,26 +26,26 @@ const blogPostingSchema = {
     'Why Automating Everything Is Failing Most Businesses — And Why Owning Your Digital Real Estate Is the Smarter Play in 2026',
   description:
     "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first.",
-  url: 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
+  url: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   datePublished: '2026-03-10',
   dateModified: '2026-03-10',
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
-    url: 'https://kodecite.ai/about',
+    url: 'https://www.kodecite.ai/about',
   },
   publisher: {
     '@type': 'Organization',
     name: 'KodeCite.AI',
-    url: 'https://kodecite.ai',
+    url: 'https://www.kodecite.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://kodecite.ai/logo.png',
+      url: 'https://www.kodecite.ai/og-image.png',
     },
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://kodecite.ai/blog/automation-vs-digital-real-estate',
+    '@id': 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   },
   keywords: [
     'AI automation',
