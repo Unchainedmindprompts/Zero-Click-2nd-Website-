@@ -137,7 +137,7 @@ export default function HomePage() {
           {/* Three stats */}
           <div className="flex flex-col md:flex-row gap-10 md:gap-0 mb-16">
             {([
-              { stat: '73%',  label: 'of AI answers cite fewer than 3 sources' },
+              { stat: 'A short list', label: 'is all an AI answer cites — you\'re on it, or you\'re invisible.' },
               { stat: '1st',  label: 'AI reads your site on the first crawl — or it skips you' },
               { stat: 'Most', label: 'business sites have no connected entity graph at all' },
             ] as const).map(({ stat, label }, i) => (
