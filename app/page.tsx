@@ -137,9 +137,9 @@ export default function HomePage() {
           {/* Three stats */}
           <div className="flex flex-col md:flex-row gap-10 md:gap-0 mb-16">
             {([
-              { stat: 'A short list', label: 'is all an AI answer cites — you\'re on it, or you\'re invisible.' },
-              { stat: 'First request', label: 'AI reads your site on the first crawl, or not at all.' },
-              { stat: 'Most',  label: 'business sites have no connected entity graph at all.' },
+              { stat: '73%',  label: 'of AI answers cite fewer than 3 sources' },
+              { stat: '1st',  label: 'AI reads your site on the first crawl — or it skips you' },
+              { stat: 'Most', label: 'business sites have no connected entity graph at all' },
             ] as const).map(({ stat, label }, i) => (
               <div
                 key={stat}
@@ -485,6 +485,27 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div
+            className="mt-12"
+            style={{
+              background: 'var(--d-bg-3)',
+              border: '1px solid var(--d-line)',
+              borderLeft: '3px solid var(--d-accent)',
+              borderRadius: '16px',
+              padding: '40px 44px',
+            }}
+          >
+            <p style={{ fontSize: 'clamp(22px, 2.6vw, 30px)', lineHeight: 1.4, color: 'var(--d-fg)' }}>
+              <em className="serif">
+                The threat to the local operator isn&apos;t the agent down the street or the listing
+                portal. It&apos;s the national and the PE roll-up that will implement this — they have
+                the resources and the sophistication to do it. You have 12–18 months to own your local
+                category before they arrive. After that, you&apos;re defending against their budget
+                instead of building in clear air.
+              </em>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -628,7 +649,7 @@ export default function HomePage() {
             className="font-inter mb-10"
             style={{ fontSize: '17px', lineHeight: 1.7, color: 'var(--d-fg-dim)', fontWeight: 300 }}
           >
-            In 2–3 years this will be table stakes. The businesses that own the space in their
+            Within a few years this will be table stakes. The businesses that own the space in their
             market today will be extraordinarily difficult to displace.
           </p>
 
@@ -645,9 +666,9 @@ export default function HomePage() {
               style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-dim)' }}
             >
               <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>
-                This is a 2–3 year window.
+                That window is open right now.
               </strong>
-              {' '}It&apos;s open right now. Every month you wait, a competitor in your market
+              {' '}Every month you wait, a competitor in your market
               gets a head start that will be hard to close.
             </p>
           </div>
