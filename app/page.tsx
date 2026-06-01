@@ -65,8 +65,8 @@ export default function HomePage() {
                   maxWidth: '480px',
                 }}
               >
-                We rebuild your digital foundation on Next.js — engineered for AI readability,
-                structured for machine clarity, and owned by you forever.
+                When someone asks an AI assistant &ldquo;who should I hire in my city?&rdquo;,
+                you want to be the business it confidently recommends.
               </p>
 
               <p
@@ -94,8 +94,7 @@ export default function HomePage() {
                   maxWidth: '460px',
                 }}
               >
-                So when someone asks an AI assistant &ldquo;who should I hire in my city?&rdquo;,
-                you&apos;re the kind of business it can confidently recommend.
+                Built on Next.js, engineered for AI readability, and owned by you forever.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -138,9 +137,9 @@ export default function HomePage() {
           {/* Three stats */}
           <div className="flex flex-col md:flex-row gap-10 md:gap-0 mb-16">
             {([
-              { stat: '73%',   label: 'of AI answers cite fewer than 3 sources' },
-              { stat: '< 2s',  label: 'is all the time AI takes to decide if you\'re credible' },
-              { stat: '0 / 10', label: 'most business sites score on a structured entity test' },
+              { stat: 'A short list', label: 'is all an AI answer cites — you\'re on it, or you\'re invisible.' },
+              { stat: 'First request', label: 'AI reads your site on the first crawl, or not at all.' },
+              { stat: 'Most',  label: 'business sites have no connected entity graph at all.' },
             ] as const).map(({ stat, label }, i) => (
               <div
                 key={stat}
