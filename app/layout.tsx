@@ -165,11 +165,6 @@ const siteSchema = {
       name: 'KodeCite.ai',
       url: 'https://www.kodecite.ai',
       publisher: { '@id': 'https://www.kodecite.ai/#business' },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://www.kodecite.ai/blog?q={search_term_string}',
-        'query-input': 'required name=search_term_string',
-      },
     },
   ],
 };
