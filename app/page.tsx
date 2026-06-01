@@ -10,9 +10,29 @@ export const metadata = {
   },
 };
 
+// Homepage WebPage entity — connected by @id to the site-wide entity graph
+// defined in app/layout.tsx (#website, #business).
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://www.kodecite.ai/#webpage',
+  url: 'https://www.kodecite.ai/',
+  name: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
+  description:
+    'Most businesses are invisible to AI. KodeCite.ai builds the entity graph — Schema.org deployed correctly — that makes your business the machine-readable answer AI systems can read, verify, and cite.',
+  inLanguage: 'en-US',
+  isPartOf: { '@id': 'https://www.kodecite.ai/#website' },
+  about: { '@id': 'https://www.kodecite.ai/#business' },
+  primaryImageOfPage: { '@id': 'https://www.kodecite.ai/#logo' },
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       {/* ─── 1. Hero ─────────────────────────────────────────── */}
       <section style={{ padding: '140px 32px 100px', backgroundColor: 'var(--d-bg)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto' }}>

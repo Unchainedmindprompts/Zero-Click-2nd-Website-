@@ -100,91 +100,73 @@ export const metadata: Metadata = {
   },
 };
 
-// ── JSON-LD schemas (root layout — present on every page) ────────────────────
-const organizationSchema = {
+// ── JSON-LD entity graph (root layout — present on every page) ───────────────
+// Single @graph: one business entity, one founder, one website — connected by @id.
+const siteSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://www.kodecite.ai/#business',
-  name: 'KodeCite.ai',
-  url: 'https://www.kodecite.ai',
-  logo: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/og-image.png',
-    width: 1200,
-    height: 630,
-  },
-  description:
-    "KodeCite.ai builds entity graphs for businesses — Schema.org deployed correctly, every element of a business connected into a single machine-readable identity that AI systems can read, verify, and cite.",
-  email: 'mark@kodecite.ai',
-  foundingDate: '2025',
-  founder: { '@id': 'https://www.kodecite.ai/#founder' },
-  areaServed: { '@type': 'Country', name: 'United States' },
-  sameAs: [
-    'https://www.kodecite.ai',
-    'https://www.facebook.com/profile.php?id=61586478347376',
-    'https://www.linkedin.com/in/mark-abplanalp-46a272371',
+  '@graph': [
+    // Business — one entity, most-specific @type first. Merged from the former
+    // Organization (#business) and ProfessionalService (#service) blocks.
+    {
+      '@type': ['ProfessionalService', 'Organization'],
+      '@id': 'https://www.kodecite.ai/#business',
+      name: 'KodeCite.ai',
+      url: 'https://www.kodecite.ai',
+      logo: {
+        '@type': 'ImageObject',
+        '@id': 'https://www.kodecite.ai/#logo',
+        url: 'https://www.kodecite.ai/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+      image: { '@id': 'https://www.kodecite.ai/#logo' },
+      description:
+        'KodeCite.ai builds entity graphs for businesses — Schema.org deployed correctly, every element of a business connected into a single machine-readable identity that AI systems can read, verify, and cite. Custom JSON-LD on every page, AI identity files (llms.txt + agent.json), and sub-1s edge infrastructure owned by the client.',
+      email: 'mark@kodecite.ai',
+      telephone: '+14803239740',
+      priceRange: '$$',
+      foundingDate: '2025',
+      founder: { '@id': 'https://www.kodecite.ai/#founder' },
+      areaServed: { '@type': 'Country', name: 'United States' },
+      serviceType: [
+        'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
+        'AI Search Optimization', 'Next.js Website Development', 'JSON-LD Schema Markup',
+      ],
+      sameAs: [
+        'https://www.facebook.com/profile.php?id=61586478347376',
+        'https://www.linkedin.com/in/mark-abplanalp-46a272371',
+      ],
+    },
+    // Founder
+    {
+      '@type': 'Person',
+      '@id': 'https://www.kodecite.ai/#founder',
+      name: 'Mark Abplanalp',
+      jobTitle: 'Founder',
+      worksFor: { '@id': 'https://www.kodecite.ai/#business' },
+      url: 'https://www.kodecite.ai',
+      description:
+        'Founder of KodeCite.ai. 30 years of sales experience, 23 years as an entrepreneur, 1,000+ hours of AEO and GEO research. Builds AI-ready web infrastructure for businesses that want to be recommended by AI search engines.',
+      knowsAbout: [
+        'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
+        'Generative Engine Optimization', 'AI Search Visibility', 'JSON-LD Schema Markup',
+        'Next.js Development', 'Vercel Edge Hosting', 'llms.txt', 'agent.json',
+        'Local Business Entity Graphs', 'Machine-Readable Business Identity', 'Traditional SEO',
+      ],
+      sameAs: [
+        'https://www.linkedin.com/in/mark-abplanalp-46a272371',
+        'https://www.facebook.com/profile.php?id=61586478347376',
+      ],
+    },
+    // Website
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.kodecite.ai/#website',
+      name: 'KodeCite.ai',
+      url: 'https://www.kodecite.ai',
+      publisher: { '@id': 'https://www.kodecite.ai/#business' },
+    },
   ],
-};
-
-const founderSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': 'https://www.kodecite.ai/#founder',
-  name: 'Mark Abplanalp',
-  jobTitle: 'Founder',
-  worksFor: { '@id': 'https://www.kodecite.ai/#business' },
-  url: 'https://www.kodecite.ai',
-  description:
-    'Founder of KodeCite.ai. 30 years of sales experience, 23 years as an entrepreneur, 1,000+ hours of AEO and GEO research. Builds AI-ready web infrastructure for businesses that want to be recommended by AI search engines.',
-  knowsAbout: [
-    'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
-    'Generative Engine Optimization', 'AI Search Visibility', 'JSON-LD Schema Markup',
-    'Next.js Development', 'Vercel Edge Hosting', 'llms.txt', 'agent.json',
-    'Local Business Entity Graphs', 'Machine-Readable Business Identity', 'Traditional SEO',
-  ],
-  sameAs: [
-    'https://www.linkedin.com/in/mark-abplanalp-46a272371',
-    'https://www.facebook.com/profile.php?id=61586478347376',
-  ],
-};
-
-const professionalServiceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  '@id': 'https://www.kodecite.ai/#service',
-  name: 'KodeCite.ai',
-  url: 'https://www.kodecite.ai',
-  image: 'https://www.kodecite.ai/og-image.png',
-  description:
-    'KodeCite.ai builds entity graphs — Schema.org deployed correctly as a machine-readable business identity. Custom JSON-LD on every page, AI identity files (llms.txt + agent.json), and sub-1s edge infrastructure owned by the client.',
-  telephone: '+14803239740',
-  email: 'mark@kodecite.ai',
-  priceRange: '$$',
-  founder: { '@id': 'https://www.kodecite.ai/#founder' },
-  areaServed: { '@type': 'Country', name: 'United States' },
-  serviceType: [
-    'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
-    'AI Search Optimization', 'Next.js Website Development', 'JSON-LD Schema Markup',
-  ],
-  sameAs: [
-    'https://www.kodecite.ai',
-    'https://www.facebook.com/profile.php?id=61586478347376',
-    'https://www.linkedin.com/in/mark-abplanalp-46a272371',
-  ],
-};
-
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': 'https://www.kodecite.ai/#website',
-  name: 'KodeCite.ai',
-  url: 'https://www.kodecite.ai',
-  publisher: { '@id': 'https://www.kodecite.ai/#business' },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://www.kodecite.ai/blog?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
 };
 
 // ── Root layout ───────────────────────────────────────────────────────────────
@@ -203,19 +185,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
       </head>
       <body className="antialiased">
