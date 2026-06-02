@@ -29,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/is-geo-a-replacement-for-seo-or-an-addition`, lastModified: new Date('2026-03-12').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/cold-load-vs-cached-ai-crawlers`, lastModified: new Date('2026-03-23').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/video-authority-layer-ai-assets-2026`, lastModified: new Date('2026-03-23').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/ai-overviews-local-businesses`, lastModified: new Date('2026-02-18').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/schema-markup-complete-guide`, lastModified: new Date('2026-02-08').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/why-website-burning-ai-tokens`, lastModified: new Date('2026-03-03').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/vercel-vs-wordpress-performance`, lastModified: new Date('2026-02-22').toISOString(), changeFrequency: 'monthly', priority: 0.7 },

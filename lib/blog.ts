@@ -155,14 +155,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
   },
   {
-    slug: 'ai-overviews-local-businesses',
-    title: 'How to Get Your Local Business Featured in Google AI Overviews',
-    category: 'STRATEGY',
-    date: 'February 18, 2026',
-    readTime: '5 min read',
-    excerpt: "Google AI Overviews are replacing traditional search results for millions of queries. Here's the exact framework for getting local businesses cited as the source — not buried below it.",
-  },
-  {
     slug: 'how-to-rank-in-google-ai-overviews-for-local-businesses',
     title: 'How to Rank in Google AI Overviews for Local Businesses',
     category: 'STRATEGY',
