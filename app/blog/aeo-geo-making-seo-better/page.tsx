@@ -146,6 +146,54 @@ const faqPageSchema = {
         text: 'Local services with high-intent, time-sensitive, trust-dependent decisions are most immediately affected: home services (HVAC, plumbing, roofing), professional services (legal, financial, real estate), health and wellness (dentists, chiropractors, physical therapy), restaurants, and auto repair. These are exactly the categories where people are most likely to delegate the discovery decision to an AI agent.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What is GEO — Generative Engine Optimization?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Generative Engine Optimization (GEO) is the practice of optimizing your digital presence to be cited and recommended by AI-generated responses. As AI platforms like Google AI Overviews, ChatGPT, and Perplexity increasingly answer search queries directly rather than returning a list of links, GEO focuses on becoming the trusted source these systems select — through structured data, authoritative content, and consistent entity signals across the web.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is AEO — Answer Engine Optimization?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Answer Engine Optimization (AEO) focuses specifically on structuring content to directly answer the questions people ask AI systems — in a format that can be extracted and presented as an authoritative response. This includes FAQPage schema markup, answer-first content structure where the direct answer comes before supporting detail, and clear definitive statements that AI can cite with confidence.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between GEO and SEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SEO optimizes your website to rank in traditional search engine results through keywords, backlinks, and technical site health. GEO optimizes your presence to be cited inside AI-generated answers across Google AI Overviews, ChatGPT, Perplexity, and other LLM platforms. GEO requires additional signals SEO doesn\'t — including structured schema markup, answer-first content structure, entity consistency across the web, and AI-readable files like llms.txt.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to do both SEO and GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Yes — the businesses winning AI visibility right now have both. They have the SEO foundation that AI systems use to evaluate trustworthiness, and they've added the structured data, answer-first content, and entity signals that AI systems use to select their sources. Abandoning SEO for GEO, or waiting to add GEO until later, are both mistakes that leave visibility on the table.",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
+      item: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
+    },
   ],
 };
 
@@ -199,6 +247,10 @@ export default function AeoGeoMakingSEOBetter() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero */}
@@ -626,11 +678,11 @@ export default function AeoGeoMakingSEOBetter() {
                       </Link>
                     </div>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/ai-overviews-local-businesses" className="block group">
+                      <Link href="/blog/how-to-rank-in-google-ai-overviews-for-local-businesses" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          How to Get Your Local Business Featured in Google AI Overviews
+                          How to Rank in Google AI Overviews for Local Businesses
                         </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">7 min read</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                       </Link>
                     </div>
                   </div>

@@ -111,6 +111,22 @@ const faqPageSchema = {
         text: 'llms.txt is a simple file placed on your website that gives AI language models a structured summary of your business, content, and services. While not yet mainstream, early adopters who implement it now are establishing AI-readable authority before their competitors catch on.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What are Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google AI Overviews (formerly Search Generative Experience) are AI-generated summaries that appear at the top of Google search results, synthesizing information from multiple sources to answer a query directly. They cite sources but present a single cohesive answer, meaning most users never click through to individual websites — making citation in the overview itself the primary visibility goal.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to be ranked number one to appear in Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. AI Overviews synthesize from multiple sources across the top results, meaning a page ranking fifth or sixth can be cited if its content is well-structured and directly answers the query. Position matters, but content structure and schema validity often matter more for citation specifically. A page that ranks lower but has superior structured data is frequently cited over a higher-ranking page with poor structure.',
+      },
+    },
   ],
 };
 
@@ -481,6 +497,14 @@ export default function HowToRankInGoogleAIOverviews() {
                     {
                       q: 'What is llms.txt and should my local business have one?',
                       a: 'llms.txt is a simple file placed on your website that gives AI language models a structured summary of your business, content, and services. While not yet mainstream, early adopters who implement it now are establishing AI-readable authority before their competitors catch on.',
+                    },
+                    {
+                      q: 'What are Google AI Overviews?',
+                      a: 'Google AI Overviews (formerly Search Generative Experience) are AI-generated summaries that appear at the top of Google search results, synthesizing information from multiple sources to answer a query directly. They cite sources but present a single cohesive answer, meaning most users never click through to individual websites — making citation in the overview itself the primary visibility goal.',
+                    },
+                    {
+                      q: 'Do I need to be ranked number one to appear in Google AI Overviews?',
+                      a: 'No. AI Overviews synthesize from multiple sources across the top results, meaning a page ranking fifth or sixth can be cited if its content is well-structured and directly answers the query. Position matters, but content structure and schema validity often matter more for citation specifically. A page that ranks lower but has superior structured data is frequently cited over a higher-ranking page with poor structure.',
                     },
                   ].map(({ q, a }, i) => (
                     <div key={i} className="border-b border-[rgba(100,70,30,0.15)] pb-6">

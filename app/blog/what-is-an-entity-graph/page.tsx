@@ -62,10 +62,23 @@ const articleSchema = {
     url: 'https://www.kodecite.ai/blog',
   },
   about: [
-    { '@type': 'DefinedTerm', name: 'Entity Graph' },
+    {
+      '@type': 'DefinedTerm',
+      '@id': 'https://www.kodecite.ai/#entity-graph',
+      name: 'Entity Graph',
+      description:
+        'A connected, machine-readable map of a business — its identity, people, services, location, and content — expressed in Schema.org JSON-LD so AI systems can read, verify, and cite it.',
+      url: 'https://www.kodecite.ai/blog/what-is-an-entity-graph',
+      inDefinedTermSet: {
+        '@type': 'DefinedTermSet',
+        '@id': 'https://www.kodecite.ai/#glossary',
+        name: 'KodeCite.ai AI Search Glossary',
+      },
+    },
     { '@type': 'DefinedTerm', name: 'Schema Markup' },
     { '@type': 'DefinedTerm', name: 'JSON-LD' },
     { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@id': 'https://www.kodecite.ai/#business' },
   ],
   mentions: [
     { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
@@ -393,9 +406,9 @@ export default function WhatIsAnEntityGraph() {
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                     </Link>
                     <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/cold-load-vs-cached-ai-crawlers" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">Your Site Feels Fast to You — But AI Crawlers See Something Very Different</p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">7 min read</p>
+                      <Link href="/blog/why-is-my-website-traffic-dropping-2026" className="block group">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">Why Is My Website Traffic Dropping in 2026?</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                       </Link>
                     </div>
                     <div className="border-t border-[var(--d-line)] pt-4">
