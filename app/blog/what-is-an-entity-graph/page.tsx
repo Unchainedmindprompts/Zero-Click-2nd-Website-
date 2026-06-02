@@ -62,10 +62,23 @@ const articleSchema = {
     url: 'https://www.kodecite.ai/blog',
   },
   about: [
-    { '@type': 'DefinedTerm', name: 'Entity Graph' },
+    {
+      '@type': 'DefinedTerm',
+      '@id': 'https://www.kodecite.ai/#entity-graph',
+      name: 'Entity Graph',
+      description:
+        'A connected, machine-readable map of a business — its identity, people, services, location, and content — expressed in Schema.org JSON-LD so AI systems can read, verify, and cite it.',
+      url: 'https://www.kodecite.ai/blog/what-is-an-entity-graph',
+      inDefinedTermSet: {
+        '@type': 'DefinedTermSet',
+        '@id': 'https://www.kodecite.ai/#glossary',
+        name: 'KodeCite.ai AI Search Glossary',
+      },
+    },
     { '@type': 'DefinedTerm', name: 'Schema Markup' },
     { '@type': 'DefinedTerm', name: 'JSON-LD' },
     { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@id': 'https://www.kodecite.ai/#business' },
   ],
   mentions: [
     { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },

@@ -63,6 +63,25 @@ const articleSchema = {
     name: 'KodeCite.ai Blog',
     url: 'https://www.kodecite.ai/blog',
   },
+  about: [
+    {
+      '@type': 'DefinedTerm',
+      '@id': 'https://www.kodecite.ai/#entity-graph',
+      name: 'Entity Graph',
+      inDefinedTermSet: { '@id': 'https://www.kodecite.ai/#glossary' },
+    },
+    { '@type': 'DefinedTerm', name: 'Schema Markup' },
+    { '@type': 'DefinedTerm', name: 'JSON-LD' },
+    { '@type': 'DefinedTerm', name: 'FAQPage Schema' },
+    { '@type': 'DefinedTerm', name: 'BreadcrumbList' },
+    { '@id': 'https://www.kodecite.ai/#business' },
+  ],
+  mentions: [
+    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
+    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
+    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+  ],
   citation: [
     { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
     { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
