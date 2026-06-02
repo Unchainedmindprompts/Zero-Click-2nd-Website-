@@ -17,6 +17,12 @@ const nextConfig = {
         destination: '/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
         permanent: true,
       },
+      {
+        // Merged into the canonical AEO/GEO-vs-SEO pillar
+        source: '/blog/is-geo-a-replacement-for-seo-or-an-addition',
+        destination: '/blog/aeo-geo-making-seo-better',
+        permanent: true,
+      },
     ];
   },
 };

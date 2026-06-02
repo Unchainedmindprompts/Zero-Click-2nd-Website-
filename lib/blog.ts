@@ -99,14 +99,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Enterprise SEO is built for enterprises. Subscription platforms are built for volume. Neither one gets you recommended by AI. Here's the gap in the market — and what fills it.",
   },
   {
-    slug: 'is-geo-a-replacement-for-seo-or-an-addition',
-    title: 'Is GEO a Replacement for SEO — Or Something You Add On Top?',
-    category: 'STRATEGY',
-    date: 'March 12, 2026',
-    readTime: '10 min read',
-    excerpt: "GEO doesn't replace SEO — it builds on top of it. Here's exactly how Generative Engine Optimization works alongside your existing SEO foundation and what you need to add to start appearing in AI-generated answers.",
-  },
-  {
     slug: 'aeo-geo-making-seo-better',
     title: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
     category: 'STRATEGY',
