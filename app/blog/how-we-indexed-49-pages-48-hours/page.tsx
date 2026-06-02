@@ -441,11 +441,11 @@ export default function Indexed49Pages() {
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                     </Link>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/wordpress-losing-ai-search" className="block group">
+                      <Link href="/blog/why-is-my-website-traffic-dropping-2026" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          Why WordPress Sites Are Losing the AI Search War
+                          Why Is My Website Traffic Dropping in 2026?
                         </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">6 min read</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                       </Link>
                     </div>
                   </div>

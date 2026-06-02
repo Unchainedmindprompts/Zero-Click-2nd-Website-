@@ -406,9 +406,9 @@ export default function WhatIsAnEntityGraph() {
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                     </Link>
                     <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/cold-load-vs-cached-ai-crawlers" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">Your Site Feels Fast to You — But AI Crawlers See Something Very Different</p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">7 min read</p>
+                      <Link href="/blog/why-is-my-website-traffic-dropping-2026" className="block group">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">Why Is My Website Traffic Dropping in 2026?</p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                       </Link>
                     </div>
                     <div className="border-t border-[var(--d-line)] pt-4">

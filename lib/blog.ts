@@ -115,14 +115,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Organic traffic dropping with no clear reason? Google AI Overviews and zero-click search are causing 20–50% traffic declines for businesses. Here's what's happening and how to fix it.",
   },
   {
-    slug: 'cold-load-vs-cached-ai-crawlers',
-    title: "Your Site Feels Fast to You — But AI Crawlers See Something Very Different",
-    category: 'TECHNICAL',
-    date: 'March 23, 2026',
-    readTime: '5 min read',
-    excerpt: "Your browser remembers your website. AI crawlers never do. The difference between a warm cached load and a cold crawl is the difference between being cited by AI — and being invisible to it.",
-  },
-  {
     slug: 'automation-vs-digital-real-estate',
     title: 'Why Automating Everything Is Failing Most Businesses',
     category: 'STRATEGY',
@@ -155,14 +147,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Learn how local businesses can appear in Google AI Overviews through structured data, schema markup, E-E-A-T signals, and AI-first content strategies.',
   },
   {
-    slug: 'why-website-burning-ai-tokens',
-    title: "Why Your Website Is Burning Through AI Tokens — And Costing You Business",
-    category: 'TECHNICAL',
-    date: 'March 3, 2026',
-    readTime: '5 min read',
-    excerpt: "AI agents crawl your site on a token budget. If your WordPress, Wix, or Squarespace site burns through that budget before answering the question, you don't get recommended.",
-  },
-  {
     slug: 'what-is-zero-click-search',
     title: 'What Is Zero Click Search and Why Your Business Is Invisible',
     category: 'FOUNDATIONS',
@@ -177,22 +161,6 @@ export const blogPosts: BlogPost[] = [
     date: 'February 8, 2026',
     readTime: '5 min read',
     excerpt: 'A step-by-step guide to implementing JSON-LD schema markup that makes your business visible to AI. Covers LocalBusiness, Service, FAQPage, and BreadcrumbList schemas with real implementation details.',
-  },
-  {
-    slug: 'wordpress-losing-ai-search',
-    title: 'Why WordPress Sites Are Losing the AI Search War',
-    category: 'PLATFORM',
-    date: 'January 22, 2026',
-    readTime: '4 min read',
-    excerpt: 'Bloated plugins, slow Core Web Vitals, and poor technical structure are making WordPress sites invisible to AI search engines. Here\'s why custom Next.js wins — and what the numbers say.',
-  },
-  {
-    slug: 'vercel-vs-wordpress-performance',
-    title: 'Next.js vs. WordPress: Real Performance Numbers for Local Businesses',
-    category: 'PLATFORM',
-    date: 'February 22, 2026',
-    readTime: '4 min read',
-    excerpt: 'We ran the same site on both platforms. The results are not close. Core Web Vitals, Lighthouse scores, time to first byte, and AI crawler accessibility — the data that should change your hosting decision.',
   },
   {
     slug: 'how-we-indexed-49-pages-48-hours',

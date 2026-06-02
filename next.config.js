@@ -23,6 +23,27 @@ const nextConfig = {
         destination: '/blog/aeo-geo-making-seo-better',
         permanent: true,
       },
+      // Retired platform/performance posts -> closest surviving pillar
+      {
+        source: '/blog/wordpress-losing-ai-search',
+        destination: '/blog/why-is-my-website-traffic-dropping-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/vercel-vs-wordpress-performance',
+        destination: '/blog/why-is-my-website-traffic-dropping-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/cold-load-vs-cached-ai-crawlers',
+        destination: '/blog/why-is-my-website-traffic-dropping-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/why-website-burning-ai-tokens',
+        destination: '/blog/why-is-my-website-traffic-dropping-2026',
+        permanent: true,
+      },
     ];
   },
 };
