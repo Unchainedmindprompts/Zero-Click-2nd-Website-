@@ -385,12 +385,20 @@ export default function SchemaMarkupGuide() {
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <Link href="/blog/what-is-zero-click-search" className="block group">
+                    <Link href="/blog/what-is-an-entity-graph" className="block group">
                       <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        What Is Zero Click Search and Why Your Business Is Invisible
+                        What Is an Entity Graph — And Why It Has Been Hiding in Plain Sight for a Decade
                       </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
+                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">14 min read</p>
                     </Link>
+                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
+                      <Link href="/blog/what-is-zero-click-search" className="block group">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
+                          What Is Zero Click Search and Why Your Business Is Invisible
+                        </p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
+                      </Link>
+                    </div>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
                       <Link href="/blog/how-we-indexed-49-pages-48-hours" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">

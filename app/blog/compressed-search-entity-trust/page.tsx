@@ -867,12 +867,20 @@ export default function CompressedSearchEntityTrust() {
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <Link href="/blog/f1-framework-for-aeo" className="block group">
+                    <Link href="/blog/what-is-an-entity-graph" className="block group">
                       <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        The F1 Framework for AEO: Why Most Businesses Are Trying to Win the AI Race in an Economy Car
+                        What Is an Entity Graph — And Why It Has Been Hiding in Plain Sight for a Decade
                       </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
+                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">14 min read</p>
                     </Link>
+                    <div className="border-t border-[var(--d-line)] pt-4">
+                      <Link href="/blog/f1-framework-for-aeo" className="block group">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
+                          The F1 Framework for AEO: Why Most Businesses Are Trying to Win the AI Race in an Economy Car
+                        </p>
+                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
+                      </Link>
+                    </div>
                     <div className="border-t border-[var(--d-line)] pt-4">
                       <Link href="/blog/the-shortlist-problem" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
