@@ -116,8 +116,8 @@ const articleSchema = {
     { '@type': 'Organization', name: 'Avvo', url: 'https://www.avvo.com' },
     { '@type': 'Organization', name: 'Healthgrades', url: 'https://www.healthgrades.com' },
     { '@type': 'Organization', name: 'NMLS Consumer Access', url: 'https://www.nmlsconsumeraccess.org' },
-    { '@type': 'SoftwareApplication', name: 'Schema Markup Validator', url: 'https://validator.schema.org/' },
-    { '@type': 'SoftwareApplication', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
+    { '@type': 'WebSite', name: 'Schema Markup Validator', url: 'https://validator.schema.org/' },
+    { '@type': 'WebSite', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
   ],
   citation: [
     { '@type': 'WebPage', name: 'Introducing the Knowledge Graph: things, not strings', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2012-05-16' },

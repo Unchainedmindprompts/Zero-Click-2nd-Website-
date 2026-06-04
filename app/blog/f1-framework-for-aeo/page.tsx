@@ -85,8 +85,8 @@ const articleSchema = {
     { '@type': 'Organization', name: 'Astro', url: 'https://astro.build' },
     { '@type': 'Organization', name: 'Vercel', url: 'https://vercel.com' },
     { '@type': 'Organization', name: 'Cloudflare', url: 'https://www.cloudflare.com' },
-    { '@type': 'SoftwareApplication', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
-    { '@type': 'SoftwareApplication', name: 'Schema Markup Validator', url: 'https://validator.schema.org/' },
+    { '@type': 'WebSite', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
+    { '@type': 'WebSite', name: 'Schema Markup Validator', url: 'https://validator.schema.org/' },
   ],
   citation: [
     { '@type': 'WebPage', name: 'How do you build a Formula 1 chassis?', url: 'https://www.formula1.com/en/latest/article/insight-freeze-dates-and-cost-cap-concerns-how-do-you-build-a-formula-1.17xc7aPeHPrx281LyfpUNo', publisher: { '@type': 'Organization', name: 'Formula 1' } },

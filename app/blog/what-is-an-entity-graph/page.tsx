@@ -90,7 +90,7 @@ const articleSchema = {
     { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
     { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
     { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'SoftwareApplication', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
+    { '@type': 'WebSite', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
     { '@type': 'Organization', name: 'Yoast', url: 'https://yoast.com/' },
     { '@type': 'Organization', name: 'Rank Math', url: 'https://rankmath.com/' },
   ],
