@@ -68,24 +68,34 @@ const articleSchema = {
   wordCount: 2600,
   about: [
     { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
-    { '@type': 'DefinedTerm', name: 'Entity Graph' },
+    { '@type': 'DefinedTerm', '@id': 'https://www.kodecite.ai/#entity-graph', name: 'Entity Graph', inDefinedTermSet: { '@id': 'https://www.kodecite.ai/#glossary' } },
     { '@type': 'DefinedTerm', name: 'AI Search Visibility' },
     { '@type': 'DefinedTerm', name: 'Schema Markup' },
     { '@type': 'DefinedTerm', name: 'Website Infrastructure' },
+    { '@id': 'https://www.kodecite.ai/#business' },
   ],
   mentions: [
+    { '@type': 'Organization', '@id': 'https://www.google.com/', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
     { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
     { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'Anthropic (Claude)', url: 'https://www.anthropic.com/claude' },
     { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
     { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
     { '@type': 'Organization', name: 'Next.js', url: 'https://nextjs.org' },
+    { '@type': 'Organization', name: 'Astro', url: 'https://astro.build' },
     { '@type': 'Organization', name: 'Vercel', url: 'https://vercel.com' },
+    { '@type': 'Organization', name: 'Cloudflare', url: 'https://www.cloudflare.com' },
+    { '@type': 'SoftwareApplication', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
+    { '@type': 'SoftwareApplication', name: 'Schema Markup Validator', url: 'https://validator.schema.org/' },
   ],
   citation: [
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
-    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
-    { '@type': 'CreativeWork', name: 'Google — Core Web Vitals', url: 'https://web.dev/articles/vitals' },
-    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
+    { '@type': 'WebPage', name: 'How do you build a Formula 1 chassis?', url: 'https://www.formula1.com/en/latest/article/insight-freeze-dates-and-cost-cap-concerns-how-do-you-build-a-formula-1.17xc7aPeHPrx281LyfpUNo', publisher: { '@type': 'Organization', name: 'Formula 1' } },
+    { '@type': 'TechArticle', name: 'JavaScript SEO basics', url: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'TechArticle', name: 'General structured data guidelines', url: 'https://developers.google.com/search/docs/appearance/structured-data/sd-policies', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'TechArticle', name: 'FAQPage (FAQ) structured data', url: 'https://developers.google.com/search/docs/appearance/structured-data/faqpage', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'TechArticle', name: 'Introduction to structured data markup in Google Search', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'NewsArticle', name: 'AI Overviews in Google Search expanding to more than 100 countries', url: 'https://blog.google/products/search/ai-overviews-search-october-2024/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2024-10-28' },
+    { '@type': 'WebSite', name: 'Schema.org', url: 'https://schema.org' },
   ],
 };
 
@@ -224,7 +234,7 @@ export default function F1FrameworkForAEO() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
-                  The best way to understand this is to borrow a framework from Formula 1.
+                  The best way to understand this is to borrow a framework from <a href="https://www.formula1.com/en/latest/article/insight-freeze-dates-and-cost-cap-concerns-how-do-you-build-a-formula-1.17xc7aPeHPrx281LyfpUNo" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Formula 1</a>.
                 </p>
 
                 <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">How an F1 Team Actually Builds a Winning Car</h2>
@@ -269,7 +279,7 @@ export default function F1FrameworkForAEO() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Most small and mid-sized businesses are running what amounts to an economy car on the track. WordPress sites buried under plugin bloat. Wix and Squarespace templates that render everything client-side. Squarespace commerce sites with slow page loads and inconsistent structure. Legacy builds with broken sitemaps, unreliable uptime, and content hidden behind JavaScript that AI crawlers can&apos;t see.
+                  Most small and mid-sized businesses are running what amounts to an economy car on the track. WordPress sites buried under plugin bloat. Wix and Squarespace templates that render everything client-side. Squarespace commerce sites with slow page loads and inconsistent structure. Legacy builds with broken sitemaps, unreliable uptime, and content hidden behind JavaScript that AI crawlers can&apos;t see. <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Google itself recommends</a> server-side or pre-rendering for exactly this reason — not all crawlers run JavaScript, and content trapped behind client-side rendering may never get indexed.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6 font-medium" style={{ color: '#0a0806' }}>
@@ -295,7 +305,7 @@ export default function F1FrameworkForAEO() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  And for the minority of businesses that have decent schema, there&apos;s still enormous room for improvement. Schema isn&apos;t just about whether it exists. It&apos;s about whether it&apos;s wired to reality — whether the entities declared in code actually match the entities on the page, and whether the relationships between them (author to article, business to employee, product to offer) are declared cleanly enough for a machine to resolve without hedging.
+                  And for the minority of businesses that have decent schema, there&apos;s still enormous room for improvement. Schema isn&apos;t just about whether it exists. It&apos;s about whether it&apos;s wired to reality — whether the entities declared in code actually match the entities on the page, and whether the relationships between them (author to article, business to employee, product to offer) are declared cleanly enough for a machine to resolve without hedging. <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Google&apos;s structured data guidelines</a> are explicit that markup must match the visible content of the page, and you can confirm it with the <a href="https://validator.schema.org/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Schema Markup Validator</a> and Google&apos;s <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Rich Results Test</a>.
                 </p>
 
                 <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-6 my-8">

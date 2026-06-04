@@ -87,7 +87,7 @@ const articleSchema = {
       '@type': 'Organization',
       name: 'Google',
       url: 'https://www.google.com',
-      sameAs: 'https://en.wikipedia.org/wiki/Google',
+      sameAs: 'https://www.wikidata.org/wiki/Q95',
     },
     {
       '@type': 'Organization',
@@ -135,28 +135,49 @@ const articleSchema = {
   ],
   citation: [
     {
-      '@type': 'CreativeWork',
-      name: 'Google — AI Overviews and AI Mode',
-      url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/',
+      '@type': 'NewsArticle',
+      name: 'AI in Search: Going beyond information to intelligence',
+      url: 'https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/',
       publisher: { '@type': 'Organization', name: 'Google' },
     },
     {
-      '@type': 'CreativeWork',
+      '@type': 'NewsArticle',
+      name: 'Google Search’s I/O 2026 updates: AI agents and more',
+      url: 'https://blog.google/products-and-platforms/products/search/search-io-2026/',
+      publisher: { '@type': 'Organization', name: 'Google' },
+      datePublished: '2026-05-20',
+    },
+    {
+      '@type': 'NewsArticle',
+      name: 'AI Overviews in Google Search expanding to more than 100 countries',
+      url: 'https://blog.google/products/search/ai-overviews-search-october-2024/',
+      publisher: { '@type': 'Organization', name: 'Google' },
+      datePublished: '2024-10-28',
+    },
+    {
+      '@type': 'TechArticle',
       name: 'Introduction to structured data markup in Google Search',
       url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data',
       publisher: { '@type': 'Organization', name: 'Google Search Central' },
     },
     {
-      '@type': 'CreativeWork',
+      '@type': 'TechArticle',
       name: 'General structured data guidelines',
       url: 'https://developers.google.com/search/docs/appearance/structured-data/sd-policies',
       publisher: { '@type': 'Organization', name: 'Google Search Central' },
     },
     {
-      '@type': 'CreativeWork',
+      '@type': 'TechArticle',
       name: 'Structured data markup that Google Search supports',
-      url: 'https://developers.google.com/search/docs/guides/search-gallery',
+      url: 'https://developers.google.com/search/docs/appearance/structured-data/search-gallery',
       publisher: { '@type': 'Organization', name: 'Google Search Central' },
+    },
+    {
+      '@type': 'WebPage',
+      name: 'Introducing Schema.org: Bing, Google and Yahoo Unite to Build the Web of Objects',
+      url: 'https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni',
+      publisher: { '@type': 'Organization', name: 'Microsoft Bing' },
+      datePublished: '2011-06-02',
     },
     {
       '@type': 'WebSite',
@@ -389,9 +410,9 @@ export default function GoogleAISearchSMBPage() {
                 </h2>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Google has been clear about where Search is going. In its official AI Search announcements, Google
+                  Google has been clear about where Search is going. In its <a href="https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">official AI Search announcements</a>, Google
                   describes AI Mode as a more powerful way to search, ask follow-up questions, explore topics, and
-                  receive more complete answers. Google has also continued expanding AI Overviews and source discovery
+                  receive more complete answers. At <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Google I/O 2026</a>, Google went further — upgrading AI Mode with Gemini 3.5 Flash, launching the biggest redesign of the Search box in 25 years, and rolling out information agents and agentic booking. Google has also continued <a href="https://blog.google/products/search/ai-overviews-search-october-2024/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">expanding AI Overviews</a> and source discovery
                   features designed to help users connect with relevant websites, brands, and original content.
                 </p>
 
@@ -647,7 +668,7 @@ export default function GoogleAISearchSMBPage() {
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The businesses that start building this infrastructure now may be years ahead of competitors who wait
-                  until AI search behavior becomes obvious. Schema.org has existed since 2011, and many SMB websites
+                  until AI search behavior becomes obvious. <a href="https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Schema.org has existed since June 2011</a>, and many SMB websites
                   still do not use structured data well. It is unlikely that the entire market suddenly wakes up and
                   builds sophisticated entity clarity overnight.
                 </p>
