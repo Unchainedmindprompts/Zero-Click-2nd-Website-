@@ -90,14 +90,19 @@ const articleSchema = {
   wordCount: 4600,
   about: [
     { '@type': 'DefinedTerm', name: 'Entity-First Search' },
-    { '@type': 'DefinedTerm', name: 'Entity Graph for Local Business' },
+    { '@type': 'DefinedTerm', '@id': 'https://www.kodecite.ai/#entity-graph', name: 'Entity Graph', inDefinedTermSet: { '@id': 'https://www.kodecite.ai/#glossary' } },
     { '@type': 'DefinedTerm', name: 'Machine-Readable Business Identity' },
     { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
     { '@type': 'DefinedTerm', name: 'AI Discovery for Local Businesses' },
     { '@type': 'DefinedTerm', name: 'Structured Data and Schema.org' },
     { '@type': 'DefinedTerm', name: 'Local Business AI Visibility' },
+    { '@id': 'https://www.kodecite.ai/#business' },
   ],
   mentions: [
+    { '@type': 'Organization', '@id': 'https://www.google.com/', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
+    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org', sameAs: 'https://www.wikidata.org/wiki/Q3475322' },
+    { '@type': 'Thing', name: 'Google Knowledge Graph', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', sameAs: 'https://www.wikidata.org/wiki/Q648625' },
+    { '@type': 'Organization', name: 'Next.js', url: 'https://nextjs.org' },
     { '@type': 'Organization', name: 'WordPress', url: 'https://wordpress.org' },
     { '@type': 'Organization', name: 'Wix', url: 'https://www.wix.com' },
     { '@type': 'Organization', name: 'Squarespace', url: 'https://www.squarespace.com' },
@@ -107,14 +112,21 @@ const articleSchema = {
     { '@type': 'Organization', name: 'Better Business Bureau', url: 'https://www.bbb.org' },
     { '@type': 'Organization', name: 'Yelp', url: 'https://www.yelp.com' },
     { '@type': 'Organization', name: 'Yellow Pages', url: 'https://www.yellowpages.com' },
-    { '@type': 'Organization', name: 'Reddit', url: 'https://www.reddit.com' },
     { '@type': 'Organization', name: 'Houzz', url: 'https://www.houzz.com' },
+    { '@type': 'Organization', name: 'Avvo', url: 'https://www.avvo.com' },
+    { '@type': 'Organization', name: 'Healthgrades', url: 'https://www.healthgrades.com' },
+    { '@type': 'Organization', name: 'NMLS Consumer Access', url: 'https://www.nmlsconsumeraccess.org' },
+    { '@type': 'SoftwareApplication', name: 'Schema Markup Validator', url: 'https://validator.schema.org/' },
+    { '@type': 'SoftwareApplication', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
   ],
   citation: [
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
-    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
-    { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Specification (W3C)', url: 'https://www.w3.org/TR/json-ld11/' },
-    { '@type': 'CreativeWork', name: 'Google Knowledge Graph API', url: 'https://developers.google.com/knowledge-graph' },
+    { '@type': 'WebPage', name: 'Introducing the Knowledge Graph: things, not strings', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2012-05-16' },
+    { '@type': 'WebPage', name: 'Introducing Schema.org: Bing, Google and Yahoo Unite to Build the Web of Objects', url: 'https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni', publisher: { '@type': 'Organization', name: 'Microsoft Bing' }, datePublished: '2011-06-02' },
+    { '@type': 'TechArticle', name: 'JavaScript SEO basics', url: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'TechArticle', name: 'General structured data guidelines', url: 'https://developers.google.com/search/docs/appearance/structured-data/sd-policies', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'TechArticle', name: 'Introduction to structured data markup in Google Search', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Recommendation (W3C)', url: 'https://www.w3.org/TR/json-ld11/', publisher: { '@type': 'Organization', name: 'W3C' } },
+    { '@type': 'WebSite', name: 'Schema.org', url: 'https://schema.org' },
   ],
 };
 
@@ -315,7 +327,7 @@ export default function EntityFirstSearchLocalBusinesses() {
                 </h2>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Entity-first search describes how modern AI systems and search engines approach information retrieval. Instead of indexing pages and matching text to query keywords, they build structured representations of the things in the world — people, businesses, places, services, events — and query those representations directly.
+                  Entity-first search describes how modern AI systems and search engines approach information retrieval. Instead of indexing pages and matching text to query keywords, they build structured representations of the things in the world — people, businesses, places, services, events — and query those representations directly. This is the same principle behind Google&apos;s <a href="https://blog.google/products/search/introducing-knowledge-graph-things-not/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Knowledge Graph</a>, launched in 2012 with the tagline &ldquo;things, not strings.&rdquo;
                 </p>
 
                 <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">
@@ -401,7 +413,7 @@ export default function EntityFirstSearchLocalBusinesses() {
                 </h3>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  SEO has moved through generations. First-generation SEO was keyword-centric: match the page to what people typed. Second-generation was topic authority: build enough content depth to signal expertise. Third-generation — where AI systems operate — is entity-centric: become a clearly defined, verifiable entity in the knowledge layers underneath search.
+                  SEO has moved through generations. First-generation SEO was keyword-centric: match the page to what people typed. Second-generation was topic authority: build enough content depth to signal expertise. Third-generation — where AI systems operate — is entity-centric: become a clearly defined, verifiable entity in the knowledge layers underneath search. The vocabulary that makes this possible is <a href="https://schema.org" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Schema.org</a>, the shared structured-data standard <a href="https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">co-founded by Google, Bing, and Yahoo in June 2011</a>.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
@@ -431,7 +443,7 @@ export default function EntityFirstSearchLocalBusinesses() {
                 </ul>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The result is a website that looks fine to a human visitor but sends confusing, incomplete, or conflicting signals to AI systems.
+                  The result is a website that looks fine to a human visitor but sends confusing, incomplete, or conflicting signals to AI systems. <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Google&apos;s own JavaScript SEO guidance</a> recommends server-side or pre-rendering for exactly this reason — not all crawlers run JavaScript, and content trapped behind client-side rendering may never get indexed.
                 </p>
 
                 <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">
@@ -545,7 +557,7 @@ export default function EntityFirstSearchLocalBusinesses() {
                 </h3>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  AI systems err toward confidence. If the evidence around a business is ambiguous, the system may simply not recommend it — not because the business is bad, but because the evidence is unclear. An inconsistent NAP, a wrong business type in schema, a WordPress site with conflicting plugin markup, a Google Business Profile that has not been updated in three years — all of these create hesitation.
+                  AI systems err toward confidence. If the evidence around a business is ambiguous, the system may simply not recommend it — not because the business is bad, but because the evidence is unclear. An inconsistent NAP, a wrong business type in schema, a WordPress site with conflicting plugin markup, a Google Business Profile that has not been updated in three years — all of these create hesitation. <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Google&apos;s own structured data guidelines</a> are explicit that markup must match the visible content of the page; mismatched signals weaken confidence.
                 </p>
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-6">
@@ -745,6 +757,10 @@ export default function EntityFirstSearchLocalBusinesses() {
                     </li>
                   ))}
                 </ul>
+
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mt-6 mb-6">
+                  Validate everything with the <a href="https://validator.schema.org/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Schema Markup Validator</a> and Google&apos;s <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Rich Results Test</a> before shipping.
+                </p>
 
                 {/* ── Section 8 ──────────────────────────────── */}
                 <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-12 mb-4">
