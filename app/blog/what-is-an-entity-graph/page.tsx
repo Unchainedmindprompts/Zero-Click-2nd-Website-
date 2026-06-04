@@ -81,17 +81,28 @@ const articleSchema = {
     { '@id': 'https://www.kodecite.ai/#business' },
   ],
   mentions: [
-    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
+    { '@type': 'Organization', '@id': 'https://schema.org/', name: 'Schema.org', url: 'https://schema.org/', sameAs: 'https://www.wikidata.org/wiki/Q3475322' },
+    { '@type': 'Organization', '@id': 'https://www.google.com/', name: 'Google', url: 'https://www.google.com/', sameAs: 'https://www.wikidata.org/wiki/Q95' },
+    { '@type': 'Organization', '@id': 'https://www.bing.com/', name: 'Microsoft Bing', url: 'https://www.bing.com/', sameAs: 'https://www.wikidata.org/wiki/Q182496' },
+    { '@type': 'Organization', '@id': 'https://www.yahoo.com/', name: 'Yahoo', url: 'https://www.yahoo.com/', sameAs: 'https://www.wikidata.org/wiki/Q37093' },
+    { '@type': 'Organization', '@id': 'https://yandex.com/', name: 'Yandex', url: 'https://yandex.com/', sameAs: 'https://www.wikidata.org/wiki/Q5281' },
+    { '@type': 'Thing', name: 'Google Knowledge Graph', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', sameAs: 'https://www.wikidata.org/wiki/Q648625' },
     { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
     { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
     { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'Organization', name: 'Google Knowledge Graph', url: 'https://developers.google.com/knowledge-graph' },
+    { '@type': 'SoftwareApplication', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
+    { '@type': 'Organization', name: 'Yoast', url: 'https://yoast.com/' },
+    { '@type': 'Organization', name: 'Rank Math', url: 'https://rankmath.com/' },
   ],
   citation: [
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'WebPage', name: 'Introducing Schema.org: Bing, Google and Yahoo Unite to Build the Web of Objects', url: 'https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni', publisher: { '@type': 'Organization', name: 'Microsoft Bing' }, datePublished: '2011-06-02' },
+    { '@type': 'ScholarlyArticle', name: 'Schema.org: Evolution of Structured Data on the Web', author: [{ '@type': 'Person', name: 'R.V. Guha' }, { '@type': 'Person', name: 'Dan Brickley' }, { '@type': 'Person', name: 'Steve Macbeth' }], url: 'https://cacm.acm.org/practice/schema-org/', publisher: { '@type': 'Organization', name: 'Communications of the ACM' }, datePublished: '2016-02-01' },
+    { '@type': 'WebPage', name: 'Introducing the Knowledge Graph: things, not strings', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2012-05-16' },
+    { '@type': 'WebPage', name: 'Schema.org — Person type', url: 'https://schema.org/Person', publisher: { '@type': 'Organization', name: 'Schema.org' } },
+    { '@type': 'WebPage', name: 'Schema.org — Organization type', url: 'https://schema.org/Organization', publisher: { '@type': 'Organization', name: 'Schema.org' } },
+    { '@type': 'WebPage', name: 'Schema.org — LocalBusiness type', url: 'https://schema.org/LocalBusiness', publisher: { '@type': 'Organization', name: 'Schema.org' } },
     { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Specification (W3C)', url: 'https://www.w3.org/TR/json-ld11/' },
     { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
-    { '@type': 'CreativeWork', name: 'Google Knowledge Graph API', url: 'https://developers.google.com/knowledge-graph' },
   ],
 };
 
@@ -155,7 +166,11 @@ export default function WhatIsAnEntityGraph() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-6">
-                  Google, Microsoft, and Yahoo — three companies that competed fiercely on almost everything — agreed on something together. They created a shared vocabulary for the web. A universal language that would allow any website to communicate its meaning directly to machines, not just humans.
+                  Google, Microsoft, and Yahoo — three companies that competed fiercely on almost everything — <a href="https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">agreed on something together</a>. They created a shared vocabulary for the web. A universal language that would allow any website to communicate its meaning directly to machines, not just humans. (Yandex joined the effort later that year, completing the alignment.)
+                </p>
+
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
+                  A year later, in 2012, Google launched its <a href="https://blog.google/products/search/introducing-knowledge-graph-things-not/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Knowledge Graph</a> — the first large-scale, consumer-facing entity graph, and an early signal of where structured data was heading.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
@@ -213,7 +228,7 @@ export default function WhatIsAnEntityGraph() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
-                  Schema.org provides the vocabulary — a shared dictionary of types and properties that every major search engine and AI platform has agreed to recognize. Person. Organization. LocalBusiness. BlogPosting. FAQPage. Product. Service. Each type has defined properties. Each property has an accepted format. When you use them correctly, you are speaking the native language of the machines that determine whether your business gets found.
+                  Schema.org provides the vocabulary — a shared dictionary of types and properties that every major search engine and AI platform has agreed to recognize. <a href="https://schema.org/Person" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Person</a>. <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Organization</a>. <a href="https://schema.org/LocalBusiness" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">LocalBusiness</a>. BlogPosting. FAQPage. Product. Service. Each type has defined properties. Each property has an accepted format. When you use them correctly, you are speaking the native language of the machines that determine whether your business gets found.
                 </p>
 
                 <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">Why Most Schema Implementations Are Wrong</h2>
@@ -238,7 +253,7 @@ export default function WhatIsAnEntityGraph() {
                 </div>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
-                  The third failure — and this one is especially common among WordPress sites using plugins like Yoast or RankMath — is conflicting schema. Multiple plugins attempting to mark up the same page simultaneously, producing contradictory structured data that confuses rather than clarifies. Google&apos;s Rich Results Test flags errors and warnings on the majority of plugin-generated schema implementations. The practitioners selling these implementations rarely check.
+                  The third failure — and this one is especially common among WordPress sites using plugins like <a href="https://yoast.com/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Yoast</a> or <a href="https://rankmath.com/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Rank Math</a> — is conflicting schema. Multiple plugins attempting to mark up the same page simultaneously, producing contradictory structured data that confuses rather than clarifies. Google&apos;s <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Rich Results Test</a> flags errors and warnings on the majority of plugin-generated schema implementations. The practitioners selling these implementations rarely check.
                 </p>
 
                 <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">What an Entity Graph Actually Is</h2>
@@ -377,7 +392,7 @@ export default function WhatIsAnEntityGraph() {
                   <div className="space-y-4">
                     <div className="border-b border-[var(--d-line)] pb-4">
                       <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">2011</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">Schema.org launched — co-created by Google, Microsoft, Yahoo, and Yandex</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">Schema.org launched — co-created by Google, Microsoft, and Yahoo (Yandex joined later that year)</p>
                     </div>
                     <div className="border-b border-[var(--d-line)] pb-4">
                       <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">&lt;10%</p>
