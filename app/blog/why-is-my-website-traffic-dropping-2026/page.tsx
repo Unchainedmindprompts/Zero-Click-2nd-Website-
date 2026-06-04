@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Why Is My Website Traffic Dropping in 2026? | KodeCite.AI',
   description:
-    'Organic traffic dropping with no clear reason? Google AI Overviews and zero-click search are causing 20-50% traffic declines for businesses. Here\'s what\'s happening and how to fix it.',
+    'Organic traffic dropping with no clear reason? Google AI Overviews and zero-click search are eroding clicks — Ahrefs measured a 34.5% drop on the top-ranking page when an AI Overview appears. Here\'s what\'s happening and how to fix it.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
   },
@@ -69,10 +69,22 @@ const articleSchema = {
     name: 'KodeCite.ai Blog',
     url: 'https://www.kodecite.ai/blog',
   },
+  mentions: [
+    { '@type': 'Organization', '@id': 'https://www.google.com/#organization', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
+    { '@type': 'Organization', name: 'Ahrefs', url: 'https://ahrefs.com', sameAs: 'https://www.wikidata.org/wiki/Q107533769' },
+    { '@type': 'Organization', name: 'Pew Research Center', url: 'https://www.pewresearch.org', sameAs: 'https://www.wikidata.org/wiki/Q1635722' },
+    { '@type': 'Organization', name: 'SparkToro', url: 'https://sparktoro.com' },
+  ],
   citation: [
-    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
-    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'CreativeWork', name: 'Google Search Console Help', url: 'https://support.google.com/webmasters' },
+    { '@type': 'ScholarlyArticle', headline: 'AI Overviews Reduce Clicks by 34.5%', url: 'https://ahrefs.com/blog/ai-overviews-reduce-clicks/', publisher: { '@type': 'Organization', name: 'Ahrefs' } },
+    { '@type': 'ScholarlyArticle', headline: 'Google users are less likely to click on links when an AI summary appears in the results', url: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/', publisher: { '@type': 'Organization', name: 'Pew Research Center' }, datePublished: '2025-07-22' },
+    { '@type': 'ScholarlyArticle', headline: '2024 Zero-Click Search Study', url: 'https://sparktoro.com/blog/2024-zero-click-search-study-for-every-1000-us-google-searches-only-374-clicks-go-to-the-open-web-in-the-eu-its-360/', author: { '@type': 'Person', name: 'Rand Fishkin' }, publisher: { '@type': 'Organization', name: 'SparkToro' }, datePublished: '2024-07-01' },
+    { '@type': 'NewsArticle', headline: 'Google Search I/O 2026 updates: AI Mode becomes the default Search experience', url: 'https://blog.google/products-and-platforms/products/search/search-io-2026/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2026-05-20' },
+    { '@type': 'NewsArticle', headline: 'AI Overviews in Google Search expanding to more than 100 countries', url: 'https://blog.google/products/search/ai-overviews-search-october-2024/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2024-10-28' },
+    { '@type': 'BlogPosting', headline: 'Our latest update to the quality rater guidelines: E-E-A-T', url: 'https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2022-12-15' },
+    { '@type': 'TechArticle', name: 'Creating helpful, reliable, people-first content', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+    { '@type': 'TechArticle', name: 'Introduction to structured data markup in Google Search', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+    { '@type': 'TechArticle', name: 'Core Web Vitals report', url: 'https://developers.google.com/search/docs/appearance/core-web-vitals' },
   ],
 };
 
@@ -85,7 +97,7 @@ const faqPageSchema = {
       name: 'Why is my website traffic dropping in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The most common cause of organic traffic drops in 2025 and 2026 is Google\'s AI Overviews, which answer search queries directly on the results page — eliminating the need for users to click through to any website. This zero-click phenomenon can cause 20% to 50% declines in organic clicks even when rankings haven\'t changed.',
+        text: 'The most common cause of organic traffic drops in 2025 and 2026 is Google\'s AI Overviews, which answer search queries directly on the results page — eliminating the need for users to click through to any website. This zero-click phenomenon is well documented — Ahrefs measured a 34.5% drop in clicks to the top-ranking page when an AI Overview appears, even when rankings haven\'t changed.',
       },
     },
     {
@@ -117,7 +129,7 @@ const faqPageSchema = {
       name: 'How do I get my business to appear in Google AI Overviews?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'To appear in Google AI Overviews, businesses need to implement structured data (schema markup), create content that directly answers customer questions in a clear answer-first format, maintain consistent business information across all online directories, and build strong E-E-A-T signals. Schema markup alone can increase AI citation likelihood by up to 28%.',
+        text: 'To appear in Google AI Overviews, businesses need to implement structured data (schema markup), create content that directly answers customer questions in a clear answer-first format, maintain consistent business information across all online directories, and build strong E-E-A-T signals.',
       },
     },
   ],
@@ -385,10 +397,10 @@ export default function WhyIsMyWebsiteTrafficDropping() {
                   That model is breaking down.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Google&apos;s AI Overviews — the AI-generated answer blocks that now appear at the top of search results — are answering questions directly on the results page. Users are getting what they need without clicking a single link. This phenomenon is called zero-click search, and it is the primary driver behind the traffic drops businesses are experiencing right now.
+                  Google&apos;s AI Overviews — the AI-generated answer blocks that now appear at the top of search results — are answering questions directly on the results page. Users are getting what they need without clicking a single link. Google has <a href="https://blog.google/products/search/ai-overviews-search-october-2024/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">rolled AI Overviews out to more than 100 countries</a>, and in May 2026 it <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">made AI Mode the default Search experience</a>. This phenomenon is called zero-click search, and it is the primary driver behind the traffic drops businesses are experiencing right now.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Research shows that AI Overviews and zero-click results are responsible for <strong className="text-[var(--d-fg)]">20% to 50% declines in organic clicks</strong> for affected queries — even when a website&apos;s rankings haven&apos;t moved at all. You can be ranking #1 and still losing traffic. That&apos;s the new reality.
+                  The data is stark. <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Ahrefs measured a <strong className="text-[var(--d-fg)]">34.5% drop in clicks</strong> to the top-ranking page when an AI Overview appears</a> — even when a website&apos;s rankings haven&apos;t moved at all. <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Pew Research independently confirmed it</a>: users clicked a result in just 8% of visits when an AI summary appeared, versus 15% without. You can be ranking #1 and still losing traffic. That&apos;s the new reality.
                 </p>
 
                 {/* ── Zero-Click Search ── */}
@@ -527,7 +539,7 @@ export default function WhyIsMyWebsiteTrafficDropping() {
                   <li><strong className="text-[var(--d-fg)]">BreadcrumbList schema</strong> — helps AI understand your site structure</li>
                 </ul>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Studies indicate that properly implemented schema markup can increase the likelihood of AI citation by up to 28%. Most small business websites have none of it.
+                  Properly implemented schema markup is how you make those facts machine-readable and unambiguous to AI systems — and most small business websites have none of it.
                 </p>
 
                 <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
@@ -652,7 +664,7 @@ export default function WhyIsMyWebsiteTrafficDropping() {
                   {[
                     {
                       q: 'Why is my website traffic dropping in 2026?',
-                      a: "The most common cause of organic traffic drops in 2025 and 2026 is Google's AI Overviews, which answer search queries directly on the results page — eliminating the need for users to click through to any website. This zero-click phenomenon can cause 20% to 50% declines in organic clicks even when rankings haven't changed.",
+                      a: "The most common cause of organic traffic drops in 2025 and 2026 is Google's AI Overviews, which answer search queries directly on the results page — eliminating the need for users to click through to any website. This zero-click phenomenon is well documented — Ahrefs measured a 34.5% drop in clicks to the top-ranking page when an AI Overview appears, even when rankings haven't changed.",
                     },
                     {
                       q: 'What is zero-click search and how does it affect my business?',
@@ -668,7 +680,7 @@ export default function WhyIsMyWebsiteTrafficDropping() {
                     },
                     {
                       q: 'How do I get my business to appear in Google AI Overviews?',
-                      a: 'To appear in Google AI Overviews, businesses need to implement structured data (schema markup), create content that directly answers customer questions in a clear answer-first format, maintain consistent business information across all online directories, and build strong E-E-A-T signals. Schema markup alone can increase AI citation likelihood by up to 28%.',
+                      a: 'To appear in Google AI Overviews, businesses need to implement structured data (schema markup), create content that directly answers customer questions in a clear answer-first format, maintain consistent business information across all online directories, and build strong E-E-A-T signals.',
                     },
                   ].map(({ q, a }, i) => (
                     <div key={i} className="border-b border-[rgba(100,70,30,0.15)] pb-6">
@@ -703,16 +715,16 @@ export default function WhyIsMyWebsiteTrafficDropping() {
                   <p className="eyebrow mb-4 text-xs justify-start">BY THE NUMBERS</p>
                   <div className="space-y-4">
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">20–50%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">decline in organic clicks from AI Overview impact, even with stable rankings</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">34.5%</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">drop in clicks to the top-ranking page when an AI Overview appears (Ahrefs)</p>
                     </div>
                     <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">28%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">increase in AI citation likelihood with proper schema markup</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">8%</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of visits with an AI summary end in a click — versus 15% without (Pew Research)</p>
                     </div>
                     <div>
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">60%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of Google searches now end without a single click</p>
+                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">~60%</p>
+                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of US Google searches now end without a click to the open web (SparkToro)</p>
                     </div>
                   </div>
                 </div>
