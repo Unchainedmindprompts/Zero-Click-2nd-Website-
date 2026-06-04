@@ -100,12 +100,12 @@ const articleSchema = {
       url: 'https://schema.org',
     },
     {
-      '@type': 'Organization',
+      '@type': 'Thing',
       name: 'Google AI Mode',
-      url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/',
+      url: 'https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/',
     },
     {
-      '@type': 'Organization',
+      '@type': 'Thing',
       name: 'Google AI Overviews',
       url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/',
     },

@@ -89,7 +89,7 @@ const articleSchema = {
   mentions: [
     { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
     { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
-    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Thing', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
     { '@type': 'Thing', name: 'Ray-Ban Meta smart glasses' },
     { '@type': 'Organization', name: 'Meta', url: 'https://www.meta.com' },
     { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
