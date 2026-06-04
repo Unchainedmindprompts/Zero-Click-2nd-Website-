@@ -91,26 +91,46 @@ const articleSchema = {
   about: [
     { '@type': 'DefinedTerm', name: 'Compressed Search' },
     { '@type': 'DefinedTerm', name: 'Entity Trust' },
+    { '@type': 'DefinedTerm', '@id': 'https://www.kodecite.ai/#entity-graph', name: 'Entity Graph', inDefinedTermSet: { '@id': 'https://www.kodecite.ai/#glossary' } },
     { '@type': 'DefinedTerm', name: 'Agentic Search' },
     { '@type': 'DefinedTerm', name: 'Local Business AI Visibility' },
     { '@type': 'DefinedTerm', name: 'Machine-Readable Web Infrastructure' },
     { '@type': 'DefinedTerm', name: 'Voice Search and Wearable Discovery' },
     { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
+    { '@id': 'https://www.kodecite.ai/#business' },
   ],
   mentions: [
+    { '@type': 'Organization', '@id': 'https://www.google.com/', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
+    { '@type': 'Thing', name: 'Google Knowledge Graph', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', sameAs: 'https://www.wikidata.org/wiki/Q648625' },
+    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org', sameAs: 'https://www.wikidata.org/wiki/Q3475322' },
+    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
     { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
     { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
-    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
     { '@type': 'Organization', name: 'Microsoft Copilot', url: 'https://copilot.microsoft.com' },
-    { '@type': 'Organization', name: 'Zillow', url: 'https://www.zillow.com' },
+    { '@type': 'Organization', name: 'Next.js', url: 'https://nextjs.org' },
+    { '@type': 'Organization', name: 'Google Business Profile', url: 'https://business.google.com' },
+    { '@type': 'Organization', name: 'Bing Places', url: 'https://www.bingplaces.com' },
+    { '@type': 'Organization', name: 'Apple Business Connect', url: 'https://businessconnect.apple.com' },
+    { '@type': 'Organization', name: 'Yelp', url: 'https://www.yelp.com' },
+    { '@type': 'Organization', name: 'Better Business Bureau', url: 'https://www.bbb.org' },
     { '@type': 'Organization', name: 'YouTube', url: 'https://www.youtube.com' },
-    { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
+    { '@type': 'Organization', name: 'Zillow', url: 'https://www.zillow.com' },
+    { '@type': 'Organization', name: 'Realtor.com', url: 'https://www.realtor.com' },
+    { '@type': 'Organization', name: 'Homes.com', url: 'https://www.homes.com' },
     { '@type': 'Organization', name: 'WordPress', url: 'https://wordpress.org' },
   ],
   citation: [
-    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
-    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+    { '@type': 'NewsArticle', name: 'Google Search I/O 2026 updates: AI agents and more', url: 'https://blog.google/products-and-platforms/products/search/search-io-2026/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2026-05-20' },
+    { '@type': 'NewsArticle', name: 'AI Overviews in Google Search expanding to more than 100 countries', url: 'https://blog.google/products/search/ai-overviews-search-october-2024/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2024-10-28' },
+    { '@type': 'NewsArticle', name: 'AI in Search: Going beyond information to intelligence', url: 'https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/', publisher: { '@type': 'Organization', name: 'Google' } },
+    { '@type': 'WebPage', name: 'Introducing the Knowledge Graph: things, not strings', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2012-05-16' },
+    { '@type': 'WebPage', name: 'Introducing Schema.org: Bing, Google and Yahoo Unite to Build the Web of Objects', url: 'https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni', publisher: { '@type': 'Organization', name: 'Microsoft Bing' }, datePublished: '2011-06-02' },
+    { '@type': 'TechArticle', name: 'Introduction to structured data markup in Google Search', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'TechArticle', name: 'JavaScript SEO basics', url: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'TechArticle', name: 'Video (VideoObject) structured data', url: 'https://developers.google.com/search/docs/appearance/structured-data/video', publisher: { '@type': 'Organization', name: 'Google Search Central' } },
+    { '@type': 'TechArticle', name: 'Core Web Vitals', url: 'https://web.dev/articles/vitals', publisher: { '@type': 'Organization', name: 'web.dev' } },
+    { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Recommendation (W3C)', url: 'https://www.w3.org/TR/json-ld11/', publisher: { '@type': 'Organization', name: 'W3C' } },
+    { '@type': 'WebSite', name: 'Schema.org', url: 'https://schema.org' },
   ],
 };
 
@@ -279,7 +299,7 @@ export default function CompressedSearchEntityTrust() {
                 </h2>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The phrase &ldquo;dead internet&rdquo; gets used in a lot of different ways. Some versions are exaggerated. Some are conspiratorial. But one part of the idea is directionally correct: human browsing is becoming less central to discovery.
+                  The phrase &ldquo;dead internet&rdquo; gets used in a lot of different ways. Some versions are exaggerated. Some are conspiratorial. But one part of the idea is directionally correct: human browsing is becoming less central to discovery. Google itself has signaled this direction — at <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">I/O 2026</a>, it announced the biggest Search box redesign in 25 years, introduced agentic information agents, and rolled out agentic booking that completes tasks inside Search.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
@@ -380,7 +400,7 @@ export default function CompressedSearchEntityTrust() {
                 </h3>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  AI search compresses the journey further. Instead of showing a user every possible source, the system synthesizes information and produces an answer. That answer may include citations and multiple recommendations. But the user is no longer doing the same kind of manual comparison. The AI system is helping decide which sources matter.
+                  AI search compresses the journey further. Instead of showing a user every possible source, the system synthesizes information and produces an answer. Google&apos;s <a href="https://blog.google/products/search/ai-overviews-search-october-2024/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">AI Overviews — now serving over a billion users monthly across 100+ countries</a> — and AI Mode both work this way, synthesizing across multiple sources and surfacing a small set of cited recommendations. The user is no longer doing the same kind of manual comparison. The AI system is helping decide which sources matter.
                 </p>
 
                 <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">
@@ -467,7 +487,7 @@ export default function CompressedSearchEntityTrust() {
                 </h2>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Entity trust is the machine-readable clarity around a business. It is not just whether the business has content. It is whether machines can resolve the business as a real, credible, local entity.
+                  Entity trust is the machine-readable clarity around a business. It is not just whether the business has content. It is whether machines can resolve the business as a real, credible, local entity — the same principle behind Google&apos;s <a href="https://blog.google/products/search/introducing-knowledge-graph-things-not/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Knowledge Graph</a>, built around &ldquo;things, not strings.&rdquo;
                 </p>
 
                 <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">
@@ -530,11 +550,11 @@ export default function CompressedSearchEntityTrust() {
                 </h3>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Schema does not create trust. Schema expresses trust. That distinction matters.
+                  <a href="https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Schema.org — the shared vocabulary co-founded in June 2011 by Google, Microsoft, and Yahoo</a> — does not create trust. Schema expresses trust. That distinction matters.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  A weak business cannot become authoritative because it added structured data. But an established business with real authority can become much easier for machines to understand when that authority is structured correctly. The goal is not to stuff code onto a page. The goal is to translate what is already true about the business into a clean machine-readable entity graph.
+                  A weak business cannot become authoritative because it added structured data. But an established business with real authority can become much easier for machines to understand when that authority is structured correctly. <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Google&apos;s structured data documentation</a> is explicit that markup must align with the real, visible content of the page — the goal is not to stuff code onto a page. The goal is to translate what is already true about the business into a clean machine-readable entity graph.
                 </p>
 
                 {/* ── Section 5 ──────────────────────────────── */}
@@ -653,7 +673,7 @@ export default function CompressedSearchEntityTrust() {
                 </h3>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  YouTube is useful, but YouTube&apos;s ecosystem is built around YouTube. A business video should not depend entirely on YouTube&apos;s algorithm. When a video is embedded on the business website and marked up with video schema, it can strengthen the owned entity graph. The video becomes part of the website&apos;s trust infrastructure — not a post on someone else&apos;s platform.
+                  YouTube is useful, but YouTube&apos;s ecosystem is built around YouTube. A business video should not depend entirely on YouTube&apos;s algorithm. When a video is embedded on the business website and marked up with VideoObject schema — following Google&apos;s <a href="https://developers.google.com/search/docs/appearance/structured-data/video" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">video structured data guidelines</a> — it can strengthen the owned entity graph. The video becomes part of the website&apos;s trust infrastructure — not a post on someone else&apos;s platform.
                 </p>
 
                 <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">
@@ -731,7 +751,7 @@ export default function CompressedSearchEntityTrust() {
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-3 font-semibold text-[var(--d-fg)]">Fast Infrastructure for Clean Machine Access</p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  A modern site should be fast, crawlable, structured, and designed for extraction — clean rendering, clean sitemaps, strong performance, stable URLs, and a technical foundation that does not fight the rest of the strategy.
+                  A modern site should be fast, crawlable, structured, and designed for extraction — clean rendering, clean sitemaps, strong performance against <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Core Web Vitals</a>, stable URLs, and a technical foundation that does not fight the rest of the strategy.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-3 font-semibold text-[var(--d-fg)]">Entity Graphs That Define the Business Clearly</p>
