@@ -85,14 +85,22 @@ const articleSchema = {
     { '@type': 'DefinedTerm', name: 'Local Business Marketing' },
   ],
   mentions: [
-    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
-    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
-    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Organization', '@id': 'https://www.google.com/#organization', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
+    { '@type': 'Organization', '@id': 'https://openai.com/#organization', name: 'OpenAI', url: 'https://openai.com', sameAs: 'https://www.wikidata.org/wiki/Q21708200' },
+    { '@type': 'Organization', '@id': 'https://www.perplexity.ai/#organization', name: 'Perplexity AI', url: 'https://www.perplexity.ai' },
+    { '@type': 'Organization', name: 'Answer.AI', url: 'https://www.answer.ai' },
+    { '@type': 'Organization', name: 'PitchBook', url: 'https://pitchbook.com' },
   ],
   citation: [
-    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'NewsArticle', headline: 'ChatGPT reaches 900M weekly active users', url: 'https://techcrunch.com/2026/02/27/chatgpt-reaches-900m-weekly-active-users/', publisher: { '@type': 'Organization', name: 'TechCrunch' }, datePublished: '2026-02-27' },
+    { '@type': 'NewsArticle', headline: 'ChatGPT users send 2.5 billion prompts a day', url: 'https://techcrunch.com/2025/07/21/chatgpt-users-send-2-5-billion-prompts-a-day/', publisher: { '@type': 'Organization', name: 'TechCrunch' }, datePublished: '2025-07-21' },
+    { '@type': 'NewsArticle', headline: 'Perplexity received 780 million queries last month, CEO says', url: 'https://techcrunch.com/2025/06/05/perplexity-received-780-million-queries-last-month-ceo-says/', publisher: { '@type': 'Organization', name: 'TechCrunch' }, datePublished: '2025-06-05' },
+    { '@type': 'NewsArticle', headline: 'AI Overviews in Google Search expanding to more than 100 countries', url: 'https://blog.google/products/search/ai-overviews-search-october-2024/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2024-10-28' },
+    { '@type': 'NewsArticle', headline: 'Google Search I/O 2026 updates: AI Mode becomes the default Search experience', url: 'https://blog.google/products-and-platforms/products/search/search-io-2026/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2026-05-20' },
+    { '@type': 'NewsArticle', headline: 'Clearing the Air on HVAC — Q2 2025 PitchBook Analyst Note', url: 'https://pitchbook.com/news/reports/q2-2025-pitchbook-analyst-note-clearing-the-air-on-hvac', publisher: { '@type': 'Organization', name: 'PitchBook' } },
+    { '@type': 'TechArticle', headline: 'The /llms.txt file', url: 'https://www.answer.ai/posts/2024-09-03-llmstxt.html', author: { '@type': 'Person', name: 'Jeremy Howard' }, publisher: { '@type': 'Organization', name: 'Answer.AI' }, datePublished: '2024-09-03' },
+    { '@type': 'SoftwareSourceCode', name: 'llms-txt specification', url: 'https://github.com/AnswerDotAI/llms-txt', codeRepository: 'https://github.com/AnswerDotAI/llms-txt' },
     { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
   ],
 };
 
@@ -172,6 +180,10 @@ export default function DigitalLandRush2026() {
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Right now, there is a massive, largely unclaimed stretch of digital real estate — the space where AI systems like ChatGPT, Perplexity, and Google&apos;s AI Overviews go to answer questions about your industry, your services, and your market. When someone asks &quot;who is the best HVAC company in Post Falls?&quot; or &quot;what realtor knows Coeur d&apos;Alene the best?&quot; — there is a source that gets cited. There is a business that gets recommended.
+                </p>
+
+                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
+                  And the scale is no longer speculative. <a href="https://techcrunch.com/2026/02/27/chatgpt-reaches-900m-weekly-active-users/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">ChatGPT reached 900 million weekly active users by February 2026</a> and now handles <a href="https://techcrunch.com/2025/07/21/chatgpt-users-send-2-5-billion-prompts-a-day/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">2.5 billion prompts a day</a>. <a href="https://techcrunch.com/2025/06/05/perplexity-received-780-million-queries-last-month-ceo-says/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Perplexity processed 780 million queries in May 2025</a>, and <a href="https://blog.google/products/search/ai-overviews-search-october-2024/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Google&apos;s AI Overviews now reach more than 100 countries</a> — over a billion users a month. In May 2026, <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Google made AI Mode the default Search experience</a>, so AI-generated answers — not blue links — are what most searches now return.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
@@ -294,7 +306,7 @@ export default function DigitalLandRush2026() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Private equity firms have been quietly buying up local service businesses for years — HVAC companies, plumbing operations, roofing contractors, pest control services, property management firms. The roll-up strategy is simple: acquire dozens or hundreds of locations, standardize operations, centralize marketing, and use scale to dominate local markets.
+                  Private equity firms have been quietly buying up local service businesses for years — HVAC companies, plumbing operations, roofing contractors, pest control services, property management firms. The roll-up strategy is simple: acquire dozens or hundreds of locations, standardize operations, centralize marketing, and use scale to dominate local markets. The money backs it up: 2024 set a record with 55 HVAC private-equity deals, and <a href="https://pitchbook.com/news/reports/q2-2025-pitchbook-analyst-note-clearing-the-air-on-hvac" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">PitchBook values the U.S. HVAC market at $89 billion in 2024, projected to reach $130 billion by 2030</a>.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
@@ -358,7 +370,7 @@ export default function DigitalLandRush2026() {
                 </h3>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  In most local markets across Northern Idaho, the Northwest, and the majority of mid-sized regional cities in the US, the current state of AI-structured visibility looks something like this: most local service businesses have little or no machine-readable schema. Most are built on platforms optimized for human visitors, not AI systems. Most have never heard of llms.txt or agent.json — the emerging signals that help AI agents identify and cite businesses by default.
+                  In most local markets across Northern Idaho, the Northwest, and the majority of mid-sized regional cities in the US, the current state of AI-structured visibility looks something like this: most local service businesses have little or no machine-readable schema. Most are built on platforms optimized for human visitors, not AI systems. Most have never heard of <a href="https://www.answer.ai/posts/2024-09-03-llmstxt.html" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">llms.txt</a> or agent.json — the emerging signals that help AI agents identify and cite businesses by default. (There&apos;s no ratified industry spec for agent.json yet; it&apos;s an emerging convention KodeCite deploys on every client site.)
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
