@@ -103,7 +103,7 @@ const articleSchema = {
     { '@type': 'Organization', '@id': 'https://www.google.com/', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
     { '@type': 'Thing', name: 'Google Knowledge Graph', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', sameAs: 'https://www.wikidata.org/wiki/Q648625' },
     { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org', sameAs: 'https://www.wikidata.org/wiki/Q3475322' },
-    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Thing', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
     { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
     { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
     { '@type': 'Organization', name: 'Microsoft Copilot', url: 'https://copilot.microsoft.com' },

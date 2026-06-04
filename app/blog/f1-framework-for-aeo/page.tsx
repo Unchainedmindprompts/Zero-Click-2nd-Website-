@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { articleAuthor, articlePublisher, blogCollectionPage, entityGraphTerm, businessRef } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win an AI Race in an Economy Car | KodeCite.ai',
@@ -25,30 +26,9 @@ const articleSchema = {
   headline: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win an AI Race in an Economy Car',
   description:
     'Most AEO advice focuses on the wrong layer. The businesses winning AI discovery built the stack in the right order — chassis, engine, aero, graphics. Here is what that means and how to sequence the work.',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
+  author: articleAuthor,
+  publisher: articlePublisher,
+  isPartOf: blogCollectionPage,
   datePublished: '2026-04-23T00:00:00-07:00',
   dateModified: '2026-04-23T00:00:00-07:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/f1-framework-for-aeo' },
@@ -68,18 +48,18 @@ const articleSchema = {
   wordCount: 2600,
   about: [
     { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
-    { '@type': 'DefinedTerm', '@id': 'https://www.kodecite.ai/#entity-graph', name: 'Entity Graph', inDefinedTermSet: { '@id': 'https://www.kodecite.ai/#glossary' } },
+    entityGraphTerm,
     { '@type': 'DefinedTerm', name: 'AI Search Visibility' },
     { '@type': 'DefinedTerm', name: 'Schema Markup' },
     { '@type': 'DefinedTerm', name: 'Website Infrastructure' },
-    { '@id': 'https://www.kodecite.ai/#business' },
+    businessRef,
   ],
   mentions: [
     { '@type': 'Organization', '@id': 'https://www.google.com/', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
     { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
     { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
     { '@type': 'Organization', name: 'Anthropic (Claude)', url: 'https://www.anthropic.com/claude' },
-    { '@type': 'Organization', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
+    { '@type': 'Thing', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
     { '@type': 'Organization', name: 'Schema.org', url: 'https://schema.org' },
     { '@type': 'Organization', name: 'Next.js', url: 'https://nextjs.org' },
     { '@type': 'Organization', name: 'Astro', url: 'https://astro.build' },
