@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything | KodeCite.AI',
+  title: 'The 2026 Digital Land Rush for AI Visibility',
   description:
-    'In 2026, AI visibility is the new ocean-front property for local businesses. Claim your digital real estate now — before PE roll-ups lock it up. Free AEO Audit inside.',
+    'AI visibility is the new ocean-front property for local business. Why waiting could cost everything — and how to claim your digital real estate now.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility',
   },

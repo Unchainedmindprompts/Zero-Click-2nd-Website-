@@ -3,9 +3,9 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Why Now | KodeCite.AI — The AI Land Grab Is Already Underway',
+  title: 'Why Now: The AI Land Grab',
   description:
-    "Hundreds of billions committed. Hardware shipping. AI agents routing around invisible businesses. Here's why the window to claim your territory is open right now — and won't stay open.",
+    'Hundreds of billions committed, hardware shipping, AI agents routing around invisible businesses. Why the window to claim AI visibility is closing fast.',
   alternates: {
     canonical: 'https://www.kodecite.ai/why-now',
   },

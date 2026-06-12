@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Machine Read — KodeCite.ai',
+  title: 'Machine Read',
   description:
-    'Run a free Machine Read on your site. We check schema, entity coherence, crawler accessibility, and AI visibility — and send back a plain-language report. No sales pitch. 24–48 hour turnaround.',
+    'Run a free Machine Read on your site. We check schema, entity coherence, crawler accessibility, and AI visibility — then show you exactly what to fix.',
   alternates: { canonical: 'https://www.kodecite.ai/contact' },
 };
 

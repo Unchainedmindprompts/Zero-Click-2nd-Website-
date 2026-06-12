@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'The Three Custom Audiences Every Local Business Needs on Facebook',
+  title: '3 Facebook Custom Audiences for Local Business',
   description:
-    'Most businesses set up one broad audience and wonder why their ads don\'t convert. These three layered audiences — awareness, intent, and retargeting — are the foundation of every campaign we build.',
+    'The three layered Facebook custom audiences every local business needs — awareness, retargeting, and lookalike — and how to build them to convert.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
   },

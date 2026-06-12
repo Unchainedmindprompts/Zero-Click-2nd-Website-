@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Entity-First Search: How Local Businesses Become the Answer AI Systems Recommend | KodeCite.ai',
+  title: 'Entity-First Search for Local Businesses',
   description:
-    'Entity-first search is how AI systems decide who to recommend. Learn what an entity graph is, the five most common entity gaps, and how to build machine-readable authority that gets local businesses cited by AI.',
+    'Entity-first search is how AI decides who to recommend. What an entity graph is, the five most common gaps, and how to build machine-readable authority.',
   alternates: { canonical: 'https://www.kodecite.ai/blog/entity-first-search-local-businesses' },
   openGraph: {
     title: 'Entity-First Search: How Local Businesses Become the Answer AI Systems Recommend',

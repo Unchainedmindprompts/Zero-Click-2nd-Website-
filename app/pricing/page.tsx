@@ -3,9 +3,9 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Pricing — AI-Ready Websites & Content | KodeCite.ai',
+  title: 'Pricing — AI-Ready Websites',
   description:
-    "You're not buying SEO. You're deciding whether you own the answer in your market or rent it from a platform. See KodeCite.ai pricing for AI-ready website builds, rebuilds, and content engines.",
+    "You're not buying SEO — you're deciding whether to own the answer in your market or rent it. See KodeCite pricing for AI-ready builds, rebuilds, and content.",
   alternates: {
     canonical: 'https://www.kodecite.ai/pricing',
   },

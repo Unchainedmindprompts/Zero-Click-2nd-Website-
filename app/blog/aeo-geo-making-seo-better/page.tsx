@@ -3,9 +3,9 @@ import Link from 'next/link';
 import BarChart from './BarChart';
 
 export const metadata: Metadata = {
-  title: "AEO + GEO Isn't Replacing SEO — It's Making It Better | KodeCite.AI",
+  title: 'How AEO and GEO Make SEO Stronger',
   description:
-    "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
+    "AEO and GEO don't replace SEO — they amplify it. Build sites language models understand and cite, and you win AI answers and rankings together.",
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
   },

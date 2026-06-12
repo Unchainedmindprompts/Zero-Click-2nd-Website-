@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Google Is Turning Search Into an Answer Engine. Most SMB Websites Are Not Built for What Comes Next. | KodeCite.ai',
+  title: "Google's Answer Engine & SMB Websites",
   description:
-    'Google Search is moving toward AI-generated answers, AI Mode, Gemini-powered assistance, and compressed recommendations. Here is why SMB websites need entity clarity, structured trust, and AI-readable infrastructure.',
+    "Google Search is becoming an answer engine — AI Mode, AI Overviews, agents. Most SMB sites aren't built for it. Here's the entity infrastructure that is.",
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/google-ai-search-smb-entity-infrastructure',
   },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How to Rank in Google AI Overviews for Local Businesses | KodeCite.AI',
+  title: 'How to Rank in Google AI Overviews',
   description:
     'Learn how local businesses can appear in Google AI Overviews through structured data, schema markup, E-E-A-T signals, and AI-first content strategies.',
   alternates: {

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
+  title: 'Facebook Ads for Local Business in 2026',
   description:
-    'Stop running ads that drain budget. Build a Facebook ad system that compounds — pixel data feeding audiences, retargeting warming leads, and lookalikes scaling what works. The Flywheel Method explained.',
+    'Stop running ads that drain budget. Build a Facebook ad system that compounds — pixel data feeding audiences, retargeting, and lookalikes that flywheel.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
   },

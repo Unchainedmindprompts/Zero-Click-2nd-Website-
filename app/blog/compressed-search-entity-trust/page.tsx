@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Compressed Search Is Coming: Why Entity Trust Will Matter More Than Content Volume | KodeCite.ai',
+  title: 'Compressed Search & Why Entity Trust Wins',
   description:
-    'Search interfaces are compressing from ten blue links to map packs to AI answers to a single spoken recommendation. When the list gets shorter, entity trust determines who gets recommended.',
+    'Search is compressing from ten blue links to one spoken recommendation. When the list shrinks, entity trust matters more than content volume.',
   alternates: { canonical: 'https://www.kodecite.ai/blog/compressed-search-entity-trust' },
   openGraph: {
     title: 'Compressed Search Is Coming: Why Entity Trust Will Matter More Than Content Volume',

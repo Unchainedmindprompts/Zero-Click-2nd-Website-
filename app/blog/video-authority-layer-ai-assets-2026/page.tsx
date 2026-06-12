@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Why Your Videos Stay Trapped on YouTube — And How Owned Infrastructure Turns Them Into AI Authority Assets in 2026 | KodeCite.AI",
-  description: "Most service businesses upload videos and hope the algorithm rewards them. It won't. Here's how structured infrastructure turns your existing video content into AI-cited authority across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  title: 'Turn Videos Into AI Authority Assets',
+  description:
+    "Most businesses upload videos and hope the algorithm rewards them. It won't. How structured infrastructure turns video into AI-cited authority assets.",
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/video-authority-layer-ai-assets-2026',
   },

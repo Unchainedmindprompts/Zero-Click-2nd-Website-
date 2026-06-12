@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
+  title: '49 Pages Indexed in 48 Hours: Luxe Case Study',
   description:
-    'The complete technical breakdown of the Luxe Window Works SEO overhaul — how a Post Falls, Idaho window treatments business went from 75 to 124 indexed pages in 48 hours with zero schema errors.',
+    'The technical breakdown of the Luxe Window Works overhaul — how a Post Falls window-treatment business got 49 pages indexed in 48 hours.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
   },
