@@ -1,0 +1,99 @@
+# KodeCite.ai — Full Reference
+
+> Entity infrastructure for the AI web. We make a business understandable, verifiable, recommendable, and agent-ready — so search engines, AI answer engines, and AI agents can confidently recommend it.
+
+KodeCite.ai is an Answer Engine Optimization (AEO) and entity-infrastructure agency based in Post Falls, Idaho. We replace slow, plugin-dependent websites with fast, entity-first infrastructure built on Next.js and deployed on Vercel's edge — structured with a Schema.org entity graph, llms.txt, and agent.json so AI systems like ChatGPT, Google AI Overviews, Perplexity, Gemini, and emerging AI agents can read, verify, and cite a business as an authoritative source.
+
+This llms-full.txt is the expanded companion to /llms.txt. It contains the full descriptions of KodeCite's positioning, framework, deliverables, and content.
+
+## The Shift: Pages → Entities
+
+The old web was built around pages: publish pages, target keywords, rely on plugins, hope Google figures it out. The AI web is built around entities. AI systems do not think like a list of blue links — they verify entities. They ask: Who is this business? What does it do? Where does it operate? Is the information consistent across trusted sources? Can this business be safely recommended? Can a user take action without the AI guessing? A website that cannot answer those questions clearly can be skipped — even if it has better reviews, more experience, or a stronger real-world reputation than a competitor.
+
+## The Problem
+
+WordPress, Wix, and Squarespace were built for the page-based web — designed for publishing pages, adding plugins, and managing content. That worked when search was keyword-driven. AI search and agent-driven discovery require: canonical business identity, structured entity graphs, stable schema IDs, service and location relationships, citation trails, source-backed content, llms.txt, agent.json, action rules, quote and booking clarity, and machine-readable proof. Most platform websites treat these as add-ons. KodeCite treats them as the foundation.
+
+## The KodeCite Difference
+
+A normal website says "We are a dentist in Bend." A KodeCite website tells AI systems: this is the practice, this is the provider, these are the services, this is the location, these are the credentials, these are the reviews, these are the trusted external profiles, these are the FAQs, these are the citations, this is the correct next step, and this is what should not be assumed. That is the difference between a website and a machine-readable business foundation.
+
+## The Framework: Four Layers, One Compounding Foundation
+
+### Layer 01 — Infrastructure
+Built on Next.js, not plugin stacks. Fast, server-rendered, edge-deployed pages that AI crawlers and search engines read on the first request. No fragile plugin chain, no bloated theme stack, no hidden JavaScript dependency, no rented platform lock-in. Humans, search engines, and AI systems see the full page immediately.
+
+### Layer 02 — Entity Graph
+The source of truth for the business. A structured Schema.org entity graph that connects business, people, services, locations, credentials, reviews, articles, FAQs, citations, and profiles through stable machine-readable @id references — not plugin schema, not disconnected snippets. AI systems can verify who you are, what you do, where you operate, and why you are credible.
+
+### Layer 03 — Answer Architecture
+Content built for extraction, citation, and recommendation. Each important page answers a specific buyer question clearly. Services are structured, locations defined, FAQs visible, articles support real decision-making, internal links reinforce entity relationships, and claims are backed by sources. AI systems can quote, summarize, and recommend with confidence.
+
+### Layer 04 — Agent Readiness
+The next step beyond visibility. AI agents will help people compare providers, request quotes, book consultations, schedule appointments, and take action. KodeCite makes a business action-ready: what can a customer do next, can they request a quote, can they book online, what information is required, what services require consultation, what pricing should not be invented, what areas are served, and what AI agents should not promise. Entity infrastructure becomes agent-ready infrastructure.
+
+## Verification (Schema Alone Is Not Trust)
+
+AI visibility only works when the entity graph matches the real business. The website, schema, Google Business Profile, Apple Maps, Bing Places, BBB, Yelp, licensing profiles, service areas, address strategy, and third-party citations must agree. When signals conflict, AI systems lose confidence — and confidence is the trust layer. KodeCite architects the verification system around the JSON-LD, not just the JSON-LD itself.
+
+## What You Get (The Foundation Build)
+
+- Custom Next.js website, server-rendered and AI-readable on cold load
+- Full entity graph for business, people, services, credentials, locations, articles, FAQs, and citations
+- Custom JSON-LD per page, built as code — not plugin output
+- llms.txt and llms-full.txt
+- agent.json / agents.json for AI-agent guidance
+- Service and location architecture
+- FAQPage, Article, Breadcrumb, LocalBusiness, Person, Service, and Organization schema
+- Citation and profile cleanup across key trust sources
+- Clear quote, contact, booking, or consultation paths
+- Action rules that tell AI what can and cannot be assumed
+- GitHub repo and Vercel account owned by the client — no platform lock-in, no monthly website rent
+
+## Who It Is For
+
+KodeCite is built for established operators with real-world credibility that AI systems cannot fully verify yet: home service businesses, dental and healthcare practices, attorneys and law firms, real estate professionals, financial advisors, property management companies, specialty trades, regional independent operators, owner-operated professional services, and local businesses with strong reviews, credentials, and reputation. If a business is trusted in the real world but unclear to AI systems, KodeCite is built for it.
+
+## The Machine Read (Free)
+
+A Machine Read shows how a business appears to AI systems today — examining website, schema, citations, profiles, services, locations, content, and trust signals to identify where AI systems may lose confidence. It reveals what AI can verify, what is unclear, what is inconsistent, what competitors may be doing better, and what needs to be fixed first. Request at https://www.kodecite.ai/contact.
+
+## The Window
+
+Search is moving from pages to answers, answers to recommendations, and recommendations toward actions. AI visibility is still early — most businesses think they need more SEO, blog posts, or ads, not realizing they have an entity problem. The businesses that build machine-readable foundations now will be much harder to displace later. Enterprise and SaaS companies are already moving toward AI-ready infrastructure (modern frameworks, structured data, APIs, knowledge graphs); KodeCite brings that advantage to established local and regional businesses before national brands and private-equity rollups dominate AI recommendations.
+
+## Key Pages
+
+- Homepage: https://www.kodecite.ai/
+- Why Now: https://www.kodecite.ai/why-now
+- Services: https://www.kodecite.ai/services
+- Pricing: https://www.kodecite.ai/pricing
+- Case Studies: https://www.kodecite.ai/case-studies
+- About: https://www.kodecite.ai/about
+- Blog (The Playbook): https://www.kodecite.ai/blog
+- Free Machine Read: https://www.kodecite.ai/contact
+
+## Pillar Content
+
+- What Is an Entity Graph (definitive explainer): https://www.kodecite.ai/blog/what-is-an-entity-graph
+- Schema Markup: The Complete Guide (how to build the entity graph): https://www.kodecite.ai/blog/schema-markup-complete-guide
+- Entity-First Search: How Local Businesses Become the Answer AI Systems Recommend: https://www.kodecite.ai/blog/entity-first-search-local-businesses
+- The F1 Framework for AEO: https://www.kodecite.ai/blog/f1-framework-for-aeo
+- Compressed Search Is Coming: Why Entity Trust Will Matter More Than Content Volume: https://www.kodecite.ai/blog/compressed-search-entity-trust
+- How to Rank in Google AI Overviews for Local Businesses: https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses
+- Why Is My Website Traffic Dropping in 2026?: https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026
+- The 2026 Digital Land Rush: https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility
+
+## Contact
+
+- Founder: Mark Abplanalp
+- Location: Post Falls, Idaho
+- Website: https://www.kodecite.ai
+- Service Area: North Idaho, Pacific Northwest, and nationwide remote clients
+
+## Authority Signals
+
+- Infrastructure: Next.js + Vercel Edge — sub-second load times
+- Schema: 0 invalid items across client sites; custom JSON-LD entity graphs
+- Clients own their codebase, GitHub repo, and Vercel account — no platform lock-in
+- Clients: INW Basecamp (real estate & relocation), Luxe Window Works, KodeCite.ai

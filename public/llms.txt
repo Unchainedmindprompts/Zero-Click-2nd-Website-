@@ -2,6 +2,8 @@
 
 > We help businesses become the cited answer in AI-generated search results — and discoverable by the next generation of wearable devices.
 
+Full reference (expanded): https://www.kodecite.ai/llms-full.txt
+
 KodeCite.ai is an Answer Engine Optimization (AEO) agency based in Post Falls, Idaho. We build high-performance Next.js websites deployed on Vercel's edge infrastructure, structured with schema markup, llms.txt, and agent.json to ensure AI systems like ChatGPT, Perplexity, Google AI Overviews, Gemini, and wearable devices can read, trust, and cite our clients as authoritative sources.
 
 ## What We Do
