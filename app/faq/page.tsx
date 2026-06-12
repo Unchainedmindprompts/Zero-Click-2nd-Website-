@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'FAQ — KodeCite.ai',
+  title: 'FAQ — AI Search & Entity Graphs',
   description:
-    "Everything you've wanted to ask about AI search visibility, entity graphs, and why most business websites are invisible to the tools your customers are using right now.",
+    'Answers to common questions about AI search visibility, entity graphs, and why most business websites are invisible to AI systems.',
   alternates: { canonical: 'https://www.kodecite.ai/faq' },
 };
 

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Why Is My Website Traffic Dropping in 2026? | KodeCite.AI',
+  title: 'Why Is My Website Traffic Dropping in 2026?',
   description:
-    'Organic traffic dropping with no clear reason? Google AI Overviews and zero-click search are eroding clicks — Ahrefs measured a 34.5% drop on the top-ranking page when an AI Overview appears. Here\'s what\'s happening and how to fix it.',
+    'AI Overviews and zero-click search are eroding clicks — Ahrefs measured a 34.5% drop on the top result. Why your traffic is falling and how to fix it.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
   },

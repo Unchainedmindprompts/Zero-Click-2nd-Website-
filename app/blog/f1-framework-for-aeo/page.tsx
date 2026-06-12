@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { articleAuthor, articlePublisher, blogCollectionPage, entityGraphTerm, businessRef } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win an AI Race in an Economy Car | KodeCite.ai',
+  title: 'The F1 Framework for AEO',
   description:
-    'Most AEO advice focuses on the wrong layer. The businesses winning AI discovery built the stack in the right order — chassis, engine, aero, graphics. Here is what that means and how to sequence the work.',
+    "Most AEO advice targets the wrong layer. The businesses winning AI discovery build the stack in order — chassis, engine, aero, graphics. Here's how.",
   alternates: { canonical: 'https://www.kodecite.ai/blog/f1-framework-for-aeo' },
   openGraph: {
     title: 'The F1 Framework for AEO: Why Most Businesses Are Trying to Win an AI Race in an Economy Car',

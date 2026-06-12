@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
+  title: 'Same-Day Schema: INW Basecamp Launch',
   description:
-    'From concept to live landing page, validated schema, and active Facebook campaigns in one day. The complete behind-the-scenes story of how we opened a new market for an existing business in hours.',
+    'From concept to a live landing page with validated schema and active Facebook campaigns in one day — the behind-the-scenes of the INW Basecamp launch.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
   },

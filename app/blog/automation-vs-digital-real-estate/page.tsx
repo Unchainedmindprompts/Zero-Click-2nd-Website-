@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Why Automating Everything Is Failing Most Businesses — KodeCite.AI',
+  title: 'Automation Is Failing Most Businesses',
   description:
-    "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first. For local businesses in the Inland Northwest.",
+    "AI automation is failing 80–95% of businesses. The smarter 2026 play isn't automating everything — it's making your business AI-visible and recommendable.",
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   },

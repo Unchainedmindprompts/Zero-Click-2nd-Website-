@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'The AI Search Stack Nobody Is Building for Small Businesses — And Why That\'s About to Change',
+  title: 'The AI Search Stack for Small Businesses',
   description:
-    'Enterprise SEO is built for enterprises. Subscription platforms are built for volume. Neither one gets you recommended by AI. Here\'s the gap in the market — and what fills it.',
+    "Enterprise SEO is built for enterprises; subscription platforms for volume. Neither gets you recommended by AI. Here's the stack that actually does.",
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses',
   },

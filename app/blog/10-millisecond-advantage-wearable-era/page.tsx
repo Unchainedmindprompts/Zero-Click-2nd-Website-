@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'When Your Customer Stops Searching and Starts Asking — Is Your Business Ready? | KodeCite.AI',
-  description: 'People are asking AI assistants and wearable devices for local business recommendations instead of searching Google. Here\'s what that means for your business — and what to do about it.',
+  title: 'When Customers Ask AI Instead of Searching',
+  description: 'People now ask AI assistants and wearables for local recommendations instead of searching Google. What that means for your business — and what to do.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/10-millisecond-advantage-wearable-era',
   },

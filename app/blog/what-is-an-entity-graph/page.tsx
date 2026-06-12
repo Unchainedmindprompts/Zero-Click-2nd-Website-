@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade | KodeCite.ai',
+  title: 'What Is an Entity Graph?',
   description:
-    "Schema.org launched in 2011 as the standard language of the internet. Over a decade later it's still misunderstood and misused — even by digital marketing practitioners. Here's what schema actually is, what an entity graph is, and why it matters more right now than it ever has.",
+    'Schema.org launched in 2011 and is still misused. What schema actually is, what an entity graph is, and why it matters more now than it ever has.',
   alternates: { canonical: 'https://www.kodecite.ai/blog/what-is-an-entity-graph' },
   openGraph: {
     title: 'What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade',

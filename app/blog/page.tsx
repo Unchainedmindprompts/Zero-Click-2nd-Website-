@@ -3,7 +3,7 @@ import { blogPosts, getFeaturedPosts } from '@/lib/blog';
 import BlogFilter from '@/components/blog/BlogFilter';
 
 export const metadata = {
-  title: 'The Playbook — KodeCite.AI',
+  title: 'The Playbook',
   description:
     'Strategic thinking on AI visibility, entity architecture, and the infrastructure decisions that compound.',
   alternates: { canonical: 'https://www.kodecite.ai/blog' },

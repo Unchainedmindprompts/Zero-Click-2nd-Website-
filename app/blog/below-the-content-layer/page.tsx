@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Below The Content Layer — Where Your Real SEO, AEO & GEO Opportunity Lives | KodeCite.ai',
+  title: 'Below the Content Layer: SEO, AEO & GEO',
   description:
-    'The content layer conversation is everywhere right now — and most of it stops too soon. Here is the layer underneath that determines whether AI recommends you or skips you entirely.',
+    "Most of the content-layer conversation stops too soon. Here's the layer underneath that actually decides your SEO, AEO, and GEO opportunity.",
   alternates: { canonical: 'https://www.kodecite.ai/blog/below-the-content-layer' },
   openGraph: {
     title: 'Below The Content Layer — Where Your Real SEO, AEO & GEO Opportunity Lives',

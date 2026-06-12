@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About — Mark Abplanalp | KodeCite.ai',
+  title: 'About — Mark Abplanalp',
   description:
-    "Mark Abplanalp built KodeCite.ai after spending a year figuring out why the rules changed — not just for his own businesses, but for every owner-operator watching their digital presence quietly stop working. 23 years in business. Based in North Idaho.",
+    'Mark Abplanalp built KodeCite.ai after a year figuring out why the rules of search changed — and how to make businesses AI can find, verify, and trust.',
   alternates: { canonical: 'https://www.kodecite.ai/about' },
 };
 

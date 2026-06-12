@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Schema Markup: The Complete Guide for Local Service Businesses',
+  title: 'Schema Markup: The Complete Guide',
   description:
-    'A step-by-step guide to implementing JSON-LD schema markup that makes your business visible to AI. Covers LocalBusiness, Service, FAQPage, and BreadcrumbList schemas with real implementation details.',
+    'A step-by-step guide to JSON-LD schema markup that makes your business visible to AI — covering LocalBusiness, Service, FAQPage, and BreadcrumbList.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/schema-markup-complete-guide',
   },

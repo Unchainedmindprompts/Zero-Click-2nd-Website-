@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Services — KodeCite.ai',
+  title: 'Services — AI-Ready Foundations',
   description:
     'Foundation Build, SEO consulting, and content design for businesses that need to be legible to AI. Engineered once. Owned forever. No retainer.',
   alternates: { canonical: 'https://www.kodecite.ai/services' },

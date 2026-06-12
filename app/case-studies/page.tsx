@@ -3,9 +3,9 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Case Studies — Real Results from AI Search Optimization',
+  title: 'Case Studies — Real AI Search Results',
   description:
-    'See real results: 49 pages indexed in 48 hours for Luxe Window Works, same-day schema validation for INW Basecamp Arizona. KodeCite.ai proves the methodology first.',
+    'Real results: 49 pages indexed in 48 hours for Luxe Window Works, and same-day schema validation for INW Basecamp Arizona.',
   alternates: { canonical: 'https://www.kodecite.ai/case-studies' },
 };
 

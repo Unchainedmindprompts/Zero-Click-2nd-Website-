@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours | KodeCite.AI',
+  title: 'The Shortlist Problem in AI Search',
   description:
-    'As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here\'s how to become one of them.',
+    "As AI assistants and wearables take over local discovery, recommendations compress to one or two names. Here's how to be the business AI names.",
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/the-shortlist-problem',
   },
