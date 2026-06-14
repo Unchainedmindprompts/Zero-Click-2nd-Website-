@@ -226,7 +226,7 @@ export default function WhyYourWebsiteCantTalkToAI() {
                   resolves the entities on a page against its{' '}
                   <a href="https://blog.google/products/search/introducing-knowledge-graph-things-not/" target="_blank" rel="noopener noreferrer" className={link}>Knowledge Graph</a>{' '}
                   — deciding, for example, that this &ldquo;Apple&rdquo; is the company, not the fruit — and uses that
-                  resolved entity layer to decide which pages deserve to surface (Jottler, 2026). A business the system
+                  resolved entity layer to decide which pages deserve to surface (<a href="https://jottler.co/blog/knowledge-graph-seo" target="_blank" rel="noopener noreferrer" className={link}>Jottler</a>, 2026). A business the system
                   can identify, confirm, and cross-reference against authoritative sources is one it can recommend with
                   confidence.
                 </p>
@@ -237,7 +237,7 @@ export default function WhyYourWebsiteCantTalkToAI() {
                   working together: structured data ({' '}
                   <a href="https://schema.org" target="_blank" rel="noopener noreferrer" className={link}>Schema.org</a>{' '}
                   markup), corroborating mentions across authoritative sources, and a consistent identity — the same name,
-                  description, and <code className="text-[var(--d-accent)]">sameAs</code> URLs everywhere (Jottler, 2026).
+                  description, and <code className="text-[var(--d-accent)]">sameAs</code> URLs everywhere (<a href="https://jottler.co/blog/knowledge-graph-seo" target="_blank" rel="noopener noreferrer" className={link}>Jottler</a>, 2026).
                   When those signals are weak, the system surfaces the business it can most clearly understand — and it
                   names that business instead.
                 </p>
@@ -256,11 +256,11 @@ export default function WhyYourWebsiteCantTalkToAI() {
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   <strong className="text-[var(--d-fg)]">First: the graph is shallow and generic.</strong> The plugin
                   builds a templated graph. In one analysis of 150 independent agency websites, 88% relied on generic
-                  LocalBusiness markup rather than a specific subtype (LovedByAI, 2026). To an AI, a generic
+                  LocalBusiness markup rather than a specific subtype (<a href="https://www.lovedby.ai/blog/wordpress-schema-plugin-incomplete-heres-fix" target="_blank" rel="noopener noreferrer" className={link}>LovedByAI</a>, 2026). To an AI, a generic
                   LocalBusiness &ldquo;could be a pizza shop or a dry cleaner&rdquo; — it lacks the semantic weight of a
                   precise type. What plugins don&apos;t express out of the box is what actually wins recommendations:
                   deep credential chains tied to issuing authorities, custom <code className="text-[var(--d-accent)]">knowsAbout</code>{' '}
-                  topical authority, rich citation arrays, and precise geographic depth (DEV Community, 2026).
+                  topical authority, rich citation arrays, and precise geographic depth (<a href="https://dev.to/joseph_anady_214bacedf939/schemaorg-json-ld-the-complete-pattern-reference-143e" target="_blank" rel="noopener noreferrer" className={link}>DEV Community</a>, 2026).
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   <strong className="text-[var(--d-fg)]">Second: most of these sites can&apos;t be read on cold crawl.</strong>{' '}
@@ -281,15 +281,15 @@ export default function WhyYourWebsiteCantTalkToAI() {
                   content was the product — volume of words, keywords targeted, backlinks earned. That world still
                   exists, but it&apos;s changing fast. AI Overviews, ChatGPT, Perplexity, and Bing Copilot generate one
                   synthesized answer and point to the handful of sources that informed it. Perplexity typically
-                  synthesizes from roughly 5 to 10 sources and cites only a few (AI Labs Audit, 2026), and Google&apos;s
-                  AI Overviews usually surface just 3 to 6 source cards (AEO Hunt, 2026). The output of a search is
+                  synthesizes from roughly 5 to 10 sources and cites only a few (<a href="https://ailabsaudit.com/blog/en/perplexity-guide-maximize-citations" target="_blank" rel="noopener noreferrer" className={link}>AI Labs Audit</a>, 2026), and Google&apos;s
+                  AI Overviews usually surface just 3 to 6 source cards (<a href="https://aeohunt.com/blog/google-ai-overviews" target="_blank" rel="noopener noreferrer" className={link}>AEO Hunt</a>, 2026). The output of a search is
                   condensing from a page of options into a small set of cited entities.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   The businesses that make that cut aren&apos;t necessarily the ones with the most content. They&apos;re
                   the ones the AI can read clearly, verify, and select with confidence. Citation selection is based on
                   extractability and entity authority — not raw ranking position. A page can rank first organically and
-                  never be cited; a page on page two can be the primary cited source (Project36, 2025). Meanwhile the web
+                  never be cited; a page on page two can be the primary cited source (<a href="https://project36.io/aeo/how-ai-overviews-choose-sources" target="_blank" rel="noopener noreferrer" className={link}>Project36</a>, 2025). Meanwhile the web
                   is being flooded with AI-generated content at unprecedented scale. The supply of content is effectively
                   infinite. The number of cited entities is small.
                 </p>
@@ -302,13 +302,13 @@ export default function WhyYourWebsiteCantTalkToAI() {
                   <code className="text-[var(--d-accent)]"> @graph</code> block with cross-referenced{' '}
                   <code className="text-[var(--d-accent)]">@id</code> URIs, letting AI systems reconstruct the
                   relationships between them — an approach that has overtaken the older &ldquo;one schema block per
-                  page&rdquo; method (DEV Community, 2026). That entity graph declares:
+                  page&rdquo; method (<a href="https://dev.to/joseph_anady_214bacedf939/schemaorg-json-ld-the-complete-pattern-reference-143e" target="_blank" rel="noopener noreferrer" className={link}>DEV Community</a>, 2026). That entity graph declares:
                 </p>
                 <ul className="list-disc pl-6 mb-6 space-y-2 text-[var(--d-fg-dim)] leading-relaxed">
                   <li><strong className="text-[var(--d-fg)]">Who you are</strong> — the precise Schema.org subtype that applies, not a generic catch-all. The more specific the type, the more accurately AI systems categorize and recommend you.</li>
                   <li><strong className="text-[var(--d-fg)]">What you&apos;re credentialed to do</strong> — designations and certifications, made machine-readable and connected to the issuing authority where possible (for a licensed agent in Idaho, the <a href="https://irec.idaho.gov/" target="_blank" rel="noopener noreferrer" className={link}>Idaho Real Estate Commission</a>).</li>
                   <li><strong className="text-[var(--d-fg)]">Where you operate</strong> — not just an address, but precise <code className="text-[var(--d-accent)]">areaServed</code> (a GeoCircle of latitude/longitude plus radius, or specific geographic identifiers) so AI knows exactly where you work.</li>
-                  <li><strong className="text-[var(--d-fg)]">Who else agrees you&apos;re real</strong> — the <code className="text-[var(--d-accent)]">sameAs</code> layer of verified external profiles (Google Business Profile, BBB, licensing records, Wikidata). Bidirectional links are corroborative claims; one-directional links are unverified assertions (Ibrahim Anwar).</li>
+                  <li><strong className="text-[var(--d-fg)]">Who else agrees you&apos;re real</strong> — the <code className="text-[var(--d-accent)]">sameAs</code> layer of verified external profiles (Google Business Profile, BBB, licensing records, Wikidata). Bidirectional links are corroborative claims; one-directional links are unverified assertions (<a href="https://hibranwar.com/library/entity-infrastructure/7-2/" target="_blank" rel="noopener noreferrer" className={link}>Ibrahim Anwar</a>).</li>
                   <li><strong className="text-[var(--d-fg)]">What you&apos;re expert in</strong> — the <code className="text-[var(--d-accent)]">knowsAbout</code> property and a content-cluster architecture that signals topical authority in a specific geography.</li>
                   <li><strong className="text-[var(--d-fg)]">How to contact and transact</strong> — structured, unambiguous contact and service pathways AI systems can extract directly.</li>
                 </ul>
@@ -359,7 +359,7 @@ export default function WhyYourWebsiteCantTalkToAI() {
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   This is consistent with how these systems are documented to behave: citation goes to the source the
                   engine can extract cleanly and verify as an authoritative entity — not to whoever has the longest local
-                  track record (Project36, 2025). The infrastructure created the local authority before the local track
+                  track record (<a href="https://project36.io/aeo/how-ai-overviews-choose-sources" target="_blank" rel="noopener noreferrer" className={link}>Project36</a>, 2025). The infrastructure created the local authority before the local track
                   record existed. That&apos;s the difference.
                 </p>
 
@@ -390,6 +390,41 @@ export default function WhyYourWebsiteCantTalkToAI() {
                     </div>
                   ))}
                 </div>
+
+                {/* ── Sources ────────────────────────────────── */}
+                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-16 mb-6">Sources</h2>
+                <ul className="flex flex-col gap-2.5">
+                  {[
+                    ['Vercel — The rise of the AI crawler', 'https://vercel.com/blog/the-rise-of-the-ai-crawler'],
+                    ['Search Engine Journal — The Technical SEO Audit Needs a New Layer', 'https://www.searchenginejournal.com/technical-seo-audit-new-layer/571583/'],
+                    ['Launchmind — SSR and server-side rendering for AI crawlers', 'https://launchmind.io/en/blog/ssr-and-server-side-rendering-for-ai-crawlers-technical-geo-that-makes-content-accessible-mm4ud7cs'],
+                    ['Jottler — Knowledge Graph SEO: Entity Optimization for AI Search', 'https://jottler.co/blog/knowledge-graph-seo'],
+                    ['DEV Community — Schema.org + JSON-LD: the complete pattern reference', 'https://dev.to/joseph_anady_214bacedf939/schemaorg-json-ld-the-complete-pattern-reference-143e'],
+                    ['DEV Community — Schema Markup JSON-LD for Local Businesses', 'https://dev.to/sabrielagency/schema-markup-json-ld-for-local-businesses-a-practical-implementation-guide-2n25'],
+                    ["DEV Community — Customizing Yoast SEO's structured data with the schema API", 'https://dev.to/peterlidee/customizing-yoast-seos-structured-data-with-schema-api-part-1-1p76'],
+                    ['Yoast developer portal — Schema technology and approach', 'https://developer.yoast.com/features/schema/technology-approach/'],
+                    ['Ibrahim Anwar — The sameAs Signal Chain', 'https://hibranwar.com/library/entity-infrastructure/7-2/'],
+                    ['Andres SEO Expert — Mastering sameAs Schema & Knowledge Graph Entity Linking', 'https://andresseo.expert/geo/mastering-sameas-schema-property-knowledge-graph-entity-linking/'],
+                    ['Greadme — What Is Organization Schema? The Complete Guide (2026)', 'https://www.greadme.com/blog/schemas/what-is-organization-schema-complete-guide'],
+                    ['LovedByAI — 10 WordPress Schema plugin mistakes', 'https://www.lovedby.ai/insurance-agencies-geo/wordpress-10-schema-plugin-mistakes-tank'],
+                    ['LovedByAI — Your WordPress Schema plugin is incomplete', 'https://www.lovedby.ai/blog/wordpress-schema-plugin-incomplete-heres-fix'],
+                    ['LovedByAI — Add LocalBusiness schema for real estate', 'https://www.lovedby.ai/real-estate-agencies-geo/wordpress-add-localbusiness-schema-real-estate'],
+                    ['SchemaValidator — Real Estate Schema Markup', 'https://schemavalidator.org/guides/real-estate-schema-markup'],
+                    ['Kiwistic — Beyond the Blue Link: How to Win at AI Search', 'https://www.kiwistic.com/ai-search-optimization/'],
+                    ['Project36 — How Google AI Overviews Choose Sources', 'https://project36.io/aeo/how-ai-overviews-choose-sources'],
+                    ['AEO Hunt — How Google AI Overviews Choose Sources', 'https://aeohunt.com/blog/google-ai-overviews'],
+                    ["Bluetree Digital — How Google's AI Overviews Choose Sources", 'https://bluetree.digital/how-google-ai-overviews-choose-sources/'],
+                    ['AI Labs Audit — How Perplexity AI Decides Sources', 'https://ailabsaudit.com/blog/en/perplexity-guide-maximize-citations'],
+                    ['Idaho Real Estate Commission', 'https://irec.idaho.gov/'],
+                    ['Schema.org', 'https://schema.org/'],
+                  ].map(([name, url]) => (
+                    <li key={url} className="text-sm leading-relaxed">
+                      <a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] hover:underline break-words">
+                        {name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
 
               </div>
             </article>
