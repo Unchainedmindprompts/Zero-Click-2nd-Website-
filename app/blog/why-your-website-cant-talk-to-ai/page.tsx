@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { articleAuthor, articlePublisher, blogCollectionPage, entityGraphTerm, businessRef } from '@/lib/schema';
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-06-14',
     authors: ['Mark Abplanalp'],
+    images: [{ url: 'https://www.kodecite.ai/images/why-your-website-cant-talk-to-ai-hero.png', width: 1916, height: 821 }],
   },
 };
 
@@ -32,7 +34,7 @@ const articleSchema = {
   dateModified: '2026-06-14T00:00:00-07:00',
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai' },
   url: 'https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai',
-  image: { '@type': 'ImageObject', url: 'https://www.kodecite.ai/og-image.png', width: 1200, height: 630 },
+  image: { '@type': 'ImageObject', url: 'https://www.kodecite.ai/images/why-your-website-cant-talk-to-ai-hero.png', width: 1916, height: 821 },
   articleSection: 'AEO & AI Search',
   wordCount: 2600,
   keywords: [
@@ -179,6 +181,20 @@ export default function WhyYourWebsiteCantTalkToAI() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Hero Image ──────────────────────────────────────── */}
+      <section className="bg-[var(--d-bg)] px-4 pb-12">
+        <div className="max-w-4xl mx-auto">
+          <Image
+            src="/images/why-your-website-cant-talk-to-ai-hero.png"
+            alt="A business's scattered, ambiguous website signals resolving into a clean entity graph — Organization, Person, Service, Reviews, Location, Credentials, Hours, and Website nodes connected into one verified, machine-readable identity an AI answer engine can confidently recommend"
+            width={1916}
+            height={821}
+            className="w-full rounded-xl shadow-sm"
+            priority
+          />
         </div>
       </section>
 
