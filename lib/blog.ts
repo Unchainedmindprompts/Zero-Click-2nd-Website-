@@ -14,6 +14,15 @@ export type BlogPost = {
 // STRATEGY | FRAMEWORK | FOUNDATIONS | TECHNICAL | PLATFORM | PAID MEDIA | CASE STUDY | DIAGNOSTIC
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'why-your-website-cant-talk-to-ai',
+    title: "The Language Problem: Why Your Website Can't Talk to AI — And What to Do About It",
+    category: 'TECHNICAL',
+    date: 'June 14, 2026',
+    readTime: '14 min read',
+    excerpt: 'AI systems read your site like a customs officer reads a passport — looking for verified, structured facts. Why default plugin schema fails that test, and what an engineered entity graph does instead.',
+    featured: true,
+  },
+  {
     slug: 'google-ai-search-smb-entity-infrastructure',
     title: 'Google Is Turning Search Into an Answer Engine. Most SMB Websites Are Not Built for What Comes Next.',
     category: 'STRATEGY',
