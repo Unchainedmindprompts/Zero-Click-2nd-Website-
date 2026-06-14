@@ -26,6 +26,7 @@ KodeCite.ai is an Answer Engine Optimization (AEO) agency based in Post Falls, I
 
 ## High-Value Content
 
+- The Language Problem: Why Your Website Can't Talk to AI: https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai
 - What Is an Entity Graph — the definitive explainer (pillar): https://www.kodecite.ai/blog/what-is-an-entity-graph
 - Schema Markup: The Complete Guide — how to build the entity graph (pillar): https://www.kodecite.ai/blog/schema-markup-complete-guide
 - What Is Zero Click Search and Why Your Business Is Invisible: https://kodecite.ai/blog/what-is-zero-click-search
