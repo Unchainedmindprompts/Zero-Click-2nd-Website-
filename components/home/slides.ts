@@ -8,10 +8,9 @@
 // For motion art, you can likewise swap the layer for a <video> in
 // FluidImageTransition; the slider logic is visual-agnostic.
 //
-// NOTE: /home/slide-ai-web.webp is a TEMPORARY cleaned asset. The source comp
-// had headline/CTA text baked into the left; that region was covered with a
-// color-matched dark fill to create clean negative space. Replace it with a
-// final, natively text-free render when available.
+// NOTE: /home/slide-ai-web.webp and /home/slide-problem.webp are natively
+// text-free renders — no baked copy to work around. The left scrim handles
+// legibility. Swap either file in place to update the art.
 
 export interface HomeSlideLine {
   text: string;
@@ -32,9 +31,10 @@ export interface HomeSlide {
 
 export const HOME_SLIDES: HomeSlide[] = [
   {
-    // ART DIRECTION: dark cinematic environment; fragmented web/search/business
-    // signals streaming toward a bright architectural portal on the right; dark
-    // negative space on the left for the real HTML text. No embedded text/UI.
+    // ART DIRECTION: cinematic golden-hour city street opening to a glowing
+    // glass building / office on the right — "the AI web" as a place business
+    // life happens. Natively text-free; the left scrim (kc-slide-bg__plate)
+    // darkens the bright street so the real HTML headline/CTAs stay legible.
     id: 'ai-web',
     kicker: 'THE AI WEB',
     headline: [
