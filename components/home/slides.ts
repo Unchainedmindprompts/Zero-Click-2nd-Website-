@@ -113,7 +113,11 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'Agent-ready.', accent: true },
     ],
     support: 'Built once. Owned forever. Found by AI.',
-    // Brightest + calmest — resolved and optimistic; the world is open.
+    // ART DIRECTION: golden-hour skyline terrace beside a glass office —
+    // resolved, calm, optimistic; the world is open. Bright render, so it uses
+    // the light treatment (dark text, image kept bright). Natively text-free.
+    image: '/home/slide-outcome.webp',
+    theme: 'light',
     bg:
       'radial-gradient(80% 90% at 50% 24%, rgba(122,240,194,0.20), transparent 62%),' +
       'radial-gradient(70% 90% at 64% 84%, rgba(93,213,255,0.26), transparent 62%),' +
