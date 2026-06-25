@@ -716,3 +716,44 @@ em.serif {
   .mr-scanline { display: none; }
 }
 
+/* ─── Premium cockpit: glass panels, depth, animated grid ─────────── */
+.glass {
+  background: rgba(12, 15, 42, 0.66);
+  backdrop-filter: blur(12px) saturate(135%);
+  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  border: 1px solid var(--d-line-s);
+  box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(140, 160, 255, 0.04) inset;
+}
+.glass-accent {
+  border-color: rgba(93, 213, 255, 0.4);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.85), 0 0 40px -8px var(--d-accent-glow);
+}
+.glass-ok {
+  border-color: rgba(122, 240, 194, 0.45);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.85), 0 0 44px -8px rgba(122, 240, 194, 0.4);
+}
+
+@keyframes gridDrift { to { background-position: 0 -52px; } }
+.cockpit-grid {
+  background-image:
+    linear-gradient(rgba(140, 160, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140, 160, 255, 0.07) 1px, transparent 1px);
+  background-size: 52px 52px;
+  animation: gridDrift 16s linear infinite;
+  -webkit-mask-image: radial-gradient(75% 75% at 60% 45%, #000 55%, transparent 100%);
+  mask-image: radial-gradient(75% 75% at 60% 45%, #000 55%, transparent 100%);
+}
+.cockpit-glow {
+  background:
+    radial-gradient(48% 55% at 62% 42%, rgba(93, 213, 255, 0.18), transparent 70%),
+    radial-gradient(42% 50% at 28% 82%, rgba(124, 120, 255, 0.16), transparent 72%),
+    radial-gradient(60% 70% at 85% 90%, rgba(122, 240, 194, 0.08), transparent 70%);
+  filter: blur(2px);
+}
+@keyframes connFlow { to { stroke-dashoffset: -16; } }
+.conn-flow { stroke-dasharray: 3 5; animation: connFlow 1.2s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cockpit-grid, .conn-flow { animation: none; }
+}
+
