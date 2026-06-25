@@ -660,3 +660,59 @@ em.serif {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ─── Machine Read / entity-graph homepage animations ─────────────── */
+@keyframes mrRowIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes mrFill {
+  from { width: 0; }
+}
+@keyframes mrScan {
+  0%   { transform: translateY(-8%); opacity: 0; }
+  8%   { opacity: 0.9; }
+  92%  { opacity: 0.9; }
+  100% { transform: translateY(820%); opacity: 0; }
+}
+@keyframes softGlow {
+  0%, 100% { box-shadow: 0 0 0 1px var(--d-line-s), 0 0 18px -6px var(--d-accent-glow); }
+  50%      { box-shadow: 0 0 0 1px var(--d-accent), 0 0 34px -4px var(--d-accent-glow); }
+}
+@keyframes nodePulse {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+
+/* Staggered scan rows — content is always in the DOM; only the entrance animates */
+.mr-row {
+  opacity: 0;
+  animation: mrRowIn 0.5s ease forwards;
+}
+.mr-row-1 { animation-delay: 0.25s; }
+.mr-row-2 { animation-delay: 0.45s; }
+.mr-row-3 { animation-delay: 0.65s; }
+.mr-row-4 { animation-delay: 0.85s; }
+.mr-row-5 { animation-delay: 1.05s; }
+.mr-row-6 { animation-delay: 1.25s; }
+.mr-row-7 { animation-delay: 1.45s; }
+
+.mr-bar-fill { animation: mrFill 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both; }
+
+.mr-scanline {
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--d-accent), transparent);
+  filter: blur(0.5px);
+  animation: mrScan 3.4s ease-in-out infinite;
+  pointer-events: none;
+}
+.soft-glow { animation: softGlow 3.2s ease-in-out infinite; }
+.node-pulse { animation: nodePulse 2.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mr-row { opacity: 1; }
+  .mr-scanline { display: none; }
+}
+
