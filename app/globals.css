@@ -975,13 +975,49 @@ em.serif {
   color: var(--d-fg-mute);
 }
 
+/* ─── Homepage hero — transformation visual (Page → Signals → Entity → Verified)
+   Scoped, minimal motion utilities used only by EditorialHero's SVG. ──────── */
+@keyframes kc-flow {
+  from { stroke-dashoffset: 100; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes kc-core-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50%      { opacity: 0.85; transform: scale(1.05); }
+}
+@keyframes kc-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* a single point of light travelling a signal line into the entity core */
+.kc-sig-pulse {
+  stroke-dasharray: 6 94;
+  stroke-dashoffset: 100;
+  animation: kc-flow 3.2s linear infinite;
+}
+/* the entity core breathing in place */
+.kc-core-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: kc-core-pulse 4s ease-in-out infinite;
+}
+/* a line that draws itself in once (uses pathLength="1") */
+.kc-draw-in {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: kc-draw 0.9s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .kc-entering,
   .kc-materialize,
   .kc-focus-in,
   .kc-resolve,
   .kc-stagger-in,
+  .kc-core-pulse,
   .kc-overlay.is-open .kc-overlay__link { animation: none; }
   .kc-overlay__link:hover { transform: none; }
+  .kc-sig-pulse { display: none; }            /* keep the static line, drop the travel */
+  .kc-draw-in  { stroke-dashoffset: 0; animation: none; }
 }
 
