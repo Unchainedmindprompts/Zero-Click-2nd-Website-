@@ -10,8 +10,9 @@ import NavOverlay from './NavOverlay';
  *
  * Logo stays top-left and the controls (Machine Read + menu) stay top-right
  * across the entire site; only the page content beneath changes. The menu
- * button opens the full-screen NavOverlay. This replaces the old per-page
- * <Navigation>; individual pages must NOT render their own nav.
+ * button opens the full-screen NavOverlay. This is the single site nav —
+ * individual pages must NOT render their own header/nav (blog breadcrumbs
+ * are page content, not site nav).
  */
 export default function Shell() {
   const pathname = usePathname();
