@@ -1068,23 +1068,21 @@ em.serif {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  /* darkens the left ~half so white copy stays legible over bright art,
-     fading out by ~70% so the right side of the image reads clearly */
-  background: linear-gradient(
-    90deg,
-    rgba(5, 7, 16, 0.92) 0%,
-    rgba(5, 7, 16, 0.72) 26%,
-    rgba(5, 7, 16, 0.34) 50%,
-    rgba(5, 7, 16, 0) 70%
-  );
+  /* Localized shade behind the copy only — a soft pool anchored to the lower
+     left text block, plus a gentle left bias. The image keeps its natural
+     light: bright sky upper-left, warm storefront on the right stay visible.
+     No heavy full-frame darkening. */
+  background:
+    radial-gradient(80% 90% at 24% 70%, rgba(5, 7, 16, 0.68) 0%, rgba(5, 7, 16, 0.30) 46%, transparent 66%),
+    linear-gradient(100deg, rgba(5, 7, 16, 0.40) 0%, rgba(5, 7, 16, 0.10) 30%, transparent 52%);
 }
 @media (max-width: 768px) {
   /* favour the dark left so left-aligned text stays readable on phones */
   .kc-slide-img { object-position: 34% center; }
   .kc-slide-bg__plate {
     background:
-      linear-gradient(90deg, rgba(5, 7, 16, 0.9) 0%, rgba(5, 7, 16, 0.55) 44%, rgba(5, 7, 16, 0) 74%),
-      linear-gradient(180deg, rgba(5, 7, 16, 0) 36%, rgba(5, 7, 16, 0.62) 100%);
+      radial-gradient(110% 80% at 32% 74%, rgba(5, 7, 16, 0.66) 0%, rgba(5, 7, 16, 0.28) 48%, transparent 72%),
+      linear-gradient(180deg, rgba(5, 7, 16, 0) 44%, rgba(5, 7, 16, 0.48) 100%);
   }
 }
 
@@ -1093,19 +1091,21 @@ em.serif {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  /* eased top/bottom scrim — enough to seat the copy without flattening the art */
   background: linear-gradient(
     180deg,
-    rgba(5, 7, 16, 0.42) 0%,
-    rgba(5, 7, 16, 0.04) 36%,
-    rgba(5, 7, 16, 0.30) 64%,
-    rgba(5, 7, 16, 0.62) 100%
+    rgba(5, 7, 16, 0.30) 0%,
+    rgba(5, 7, 16, 0.03) 36%,
+    rgba(5, 7, 16, 0.18) 64%,
+    rgba(5, 7, 16, 0.40) 100%
   );
 }
 .kc-slider__vignette {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  box-shadow: inset 0 0 220px 50px rgba(3, 4, 12, 0.7);
+  /* lighter edge vignette so the frame doesn't read as a full-screen dim */
+  box-shadow: inset 0 0 200px 30px rgba(3, 4, 12, 0.45);
 }
 
 /* Text overlay layers — kept in the DOM (crawlable), one visible at a time.
