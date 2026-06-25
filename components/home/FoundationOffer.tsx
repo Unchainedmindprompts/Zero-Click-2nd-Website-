@@ -15,7 +15,7 @@ const included = [
 
 export default function FoundationOffer() {
   return (
-    <section style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+    <section id="foundation" style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
       <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
         <div className="flex flex-col lg:flex-row gap-16">
 

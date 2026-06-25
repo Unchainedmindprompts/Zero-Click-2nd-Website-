@@ -757,3 +757,24 @@ em.serif {
   .cockpit-grid, .conn-flow { animation: none; }
 }
 
+/* ─── Transformation hero: page -> entity -> recommendation ───────── */
+@keyframes slowSpin { to { transform: rotate(360deg); } }
+@keyframes counterSpin { to { transform: rotate(-360deg); } }
+@keyframes breathe { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+@keyframes signalIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes auraDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(2%, -2%) scale(1.04); }
+}
+
+.verify-ring  { transform-origin: 610px 300px; animation: slowSpin 34s linear infinite; }
+.verify-ring2 { transform-origin: 610px 300px; animation: counterSpin 48s linear infinite; }
+.core-breathe { animation: breathe 5.5s ease-in-out infinite; }
+.signal-pill  { opacity: 0; animation: signalIn 0.6s ease forwards; }
+.hero-aura    { animation: auraDrift 16s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .verify-ring, .verify-ring2, .core-breathe, .hero-aura { animation: none; }
+  .signal-pill { opacity: 1; }
+}
+

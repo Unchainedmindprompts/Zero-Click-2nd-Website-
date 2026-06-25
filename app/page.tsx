@@ -1,12 +1,9 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
-import HeroVerificationSystem from '@/components/home/HeroVerificationSystem';
-import ShiftSection from '@/components/home/ShiftSection';
-import ProblemCards from '@/components/home/ProblemCards';
-import DifferenceCompare from '@/components/home/DifferenceCompare';
+import TransformationHero from '@/components/home/TransformationHero';
+import ShiftFromPagesToEntities from '@/components/home/ShiftFromPagesToEntities';
 import FrameworkLayers from '@/components/home/FrameworkLayers';
-import MachineReadDemo from '@/components/home/MachineReadDemo';
-import RecommendationPath from '@/components/home/RecommendationPath';
+import MachineReadPreview from '@/components/home/MachineReadPreview';
 import UseCaseCards from '@/components/home/UseCaseCards';
 import FoundationOffer from '@/components/home/FoundationOffer';
 
@@ -25,7 +22,7 @@ const webPageSchema = {
   url: 'https://www.kodecite.ai/',
   name: 'KodeCite.ai — Entity Infrastructure for the AI Web',
   description:
-    'KodeCite turns established local businesses into structured, verifiable entities that AI search engines, answer engines, and future agents can understand, trust, and recommend.',
+    'KodeCite rebuilds your website into a structured, source-backed entity foundation that AI search engines, answer engines, and future agents can understand, trust, and recommend.',
   inLanguage: 'en-US',
   isPartOf: { '@id': 'https://www.kodecite.ai/#website' },
   about: { '@id': 'https://www.kodecite.ai/#business' },
@@ -40,75 +37,21 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      {/* ─── 1. Hero ─────────────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ padding: '138px 32px 96px', backgroundColor: 'var(--d-bg)' }}>
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="relative" style={{ maxWidth: '1300px', margin: '0 auto' }}>
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-10">
+      <TransformationHero />
 
-            {/* Left: headline + CTA (first on mobile — CTA visible early) */}
-            <div className="w-full lg:max-w-[500px] lg:flex-shrink-0">
-              <div className="d-eyebrow mb-6">AI BUSINESS VERIFICATION</div>
-
-              <h1
-                className="font-inter font-semibold mb-6"
-                style={{ fontSize: 'clamp(40px, 5.2vw, 66px)', lineHeight: 1.04, letterSpacing: '-0.04em', color: 'var(--d-fg)' }}
-              >
-                Can AI verify your business well enough to{' '}
-                <em className="serif">recommend it?</em>
-              </h1>
-
-              <p
-                className="font-inter mb-8"
-                style={{ fontSize: '18px', lineHeight: 1.6, color: 'var(--d-fg-dim)', fontWeight: 300, maxWidth: '460px' }}
-              >
-                KodeCite rebuilds your website into a structured, source-backed entity foundation that AI
-                search engines and future agents can understand, trust, and act on.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/contact" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
-                <Link href="#how-it-works" className="d-btn d-btn-ghost">See How It Works</Link>
-              </div>
-
-              {/* Inspection strip — the crawlers reading the web now */}
-              <div className="mt-9 flex flex-wrap items-center gap-2">
-                <span className="flex items-center gap-1.5 font-mono text-[10px]" style={{ color: 'var(--d-fg-mute)', letterSpacing: '0.14em' }}>
-                  <span className="node-pulse" style={{ width: 6, height: 6, borderRadius: 99, background: 'var(--d-ok)', display: 'inline-block' }} />
-                  READING THE WEB NOW
-                </span>
-                {['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Googlebot'].map((b) => (
-                  <span key={b} className="font-mono text-[10px]" style={{ color: 'var(--d-fg-dim)', background: 'rgba(140,160,255,0.05)', border: '1px solid var(--d-line)', borderRadius: 99, padding: '4px 10px' }}>{b}</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: layered AI verification command center (dominant ~60%) */}
-            <div className="w-full lg:flex-1 lg:min-w-0">
-              <HeroVerificationSystem />
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ─── 2–9. Sections ───────────────────────────────────── */}
-      <ScrollReveal><ShiftSection /></ScrollReveal>
-      <ScrollReveal><ProblemCards /></ScrollReveal>
-      <ScrollReveal><DifferenceCompare /></ScrollReveal>
+      <ScrollReveal><ShiftFromPagesToEntities /></ScrollReveal>
       <ScrollReveal><FrameworkLayers /></ScrollReveal>
-      <ScrollReveal><MachineReadDemo /></ScrollReveal>
-      <ScrollReveal><RecommendationPath /></ScrollReveal>
+      <ScrollReveal><MachineReadPreview /></ScrollReveal>
       <ScrollReveal><UseCaseCards /></ScrollReveal>
       <ScrollReveal><FoundationOffer /></ScrollReveal>
 
-      {/* ─── 10. Final CTA ───────────────────────────────────── */}
-      <section style={{ padding: '120px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}>
-        <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
+      {/* Final CTA */}
+      <section style={{ padding: '130px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}>
+        <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">GET STARTED</div>
           <h2
             className="font-inter font-semibold mb-5"
-            style={{ fontSize: 'clamp(34px, 5vw, 58px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--d-fg)' }}
+            style={{ fontSize: 'clamp(36px, 5vw, 60px)', lineHeight: 1.04, letterSpacing: '-0.035em', color: 'var(--d-fg)' }}
           >
             See what AI can verify<br />
             <em className="serif">about your business.</em>
@@ -118,11 +61,11 @@ export default function HomePage() {
             style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
           >
             A free Machine Read shows what&apos;s clear, what&apos;s missing, what&apos;s inconsistent,
-            what competitors may be doing better, and what to fix first.
+            and what to fix first — built once, owned forever, no platform rent.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
-            <Link href="/services" className="d-btn d-btn-ghost">See the Foundation Build</Link>
+            <Link href="#foundation" className="d-btn d-btn-ghost">See the Foundation</Link>
           </div>
         </div>
       </section>
