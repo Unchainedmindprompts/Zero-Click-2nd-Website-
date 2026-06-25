@@ -1038,6 +1038,19 @@ em.serif {
   touch-action: pan-y;
 }
 
+/* Homepage lock — applied to <html> only on `/` (via HomeScrollLock).
+   The homepage is a locked full-screen slider: no vertical scroll, and nothing
+   below it (the footer) is reachable. Interior pages are unaffected. */
+html.kc-home-locked,
+html.kc-home-locked body {
+  overflow: hidden;
+  height: 100%;
+  overscroll-behavior: none;
+}
+html.kc-home-locked footer {
+  display: none;
+}
+
 /* Background layers — crossfade + scale(1.08→1) + blur(16px→0) on activate */
 .kc-slide-bg {
   position: absolute;

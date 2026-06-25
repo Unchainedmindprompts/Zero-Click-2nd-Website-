@@ -1,11 +1,5 @@
-import Link from 'next/link';
-import ScrollReveal from '@/components/ScrollReveal';
 import CinematicHomeSlider from '@/components/home/CinematicHomeSlider';
-import TransformationStatement from '@/components/home/TransformationStatement';
-import ShiftFromPagesToEntities from '@/components/home/ShiftFromPagesToEntities';
-import FrameworkLayers from '@/components/home/FrameworkLayers';
-import MachineReadPreview from '@/components/home/MachineReadPreview';
-import FoundationOffer from '@/components/home/FoundationOffer';
+import HomeScrollLock from '@/components/home/HomeScrollLock';
 
 export const metadata = {
   alternates: {
@@ -29,6 +23,12 @@ const webPageSchema = {
   primaryImageOfPage: { '@id': 'https://www.kodecite.ai/#logo' },
 };
 
+// The homepage is a locked, full-screen cinematic slide experience — only the
+// shell, slider, controls, and slide copy/CTAs are visible. Deeper content is
+// reached via the nav/menu and CTAs (Services, About, Blog, FAQ, Contact, …).
+// The former lower sections (TransformationStatement, ShiftFromPagesToEntities,
+// FrameworkLayers, MachineReadPreview, FoundationOffer, final CTA) are no longer
+// rendered here; their components remain in the repo for reuse on routes.
 export default function HomePage() {
   return (
     <>
@@ -37,36 +37,8 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
+      <HomeScrollLock />
       <CinematicHomeSlider />
-      <TransformationStatement />
-
-      <ScrollReveal><ShiftFromPagesToEntities /></ScrollReveal>
-      <ScrollReveal><FrameworkLayers /></ScrollReveal>
-      <ScrollReveal><MachineReadPreview /></ScrollReveal>
-      <ScrollReveal><FoundationOffer /></ScrollReveal>
-
-      {/* Final CTA */}
-      <section style={{ padding: '130px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}>
-        <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
-          <h2
-            className="font-inter font-semibold mb-6"
-            style={{ fontSize: 'clamp(38px, 5.6vw, 72px)', lineHeight: 1.02, letterSpacing: '-0.04em', color: 'var(--d-fg)' }}
-          >
-            Become the answer{' '}
-            <em className="serif">AI recommends.</em>
-          </h2>
-          <p
-            className="font-inter mb-10"
-            style={{ fontSize: '18px', lineHeight: 1.6, color: 'var(--d-fg-dim)', fontWeight: 300, maxWidth: '520px', marginLeft: 'auto', marginRight: 'auto' }}
-          >
-            Start with a free Machine Read. Built once, owned forever — no platform rent, no lock-in.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
-            <Link href="#foundation" className="d-btn d-btn-ghost">See the Foundation</Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

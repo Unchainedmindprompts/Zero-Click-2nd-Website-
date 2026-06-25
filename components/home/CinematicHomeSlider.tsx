@@ -209,7 +209,7 @@ export default function CinematicHomeSlider() {
         <Link href="/contact" className="d-btn d-btn-primary w-full sm:w-auto justify-center">
           Run My Free Machine Read →
         </Link>
-        <Link href="#foundation" className="d-btn d-btn-ghost w-full sm:w-auto justify-center">
+        <Link href="/services" className="d-btn d-btn-ghost w-full sm:w-auto justify-center">
           See the Foundation
         </Link>
       </div>
