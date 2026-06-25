@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
-import EditorialHero from '@/components/home/EditorialHero';
+import CinematicHomeSlider from '@/components/home/CinematicHomeSlider';
 import TransformationStatement from '@/components/home/TransformationStatement';
 import ShiftFromPagesToEntities from '@/components/home/ShiftFromPagesToEntities';
 import FrameworkLayers from '@/components/home/FrameworkLayers';
@@ -37,7 +37,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <EditorialHero />
+      <CinematicHomeSlider />
       <TransformationStatement />
 
       <ScrollReveal><ShiftFromPagesToEntities /></ScrollReveal>
