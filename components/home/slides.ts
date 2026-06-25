@@ -61,6 +61,11 @@ export const HOME_SLIDES: HomeSlide[] = [
     ],
     support:
       'Most websites leave business identity, services, locations, proof, and next actions disconnected.',
+    // Floating digital fragments (reviews/profiles/listings) scattered in dark
+    // space — the unresolved signals AI sees disconnected. No portal yet. This
+    // is intentionally the darkest, most fragmented slide; 3 and 4 resolve. The
+    // source already has clean dark left negative space (no baked text).
+    image: '/home/slide-problem.webp',
     bg:
       'conic-gradient(from 210deg at 62% 38%, rgba(70,90,150,0.10), transparent 26%),' +
       'radial-gradient(50% 60% at 28% 30%, rgba(120,140,200,0.12), transparent 60%),' +
@@ -79,10 +84,11 @@ export const HOME_SLIDES: HomeSlide[] = [
     ],
     support:
       'KodeCite connects your business, people, services, locations, citations, FAQs, and action paths into one structured entity.',
+    // Brighter + more structured than the problem slide — light converging on order.
     bg:
-      'radial-gradient(54% 64% at 50% 54%, rgba(93,213,255,0.20), transparent 62%),' +
-      'radial-gradient(82% 92% at 50% 122%, rgba(124,120,255,0.18), transparent 60%),' +
-      'linear-gradient(180deg, #080a1e 0%, #0a0c22 60%, #06081a 100%)',
+      'radial-gradient(60% 70% at 50% 46%, rgba(93,213,255,0.26), transparent 60%),' +
+      'radial-gradient(90% 100% at 50% 118%, rgba(124,120,255,0.22), transparent 60%),' +
+      'linear-gradient(180deg, #0c1230 0%, #101842 55%, #0a0f2a 100%)',
   },
   {
     // ART DIRECTION: calm, resolved, premium, trusted. The portal / world is
@@ -97,9 +103,10 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'Agent-ready.', accent: true },
     ],
     support: 'Built once. Owned forever. Found by AI.',
+    // Brightest + calmest — resolved and optimistic; the world is open.
     bg:
-      'radial-gradient(68% 80% at 50% 28%, rgba(122,240,194,0.14), transparent 60%),' +
-      'radial-gradient(60% 80% at 72% 82%, rgba(93,213,255,0.22), transparent 62%),' +
-      'linear-gradient(170deg, #06101c 0%, #081626 55%, #050d18 100%)',
+      'radial-gradient(80% 90% at 50% 24%, rgba(122,240,194,0.20), transparent 62%),' +
+      'radial-gradient(70% 90% at 64% 84%, rgba(93,213,255,0.26), transparent 62%),' +
+      'linear-gradient(170deg, #0b1c2e 0%, #102a3e 52%, #0a1c2c 100%)',
   },
 ];
