@@ -61,10 +61,10 @@ export const HOME_SLIDES: HomeSlide[] = [
     ],
     support:
       'Most websites leave business identity, services, locations, proof, and next actions disconnected.',
-    // Floating digital fragments (reviews/profiles/listings) scattered in dark
-    // space — the unresolved signals AI sees disconnected. No portal yet. This
-    // is intentionally the darkest, most fragmented slide; 3 and 4 resolve. The
-    // source already has clean dark left negative space (no baked text).
+    // ART DIRECTION: warm golden-hour avenue framed by glass towers and lit
+    // interiors — the real-world business world the AI web has to read. Part of
+    // the cohesive urban photographic series with slide 1. Natively text-free;
+    // the left scrim (kc-slide-bg__plate) seats the headline over the bright street.
     image: '/home/slide-problem.webp',
     bg:
       'conic-gradient(from 210deg at 62% 38%, rgba(70,90,150,0.10), transparent 26%),' +
