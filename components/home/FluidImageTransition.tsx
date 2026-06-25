@@ -23,8 +23,13 @@ export default function FluidImageTransition({
       {slides.map((s, i) => (
         <div key={s.id} className={`kc-slide-bg ${i === active ? 'is-active' : ''}`}>
           {s.image ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={s.image} alt="" className="w-full h-full object-cover" />
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={s.image} alt="" className="kc-slide-img" />
+              {/* left/bottom readability plate so HTML text stays legible on
+                  any viewport, even where art is bright behind it */}
+              <div className="kc-slide-bg__plate" />
+            </>
           ) : (
             <div className="w-full h-full" style={{ background: s.bg }} />
           )}
