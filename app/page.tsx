@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
-import TransformationHero from '@/components/home/TransformationHero';
+import EditorialHero from '@/components/home/EditorialHero';
+import TransformationStatement from '@/components/home/TransformationStatement';
 import ShiftFromPagesToEntities from '@/components/home/ShiftFromPagesToEntities';
 import FrameworkLayers from '@/components/home/FrameworkLayers';
 import MachineReadPreview from '@/components/home/MachineReadPreview';
-import UseCaseCards from '@/components/home/UseCaseCards';
 import FoundationOffer from '@/components/home/FoundationOffer';
 
 export const metadata = {
@@ -37,31 +37,29 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <TransformationHero />
+      <EditorialHero />
+      <TransformationStatement />
 
       <ScrollReveal><ShiftFromPagesToEntities /></ScrollReveal>
       <ScrollReveal><FrameworkLayers /></ScrollReveal>
       <ScrollReveal><MachineReadPreview /></ScrollReveal>
-      <ScrollReveal><UseCaseCards /></ScrollReveal>
       <ScrollReveal><FoundationOffer /></ScrollReveal>
 
       {/* Final CTA */}
       <section style={{ padding: '130px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}>
-        <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
-          <div className="d-eyebrow d-eyebrow-center mb-6">GET STARTED</div>
+        <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
           <h2
-            className="font-inter font-semibold mb-5"
-            style={{ fontSize: 'clamp(36px, 5vw, 60px)', lineHeight: 1.04, letterSpacing: '-0.035em', color: 'var(--d-fg)' }}
+            className="font-inter font-semibold mb-6"
+            style={{ fontSize: 'clamp(38px, 5.6vw, 72px)', lineHeight: 1.02, letterSpacing: '-0.04em', color: 'var(--d-fg)' }}
           >
-            See what AI can verify<br />
-            <em className="serif">about your business.</em>
+            Become the answer{' '}
+            <em className="serif">AI recommends.</em>
           </h2>
           <p
             className="font-inter mb-10"
-            style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
+            style={{ fontSize: '18px', lineHeight: 1.6, color: 'var(--d-fg-dim)', fontWeight: 300, maxWidth: '520px', marginLeft: 'auto', marginRight: 'auto' }}
           >
-            A free Machine Read shows what&apos;s clear, what&apos;s missing, what&apos;s inconsistent,
-            and what to fix first — built once, owned forever, no platform rent.
+            Start with a free Machine Read. Built once, owned forever — no platform rent, no lock-in.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
