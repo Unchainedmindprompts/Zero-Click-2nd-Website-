@@ -100,7 +100,7 @@ export default function CinematicHomeSlider() {
 
       {/* Persistent CTAs (stable across slides) */}
       <div
-        className="absolute z-20 left-0 right-0 mx-auto px-8 flex flex-col sm:flex-row gap-3"
+        className="kc-slider-cta absolute z-20 left-0 right-0 mx-auto px-8 flex flex-col sm:flex-row gap-3"
         style={{ maxWidth: '1320px', bottom: 'clamp(72px, 9vh, 108px)' }}
       >
         <Link href="/contact" className="d-btn d-btn-primary w-full sm:w-auto justify-center">

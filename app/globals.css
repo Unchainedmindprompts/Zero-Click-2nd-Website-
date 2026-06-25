@@ -1171,6 +1171,25 @@ em.serif {
   .kc-dot.is-active { height: 9px; width: 30px; }
 }
 
+/* Very large desktops only — keep the copy from drifting too far inward and
+   too low. Laptop / normal desktop (< 1800px), mobile, and the image are
+   unchanged. Overrides the inline layout styles, hence !important. */
+@media (min-width: 1800px) {
+  .kc-slide-copy {
+    max-width: 1480px !important;
+    margin-inline: 0 !important;
+    padding-left: clamp(80px, 6vw, 150px) !important;
+    padding-right: 72px !important;
+    padding-bottom: clamp(230px, 26vh, 340px) !important;
+  }
+  .kc-slider-cta {
+    max-width: 1480px !important;
+    margin-inline: 0 !important;
+    padding-left: clamp(80px, 6vw, 150px) !important;
+    bottom: clamp(150px, 15vh, 220px) !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .kc-slide-bg {
     transition: opacity 0.4s ease;

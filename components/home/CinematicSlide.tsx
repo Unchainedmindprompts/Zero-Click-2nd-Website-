@@ -21,7 +21,7 @@ export default function CinematicSlide({
 
   return (
     <div
-      className="relative h-full w-full mx-auto px-8 flex flex-col justify-end"
+      className="kc-slide-copy relative h-full w-full mx-auto px-8 flex flex-col justify-end"
       style={{
         maxWidth: '1320px',
         paddingTop: '120px',
