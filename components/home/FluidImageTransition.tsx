@@ -26,9 +26,14 @@ export default function FluidImageTransition({
             <>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={s.image} alt="" className="kc-slide-img" />
-              {/* left/bottom readability plate so HTML text stays legible on
-                  any viewport, even where art is bright behind it */}
-              <div className="kc-slide-bg__plate" />
+              {/* readability plate behind the copy. Dark slides darken the left
+                  for white text; light slides get a faint light lift for dark
+                  text and keep the image bright. */}
+              <div
+                className={`kc-slide-bg__plate ${
+                  s.theme === 'light' ? 'kc-slide-bg__plate--light' : ''
+                }`}
+              />
             </>
           ) : (
             <div className="w-full h-full" style={{ background: s.bg }} />

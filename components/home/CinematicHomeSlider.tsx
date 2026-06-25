@@ -199,9 +199,11 @@ export default function CinematicHomeSlider() {
         ))}
       </div>
 
-      {/* Persistent CTAs (stable across slides) */}
+      {/* Persistent CTAs (stable across slides; ghost button adapts on light slides) */}
       <div
-        className="kc-slider-cta absolute z-20 left-0 right-0 mx-auto px-8 flex flex-col sm:flex-row gap-3"
+        className={`kc-slider-cta absolute z-20 left-0 right-0 mx-auto px-8 flex flex-col sm:flex-row gap-3 ${
+          HOME_SLIDES[active].theme === 'light' ? 'kc-cta-light' : ''
+        }`}
         style={{ maxWidth: '1320px', bottom: 'clamp(72px, 9vh, 108px)' }}
       >
         <Link href="/contact" className="d-btn d-btn-primary w-full sm:w-auto justify-center">

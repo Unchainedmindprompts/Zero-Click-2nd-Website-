@@ -1086,6 +1086,30 @@ em.serif {
   }
 }
 
+/* Light (bright-image) slides: faint white lift behind dark copy — keeps the
+   image bright, no darkening. Overrides the dark plate above. */
+.kc-slide-bg__plate--light {
+  background:
+    radial-gradient(78% 90% at 24% 70%, rgba(250, 251, 255, 0.36) 0%, rgba(250, 251, 255, 0.12) 46%, transparent 66%);
+}
+@media (max-width: 768px) {
+  .kc-slide-bg__plate--light {
+    background:
+      radial-gradient(120% 82% at 32% 74%, rgba(250, 251, 255, 0.40) 0%, rgba(250, 251, 255, 0.12) 48%, transparent 74%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 52%, rgba(250, 251, 255, 0.30) 100%);
+  }
+}
+
+/* Light slides: dark ghost CTA so it reads on the bright art (primary stays dark) */
+.kc-cta-light .d-btn-ghost {
+  color: #14192a;
+  border-color: rgba(20, 25, 42, 0.42);
+}
+.kc-cta-light .d-btn-ghost:hover {
+  color: #000;
+  border-color: rgba(20, 25, 42, 0.7);
+}
+
 /* Legibility overlays */
 .kc-slider__scrim {
   position: absolute;

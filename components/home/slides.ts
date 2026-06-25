@@ -27,6 +27,12 @@ export interface HomeSlide {
   image?: string;
   /** Placeholder cinematic background (CSS). Used when `image` is absent. */
   bg: string;
+  /**
+   * Copy treatment. Default (undefined) = dark background → light/white text +
+   * dark left scrim. 'light' = bright background → dark text + a faint light
+   * lift (no darkening), and the CTAs adapt. Use for near-white hero images.
+   */
+  theme?: 'light';
 }
 
 export const HOME_SLIDES: HomeSlide[] = [
@@ -84,7 +90,11 @@ export const HOME_SLIDES: HomeSlide[] = [
     ],
     support:
       'KodeCite connects your business, people, services, locations, citations, FAQs, and action paths into one structured entity.',
-    // Brighter + more structured than the problem slide — light converging on order.
+    // ART DIRECTION: bright golden-hour boardroom with a city skyline through
+    // glass — structure and clarity. Near-white render, so this slide uses the
+    // light treatment (dark text, no darkening of the image). Natively text-free.
+    image: '/home/slide-transformation.webp',
+    theme: 'light',
     bg:
       'radial-gradient(60% 70% at 50% 46%, rgba(93,213,255,0.26), transparent 60%),' +
       'radial-gradient(90% 100% at 50% 118%, rgba(124,120,255,0.22), transparent 60%),' +
