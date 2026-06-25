@@ -10,6 +10,8 @@
 export interface KcTheme {
   bg: string;
   fg: string;
+  /** true for warm-light editorial routes — the shell flips to dark marks. */
+  light?: boolean;
 }
 
 export const DEFAULT_THEME: KcTheme = { bg: '#0a0a0f', fg: '#fafafa' };
@@ -17,7 +19,8 @@ export const DEFAULT_THEME: KcTheme = { bg: '#0a0a0f', fg: '#fafafa' };
 // Prefix → theme. Order is most-specific-first; themeForPath returns the first
 // prefix the pathname starts with, else the default (Home).
 const ROUTE_THEMES: ReadonlyArray<{ prefix: string; theme: KcTheme }> = [
-  { prefix: '/services',     theme: { bg: '#0c1a2e', fg: '#e0e7ff' } },
+  // Warm-light editorial (reference page).
+  { prefix: '/services',     theme: { bg: '#f5f1e8', fg: '#1c1813', light: true } },
   { prefix: '/about',        theme: { bg: '#111827', fg: '#f4f4f5' } },
   { prefix: '/blog',         theme: { bg: '#18181b', fg: '#fafafa' } },
   { prefix: '/faq',          theme: { bg: '#101018', fg: '#e4e4e7' } },

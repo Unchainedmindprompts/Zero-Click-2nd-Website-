@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import NavOverlay from './NavOverlay';
+import { themeForPath } from '@/lib/theme';
 
 /**
  * Shell — the persistent site frame.
@@ -16,6 +17,7 @@ import NavOverlay from './NavOverlay';
  */
 export default function Shell() {
   const pathname = usePathname();
+  const onLight = !!themeForPath(pathname).light;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -54,21 +56,26 @@ export default function Shell() {
     <>
       <header className={`kc-shell ${scrolled || open ? 'kc-shell--scrolled' : ''}`}>
         <div className="kc-shell__inner">
-          {/* Brand — top-left, persistent */}
+          {/* Brand — top-left, persistent (marks flip dark on light routes) */}
           <Link href="/" className="kc-brand" aria-label="KodeCite.ai home">
-            <span style={{ color: 'var(--d-accent)', fontSize: '13px', lineHeight: 1 }}>▸</span>
+            <span style={{ color: onLight ? 'var(--ed-accent)' : 'var(--d-accent)', fontSize: '13px', lineHeight: 1 }}>▸</span>
             <span
               className="font-inter font-semibold"
               style={{ fontSize: '14px', letterSpacing: '-0.02em' }}
             >
               <span style={{ color: 'var(--kc-fg)' }}>KODECITE</span>
-              <span style={{ color: 'var(--d-fg-mute)' }}>.AI</span>
+              <span style={{ color: onLight ? 'var(--ed-ink-3)' : 'var(--d-fg-mute)' }}>.AI</span>
             </span>
           </Link>
 
           {/* Controls — top-right, persistent */}
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="d-btn d-btn-primary d-btn-sm hidden sm:inline-flex">
+            <Link
+              href="/contact"
+              className={`hidden sm:inline-flex ${
+                onLight ? 'ed-btn ed-btn-primary ed-btn-sm' : 'd-btn d-btn-primary d-btn-sm'
+              }`}
+            >
               Machine Read →
             </Link>
             <button
