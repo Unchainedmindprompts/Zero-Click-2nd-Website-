@@ -8,7 +8,8 @@ import {
   Cormorant_Garamond,
 } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/Navigation';
+import Shell from '@/components/Shell';
+import RouteTransition from '@/components/RouteTransition';
 import Footer from '@/components/Footer';
 import BackgroundLayer from '@/components/BackgroundLayer';
 
@@ -190,8 +191,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="antialiased">
         <BackgroundLayer />
-        <Navigation />
-        <main>{children}</main>
+        <Shell />
+        <RouteTransition>{children}</RouteTransition>
         <Footer />
       </body>
     </html>
