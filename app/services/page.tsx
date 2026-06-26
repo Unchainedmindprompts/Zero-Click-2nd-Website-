@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import SecondaryPageShell from '@/components/SecondaryPageShell';
+import GlassPanel from '@/components/GlassPanel';
 
 export const metadata: Metadata = {
   title: 'Services — AI-Ready Foundations',
@@ -93,26 +95,11 @@ const deliverables = [
 ];
 
 const processSteps = [
-  {
-    w: 'WEEK 1', t: 'Discovery + audit',
-    d: 'We read your existing site, your traffic, your goals. You tell us what matters. We come back with a build brief — what gets kept, what gets rebuilt, what gets removed.',
-  },
-  {
-    w: 'WEEKS 2–3', t: 'Architecture + design system',
-    d: 'Information architecture, route map, schema graph design, design tokens, and the component library. Approved before any production code is written.',
-  },
-  {
-    w: 'WEEKS 4–6', t: 'Build',
-    d: 'Page-by-page implementation. Live preview deployments at every push. You review and approve as we go — no big-bang reveal at the end.',
-  },
-  {
-    w: 'WEEK 7', t: 'Content migration + QA',
-    d: 'Existing blog posts moved into the new system with URLs and JSON-LD preserved. Cross-browser, accessibility, performance, schema validation — all checked.',
-  },
-  {
-    w: 'WEEK 8', t: 'Handoff',
-    d: 'Domain cutover. Repo transferred. Vercel transferred. Walkthrough. Documentation. You own it.',
-  },
+  { w: 'WEEK 1', t: 'Discovery + audit', d: 'We read your existing site, your traffic, your goals. You tell us what matters. We come back with a build brief — what gets kept, what gets rebuilt, what gets removed.' },
+  { w: 'WEEKS 2–3', t: 'Architecture + design system', d: 'Information architecture, route map, schema graph design, design tokens, and the component library. Approved before any production code is written.' },
+  { w: 'WEEKS 4–6', t: 'Build', d: 'Page-by-page implementation. Live preview deployments at every push. You review and approve as we go — no big-bang reveal at the end.' },
+  { w: 'WEEK 7', t: 'Content migration + QA', d: 'Existing blog posts moved into the new system with URLs and JSON-LD preserved. Cross-browser, accessibility, performance, schema validation — all checked.' },
+  { w: 'WEEK 8', t: 'Handoff', d: 'Domain cutover. Repo transferred. Vercel transferred. Walkthrough. Documentation. You own it.' },
 ];
 
 const seoDeliverables = [
@@ -132,218 +119,86 @@ const contentDeliverables = [
 ];
 
 const scopeItems = [
-  {
-    t: 'Copywriting',
-    d: 'We design the structure. Your writer (or you) produces the words. We can recommend writers we trust.',
-  },
-  {
-    t: 'Monthly retainers',
-    d: 'No managed services, no ongoing fees. We build it, you own it. If you need help later, we scope a new engagement.',
-  },
-  {
-    t: 'WordPress / Wix / Squarespace',
-    d: "We don't build on platforms we don't recommend. If you're committed to one of these, we're not your team.",
-  },
-  {
-    t: 'Paid ads + social media',
-    d: 'Not our practice. Plenty of excellent agencies do this. We focus on owned, durable infrastructure.',
-  },
-  {
-    t: 'Generic "SEO services"',
-    d: "No keyword stuffing, no link farms, no guaranteed-rankings packages. Real SEO is structural — that's the work we do.",
-  },
-  {
-    t: 'Logo + brand identity',
-    d: "We work with the brand you have. If you need a new identity first, we'll wait or recommend a designer.",
-  },
+  { t: 'Copywriting', d: 'We design the structure. Your writer (or you) produces the words. We can recommend writers we trust.' },
+  { t: 'Monthly retainers', d: 'No managed services, no ongoing fees. We build it, you own it. If you need help later, we scope a new engagement.' },
+  { t: 'WordPress / Wix / Squarespace', d: "We don't build on platforms we don't recommend. If you're committed to one of these, we're not your team." },
+  { t: 'Paid ads + social media', d: 'Not our practice. Plenty of excellent agencies do this. We focus on owned, durable infrastructure.' },
+  { t: 'Generic "SEO services"', d: "No keyword stuffing, no link farms, no guaranteed-rankings packages. Real SEO is structural — that's the work we do." },
+  { t: 'Logo + brand identity', d: "We work with the brand you have. If you need a new identity first, we'll wait or recommend a designer." },
 ];
+
+// shared text colors on glass
+const FG = 'var(--d-fg)';
+const DIM = 'rgba(223, 230, 255, 0.74)';
+const MUTE = 'rgba(205, 216, 255, 0.5)';
+const ACCENT = 'var(--d-accent)';
+const sectionGap = { marginTop: '30px' };
 
 export default function ServicesPage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+    <SecondaryPageShell>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section style={{ padding: '120px 32px 80px', backgroundColor: 'var(--d-bg)' }}>
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
+      <section className="secondary-section secondary-hero">
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">SERVICES · WHAT WE BUILD</div>
-
-          <h1
-            className="font-inter font-semibold mb-6"
-            style={{
-              fontSize: 'clamp(44px, 6vw, 80px)',
-              lineHeight: 1.0,
-              letterSpacing: '-0.03em',
-              color: 'var(--d-fg)',
-            }}
-          >
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(44px, 6vw, 80px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: FG }}>
             Three things.<br />
-            Done <em className="serif">properly.</em>
+            Done <em className="serif" style={{ color: ACCENT }}>properly.</em>
           </h1>
-
-          <p
-            className="font-inter mb-12"
-            style={{
-              fontSize: '17px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-dim)',
-              fontWeight: 300,
-              maxWidth: '560px',
-            }}
-          >
+          <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px' }}>
             We rebuild the foundation, advise on structure, or design the architecture of how
             information should flow through your site. We don&apos;t write your copy, run your ads,
             or manage your platform monthly. The work is engineered, scoped, and shipped.
           </p>
 
-          {/* Jump links */}
-          <div className="flex flex-col gap-3" style={{ maxWidth: '660px' }}>
+          <div className="flex flex-col gap-3" style={{ maxWidth: '680px' }}>
             {[
-              {
-                href: '#foundation-build',
-                tag: 'FLAGSHIP',
-                title: 'Foundation Build',
-                desc: 'Full 4-layer rebuild · 6–8 weeks · you own everything',
-              },
-              {
-                href: '#adjacent',
-                tag: 'ADJACENT',
-                title: 'SEO + Content Design',
-                desc: "Strategy and structure for sites that aren't ready to rebuild",
-              },
-              {
-                href: '#scope',
-                tag: 'SCOPE',
-                title: "What we don't do",
-                desc: 'Honest about where we stop · so you know who else to hire',
-              },
+              { href: '#foundation-build', tag: 'FLAGSHIP', title: 'Foundation Build', desc: 'Full 4-layer rebuild · 6–8 weeks · you own everything' },
+              { href: '#adjacent', tag: 'ADJACENT', title: 'SEO + Content Design', desc: "Strategy and structure for sites that aren't ready to rebuild" },
+              { href: '#scope', tag: 'SCOPE', title: "What we don't do", desc: 'Honest about where we stop · so you know who else to hire' },
             ].map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '16px',
-                  padding: '16px 20px',
-                  background: 'var(--d-bg-2)',
-                  border: '1px solid var(--d-line)',
-                  borderLeft: '3px solid var(--d-accent)',
-                  borderRadius: '10px',
-                  textDecoration: 'none',
-                  transition: 'background-color 200ms ease',
-                }}
-              >
-                <span
-                  className="font-mono flex-shrink-0"
-                  style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-accent)', minWidth: '68px' }}
-                >
-                  {link.tag}
-                </span>
-                <span
-                  className="font-inter font-semibold flex-1"
-                  style={{ fontSize: '14px', color: 'var(--d-fg)', letterSpacing: '-0.01em' }}
-                >
-                  {link.title}
-                </span>
-                <span
-                  className="font-inter flex-1 hidden md:block"
-                  style={{ fontSize: '13px', color: 'var(--d-fg-mute)', fontWeight: 300 }}
-                >
-                  {link.desc}
-                </span>
-                <span style={{ color: 'var(--d-accent)', fontSize: '14px', flexShrink: 0 }}>→</span>
+              <a key={link.href} href={link.href} className="glass-panel-soft secondary-jump" style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px 20px', textDecoration: 'none' }}>
+                <span className="font-mono flex-shrink-0" style={{ fontSize: '9px', letterSpacing: '0.16em', color: ACCENT, minWidth: '68px' }}>{link.tag}</span>
+                <span className="font-inter font-semibold flex-1" style={{ fontSize: '14px', color: FG, letterSpacing: '-0.01em' }}>{link.title}</span>
+                <span className="font-inter flex-1 hidden md:block" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>{link.desc}</span>
+                <span style={{ color: ACCENT, fontSize: '14px', flexShrink: 0 }}>→</span>
               </a>
             ))}
           </div>
-        </div>
+        </GlassPanel>
       </section>
 
       {/* ── Foundation Build ─────────────────────────────── */}
-      <section
-        id="foundation-build"
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-
-          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-            01 / FLAGSHIP
-          </p>
-          <h2
-            className="font-inter font-semibold mb-5"
-            style={{
-              fontSize: 'clamp(32px, 4.5vw, 52px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-              maxWidth: '600px',
-            }}
-          >
-            The Foundation <em className="serif">Build.</em>
+      <section id="foundation-build" className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: ACCENT }}>01 / FLAGSHIP</p>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: FG, maxWidth: '600px' }}>
+            The Foundation <em className="serif" style={{ color: ACCENT }}>Build.</em>
           </h2>
-          <p
-            className="font-inter mb-16"
-            style={{
-              fontSize: '17px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-dim)',
-              fontWeight: 300,
-              maxWidth: '560px',
-            }}
-          >
+          <p className="font-inter mb-14" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
             A complete rebuild of your business website on infrastructure that&apos;s actually
             legible to the systems people now use to find you. Engineered once. Owned forever.
             No retainer.
           </p>
 
           {/* 4 Pillars */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-14">
             {pillars.map((p) => (
-              <article
-                key={p.n}
-                style={{
-                  background: 'var(--d-bg-3)',
-                  border: '1px solid var(--d-line)',
-                  borderTop: '3px solid var(--d-accent)',
-                  borderRadius: '12px',
-                  padding: '28px 32px',
-                }}
-              >
+              <article key={p.n} className="glass-panel-soft" style={{ padding: '28px 30px' }}>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.14em', color: 'var(--d-fg-mute)' }}>
-                    {p.n}
-                  </span>
-                  <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-                    {p.t}
-                  </span>
+                  <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.14em', color: MUTE }}>{p.n}</span>
+                  <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.18em', color: ACCENT }}>{p.t}</span>
                 </div>
-                <h3
-                  className="font-inter font-semibold mb-3"
-                  style={{ fontSize: '17px', lineHeight: 1.25, letterSpacing: '-0.01em', color: 'var(--d-fg)' }}
-                >
-                  {p.h}
-                </h3>
-                <p
-                  className="font-inter mb-5"
-                  style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-                >
-                  {p.d}
-                </p>
-                <ul className="flex flex-col gap-1">
+                <h3 className="font-inter font-semibold mb-3" style={{ fontSize: '17px', lineHeight: 1.25, letterSpacing: '-0.01em', color: FG }}>{p.h}</h3>
+                <p className="font-inter mb-5" style={{ fontSize: '14px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>{p.d}</p>
+                <ul className="flex flex-col gap-2" style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '14px' }}>
                   {p.specs.map((s) => (
-                    <li
-                      key={s}
-                      className="font-mono"
-                      style={{ fontSize: '10px', letterSpacing: '0.08em', color: 'var(--d-fg-mute)' }}
-                    >
-                      {s}
+                    <li key={s} className="flex items-start gap-2 font-inter" style={{ fontSize: '12.5px', color: MUTE, lineHeight: 1.5 }}>
+                      <span style={{ color: ACCENT, flexShrink: 0 }}>—</span>
+                      <span>{s}</span>
                     </li>
                   ))}
                 </ul>
@@ -351,124 +206,51 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          {/* Verification — separate component, equally important */}
-          <div style={{ marginTop: '40px', marginBottom: '16px' }}>
-            {/* Section break banner */}
-            <div
-              className="flex items-center gap-4 mb-6"
-              style={{ paddingTop: '40px', borderTop: '1px solid var(--d-line-s)' }}
-            >
-              <span
-                className="font-mono flex-shrink-0"
-                style={{ fontSize: '9px', letterSpacing: '0.22em', color: 'var(--d-ok)' }}
-              >
-                ALSO INCLUDED IN EVERY FOUNDATION BUILD
-              </span>
-              <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(122,240,194,0.3), transparent)' }} />
-            </div>
-
-            <article
-              style={{
-                background: 'rgba(122,240,194,0.04)',
-                border: '1px solid rgba(122,240,194,0.18)',
-                borderLeft: '3px solid var(--d-ok)',
-                borderRadius: '12px',
-                padding: '36px 40px',
-              }}
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-ok)' }}>
-                  VERIFICATION
-                </span>
-              </div>
-              <h3
-                className="font-inter font-semibold mb-4"
-                style={{ fontSize: '22px', lineHeight: 1.2, letterSpacing: '-0.015em', color: 'var(--d-fg)' }}
-              >
-                The trust layer.
-              </h3>
-              <p
-                className="font-inter mb-6"
-                style={{ fontSize: '15px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300, maxWidth: '680px' }}
-              >
-                Schema alone isn&apos;t trust. The entity graph has to match the real business across
-                every authoritative source. We review and align Google Business Profile, Bing Places,
-                Apple Maps, Yelp, BBB, licensing profiles, NAP consistency, and address and
-                service-area strategy so AI systems and search engines see one coherent identity,
-                not contradictions.
-              </p>
-              <ul className="flex flex-col gap-2">
-                {[
-                  'Directory and profile audit across Google, Bing, Apple, Yelp, BBB',
-                  'NAP and sameAs alignment across all authoritative sources',
-                  'GBP and service-area risk review for licensed and shared-office practitioners',
-                  'Address strategy verification (storefront vs. service-area vs. brokerage location)',
-                ].map((s) => (
-                  <li key={s} className="flex items-start gap-2">
-                    <span style={{ color: 'var(--d-ok)', flexShrink: 0, fontSize: '12px', marginTop: '1px' }}>✓</span>
-                    <span
-                      className="font-mono"
-                      style={{ fontSize: '10px', letterSpacing: '0.08em', color: 'var(--d-fg-mute)', lineHeight: 1.6 }}
-                    >
-                      {s}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+          {/* Verification */}
+          <div className="flex items-center gap-4 mb-6">
+            <span className="font-mono flex-shrink-0" style={{ fontSize: '9px', letterSpacing: '0.22em', color: ACCENT }}>ALSO INCLUDED IN EVERY FOUNDATION BUILD</span>
+            <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(93,213,255,0.3), transparent)' }} />
           </div>
+          <article className="glass-panel-soft mb-14" style={{ padding: '34px 38px', borderLeft: '2px solid rgba(93,213,255,0.55)' }}>
+            <p className="font-mono mb-5" style={{ fontSize: '10px', letterSpacing: '0.18em', color: ACCENT }}>VERIFICATION</p>
+            <h3 className="font-inter font-semibold mb-4" style={{ fontSize: '22px', lineHeight: 1.2, letterSpacing: '-0.015em', color: FG }}>The trust layer.</h3>
+            <p className="font-inter mb-6" style={{ fontSize: '15px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
+              Schema alone isn&apos;t trust. The entity graph has to match the real business across
+              every authoritative source. We review and align Google Business Profile, Bing Places,
+              Apple Maps, Yelp, BBB, licensing profiles, NAP consistency, and address and
+              service-area strategy so AI systems and search engines see one coherent identity,
+              not contradictions.
+            </p>
+            <ul className="flex flex-col gap-2.5">
+              {[
+                'Directory and profile audit across Google, Bing, Apple, Yelp, BBB',
+                'NAP and sameAs alignment across all authoritative sources',
+                'GBP and service-area risk review for licensed and shared-office practitioners',
+                'Address strategy verification (storefront vs. service-area vs. brokerage location)',
+              ].map((s) => (
+                <li key={s} className="flex items-start gap-3 font-inter" style={{ fontSize: '14px', color: DIM, lineHeight: 1.55 }}>
+                  <span style={{ color: ACCENT, flexShrink: 0, marginTop: '1px' }}>✓</span>
+                  <span>{s}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
 
           {/* Deliverables */}
-          <div
-            style={{
-              background: 'var(--d-bg-3)',
-              border: '1px solid var(--d-line)',
-              borderRadius: '16px',
-              padding: '48px',
-              marginBottom: '64px',
-            }}
-          >
-            <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-fg-mute)' }}>
-              WHAT YOU OWN ON DAY ONE OF WEEK NINE
-            </p>
-            <h3
-              className="font-inter font-semibold mb-10"
-              style={{
-                fontSize: 'clamp(22px, 3vw, 32px)',
-                lineHeight: 1.15,
-                letterSpacing: '-0.02em',
-                color: 'var(--d-fg)',
-              }}
-            >
-              Everything. <em className="serif">With keys.</em>
+          <div className="glass-panel-soft mb-14" style={{ padding: '44px' }}>
+            <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: MUTE }}>WHAT YOU OWN ON DAY ONE OF WEEK NINE</p>
+            <h3 className="font-inter font-semibold mb-9" style={{ fontSize: 'clamp(22px, 3vw, 32px)', lineHeight: 1.15, letterSpacing: '-0.02em', color: FG }}>
+              Everything. <em className="serif" style={{ color: ACCENT }}>With keys.</em>
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
               {deliverables.map((d) => (
                 <div key={d.l} className="flex gap-4">
-                  <div className="flex-shrink-0" style={{ marginTop: '2px' }}>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M5 10L8.5 13.5L15 7"
-                        stroke="var(--d-accent)"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="flex-shrink-0" style={{ marginTop: '2px' }}>
+                    <path d="M5 10L8.5 13.5L15 7" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                   <div>
-                    <p
-                      className="font-inter font-semibold mb-1"
-                      style={{ fontSize: '14px', color: 'var(--d-fg)', letterSpacing: '-0.005em' }}
-                    >
-                      {d.l}
-                    </p>
-                    <p
-                      className="font-inter"
-                      style={{ fontSize: '13px', lineHeight: 1.6, color: 'var(--d-fg-mute)', fontWeight: 300 }}
-                    >
-                      {d.d}
-                    </p>
+                    <p className="font-inter font-semibold mb-1" style={{ fontSize: '14px', color: FG, letterSpacing: '-0.005em' }}>{d.l}</p>
+                    <p className="font-inter" style={{ fontSize: '13px', lineHeight: 1.6, color: MUTE, fontWeight: 300 }}>{d.d}</p>
                   </div>
                 </div>
               ))}
@@ -476,66 +258,22 @@ export default function ServicesPage() {
           </div>
 
           {/* Process timeline */}
-          <div style={{ marginBottom: '64px' }}>
-            <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-fg-mute)' }}>
-              PROCESS · 6–8 WEEKS
-            </p>
-            <h3
-              className="font-inter font-semibold mb-10"
-              style={{
-                fontSize: 'clamp(22px, 3vw, 32px)',
-                lineHeight: 1.15,
-                letterSpacing: '-0.02em',
-                color: 'var(--d-fg)',
-              }}
-            >
-              How the engagement <em className="serif">runs.</em>
+          <div className="mb-12">
+            <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: MUTE }}>PROCESS · 6–8 WEEKS</p>
+            <h3 className="font-inter font-semibold mb-9" style={{ fontSize: 'clamp(22px, 3vw, 32px)', lineHeight: 1.15, letterSpacing: '-0.02em', color: FG }}>
+              How the engagement <em className="serif" style={{ color: ACCENT }}>runs.</em>
             </h3>
             <div>
               {processSteps.map((s, i) => (
                 <div key={s.w} className="flex gap-6">
-                  <div className="flex flex-col items-center flex-shrink-0" style={{ width: '20px' }}>
-                    <div
-                      style={{
-                        width: '10px',
-                        height: '10px',
-                        borderRadius: '50%',
-                        background: 'var(--d-accent)',
-                        flexShrink: 0,
-                        marginTop: '5px',
-                        boxShadow: '0 0 8px rgba(93,213,255,0.4)',
-                      }}
-                    />
-                    {i < processSteps.length - 1 && (
-                      <div
-                        style={{
-                          width: '1px',
-                          flex: 1,
-                          background: 'var(--d-line)',
-                          minHeight: '36px',
-                        }}
-                      />
-                    )}
+                  <div className="flex flex-col items-center flex-shrink-0" style={{ width: '12px' }}>
+                    <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: ACCENT, flexShrink: 0, marginTop: '5px', boxShadow: '0 0 10px rgba(93,213,255,0.5)' }} />
+                    {i < processSteps.length - 1 && <div style={{ width: '1px', flex: 1, background: 'rgba(255,255,255,0.14)', minHeight: '38px' }} />}
                   </div>
-                  <div style={{ paddingBottom: i < processSteps.length - 1 ? '36px' : '0' }}>
-                    <p
-                      className="font-mono mb-1"
-                      style={{ fontSize: '10px', letterSpacing: '0.16em', color: 'var(--d-accent)' }}
-                    >
-                      {s.w}
-                    </p>
-                    <p
-                      className="font-inter font-semibold mb-2"
-                      style={{ fontSize: '15px', color: 'var(--d-fg)', letterSpacing: '-0.01em' }}
-                    >
-                      {s.t}
-                    </p>
-                    <p
-                      className="font-inter"
-                      style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-                    >
-                      {s.d}
-                    </p>
+                  <div style={{ paddingBottom: i < processSteps.length - 1 ? '38px' : '0' }}>
+                    <p className="font-mono mb-1" style={{ fontSize: '10px', letterSpacing: '0.16em', color: ACCENT }}>{s.w}</p>
+                    <p className="font-inter font-semibold mb-2" style={{ fontSize: '15px', color: FG, letterSpacing: '-0.01em' }}>{s.t}</p>
+                    <p className="font-inter" style={{ fontSize: '14px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px' }}>{s.d}</p>
                   </div>
                 </div>
               ))}
@@ -543,306 +281,102 @@ export default function ServicesPage() {
           </div>
 
           {/* Mid-page CTA */}
-          <div
-            className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5"
-            style={{
-              background: 'rgba(93,213,255,0.04)',
-              border: '1px solid rgba(93,213,255,0.2)',
-              borderRadius: '14px',
-              padding: '36px 40px',
-            }}
-          >
+          <div className="glass-panel-soft flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5" style={{ padding: '32px 36px', borderColor: 'rgba(93,213,255,0.22)' }}>
             <div>
-              <h3
-                className="font-inter font-semibold mb-2"
-                style={{ fontSize: '18px', letterSpacing: '-0.015em', color: 'var(--d-fg)' }}
-              >
-                Ready to see what&apos;s actually under the hood?
-              </h3>
-              <p
-                className="font-inter"
-                style={{ fontSize: '14px', lineHeight: 1.6, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-              >
-                Start with a Machine Read. Free, no pitch, 24–48 hour turnaround.
-              </p>
+              <h3 className="font-inter font-semibold mb-2" style={{ fontSize: '18px', letterSpacing: '-0.015em', color: FG }}>Ready to see what&apos;s actually under the hood?</h3>
+              <p className="font-inter" style={{ fontSize: '14px', lineHeight: 1.6, color: DIM, fontWeight: 300 }}>Start with a Machine Read. Free, no pitch, 24–48 hour turnaround.</p>
             </div>
-            <Link href="/contact" className="d-btn d-btn-primary flex-shrink-0">
-              Run my site →
-            </Link>
+            <Link href="/contact" className="d-btn d-btn-primary flex-shrink-0">Run my site →</Link>
           </div>
-
-        </div>
+        </GlassPanel>
       </section>
 
       {/* ── Adjacent Services ────────────────────────────── */}
-      <section
-        id="adjacent"
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-
-          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-            02 / ADJACENT
-          </p>
-          <h2
-            className="font-inter font-semibold mb-5"
-            style={{
-              fontSize: 'clamp(32px, 4.5vw, 52px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-              maxWidth: '640px',
-            }}
-          >
-            When a full rebuild isn&apos;t <em className="serif">the answer.</em>
+      <section id="adjacent" className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: ACCENT }}>02 / ADJACENT</p>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: FG, maxWidth: '640px' }}>
+            When a full rebuild isn&apos;t <em className="serif" style={{ color: ACCENT }}>the answer.</em>
           </h2>
-          <p
-            className="font-inter mb-14"
-            style={{
-              fontSize: '17px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-dim)',
-              fontWeight: 300,
-              maxWidth: '560px',
-            }}
-          >
+          <p className="font-inter mb-12" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
             Sometimes your site is structurally fine but the strategy isn&apos;t.
             Sometimes you need a second set of eyes on schema, IA, or how content
             should be organized. We work on those, too — scoped per engagement.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            {/* SEO Consulting */}
-            <article
-              style={{
-                background: 'var(--d-bg-2)',
-                border: '1px solid var(--d-line)',
-                borderRadius: '14px',
-                padding: '36px',
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <div className="flex items-center justify-between mb-5">
-                <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-                  SEO CONSULTING
-                </span>
-                <span className="font-mono" style={{ fontSize: '9px', letterSpacing: '0.12em', color: 'var(--d-fg-mute)' }}>
-                  SCOPED PER ENGAGEMENT
-                </span>
-              </div>
-              <h3
-                className="font-inter font-semibold mb-3"
-                style={{ fontSize: '20px', lineHeight: 1.2, letterSpacing: '-0.015em', color: 'var(--d-fg)' }}
-              >
-                SEO + AI visibility <em className="serif">consulting.</em>
-              </h3>
-              <p
-                className="font-inter mb-6"
-                style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-              >
-                Strategy and audit work for sites that don&apos;t need a rebuild. We read what&apos;s there,
-                identify what&apos;s broken or missing — schema gaps, entity coherence, technical SEO issues,
-                AI crawler accessibility — and write a prioritized action plan your existing team can execute.
-              </p>
-              <div className="flex-1 mb-6">
-                <p className="font-mono mb-3" style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-mute)' }}>
-                  TYPICAL DELIVERABLES
-                </p>
-                <ul className="flex flex-col gap-2">
-                  {seoDeliverables.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span style={{ color: 'var(--d-accent)', flexShrink: 0, marginTop: '2px', fontSize: '12px' }}>—</span>
-                      <span
-                        className="font-inter"
-                        style={{ fontSize: '13px', lineHeight: 1.55, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-                      >
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="font-mono" style={{ fontSize: '9px', letterSpacing: '0.12em', color: 'var(--d-fg-mute)' }}>
-                → FOR: ESTABLISHED SITES, IN-HOUSE TEAMS, AGENCIES NEEDING A SECOND OPINION
-              </p>
-            </article>
-
-            {/* Content Design + IA */}
-            <article
-              style={{
-                background: 'var(--d-bg-2)',
-                border: '1px solid var(--d-line)',
-                borderRadius: '14px',
-                padding: '36px',
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <div className="flex items-center justify-between mb-5">
-                <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-                  CONTENT DESIGN
-                </span>
-                <span className="font-mono" style={{ fontSize: '9px', letterSpacing: '0.12em', color: 'var(--d-fg-mute)' }}>
-                  SCOPED PER ENGAGEMENT
-                </span>
-              </div>
-              <h3
-                className="font-inter font-semibold mb-3"
-                style={{ fontSize: '20px', lineHeight: 1.2, letterSpacing: '-0.015em', color: 'var(--d-fg)' }}
-              >
-                Content design <em className="serif">+ IA.</em>
-              </h3>
-              <p
-                className="font-inter mb-6"
-                style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-              >
-                Architecture work — what should exist on your site, how it should connect,
-                and how it should be structured so both humans and AI systems can navigate it.
-                We design the skeleton and the connective tissue. We don&apos;t write the words.
-              </p>
-              <div className="flex-1 mb-6">
-                <p className="font-mono mb-3" style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-mute)' }}>
-                  TYPICAL DELIVERABLES
-                </p>
-                <ul className="flex flex-col gap-2">
-                  {contentDeliverables.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span style={{ color: 'var(--d-accent)', flexShrink: 0, marginTop: '2px', fontSize: '12px' }}>—</span>
-                      <span
-                        className="font-inter"
-                        style={{ fontSize: '13px', lineHeight: 1.55, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-                      >
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="font-mono" style={{ fontSize: '9px', letterSpacing: '0.12em', color: 'var(--d-fg-mute)' }}>
-                → FOR: TEAMS WITH A WRITER · AGENCIES THAT NEED STRUCTURE · BUSINESSES PLANNING A CONTENT INVESTMENT
-              </p>
-            </article>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {[
+              { label: 'SEO CONSULTING', title: 'SEO + AI visibility ', em: 'consulting.', body: 'Strategy and audit work for sites that don’t need a rebuild. We read what’s there, identify what’s broken or missing — schema gaps, entity coherence, technical SEO issues, AI crawler accessibility — and write a prioritized action plan your existing team can execute.', items: seoDeliverables, forLine: '→ FOR: ESTABLISHED SITES, IN-HOUSE TEAMS, AGENCIES NEEDING A SECOND OPINION' },
+              { label: 'CONTENT DESIGN', title: 'Content design ', em: '+ IA.', body: 'Architecture work — what should exist on your site, how it should connect, and how it should be structured so both humans and AI systems can navigate it. We design the skeleton and the connective tissue. We don’t write the words.', items: contentDeliverables, forLine: '→ FOR: TEAMS WITH A WRITER · AGENCIES THAT NEED STRUCTURE · BUSINESSES PLANNING A CONTENT INVESTMENT' },
+            ].map((card) => (
+              <article key={card.label} className="glass-panel-soft" style={{ padding: '34px', display: 'flex', flexDirection: 'column' }}>
+                <div className="flex items-center justify-between mb-5">
+                  <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.18em', color: ACCENT }}>{card.label}</span>
+                  <span className="font-mono" style={{ fontSize: '9px', letterSpacing: '0.12em', color: MUTE }}>SCOPED PER ENGAGEMENT</span>
+                </div>
+                <h3 className="font-inter font-semibold mb-3" style={{ fontSize: '20px', lineHeight: 1.2, letterSpacing: '-0.015em', color: FG }}>
+                  {card.title}<em className="serif" style={{ color: ACCENT }}>{card.em}</em>
+                </h3>
+                <p className="font-inter mb-6" style={{ fontSize: '14px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>{card.body}</p>
+                <div className="flex-1 mb-6">
+                  <p className="font-mono mb-3" style={{ fontSize: '9px', letterSpacing: '0.16em', color: MUTE }}>TYPICAL DELIVERABLES</p>
+                  <ul className="flex flex-col gap-2">
+                    {card.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 font-inter" style={{ fontSize: '13px', lineHeight: 1.55, color: DIM, fontWeight: 300 }}>
+                        <span style={{ color: ACCENT, flexShrink: 0, marginTop: '2px' }}>—</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="font-mono" style={{ fontSize: '9px', letterSpacing: '0.12em', color: MUTE, lineHeight: 1.5 }}>{card.forLine}</p>
+              </article>
+            ))}
           </div>
-        </div>
+        </GlassPanel>
       </section>
 
       {/* ── Scope ────────────────────────────────────────── */}
-      <section
-        id="scope"
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-
-          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-            03 / SCOPE
-          </p>
-          <h2
-            className="font-inter font-semibold mb-5"
-            style={{
-              fontSize: 'clamp(32px, 4.5vw, 52px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-              maxWidth: '600px',
-            }}
-          >
-            What we <em className="serif">don&apos;t do.</em>
+      <section id="scope" className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: ACCENT }}>03 / SCOPE</p>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: FG, maxWidth: '600px' }}>
+            What we <em className="serif" style={{ color: ACCENT }}>don&apos;t do.</em>
           </h2>
-          <p
-            className="font-inter mb-14"
-            style={{
-              fontSize: '17px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-dim)',
-              fontWeight: 300,
-              maxWidth: '560px',
-            }}
-          >
+          <p className="font-inter mb-12" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
             We&apos;re focused on doing one thing exceptionally well: building AI-native web infrastructure.
             We don&apos;t dabble in the rest, and we won&apos;t pretend to. Here&apos;s where we stop — so you know who else to hire.
           </p>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {scopeItems.map((s) => (
-              <div
-                key={s.t}
-                style={{
-                  background: 'var(--d-bg-3)',
-                  border: '1px solid var(--d-line)',
-                  borderRadius: '12px',
-                  padding: '24px 28px',
-                }}
-              >
-                <p
-                  className="font-mono mb-3"
-                  style={{ fontSize: '18px', color: 'var(--d-fg-mute)', lineHeight: 1 }}
-                >
-                  ×
-                </p>
-                <p
-                  className="font-inter font-semibold mb-2"
-                  style={{ fontSize: '15px', color: 'var(--d-fg)', letterSpacing: '-0.01em' }}
-                >
-                  {s.t}
-                </p>
-                <p
-                  className="font-inter"
-                  style={{ fontSize: '13px', lineHeight: 1.6, color: 'var(--d-fg-mute)', fontWeight: 300 }}
-                >
-                  {s.d}
-                </p>
+              <div key={s.t} className="glass-panel-soft" style={{ padding: '24px 26px' }}>
+                <p className="font-mono mb-3" style={{ fontSize: '18px', color: MUTE, lineHeight: 1 }}>×</p>
+                <p className="font-inter font-semibold mb-2" style={{ fontSize: '15px', color: FG, letterSpacing: '-0.01em' }}>{s.t}</p>
+                <p className="font-inter" style={{ fontSize: '13px', lineHeight: 1.6, color: MUTE, fontWeight: 300 }}>{s.d}</p>
               </div>
             ))}
           </div>
-        </div>
+        </GlassPanel>
       </section>
 
       {/* ── Final CTA ────────────────────────────────────── */}
-      <section
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
+      <section className="secondary-section" style={{ ...sectionGap, paddingBottom: '120px' }}>
+        <GlassPanel style={{ padding: 'clamp(40px, 6vw, 72px)', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">START HERE</div>
-
-          <h2
-            className="font-inter font-semibold mb-5"
-            style={{
-              fontSize: 'clamp(28px, 3.5vw, 44px)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-            }}
-          >
-            The first step is <em className="serif">always</em> a Machine Read.
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
+            The first step is <em className="serif" style={{ color: ACCENT }}>always</em> a Machine Read.
           </h2>
-
-          <p
-            className="font-inter mb-8"
-            style={{
-              fontSize: '16px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-dim)',
-              fontWeight: 300,
-            }}
-          >
+          <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
             Whether you end up needing a Foundation Build, SEO consulting, content design,
             or nothing at all — we start by reading what&apos;s actually there. Free.
             24–48 hour turnaround. You keep the report either way.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="d-btn d-btn-primary">
-              Run my site →
-            </Link>
-            <a href="mailto:mark@kodecite.ai" className="d-btn d-btn-ghost">
-              Email mark@kodecite.ai
-            </a>
+            <Link href="/contact" className="d-btn d-btn-primary">Run my site →</Link>
+            <a href="mailto:mark@kodecite.ai" className="d-btn d-btn-ghost">Email mark@kodecite.ai</a>
           </div>
-        </div>
+        </GlassPanel>
       </section>
-    </>
+    </SecondaryPageShell>
   );
 }

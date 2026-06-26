@@ -1051,6 +1051,118 @@ html.kc-home-locked footer {
   display: none;
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECONDARY-PAGE SYSTEM — glass panels floating over continuous animated water.
+   Self-contained; uses only secondary-* / glass-* class names. Does not touch
+   any homepage slider (.kc-slide*) selectors.
+═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Continuous water background (portaled to <body>, fixed to viewport) ── */
+.secondary-water-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: #08152c; /* deep-water fallback if the image fails */
+}
+.secondary-water-layer {
+  position: absolute;
+  inset: -12%;
+  background: url('/backgrounds/water-secondary.webp') center / cover no-repeat;
+  transform: scale(1.06);
+  will-change: transform;
+  animation: secondary-water-drift 42s ease-in-out infinite alternate;
+}
+.secondary-water-layer--depth {
+  filter: blur(24px) brightness(0.82) saturate(115%);
+  opacity: 0.5;
+  animation: secondary-water-drift-2 64s ease-in-out infinite alternate;
+}
+.secondary-water-shimmer {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(130% 70% at 50% -18%, rgba(150, 200, 255, 0.16), transparent 55%),
+    radial-gradient(90% 60% at 82% 112%, rgba(18, 60, 120, 0.28), transparent 60%);
+  animation: secondary-water-shimmer 28s ease-in-out infinite alternate;
+}
+/* calms the water so it reads premium and keeps text/panels legible */
+.secondary-water-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 16, 34, 0.34) 0%,
+    rgba(6, 14, 30, 0.26) 42%,
+    rgba(4, 11, 26, 0.55) 100%
+  );
+}
+
+@keyframes secondary-water-drift {
+  from { transform: scale(1.06) translate3d(-1.2%, -0.8%, 0); }
+  to   { transform: scale(1.12) translate3d(1.2%, 1.0%, 0); }
+}
+@keyframes secondary-water-drift-2 {
+  from { transform: scale(1.10) translate3d(1.0%, 0.6%, 0); }
+  to   { transform: scale(1.16) translate3d(-1.0%, -0.8%, 0); }
+}
+@keyframes secondary-water-shimmer {
+  from { opacity: 0.7; transform: translate3d(-1.2%, 0, 0); }
+  to   { opacity: 1; transform: translate3d(1.2%, 0, 0); }
+}
+
+/* ── Page wrapper + content column ── */
+.secondary-page { position: relative; min-height: 100vh; }
+.secondary-content { position: relative; z-index: 1; }
+.secondary-section { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.secondary-hero { padding-top: clamp(130px, 18vh, 180px); }
+
+/* ── Glass panels ── */
+.glass-panel {
+  position: relative;
+  background: rgba(9, 21, 44, 0.52);
+  backdrop-filter: blur(26px) saturate(135%);
+  -webkit-backdrop-filter: blur(26px) saturate(135%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  box-shadow:
+    0 28px 80px -32px rgba(2, 10, 28, 0.78),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+/* subtle cyan edge-light along the top — reads as light catching glass */
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(160deg, rgba(140, 220, 255, 0.30), transparent 38%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.glass-panel-soft {
+  position: relative;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+}
+.secondary-jump { transition: background-color 0.2s ease, border-color 0.2s ease; }
+.secondary-jump:hover {
+  background: rgba(93, 213, 255, 0.10);
+  border-color: rgba(93, 213, 255, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .secondary-water-layer,
+  .secondary-water-layer--depth,
+  .secondary-water-shimmer {
+    animation: none;
+  }
+}
+
 /* Background layers — crossfade + scale(1.08→1) + blur(16px→0) on activate */
 .kc-slide-bg {
   position: absolute;
