@@ -909,11 +909,11 @@ em.serif {
   flex-direction: column;
   justify-content: center;
   padding: 120px 8vw 80px;
-  /* same urban surface as the secondary pages, heavily darkened so the menu
-     links stay crisp — opening the menu feels like the same world */
+  /* same urban surface as the secondary pages, at a matching brightness so the
+     menu feels like the same world (links stay crisp via their own contrast) */
   background-color: #05080f;
   background-image:
-    linear-gradient(rgba(4, 8, 16, 0.80), rgba(3, 6, 12, 0.88)),
+    linear-gradient(rgba(4, 8, 16, 0.48), rgba(3, 6, 12, 0.60)),
     url('/backgrounds/urban-secondary.webp');
   background-size: cover;
   background-position: center;
@@ -1104,6 +1104,13 @@ html.kc-home-locked footer {
   --d-bg-3: rgba(14, 23, 38, 0.56);
   --d-line: rgba(255, 255, 255, 0.12);
   --d-line-s: rgba(255, 255, 255, 0.22);
+}
+/* long-form (blog) — a calmer translucent reading wash so dense article text
+   stays legible while the urban surface still shows through and at the edges */
+.secondary-page--reading {
+  --d-bg: rgba(8, 13, 24, 0.46);
+  --d-bg-2: rgba(12, 20, 34, 0.55);
+  --d-bg-3: rgba(14, 23, 38, 0.58);
 }
 .secondary-page-content { position: relative; z-index: 1; }
 /* keep section-level headings legible where they sit over the background */
