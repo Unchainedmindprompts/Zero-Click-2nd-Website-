@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { blogPosts, getFeaturedPosts } from '@/lib/blog';
 import BlogFilter from '@/components/blog/BlogFilter';
+import SecondaryPageShell from '@/components/SecondaryPageShell';
 
 export const metadata = {
   title: 'The Playbook',
@@ -13,7 +14,7 @@ export default function BlogPage() {
   const featured = getFeaturedPosts();
 
   return (
-    <>
+    <SecondaryPageShell>
       {/* ── Hero ─────────────────────────────────────────── */}
       <section style={{ padding: '140px 32px 64px', backgroundColor: 'var(--d-bg)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
@@ -99,6 +100,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </>
+    </SecondaryPageShell>
   );
 }

@@ -909,7 +909,14 @@ em.serif {
   flex-direction: column;
   justify-content: center;
   padding: 120px 8vw 80px;
-  background-color: var(--kc-bg);
+  /* same urban surface as the secondary pages, heavily darkened so the menu
+     links stay crisp — opening the menu feels like the same world */
+  background-color: #05080f;
+  background-image:
+    linear-gradient(rgba(4, 8, 16, 0.80), rgba(3, 6, 12, 0.88)),
+    url('/backgrounds/urban-secondary.webp');
+  background-size: cover;
+  background-position: center;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -1085,8 +1092,26 @@ html.kc-home-locked footer {
 }
 
 /* ── Page wrapper + content column (floats above the background) ── */
-.secondary-page { position: relative; min-height: 100vh; }
+.secondary-page {
+  position: relative;
+  min-height: 100vh;
+  /* Map the legacy dark design-system tokens to glass values so any page
+     wrapped in the shell that still uses --d-* becomes transparent sections +
+     translucent panels over the urban background (no black blocks). Pages that
+     already use bespoke glass styling (Services, Contact) don't read these. */
+  --d-bg: transparent;
+  --d-bg-2: rgba(12, 20, 34, 0.52);
+  --d-bg-3: rgba(14, 23, 38, 0.56);
+  --d-line: rgba(255, 255, 255, 0.12);
+  --d-line-s: rgba(255, 255, 255, 0.22);
+}
 .secondary-page-content { position: relative; z-index: 1; }
+/* keep section-level headings legible where they sit over the background */
+.secondary-page h1,
+.secondary-page h2,
+.secondary-page h3 {
+  text-shadow: 0 2px 26px rgba(2, 8, 18, 0.5);
+}
 .secondary-section { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 .secondary-hero { padding-top: clamp(130px, 18vh, 180px); }
 
