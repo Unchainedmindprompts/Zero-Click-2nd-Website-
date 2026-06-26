@@ -61,7 +61,7 @@ export default function CinematicSlide({
       <Heading
         className="kc-slide-focus font-inter font-semibold"
         style={{
-          fontSize: 'clamp(36px, 6vw, 84px)',
+          fontSize: 'clamp(36px, 4.4vw, 84px)',
           lineHeight: 1.03,
           letterSpacing: '-0.045em',
           color: c.fg,
