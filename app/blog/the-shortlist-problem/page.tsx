@@ -515,7 +515,7 @@ export default function ShortlistProblemPage() {
             </Link>
             <Link
               href="/blog"
-              className="border border-[#6a5a48] hover:border-[#a09080] text-[var(--d-fg-mute)] hover:text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
+              className="border border-[var(--d-fg-mute)] hover:border-[#a09080] text-[var(--d-fg-mute)] hover:text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
             >
               Read More Articles
             </Link>

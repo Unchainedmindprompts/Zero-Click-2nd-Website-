@@ -227,7 +227,7 @@ function TrafficDivergenceChart() {
               y={toY(tick) + 4}
               textAnchor="end"
               fontSize={10}
-              fill="#6a5a48"
+              fill="var(--d-fg-mute)"
               fontFamily="sans-serif"
             >
               {tick}
@@ -244,7 +244,7 @@ function TrafficDivergenceChart() {
               y={height - 8}
               textAnchor="middle"
               fontSize={9}
-              fill="#6a5a48"
+              fill="var(--d-fg-mute)"
               fontFamily="sans-serif"
             >
               {d.month}
