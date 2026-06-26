@@ -30,7 +30,7 @@ const serviceSchema = {
       {
         '@type': 'Offer',
         name: 'Foundation Build',
-        description: 'Full 4-layer rebuild — Chassis, Engine, Aero, Graphics. 6–8 weeks. You own everything.',
+        description: 'Complete AI-readable rebuild — Chassis, Engine, Aero, Graphics. Built in focused phases. You own everything.',
         itemOffered: { '@type': 'Service', name: 'Foundation Build', serviceType: 'AI Visibility Infrastructure' },
       },
       {
@@ -95,11 +95,11 @@ const deliverables = [
 ];
 
 const processSteps = [
-  { w: 'WEEK 1', t: 'Discovery + audit', d: 'We read your existing site, your traffic, your goals. You tell us what matters. We come back with a build brief — what gets kept, what gets rebuilt, what gets removed.' },
-  { w: 'WEEKS 2–3', t: 'Architecture + design system', d: 'Information architecture, route map, schema graph design, design tokens, and the component library. Approved before any production code is written.' },
-  { w: 'WEEKS 4–6', t: 'Build', d: 'Page-by-page implementation. Live preview deployments at every push. You review and approve as we go — no big-bang reveal at the end.' },
-  { w: 'WEEK 7', t: 'Content migration + QA', d: 'Existing blog posts moved into the new system with URLs and JSON-LD preserved. Cross-browser, accessibility, performance, schema validation — all checked.' },
-  { w: 'WEEK 8', t: 'Handoff', d: 'Domain cutover. Repo transferred. Vercel transferred. Walkthrough. Documentation. You own it.' },
+  { w: 'PHASE 01', t: 'Discovery + audit', d: 'We read your existing site, your traffic, your goals. You tell us what matters. We come back with a build brief — what gets kept, what gets rebuilt, what gets removed.' },
+  { w: 'PHASE 02', t: 'Architecture + design system', d: 'Information architecture, route map, schema graph design, design tokens, and the component library. Approved before any production code is written.' },
+  { w: 'PHASE 03', t: 'Build', d: 'Page-by-page implementation. Live preview deployments at every push. You review and approve as we go — no big-bang reveal at the end.' },
+  { w: 'PHASE 04', t: 'Content migration + QA', d: 'Existing blog posts moved into the new system with URLs and JSON-LD preserved. Cross-browser, accessibility, performance, schema validation — all checked.' },
+  { w: 'PHASE 05', t: 'Handoff', d: 'Domain cutover. Repo transferred. Vercel transferred. Walkthrough. Documentation. You own it.' },
 ];
 
 const seoDeliverables = [
@@ -156,7 +156,7 @@ export default function ServicesPage() {
 
           <div className="flex flex-col gap-3" style={{ maxWidth: '680px' }}>
             {[
-              { href: '#foundation-build', tag: 'FLAGSHIP', title: 'Foundation Build', desc: 'Full 4-layer rebuild · 6–8 weeks · you own everything' },
+              { href: '#foundation-build', tag: 'FLAGSHIP', title: 'Foundation Build', desc: 'Complete AI-readable rebuild · built in focused phases · you own everything' },
               { href: '#adjacent', tag: 'ADJACENT', title: 'SEO + Content Design', desc: "Strategy and structure for sites that aren't ready to rebuild" },
               { href: '#scope', tag: 'SCOPE', title: "What we don't do", desc: 'Honest about where we stop · so you know who else to hire' },
             ].map((link) => (
@@ -179,8 +179,8 @@ export default function ServicesPage() {
             The Foundation <em className="serif" style={{ color: ACCENT }}>Build.</em>
           </h2>
           <p className="font-inter mb-14" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
-            A complete rebuild of your business website on infrastructure that&apos;s actually
-            legible to the systems people now use to find you. Engineered once. Owned forever.
+            A complete rebuild of your business website on infrastructure that AI systems
+            can understand, verify, and recommend. Engineered once. Owned forever.
             No retainer.
           </p>
 
@@ -238,7 +238,7 @@ export default function ServicesPage() {
 
           {/* Deliverables */}
           <div className="glass-panel-soft mb-14" style={{ padding: '44px' }}>
-            <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: MUTE }}>WHAT YOU OWN ON DAY ONE OF WEEK NINE</p>
+            <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: MUTE }}>WHAT YOU OWN ON HANDOFF DAY</p>
             <h3 className="font-inter font-semibold mb-9" style={{ fontSize: 'clamp(22px, 3vw, 32px)', lineHeight: 1.15, letterSpacing: '-0.02em', color: FG }}>
               Everything. <em className="serif" style={{ color: ACCENT }}>With keys.</em>
             </h3>
@@ -259,7 +259,7 @@ export default function ServicesPage() {
 
           {/* Process timeline */}
           <div className="mb-12">
-            <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: MUTE }}>PROCESS · 6–8 WEEKS</p>
+            <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: MUTE }}>PROCESS · BUILT IN FOCUSED PHASES</p>
             <h3 className="font-inter font-semibold mb-9" style={{ fontSize: 'clamp(22px, 3vw, 32px)', lineHeight: 1.15, letterSpacing: '-0.02em', color: FG }}>
               How the engagement <em className="serif" style={{ color: ACCENT }}>runs.</em>
             </h3>
