@@ -42,13 +42,14 @@ export const HOME_SLIDES: HomeSlide[] = [
     // life happens. Natively text-free; the left scrim (kc-slide-bg__plate)
     // darkens the bright street so the real HTML headline/CTAs stay legible.
     id: 'ai-web',
-    kicker: 'THE AI WEB',
+    kicker: 'AI is already reading the web.',
     headline: [
-      { text: 'The next web won’t search pages.' },
-      { text: 'It will verify entities.', accent: true },
+      { text: 'Most business websites' },
+      { text: 'were never built to be' },
+      { text: 'understood by AI.', accent: true },
     ],
     support:
-      'KodeCite builds AI-readable business infrastructure for the next era of discovery.',
+      'KodeCite rebuilds business websites into AI-readable infrastructure — so your services, locations, credentials, reviews, and authority can be understood, verified, and recommended.',
     image: '/home/slide-ai-web.webp',
     bg:
       'radial-gradient(58% 78% at 76% 24%, rgba(93,213,255,0.22), transparent 60%),' +
