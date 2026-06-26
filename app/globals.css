@@ -1119,6 +1119,9 @@ html.kc-home-locked footer {
 .secondary-page h3 {
   text-shadow: 0 2px 26px rgba(2, 8, 18, 0.5);
 }
+/* the primary button uses color: var(--d-bg) for its label; --d-bg is mapped to
+   transparent here, so restore an explicit dark label on the cyan pill */
+.secondary-page .d-btn-primary { color: #0a0c1f; }
 .secondary-section { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 .secondary-hero { padding-top: clamp(130px, 18vh, 180px); }
 
