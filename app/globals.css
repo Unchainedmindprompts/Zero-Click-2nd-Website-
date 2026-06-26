@@ -1051,6 +1051,14 @@ em.serif {
   .kc-slide-copy { padding-bottom: 200px !important; }
 }
 
+/* Top-bar "Machine Read" button: hidden on mobile (only on tablet/desktop).
+   !important because .d-btn sets display:inline-flex and is defined after
+   Tailwind's .hidden, which would otherwise override it. */
+.kc-shell-cta { display: none !important; }
+@media (min-width: 768px) {
+  .kc-shell-cta { display: inline-flex !important; }
+}
+
 /* Homepage lock — applied to <html> only on `/` (via HomeScrollLock).
    The homepage is a locked full-screen slider: no vertical scroll, and nothing
    below it (the footer) is reachable. Interior pages are unaffected. */
