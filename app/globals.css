@@ -1068,24 +1068,26 @@ html.kc-home-locked footer {
 }
 .secondary-water-layer {
   position: absolute;
-  inset: -12%;
+  inset: -16%;
   background: url('/backgrounds/water-secondary.webp') center / cover no-repeat;
-  transform: scale(1.06);
   will-change: transform;
-  animation: secondary-water-drift 42s ease-in-out infinite alternate;
+  animation: secondary-water-drift 24s ease-in-out infinite alternate;
 }
+/* second copy of the same surface, counter-drifting — the two ripple patterns
+   slide across each other and shimmer, which is what reads as moving water */
 .secondary-water-layer--depth {
-  filter: blur(24px) brightness(0.82) saturate(115%);
+  filter: blur(10px) brightness(0.95) saturate(120%);
   opacity: 0.5;
-  animation: secondary-water-drift-2 64s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+  animation: secondary-water-drift-2 31s ease-in-out infinite alternate;
 }
 .secondary-water-shimmer {
   position: absolute;
-  inset: 0;
+  inset: -10%;
   background:
-    radial-gradient(130% 70% at 50% -18%, rgba(150, 200, 255, 0.16), transparent 55%),
+    radial-gradient(120% 70% at 30% -18%, rgba(160, 205, 255, 0.18), transparent 55%),
     radial-gradient(90% 60% at 82% 112%, rgba(18, 60, 120, 0.28), transparent 60%);
-  animation: secondary-water-shimmer 28s ease-in-out infinite alternate;
+  animation: secondary-water-shimmer 17s ease-in-out infinite alternate;
 }
 /* calms the water so it reads premium and keeps text/panels legible */
 .secondary-water-tint {
@@ -1100,16 +1102,16 @@ html.kc-home-locked footer {
 }
 
 @keyframes secondary-water-drift {
-  from { transform: scale(1.06) translate3d(-1.2%, -0.8%, 0); }
-  to   { transform: scale(1.12) translate3d(1.2%, 1.0%, 0); }
+  from { transform: scale(1.10) translate3d(-3.5%, -2.2%, 0) rotate(0.001deg); }
+  to   { transform: scale(1.15) translate3d(3.5%, 2.6%, 0) rotate(0.001deg); }
 }
 @keyframes secondary-water-drift-2 {
-  from { transform: scale(1.10) translate3d(1.0%, 0.6%, 0); }
-  to   { transform: scale(1.16) translate3d(-1.0%, -0.8%, 0); }
+  from { transform: scale(1.15) translate3d(4%, 1.6%, 0) rotate(0.001deg); }
+  to   { transform: scale(1.10) translate3d(-4%, -2.4%, 0) rotate(0.001deg); }
 }
 @keyframes secondary-water-shimmer {
-  from { opacity: 0.7; transform: translate3d(-1.2%, 0, 0); }
-  to   { opacity: 1; transform: translate3d(1.2%, 0, 0); }
+  from { opacity: 0.45; transform: translate3d(-4%, -1%, 0); }
+  to   { opacity: 0.9; transform: translate3d(4%, 1%, 0); }
 }
 
 /* ── Page wrapper + content column ── */
