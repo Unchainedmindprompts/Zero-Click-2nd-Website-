@@ -1045,6 +1045,12 @@ em.serif {
   touch-action: pan-y;
 }
 
+/* Mobile: the persistent CTA stacks vertically (taller), so give the slide copy
+   extra bottom clearance so the buttons never overlap the paragraph above. */
+@media (max-width: 639px) {
+  .kc-slide-copy { padding-bottom: 200px !important; }
+}
+
 /* Homepage lock — applied to <html> only on `/` (via HomeScrollLock).
    The homepage is a locked full-screen slider: no vertical scroll, and nothing
    below it (the footer) is reachable. Interior pages are unaffected. */

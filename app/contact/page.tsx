@@ -97,7 +97,6 @@ export default function ContactPage() {
                 <p className="font-mono mb-4" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>EMAIL · DIRECT</p>
                 <p className="font-inter font-semibold mb-4" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT, wordBreak: 'break-all' }}>mark@kodecite.ai</p>
                 <div className="flex flex-col gap-1 mb-5" style={{ borderTop: '1px solid rgba(255,255,255,0.10)', paddingTop: '16px' }}>
-                  <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>One-person operation.</p>
                   <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>You&apos;ll hear back from Mark himself.</p>
                 </div>
                 <span style={{ color: ACCENT, fontSize: '18px' }}>→</span>
