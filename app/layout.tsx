@@ -83,7 +83,7 @@ export const metadata: Metadata = {
       'Schema.org has been the language of the internet for 15 years. An entity graph is Schema used correctly — the foundation that makes your business visible in both AI discovery and traditional search.',
     url: 'https://www.kodecite.ai',
     siteName: 'KodeCite.ai',
-    images: [{ url: 'https://www.kodecite.ai/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.kodecite.ai/og-image.png?v=2', width: 1200, height: 630, alt: 'KodeCite.ai — AI-readable business infrastructure' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
     description:
       'An entity graph is Schema.org used correctly. Almost no business has one built right. We build it — on infrastructure you own.',
-    images: ['https://www.kodecite.ai/og-image.png'],
+    images: ['https://www.kodecite.ai/og-image.png?v=2'],
   },
   robots: {
     index: true,
