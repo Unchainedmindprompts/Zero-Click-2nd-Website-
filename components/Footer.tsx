@@ -11,7 +11,14 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ borderTop: '2px solid var(--d-line-s)', backgroundColor: 'var(--d-bg-3)' }}>
+    <footer
+      style={{
+        borderTop: '1px solid rgba(255, 255, 255, 0.10)',
+        /* transparent so the fixed urban background continues behind the footer;
+           a gentle settle toward the bottom keeps the fine print legible */
+        background: 'linear-gradient(to bottom, transparent 0%, rgba(3, 7, 14, 0.30) 55%, rgba(2, 5, 11, 0.55) 100%)',
+      }}
+    >
       <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 32px 40px' }}>
 
         {/* Top — brand + links */}

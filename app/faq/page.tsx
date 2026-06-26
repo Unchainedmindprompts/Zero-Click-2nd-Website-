@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import SecondaryPageShell from '@/components/SecondaryPageShell';
 
 export const metadata: Metadata = {
   title: 'FAQ — AI Search & Entity Graphs',
@@ -217,7 +218,7 @@ const faqs: { q: string; a: string | string[] }[] = [
 
 export default function FAQPage() {
   return (
-    <>
+    <SecondaryPageShell>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -388,6 +389,6 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
-    </>
+    </SecondaryPageShell>
   );
 }

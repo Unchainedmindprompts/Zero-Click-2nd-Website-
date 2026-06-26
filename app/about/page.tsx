@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import SecondaryPageShell from '@/components/SecondaryPageShell';
 
 export const metadata: Metadata = {
   title: 'About — Mark Abplanalp',
@@ -107,7 +108,7 @@ const trackItems = [
 
 export default function AboutPage() {
   return (
-    <>
+    <SecondaryPageShell>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -599,6 +600,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </>
+    </SecondaryPageShell>
   );
 }
