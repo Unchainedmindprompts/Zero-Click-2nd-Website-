@@ -12,6 +12,7 @@ import Shell from '@/components/Shell';
 import RouteTransition from '@/components/RouteTransition';
 import Footer from '@/components/Footer';
 import BackgroundLayer from '@/components/BackgroundLayer';
+import SecondaryBackground from '@/components/SecondaryBackground';
 
 // ── Design system v2 fonts ────────────────────────────────────────────────────
 const inter = Inter({
@@ -191,6 +192,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="antialiased">
         <BackgroundLayer />
+        <SecondaryBackground />
         <Shell />
         <RouteTransition>{children}</RouteTransition>
         <Footer />

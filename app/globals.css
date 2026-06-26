@@ -1064,12 +1064,14 @@ html.kc-home-locked footer {
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
-  background: #08152c; /* deep-water fallback if the image fails */
+  background: #05091a; /* deep-water fallback if the image fails */
 }
 .secondary-water-layer {
   position: absolute;
   inset: -16%;
   background: url('/backgrounds/water-secondary.webp') center / cover no-repeat;
+  /* deepen + slightly desaturate so the ocean reads dark navy, on-brand */
+  filter: brightness(0.62) saturate(0.92) contrast(1.04);
   will-change: transform;
   animation: secondary-water-drift 24s ease-in-out infinite alternate;
 }
@@ -1093,12 +1095,14 @@ html.kc-home-locked footer {
 .secondary-water-tint {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(6, 16, 34, 0.34) 0%,
-    rgba(6, 14, 30, 0.26) 42%,
-    rgba(4, 11, 26, 0.55) 100%
-  );
+  background:
+    radial-gradient(120% 90% at 50% 50%, transparent 0%, rgba(4, 8, 20, 0.45) 100%),
+    linear-gradient(
+      180deg,
+      rgba(5, 9, 22, 0.52) 0%,
+      rgba(5, 9, 21, 0.44) 42%,
+      rgba(2, 5, 14, 0.74) 100%
+    );
 }
 
 @keyframes secondary-water-drift {
