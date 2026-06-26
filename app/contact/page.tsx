@@ -34,8 +34,8 @@ const heroStats = [
 ];
 
 const FG = 'var(--d-fg)';
-const DIM = 'rgba(223, 230, 255, 0.74)';
-const MUTE = 'rgba(205, 216, 255, 0.5)';
+const DIM = 'rgba(233, 238, 255, 0.95)';
+const MUTE = 'rgba(219, 227, 255, 0.8)';
 const ACCENT = 'var(--d-accent)';
 const sectionGap = { marginTop: '30px' };
 
