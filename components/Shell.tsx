@@ -68,7 +68,7 @@ export default function Shell() {
 
           {/* Controls — top-right, persistent */}
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="d-btn d-btn-primary d-btn-sm hidden md:inline-flex">
+            <Link href="/contact" className="d-btn d-btn-primary d-btn-sm kc-shell-cta">
               Machine Read →
             </Link>
             <button
