@@ -595,7 +595,7 @@ export default function AeoGeoMakingSEOBetter() {
                   <p className="text-xl font-semibold italic leading-relaxed" style={{ color: '#0a0806' }}>
                     &ldquo;The question is no longer whether to do AEO alongside SEO. The question is whether you want to run one strategy that wins everywhere, or two separate strategies that each win somewhere.&rdquo;
                   </p>
-                  <footer className="mt-3 text-sm" style={{ color: '#6a5a48' }}>
+                  <footer className="mt-3 text-sm" style={{ color: 'var(--d-fg-mute)' }}>
                     — Mark Abplanalp, KodeCite.AI
                   </footer>
                 </blockquote>

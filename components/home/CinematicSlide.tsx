@@ -21,12 +21,12 @@ const PALETTE = {
     eyebrow: undefined as string | undefined,
   },
   light: {
-    fg: '#0e1320',
-    accent: '#2454d6',
-    dim: '#374055',
-    headShadow: '0 1px 26px rgba(255,255,255,0.6)',
-    bodyShadow: '0 1px 18px rgba(255,255,255,0.6)',
-    eyebrow: '#2a3242',
+    fg: '#0b101c',
+    accent: '#1e44c8',
+    dim: '#1f2735',
+    headShadow: '0 0 1px rgba(255,255,255,0.55), 0 2px 20px rgba(255,255,255,0.9)',
+    bodyShadow: '0 0 1px rgba(255,255,255,0.6), 0 1px 14px rgba(255,255,255,0.95)',
+    eyebrow: '#222b3a',
   },
 };
 

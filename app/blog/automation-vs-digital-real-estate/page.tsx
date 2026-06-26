@@ -536,7 +536,7 @@ export default function AutomationVsDigitalRealEstate() {
                   <p className="text-xl font-semibold italic leading-relaxed mb-4" style={{ color: '#0a0806' }}>
                     &ldquo;Sitting in the most beautiful cabin by a lake and in the mountains and just enjoying the peace and calm... You trust it over time, and it does have just this incredible contextual awareness of your whole life.&rdquo;
                   </p>
-                  <footer className="text-sm" style={{ color: '#6a5a48' }}>
+                  <footer className="text-sm" style={{ color: 'var(--d-fg-mute)' }}>
                     — Sam Altman, CEO, OpenAI · Emerson Collective Demo Day 2025
                   </footer>
                 </blockquote>
