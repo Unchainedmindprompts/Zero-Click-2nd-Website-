@@ -231,7 +231,7 @@ export default function FAQPage() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section style={{ padding: '120px 32px 80px', backgroundColor: 'var(--d-bg)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-          <div className="d-eyebrow mb-6">FREQUENTLY ASKED QUESTIONS</div>
+          <div className="d-eyebrow mb-6">START HERE</div>
 
           <h1
             className="font-inter font-semibold mb-6"
@@ -259,7 +259,7 @@ export default function FAQPage() {
           >
             Most people who find KodeCite already sense that something is broken
             with their online presence. They just don&apos;t have the language for it
-            yet. These are the questions worth asking.
+            yet. Start here. These are the questions worth asking.
           </p>
         </div>
       </section>
