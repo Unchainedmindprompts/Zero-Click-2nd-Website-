@@ -4,9 +4,9 @@ import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 
 export const metadata: Metadata = {
-  title: 'About — Mark Abplanalp',
+  title: 'About KodeCite — Clarity, Verification & Trust for AI Search',
   description:
-    'Mark Abplanalp built KodeCite.ai after a year figuring out why the rules of search changed — and how to make businesses AI can find, verify, and trust.',
+    'KodeCite builds AI-readable website infrastructure for businesses that need to be understood, verified, and trusted by AI systems.',
   alternates: { canonical: 'https://www.kodecite.ai/about' },
 };
 
@@ -16,14 +16,13 @@ const personSchema = {
   '@id': 'https://www.kodecite.ai/#founder',
   name: 'Mark Abplanalp',
   jobTitle: 'Founder',
-  worksFor: { '@id': 'https://www.kodecite.ai/#organization' },
+  worksFor: { '@id': 'https://www.kodecite.ai/#business' },
   address: {
     '@type': 'PostalAddress',
     addressLocality: "Coeur d'Alene",
     addressRegion: 'ID',
     addressCountry: 'US',
   },
-  // sameAs: [''], // TODO: add LinkedIn URL when provided
 };
 
 const breadcrumbSchema = {
@@ -35,568 +34,285 @@ const breadcrumbSchema = {
   ],
 };
 
-const beliefs = [
+// CVT — the public framework
+const cvt = [
   {
-    n: '01',
-    h: 'You should own everything.',
-    d: "Your repository, your domain, your hosting account, your design system. If our relationship ends, your business doesn't skip a beat. No platform rent. No \"managed\" services that hold your site hostage.",
+    k: 'C', t: 'CLARITY',
+    q: 'Can AI understand who you are, what you do, where you serve, and what each page is actually about?',
+    d: 'Clarity comes from site structure, answer-first content, clean service and location relationships, schema, internal linking, and clear entity definitions — so an AI system reads your business without guessing.',
   },
   {
-    n: '02',
-    h: 'No retainer.',
-    d: "I scope, I build, I hand off. You don't pay me monthly to keep your own website running. If you need help later, I scope a new engagement — but you're never on a meter.",
+    k: 'V', t: 'VERIFICATION',
+    q: 'Can AI confirm that your business is real and consistent across trusted sources?',
+    d: 'Verification comes from Google Business Profile, Bing Places, Apple Maps, Yelp, BBB, licensing profiles, directories, reviews, NAP consistency, sameAs links, and matching structured data across every place you appear.',
   },
   {
-    n: '03',
-    h: 'Schema is product, not metadata.',
-    d: "Most agencies treat structured data as an afterthought. It's the actual product. The JSON-LD graph is what AI systems read — making it the most important code on your site.",
-  },
-  {
-    n: '04',
-    h: 'Speak plainly. Show the work.',
-    d: "No jargon walls. No black boxes. Every recommendation I make, every line of code I write, every decision in the build — explained in language you can actually use to make a decision.",
-  },
-  {
-    n: '05',
-    h: 'Build for the next ten years, not the next algorithm update.',
-    d: "Web standards. Server-rendered HTML. Real schema. The boring, durable foundation that doesn't need to be rebuilt every time the platforms shift. Because they will shift again.",
+    k: 'T', t: 'TRUST',
+    q: 'Can AI corroborate what you claim?',
+    d: 'Trust is built when important claims connect to credible sources an AI system can check — third-party URLs, authoritative references, citations, reviews, credentials, location data, and schema relationships like mentions, sameAs, about, and spatialCoverage.',
   },
 ];
 
-const practiceCards = [
-  {
-    tag: 'CRAFT + OWNERSHIP',
-    h: 'Engineered, not assembled.',
-    d: "Every KodeCite build is written as code, not configured from templates. Schema, entity architecture, server-rendered infrastructure — all crafted for your specific business, not output from a plugin. You own the GitHub repo, the Vercel account, and every line of code we ship. When the work is done, the asset is yours.",
-  },
-  {
-    tag: 'SCOPED · NOT SUBSCRIBED',
-    h: 'Engagements have a beginning and an end.',
-    d: "Discovery, build, handoff. I scope it, I build it, I hand it off — you own it. No auto-renewing contracts. No \"and I'll keep optimizing for $X/month.\" If you decide later you want more work, I scope it new.",
-  },
-  {
-    tag: 'PROFESSIONAL SERVICES',
-    h: 'I work with practices, not platforms.',
-    d: "Dentists, med spas, physical rehab, law, financial advisors, specialty medical. Owner-operators with a real practice and real revenue at stake. Not e-commerce, not SaaS, not ad-driven content sites. Different problems.",
-  },
-  {
-    tag: 'PNW · REMOTE-FIRST',
-    h: 'Based in North Idaho. Working everywhere.',
-    d: "The practice runs from Coeur d'Alene. Engagements run remote — async with weekly calls. I've delivered for clients across the country and into Canada. Time zones haven't been a problem yet.",
-  },
+// What we build — plain English first, technical second
+const buildItems = [
+  'Server-rendered pages AI crawlers can actually read',
+  'Structured JSON-LD schema across every route',
+  'Entity graph alignment — one consistent identity',
+  'Answer-first page architecture',
+  'Review and authority-signal structure',
+  'Directory and profile consistency',
+  'Third-party corroboration links',
+  'llms.txt and agent.json where appropriate',
+  'GitHub and Vercel infrastructure you own',
+  'No platform lock-in',
 ];
 
-const trackItems = [
-  {
-    n: '30', u: 'YEARS',
-    l: 'In sales — learning what makes someone actually buy, and what makes them walk away.',
-  },
-  {
-    n: '23', u: 'YEARS',
-    l: "As an entrepreneur — running my own businesses, paying my own bills, missing my own paychecks when things broke.",
-  },
-  {
-    n: '12mo', u: 'RESEARCH',
-    l: 'Spent studying the AI search shift, schema, llms.txt, and what actually moves the needle.',
-  },
-  {
-    n: '100+', u: 'PAGES VALIDATED',
-    l: "Every KodeCite-built page validated against Google Rich Results before sign-off. Methodology proven across hundreds of live pages.",
-  },
+// How the practice operates
+const principles = [
+  { n: '01', h: 'You own everything.', d: 'Your repository, your domain, your hosting account, your design system. If the engagement ends, your business doesn’t skip a beat. No platform rent. No managed service that holds your site hostage.' },
+  { n: '02', h: 'No required retainer.', d: 'We scope, build, and hand off. You don’t pay monthly to keep your own website running. If you need more later, we scope a new engagement — you’re never on a meter.' },
+  { n: '03', h: 'Schema is product, not metadata.', d: 'Most agencies treat structured data as an afterthought. It’s the actual product — the JSON-LD graph is what AI systems read, which makes it the most important code on the site.' },
+  { n: '04', h: 'Speak plainly. Show the work.', d: 'No jargon walls. No black boxes. Every recommendation and every decision in the build is explained in language you can use to make a decision.' },
+  { n: '05', h: 'Durable infrastructure, not trend-chasing.', d: 'Web standards. Server-rendered HTML. Real schema. The durable foundation that doesn’t need rebuilding every time the platforms shift — because they will shift again.' },
 ];
 
+// shared text colors
+const FG = 'var(--d-fg)';
+const DIM = 'var(--d-fg-dim)';
+const MUTE = 'var(--d-fg-mute)';
+const ACCENT = 'var(--d-accent)';
+const wrap = { maxWidth: '1180px', margin: '0 auto' } as const;
+const sectionA = { padding: '100px 32px', backgroundColor: 'var(--d-bg)' };
+const sectionB = { padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' };
+const eyebrow = { fontSize: '11px', letterSpacing: '0.18em', color: ACCENT } as const;
+const h2Style = { fontSize: 'clamp(28px, 4vw, 48px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: FG } as const;
+const leadStyle = { fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300 } as const;
 
 export default function AboutPage() {
   return (
     <SecondaryPageShell>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ── Hero ─────────────────────────────────────────── */}
       <section style={{ padding: '120px 32px 80px', backgroundColor: 'var(--d-bg)' }}>
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-
-            {/* Left: text */}
-            <div>
-              <div className="d-eyebrow mb-6">ABOUT · THE PRACTICE</div>
-              <h1
-                className="font-inter font-semibold mb-6"
-                style={{
-                  fontSize: 'clamp(40px, 5.5vw, 68px)',
-                  lineHeight: 1.0,
-                  letterSpacing: '-0.03em',
-                  color: 'var(--d-fg)',
-                }}
-              >
-                The infrastructure most websites{' '}
-                <em className="serif">were never built on.</em>
-              </h1>
-              <p
-                className="font-inter mb-8"
-                style={{
-                  fontSize: '17px',
-                  lineHeight: 1.65,
-                  color: 'var(--d-fg-dim)',
-                  fontWeight: 300,
-                  maxWidth: '500px',
-                }}
-              >
-                KodeCite.ai didn&apos;t start as an agency. It started because the rules I&apos;d been
-                operating under for two decades had stopped working — and the experts in the room
-                couldn&apos;t explain why. I spent a year figuring out what changed. This is what
-                I built.
-              </p>
-              <div
-                className="flex flex-wrap items-center gap-2 font-mono"
-                style={{ fontSize: '10px', letterSpacing: '0.16em', color: 'var(--d-fg-mute)' }}
-              >
-                <span>MARK ABPLANALP</span>
-                <span style={{ color: 'var(--d-line)' }}>·</span>
-                <span>FOUNDER</span>
-                <span style={{ color: 'var(--d-line)' }}>·</span>
-                <span>NORTH IDAHO</span>
-              </div>
-            </div>
-
-            {/* Right: portrait placeholder */}
-            <figure style={{ maxWidth: '360px', marginLeft: 'auto', width: '100%' }}>
-              <div
-                style={{
-                  position: 'relative',
-                  aspectRatio: '4/5',
-                  borderRadius: '14px',
-                  border: '1px solid var(--d-line)',
-                  overflow: 'hidden',
-                }}
-              >
-                <Image
-                  src="/mark-abplanalp.png"
-                  alt="Mark Abplanalp — Founder, KodeCite.ai"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 360px"
-                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
-                  priority
-                />
-                {/* Corner label */}
-                <div
-                  className="font-mono"
-                  style={{
-                    position: 'absolute',
-                    bottom: '14px',
-                    right: '16px',
-                    fontSize: '10px',
-                    letterSpacing: '0.12em',
-                    color: 'var(--d-fg)',
-                    background: 'rgba(10,12,31,0.75)',
-                    backdropFilter: 'blur(8px)',
-                    WebkitBackdropFilter: 'blur(8px)',
-                    padding: '3px 8px',
-                    borderRadius: '4px',
-                    border: '1px solid var(--d-line-s)',
-                  }}
-                >
-                  M.A.
-                </div>
-              </div>
-              <figcaption
-                className="flex flex-wrap items-center gap-2 font-mono mt-3"
-                style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'var(--d-fg-mute)' }}
-              >
-                <span>30 YR SALES · 23 YR ENTREPRENEUR</span>
-                <span style={{ color: 'var(--d-line)' }}>/</span>
-                <span>CDA, ID</span>
-              </figcaption>
-            </figure>
-
-          </div>
+        <div style={wrap}>
+          <div className="d-eyebrow mb-6">ABOUT KODECITE</div>
+          <h1
+            className="font-inter font-semibold mb-7"
+            style={{ fontSize: 'clamp(30px, 3.9vw, 52px)', lineHeight: 1.08, letterSpacing: '-0.03em', color: FG, maxWidth: '900px' }}
+          >
+            Traditional websites were built for people to scroll.{' '}
+            <em className="serif" style={{ color: ACCENT }}>KodeCite builds for AI systems that verify.</em>
+          </h1>
+          <p className="font-inter" style={{ ...leadStyle, maxWidth: '660px' }}>
+            Most websites were designed for visitors who land on a page, scroll, read, and click.
+            AI systems work differently. Before they recommend a business, they need to understand
+            what it is, verify that it is real, and trust that its claims can be corroborated.
+          </p>
         </div>
       </section>
 
-      {/* ── Story ────────────────────────────────────────── */}
-      <section
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-            01 / THE STORY
-          </p>
-          <h2
-            className="font-inter font-semibold mb-12"
-            style={{
-              fontSize: 'clamp(28px, 4vw, 48px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-            }}
-          >
-            How I got <em className="serif">here.</em>
+      {/* ── 01 · Why KodeCite exists ─────────────────────── */}
+      <section style={sectionB}>
+        <div style={wrap}>
+          <p className="font-inter mb-4" style={eyebrow}>01 / WHY KODECITE EXISTS</p>
+          <h2 className="font-inter font-semibold mb-6" style={{ ...h2Style, maxWidth: '760px' }}>
+            Business discovery changed. <em className="serif" style={{ color: ACCENT }}>Most websites did not.</em>
           </h2>
-
           <div style={{ maxWidth: '720px' }}>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              I&apos;ve been building businesses in the trades since 2002. I started a window
-              treatment company in Issaquah, expanded it to Bend, Oregon in 2015, and did
-              commercial work on Apple&apos;s retail locations across the country.
+            <p className="font-inter mb-6" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
+              Discovery is no longer only about ranking pages for humans to click. People now ask
+              AI systems for recommendations, comparisons, and answers — and those systems evaluate
+              businesses differently than a search results page ever did.
             </p>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              Through all of that, I&apos;ve watched the rules of how customers find businesses
-              change four or five times. From Yellow Pages to Google to social media to review
-              sites to AI-driven recommendations. Each shift created a window where the operators
-              who saw it early and built for it gained ground that took the rest of the market
-              years to close.
+            <p className="font-inter" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
+              KodeCite exists because the old website model was built for a different discovery
+              environment. A traditional site can look polished and still be difficult for AI
+              systems to understand. The problem is usually invisible: unclear entity structure,
+              inconsistent business data, weak schema, disconnected reviews, unsupported claims,
+              and no clean relationship between the website and the rest of the business&apos;s
+              online footprint.
             </p>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              The current shift is bigger than any of those.
-            </p>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              Nearly 60% of searches now end without a single click to any website. People are
-              asking ChatGPT, Perplexity, and Google&apos;s AI Overviews for recommendations and
-              getting them — before any traditional search result loads. Voice assistants are
-              skipping search entirely. The playbook every agency is still selling is optimizing
-              for behavior that&apos;s quietly disappearing.
-            </p>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              I started looking into this not because I wanted to start an agency, but because
-              I run businesses that depend on being found. The rules I&apos;d been operating under
-              for two decades had stopped applying, and the experts in the room couldn&apos;t explain
-              why.
-            </p>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              What I learned: the websites being recommended in AI answers aren&apos;t winning
-              because of better content or bigger budgets. They&apos;re winning because they were
-              built on infrastructure that AI tools can actually read — server-rendered pages,
-              structured entity data, machine-readable identity, and architectures designed for
-              extraction rather than just for human eyes. Most websites — including most agency
-              builds — aren&apos;t built for any of that. They were built for the search era
-              that&apos;s ending.
-            </p>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              KodeCite.ai is the stack I built once I understood what was actually happening.
-              It&apos;s a foundation rebuild for owner-operators whose digital presence has stopped
-              working — or who can feel that it&apos;s about to.
-            </p>
-
-            <p
-              className="font-inter mb-6"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              I run KodeCite from North Idaho but have deep roots and active relationships across
-              the Pacific Northwest — primarily Eastside Seattle, Bend, and the
-              Coeur d&apos;Alene/Spokane corridor. If you&apos;re in any of those markets and want to talk
-              in person, that&apos;s possible. Anywhere else, the work happens remote, deliberate,
-              and grounded in 23 years of understanding what owner-operated businesses actually
-              need.
-            </p>
-
-            <p
-              className="font-inter mb-10"
-              style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-            >
-              I&apos;m not selling innovation theater. I&apos;m an operator who watched the rules change,
-              dug into the technical reasons why, and built the thing I wished someone had built
-              for me.
-            </p>
-
-            {/* Sign-off */}
-            <div style={{ borderTop: '1px solid var(--d-line)', paddingTop: '24px' }}>
-              <p
-                className="font-mono mb-1"
-                style={{ fontSize: '14px', letterSpacing: '0.08em', color: 'var(--d-fg)' }}
-              >
-                — M.A.
-              </p>
-              <p
-                className="font-mono"
-                style={{ fontSize: '9px', letterSpacing: '0.18em', color: 'var(--d-fg-mute)' }}
-              >
-                FOUNDER · KODECITE.AI · NORTH IDAHO
-              </p>
-            </div>
-
           </div>
         </div>
       </section>
 
-      {/* ── Beliefs ──────────────────────────────────────── */}
-      <section
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-            02 / WHAT I BELIEVE
-          </p>
-          <h2
-            className="font-inter font-semibold mb-5"
-            style={{
-              fontSize: 'clamp(28px, 4vw, 48px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-              maxWidth: '640px',
-            }}
-          >
-            Five things I won&apos;t <em className="serif">compromise on.</em>
+      {/* ── 02 · The CVT framework ───────────────────────── */}
+      <section style={sectionA}>
+        <div style={wrap}>
+          <p className="font-inter mb-4" style={eyebrow}>02 / THE FRAMEWORK</p>
+          <h2 className="font-inter font-semibold mb-3" style={h2Style}>
+            AI visibility starts with <em className="serif" style={{ color: ACCENT }}>CVT.</em>
           </h2>
-          <p
-            className="font-inter mb-14"
-            style={{
-              fontSize: '17px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-dim)',
-              fontWeight: 300,
-              maxWidth: '560px',
-            }}
-          >
-            These aren&apos;t marketing talking points. They&apos;re the rules I built the practice around
-            because they&apos;re the rules I needed when I was on your side of the table.
+          <p className="font-inter font-semibold mb-12" style={{ fontSize: '18px', letterSpacing: '0.01em', color: DIM }}>
+            Clarity. Verification. Trust.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+            {cvt.map((c) => (
+              <article
+                key={c.k}
+                style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)', borderRadius: '14px', padding: '32px 30px' }}
+              >
+                <div className="flex items-baseline gap-3 mb-5">
+                  <span className="serif" style={{ fontSize: '40px', lineHeight: 1, color: ACCENT }}>{c.k}</span>
+                  <span className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.18em', color: MUTE }}>{c.t}</span>
+                </div>
+                <p className="font-inter font-semibold mb-4" style={{ fontSize: '16px', lineHeight: 1.35, letterSpacing: '-0.01em', color: FG }}>
+                  {c.q}
+                </p>
+                <p className="font-inter" style={{ fontSize: '14px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+                  {c.d}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          {/* prominent thesis line */}
+          <div style={{ borderLeft: '2px solid var(--d-accent)', paddingLeft: '24px', maxWidth: '820px' }}>
+            <p className="font-inter font-semibold" style={{ fontSize: 'clamp(22px, 3vw, 34px)', lineHeight: 1.2, letterSpacing: '-0.02em', color: FG }}>
+              Trust is not what you claim.{' '}
+              <em className="serif" style={{ color: ACCENT }}>Trust is what AI can corroborate.</em>
+            </p>
+            <p className="font-inter mt-4" style={{ fontSize: '15px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
+              Corroboration is the mechanism that creates trust: every meaningful claim connected to
+              a source an AI system can independently check.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 03 · What KodeCite builds ────────────────────── */}
+      <section style={sectionB}>
+        <div style={wrap}>
+          <p className="font-inter mb-4" style={eyebrow}>03 / WHAT WE BUILD</p>
+          <h2 className="font-inter font-semibold mb-6" style={{ ...h2Style, maxWidth: '760px' }}>
+            We turn websites into <em className="serif" style={{ color: ACCENT }}>AI-readable infrastructure.</em>
+          </h2>
+          <p className="font-inter mb-12" style={{ ...leadStyle, maxWidth: '640px' }}>
+            KodeCite rebuilds or restructures the foundation beneath your website so AI systems can
+            read the business clearly, connect it to trusted sources, and understand why it deserves
+            to be recommended. Plain English first, technical underneath.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4" style={{ maxWidth: '900px' }}>
+            {buildItems.map((item) => (
+              <div key={item} className="flex items-start gap-3" style={{ borderTop: '1px solid var(--d-line)', paddingTop: '14px' }}>
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" className="flex-shrink-0" style={{ marginTop: '2px' }}>
+                  <path d="M5 10L8.5 13.5L15 7" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span className="font-inter" style={{ fontSize: '15px', lineHeight: 1.5, color: DIM, fontWeight: 300 }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 04 · Who this is for ─────────────────────────── */}
+      <section style={sectionA}>
+        <div style={wrap}>
+          <p className="font-inter mb-4" style={eyebrow}>04 / WHO THIS IS FOR</p>
+          <h2 className="font-inter font-semibold mb-6" style={{ ...h2Style, maxWidth: '760px' }}>
+            Built for real businesses with <em className="serif" style={{ color: ACCENT }}>real reputation.</em>
+          </h2>
+          <div style={{ maxWidth: '720px' }}>
+            <p className="font-inter mb-6" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
+              KodeCite works best for businesses that already have something worth proving:
+              experience, reviews, credentials, a defined service area, and a real reputation in the
+              market. Established owner-operated businesses, professional services, and local or
+              regional experts.
+            </p>
+            <p className="font-inter" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
+              The work does not invent trust, and it is not a shortcut for a business with no
+              reputation. It organizes, verifies, and exposes the trust that already exists — so AI
+              systems can read it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 05 · How the practice operates ───────────────── */}
+      <section style={sectionB}>
+        <div style={wrap}>
+          <p className="font-inter mb-4" style={eyebrow}>05 / HOW THE PRACTICE OPERATES</p>
+          <h2 className="font-inter font-semibold mb-6" style={h2Style}>
+            Built once. <em className="serif" style={{ color: ACCENT }}>Owned forever.</em>
+          </h2>
+          <p className="font-inter mb-12" style={{ ...leadStyle, maxWidth: '600px' }}>
+            Scoped engagements, durable infrastructure, and a handful of principles the practice
+            won&apos;t compromise on.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {beliefs.map((b) => (
-              <article
-                key={b.n}
-                style={{
-                  background: 'var(--d-bg-2)',
-                  border: '1px solid var(--d-line)',
-                  borderRadius: '12px',
-                  padding: '28px 32px',
-                }}
-              >
-                <p
-                  className="font-mono mb-4"
-                  style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}
-                >
-                  {b.n}
-                </p>
-                <h3
-                  className="font-inter font-semibold mb-3"
-                  style={{ fontSize: '16px', lineHeight: 1.3, letterSpacing: '-0.01em', color: 'var(--d-fg)' }}
-                >
-                  {b.h}
-                </h3>
-                <p
-                  className="font-inter"
-                  style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-                >
-                  {b.d}
-                </p>
+            {principles.map((p) => (
+              <article key={p.n} style={{ background: 'var(--d-bg-3)', border: '1px solid var(--d-line)', borderRadius: '12px', padding: '26px 28px' }}>
+                <p className="font-mono mb-4" style={{ fontSize: '10px', letterSpacing: '0.18em', color: ACCENT }}>{p.n}</p>
+                <h3 className="font-inter font-semibold mb-3" style={{ fontSize: '16px', lineHeight: 1.3, letterSpacing: '-0.01em', color: FG }}>{p.h}</h3>
+                <p className="font-inter" style={{ fontSize: '14px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>{p.d}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Practice ─────────────────────────────────────── */}
-      <section
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-            03 / THE PRACTICE
-          </p>
-          <h2
-            className="font-inter font-semibold mb-5"
-            style={{
-              fontSize: 'clamp(28px, 4vw, 48px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-              maxWidth: '640px',
-            }}
-          >
-            How KodeCite <em className="serif">actually operates.</em>
+      {/* ── 06 · Founder credibility (short) ─────────────── */}
+      <section style={sectionA}>
+        <div style={wrap}>
+          <p className="font-inter mb-4" style={eyebrow}>06 / THE OPERATOR</p>
+          <h2 className="font-inter font-semibold mb-10" style={h2Style}>
+            Built by an <em className="serif" style={{ color: ACCENT }}>operator.</em>
           </h2>
-          <p
-            className="font-inter mb-14"
-            style={{
-              fontSize: '17px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-dim)',
-              fontWeight: 300,
-              maxWidth: '560px',
-            }}
-          >
-            A deliberate practice with a clear methodology. I&apos;m good at a narrow set of
-            things — and I say no to a lot of work that doesn&apos;t fit. Here&apos;s what it actually
-            looks like.
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {practiceCards.map((c) => (
-              <div
-                key={c.tag}
-                style={{
-                  background: 'var(--d-bg-3)',
-                  border: '1px solid var(--d-line)',
-                  borderRadius: '12px',
-                  padding: '28px 32px',
-                }}
-              >
-                <p
-                  className="font-mono mb-3"
-                  style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}
-                >
-                  {c.tag}
-                </p>
-                <p
-                  className="font-inter font-semibold mb-3"
-                  style={{ fontSize: '17px', lineHeight: 1.25, letterSpacing: '-0.01em', color: 'var(--d-fg)' }}
-                >
-                  {c.h}
-                </p>
-                <p
-                  className="font-inter"
-                  style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
-                >
-                  {c.d}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-10 items-start" style={{ maxWidth: '900px' }}>
+            <figure style={{ width: '100%', maxWidth: '200px' }}>
+              <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: '12px', border: '1px solid var(--d-line)', overflow: 'hidden' }}>
+                <Image
+                  src="/mark-abplanalp.png"
+                  alt="Mark Abplanalp — Founder, KodeCite.ai"
+                  fill
+                  sizes="(max-width: 768px) 60vw, 200px"
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                />
               </div>
-            ))}
+            </figure>
+
+            <div>
+              <p className="font-inter mb-6" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
+                KodeCite was founded by Mark Abplanalp, an operator with 23 years building service
+                businesses that depended on being found. After watching discovery shift from
+                directories to Google to reviews to AI-driven recommendations, he built the
+                infrastructure he wished traditional web agencies already understood — because his
+                own businesses needed it.
+              </p>
+              <div className="flex flex-wrap gap-x-3 gap-y-2 font-mono" style={{ fontSize: '11px', letterSpacing: '0.1em', color: MUTE }}>
+                {['23 YRS · ENTREPRENEUR', '30 YRS · SALES', 'APPLE RETAIL · COMMERCIAL', 'NORTH IDAHO · PNW ROOTS'].map((chip, i, arr) => (
+                  <span key={chip} className="flex items-center gap-3">
+                    {chip}
+                    {i < arr.length - 1 && <span style={{ color: 'var(--d-line)' }}>/</span>}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Track record ─────────────────────────────────── */}
-      <section
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
-          <p className="font-mono mb-4" style={{ fontSize: '11px', letterSpacing: '0.18em', color: 'var(--d-accent)' }}>
-            04 / TRACK RECORD
-          </p>
-          <h2
-            className="font-inter font-semibold mb-14"
-            style={{
-              fontSize: 'clamp(28px, 4vw, 48px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-              maxWidth: '640px',
-            }}
-          >
-            What I&apos;m bringing to <em className="serif">your project.</em>
+      {/* ── 07 · CTA ─────────────────────────────────────── */}
+      <section style={{ ...sectionB, paddingBottom: '120px' }}>
+        <div style={{ maxWidth: '720px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="d-eyebrow d-eyebrow-center mb-6">START WITH THE EVIDENCE</div>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
+            Start with what AI can <em className="serif" style={{ color: ACCENT }}>verify.</em>
           </h2>
-
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px"
-            style={{
-              background: 'var(--d-line)',
-              border: '1px solid var(--d-line)',
-              borderRadius: '14px',
-              overflow: 'hidden',
-            }}
-          >
-            {trackItems.map((t) => (
-              <div
-                key={t.n}
-                style={{ padding: '36px 32px', background: 'var(--d-bg-2)' }}
-              >
-                <div className="flex items-baseline gap-2 mb-3">
-                  <p
-                    className="font-inter font-semibold"
-                    style={{
-                      fontSize: 'clamp(32px, 4vw, 52px)',
-                      lineHeight: 1,
-                      letterSpacing: '-0.03em',
-                      color: 'var(--d-accent)',
-                    }}
-                  >
-                    {t.n}
-                  </p>
-                  <p
-                    className="font-mono"
-                    style={{ fontSize: '10px', letterSpacing: '0.14em', color: 'var(--d-fg-mute)' }}
-                  >
-                    {t.u}
-                  </p>
-                </div>
-                <p
-                  className="font-inter"
-                  style={{ fontSize: '13px', lineHeight: 1.6, color: 'var(--d-fg-mute)', fontWeight: 300 }}
-                >
-                  {t.l}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Final CTA ────────────────────────────────────── */}
-      <section
-        style={{ padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}
-      >
-        <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
-          <div className="d-eyebrow d-eyebrow-center mb-6">START THE CONVERSATION</div>
-
-          <h2
-            className="font-inter font-semibold mb-5"
-            style={{
-              fontSize: 'clamp(28px, 3.5vw, 44px)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.025em',
-              color: 'var(--d-fg)',
-            }}
-          >
-            If any of this <em className="serif">resonates,</em> the next step is simple.
-          </h2>
-
-          <p
-            className="font-inter mb-8"
-            style={{
-              fontSize: '16px',
-              lineHeight: 1.65,
-              color: 'var(--d-fg-dim)',
-              fontWeight: 300,
-            }}
-          >
-            Run your site through a Machine Read. I&apos;ll personally read what&apos;s there
-            and send back a plain-language report — what&apos;s working, what isn&apos;t, what it means.
-            Free. 24–48 hour turnaround. Yours to keep either way.
+          <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+            The Machine Read shows what AI systems can and can&apos;t understand about your business
+            right now. You get a plain-English report on clarity, verification, and trust — no pitch
+            required.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="d-btn d-btn-primary">
-              Run my site →
-            </Link>
-            <a href="mailto:mark@kodecite.ai" className="d-btn d-btn-ghost">
-              Email me directly
-            </a>
+            <Link href="/contact" className="d-btn d-btn-primary">Run my site →</Link>
+            <Link href="/faq" className="d-btn d-btn-ghost">Read the Start Here page</Link>
           </div>
         </div>
       </section>
