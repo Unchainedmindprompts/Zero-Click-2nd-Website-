@@ -6,7 +6,7 @@ import GlassPanel from '@/components/GlassPanel';
 export const metadata: Metadata = {
   title: 'Services — AI-Ready Foundations',
   description:
-    'Foundation Build, SEO consulting, and content design for businesses that need to be legible to AI. Engineered once. Owned forever. No retainer.',
+    'Foundation Build, SEO + AI Visibility Consulting, and Content Architecture for businesses that need to be legible to AI. Owned forever. No retainer.',
   alternates: { canonical: 'https://www.kodecite.ai/services' },
 };
 
@@ -22,7 +22,7 @@ const serviceSchema = {
     url: 'https://www.kodecite.ai',
   },
   description:
-    "A complete rebuild of your business website on infrastructure that's actually legible to the systems people now use to find you. Engineered once. Owned forever. No retainer.",
+    'The Foundation Build is the complete version of KodeCite: a rebuilt website, a clean technical foundation, structured data, entity graph alignment, answer-first content architecture, and the handoff of the full asset to you. Owned forever. No retainer.',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'KodeCite.ai Services',
@@ -30,20 +30,20 @@ const serviceSchema = {
       {
         '@type': 'Offer',
         name: 'Foundation Build',
-        description: 'Complete AI-readable rebuild — Chassis, Engine, Aero, Graphics. Built in focused phases. You own everything.',
+        description: 'A complete AI-readable rebuild — Technical Foundation, Entity Graph, Answer-First Structure, Authority Signals. Built in focused phases. You own everything.',
         itemOffered: { '@type': 'Service', name: 'Foundation Build', serviceType: 'AI Visibility Infrastructure' },
       },
       {
         '@type': 'Offer',
         name: 'SEO + AI Visibility Consulting',
-        description: "Strategy and audit work for established sites that don't need a full rebuild.",
+        description: 'A scoped audit and strategy plan for businesses with an existing site that needs diagnosis, structure, and AI visibility guidance.',
         itemOffered: { '@type': 'Service', name: 'SEO + AI Visibility Consulting' },
       },
       {
         '@type': 'Offer',
-        name: 'Content Design + Information Architecture',
-        description: 'Architecture work — what should exist on your site, how it should connect, and how it should be structured.',
-        itemOffered: { '@type': 'Service', name: 'Content Design + Information Architecture' },
+        name: 'Content Architecture',
+        description: 'A structure plan for what your site should say, how pages should connect, and how AI systems should read it.',
+        itemOffered: { '@type': 'Service', name: 'Content Architecture' },
       },
     ],
   },
