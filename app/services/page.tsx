@@ -6,7 +6,7 @@ import GlassPanel from '@/components/GlassPanel';
 export const metadata: Metadata = {
   title: 'Services — AI-Ready Foundations',
   description:
-    'Foundation Build, SEO consulting, and content design for businesses that need to be legible to AI. Engineered once. Owned forever. No retainer.',
+    'Foundation Build, SEO + AI Visibility Consulting, and Content Architecture for businesses that need to be legible to AI. Owned forever. No retainer.',
   alternates: { canonical: 'https://www.kodecite.ai/services' },
 };
 
@@ -22,7 +22,7 @@ const serviceSchema = {
     url: 'https://www.kodecite.ai',
   },
   description:
-    "A complete rebuild of your business website on infrastructure that's actually legible to the systems people now use to find you. Engineered once. Owned forever. No retainer.",
+    'The Foundation Build is the complete version of KodeCite: a rebuilt website, a clean technical foundation, structured data, entity graph alignment, answer-first content architecture, and the handoff of the full asset to you. Owned forever. No retainer.',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'KodeCite.ai Services',
@@ -30,20 +30,20 @@ const serviceSchema = {
       {
         '@type': 'Offer',
         name: 'Foundation Build',
-        description: 'Complete AI-readable rebuild — Chassis, Engine, Aero, Graphics. Built in focused phases. You own everything.',
+        description: 'A complete AI-readable rebuild — Technical Foundation, Entity Graph, Answer-First Structure, Authority Signals. Built in focused phases. You own everything.',
         itemOffered: { '@type': 'Service', name: 'Foundation Build', serviceType: 'AI Visibility Infrastructure' },
       },
       {
         '@type': 'Offer',
         name: 'SEO + AI Visibility Consulting',
-        description: "Strategy and audit work for established sites that don't need a full rebuild.",
+        description: 'A scoped audit and strategy plan for businesses with an existing site that needs diagnosis, structure, and AI visibility guidance.',
         itemOffered: { '@type': 'Service', name: 'SEO + AI Visibility Consulting' },
       },
       {
         '@type': 'Offer',
-        name: 'Content Design + Information Architecture',
-        description: 'Architecture work — what should exist on your site, how it should connect, and how it should be structured.',
-        itemOffered: { '@type': 'Service', name: 'Content Design + Information Architecture' },
+        name: 'Content Architecture',
+        description: 'A structure plan for what your site should say, how pages should connect, and how AI systems should read it.',
+        itemOffered: { '@type': 'Service', name: 'Content Architecture' },
       },
     ],
   },
@@ -61,7 +61,7 @@ const breadcrumbSchema = {
 const pillars = [
   {
     n: '01', t: 'CHASSIS',
-    h: 'Infrastructure',
+    h: 'Technical Foundation',
     d: 'Next.js, Vercel edge deployment, server-side rendering, repository setup, deployment pipeline, domain configuration, performance budgets.',
     specs: ['Next.js · App Router · TypeScript · Tailwind', 'Vercel deployment + domain config', 'Real Core Web Vitals — not Lighthouse cosplay'],
   },
@@ -73,7 +73,7 @@ const pillars = [
   },
   {
     n: '03', t: 'AERO',
-    h: 'Answer-First Content Architecture',
+    h: 'Answer-First Structure',
     d: 'Route map, page structure, FAQ blocks, internal linking, extraction-ready pages, content migration.',
     specs: ['Answer-first H1 structure · FAQ blocks', 'Internal linking + entity references', 'Extraction-ready pages + content migration'],
   },
@@ -154,20 +154,44 @@ export default function ServicesPage() {
             where you serve, and why you should be trusted.
           </p>
 
+          <h2 className="font-inter font-semibold mb-2" style={{ fontSize: 'clamp(22px, 2.6vw, 30px)', lineHeight: 1.1, letterSpacing: '-0.02em', color: FG }}>
+            Choose the right <em className="serif" style={{ color: ACCENT }}>path.</em>
+          </h2>
+          <p className="font-inter mb-6" style={{ fontSize: '14px', lineHeight: 1.6, color: MUTE, fontWeight: 300 }}>
+            One flagship build, plus two scoped engagements for sites that aren&apos;t ready to rebuild.
+          </p>
+
           <div className="flex flex-col gap-3" style={{ maxWidth: '680px' }}>
             {[
-              { href: '#foundation-build', tag: 'FOUNDATION', title: 'Foundation Build', desc: 'A complete AI-readable rebuild for businesses that need the right technical foundation.' },
-              { href: '#adjacent', tag: 'CONSULTING', title: 'SEO + AI Visibility Consulting', desc: 'A scoped audit and strategy plan for sites that are not ready to rebuild.' },
-              { href: '#adjacent', tag: 'ARCHITECTURE', title: 'Content Architecture', desc: 'A structure plan for what your site should say, how pages should connect, and how AI systems should read it.' },
+              { href: '#foundation-build', tag: 'FLAGSHIP', flagship: true, title: 'Foundation Build', desc: 'A complete AI-readable rebuild for businesses that need the right technical foundation.' },
+              { href: '#adjacent', tag: 'ADJACENT', flagship: false, title: 'SEO + AI Visibility Consulting', desc: 'A scoped audit and strategy plan for businesses with an existing site that needs diagnosis, structure, and AI visibility guidance.' },
+              { href: '#adjacent', tag: 'ADJACENT', flagship: false, title: 'Content Architecture', desc: 'A structure plan for what your site should say, how pages should connect, and how AI systems should read it.' },
             ].map((link) => (
-              <a key={link.tag} href={link.href} className="glass-panel-soft secondary-jump" style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px 20px', textDecoration: 'none' }}>
-                <span className="font-mono flex-shrink-0" style={{ fontSize: '9px', letterSpacing: '0.16em', color: ACCENT, minWidth: '104px' }}>{link.tag}</span>
+              <a key={link.tag} href={link.href} className="glass-panel-soft secondary-jump" style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px 20px', textDecoration: 'none', ...(link.flagship ? { borderColor: 'rgba(93,213,255,0.45)' } : {}) }}>
+                <span className="font-mono flex-shrink-0" style={{ fontSize: '9px', letterSpacing: '0.16em', color: link.flagship ? ACCENT : MUTE, minWidth: '78px' }}>{link.tag}</span>
                 <span className="font-inter font-semibold flex-1" style={{ fontSize: '14px', color: FG, letterSpacing: '-0.01em' }}>{link.title}</span>
                 <span className="font-inter flex-1 hidden md:block" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>{link.desc}</span>
                 <span style={{ color: ACCENT, fontSize: '14px', flexShrink: 0 }}>→</span>
               </a>
             ))}
           </div>
+        </GlassPanel>
+      </section>
+
+      {/* ── Not sure which path? ─────────────────────────── */}
+      <section className="secondary-section" style={sectionGap}>
+        <GlassPanel className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5" style={{ padding: 'clamp(28px, 4vw, 44px)' }}>
+          <div>
+            <h2 className="font-inter font-semibold mb-2" style={{ fontSize: 'clamp(20px, 2.6vw, 28px)', letterSpacing: '-0.02em', color: FG }}>
+              Not sure which path fits?
+            </h2>
+            <p className="font-inter" style={{ fontSize: '15px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
+              Start with a Machine Read. We&apos;ll show you what AI systems can and can&apos;t verify
+              about your business, then recommend the right next step — even if that next step is
+              not a rebuild.
+            </p>
+          </div>
+          <Link href="/contact" className="d-btn d-btn-primary flex-shrink-0">Run my site →</Link>
         </GlassPanel>
       </section>
 
@@ -178,10 +202,10 @@ export default function ServicesPage() {
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: FG, maxWidth: '600px' }}>
             The Foundation <em className="serif" style={{ color: ACCENT }}>Build.</em>
           </h2>
-          <p className="font-inter mb-14" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
-            A complete rebuild of your business website on infrastructure that AI systems
-            can understand, verify, and recommend. Engineered once. Owned forever.
-            No retainer.
+          <p className="font-inter mb-14" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
+            The Foundation Build is the complete version of KodeCite: a rebuilt website, a clean
+            technical foundation, structured data, entity graph alignment, answer-first content
+            architecture, and the handoff of the full asset to you. Owned forever. No retainer.
           </p>
 
           {/* 4 Pillars */}
@@ -299,15 +323,15 @@ export default function ServicesPage() {
             When a full rebuild isn&apos;t <em className="serif" style={{ color: ACCENT }}>the answer.</em>
           </h2>
           <p className="font-inter mb-12" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
-            Sometimes your site is structurally fine but the strategy isn&apos;t.
-            Sometimes you need a second set of eyes on schema, IA, or how content
-            should be organized. We work on those, too — scoped per engagement.
+            Sometimes your site is structurally fine, but the strategy isn&apos;t.
+            Sometimes you need a second set of eyes on schema, page structure, internal
+            linking, or how content should be organized. We work on those, too — scoped per engagement.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
               { label: 'SEO CONSULTING', title: 'SEO + AI visibility ', em: 'consulting.', body: 'Strategy and audit work for sites that don’t need a rebuild. We read what’s there, identify what’s broken or missing — schema gaps, entity coherence, technical SEO issues, AI crawler accessibility — and write a prioritized action plan your existing team can execute.', items: seoDeliverables, forLine: '→ FOR: ESTABLISHED SITES, IN-HOUSE TEAMS, AGENCIES NEEDING A SECOND OPINION' },
-              { label: 'CONTENT DESIGN', title: 'Content design ', em: '+ IA.', body: 'Architecture work — what should exist on your site, how it should connect, and how it should be structured so both humans and AI systems can navigate it. We design the skeleton and the connective tissue. We don’t write the words.', items: contentDeliverables, forLine: '→ FOR: TEAMS WITH A WRITER · AGENCIES THAT NEED STRUCTURE · BUSINESSES PLANNING A CONTENT INVESTMENT' },
+              { label: 'CONTENT ARCHITECTURE', title: 'Content ', em: 'Architecture.', body: 'Architecture work — what should exist on your site, how it should connect, and how it should be structured so both humans and AI systems can navigate it. We design the skeleton and the connective tissue. We don’t write the words.', items: contentDeliverables, forLine: '→ FOR: TEAMS WITH A WRITER · AGENCIES THAT NEED STRUCTURE · BUSINESSES PLANNING A CONTENT INVESTMENT' },
             ].map((card) => (
               <article key={card.label} className="glass-panel-soft" style={{ padding: '34px', display: 'flex', flexDirection: 'column' }}>
                 <div className="flex items-center justify-between mb-5">
@@ -367,9 +391,9 @@ export default function ServicesPage() {
             The first step is <em className="serif" style={{ color: ACCENT }}>always</em> a Machine Read.
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
-            Whether you end up needing a Foundation Build, SEO consulting, content design,
-            or nothing at all — we start by reading what&apos;s actually there. Free.
-            24–48 hour turnaround. You keep the report either way.
+            Whether you end up needing a Foundation Build, SEO + AI Visibility Consulting,
+            Content Architecture, or nothing at all — we start by reading what&apos;s actually there.
+            Free. 24–48 hour turnaround. You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact" className="d-btn d-btn-primary">Run my site →</Link>

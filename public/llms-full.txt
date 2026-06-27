@@ -2,7 +2,9 @@
 
 > Entity infrastructure for the AI web. We make a business understandable, verifiable, recommendable, and agent-ready — so search engines, AI answer engines, and AI agents can confidently recommend it.
 
-KodeCite.ai is an Answer Engine Optimization (AEO) and entity-infrastructure agency based in Post Falls, Idaho. We replace slow, plugin-dependent websites with fast, entity-first infrastructure built on Next.js and deployed on Vercel's edge — structured with a Schema.org entity graph, llms.txt, and agent.json so AI systems like ChatGPT, Google AI Overviews, Perplexity, Gemini, and emerging AI agents can read, verify, and cite a business as an authoritative source.
+KodeCite.ai is an AI-readable website infrastructure practice based in Coeur d'Alene, Idaho. We rebuild and restructure business websites so AI systems can understand the business clearly, verify its identity, and trust its claims through corroborated sources — fast, server-rendered pages built on Next.js and deployed on Vercel's edge, structured with a Schema.org entity graph, llms.txt, and agent.json so AI systems like ChatGPT, Google AI Overviews, Perplexity, Gemini, and emerging AI agents can read, verify, and cite a business as an authoritative source.
+
+KodeCite organizes AI visibility around CVT — Clarity, Verification, Trust. Clarity: AI can understand who the business is, what it does, where it serves, and what each page means. Verification: AI can confirm the business identity across trusted profiles, directories, reviews, credentials, and structured data. Trust: AI can corroborate what the business claims through credible third-party sources, reviews, credentials, locations, citations, and schema relationships. Trust is not what a business claims. Trust is what AI can corroborate.
 
 This llms-full.txt is the expanded companion to /llms.txt. It contains the full descriptions of KodeCite's positioning, framework, deliverables, and content.
 
@@ -87,7 +89,7 @@ Search is moving from pages to answers, answers to recommendations, and recommen
 ## Contact
 
 - Founder: Mark Abplanalp
-- Location: Post Falls, Idaho
+- Location: Coeur d'Alene, Idaho
 - Website: https://www.kodecite.ai
 - Service Area: North Idaho, Pacific Northwest, and nationwide remote clients
 

@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     template: '%s | KodeCite.ai',
   },
   description:
-    'Most businesses are invisible to AI. KodeCite.ai builds the websites, content, and campaigns that make you the answer. Based in Post Falls, Idaho.',
+    'Most businesses are invisible to AI. KodeCite.ai builds AI-readable website infrastructure that makes you understandable, verifiable, and recommendable. Based in Coeur d\'Alene, Idaho.',
   keywords: [
     'SEO', 'schema markup', 'entity graph', 'Schema.org implementation',
     'AI search optimization', 'answer engine optimization',
@@ -165,6 +165,18 @@ const siteSchema = {
       '@id': 'https://www.kodecite.ai/#website',
       name: 'KodeCite.ai',
       url: 'https://www.kodecite.ai',
+      publisher: { '@id': 'https://www.kodecite.ai/#business' },
+    },
+    // Glossary — the canonical DefinedTermSet. Articles reference it from their
+    // DefinedTerms (inDefinedTermSet: #glossary); defining it here, on every
+    // page, keeps that reference resolved instead of dangling.
+    {
+      '@type': 'DefinedTermSet',
+      '@id': 'https://www.kodecite.ai/#glossary',
+      name: 'KodeCite AEO & Entity Glossary',
+      description:
+        'Defined terms used across KodeCite for AI search, answer engine optimization, and entity-graph infrastructure.',
+      url: 'https://www.kodecite.ai/#glossary',
       publisher: { '@id': 'https://www.kodecite.ai/#business' },
     },
   ],
