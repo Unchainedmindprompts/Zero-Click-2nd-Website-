@@ -323,9 +323,9 @@ export default function ServicesPage() {
             When a full rebuild isn&apos;t <em className="serif" style={{ color: ACCENT }}>the answer.</em>
           </h2>
           <p className="font-inter mb-12" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
-            Sometimes your site is structurally fine but the strategy isn&apos;t.
-            Sometimes you need a second set of eyes on schema, IA, or how content
-            should be organized. We work on those, too — scoped per engagement.
+            Sometimes your site is structurally fine, but the strategy isn&apos;t.
+            Sometimes you need a second set of eyes on schema, page structure, internal
+            linking, or how content should be organized. We work on those, too — scoped per engagement.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
