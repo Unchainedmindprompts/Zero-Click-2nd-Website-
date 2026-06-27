@@ -144,24 +144,24 @@ export default function ServicesPage() {
       <section className="secondary-section secondary-hero">
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">SERVICES · WHAT WE BUILD</div>
-          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(44px, 6vw, 80px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: FG }}>
-            Three things.<br />
-            Done <em className="serif" style={{ color: ACCENT }}>properly.</em>
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 4.8vw, 62px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: FG, maxWidth: '15ch' }}>
+            We make business websites{' '}
+            <em className="serif" style={{ color: ACCENT }}>understandable to AI.</em>
           </h1>
-          <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px' }}>
-            We rebuild the foundation, advise on structure, or design the architecture of how
-            information should flow through your site. We don&apos;t write your copy, run your ads,
-            or manage your platform monthly. The work is engineered, scoped, and shipped.
+          <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
+            Most websites were built for human visitors and search crawlers. KodeCite rebuilds
+            or restructures your site so AI systems can understand who you are, what you do,
+            where you serve, and why you should be trusted.
           </p>
 
           <div className="flex flex-col gap-3" style={{ maxWidth: '680px' }}>
             {[
-              { href: '#foundation-build', tag: 'FLAGSHIP', title: 'Foundation Build', desc: 'Complete AI-readable rebuild · built in focused phases · you own everything' },
-              { href: '#adjacent', tag: 'ADJACENT', title: 'SEO + Content Design', desc: "Strategy and structure for sites that aren't ready to rebuild" },
-              { href: '#scope', tag: 'SCOPE', title: "What we don't do", desc: 'Honest about where we stop · so you know who else to hire' },
+              { href: '#foundation-build', tag: 'FOUNDATION', title: 'Foundation Build', desc: 'A complete AI-readable rebuild for businesses that need the right technical foundation.' },
+              { href: '#adjacent', tag: 'CONSULTING', title: 'SEO + AI Visibility Consulting', desc: 'A scoped audit and strategy plan for sites that are not ready to rebuild.' },
+              { href: '#adjacent', tag: 'ARCHITECTURE', title: 'Content Architecture', desc: 'A structure plan for what your site should say, how pages should connect, and how AI systems should read it.' },
             ].map((link) => (
-              <a key={link.href} href={link.href} className="glass-panel-soft secondary-jump" style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px 20px', textDecoration: 'none' }}>
-                <span className="font-mono flex-shrink-0" style={{ fontSize: '9px', letterSpacing: '0.16em', color: ACCENT, minWidth: '68px' }}>{link.tag}</span>
+              <a key={link.tag} href={link.href} className="glass-panel-soft secondary-jump" style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px 20px', textDecoration: 'none' }}>
+                <span className="font-mono flex-shrink-0" style={{ fontSize: '9px', letterSpacing: '0.16em', color: ACCENT, minWidth: '104px' }}>{link.tag}</span>
                 <span className="font-inter font-semibold flex-1" style={{ fontSize: '14px', color: FG, letterSpacing: '-0.01em' }}>{link.title}</span>
                 <span className="font-inter flex-1 hidden md:block" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>{link.desc}</span>
                 <span style={{ color: ACCENT, fontSize: '14px', flexShrink: 0 }}>→</span>
