@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     template: '%s | KodeCite.ai',
   },
   description:
-    'Most businesses are invisible to AI. KodeCite.ai builds the websites, content, and campaigns that make you the answer. Based in Post Falls, Idaho.',
+    'Most businesses are invisible to AI. KodeCite.ai builds AI-readable website infrastructure that makes you understandable, verifiable, and recommendable. Based in Coeur d\'Alene, Idaho.',
   keywords: [
     'SEO', 'schema markup', 'entity graph', 'Schema.org implementation',
     'AI search optimization', 'answer engine optimization',
