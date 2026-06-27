@@ -167,6 +167,18 @@ const siteSchema = {
       url: 'https://www.kodecite.ai',
       publisher: { '@id': 'https://www.kodecite.ai/#business' },
     },
+    // Glossary — the canonical DefinedTermSet. Articles reference it from their
+    // DefinedTerms (inDefinedTermSet: #glossary); defining it here, on every
+    // page, keeps that reference resolved instead of dangling.
+    {
+      '@type': 'DefinedTermSet',
+      '@id': 'https://www.kodecite.ai/#glossary',
+      name: 'KodeCite AEO & Entity Glossary',
+      description:
+        'Defined terms used across KodeCite for AI search, answer engine optimization, and entity-graph infrastructure.',
+      url: 'https://www.kodecite.ai/#glossary',
+      publisher: { '@id': 'https://www.kodecite.ai/#business' },
+    },
   ],
 };
 

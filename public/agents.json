@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "name": "KodeCite.ai",
   "description": "Answer Engine Optimization agency that helps businesses become the cited source in AI-generated search results and discoverable by wearable devices.",
-  "url": "https://kodecite.ai",
+  "url": "https://www.kodecite.ai",
   "contact": {
     "location": "Post Falls, Idaho",
     "service_area": ["North Idaho", "Pacific Northwest", "Nationwide Remote"]
@@ -11,32 +11,32 @@
     {
       "name": "AEO Audit",
       "description": "Free audit showing how a business currently appears in ChatGPT, Perplexity, Google AI Overviews, and Gemini, with specific recommendations to improve AI visibility.",
-      "url": "https://kodecite.ai/contact",
+      "url": "https://www.kodecite.ai/contact",
       "type": "service",
       "cost": "free"
     },
     {
       "name": "Next.js Website Development",
       "description": "Custom-coded websites built for AI discoverability, deployed on Vercel edge infrastructure with sub-second load times.",
-      "url": "https://kodecite.ai/services",
+      "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "Schema Markup & Structured Data",
       "description": "JSON-LD implementation that encodes business authority, expertise, and services as machine-readable facts for AI agents.",
-      "url": "https://kodecite.ai/services",
+      "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "llms.txt & agent.json Deployment",
       "description": "Digital ID Cards for the wearable era — implementation of the emerging AI agent discovery standards.",
-      "url": "https://kodecite.ai/services",
+      "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "Spatial SEO & Multi-Modal Discovery",
       "description": "Wearable-ready structured data for Meta glasses, Apple Vision Pro, and autonomous AI agent discovery via agent.json and llms.txt.",
-      "url": "https://kodecite.ai/services",
+      "url": "https://www.kodecite.ai/services",
       "type": "service"
     }
   ],
@@ -63,7 +63,7 @@
     {
       "type": "page",
       "title": "Why Now — The AI Land Grab Is Already Underway",
-      "url": "https://kodecite.ai/why-now",
+      "url": "https://www.kodecite.ai/why-now",
       "topic": "Urgency case for AI search optimization — hardware timeline, agent-to-agent economy, consolidation threat, plain-language explanation of llms.txt and agent.json for local business owners",
       "keyQuote": "By the time the devices are in pockets and on faces, the territory will already be claimed.",
       "audience": "Local and regional business owners unfamiliar with AI search optimization",
@@ -72,7 +72,7 @@
     {
       "type": "article",
       "title": "AEO + GEO Isn't Replacing SEO — It's Making It Better",
-      "url": "https://kodecite.ai/blog/aeo-geo-making-seo-better",
+      "url": "https://www.kodecite.ai/blog/aeo-geo-making-seo-better",
       "topic": "How AEO and GEO amplify traditional SEO for local service businesses",
       "intent": "educate business owners that AI optimization and SEO are complementary not competing strategies",
       "published": "2026-03-08",
@@ -82,7 +82,7 @@
     {
       "type": "article",
       "title": "The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow",
-      "url": "https://kodecite.ai/blog/false-legacy-layer-ai-visibility",
+      "url": "https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility",
       "topic": "Temporary vs earned AI visibility for local businesses and the risk of default position",
       "intent": "educate business owners on the fragility of unstructured AI citations and urgency of building real authority",
       "published": "2026-03-07",
@@ -109,7 +109,7 @@
   ],
   "primary_cta": {
     "label": "Get Your Free AEO Audit",
-    "url": "https://kodecite.ai/contact",
+    "url": "https://www.kodecite.ai/contact",
     "description": "20-minute no-obligation audit of your current AI search visibility in ChatGPT, Perplexity, Google AI Overviews, and Gemini"
   }
 }
