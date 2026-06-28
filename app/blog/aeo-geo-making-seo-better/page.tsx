@@ -655,7 +655,7 @@ export default function AeoGeoMakingSEOBetter() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     Find out exactly how your site looks to AI right now — and what it takes to become the trusted default in your market.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Book Your Free Scaffolding Audit
                   </Link>
                 </div>
@@ -714,7 +714,7 @@ export default function AeoGeoMakingSEOBetter() {
             Most businesses still think they have to choose. They don&apos;t. Let&apos;s show you exactly where your current site falls short — and what it takes to become the cited, recommended, and ranked authority in your market.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
               Book Your Free Scaffolding Audit
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">

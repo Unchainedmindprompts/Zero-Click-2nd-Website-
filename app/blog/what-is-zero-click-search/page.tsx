@@ -350,7 +350,7 @@ export default function WhatIsZeroClickSearch() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your site&apos;s schema, Core Web Vitals, and content structure to identify exactly where AI crawlers lose you — and fix it.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get Your Free Audit
                   </Link>
                 </div>

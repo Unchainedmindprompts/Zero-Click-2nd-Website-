@@ -560,7 +560,7 @@ export default function HowToRankInGoogleAIOverviews() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your schema, content structure, and NAP consistency — then fix what&apos;s keeping you out of AI Overviews.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get Your Free Audit
                   </Link>
                 </div>

@@ -380,7 +380,7 @@ export default function WhenCustomerStopsSearchingPage() {
                   Get a free AI Scaffolding Audit — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews. By the end of the audit, you&apos;ll know whether you can get away with tuning what you already have or whether you&apos;re better off with a rebuild. No pitch. No pressure.
                 </p>
                 <a
-                  href="/contact"
+                  href="/machine-read"
                   className="inline-block bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Get My Free Machine Read
@@ -422,7 +422,7 @@ export default function WhenCustomerStopsSearchingPage() {
                   <p className="font-inter text-xl text-white mb-3">Find Out Where You Stand</p>
                   <p className="font-inter text-sm text-[var(--d-fg-mute)] mb-5 leading-relaxed">See exactly how your business appears in AI today — and whether your infrastructure is ready for what&apos;s coming.</p>
                   <a
-                    href="/contact"
+                    href="/machine-read"
                     className="block text-center bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
                   >
                     Get My Free Machine Read
@@ -471,7 +471,7 @@ export default function WhenCustomerStopsSearchingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              href="/machine-read"
               className="bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
             >
               Get My Free Machine Read

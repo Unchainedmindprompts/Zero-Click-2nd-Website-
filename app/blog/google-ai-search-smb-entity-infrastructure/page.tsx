@@ -712,7 +712,7 @@ export default function GoogleAISearchSMBPage() {
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   As search becomes more compressed and AI-driven, those questions become more important, not less.{' '}
-                  <Link href="/contact" className="text-[var(--d-accent)] hover:underline">
+                  <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">
                     Run a free Machine Read on your site
                   </Link>{' '}
                   to see exactly how AI systems are reading your business right now.
@@ -871,7 +871,7 @@ export default function GoogleAISearchSMBPage() {
                     Find out exactly how AI systems see your business — schema gaps, entity coherence, trust signals.
                     Free. 24–48 hour turnaround.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get My Free Machine Read
                   </Link>
                 </div>
@@ -924,7 +924,7 @@ export default function GoogleAISearchSMBPage() {
             close the gap. Free. No pitch. 24–48 hour turnaround.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
               Get My Free Machine Read
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">

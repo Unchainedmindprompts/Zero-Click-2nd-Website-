@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { href: '/blog',     label: 'Insights' },
   { href: '/about',    label: 'About' },
   { href: '/contact',  label: 'Contact' },
-  { href: '/contact',  label: 'Machine Read' },
+  { href: '/machine-read',  label: 'Machine Read' },
 ];
 
 /**

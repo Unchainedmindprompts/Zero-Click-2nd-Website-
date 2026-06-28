@@ -279,7 +279,7 @@ export default function PricingPage() {
               </div>
 
               <Link
-                href="/contact"
+                href="/machine-read"
                 className="inline-block font-poppins font-semibold text-white px-7 py-3.5 rounded-md transition-opacity hover:opacity-90"
                 style={{ backgroundColor: '#1a56db', fontSize: '14px' }}
               >
@@ -355,7 +355,7 @@ export default function PricingPage() {
               </div>
 
               <Link
-                href="/contact"
+                href="/machine-read"
                 className="inline-block font-poppins font-semibold text-white px-7 py-3.5 rounded-md transition-opacity hover:opacity-90"
                 style={{ backgroundColor: '#1a56db', fontSize: '14px' }}
               >

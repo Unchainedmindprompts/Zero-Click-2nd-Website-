@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact — Start the Conversation',
+  title: 'Contact',
   description:
-    'Ready to stop being invisible to AI? Let\'s talk. No commitment, no long process — just a direct conversation about your business and what\'s possible.',
+    'Contact KodeCite for project inquiries, scope questions, partnerships, or direct conversations about AI-readable website infrastructure.',
   alternates: {
     canonical: 'https://www.kodecite.ai/contact',
   },

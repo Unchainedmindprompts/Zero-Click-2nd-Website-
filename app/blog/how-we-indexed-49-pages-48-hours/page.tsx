@@ -425,7 +425,7 @@ export default function Indexed49Pages() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your crawlability, schema, Core Web Vitals, and page architecture. Then we fix them — with the same methodology that indexed 49 pages in 48 hours.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get Your Site Audited
                   </Link>
                 </div>

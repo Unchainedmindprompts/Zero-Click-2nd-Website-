@@ -385,7 +385,7 @@ export default function WhyYourWebsiteCantTalkToAI() {
                   using a plugin, the question is simple: what exactly does an AI system see when it crawls your business?
                   Not what your site looks like to a human visitor — what it looks like to a machine deciding whether to
                   recommend you. A{' '}
-                  <Link href="/contact" className={link}>Machine Read</Link>{' '}
+                  <Link href="/machine-read" className={link}>Machine Read</Link>{' '}
                   shows you the real picture: your schema architecture, entity completeness, NAP consistency across
                   directories, and cold-crawl readability — not the one a plugin dashboard implies.
                 </p>
@@ -456,7 +456,7 @@ export default function WhyYourWebsiteCantTalkToAI() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     A Machine Read shows what AI systems can verify about your business right now — schema, entity completeness, NAP consistency, and cold-crawl readability.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get My Free Machine Read
                   </Link>
                 </div>
@@ -509,7 +509,7 @@ export default function WhyYourWebsiteCantTalkToAI() {
             A Machine Read shows you exactly what AI systems can verify about your business right now — and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
               Get My Free Machine Read
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">

@@ -191,7 +191,7 @@ export default function ServicesPage() {
               not a rebuild.
             </p>
           </div>
-          <Link href="/contact" className="d-btn d-btn-primary flex-shrink-0">Run my site →</Link>
+          <Link href="/machine-read" className="d-btn d-btn-primary flex-shrink-0">Run my site →</Link>
         </GlassPanel>
       </section>
 
@@ -310,7 +310,7 @@ export default function ServicesPage() {
               <h3 className="font-inter font-semibold mb-2" style={{ fontSize: '18px', letterSpacing: '-0.015em', color: FG }}>Ready to see what&apos;s actually under the hood?</h3>
               <p className="font-inter" style={{ fontSize: '14px', lineHeight: 1.6, color: DIM, fontWeight: 300 }}>Start with a Machine Read. Free, no pitch, 24–48 hour turnaround.</p>
             </div>
-            <Link href="/contact" className="d-btn d-btn-primary flex-shrink-0">Run my site →</Link>
+            <Link href="/machine-read" className="d-btn d-btn-primary flex-shrink-0">Run my site →</Link>
           </div>
         </GlassPanel>
       </section>
@@ -396,7 +396,7 @@ export default function ServicesPage() {
             Free. 24–48 hour turnaround. You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="d-btn d-btn-primary">Run my site →</Link>
+            <Link href="/machine-read" className="d-btn d-btn-primary">Run my site →</Link>
             <a href="mailto:mark@kodecite.ai" className="d-btn d-btn-ghost">Email mark@kodecite.ai</a>
           </div>
         </GlassPanel>

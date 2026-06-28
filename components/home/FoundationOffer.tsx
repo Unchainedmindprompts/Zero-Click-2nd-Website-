@@ -41,7 +41,7 @@ export default function FoundationOffer() {
               ))}
             </div>
             <div>
-              <Link href="/contact" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
+              <Link href="/machine-read" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
             </div>
           </div>
 
