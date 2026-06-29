@@ -8,7 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, lastModified: new Date('2026-05-20').toISOString(), changeFrequency: 'weekly', priority: 1.0 },
     { url: `${baseUrl}/services`, lastModified: new Date('2026-05-20').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/blog`, lastModified: new Date('2026-05-20').toISOString(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/contact`, lastModified: new Date('2026-05-20').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/machine-read`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/contact`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
 
     // Blog posts
     { url: `${baseUrl}/blog/why-your-website-cant-talk-to-ai`, lastModified: new Date('2026-06-14').toISOString(), changeFrequency: 'monthly', priority: 0.9 },

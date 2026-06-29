@@ -426,7 +426,7 @@ export default function ShortlistProblemPage() {
               <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-8 mt-12">
                 <p className="font-inter text-white leading-relaxed">
                   <strong className="text-[var(--d-accent)]">Not sure where you stand?</strong>{' '}
-                  <Link href="/contact" className="text-[var(--d-accent)] underline hover:text-blue-400 transition-colors">
+                  <Link href="/machine-read" className="text-[var(--d-accent)] underline hover:text-blue-400 transition-colors">
                     Get a free AI Scaffolding Audit
                   </Link>{' '}
                   — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews, and what it would take to get you on the shortlist.
@@ -463,7 +463,7 @@ export default function ShortlistProblemPage() {
                   <p className="font-inter text-xl text-white mb-3">Is Your Business on the Shortlist?</p>
                   <p className="font-inter text-sm text-[var(--d-fg-mute)] mb-5 leading-relaxed">Find out exactly how AI currently describes your business — and what it would take to earn the shortlist position in your market.</p>
                   <Link
-                    href="/contact"
+                    href="/machine-read"
                     className="block text-center bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
                   >
                     Get My Free Machine Read
@@ -508,7 +508,7 @@ export default function ShortlistProblemPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/machine-read"
               className="bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
             >
               Get My Free Machine Read

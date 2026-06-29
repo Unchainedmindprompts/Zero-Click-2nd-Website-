@@ -418,7 +418,7 @@ export default function DigitalLandRush2026() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Get your <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link> at <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
+                  Get your <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link> at <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
@@ -464,7 +464,7 @@ export default function DigitalLandRush2026() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     Find out exactly where your business is invisible to AI — and what it takes to fix it. No obligation.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get My Free Machine Read
                   </Link>
                 </div>
@@ -516,7 +516,7 @@ export default function DigitalLandRush2026() {
             The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
               Get My Free Machine Read
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">

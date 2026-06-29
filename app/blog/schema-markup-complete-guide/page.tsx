@@ -377,7 +377,7 @@ export default function SchemaMarkupGuide() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your existing schema markup, identify every error and missing property, and implement the complete four-type schema stack with zero validation errors.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Request a Schema Audit
                   </Link>
                 </div>

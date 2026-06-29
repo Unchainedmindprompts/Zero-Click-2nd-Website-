@@ -737,7 +737,7 @@ export default function WhyIsMyWebsiteTrafficDropping() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We diagnose exactly why your traffic is dropping and rebuild your digital presence to get recommended — not just ranked.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get Your Free Audit
                   </Link>
                 </div>

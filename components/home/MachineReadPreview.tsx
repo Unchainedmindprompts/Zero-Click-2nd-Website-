@@ -46,7 +46,7 @@ export default function MachineReadPreview() {
         </div>
 
         <div className="mt-9">
-          <Link href="/contact" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
         </div>
       </div>
     </section>

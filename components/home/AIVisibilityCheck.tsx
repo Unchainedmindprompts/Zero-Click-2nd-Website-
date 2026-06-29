@@ -231,7 +231,7 @@ export default function AIVisibilityCheck() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  href={`/contact?url=${encodeURIComponent(url)}`}
+                  href={`/machine-read?url=${encodeURIComponent(url)}`}
                   className="d-btn d-btn-primary"
                 >
                   Get My Real Machine Read →

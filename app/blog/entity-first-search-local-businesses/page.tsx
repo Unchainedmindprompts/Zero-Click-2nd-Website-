@@ -954,7 +954,7 @@ export default function EntityFirstSearchLocalBusinesses() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     A Machine Read shows exactly what AI systems can verify about your business right now — and where the gaps are.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get My Free Machine Read
                   </Link>
                 </div>
@@ -1008,7 +1008,7 @@ export default function EntityFirstSearchLocalBusinesses() {
             A Machine Read shows you exactly where your entity signals are strong — and where the gaps are leaving recommendations on the table.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
               Get My Free Machine Read
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">

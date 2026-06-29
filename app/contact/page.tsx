@@ -1,20 +1,23 @@
 import type { Metadata } from 'next';
-import ContactForm from '@/components/contact/ContactForm';
+import Link from 'next/link';
+import InquiryForm from '@/components/contact/InquiryForm';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 
 export const metadata: Metadata = {
-  title: 'Machine Read',
+  title: 'Contact',
   description:
-    'Run a free Machine Read on your site. We check schema, entity coherence, crawler accessibility, and AI visibility — then show you exactly what to fix.',
+    'Contact KodeCite for project inquiries, scope questions, partnerships, or direct conversations about AI-readable website infrastructure.',
   alternates: { canonical: 'https://www.kodecite.ai/contact' },
 };
 
 const contactPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'Machine Read — KodeCite.ai',
+  name: 'Contact — KodeCite.ai',
   url: 'https://www.kodecite.ai/contact',
+  description:
+    'Contact KodeCite for project inquiries, scope questions, partnerships, or direct conversations about AI-readable website infrastructure. For the free diagnostic, start with a Machine Read.',
   publisher: { '@id': 'https://www.kodecite.ai/#business' },
 };
 
@@ -26,12 +29,6 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.kodecite.ai/contact' },
   ],
 };
-
-const heroStats = [
-  { num: '9/10', label: 'sites we read have foundation issues' },
-  { num: '24–48H', label: 'turnaround · no automation, real read' },
-  { num: '$0', label: "if we're not a fit, you still get the report" },
-];
 
 const FG = 'var(--d-fg)';
 const DIM = 'rgba(233, 238, 255, 0.95)';
@@ -48,60 +45,39 @@ export default function ContactPage() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="secondary-section secondary-hero">
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">THE MACHINE READ · FREE · 24–48H</div>
-          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(44px, 6vw, 80px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: FG }}>
-            See your site<br />
-            the way <em className="serif" style={{ color: ACCENT }}>a machine</em> sees it.
+          <div className="d-eyebrow mb-6">CONTACT</div>
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(40px, 5.5vw, 72px)', lineHeight: 1.02, letterSpacing: '-0.03em', color: FG }}>
+            Get in <em className="serif" style={{ color: ACCENT }}>touch.</em>
           </h1>
-          <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
-            We run a structured read against your live site — schema, entity coherence,
-            crawler accessibility, AI visibility — and send back a plain-language report.
-            No sales pitch. No methodology lecture. Just what&apos;s there and what isn&apos;t.
+          <p className="font-inter" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
+            Questions about a project, timeline, or working together? Send a few
+            details below and we&apos;ll get back to you — usually within one business day.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-3" style={{ maxWidth: '660px' }}>
-            {heroStats.map((s) => (
-              <div key={s.num} className="glass-panel-soft flex-1" style={{ padding: '20px 24px' }}>
-                <p className="font-inter font-semibold mb-1" style={{ fontSize: 'clamp(20px, 3vw, 28px)', lineHeight: 1, letterSpacing: '-0.02em', color: ACCENT }}>{s.num}</p>
-                <p className="font-inter" style={{ fontSize: '12px', lineHeight: 1.5, color: MUTE, fontWeight: 300 }}>{s.label}</p>
-              </div>
-            ))}
-          </div>
         </GlassPanel>
       </section>
 
-      {/* ── Machine Read Form ────────────────────────────── */}
-      <section id="machine-read" className="secondary-section" style={sectionGap}>
+      {/* ── Contact form ─────────────────────────────────── */}
+      <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(32px, 4.5vw, 56px)', maxWidth: '760px', margin: '0 auto' }}>
-          <ContactForm />
+          <InquiryForm />
         </GlassPanel>
       </section>
 
-      {/* ── Direct line ──────────────────────────────────── */}
+      {/* ── Contact details ──────────────────────────────── */}
       <section className="secondary-section" style={{ ...sectionGap, paddingBottom: '120px' }}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="d-eyebrow mb-6">DIRECT LINE</div>
-              <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
-                Already know <em className="serif" style={{ color: ACCENT }}>what you need?</em>
-              </h2>
-              <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '440px' }}>
-                Skip the read. Email Mark directly with the build you want, your timeline,
-                and your budget. He&apos;ll respond within one business day.
-              </p>
-            </div>
+        <GlassPanel style={{ padding: 'clamp(32px, 4.5vw, 56px)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="mailto:mark@kodecite.ai" className="glass-panel-soft secondary-jump" style={{ display: 'block', padding: '32px 36px', textDecoration: 'none' }}>
+              <p className="font-mono mb-3" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>EMAIL</p>
+              <p className="font-inter font-semibold mb-2" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT, wordBreak: 'break-all' }}>mark@kodecite.ai</p>
+              <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>Prefer email? Reach out directly anytime.</p>
+            </a>
 
-            <div>
-              <a href="mailto:mark@kodecite.ai" className="glass-panel-soft secondary-jump" style={{ display: 'block', padding: '36px 40px', textDecoration: 'none' }}>
-                <p className="font-mono mb-4" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>EMAIL · DIRECT</p>
-                <p className="font-inter font-semibold mb-4" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT, wordBreak: 'break-all' }}>mark@kodecite.ai</p>
-                <div className="flex flex-col gap-1 mb-5" style={{ borderTop: '1px solid rgba(255,255,255,0.10)', paddingTop: '16px' }}>
-                  <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>You&apos;ll hear back from Mark himself.</p>
-                </div>
-                <span style={{ color: ACCENT, fontSize: '18px' }}>→</span>
-              </a>
-            </div>
+            <Link href="/machine-read" className="glass-panel-soft secondary-jump" style={{ display: 'block', padding: '32px 36px', textDecoration: 'none' }}>
+              <p className="font-mono mb-3" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>FREE MACHINE READ</p>
+              <p className="font-inter font-semibold mb-2" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT }}>Want the free diagnostic first? →</p>
+              <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>See what AI systems understand about your current site.</p>
+            </Link>
           </div>
         </GlassPanel>
       </section>

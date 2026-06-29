@@ -88,7 +88,7 @@ export default function EditorialHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 kc-materialize kc-delay-4">
-            <Link href="/contact" className="d-btn d-btn-primary">
+            <Link href="/machine-read" className="d-btn d-btn-primary">
               Run My Free Machine Read →
             </Link>
             <Link href="#foundation" className="d-btn d-btn-ghost">

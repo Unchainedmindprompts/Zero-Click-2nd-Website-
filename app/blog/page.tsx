@@ -90,7 +90,7 @@ export default function BlogPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="d-btn d-btn-primary">
+            <Link href="/machine-read" className="d-btn d-btn-primary">
               Get My Machine Read →
             </Link>
             <Link href="/services" className="d-btn d-btn-ghost">

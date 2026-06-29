@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const { name, businessName, website, challenge } = await req.json();
+  const { name, email, businessName, website, challenge } = await req.json();
 
   if (!name || !businessName || !challenge) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -12,8 +12,9 @@ export async function POST(req: NextRequest) {
   const { error } = await resend.emails.send({
     from: 'KodeCite Contact <onboarding@resend.dev>',
     to: 'mark@luxewindowworks.com',
-    subject: `New contact from ${name} — ${businessName}`,
-    text: `Name: ${name}\nBusiness: ${businessName}\nWebsite: ${website || 'Not provided'}\n\nChallenge:\n${challenge}`,
+    replyTo: email || undefined,
+    subject: `New inquiry from ${name} — ${businessName}`,
+    text: `Name: ${name}\nEmail: ${email || 'Not provided'}\nBusiness: ${businessName}\nWebsite: ${website || 'Not provided'}\n\nWhat they're trying to build or solve:\n${challenge}`,
   });
 
   if (error) {

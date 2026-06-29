@@ -503,7 +503,7 @@ export default function WhyNowPage() {
           </ScrollReveal>
           <ScrollReveal delay={250}>
             <Link
-              href="/contact"
+              href="/machine-read"
               className="inline-block font-poppins font-semibold text-white px-10 py-4 rounded-md text-base transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#1a56db' }}
             >

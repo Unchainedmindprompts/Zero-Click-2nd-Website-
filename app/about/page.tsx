@@ -311,7 +311,7 @@ export default function AboutPage() {
             required.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="d-btn d-btn-primary">Run my site →</Link>
+            <Link href="/machine-read" className="d-btn d-btn-primary">Run my site →</Link>
             <Link href="/faq" className="d-btn d-btn-ghost">Read the Start Here page</Link>
           </div>
         </div>

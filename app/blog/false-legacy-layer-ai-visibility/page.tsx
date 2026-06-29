@@ -487,7 +487,7 @@ export default function FalseLegacyLayer() {
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   Get your{' '}
-                  <Link href="/contact" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
+                  <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
                   at{' '}
                   <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
                   Find out how close you are to losing — or locking in — your position.
@@ -536,7 +536,7 @@ export default function FalseLegacyLayer() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     Find out exactly where your business is invisible to AI — and what it takes to build real authority. No obligation.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Get My Free Machine Read
                   </Link>
                 </div>
@@ -588,7 +588,7 @@ export default function FalseLegacyLayer() {
             The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
               Get My Free Machine Read
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
