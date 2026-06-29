@@ -176,7 +176,7 @@ export default function InquiryForm() {
             type="text"
             value={form.name}
             onChange={handleChange}
-            placeholder="Mark Abplanalp"
+            placeholder="Your name"
             autoComplete="name"
           />
         </label>
@@ -193,7 +193,7 @@ export default function InquiryForm() {
             type="email"
             value={form.email}
             onChange={handleChange}
-            placeholder="you@business.com"
+            placeholder="you@example.com"
             autoComplete="email"
           />
         </label>
@@ -214,7 +214,7 @@ export default function InquiryForm() {
             type="text"
             value={form.businessName}
             onChange={handleChange}
-            placeholder="Cascade Dental"
+            placeholder="Your business name"
             autoComplete="organization"
           />
         </label>
@@ -231,7 +231,7 @@ export default function InquiryForm() {
             type="text"
             value={form.website}
             onChange={handleChange}
-            placeholder="cascadedental.com"
+            placeholder="yourbusiness.com"
             autoComplete="url"
           />
         </label>
@@ -257,7 +257,7 @@ export default function InquiryForm() {
           value={form.challenge}
           onChange={handleChange}
           rows={6}
-          placeholder="We're planning a rebuild in Q3 and want AI systems to actually understand our services and locations. Where do we start, and what would it take?"
+          placeholder="Tell us a bit about your project, timeline, or question."
         />
       </label>
 
