@@ -100,7 +100,7 @@ export default function InquiryForm() {
           className="font-mono mb-3"
           style={{ fontSize: '10px', letterSpacing: '0.2em', color: 'var(--d-accent)' }}
         >
-          INQUIRY · RECEIVED
+          MESSAGE · SENT
         </p>
 
         <h2
@@ -111,7 +111,7 @@ export default function InquiryForm() {
             color: 'var(--d-fg)',
           }}
         >
-          Thanks — your inquiry is in.
+          Thanks — your message is on its way.
         </h2>
 
         <p
@@ -125,8 +125,8 @@ export default function InquiryForm() {
             margin: '0 auto',
           }}
         >
-          We&apos;ll read what you sent and respond with the clearest next step —
-          no sales handoff, no queue. If it&apos;s urgent, email{' '}
+          We&apos;ll get back to you, usually within one business day. If it&apos;s
+          urgent, email{' '}
           <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>mark@kodecite.ai</strong>{' '}
           directly.
         </p>
@@ -157,7 +157,7 @@ export default function InquiryForm() {
           className="font-mono"
           style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-fg-dim)' }}
         >
-          PROJECT INQUIRY
+          SEND A MESSAGE
         </span>
       </div>
 
@@ -243,14 +243,13 @@ export default function InquiryForm() {
           className="font-mono block mb-1"
           style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
         >
-          What are you trying to build or solve?
+          How can we help?
         </span>
         <span
           className="font-inter block mb-2"
           style={{ fontSize: '12px', color: 'var(--d-fg-dim)', fontWeight: 300 }}
         >
-          The goal, the rough timeline, and what you&apos;re trying to solve. The more
-          specific, the clearer our next step.
+          A few details about your project, timeline, or question.
         </span>
         <textarea
           className="d-input"
@@ -287,7 +286,7 @@ export default function InquiryForm() {
           className="font-mono"
           style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'var(--d-fg-mute)' }}
         >
-          NO SALES HANDOFF · SENIOR REVIEW · PLAIN ENGLISH
+          WE REPLY WITHIN ONE BUSINESS DAY
         </span>
         <button
           type="submit"
