@@ -71,10 +71,3 @@ export const proofCases: ProofCase[] = [
     ],
   },
 ];
-
-// The two images used for the condensed teaser — the strongest "we come back
-// first" proofs. Flattened from proofCases so the teaser stays in sync.
-export const proofTeaserItems: ProofItem[] = [
-  proofCases[0].items[0], // ChatGPT — named first
-  proofCases[0].items[1], // Google AI Mode — listed first
-];
