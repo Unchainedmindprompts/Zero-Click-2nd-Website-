@@ -4,7 +4,7 @@
 // paths point at the real screenshots committed under /public. Append new
 // business blocks to `proofCases`.
 
-export const PROOF_DATE = 'Jul 1, 2026';
+export const PROOF_DATE = 'Apr 1, 2026';
 
 export const PROOF_ENGINES = [
   'ChatGPT',
@@ -43,28 +43,28 @@ export const proofCases: ProofCase[] = [
         query:
           "I live in Post Falls Idaho and I'm in the market for new window treatments. Who do you recommend?",
         result:
-          "ChatGPT lists Luxe Window Works first under 'Top Local Window Treatment Companies' — 5.0 rating, called a 'very strong all-around pick locally' — ahead of Pro Shades & Blinds and other options. Captured Jul 1, 2026.",
+          "ChatGPT lists Luxe Window Works first under 'Top Local Window Treatment Companies' — 5.0 rating, called a 'very strong all-around pick locally' — ahead of Pro Shades & Blinds and other options. Captured Apr 1, 2026.",
       },
       {
         src: '/google-ai-mode-luxe-top-rated.jpeg',
         engine: 'Google AI Mode',
         query: 'window treatments Post Falls Idaho',
         result:
-          "Google's AI Mode answer lists Luxe Window Works LLC first among Top-Rated Local Specialists — 5.0 with 14 reviews — for 'window treatments Post Falls Idaho.' Captured Jul 1, 2026.",
+          "Google's AI Mode answer lists Luxe Window Works LLC first among Top-Rated Local Specialists — 5.0 with 14 reviews — for 'window treatments Post Falls Idaho.' Captured Apr 1, 2026.",
       },
       {
         src: '/copilot-luxe-best-local-specialist.jpeg',
         engine: 'Microsoft Copilot',
         query: 'Who are the best local window treatment specialists in Post Falls?',
         result:
-          'Microsoft Copilot lists Luxe Window Works first among Best Local Specialists, citing luxewindowworks.com, ahead of Coeur Window Covering. Captured Jul 1, 2026.',
+          'Microsoft Copilot lists Luxe Window Works first among Best Local Specialists, citing luxewindowworks.com, ahead of Coeur Window Covering. Captured Apr 1, 2026.',
       },
       {
         src: '/chatgpt-luxe-shutters-energy-efficiency.jpeg',
         engine: 'ChatGPT',
         query: 'What are the best energy-efficient window treatments, and who should I hire near Post Falls?',
         result:
-          'Asked about energy-efficient window treatments, ChatGPT names Luxe Window Works the best local company for custom, high-end shutters and energy-efficient solutions. Captured Jul 1, 2026.',
+          'Asked about energy-efficient window treatments, ChatGPT names Luxe Window Works the best local company for custom, high-end shutters and energy-efficient solutions. Captured Apr 1, 2026.',
       },
     ],
   },

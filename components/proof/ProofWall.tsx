@@ -59,7 +59,7 @@ export default function ProofWall() {
         <div className="d-eyebrow mb-5">PROOF · REAL AI ANSWERS, REAL QUERIES</div>
         <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '760px' }}>
           Real answers from ChatGPT, Perplexity, Google AI Overviews, Bing Copilot, and Gemini,
-          captured July 1, 2026. AI answers vary by user and change over time — these are real
+          captured April 1, 2026. AI answers vary by user and change over time — these are real
           results, not guarantees.
         </p>
 
