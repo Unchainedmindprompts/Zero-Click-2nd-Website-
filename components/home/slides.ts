@@ -49,7 +49,7 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'understood by AI.', accent: true },
     ],
     support:
-      'KodeCite rebuilds business websites into AI-readable infrastructure — so your services, locations, credentials, reviews, and authority can be understood, verified, and recommended.',
+      'KodeCite rebuilds business websites into AI-readable infrastructure — so AI systems can understand who you are, verify what you claim, and trust why you should be recommended.',
     image: '/home/slide-ai-web.webp',
     bg:
       'radial-gradient(58% 78% at 76% 24%, rgba(93,213,255,0.22), transparent 60%),' +
@@ -90,7 +90,7 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'machine-readable foundation.', accent: true },
     ],
     support:
-      'KodeCite connects your business, people, services, locations, citations, FAQs, and action paths into one structured entity.',
+      'KodeCite connects your business, people, services, locations, citations, FAQs, and action paths into one connected, machine-readable foundation.',
     // ART DIRECTION: bright golden-hour boardroom with a city skyline through
     // glass — structure and clarity. Near-white render, so this slide uses the
     // light treatment (dark text, no darkening of the image). Natively text-free.

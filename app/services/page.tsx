@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
+import ProofWall from '@/components/proof/ProofWall';
 
 export const metadata: Metadata = {
   title: 'Services — AI-Ready Foundations',
@@ -314,6 +315,9 @@ export default function ServicesPage() {
           </div>
         </GlassPanel>
       </section>
+
+      {/* ── Proof ────────────────────────────────────────── */}
+      <ProofWall />
 
       {/* ── Adjacent Services ────────────────────────────── */}
       <section id="adjacent" className="secondary-section" style={sectionGap}>
