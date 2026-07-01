@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { proofCases, PROOF_ENGINES, PROOF_DATE } from './proofData';
 
@@ -30,6 +31,8 @@ function CaptionBar({ engine, query }: { engine: string; query: string }) {
 
 export default function ProofWall() {
   const [active, setActive] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   const close = useCallback(() => setActive(null), []);
   const prev = useCallback(() => setActive((i) => (i === null ? null : (i - 1 + ALL_ITEMS.length) % ALL_ITEMS.length)), []);
@@ -125,8 +128,10 @@ export default function ProofWall() {
         ))}
       </div>
 
-      {/* Lightbox */}
-      {active !== null && (
+      {/* Lightbox — portaled to <body> so position:fixed is relative to the
+          viewport, not a transformed ancestor (the secondary-page shell), which
+          otherwise traps it inside the section. */}
+      {mounted && active !== null && createPortal(
         <div
           className="fixed inset-0 z-[60] flex items-center justify-center p-4"
           style={{ background: 'rgba(4,6,16,0.93)' }}
@@ -151,15 +156,18 @@ export default function ProofWall() {
             </svg>
           </button>
 
-          <div className="relative max-w-5xl w-full flex flex-col items-center gap-4" onClick={(e) => e.stopPropagation()}>
-            <Image
-              src={ALL_ITEMS[active].src}
-              alt={ALL_ITEMS[active].result}
-              width={1600}
-              height={1000}
-              className="rounded-xl object-contain max-h-[78vh] w-auto h-auto"
-              style={{ boxShadow: '0 25px 60px rgba(0,0,0,0.6)' }}
-            />
+          <div className="relative w-full flex flex-col items-center gap-4" style={{ maxWidth: 'min(92vw, 1040px)' }} onClick={(e) => e.stopPropagation()}>
+            <div className="w-full rounded-xl" style={{ maxHeight: '80vh', overflowY: 'auto', boxShadow: '0 25px 60px rgba(0,0,0,0.6)', background: 'var(--d-bg)' }}>
+              {/* Full-resolution view — a plain img so any aspect ratio (tall
+                  screenshots included) renders at true size and scrolls, rather
+                  than collapsing the way a fixed-ratio next/image does here. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={ALL_ITEMS[active].src}
+                alt={ALL_ITEMS[active].result}
+                style={{ display: 'block', width: '100%', height: 'auto' }}
+              />
+            </div>
             <p className="font-mono text-center" style={{ fontSize: '12px', color: 'rgba(233,238,255,0.85)', letterSpacing: '0.02em' }}>
               <span style={{ color: ACCENT }}>{ALL_ITEMS[active].engine}</span>
               <span style={{ color: 'rgba(255,255,255,0.3)' }}> · </span>
@@ -181,7 +189,8 @@ export default function ProofWall() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-        </div>
+        </div>,
+        document.body,
       )}
     </section>
   );
