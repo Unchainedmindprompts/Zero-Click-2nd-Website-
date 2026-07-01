@@ -1,5 +1,5 @@
 import CinematicHomeSlider from '@/components/home/CinematicHomeSlider';
-import ProofTeaser from '@/components/proof/ProofTeaser';
+import HomeScrollLock from '@/components/home/HomeScrollLock';
 
 export const metadata = {
   alternates: {
@@ -23,11 +23,12 @@ const webPageSchema = {
   primaryImageOfPage: { '@id': 'https://www.kodecite.ai/#logo' },
 };
 
-// The homepage opens on the full-screen cinematic slider (its own first
-// viewport). The slider is not a hard scroll-hijack — on its last slide a
-// further scroll releases into the normal page — so below it we surface the
-// Proof teaser and the site footer (contact, NAP, entity signals). Deeper
-// content is reached via the nav/menu and the slider CTAs.
+// The homepage is a locked, full-screen cinematic slide experience — only the
+// shell, slider, controls, and slide copy/CTAs are visible. Deeper content is
+// reached via the nav/menu and CTAs (Services, About, Blog, FAQ, Contact, …).
+// The former lower sections (TransformationStatement, ShiftFromPagesToEntities,
+// FrameworkLayers, MachineReadPreview, FoundationOffer, final CTA) are no longer
+// rendered here; their components remain in the repo for reuse on routes.
 export default function HomePage() {
   return (
     <>
@@ -36,11 +37,8 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
+      <HomeScrollLock />
       <CinematicHomeSlider />
-
-      <section className="kc-home-proof">
-        <ProofTeaser />
-      </section>
     </>
   );
 }
