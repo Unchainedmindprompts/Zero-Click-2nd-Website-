@@ -1059,17 +1059,14 @@ em.serif {
   .kc-shell-cta { display: inline-flex !important; }
 }
 
-/* Homepage lock — applied to <html> only on `/` (via HomeScrollLock).
-   The homepage is a locked full-screen slider: no vertical scroll, and nothing
-   below it (the footer) is reachable. Interior pages are unaffected. */
-html.kc-home-locked,
-html.kc-home-locked body {
-  overflow: hidden;
-  height: 100%;
-  overscroll-behavior: none;
-}
-html.kc-home-locked footer {
-  display: none;
+/* Homepage Proof teaser — the section below the cinematic slider. The slider
+   fills the first viewport; scrolling past it reveals this + the footer. */
+.kc-home-proof {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(56px, 8vh, 96px) clamp(20px, 5vw, 40px) clamp(64px, 9vh, 104px);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
