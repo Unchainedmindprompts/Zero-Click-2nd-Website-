@@ -6,12 +6,14 @@
 
 export const PROOF_DATE = 'Apr 1, 2026';
 
+// Only list engines we actually show on the wall — never name an engine
+// without a visible card to back it. Re-add 'Perplexity' and 'Gemini' here
+// (and their cards below + the intro line in ProofWall) once those
+// screenshots are committed to /public.
 export const PROOF_ENGINES = [
   'ChatGPT',
-  'Perplexity',
-  'Google AI Overviews',
-  'Bing Copilot',
-  'Gemini',
+  'Google AI Mode',
+  'Microsoft Copilot',
 ];
 
 export interface ProofItem {
