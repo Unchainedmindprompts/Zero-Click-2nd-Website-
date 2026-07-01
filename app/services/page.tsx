@@ -3,36 +3,56 @@ import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 import ProofWall from '@/components/proof/ProofWall';
+import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Services',
   description:
     'We rebuild your website so AI engines — ChatGPT, Perplexity, Google AI, Bing Copilot, Gemini — can read it, trust it, and cite your business by name. Built once. Owned forever. No retainer.',
-  alternates: { canonical: 'https://www.kodecite.ai/services' },
+  alternates: { canonical: `${ORIGIN}/services` },
 };
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Foundation Build',
-  serviceType: 'AI Visibility Infrastructure',
-  provider: {
-    '@type': 'ProfessionalService',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    url: 'https://www.kodecite.ai',
-  },
-  description:
-    'KodeCite rebuilds your website so AI engines can read it, verify your business, and cite you by name — a fast server-rendered site, a connected entity graph, answer-first pages, and aligned trust signals, then handed off to you. Owned forever. No retainer.',
-  areaServed: { '@type': 'Country', name: 'United States' },
-};
+const PAGE_URL = `${ORIGIN}/services`;
 
-const breadcrumbSchema = {
+// Single @graph for /services, connected into the site-wide entity graph
+// (#website, #business, #logo in app/layout.tsx) via canonical @ids from
+// lib/schema.ts. The Foundation Build Service is the page's mainEntity;
+// its Offer (price) lives on /pricing.
+const servicesSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.kodecite.ai/services' },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${PAGE_URL}#webpage`,
+      url: PAGE_URL,
+      name: 'Services — KodeCite.ai',
+      description:
+        'How KodeCite rebuilds your website so AI engines can read it, verify your business, and cite you by name.',
+      inLanguage: 'en-US',
+      isPartOf: { '@id': WEBSITE_ID },
+      about: businessRef,
+      primaryImageOfPage: { '@id': `${ORIGIN}/#logo` },
+      breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
+      mainEntity: { '@id': `${PAGE_URL}#foundation-build` },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${PAGE_URL}#foundation-build`,
+      name: 'Foundation Build',
+      serviceType: 'AI Visibility Infrastructure',
+      provider: businessRef,
+      description:
+        'KodeCite rebuilds your website so AI engines can read it, verify your business, and cite you by name — a fast server-rendered site, a connected entity graph, answer-first pages, and aligned trust signals, then handed off to you. Owned forever. No retainer.',
+      areaServed: { '@type': 'Country', name: 'United States' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${PAGE_URL}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: PAGE_URL },
+      ],
+    },
   ],
 };
 
@@ -101,8 +121,7 @@ const sectionGap = { marginTop: '30px' };
 export default function ServicesPage() {
   return (
     <SecondaryPageShell>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
 
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="secondary-section secondary-hero">

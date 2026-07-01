@@ -2,42 +2,64 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
+import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
     'The Foundation Build — one-time $4,995. A rebuilt, AI-readable website with 60 days of citation tracking, owned forever, no retainer. Cited by name in 60 days or your money back.',
-  alternates: { canonical: 'https://www.kodecite.ai/pricing' },
+  alternates: { canonical: `${ORIGIN}/pricing` },
 };
 
+const PAGE_URL = `${ORIGIN}/pricing`;
+
+// Single @graph for /pricing, connected into the site-wide entity graph
+// (#website, #business, #logo defined in app/layout.tsx) via canonical @ids
+// from lib/schema.ts — no hardcoded identity strings.
 const pricingSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Foundation Build',
-  serviceType: 'AI Visibility Infrastructure',
-  provider: {
-    '@type': 'ProfessionalService',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    url: 'https://www.kodecite.ai',
-  },
-  description:
-    'A one-time rebuild of your website into an AI-readable foundation AI engines can read, verify, and cite — with 60 days of citation tracking, transferred to you on handoff. No retainer. Cited by name in 60 days or your money back.',
-  offers: {
-    '@type': 'Offer',
-    price: '4995',
-    priceCurrency: 'USD',
-    url: 'https://www.kodecite.ai/pricing',
-    description: 'One-time Foundation Build. Shipped in 15–20 business days. You own everything.',
-  },
-};
-
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
-    { '@type': 'ListItem', position: 2, name: 'Pricing', item: 'https://www.kodecite.ai/pricing' },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${PAGE_URL}#webpage`,
+      url: PAGE_URL,
+      name: 'Pricing — KodeCite.ai',
+      description:
+        'The Foundation Build — one-time $4,995. A rebuilt, AI-readable website with 60 days of citation tracking, owned forever, no retainer.',
+      inLanguage: 'en-US',
+      isPartOf: { '@id': WEBSITE_ID },
+      about: businessRef,
+      primaryImageOfPage: { '@id': `${ORIGIN}/#logo` },
+      breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
+      mainEntity: { '@id': `${PAGE_URL}#foundation-build` },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${PAGE_URL}#foundation-build`,
+      name: 'Foundation Build',
+      serviceType: 'AI Visibility Infrastructure',
+      provider: businessRef,
+      description:
+        'A one-time rebuild of your website into an AI-readable foundation AI engines can read, verify, and cite — with 60 days of citation tracking, transferred to you on handoff. No retainer. Cited by name in 60 days or your money back.',
+      areaServed: { '@type': 'Country', name: 'United States' },
+      offers: {
+        '@type': 'Offer',
+        '@id': `${PAGE_URL}#offer`,
+        price: '4995',
+        priceCurrency: 'USD',
+        url: PAGE_URL,
+        availability: 'https://schema.org/InStock',
+        description: 'One-time Foundation Build. Shipped in 15–20 business days. You own everything.',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${PAGE_URL}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
+        { '@type': 'ListItem', position: 2, name: 'Pricing', item: PAGE_URL },
+      ],
+    },
   ],
 };
 
@@ -79,7 +101,6 @@ export default function PricingPage() {
   return (
     <SecondaryPageShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="secondary-section secondary-hero">
