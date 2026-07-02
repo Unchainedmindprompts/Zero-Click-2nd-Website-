@@ -12,6 +12,7 @@ import Shell from '@/components/Shell';
 import RouteTransition from '@/components/RouteTransition';
 import Footer from '@/components/Footer';
 import BackgroundLayer from '@/components/BackgroundLayer';
+import { businessAreaServed } from '@/lib/schema';
 
 // ── Design system v2 fonts ────────────────────────────────────────────────────
 const inter = Inter({
@@ -128,7 +129,7 @@ const siteSchema = {
       priceRange: '$$',
       foundingDate: '2025',
       founder: { '@id': 'https://www.kodecite.ai/#founder' },
-      areaServed: { '@type': 'Country', name: 'United States' },
+      areaServed: businessAreaServed,
       serviceType: [
         'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
         'AI Search Optimization', 'Next.js Website Development', 'JSON-LD Schema Markup',
@@ -146,8 +147,9 @@ const siteSchema = {
       jobTitle: 'Founder',
       worksFor: { '@id': 'https://www.kodecite.ai/#business' },
       url: 'https://www.kodecite.ai',
+      homeLocation: { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
       description:
-        'Founder of KodeCite.ai. 30 years of sales experience, 23 years as an entrepreneur, 1,000+ hours of AEO and GEO research. Builds AI-ready web infrastructure for businesses that want to be recommended by AI search engines.',
+        'Founder of KodeCite.ai, based in Coeur d\'Alene, North Idaho. 30 years of sales experience, 23 years as an entrepreneur, 1,000+ hours of AEO and GEO research. Builds AI-ready web infrastructure for businesses that want to be recommended by AI search engines.',
       knowsAbout: [
         'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
         'Generative Engine Optimization', 'AI Search Visibility', 'JSON-LD Schema Markup',
