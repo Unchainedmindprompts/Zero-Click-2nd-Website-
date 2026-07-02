@@ -64,3 +64,19 @@ export const entityGraphTerm = {
 
 // Reference to the canonical business entity (for an article's `about`).
 export const businessRef = { '@id': BUSINESS_ID } as const;
+
+// Canonical areaServed for the #business node (imported by app/layout.tsx so it
+// propagates to every page). Typed local City / AdministrativeArea nodes with
+// Wikipedia sameAs for entity resolution, plus Country so we stay nationally
+// declared — a local signal for "AEO agency North Idaho / Spokane" queries
+// without self-limiting to one market.
+export const businessAreaServed = [
+  { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
+  { '@type': 'City', name: 'Post Falls', sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho' },
+  { '@type': 'City', name: 'Hayden', sameAs: 'https://en.wikipedia.org/wiki/Hayden,_Idaho' },
+  { '@type': 'City', name: 'Sandpoint', sameAs: 'https://en.wikipedia.org/wiki/Sandpoint,_Idaho' },
+  { '@type': 'City', name: 'Spokane', sameAs: 'https://en.wikipedia.org/wiki/Spokane,_Washington' },
+  { '@type': 'AdministrativeArea', name: 'Kootenai County', sameAs: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' },
+  { '@type': 'AdministrativeArea', name: 'North Idaho', sameAs: 'https://en.wikipedia.org/wiki/Idaho_Panhandle' },
+  { '@type': 'Country', name: 'United States' },
+] as const;
