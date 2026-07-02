@@ -14,6 +14,15 @@ export type BlogPost = {
 // STRATEGY | FRAMEWORK | FOUNDATIONS | TECHNICAL | PLATFORM | PAID MEDIA | CASE STUDY | DIAGNOSTIC
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'google-reviews-wont-save-you-from-ai-search',
+    title: "Your Google Reviews Won't Save You From AI Search",
+    category: 'STRATEGY',
+    date: 'July 2, 2026',
+    readTime: '9 min read',
+    excerpt: 'Reviews win the Google map pack — they do not win AI answers. Why a North Idaho business with 1,200+ reviews can still be invisible to ChatGPT, and what actually gets you cited by AI engines.',
+    featured: true,
+  },
+  {
     slug: 'why-your-website-cant-talk-to-ai',
     title: "The Language Problem: Why Your Website Can't Talk to AI — And What to Do About It",
     category: 'TECHNICAL',
