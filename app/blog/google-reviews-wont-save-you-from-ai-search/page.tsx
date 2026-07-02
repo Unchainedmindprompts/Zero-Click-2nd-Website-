@@ -7,17 +7,24 @@ const URL = 'https://www.kodecite.ai/blog/google-reviews-wont-save-you-from-ai-s
 export const metadata: Metadata = {
   title: "Your Google Reviews Won't Save You From AI Search",
   description:
-    'Reviews win the Google map pack. They do not win AI answers. Why a North Idaho business with 1,200+ reviews can still be invisible to ChatGPT — and what actually gets you recommended.',
+    'Reviews win the Google map pack. They do not win AI answers. Why a North Idaho business with 1,375 reviews can still be invisible to ChatGPT — and what actually gets you recommended.',
   alternates: { canonical: URL },
   openGraph: {
     title: "Your Google Reviews Won't Save You From AI Search",
     description:
-      'Why a North Idaho business with 1,200+ reviews can still be invisible to ChatGPT — and what actually gets you cited by AI answer engines.',
+      'Why a North Idaho business with 1,375 reviews can still be invisible to ChatGPT — and what actually gets you cited by AI answer engines.',
     url: URL,
     type: 'article',
     publishedTime: '2026-07-02',
     authors: ['Mark Abplanalp'],
     images: [{ url: 'https://www.kodecite.ai/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Your Google Reviews Won't Save You From AI Search",
+    description:
+      'Why a North Idaho business with 1,375 reviews can still be invisible to ChatGPT — and what actually gets you cited by AI answer engines.',
+    images: ['https://www.kodecite.ai/og-image.png'],
   },
 };
 
@@ -27,7 +34,7 @@ const articleSchema = {
   '@id': `${URL}#article`,
   headline: "Your Google Reviews Won't Save You From AI Search",
   description:
-    'Reviews win the Google map pack; they do not win AI answers. A North Idaho business with 1,200+ five-star reviews can still be invisible to ChatGPT, because AI recommendation depends on machine-readable structure, not star count — here is the evidence and what actually gets you cited.',
+    'Reviews win the Google map pack; they do not win AI answers. A North Idaho business with 1,375 five-star reviews can still be invisible to ChatGPT, because AI recommendation depends on machine-readable structure, not star count — here is the evidence and what actually gets you cited.',
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: blogCollectionPage,
@@ -92,7 +99,7 @@ const faqSchema = {
       name: 'Do Google reviews help with AI search visibility?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Not directly. In our North Idaho audit, businesses with 30+ (and even 1,200+) Google reviews still received zero AI citations for their core queries. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
+        text: 'Not directly. In our test, a Coeur d’Alene-area HVAC company with 1,375 five-star reviews was named in zero of four ChatGPT queries for its core services — ChatGPT instead recommended seven other local companies. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
       },
     },
     {
@@ -130,7 +137,7 @@ const link = 'text-[var(--d-accent)] underline underline-offset-2 hover:opacity-
 const faqItems = [
   {
     q: 'Do Google reviews help with AI search visibility?',
-    a: 'Not directly. In our North Idaho audit, businesses with 30+ (and even 1,200+) Google reviews still received zero AI citations for their core queries. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
+    a: 'Not directly. In our test, a Coeur d’Alene-area HVAC company with 1,375 five-star reviews was named in zero of four ChatGPT queries for its core services — ChatGPT instead recommended seven other local companies. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
   },
   {
     q: 'Why doesn’t my business show up in ChatGPT even though I rank on Google?',
@@ -186,8 +193,8 @@ export default function GoogleReviewsWontSaveYou() {
           </h1>
 
           <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            Why a North Idaho business with 1,200+ reviews can still be invisible to ChatGPT — and what
-            actually gets you recommended.
+            Why a North Idaho business with 1,375 reviews can still be invisible to ChatGPT — and
+            what actually gets you recommended.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[var(--d-line)]">
@@ -221,7 +228,7 @@ export default function GoogleReviewsWontSaveYou() {
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   When a customer asks ChatGPT or Perplexity for the best business in your town, the AI doesn&apos;t
                   rank by star count — it names the businesses it can <em>read and verify</em>. A North Idaho company
-                  with over a thousand five-star reviews can still go unnamed, because AI recommendation depends on
+                  with 1,375 five-star reviews can still go unnamed, because AI recommendation depends on
                   machine-readable structure, not reputation. Here&apos;s the evidence.
                 </p>
 
@@ -248,16 +255,25 @@ export default function GoogleReviewsWontSaveYou() {
 
                 <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">The paradox: a thousand reviews, still invisible</h2>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  We recently audited local North Idaho businesses to see how they show up in AI search. One of them — an
-                  HVAC company in the Coeur d&apos;Alene area — has <strong className="text-[var(--d-fg)]">more than 1,200 Google reviews at a 4.9-star
-                  average.</strong> By every traditional measure, they&apos;ve won: they dominate the map pack, they&apos;re the
-                  obvious local leader.
+                  We recently ran a test: we asked ChatGPT the questions its customers actually ask — starting with the best
+                  HVAC company in Coeur d&apos;Alene — and looked at who it named. One of the businesses we checked is the
+                  area&apos;s #1-reviewed HVAC company: <strong className="text-[var(--d-fg)]">1,375 five-star Google reviews</strong>, the clear market
+                  leader. By every traditional measure, they&apos;ve won — they dominate the map pack.
                 </p>
+
+                <blockquote className="my-8 border-l-2 border-[var(--d-accent)] pl-6">
+                  <p className="font-inter text-[var(--d-fg)] text-lg md:text-xl leading-relaxed italic">
+                    Asked for the best HVAC company in Coeur d&apos;Alene, ChatGPT recommended seven local businesses. The one
+                    with 1,375 five-star reviews — the clear market leader — wasn&apos;t one of them.
+                  </p>
+                </blockquote>
+
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  And they&apos;re structurally invisible to AI. Their reviews live on Google Maps. Their website runs on a
-                  page-builder with plugin-generated markup — no connected, machine-readable business identity for an AI
-                  to read. So when the AI builds its answer, it has thousands of reasons to <em>trust</em> this company on
-                  Google Maps and almost nothing to <em>cite</em> them with in an AI answer.
+                  Across four ChatGPT queries for its core services, the market leader was named <strong className="text-[var(--d-fg)]">zero times</strong> —
+                  ChatGPT instead recommended seven other local companies. The reason is structural. Their reviews live on
+                  Google Maps. Their website runs on a page-builder with plugin-generated markup — no connected,
+                  machine-readable identity for an AI to read. So ChatGPT had thousands of reasons to <em>trust</em> them on
+                  Google Maps and almost nothing to <em>cite</em> them with in an answer.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   More reviews didn&apos;t help. That&apos;s not a fluke — it&apos;s how the two systems actually work.
@@ -272,7 +288,7 @@ export default function GoogleReviewsWontSaveYou() {
                   says local ranking is based on &ldquo;relevance, distance, and prominence,&rdquo; and that &ldquo;more reviews
                   and positive ratings can help your business&apos;s local ranking.&rdquo; In the{' '}
                   <a href="https://www.brightlocal.com/learn/google-local-algorithm-and-ranking-factors/" target="_blank" rel="noopener noreferrer" className={link}>expert-consensus local ranking factors</a>,
-                  review signals carry roughly <strong className="text-[var(--d-fg)]">16% of the weight</strong> for the map pack — meaningful, but behind
+                  review signals carry roughly <strong className="text-[var(--d-fg)]">15–20% of the weight</strong> for the map pack — meaningful, but behind
                   Google Business Profile and on-page signals.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
