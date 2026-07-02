@@ -12,6 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/machine-read`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/contact`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
 
+    // Location / service-area pages
+    { url: `${baseUrl}/locations/coeur-dalene`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+
     // Blog posts
     { url: `${baseUrl}/blog/google-reviews-wont-save-you-from-ai-search`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/blog/why-your-website-cant-talk-to-ai`, lastModified: new Date('2026-06-14').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
