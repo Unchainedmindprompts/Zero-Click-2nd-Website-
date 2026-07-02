@@ -5,9 +5,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     // Core pages
-    { url: baseUrl, lastModified: new Date('2026-05-20').toISOString(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${baseUrl}/services`, lastModified: new Date('2026-05-20').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/blog`, lastModified: new Date('2026-05-20').toISOString(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: baseUrl, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${baseUrl}/services`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/pricing`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/machine-read`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/contact`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
 
