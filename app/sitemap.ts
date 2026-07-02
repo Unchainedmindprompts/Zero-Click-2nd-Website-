@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contact`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
 
     // Blog posts
+    { url: `${baseUrl}/blog/google-reviews-wont-save-you-from-ai-search`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/blog/why-your-website-cant-talk-to-ai`, lastModified: new Date('2026-06-14').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/blog/google-ai-search-smb-entity-infrastructure`, lastModified: new Date('2026-05-20').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/blog/entity-first-search-local-businesses`, lastModified: new Date('2026-05-09').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
