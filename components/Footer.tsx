@@ -9,6 +9,14 @@ const footerLinks = [
   { label: 'Pricing',    href: '/pricing'  },
 ];
 
+// Service Areas — location landing pages. Add a line as each page goes live
+// (Spokane, North Idaho, Post Falls next).
+const serviceAreas = [
+  { label: "Coeur d'Alene", href: '/locations/coeur-dalene' },
+  { label: 'Spokane', href: '/locations/spokane' },
+  { label: 'North Idaho', href: '/locations/north-idaho' },
+];
+
 export default function Footer() {
   return (
     <footer
@@ -51,17 +59,37 @@ export default function Footer() {
             </p>
           </div>
 
-          <nav className="flex flex-wrap gap-x-10 gap-y-3 content-start pt-1">
-            {footerLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="d-footer-link font-inter text-sm"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex flex-col sm:flex-row gap-x-16 gap-y-8">
+            <nav className="flex flex-wrap gap-x-10 gap-y-3 content-start pt-1">
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="d-footer-link font-inter text-sm"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Service Areas */}
+            <div className="pt-1">
+              <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-fg-mute)' }}>
+                SERVICE AREAS
+              </p>
+              <nav className="flex flex-col gap-2">
+                {serviceAreas.map((area) => (
+                  <Link
+                    key={area.href}
+                    href={area.href}
+                    className="d-footer-link font-inter text-sm"
+                  >
+                    {area.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>
         </div>
 
         {/* Bottom bar */}

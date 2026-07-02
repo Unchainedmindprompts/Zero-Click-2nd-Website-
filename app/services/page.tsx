@@ -142,6 +142,18 @@ export default function ServicesPage() {
         </GlassPanel>
       </section>
 
+      {/* ── Service areas (local landing pages) ──────────── */}
+      <section className="secondary-section" style={sectionGap}>
+        <Link href="/locations/coeur-dalene" className="glass-panel-soft secondary-jump" style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '18px 24px', textDecoration: 'none' }}>
+          <span className="font-mono flex-shrink-0" style={{ fontSize: '9px', letterSpacing: '0.16em', color: ACCENT }}>LOCAL</span>
+          <span className="font-inter flex-1" style={{ fontSize: '14.5px', color: DIM, fontWeight: 300 }}>
+            <span style={{ color: FG, fontWeight: 500 }}>Serving Coeur d&apos;Alene, Spokane, Post Falls &amp; North Idaho.</span>{' '}
+            AI search optimization, local.
+          </span>
+          <span style={{ color: ACCENT, fontSize: '15px', flexShrink: 0 }}>→</span>
+        </Link>
+      </section>
+
       {/* ── The Problem ──────────────────────────────────── */}
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
