@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Location / service-area pages
     { url: `${baseUrl}/locations/coeur-dalene`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/locations/spokane`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
 
     // Blog posts
     { url: `${baseUrl}/blog/google-reviews-wont-save-you-from-ai-search`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.9 },

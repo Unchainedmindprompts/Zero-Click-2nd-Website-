@@ -13,6 +13,7 @@ const footerLinks = [
 // (Spokane, North Idaho, Post Falls next).
 const serviceAreas = [
   { label: "Coeur d'Alene", href: '/locations/coeur-dalene' },
+  { label: 'Spokane', href: '/locations/spokane' },
 ];
 
 export default function Footer() {
