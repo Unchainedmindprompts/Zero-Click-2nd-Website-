@@ -14,6 +14,7 @@ const footerLinks = [
 const serviceAreas = [
   { label: "Coeur d'Alene", href: '/locations/coeur-dalene' },
   { label: 'Spokane', href: '/locations/spokane' },
+  { label: 'North Idaho', href: '/locations/north-idaho' },
 ];
 
 export default function Footer() {
