@@ -7,17 +7,24 @@ const URL = 'https://www.kodecite.ai/blog/google-reviews-wont-save-you-from-ai-s
 export const metadata: Metadata = {
   title: "Your Google Reviews Won't Save You From AI Search",
   description:
-    'Reviews win the Google map pack. They do not win AI answers. Why a North Idaho business with 1,200+ reviews can still be invisible to ChatGPT — and what actually gets you recommended.',
+    'Reviews win the Google map pack. They do not win AI answers. Why a North Idaho business with over a thousand reviews can still be invisible to ChatGPT — and what actually gets you recommended.',
   alternates: { canonical: URL },
   openGraph: {
     title: "Your Google Reviews Won't Save You From AI Search",
     description:
-      'Why a North Idaho business with 1,200+ reviews can still be invisible to ChatGPT — and what actually gets you cited by AI answer engines.',
+      'Why a North Idaho business with over a thousand reviews can still be invisible to ChatGPT — and what actually gets you cited by AI answer engines.',
     url: URL,
     type: 'article',
     publishedTime: '2026-07-02',
     authors: ['Mark Abplanalp'],
     images: [{ url: 'https://www.kodecite.ai/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Your Google Reviews Won't Save You From AI Search",
+    description:
+      'Why a North Idaho business with over a thousand reviews can still be invisible to ChatGPT — and what actually gets you cited by AI answer engines.',
+    images: ['https://www.kodecite.ai/og-image.png'],
   },
 };
 
@@ -27,7 +34,7 @@ const articleSchema = {
   '@id': `${URL}#article`,
   headline: "Your Google Reviews Won't Save You From AI Search",
   description:
-    'Reviews win the Google map pack; they do not win AI answers. A North Idaho business with 1,200+ five-star reviews can still be invisible to ChatGPT, because AI recommendation depends on machine-readable structure, not star count — here is the evidence and what actually gets you cited.',
+    'Reviews win the Google map pack; they do not win AI answers. A North Idaho business with over a thousand five-star reviews can still be invisible to ChatGPT, because AI recommendation depends on machine-readable structure, not star count — here is the evidence and what actually gets you cited.',
   author: articleAuthor,
   publisher: articlePublisher,
   isPartOf: blogCollectionPage,
@@ -92,7 +99,7 @@ const faqSchema = {
       name: 'Do Google reviews help with AI search visibility?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Not directly. In our North Idaho audit, businesses with 30+ (and even 1,200+) Google reviews still received zero AI citations for their core queries. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
+        text: 'Not directly. In our North Idaho audit, businesses with 30+ (and even over a thousand) Google reviews still received zero AI citations for their core queries. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
       },
     },
     {
@@ -130,7 +137,7 @@ const link = 'text-[var(--d-accent)] underline underline-offset-2 hover:opacity-
 const faqItems = [
   {
     q: 'Do Google reviews help with AI search visibility?',
-    a: 'Not directly. In our North Idaho audit, businesses with 30+ (and even 1,200+) Google reviews still received zero AI citations for their core queries. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
+    a: 'Not directly. In our North Idaho audit, businesses with 30+ (and even over a thousand) Google reviews still received zero AI citations for their core queries. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
   },
   {
     q: 'Why doesn’t my business show up in ChatGPT even though I rank on Google?',
@@ -186,8 +193,8 @@ export default function GoogleReviewsWontSaveYou() {
           </h1>
 
           <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            Why a North Idaho business with 1,200+ reviews can still be invisible to ChatGPT — and what
-            actually gets you recommended.
+            Why a North Idaho business with over a thousand reviews can still be invisible to ChatGPT — and
+            what actually gets you recommended.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[var(--d-line)]">
@@ -249,8 +256,8 @@ export default function GoogleReviewsWontSaveYou() {
                 <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">The paradox: a thousand reviews, still invisible</h2>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   We recently audited local North Idaho businesses to see how they show up in AI search. One of them — an
-                  HVAC company in the Coeur d&apos;Alene area — has <strong className="text-[var(--d-fg)]">more than 1,200 Google reviews at a 4.9-star
-                  average.</strong> By every traditional measure, they&apos;ve won: they dominate the map pack, they&apos;re the
+                  HVAC company in the Coeur d&apos;Alene area — has <strong className="text-[var(--d-fg)]">well over a thousand five-star Google
+                  reviews.</strong> By every traditional measure, they&apos;ve won: they dominate the map pack, they&apos;re the
                   obvious local leader.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
@@ -272,7 +279,7 @@ export default function GoogleReviewsWontSaveYou() {
                   says local ranking is based on &ldquo;relevance, distance, and prominence,&rdquo; and that &ldquo;more reviews
                   and positive ratings can help your business&apos;s local ranking.&rdquo; In the{' '}
                   <a href="https://www.brightlocal.com/learn/google-local-algorithm-and-ranking-factors/" target="_blank" rel="noopener noreferrer" className={link}>expert-consensus local ranking factors</a>,
-                  review signals carry roughly <strong className="text-[var(--d-fg)]">16% of the weight</strong> for the map pack — meaningful, but behind
+                  review signals carry roughly <strong className="text-[var(--d-fg)]">15–20% of the weight</strong> for the map pack — meaningful, but behind
                   Google Business Profile and on-page signals.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
