@@ -14,6 +14,15 @@ export type BlogPost = {
 // STRATEGY | FRAMEWORK | FOUNDATIONS | TECHNICAL | PLATFORM | PAID MEDIA | CASE STUDY | DIAGNOSTIC
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'aeo-technical-seo-done-correctly',
+    title: 'AEO Is Technical SEO Done Correctly for the AI Search Era',
+    category: 'TECHNICAL',
+    date: 'July 6, 2026',
+    readTime: '13 min read',
+    excerpt: "\"AI is going to kill SEO\" is the wrong takeaway. SEO isn't dead — shallow SEO is. Here's the technical case for why AEO is simply proper technical SEO built for the age of AI Overviews, ChatGPT, Perplexity, and Gemini — and why entity graph infrastructure, not more schema plugins, is what makes your business one the machines can understand, verify, and recommend.",
+    featured: true,
+  },
+  {
     slug: 'google-reviews-wont-save-you-from-ai-search',
     title: "Your Google Reviews Won't Save You From AI Search",
     category: 'STRATEGY',
