@@ -2,7 +2,7 @@
 
 > KodeCite is an AI-readable website infrastructure practice. We rebuild and restructure business websites so AI systems can understand the business clearly, verify its identity, and trust its claims through corroborated sources.
 
-Full reference (expanded): https://www.kodecite.ai/llms-full.txt
+[Full reference (expanded)](https://www.kodecite.ai/llms-full.txt)
 
 KodeCite builds AI-readable website infrastructure for businesses that need to be understood, verified, and trusted by AI systems. Traditional websites were built for human visitors who scroll, read, and click. AI systems work differently — before they recommend a business they need to understand what it is, verify that it is real, and trust that its claims can be corroborated. KodeCite rebuilds the foundation beneath a website (server-rendered pages, a structured JSON-LD entity graph, answer-first content, and corroborated trust signals) on infrastructure the business owns.
 
@@ -27,31 +27,41 @@ You own everything (GitHub + Vercel). No platform lock-in. No required monthly r
 
 ## Key pages
 
-- Start Here: https://www.kodecite.ai/faq
-- Services: https://www.kodecite.ai/services
-- About: https://www.kodecite.ai/about
-- Insights: https://www.kodecite.ai/blog
-- Why Now: https://www.kodecite.ai/why-now
-- Case Studies: https://www.kodecite.ai/case-studies
-- Machine Read (free): https://www.kodecite.ai/contact
+- [Start Here (FAQ)](https://www.kodecite.ai/faq)
+- [Services](https://www.kodecite.ai/services)
+- [Pricing](https://www.kodecite.ai/pricing)
+- [About](https://www.kodecite.ai/about)
+- [Insights (Blog)](https://www.kodecite.ai/blog)
+- [Why Now](https://www.kodecite.ai/why-now)
+- [Case Studies](https://www.kodecite.ai/case-studies)
+- [Contact](https://www.kodecite.ai/contact)
+- [Machine Read — free AI-visibility diagnostic](https://www.kodecite.ai/machine-read)
+
+## Service areas (local AI search optimization)
+
+- [AI Search Optimization in Coeur d'Alene, Idaho](https://www.kodecite.ai/locations/coeur-dalene)
+- [AI Search Optimization in Spokane, Washington](https://www.kodecite.ai/locations/spokane)
+- [Answer Engine Optimization for North Idaho](https://www.kodecite.ai/locations/north-idaho)
 
 ## High-value content
 
-- What Is an Entity Graph — the definitive explainer (pillar): https://www.kodecite.ai/blog/what-is-an-entity-graph
-- Schema Markup: The Complete Guide — how to build the entity graph (pillar): https://www.kodecite.ai/blog/schema-markup-complete-guide
-- Why Your Website Can't Talk to AI: https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai
-- What Is Zero-Click Search and Why Your Business Is Invisible: https://www.kodecite.ai/blog/what-is-zero-click-search
-- How to Rank in Google AI Overviews for Local Businesses: https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses
-- AEO + GEO Isn't Replacing SEO — It's Making It Better: https://www.kodecite.ai/blog/aeo-geo-making-seo-better
-- The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow: https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility
-- The 2026 Digital Land Rush: https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility
+- [What Is an Entity Graph — the definitive explainer (pillar)](https://www.kodecite.ai/blog/what-is-an-entity-graph)
+- [Schema Markup: The Complete Guide — how to build the entity graph (pillar)](https://www.kodecite.ai/blog/schema-markup-complete-guide)
+- [AEO Is Technical SEO Done Correctly for the AI Search Era](https://www.kodecite.ai/blog/aeo-technical-seo-done-correctly)
+- [Your Google Reviews Won't Save You From AI Search](https://www.kodecite.ai/blog/google-reviews-wont-save-you-from-ai-search)
+- [Why Your Website Can't Talk to AI](https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai)
+- [What Is Zero-Click Search and Why Your Business Is Invisible](https://www.kodecite.ai/blog/what-is-zero-click-search)
+- [How to Rank in Google AI Overviews for Local Businesses](https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses)
+- [AEO + GEO Isn't Replacing SEO — It's Making It Better](https://www.kodecite.ai/blog/aeo-geo-making-seo-better)
+- [The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow](https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility)
+- [The 2026 Digital Land Rush](https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility)
 
 ## Contact
 
 - Business locality: Coeur d'Alene, Idaho
 - Service area: North Idaho, Eastern Washington, Pacific Northwest, and remote-first engagements nationwide
-- Website: https://www.kodecite.ai
-- Primary CTA: Machine Read (free) — https://www.kodecite.ai/contact
+- [Website](https://www.kodecite.ai)
+- Primary CTA: [Run a free Machine Read](https://www.kodecite.ai/machine-read)
 
 ## Authority signals
 
