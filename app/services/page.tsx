@@ -94,9 +94,6 @@ const servicesSchema = {
       creator: businessRef,
       description:
         'High-performance Next.js real-estate website with a complete entity graph, built to be found and recommended by AI search.',
-      additionalProperty: [
-        { '@type': 'PropertyValue', name: 'Result', value: '[add a real metric]' },
-      ],
     },
     {
       '@type': 'CreativeWork',
@@ -106,9 +103,6 @@ const servicesSchema = {
       creator: businessRef,
       description:
         'High-performance Next.js website with a complete entity graph, built to be found and recommended by AI search.',
-      additionalProperty: [
-        { '@type': 'PropertyValue', name: 'Result', value: '[add a real metric]' },
-      ],
     },
     {
       '@type': 'BreadcrumbList',
@@ -253,12 +247,10 @@ export default function ServicesPage() {
             <div className="glass-panel-soft" style={{ padding: '24px 28px' }}>
               <p className="font-inter font-semibold mb-1" style={{ fontSize: '16px', color: FG }}>Real Estate With Shirin</p>
               <a href="https://www.realestatewithshirin.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>realestatewithshirin.com</a>
-              <p className="font-mono mt-3" style={{ fontSize: '11px', lineHeight: 1.5, color: 'var(--d-warn)', letterSpacing: '0.02em' }}>[ RESULT — MARK TO ADD: one-line result ]</p>
             </div>
             <div className="glass-panel-soft" style={{ padding: '24px 28px' }}>
               <p className="font-inter font-semibold mb-1" style={{ fontSize: '16px', color: FG }}>Luxe Window Works</p>
               <a href="https://www.luxewindowworks.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>luxewindowworks.com</a>
-              <p className="font-mono mt-3" style={{ fontSize: '11px', lineHeight: 1.5, color: 'var(--d-warn)', letterSpacing: '0.02em' }}>[ RESULT — MARK TO ADD: one-line result ]</p>
             </div>
           </div>
         </GlassPanel>
