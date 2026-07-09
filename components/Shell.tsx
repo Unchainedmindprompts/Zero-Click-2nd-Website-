@@ -54,15 +54,36 @@ export default function Shell() {
     <>
       <header className={`kc-shell ${scrolled || open ? 'kc-shell--scrolled' : ''}`}>
         <div className="kc-shell__inner">
-          {/* Brand — top-left, persistent */}
-          <Link href="/" className="kc-brand" aria-label="KodeCite.ai home">
-            <span style={{ color: 'var(--d-accent)', fontSize: '13px', lineHeight: 1 }}>▸</span>
+          {/* Brand — top-left, persistent. Wordmark + muted positioning strapline. */}
+          <Link
+            href="/"
+            className="kc-brand"
+            aria-label="KodeCite.ai — High-Performance Websites Built to Be Recommended by AI"
+            style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '2px' }}
+          >
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ color: 'var(--d-accent)', fontSize: '13px', lineHeight: 1 }}>▸</span>
+              <span
+                className="font-inter font-semibold"
+                style={{ fontSize: '14px', letterSpacing: '-0.02em' }}
+              >
+                <span style={{ color: 'var(--kc-fg)' }}>KODECITE</span>
+                <span style={{ color: 'var(--d-fg-mute)' }}>.AI</span>
+              </span>
+            </span>
             <span
-              className="font-inter font-semibold"
-              style={{ fontSize: '14px', letterSpacing: '-0.02em' }}
+              className="hidden sm:block font-inter"
+              style={{
+                fontSize: '9.5px',
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                color: 'var(--d-fg-mute)',
+                fontWeight: 300,
+                lineHeight: 1.1,
+                whiteSpace: 'nowrap',
+              }}
             >
-              <span style={{ color: 'var(--kc-fg)' }}>KODECITE</span>
-              <span style={{ color: 'var(--d-fg-mute)' }}>.AI</span>
+              High-Performance Websites Built to Be Recommended by AI
             </span>
           </Link>
 
