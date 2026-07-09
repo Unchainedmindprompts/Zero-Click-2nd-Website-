@@ -97,12 +97,12 @@ const servicesSchema = {
     },
     {
       '@type': 'CreativeWork',
-      '@id': `${ORIGIN}/#work-luxe-window-works`,
-      name: 'Luxe Window Works',
-      url: 'https://www.luxewindowworks.com',
+      '@id': `${ORIGIN}/#work-chelsey-fanning`,
+      name: 'Chelsey Fanning | REALTOR® — North Idaho',
+      url: 'https://www.chelseyfanning.com',
       creator: businessRef,
       description:
-        'High-performance Next.js website with a complete entity graph, built to be found and recommended by AI search.',
+        'High-performance Next.js real-estate website with a complete entity graph, built to be found and recommended by AI search.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -249,8 +249,8 @@ export default function ServicesPage() {
               <a href="https://www.realestatewithshirin.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>realestatewithshirin.com</a>
             </div>
             <div className="glass-panel-soft" style={{ padding: '24px 28px' }}>
-              <p className="font-inter font-semibold mb-1" style={{ fontSize: '16px', color: FG }}>Luxe Window Works</p>
-              <a href="https://www.luxewindowworks.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>luxewindowworks.com</a>
+              <p className="font-inter font-semibold mb-1" style={{ fontSize: '16px', color: FG }}>Chelsey Fanning</p>
+              <a href="https://www.chelseyfanning.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>chelseyfanning.com</a>
             </div>
           </div>
         </GlassPanel>
