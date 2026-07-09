@@ -23,8 +23,9 @@ export interface HomeSlide {
   kicker: string;
   headline: HomeSlideLine[];
   support: string;
-  /** Render the eyebrow as the brand lockup (▸ KODECITE.AI) instead of the
-   *  "NN / NN — kicker" counter. Used by the intro/title slide. */
+  /** Suppress the "NN / NN — kicker" eyebrow. The intro/title slide's headline
+   *  IS the tagline, so it carries no eyebrow (the KODECITE.AI wordmark already
+   *  lives in the header). */
   brandEyebrow?: boolean;
   /** Optional final-art image path under /public. Overrides `bg` when set. */
   image?: string;
