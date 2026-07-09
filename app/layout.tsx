@@ -123,7 +123,7 @@ const siteSchema = {
       },
       image: { '@id': 'https://www.kodecite.ai/#logo' },
       description:
-        'KodeCite.ai builds entity graphs for businesses — Schema.org deployed correctly, every element of a business connected into a single machine-readable identity that AI systems can read, verify, and cite. Custom JSON-LD on every page, AI identity files (llms.txt + agent.json), and sub-1s edge infrastructure owned by the client.',
+        'KodeCite.ai builds high-performance, custom Next.js websites — deployed to client-owned edge infrastructure and structured with a complete entity graph (Schema.org done right, custom JSON-LD on every page, plus llms.txt and agent.json) — so AI systems can read, verify, and recommend the business. Fast sites built to be found, not static digital business cards.',
       email: 'mark@kodecite.ai',
       telephone: '+14803239740',
       priceRange: '$$',
