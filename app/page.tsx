@@ -14,7 +14,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   '@id': 'https://www.kodecite.ai/#webpage',
   url: 'https://www.kodecite.ai/',
-  name: 'KodeCite.ai — Entity Infrastructure for the AI Web',
+  name: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
   description:
     'KodeCite rebuilds your website into a structured, source-backed entity foundation that AI search engines, answer engines, and future agents can understand, trust, and recommend.',
   inLanguage: 'en-US',
