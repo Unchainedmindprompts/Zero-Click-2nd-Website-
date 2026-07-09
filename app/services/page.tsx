@@ -46,6 +46,65 @@ const servicesSchema = {
       areaServed: { '@type': 'Country', name: 'United States' },
     },
     {
+      '@type': 'Service',
+      '@id': `${ORIGIN}/#service-web-development`,
+      name: 'High-Performance Website Development',
+      serviceType: 'Website Development',
+      provider: businessRef,
+      areaServed: [
+        { '@type': 'AdministrativeArea', name: 'North Idaho', sameAs: 'https://en.wikipedia.org/wiki/Idaho_Panhandle' },
+        { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
+        { '@type': 'City', name: 'Spokane', sameAs: 'https://en.wikipedia.org/wiki/Spokane,_Washington' },
+        { '@type': 'Country', name: 'United States' },
+      ],
+      description:
+        'Custom, high-performance websites built on Next.js and deployed to client-owned Vercel edge infrastructure. Engineered for sub-1-second edge loads and strong Core Web Vitals, and structured with a full entity graph and JSON-LD so AI and traditional search can read, verify, and recommend the business. Not static digital business cards — sites built to perform and be found.',
+      additionalProperty: [
+        { '@type': 'PropertyValue', name: 'Framework', value: 'Next.js (React)' },
+        { '@type': 'PropertyValue', name: 'Hosting', value: 'Vercel Edge — client-owned' },
+        { '@type': 'PropertyValue', name: 'Load Performance', value: 'Sub-1s edge response' },
+        { '@type': 'PropertyValue', name: 'Core Web Vitals', value: 'Optimized — LCP, CLS, INP' },
+        { '@type': 'PropertyValue', name: 'Search Readiness', value: 'Entity graph + JSON-LD on every page' },
+        { '@type': 'PropertyValue', name: 'Ownership', value: 'Client owns the code and infrastructure' },
+      ],
+    },
+    {
+      '@type': 'Service',
+      '@id': `${ORIGIN}/#service-entity-graph`,
+      name: 'Entity Graph & Answer Engine Optimization',
+      serviceType: 'Answer Engine Optimization',
+      provider: businessRef,
+      description:
+        'Schema.org deployed correctly as a connected entity graph — business, people, services, locations, citations, and FAQs linked into one machine-readable identity, plus llms.txt and agent.json, so AI systems can understand, verify, and cite the business.',
+    },
+    {
+      '@type': 'OfferCatalog',
+      '@id': `${ORIGIN}/#offer-catalog`,
+      name: 'KodeCite Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@id': `${ORIGIN}/#service-web-development` } },
+        { '@type': 'Offer', itemOffered: { '@id': `${ORIGIN}/#service-entity-graph` } },
+      ],
+    },
+    {
+      '@type': 'CreativeWork',
+      '@id': `${ORIGIN}/#work-real-estate-with-shirin`,
+      name: 'Real Estate With Shirin',
+      url: 'https://www.realestatewithshirin.com',
+      creator: businessRef,
+      description:
+        'High-performance Next.js real-estate website with a complete entity graph, built to be found and recommended by AI search.',
+    },
+    {
+      '@type': 'CreativeWork',
+      '@id': `${ORIGIN}/#work-chelsey-fanning`,
+      name: 'Chelsey Fanning | REALTOR® — North Idaho',
+      url: 'https://www.chelseyfanning.com',
+      creator: businessRef,
+      description:
+        'High-performance Next.js real-estate website with a complete entity graph, built to be found and recommended by AI search.',
+    },
+    {
       '@type': 'BreadcrumbList',
       '@id': `${PAGE_URL}#breadcrumb`,
       itemListElement: [
@@ -152,6 +211,49 @@ export default function ServicesPage() {
           </span>
           <span style={{ color: ACCENT, fontSize: '15px', flexShrink: 0 }}>→</span>
         </Link>
+      </section>
+
+      {/* ── Website Development (positioning) ─────────────── */}
+      <section id="website-development" className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <div className="d-eyebrow mb-6">WEBSITE DEVELOPMENT</div>
+          <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
+            High-Performance Websites <em className="serif" style={{ color: ACCENT }}>Built to Be Recommended by AI.</em>
+          </h2>
+          <div className="flex flex-col gap-5 mb-8" style={{ maxWidth: '720px' }}>
+            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+              KodeCite builds high-performance, custom <strong style={{ color: FG, fontWeight: 600 }}>Next.js</strong> websites on
+              infrastructure you own — fast, modern, server-rendered sites engineered so AI search engines can read,
+              trust, and recommend your business.
+            </p>
+            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+              The website and the AI visibility aren&apos;t two services — they&apos;re{' '}
+              <strong style={{ color: FG, fontWeight: 600 }}>one build.</strong> The entity graph, the schema, the sub-second
+              speed, and the answer-first content are the same foundation: a site that&apos;s beautiful and fast for people,
+              and legible and citable for machines. You own the code, the repo, and the domain on handoff.
+            </p>
+          </div>
+
+          {/* Visible service-type labels */}
+          <div className="flex flex-wrap gap-2 mb-12">
+            {['Next.js Website Development', 'High-Performance Web Development', 'Entity-Graph AEO', 'Client-Owned Infrastructure'].map((t) => (
+              <span key={t} className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.08em', color: ACCENT, border: '1px solid rgba(93,213,255,0.35)', borderRadius: '999px', padding: '6px 14px' }}>{t}</span>
+            ))}
+          </div>
+
+          {/* Recent Builds — real client work (result lines are placeholders for Mark to fill) */}
+          <p className="font-mono mb-4" style={{ fontSize: '10px', letterSpacing: '0.18em', color: MUTE }}>RECENT BUILDS</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="glass-panel-soft" style={{ padding: '24px 28px' }}>
+              <p className="font-inter font-semibold mb-1" style={{ fontSize: '16px', color: FG }}>Real Estate With Shirin</p>
+              <a href="https://www.realestatewithshirin.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>realestatewithshirin.com</a>
+            </div>
+            <div className="glass-panel-soft" style={{ padding: '24px 28px' }}>
+              <p className="font-inter font-semibold mb-1" style={{ fontSize: '16px', color: FG }}>Chelsey Fanning</p>
+              <a href="https://www.chelseyfanning.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>chelseyfanning.com</a>
+            </div>
+          </div>
+        </GlassPanel>
       </section>
 
       {/* ── The Problem ──────────────────────────────────── */}

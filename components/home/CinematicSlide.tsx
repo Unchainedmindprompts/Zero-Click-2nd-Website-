@@ -51,12 +51,14 @@ export default function CinematicSlide({
         paddingBottom: 'clamp(150px, 22vh, 240px)',
       }}
     >
-      <div
-        className="kc-slide-reveal d-eyebrow mb-6"
-        style={{ animationDelay: '0.05s', ...(c.eyebrow ? { color: c.eyebrow } : {}) }}
-      >
-        {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')} — {slide.kicker}
-      </div>
+      {!slide.brandEyebrow && (
+        <div
+          className="kc-slide-reveal d-eyebrow mb-6"
+          style={{ animationDelay: '0.05s', ...(c.eyebrow ? { color: c.eyebrow } : {}) }}
+        >
+          {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')} — {slide.kicker}
+        </div>
+      )}
 
       <Heading
         className="kc-slide-focus font-inter font-semibold"

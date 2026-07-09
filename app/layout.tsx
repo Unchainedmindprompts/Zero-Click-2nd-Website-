@@ -63,7 +63,7 @@ const cormorantGaramond = Cormorant_Garamond({
 // ── Metadata ──────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: {
-    default: 'KodeCite.ai — AI Search Optimization & Digital Marketing',
+    default: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
     template: '%s | KodeCite.ai',
   },
   description:
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   creator: 'KodeCite.ai',
   metadataBase: new URL('https://www.kodecite.ai'),
   openGraph: {
-    title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
+    title: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
     description:
       'Schema.org has been the language of the internet for 15 years. An entity graph is Schema used correctly — the foundation that makes your business visible in both AI discovery and traditional search.',
     url: 'https://www.kodecite.ai',
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KodeCite.ai — Entity Graph Infrastructure for AI & Traditional Search',
+    title: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
     description:
       'An entity graph is Schema.org used correctly. Almost no business has one built right. We build it — on infrastructure you own.',
     images: ['https://www.kodecite.ai/og-image.png?v=2'],
