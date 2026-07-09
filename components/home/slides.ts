@@ -23,6 +23,9 @@ export interface HomeSlide {
   kicker: string;
   headline: HomeSlideLine[];
   support: string;
+  /** Render the eyebrow as the brand lockup (▸ KODECITE.AI) instead of the
+   *  "NN / NN — kicker" counter. Used by the intro/title slide. */
+  brandEyebrow?: boolean;
   /** Optional final-art image path under /public. Overrides `bg` when set. */
   image?: string;
   /** Placeholder cinematic background (CSS). Used when `image` is absent. */
@@ -36,6 +39,25 @@ export interface HomeSlide {
 }
 
 export const HOME_SLIDES: HomeSlide[] = [
+  {
+    // ART DIRECTION: cinematic night city + glass office with warm interior
+    // glow — the brand's opening title card. Dark plate (default theme) keeps
+    // the white headline legible over the image.
+    id: 'intro',
+    kicker: 'High-Performance Websites Built to Be Recommended by AI',
+    brandEyebrow: true,
+    headline: [
+      { text: 'High-Performance Websites' },
+      { text: 'Built to Be Recommended by AI', accent: true },
+    ],
+    support:
+      'Fast, custom Next.js websites — engineered to be found, trusted, and recommended by AI search.',
+    image: '/home/slide-intro.webp',
+    bg:
+      'radial-gradient(60% 80% at 72% 30%, rgba(200,140,60,0.14), transparent 60%),' +
+      'radial-gradient(70% 90% at 15% 90%, rgba(93,120,180,0.16), transparent 64%),' +
+      'linear-gradient(158deg, #060a16 0%, #0a0e1f 55%, #05070f 100%)',
+  },
   {
     // ART DIRECTION: cinematic golden-hour city street opening to a glowing
     // glass building / office on the right — "the AI web" as a place business
