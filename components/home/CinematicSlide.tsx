@@ -102,6 +102,23 @@ export default function CinematicSlide({
       >
         {slide.support}
       </p>
+
+      {slide.support2 && (
+        <p
+          className="kc-slide-reveal font-inter mt-4"
+          style={{
+            animationDelay: '0.28s',
+            fontSize: 'clamp(16px, 1.9vw, 20px)',
+            lineHeight: 1.55,
+            color: c.fg,
+            fontWeight: 450,
+            maxWidth: '560px',
+            textShadow: c.bodyShadow,
+          }}
+        >
+          {slide.support2}
+        </p>
+      )}
     </div>
   );
 }
