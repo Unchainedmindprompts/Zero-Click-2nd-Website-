@@ -64,11 +64,11 @@ const pricingSchema = {
 };
 
 const whatYouGet = [
-  { t: 'A fast, AI-readable website.', d: 'Rebuilt so AI crawlers can actually see and read every page (most WordPress/Wix sites can’t be read properly — the #1 reason they’re invisible to AI).' },
+  { t: 'A fast, AI-readable website.', d: 'Rebuilt around a clean technical foundation so search engines and AI systems can consistently crawl, understand, and connect your business information without the plugin conflicts, schema drift, and structural ambiguity common in traditional site stacks.' },
   { t: 'Pages for every service and every area you serve.', d: 'So when someone asks about a specific service in a specific town, there’s a clear page for the AI to pull.' },
   { t: 'Answer-first content.', d: 'Every page answers the exact questions your customers ask, written so an AI can lift the answer word-for-word and credit you.' },
   { t: 'The trust layer.', d: 'We make your business identity match everywhere it needs to — Google, Bing, Apple, the major directories — so AI engines verify you’re real and trust what they find.' },
-  { t: 'The technical plumbing that makes AI cite you.', d: 'The behind-the-scenes structure and signals AI engines look for. You’ll never see it — but it’s the difference between being cited and being invisible.' },
+  { t: 'The technical foundation that helps AI understand and verify you.', d: 'Canonical entities, structured relationships, stable schema IDs, clean metadata, internal linking, corroborating sources, and machine-readable signals — all built into one controlled system.' },
   { t: '60 days of AI visibility tracking.', d: 'We watch the exact questions your customers ask, across every major engine, and show you the citations landing.' },
 ];
 
@@ -167,6 +167,10 @@ export default function PricingPage() {
             <strong style={{ color: FG, fontWeight: 600 }}>When it&apos;s done, it&apos;s yours</strong> — the website, the
             code, the domain, everything, transferred to you with the keys. <strong style={{ color: FG, fontWeight: 600 }}>No
             monthly retainer. No lock-in. You own it forever.</strong>
+          </p>
+
+          <p className="font-inter mt-6" style={{ fontSize: '13.5px', lineHeight: 1.6, color: MUTE, fontWeight: 300, fontStyle: 'italic', maxWidth: '700px' }}>
+            Built for discovery today. Designed for the agent-driven web that comes next.
           </p>
         </GlassPanel>
       </section>
@@ -296,8 +300,8 @@ export default function PricingPage() {
           </div>
 
           <p className="font-inter mt-8" style={{ fontSize: '15px', lineHeight: 1.65, color: MUTE, fontWeight: 300, fontStyle: 'italic', maxWidth: '700px' }}>
-            You don&apos;t need dozens of new customers from this. You need one. Everything after that is profit —
-            with no monthly fee ever.
+            For many high-value businesses, one additional customer can cover the entire build. Everything after that
+            compounds on an asset you own — with no monthly fee ever.
           </p>
         </GlassPanel>
       </section>

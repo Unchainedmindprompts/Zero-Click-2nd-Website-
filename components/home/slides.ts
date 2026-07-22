@@ -23,6 +23,10 @@ export interface HomeSlide {
   kicker: string;
   headline: HomeSlideLine[];
   support: string;
+  /** Optional second supporting paragraph, rendered directly under `support`
+   *  with slightly more emphasis (heavier weight + stronger text color). Only
+   *  the transformation slide uses this. */
+  support2?: string;
   /** Suppress the "NN / NN — kicker" eyebrow. The intro/title slide's headline
    *  IS the tagline, so it carries no eyebrow (the KODECITE.AI wordmark already
    *  lives in the header). */
@@ -114,6 +118,8 @@ export const HOME_SLIDES: HomeSlide[] = [
     ],
     support:
       'KodeCite connects your business, people, services, locations, citations, FAQs, and action paths into one connected, machine-readable foundation.',
+    support2:
+      'Today, that makes your business understandable and verifiable to AI. Tomorrow, that same foundation allows AI agents to confidently do business with you.',
     // ART DIRECTION: bright golden-hour boardroom with a city skyline through
     // glass — structure and clarity. Near-white render, so this slide uses the
     // light treatment (dark text, no darkening of the image). Natively text-free.
