@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'What Is Zero-Click Search?',
+  title: 'What Is Zero-Click Search? How to Stay Visible',
   description:
-    'AI Overviews, ChatGPT, and Perplexity answer questions without sending traffic to sites. What zero-click search means — and how to stay visible.',
+    'AI Overviews and ChatGPT now answer your customers without sending a single click to your site. What zero-click search means for your business — and how to stay visible anyway.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/what-is-zero-click-search',
   },

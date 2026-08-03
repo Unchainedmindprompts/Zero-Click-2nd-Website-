@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'The False Legacy Layer in AI Visibility',
+  title: 'Is Your AI Visibility Real, or Borrowed Time?',
   description:
-    'Your business shows up in AI answers — but is it earned authority or borrowed time? The truth about the False Legacy Layer and how to build real visibility.',
+    'Showing up in AI answers today doesn\'t mean you\'ll stay. The false legacy layer propping up your visibility — why it collapses, and how to earn authority that lasts.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility',
   },
