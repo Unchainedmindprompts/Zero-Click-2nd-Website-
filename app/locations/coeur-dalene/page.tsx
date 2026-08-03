@@ -7,12 +7,12 @@ import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 const PAGE_URL = `${ORIGIN}/locations/coeur-dalene`;
 
 export const metadata: Metadata = {
-  title: "AI Search Optimization in Coeur d'Alene, Idaho",
+  title: "Coeur d'Alene SEO Company & AI Search Optimization",
   description:
-    "Get your Coeur d'Alene business cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini. AI search optimization (AEO) from KodeCite — based in Coeur d'Alene.",
+    "Coeur d'Alene SEO company built for AI search: get cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini. AI search optimization (AEO) from KodeCite — based in Coeur d'Alene, Idaho. Built once, owned forever, no retainer.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "AI Search Optimization in Coeur d'Alene, Idaho",
+    title: "Coeur d'Alene SEO Company & AI Search Optimization",
     description:
       "Make your Coeur d'Alene business machine-readable so AI answer engines find it, verify it, and recommend it by name. Built once. Owned forever.",
     url: PAGE_URL,
@@ -27,6 +27,14 @@ const CDA = { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipe
 const KOOTENAI = { '@type': 'AdministrativeArea', name: 'Kootenai County', sameAs: 'https://en.wikipedia.org/wiki/Kootenai_County,_Idaho' };
 
 const faqItems = [
+  {
+    q: 'Are you an SEO company in Coeur d’Alene?',
+    a: 'In practice, yes — but an AI-first one. Every Foundation Build includes the technical SEO groundwork a traditional Coeur d’Alene SEO company charges a monthly retainer for: clean, fast, crawlable pages, correct schema, and consistent business information. The difference is we build it to be read by AI answer engines too, ship it once, and hand you the keys — no ongoing retainer, and you own everything.',
+  },
+  {
+    q: 'Do you do AI search optimization for Coeur d’Alene businesses?',
+    a: 'Yes — it’s our core work. We make your Coeur d’Alene business machine-readable so AI answer engines like ChatGPT, Perplexity, and Google AI can find it, verify it, and recommend it by name. “AI SEO,” “AEO,” and “AI search optimization” all describe the same thing, and we’re based right here in Coeur d’Alene.',
+  },
   {
     q: 'Do I need this if I already rank on Google in Coeur d’Alene?',
     a: 'Yes — AI answers don’t mirror Google rankings. Even a #1-ranked Coeur d’Alene page is cited in AI answers only about half the time, and the reviews that win the Google map pack don’t get you named in ChatGPT. AI visibility is a separate system.',
@@ -48,9 +56,9 @@ const locationSchema = {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
-      name: "AI Search Optimization in Coeur d'Alene, Idaho — KodeCite.ai",
+      name: "Coeur d'Alene SEO Company & AI Search Optimization — KodeCite.ai",
       description:
-        "AI search optimization (answer engine optimization) for Coeur d'Alene businesses — machine-readable infrastructure that gets you cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini.",
+        "A Coeur d'Alene SEO company built for AI search — answer engine optimization (AEO) and machine-readable infrastructure that gets your business cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini.",
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -111,8 +119,9 @@ export default function CoeurDAleneLocationPage() {
             and Gemini.
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '660px' }}>
-            AI search optimization — also called answer engine optimization (AEO) — is the work of making your
-            business machine-readable so AI answer engines can find it, verify it, and recommend it <em>by name.</em>{' '}
+            AI search optimization — also called answer engine optimization (AEO), or simply &ldquo;AI SEO&rdquo; — is the
+            work of making your business machine-readable so AI answer engines can find it, verify it, and recommend it{' '}
+            <em>by name.</em>{' '}
             It&apos;s how a Coeur d&apos;Alene business shows up when a customer asks ChatGPT &ldquo;the best [your service]
             in Coeur d&apos;Alene&rdquo; instead of Googling it. KodeCite builds that infrastructure — and we&apos;re based
             right here in Coeur d&apos;Alene.

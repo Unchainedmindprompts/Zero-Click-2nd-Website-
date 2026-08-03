@@ -46,7 +46,7 @@ const articleSchema = {
     },
   },
   datePublished: '2026-03-08T00:00:00-07:00',
-  dateModified: '2026-03-08T00:00:00-07:00',
+  dateModified: '2026-08-03T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
@@ -104,6 +104,14 @@ const faqPageSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'No. AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) do not replace traditional SEO — they amplify it. The same infrastructure that makes a site readable and trustworthy for AI language models also improves Google rankings, rich snippets, and Core Web Vitals scores. It is one strategy that wins across every channel simultaneously.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is GEO a replacement for SEO, or an addition?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "GEO (Generative Engine Optimization) is an addition to SEO, not a replacement. Traditional SEO still earns your rankings and clicks in Google's blue links; GEO earns your citations inside AI-generated answers on Google AI Overviews, ChatGPT, and Perplexity. They share the same foundation — a fast, structured, machine-readable website — so building GEO strengthens your SEO at the same time. You don't drop SEO; you extend it into the AI-answer channel with one investment that wins both.",
       },
     },
     {

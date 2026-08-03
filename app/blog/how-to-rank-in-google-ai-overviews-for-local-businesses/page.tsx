@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How to Rank in Google AI Overviews',
+  title: 'How to Rank Your Business in Google AI Overviews',
   description:
-    'Learn how local businesses can appear in Google AI Overviews through structured data, schema markup, E-E-A-T signals, and AI-first content strategies.',
+    'How to rank your business in Google AI Overviews: a step-by-step guide for local businesses using structured data, schema markup, answer-first content, E-E-A-T signals, and Google Business Profile.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
   },
@@ -49,7 +49,7 @@ const articleSchema = {
     url: 'https://www.kodecite.ai/blog',
   },
   datePublished: '2026-03-10T00:00:00-07:00',
-  dateModified: '2026-03-10T00:00:00-07:00',
+  dateModified: '2026-08-03T00:00:00-07:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
@@ -79,6 +79,22 @@ const faqPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I rank my business in Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Rank your business in Google AI Overviews by giving Google's AI clean, verifiable facts to pull from: add structured data (schema markup) for your business, services, and FAQs; publish a page that answers each high-intent customer question directly, with the answer first; keep your name, address, and phone identical everywhere online; and strengthen your Google Business Profile and E-E-A-T signals. AI Overviews synthesize from well-structured sources, so the most machine-readable, consistent business earns the mention — often from a lower ranking position than the #1 result.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why is my business not showing up in Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "The most common reason is that your website isn't machine-readable: no structured data, no answer-first content, and inconsistent business information across the web. Google's AI can't confidently extract or verify what your business does, so it cites competitors it can parse instead. Slow load times, thin service pages, and a weak or inconsistent Google Business Profile compound the problem. Fixing the structure — not adding more keywords — is what gets you cited.",
+      },
+    },
     {
       '@type': 'Question',
       name: 'How do local businesses rank in Google AI Overviews?',
@@ -482,6 +498,14 @@ export default function HowToRankInGoogleAIOverviews() {
                 </h2>
                 <div className="space-y-6 mb-10">
                   {[
+                    {
+                      q: 'How do I rank my business in Google AI Overviews?',
+                      a: "Rank your business in Google AI Overviews by giving Google's AI clean, verifiable facts to pull from: add structured data (schema markup) for your business, services, and FAQs; publish a page that answers each high-intent customer question directly, with the answer first; keep your name, address, and phone identical everywhere online; and strengthen your Google Business Profile and E-E-A-T signals. AI Overviews synthesize from well-structured sources, so the most machine-readable, consistent business earns the mention — often from a lower ranking position than the #1 result.",
+                    },
+                    {
+                      q: 'Why is my business not showing up in Google AI Overviews?',
+                      a: "The most common reason is that your website isn't machine-readable: no structured data, no answer-first content, and inconsistent business information across the web. Google's AI can't confidently extract or verify what your business does, so it cites competitors it can parse instead. Slow load times, thin service pages, and a weak or inconsistent Google Business Profile compound the problem. Fixing the structure — not adding more keywords — is what gets you cited.",
+                    },
                     {
                       q: 'How do local businesses rank in Google AI Overviews?',
                       a: 'Local businesses rank in Google AI Overviews by implementing structured data (schema markup), publishing content that directly answers customer questions, maintaining consistent NAP information across the web, and building strong E-E-A-T signals through their website and Google Business Profile.',
