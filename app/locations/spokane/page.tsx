@@ -7,12 +7,12 @@ import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 const PAGE_URL = `${ORIGIN}/locations/spokane`;
 
 export const metadata: Metadata = {
-  title: 'AI Search Optimization in Spokane, Washington',
+  title: 'Spokane AI SEO & AI Search Optimization (AEO)',
   description:
-    'Get your Spokane business cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini. AI search optimization (AEO) from KodeCite — based in Coeur d\'Alene, serving Spokane and the Inland Northwest.',
+    'Spokane AI SEO and answer engine optimization (AEO): get your Spokane business cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini. A Spokane AI SEO agency from KodeCite — based in Coeur d\'Alene, serving Spokane and the Inland Northwest.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'AI Search Optimization in Spokane, Washington',
+    title: 'Spokane AI SEO & AI Search Optimization (AEO)',
     description:
       'Make your Spokane business machine-readable so AI answer engines find it, verify it, and recommend it by name. Built once. Owned forever.',
     url: PAGE_URL,
@@ -27,6 +27,14 @@ const SPOKANE_VALLEY = { '@type': 'City', name: 'Spokane Valley', sameAs: 'https
 const LIBERTY_LAKE = { '@type': 'City', name: 'Liberty Lake', sameAs: 'https://en.wikipedia.org/wiki/Liberty_Lake,_Washington' };
 
 const faqItems = [
+  {
+    q: 'Do you offer AI SEO in Spokane?',
+    a: 'Yes. “AI SEO” is what most people now call answer engine optimization (AEO) — getting your business named and recommended inside AI answers, not just ranked in Google’s links. We build that foundation for Spokane and Spokane Valley businesses: an AI-readable website, a connected entity graph, and answer-first content AI engines can quote. It’s not keyword tricks — it’s machine-readable infrastructure you own.',
+  },
+  {
+    q: 'Are you a Spokane AI SEO agency?',
+    a: 'We’re an AI search / AEO company based in Coeur d’Alene, working across Spokane, Spokane Valley, and Liberty Lake. Unlike a traditional Spokane SEO agency that bills a monthly retainer to chase Google rankings, we build a machine-readable foundation once, hand you the keys, and prove it with 60 days of AI-visibility tracking. No lock-in, no retainer.',
+  },
   {
     q: 'Are you actually local to Spokane?',
     a: 'We’re based in Coeur d’Alene and work throughout Spokane, Spokane Valley, and Liberty Lake. (We also practice what we sell: this site runs on the same entity-graph infrastructure we build for you.)',
@@ -48,9 +56,9 @@ const locationSchema = {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
-      name: 'AI Search Optimization in Spokane, Washington — KodeCite.ai',
+      name: 'Spokane AI SEO & AI Search Optimization (AEO) — KodeCite.ai',
       description:
-        'AI search optimization (answer engine optimization) for Spokane businesses — machine-readable infrastructure that gets you cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini.',
+        'Spokane AI SEO — answer engine optimization (AEO) for Spokane businesses. Machine-readable infrastructure that gets you cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -110,8 +118,9 @@ export default function SpokaneLocationPage() {
             Get your Spokane business cited by name in ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini.
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '660px' }}>
-            AI search optimization — also called answer engine optimization (AEO) — is the work of making your
-            business machine-readable so AI answer engines can find it, verify it, and recommend it <em>by name.</em>{' '}
+            AI search optimization — also called answer engine optimization (AEO), or simply &ldquo;AI SEO&rdquo; — is the
+            work of making your business machine-readable so AI answer engines can find it, verify it, and recommend it{' '}
+            <em>by name.</em>{' '}
             It&apos;s how a Spokane business shows up when a customer asks ChatGPT for &ldquo;the best [your service] in
             Spokane&rdquo; instead of scrolling Google. KodeCite builds that infrastructure — based in Coeur d&apos;Alene,
             serving Spokane and the Inland Northwest.
@@ -240,7 +249,7 @@ export default function SpokaneLocationPage() {
       {/* ── Local FAQ ────────────────────────────────────── */}
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">SPOKANE AI SEARCH · QUESTIONS WE GET</div>
+          <div className="d-eyebrow mb-6">SPOKANE AI SEO · QUESTIONS WE GET</div>
           <div className="flex flex-col gap-5">
             {faqItems.map((item) => (
               <div key={item.q} className="glass-panel-soft" style={{ padding: '24px 28px' }}>

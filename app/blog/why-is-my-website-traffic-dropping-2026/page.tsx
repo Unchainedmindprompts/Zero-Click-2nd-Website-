@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Why Is My Website Traffic Dropping in 2026?',
   description:
-    'AI Overviews and zero-click search are eroding clicks — Ahrefs measured a 34.5% drop on the top result. Why your traffic is falling and how to fix it.',
+    'Ahrefs measured a 34.5% click drop on the #1 result. Here\'s why AI Overviews and zero-click search are eroding your website traffic in 2026 — and how to fix it.',
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
   },

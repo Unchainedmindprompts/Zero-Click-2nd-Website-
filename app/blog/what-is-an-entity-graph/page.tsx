@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'What Is an Entity Graph?',
+  title: 'What Is an Entity Graph? (And Why AI Needs One)',
   description:
-    'Schema.org launched in 2011 and is still misused. What schema actually is, what an entity graph is, and why it matters more now than it ever has.',
+    'An entity graph is Schema.org done right: one connected, machine-readable identity AI can trust and recommend. What it is, how it differs from basic schema, and why it matters now.',
   alternates: { canonical: 'https://www.kodecite.ai/blog/what-is-an-entity-graph' },
   openGraph: {
     title: 'What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade',
