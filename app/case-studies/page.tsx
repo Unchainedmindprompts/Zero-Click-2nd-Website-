@@ -3,9 +3,9 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Case Studies — Real AI Search Results',
+  title: 'Case Studies — From recommended to actionable',
   description:
-    'Real results: 49 pages indexed in 48 hours for Luxe Window Works, and same-day schema validation for INW Basecamp Arizona.',
+    'Luxe Window Works: from AI discovery to a live, protected consultation capability. Earlier indexing and INW work remain on their original URLs.',
   alternates: { canonical: 'https://www.kodecite.ai/case-studies' },
 };
 
@@ -29,12 +29,17 @@ export default function CaseStudiesPage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <p className="eyebrow mb-4">CASE STUDIES</p>
           <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-            We Proved It{' '}
-            <span className="text-[#D4A94A]">On Our Own Businesses</span>
+            From recommended to{' '}
+            <span className="text-[#D4A94A]">actionable</span>
           </h1>
           <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl mx-auto leading-relaxed">
-            Before selling a methodology, we tested it. These are the real results from businesses we built and operated — the same systems we now deploy for clients.
+            The flagship proof is Luxe Window Works: discovery first, then a live protected consultation request. Earlier indexing work and the INW launch remain on their original URLs.
           </p>
+          <div className="mt-10">
+            <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+              Read the Luxe agent case study
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -331,11 +336,11 @@ export default function CaseStudiesPage() {
               Your Business Could Be <span className="text-[#D4A94A]">Next</span>
             </h2>
             <p className="text-[#8A9BB5] text-xl font-poppins mb-10 leading-relaxed max-w-2xl mx-auto">
-              The same approach that builds 93–100 desktop scores and gets businesses cited by AI — available for your business right now.
+              See what AI can understand, verify, and safely do with your business today. That is the starting review — not a citation guarantee.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md">
-                Start the Conversation
+              <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md">
+                Request an Agent Readiness Review
               </Link>
               <Link href="/services" className="btn-gold-outline text-base font-semibold px-8 py-4 rounded-md">
                 See Our Services

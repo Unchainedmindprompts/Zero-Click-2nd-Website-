@@ -14,6 +14,15 @@ export type BlogPost = {
 // STRATEGY | FRAMEWORK | FOUNDATIONS | TECHNICAL | PLATFORM | PAID MEDIA | CASE STUDY | DIAGNOSTIC
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'from-recommended-to-actionable-luxe-window-works',
+    title: 'From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents',
+    category: 'CASE STUDY',
+    date: 'August 22, 2026',
+    readTime: '12 min read',
+    excerpt: 'How Luxe moved from AI discovery to a live, protected in-home consultation capability — what the authorized production test proved, and what it did not.',
+    featured: true,
+  },
+  {
     slug: 'aeo-technical-seo-done-correctly',
     title: 'AEO Is Technical SEO Done Correctly for the AI Search Era',
     category: 'TECHNICAL',

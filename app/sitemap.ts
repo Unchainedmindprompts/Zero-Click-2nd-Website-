@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, lastModified: new Date('2026-08-03').toISOString(), changeFrequency: 'weekly', priority: 1.0 },
     { url: `${baseUrl}/services`, lastModified: new Date('2026-08-03').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/pricing`, lastModified: new Date('2026-08-03').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/blog`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/machine-read`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/contact`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
 
@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/locations/north-idaho`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
 
     // Blog posts
+    { url: `${baseUrl}/blog/from-recommended-to-actionable-luxe-window-works`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/blog/aeo-technical-seo-done-correctly`, lastModified: new Date('2026-07-06').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/blog/google-reviews-wont-save-you-from-ai-search`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/blog/why-your-website-cant-talk-to-ai`, lastModified: new Date('2026-06-14').toISOString(), changeFrequency: 'monthly', priority: 0.9 },

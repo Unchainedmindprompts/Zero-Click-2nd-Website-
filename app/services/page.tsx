@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
+import ProductionProof from '@/components/proof/ProductionProof';
 import ProofWall from '@/components/proof/ProofWall';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 import { FIVE_LAYERS, REVIEW_HREF } from '@/lib/positioning';
@@ -268,6 +269,8 @@ export default function ServicesPage() {
           </div>
         </GlassPanel>
       </section>
+
+      <ProductionProof />
 
       <ProofWall />
 
