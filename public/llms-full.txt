@@ -1,6 +1,8 @@
 # KodeCite.ai — Full Reference
 
-> KodeCite builds owned business infrastructure for the agent-driven web. We make a business understandable, verifiable, recommendable, actionable, and controlled — so people, search engines, and AI agents can use the same authoritative record.
+> KodeCite works on the connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff. We make a business understandable, verifiable, recommendable, actionable, and controlled — so people, search engines, and AI agents can use the same authoritative record.
+
+This is an emerging, fragmented category — not an uncontested market and not a guaranteed opportunity. KodeCite is not the first, only, or category leader. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. Luxe Window Works is production proof that the connective layer can work.
 
 KodeCite.ai is based in North Idaho and builds for service businesses anywhere. The website, Next.js, schema, entity graph, llms.txt, agent.json, APIs, forms, and future MCP are components. The product is an accurate business model plus controlled machine use.
 

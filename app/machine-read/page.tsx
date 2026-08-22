@@ -60,7 +60,7 @@ export default function MachineReadPage() {
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px' }}>
             A written review of your current system — not a citation score, not a ranking promise,
-            and not a claim that Kodecite already accepts autonomous agent submissions on this site.
+            and not a claim that Kodecite is first, only, or the category leader. This site does not currently accept autonomous agent submissions.
           </p>
         </GlassPanel>
       </section>

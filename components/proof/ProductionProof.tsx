@@ -44,7 +44,7 @@ export default function ProductionProof() {
           Luxe Window Works — a request an agent could <em className="serif" style={{ color: ACCENT }}>discover and submit.</em>
         </h2>
         <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-          An outside agent could discover what Luxe permits, determine qualification, submit safely, receive an honest machine-readable outcome, and leave the next conversation to a human.
+          An outside agent could discover what Luxe permits, determine qualification, submit safely, receive an honest machine-readable outcome, and leave the next conversation to a human. That is production proof the connective layer can work — not a claim of market dominance.
         </p>
 
         <div className="flex flex-wrap gap-2 mb-10">

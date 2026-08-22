@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "name": "KodeCite.ai",
-  "description": "KodeCite builds owned business infrastructure for the agent-driven web. Website, schema, entity graph, llms.txt, agent.json, APIs, and forms are components. The product is an accurate business model plus controlled machine use.",
+  "description": "KodeCite works on the connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff. An emerging, fragmented category. Not a claim of market leadership.",
   "url": "https://www.kodecite.ai",
-  "positioning": "Owned business infrastructure for the agent-driven web. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai. This file is identity and discovery only.",
+  "positioning": "Connective infrastructure for service businesses. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. KodeCite is not the first, only, or category leader. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
   "contact": {
     "location": "North Idaho",
     "service_area": ["North Idaho", "Pacific Northwest", "Remote — service businesses anywhere"]

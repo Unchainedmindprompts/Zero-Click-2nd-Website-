@@ -1,6 +1,8 @@
 # KodeCite.ai
 
-> KodeCite builds owned business infrastructure for the agent-driven web. The website, schema, entity graph, llms.txt, agent.json, APIs, and forms are components. The product is an accurate business model plus controlled machine use.
+> KodeCite works on the connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff. The website, schema, entity graph, llms.txt, agent.json, APIs, and forms are components. The product is an accurate business model plus controlled machine use.
+
+This is an emerging, fragmented category — not an uncontested market and not a guaranteed opportunity. KodeCite is not the first, only, or category leader. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. Luxe Window Works is production proof that the connective layer can work.
 
 [Full reference (expanded)](https://www.kodecite.ai/llms-full.txt)
 

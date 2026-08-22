@@ -118,8 +118,8 @@ export default function CoeurDAleneLocationPage() {
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '660px' }}>
             KodeCite is based in Coeur d&apos;Alene. The offer is not a local AEO agency and not a citation guarantee.
-            We publish one authoritative system — identity, services, locations, policies, proof, and allowed actions —
-            for people, search engines, and AI agents. Discovery can follow. Action is scoped only when the real business permits it.
+            We work on the connective layer for service businesses — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff.
+            The category is early and fragmented. Discovery can follow. Action is scoped only when the real business permits it.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">{REVIEW_CTA} →</Link>

@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     category: 'CASE STUDIES',
     date: 'August 22, 2026',
     readTime: '12 min read',
-    excerpt: 'How Luxe moved from AI discovery to a live, protected in-home consultation capability — what the authorized production test proved, and what it did not.',
+    excerpt: 'How Luxe moved from AI discovery to a live, protected in-home consultation capability — production proof that the connective layer can work, and what the test did not prove.',
     featured: true,
   },
   {
@@ -130,7 +130,7 @@ export const blogPosts: BlogPost[] = [
     category: 'AGENTIC WEB',
     date: 'March 13, 2026',
     readTime: '6 min read',
-    excerpt: 'Enterprise stacks and subscription platforms leave a gap: owned truth, owned capability, and owned control for a real service business.',
+    excerpt: 'Enterprise stacks and subscription platforms leave isolated layers. The connective work for a service business is owned truth, explicit capability, and control — an early, fragmented category, not an uncontested market.',
   },
   {
     slug: 'aeo-geo-making-seo-better',

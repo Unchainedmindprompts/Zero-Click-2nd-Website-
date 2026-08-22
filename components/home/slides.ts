@@ -99,7 +99,7 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'AI cannot reconstruct.' },
     ],
     support:
-      'Website, directories, forms, calendars, and unwritten rules live in different places. AI may find pieces. It cannot reliably reconstruct what the business can do — or safely act on it.',
+      'Website, directories, forms, calendars, and unwritten rules live in different places. Tools usually cover one isolated layer — visibility, schema, scheduling, automation, commerce, or governance. AI may find pieces. It still cannot reliably reconstruct what the business can do or safely act.',
     image: '/home/slide-problem.webp',
     bg:
       'conic-gradient(from 210deg at 62% 38%, rgba(70,90,150,0.10), transparent 26%),' +
@@ -118,7 +118,9 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'system.', accent: true },
     ],
     support:
-      'Identity, services, locations, policies, proof, and allowed actions — published for people, search engines, and AI agents. Website, schema, and machine files are how it gets published. They are not the product.',
+      'Identity, services, locations, policies, proof, and allowed actions — published for people, search engines, and AI agents. That is the connective layer for service businesses. The category is early and fragmented. Kodecite is not claiming to own it.',
+    support2:
+      'Website, schema, and machine files are how it gets published. They are not the product.',
     points: [
       'Truth',
       'Capability',
@@ -147,7 +149,7 @@ export const HOME_SLIDES: HomeSlide[] = [
     support:
       'Luxe Window Works publishes a machine-readable in-home consultation capability. An authorized production test submitted one valid request. It was accepted. The duplicate was suppressed. A conflicting replay was rejected. Booking, pricing, and checkout stayed unavailable.',
     support2:
-      'Understandable. Verifiable. Recommendable. Actionable. Controlled.',
+      'Luxe is production proof that the connective layer can work. Understandable. Verifiable. Recommendable. Actionable. Controlled.',
     image: '/home/slide-outcome.webp',
     theme: 'light',
     bg:

@@ -96,7 +96,7 @@ export default function PricingPage() {
           </h1>
           <p className="font-inter mb-9" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
             The Foundation Build is a one-time $4,995 owned website, truth, and discovery system.
-            A production action is a different engagement. We do not promise a specific AI engine will cite you.
+            A production action is a different engagement. We do not promise a specific AI engine will cite you, and we do not claim Kodecite is first, only, or the category leader.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>

@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     template: '%s | KodeCite.ai',
   },
   description:
-    'Kodecite builds owned business infrastructure for the agent-driven web. Understandable. Verifiable. Recommendable. Actionable. Controlled. Based in North Idaho. Built for service businesses anywhere.',
+    'Kodecite works on the connective layer for service businesses: verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. An emerging, fragmented category — not a claim of market leadership.',
   keywords: [
     'business infrastructure', 'agent-ready website', 'entity graph',
     'Schema.org implementation', 'capability contract', 'controlled action',
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'KodeCite.ai — Make your business usable by AI',
     description:
-      'Owned infrastructure that lets AI understand what you offer, verify what is true, recommend you accurately, and take the next safe step with a customer.',
+      'The connective layer for service businesses: verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. Luxe is production proof this can work.',
     url: 'https://www.kodecite.ai',
     siteName: 'KodeCite.ai',
     images: [{ url: 'https://www.kodecite.ai/og-image.png?v=2', width: 1200, height: 630, alt: 'KodeCite.ai — AI-readable business infrastructure' }],
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'KodeCite.ai — Make your business usable by AI',
     description:
-      'Owned business infrastructure for the agent-driven web. Understandable. Verifiable. Recommendable. Actionable. Controlled.',
+      'Connective infrastructure for service businesses. Understandable. Verifiable. Recommendable. Actionable. Controlled. Not a claim of market dominance.',
     images: ['https://www.kodecite.ai/og-image.png?v=2'],
   },
   robots: {
@@ -122,7 +122,7 @@ const siteSchema = {
       },
       image: { '@id': 'https://www.kodecite.ai/#logo' },
       description:
-        'KodeCite.ai builds owned business infrastructure for the agent-driven web. Next.js sites, entity graphs, discovery files, and — when the business permits — protected actions are components. The product is an accurate business model plus controlled machine use. Understandable. Verifiable. Recommendable. Actionable. Controlled.',
+        'KodeCite.ai works on the connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff. The category is emerging and fragmented. KodeCite is not the first, only, or category leader. Luxe Window Works is production proof the layer can work.',
       email: 'mark@kodecite.ai',
       telephone: '+14803239740',
       priceRange: '$$',
@@ -152,7 +152,7 @@ const siteSchema = {
       url: 'https://www.kodecite.ai',
       homeLocation: { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
       description:
-        'Founder of KodeCite.ai, based in North Idaho. 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial. Builds owned business infrastructure so AI can understand a service business and take the next safe step.',
+        'Founder of KodeCite.ai, based in North Idaho. 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial. Works on the connective layer for service businesses: verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff.',
       knowsAbout: [
         'Owned business infrastructure', 'Entity Graph Infrastructure', 'Schema.org Implementation',
         'Capability contracts', 'Controlled agent action', 'JSON-LD Schema Markup',

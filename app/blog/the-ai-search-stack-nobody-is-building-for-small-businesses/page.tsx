@@ -226,7 +226,7 @@ export default function AISearchStackNobodyIsBuilding() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Both tiers claim to solve the AI discoverability problem. Neither one actually does — for fundamentally different reasons. And almost nobody is building the solution that sits in between.
+                  Both tiers claim to solve the AI discoverability problem. Neither one actually does — for fundamentally different reasons. The connective work that sits in between is still underserved. That is not a claim that the category is empty or that Kodecite is the only practice in it.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
@@ -531,33 +531,33 @@ export default function AISearchStackNobodyIsBuilding() {
                   Subscription platforms were not built for AI. They were built for the SEO landscape of 2015 to 2020 — keyword-optimized pages, backlink accumulation, Google ranking factors that no longer dominate the buyer journey. The infrastructure they run on was never designed for the token-budget economics of AI crawlers. Retrofitting a slow, bloated WordPress site for AI discoverability is like installing a jet engine in a station wagon.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  The reason nobody is building Tier Three at scale is that it cannot be scaled without sacrificing the thing that makes it work. Bespoke content written for a specific market, custom schema built for a specific business type, a methodology executed with care — these things take time. They require understanding both the technology and the business. That constraint is intentional. It is also the point.
+                  Connecting those layers for one service business takes time. It requires understanding both the technology and the business. That constraint is intentional. It is also the point. It is not a claim that nobody else is working in the category.
                 </p>
 
                 <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Window Is Open — But Not Indefinitely
+                  Why the isolated layers are not enough
                 </h2>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The businesses establishing AI visibility right now — appearing in ChatGPT recommendations, getting cited in Google AI Overviews, surfacing in Perplexity answers — are doing it before their competitors understand what is happening.
+                  Visibility in ChatGPT, Google AI Overviews, or Perplexity can follow clearer infrastructure. It is not a guaranteed slot, and it is not the complete job.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  AI systems build trust in sources over time. The businesses that establish that trust now will hold it through the next wave of model updates, search algorithm changes, and platform shifts. The businesses that wait will find the position occupied.
+                  Isolated visibility work can still leave a system unable to verify what the business is allowed to do or take a safe next step. That is the gap this practice is working on.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
                   Enterprise SEO platforms will not build this for you. Subscription platforms cannot. The infrastructure, the content architecture, the schema, the SEO foundation, the AEO/GEO layer — all of it has to be built together, from the ground up, as a system.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-2 font-semibold text-[var(--d-fg)]">
-                  That is the stack nobody is building for small businesses.
+                  That is the connective layer this article was pointing at: owned truth, explicit capability, and control for a real service business.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Until now.
+                  Read the original &ldquo;nobody is building&rdquo; title as a 2026 discovery essay, not as a current claim that Kodecite is first, only, or the category leader. The category is emerging and fragmented. Isolated layers already exist. Luxe is production proof the connective layer can work.
                 </p>
 
                 <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6 mb-8">
                   <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed italic">
-                    KodeCite.AI builds AI-native digital foundations for small and mid-sized businesses — from edge infrastructure to generative engine optimization. We work with 3 to 5 new clients per month. If you&apos;re ready to stop being invisible to AI,{' '}
-                    <Link href="/contact" className="text-[var(--d-accent)] hover:text-[var(--d-accent)] transition-colors font-semibold">
-                      start the conversation
+                    An Agent Readiness Review shows what AI can understand, verify, and safely do with your business today — not a promise of market position.{' '}
+                    <Link href="/machine-read" className="text-[var(--d-accent)] hover:text-[var(--d-accent)] transition-colors font-semibold">
+                      Request an Agent Readiness Review
                     </Link>
                     .
                   </p>

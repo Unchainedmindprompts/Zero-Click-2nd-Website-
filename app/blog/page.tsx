@@ -6,7 +6,7 @@ import { REVIEW_HREF } from '@/lib/positioning';
 export const metadata = {
   title: 'Insights',
   description:
-    'Strategic thinking on business truth, agent capabilities, controlled action and infrastructure connecting businesses to AI.',
+    'Strategic thinking on the connective layer for service businesses: verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. An emerging, fragmented category.',
   alternates: { canonical: 'https://www.kodecite.ai/blog' },
 };
 
@@ -43,9 +43,11 @@ export default function BlogPage() {
               maxWidth: '640px',
             }}
           >
-            Strategic thinking on business truth, agent capabilities, controlled action,
-            and the infrastructure that connects businesses to AI. Discovery writing stays
-            on the site. It is no longer the category.
+            Strategic thinking on the connective layer for service businesses: verified
+            truth, explicit capabilities, controlled action, owned infrastructure, and
+            human handoff. Visibility, schema, and automation writing stays on the site
+            as isolated-layer notes. They are not the category, and Kodecite is not
+            claiming to own the market.
           </p>
         </div>
       </section>
@@ -85,6 +87,7 @@ export default function BlogPage() {
             }}
           >
             See what AI can understand, verify, and safely do with your business today.
+            That is a review of your current system — not a claim that Kodecite is first, only, or the category leader.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

@@ -116,7 +116,7 @@ export default function NorthIdahoLocationPage() {
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
             KodeCite is based in North Idaho — Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, Sandpoint, and the Inland Northwest.
-            The offer is remote, not geo-limited, and not an AEO retainer. Discovery can follow. Action is scoped only when the real business permits it.
+            The offer is the connective layer for service businesses: remote, not geo-limited, and not an AEO retainer. The category is early and fragmented. Action is scoped only when the real business permits it.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">{REVIEW_CTA} →</Link>

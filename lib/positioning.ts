@@ -4,6 +4,30 @@
 export const CATEGORY =
   'Owned business infrastructure for the agent-driven web.';
 
+export const MARKET_SHAPE =
+  'This is an emerging, fragmented category — not an uncontested market and not a guaranteed opportunity.';
+
+export const NOT_A_CLAIM =
+  'Kodecite is not the first, only, or category leader.';
+
+export const ISOLATED_LAYERS = [
+  'AI visibility',
+  'Schema',
+  'Scheduling',
+  'Browser automation',
+  'Commerce',
+  'Enterprise agent governance',
+] as const;
+
+export const ISOLATED_LAYERS_LINE =
+  'Current products generally address isolated layers: AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance.';
+
+export const CONNECTIVE_LAYER =
+  'Kodecite works on the underserved connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff.';
+
+export const LUXE_CONNECTIVE =
+  'Luxe Window Works is production proof that this connective layer can work — not proof of market dominance.';
+
 export const HOME_H1 = 'Make your business usable by AI.';
 
 export const HOME_SUPPORT =

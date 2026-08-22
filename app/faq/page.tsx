@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
-import { REVIEW_HREF } from '@/lib/positioning';
+import { CONNECTIVE_LAYER, ISOLATED_LAYERS_LINE, MARKET_SHAPE, NOT_A_CLAIM, REVIEW_HREF } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Start Here — Usable by AI',
   description:
-    'What “usable by AI” means, how this differs from AEO, GEO, and SEO, what agents can safely do, and how ownership and maintenance actually work.',
+    'What “usable by AI” means, how this differs from isolated AI-visibility or schema products, what agents can safely do, and how ownership and maintenance actually work.',
   alternates: { canonical: 'https://www.kodecite.ai/faq' },
 };
 
@@ -21,13 +21,20 @@ const faqs: { q: string; a: string | string[] }[] = [
   {
     q: 'How is this different from AEO, GEO, or SEO?',
     a: [
-      'SEO, AEO, and GEO are discovery practices. They matter. They are not the product category.',
-      'Kodecite builds owned business infrastructure: truth, capability, control, action, and distribution. Visibility in Google, Bing, ChatGPT, or other systems can be evidence that the infrastructure is clearer. It is not a promise, and it is not the whole job.',
+      'SEO, AEO, and GEO are discovery practices. They matter. They are isolated layers, not the product category.',
+      `${CONNECTIVE_LAYER} Visibility in Google, Bing, ChatGPT, or other systems can be evidence that the infrastructure is clearer. It is not a promise, and it is not the whole job.`,
     ],
   },
   {
     q: 'Does this still help with Google, Bing, and ChatGPT?',
     a: 'Yes, when the same authoritative record is published for people, search engines, and agents. Clean identity, services, locations, and proof help traditional search and AI discovery. We treat that as a useful outcome of better infrastructure — not a guaranteed ranking or citation.',
+  },
+  {
+    q: 'Is this an uncontested new market?',
+    a: [
+      `${MARKET_SHAPE} ${NOT_A_CLAIM}`,
+      `${ISOLATED_LAYERS_LINE} Kodecite is working on the connective layer those products usually leave open: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff.`,
+    ],
   },
   {
     q: 'What is authoritative truth?',
@@ -148,8 +155,8 @@ export default function FAQPage() {
               maxWidth: '580px',
             }}
           >
-            Plain answers about infrastructure, permissions, platforms, and proof.
-            AEO and GEO show up here as supporting discovery — not as the category.
+            Plain answers about the connective layer: truth, capabilities, controlled action, owned infrastructure, and human handoff.
+            AEO, GEO, schema, and scheduling show up as isolated layers — not as the category, and not as a claim that Kodecite owns the market.
           </p>
         </div>
       </section>
