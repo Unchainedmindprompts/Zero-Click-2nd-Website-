@@ -1,0 +1,74 @@
+// Shared positioning copy. Keep this file honest: no invented endpoints,
+// no guaranteed citations, no claim that every client gets a production action.
+
+export const CATEGORY =
+  'Owned business infrastructure for the agent-driven web.';
+
+export const HOME_H1 = 'Make your business usable by AI.';
+
+export const HOME_SUPPORT =
+  'Kodecite builds the owned infrastructure that lets AI understand what you offer, verify what is true, recommend you accurately and take the next safe step with a customer.';
+
+export const PRINCIPLE =
+  'AI should not merely find a business. It should understand what the business does, know what it is allowed to do, and take the next safe step with a customer.';
+
+export const OUTCOMES = [
+  'Understandable',
+  'Verifiable',
+  'Recommendable',
+  'Actionable',
+  'Controlled',
+] as const;
+
+export const FOOTER_LINE =
+  'Owned by you. Controlled by you. Ready for the agent-driven web.';
+
+export const LOCALITY =
+  'Based in North Idaho. Built for service businesses anywhere.';
+
+export const REVIEW_NAME = 'Agent Readiness Review';
+export const REVIEW_HREF = '/machine-read';
+export const REVIEW_PROMISE =
+  'See what AI can understand, verify and safely do with your business today.';
+export const REVIEW_CTA = 'Request an Agent Readiness Review';
+export const REVIEW_CTA_SHORT = 'Agent Readiness Review';
+export const REVIEW_TURNAROUND = 'Free. Written in 24–48 hours.';
+
+export const FIVE_LAYERS = [
+  {
+    n: '01',
+    name: 'Truth',
+    h: 'What is true about the business.',
+    d: 'Identity, people, services, products, locations and service areas, credentials, proof, policies, and limitations — published as one authoritative record.',
+  },
+  {
+    n: '02',
+    name: 'Capability',
+    h: 'What can actually be requested.',
+    d: 'What a customer or agent may ask for, what information is required, where the business works, which services are available, and what success does — and does not — mean.',
+  },
+  {
+    n: '03',
+    name: 'Control',
+    h: 'What the business will not pretend.',
+    d: 'Human confirmation, authorization, validation, rate limiting, idempotency, and fail-closed behavior. No false booking, pricing, purchase, or acceptance.',
+  },
+  {
+    n: '04',
+    name: 'Action',
+    h: 'The next safe step.',
+    d: 'Submit a consultation, send a qualified inquiry, request an appointment, or hand off to a human. Schedule or transact later only where the real business permits it. Not every client needs every action.',
+  },
+  {
+    n: '05',
+    name: 'Distribution',
+    h: 'How people, search, and agents find the same truth.',
+    d: 'Website, search, structured data and entity graphs, external profiles, llms.txt, agent.json, capability discovery, protected APIs, and future MCP or browser agents. These are delivery surfaces — not the product category.',
+  },
+] as const;
+
+export const LUXE_CAPABILITY_URL =
+  'https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation';
+
+export const LUXE_FLAGSHIP_HREF =
+  '/blog/from-recommended-to-actionable-luxe-window-works';

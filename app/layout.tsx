@@ -63,25 +63,24 @@ const cormorantGaramond = Cormorant_Garamond({
 // ── Metadata ──────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: {
-    default: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
+    default: 'KodeCite.ai — Make your business usable by AI',
     template: '%s | KodeCite.ai',
   },
   description:
-    'Most businesses are invisible to AI. KodeCite.ai builds AI-readable website infrastructure that makes you understandable, verifiable, and recommendable. Based in Coeur d\'Alene, Idaho.',
+    'Kodecite builds owned business infrastructure for the agent-driven web. Understandable. Verifiable. Recommendable. Actionable. Controlled. Based in North Idaho. Built for service businesses anywhere.',
   keywords: [
-    'SEO', 'schema markup', 'entity graph', 'Schema.org implementation',
-    'AI search optimization', 'answer engine optimization',
-    "why my business doesn't show up in ChatGPT", 'Google AI Overviews',
-    'AI search visibility', 'local SEO', 'digital marketing',
-    'website infrastructure', 'AEO agency', 'Perplexity SEO', 'llms.txt', 'JSON-LD schema',
+    'business infrastructure', 'agent-ready website', 'entity graph',
+    'Schema.org implementation', 'capability contract', 'controlled action',
+    'AI agents', 'Next.js website infrastructure', 'llms.txt', 'agent.json',
+    'JSON-LD schema', 'owned website infrastructure',
   ],
   authors: [{ name: 'KodeCite.ai' }],
   creator: 'KodeCite.ai',
   metadataBase: new URL('https://www.kodecite.ai'),
   openGraph: {
-    title: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
+    title: 'KodeCite.ai — Make your business usable by AI',
     description:
-      'Schema.org has been the language of the internet for 15 years. An entity graph is Schema used correctly — the foundation that makes your business visible in both AI discovery and traditional search.',
+      'Owned infrastructure that lets AI understand what you offer, verify what is true, recommend you accurately, and take the next safe step with a customer.',
     url: 'https://www.kodecite.ai',
     siteName: 'KodeCite.ai',
     images: [{ url: 'https://www.kodecite.ai/og-image.png?v=2', width: 1200, height: 630, alt: 'KodeCite.ai — AI-readable business infrastructure' }],
@@ -90,9 +89,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
+    title: 'KodeCite.ai — Make your business usable by AI',
     description:
-      'An entity graph is Schema.org used correctly. Almost no business has one built right. We build it — on infrastructure you own.',
+      'Owned business infrastructure for the agent-driven web. Understandable. Verifiable. Recommendable. Actionable. Controlled.',
     images: ['https://www.kodecite.ai/og-image.png?v=2'],
   },
   robots: {

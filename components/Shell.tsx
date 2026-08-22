@@ -8,7 +8,7 @@ import NavOverlay from './NavOverlay';
 /**
  * Shell — the persistent site frame.
  *
- * Logo stays top-left and the controls (Machine Read + menu) stay top-right
+ * Logo stays top-left and the controls (Agent Readiness Review + menu) stay top-right
  * across the entire site; only the page content beneath changes. The menu
  * button opens the full-screen NavOverlay. This is the single site nav —
  * individual pages must NOT render their own header/nav (blog breadcrumbs
@@ -69,7 +69,7 @@ export default function Shell() {
           {/* Controls — top-right, persistent */}
           <div className="flex items-center gap-4">
             <Link href="/machine-read" className="d-btn d-btn-primary d-btn-sm kc-shell-cta">
-              Machine Read →
+              Agent Readiness Review →
             </Link>
             <button
               type="button"

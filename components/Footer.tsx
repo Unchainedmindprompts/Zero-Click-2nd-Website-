@@ -7,6 +7,7 @@ const footerLinks = [
   { label: 'About',      href: '/about'    },
   { label: 'Contact',    href: '/contact'  },
   { label: 'Pricing',    href: '/pricing'  },
+  { label: 'Agent Readiness Review', href: '/machine-read' },
 ];
 
 // Service Areas — location landing pages. Add a line as each page goes live
@@ -50,12 +51,24 @@ export default function Footer() {
                 fontSize: '18px',
                 lineHeight: 1.65,
                 color: 'var(--d-fg-dim)',
-                maxWidth: '280px',
+                maxWidth: '320px',
               }}
             >
-              Built once.{' '}
-              <em className="serif">Owned forever.</em>{' '}
-              Found by AI.
+              Owned by you.{' '}
+              <em className="serif">Controlled by you.</em>{' '}
+              Ready for the agent-driven web.
+            </p>
+            <p
+              className="font-inter mt-4"
+              style={{
+                fontWeight: 300,
+                fontSize: '14px',
+                lineHeight: 1.55,
+                color: 'var(--d-fg-mute)',
+                maxWidth: '300px',
+              }}
+            >
+              Based in North Idaho. Built for service businesses anywhere.
             </p>
           </div>
 
@@ -75,7 +88,7 @@ export default function Footer() {
             {/* Service Areas */}
             <div className="pt-1">
               <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-fg-mute)' }}>
-                SERVICE AREAS
+                BASED IN NORTH IDAHO
               </p>
               <nav className="flex flex-col gap-2">
                 {serviceAreas.map((area) => (
@@ -107,7 +120,7 @@ export default function Footer() {
             className="font-mono text-xs"
             style={{ color: 'var(--d-fg-dim)', letterSpacing: '0.1em' }}
           >
-            FOUNDATION BUILD · NO RETAINER · YOU OWN IT
+            OWNED INFRASTRUCTURE · NO REQUIRED RETAINER
           </p>
         </div>
 

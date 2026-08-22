@@ -119,6 +119,32 @@ export default function CinematicSlide({
           {slide.support2}
         </p>
       )}
+
+      {slide.points && slide.points.length > 0 && (
+        <ul
+          className="kc-slide-reveal mt-5 flex flex-wrap gap-2"
+          style={{ animationDelay: '0.32s', maxWidth: '640px' }}
+        >
+          {slide.points.map((point) => (
+            <li
+              key={point}
+              className="font-mono"
+              style={{
+                fontSize: '10px',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: c.fg,
+                border: `1px solid ${slide.theme === 'light' ? 'rgba(11,16,28,0.22)' : 'rgba(93,213,255,0.35)'}`,
+                borderRadius: '999px',
+                padding: '6px 12px',
+                textShadow: c.bodyShadow,
+              }}
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
