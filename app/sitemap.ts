@@ -5,17 +5,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     // Core pages
-    { url: baseUrl, lastModified: new Date('2026-08-03').toISOString(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${baseUrl}/services`, lastModified: new Date('2026-08-03').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/pricing`, lastModified: new Date('2026-08-03').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: baseUrl, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${baseUrl}/services`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/pricing`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/machine-read`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/contact`, lastModified: new Date('2026-06-28').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/machine-read`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/contact`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/about`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/faq`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/case-studies`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/why-now`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.6 },
 
     // Location / service-area pages
-    { url: `${baseUrl}/locations/coeur-dalene`, lastModified: new Date('2026-08-03').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/locations/spokane`, lastModified: new Date('2026-08-03').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/locations/north-idaho`, lastModified: new Date('2026-07-02').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/locations/coeur-dalene`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/locations/spokane`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/locations/north-idaho`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
 
     // Blog posts
     { url: `${baseUrl}/blog/from-recommended-to-actionable-luxe-window-works`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'weekly', priority: 0.9 },

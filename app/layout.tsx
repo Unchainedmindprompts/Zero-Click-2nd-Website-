@@ -122,7 +122,7 @@ const siteSchema = {
       },
       image: { '@id': 'https://www.kodecite.ai/#logo' },
       description:
-        'KodeCite.ai builds high-performance, custom Next.js websites — deployed to client-owned edge infrastructure and structured with a complete entity graph (Schema.org done right, custom JSON-LD on every page, plus llms.txt and agent.json) — so AI systems can read, verify, and recommend the business. Fast sites built to be found, not static digital business cards.',
+        'KodeCite.ai builds owned business infrastructure for the agent-driven web. Next.js sites, entity graphs, discovery files, and — when the business permits — protected actions are components. The product is an accurate business model plus controlled machine use. Understandable. Verifiable. Recommendable. Actionable. Controlled.',
       email: 'mark@kodecite.ai',
       telephone: '+14803239740',
       priceRange: '$$',
@@ -130,8 +130,12 @@ const siteSchema = {
       founder: { '@id': 'https://www.kodecite.ai/#founder' },
       areaServed: businessAreaServed,
       serviceType: [
-        'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
-        'AI Search Optimization', 'Next.js Website Development', 'JSON-LD Schema Markup',
+        'Owned business infrastructure',
+        'Entity Graph Infrastructure',
+        'Capability contracts',
+        'Controlled agent action',
+        'Next.js Website Development',
+        'JSON-LD Schema Markup',
       ],
       sameAs: [
         'https://www.facebook.com/profile.php?id=61586478347376',
@@ -148,12 +152,12 @@ const siteSchema = {
       url: 'https://www.kodecite.ai',
       homeLocation: { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
       description:
-        'Founder of KodeCite.ai, based in Coeur d\'Alene, North Idaho. 30 years of sales experience, 23 years as an entrepreneur, 1,000+ hours of AEO and GEO research. Builds AI-ready web infrastructure for businesses that want to be recommended by AI search engines.',
+        'Founder of KodeCite.ai, based in North Idaho. 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial. Builds owned business infrastructure so AI can understand a service business and take the next safe step.',
       knowsAbout: [
-        'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
-        'Generative Engine Optimization', 'AI Search Visibility', 'JSON-LD Schema Markup',
-        'Next.js Development', 'Vercel Edge Hosting', 'llms.txt', 'agent.json',
-        'Local Business Entity Graphs', 'Machine-Readable Business Identity', 'Traditional SEO',
+        'Owned business infrastructure', 'Entity Graph Infrastructure', 'Schema.org Implementation',
+        'Capability contracts', 'Controlled agent action', 'JSON-LD Schema Markup',
+        'Next.js Development', 'Vercel hosting', 'llms.txt', 'agent.json',
+        'Local Business Entity Graphs', 'Machine-Readable Business Identity',
       ],
       sameAs: [
         'https://www.linkedin.com/in/mark-abplanalp-46a272371',
@@ -174,9 +178,9 @@ const siteSchema = {
     {
       '@type': 'DefinedTermSet',
       '@id': 'https://www.kodecite.ai/#glossary',
-      name: 'KodeCite AEO & Entity Glossary',
+      name: 'KodeCite infrastructure glossary',
       description:
-        'Defined terms used across KodeCite for AI search, answer engine optimization, and entity-graph infrastructure.',
+        'Defined terms used across KodeCite for business truth, agent capabilities, controlled action, and entity-graph infrastructure.',
       url: 'https://www.kodecite.ai/#glossary',
       publisher: { '@id': 'https://www.kodecite.ai/#business' },
     },

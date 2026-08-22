@@ -204,7 +204,7 @@ const faqSchema = {
       name: 'Does it matter which website platform I use for entity-first search?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, significantly. WordPress, Wix, and Squarespace produce bloated HTML that consumes AI token budgets, JavaScript-rendered content that AI crawlers may not see on a cold load, and schema generated automatically by plugins — often with errors, wrong types, or conflicting markup. A purpose-built Next.js site with server-side rendering, clean JSON-LD, and structured architecture gives AI systems accurate signals on the first crawl without ambiguity.',
+        text: 'Platform choice matters, but WordPress, Wix, and Squarespace sites are not blank to every AI crawler. Those platforms often make it harder to publish one owned, consistent record. A purpose-built Next.js site is the strongest path. A KodeCite-owned sidecar may fit selected pilots that stay on their current CMS.',
       },
     },
     {

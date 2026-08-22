@@ -1,114 +1,104 @@
 {
   "schema_version": "1.0",
   "name": "KodeCite.ai",
-  "description": "KodeCite builds AI-readable website infrastructure for businesses that need to be understood, verified, and trusted by AI systems.",
+  "description": "KodeCite builds owned business infrastructure for the agent-driven web. Website, schema, entity graph, llms.txt, agent.json, APIs, and forms are components. The product is an accurate business model plus controlled machine use.",
   "url": "https://www.kodecite.ai",
-  "positioning": "AI-readable website infrastructure practice. We rebuild and restructure business websites so AI systems can understand the business clearly, verify its identity, and trust its claims through corroborated sources.",
+  "positioning": "Owned business infrastructure for the agent-driven web. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai. This file is identity and discovery only.",
   "contact": {
-    "location": "Coeur d'Alene, Idaho",
-    "service_area": ["North Idaho", "Eastern Washington", "Pacific Northwest", "Remote-first / Nationwide"]
+    "location": "North Idaho",
+    "service_area": ["North Idaho", "Pacific Northwest", "Remote — service businesses anywhere"]
   },
   "framework": {
-    "name": "CVT",
-    "summary": "Clarity, Verification, Trust. Trust is not what a business claims. Trust is what AI can corroborate.",
-    "clarity": "AI can understand who the business is, what it does, where it serves, and what each page means.",
-    "verification": "AI can confirm the business identity across trusted profiles, directories, reviews, credentials, and structured data.",
-    "trust": "AI can corroborate claims through credible third-party sources, reviews, credentials, locations, citations, and schema relationships."
+    "name": "Five layers",
+    "summary": "Truth, Capability, Control, Action, Distribution. Outcomes: Understandable. Verifiable. Recommendable. Actionable. Controlled.",
+    "truth": "Identity, people, services, products, locations, credentials, proof, policies, and limitations — one authoritative record.",
+    "capability": "What can be requested, required information, geography, available services, and what success does and does not mean.",
+    "control": "Human confirmation, authorization, validation, rate limiting, idempotency, fail-closed behavior. No false booking, pricing, purchase, or acceptance.",
+    "action": "Consultation, qualified inquiry, appointment request, or controlled handoff — only what the real business permits. Not every client needs every action.",
+    "distribution": "Website, search, structured data, profiles, llms.txt, agent.json, protected APIs, and future MCP. Delivery surfaces, not the product category."
   },
   "capabilities": [
     {
       "name": "Foundation Build",
-      "description": "A complete AI-readable website rebuild — technical foundation, entity graph alignment, answer-first structure, and authority signals — on owned GitHub/Vercel infrastructure with no platform lock-in. Built once. Owned forever.",
+      "description": "Owned website, canonical truth, entity graph, services and geography, corroboration, and machine discovery. Does not automatically include a production action endpoint.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
-      "name": "SEO + AI Visibility Consulting",
-      "description": "A scoped audit and strategy plan for businesses with an existing site that needs diagnosis, structure, and AI visibility guidance.",
+      "name": "Agent Capability Build",
+      "description": "Custom-scoped after business rules are understood. One defined action at a time: contract, validation, security, idempotency, human handoff, production acceptance testing. No published price.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
-      "name": "Content Architecture",
-      "description": "A structure plan for what a site should say, how pages should connect, and how AI systems should read it.",
+      "name": "Platform Capability Layer — Pilot",
+      "description": "For selected WordPress, Wix, or Squarespace businesses: a KodeCite-owned Next.js/Vercel sidecar on a business-controlled domain or subdomain. Application-only. Not universally proven.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
-      "name": "Machine Read",
-      "description": "A free, plain-English report on what AI systems can and can't understand, verify, and trust about a business right now — across Clarity, Verification, and Trust.",
-      "url": "https://www.kodecite.ai/contact",
+      "name": "Agent Readiness Review",
+      "description": "See what AI can understand, verify, and safely do with a business today. Identity, services, geography, credentials, policies, machine discovery, action paths, and control gaps. Free written review in 24–48 hours when operationally available.",
+      "url": "https://www.kodecite.ai/machine-read",
       "type": "service",
       "cost": "free"
     }
   ],
+  "agent_interaction": {
+    "autonomous_submission": false,
+    "reason": "KodeCite.ai currently publishes identity and discovery files only. There is no public action endpoint that accepts autonomous agent submissions. The primary human path is the Agent Readiness Review form at /machine-read."
+  },
   "expertise": [
-    "AI-readable website infrastructure",
-    "Entity graph alignment",
+    "Owned business infrastructure",
+    "Business truth and entity graphs",
+    "Capability contracts",
+    "Controlled agent action",
     "Structured JSON-LD",
-    "Server-rendered websites",
-    "Answer-first content architecture",
+    "Server-rendered Next.js websites",
     "Directory and profile consistency",
-    "Third-party corroboration",
-    "Clarity, Verification, Trust (CVT)",
-    "Owned GitHub/Vercel infrastructure",
-    "No platform lock-in",
-    "Answer Engine Optimization",
-    "Generative Engine Optimization"
+    "Owned GitHub/Vercel infrastructure"
   ],
   "principles": [
-    "You own everything (GitHub + Vercel).",
-    "No platform lock-in.",
+    "You own the repo, the site, and the deployed infrastructure.",
     "No required monthly retainer.",
-    "Scoped engagements with a clear handoff.",
+    "Active capabilities may use third-party services with direct costs and may need maintenance.",
+    "Model only what the real business permits.",
+    "Do not invent booking, pricing, purchase, or acceptance.",
     "Plain-English explanations — no black boxes."
   ],
   "performance": {
-    "pagespeed_scores": "93-100",
-    "schema_errors": 0,
-    "infrastructure": "Next.js + Vercel Edge"
+    "infrastructure": "Next.js + Vercel",
+    "note": "Performance numbers vary by site and are not a guarantee for every build."
   },
   "resources": [
     {
       "type": "page",
       "title": "Start Here (FAQ)",
       "url": "https://www.kodecite.ai/faq",
-      "topic": "Plain-English answers to the questions a business owner actually has about AI search, entity graphs, and getting recommended by AI."
+      "topic": "What usable by AI means, vs AEO/GEO/SEO, ownership, maintenance, and what the Luxe test proved."
     },
     {
       "type": "page",
       "title": "Services",
       "url": "https://www.kodecite.ai/services",
-      "topic": "Foundation Build, SEO + AI Visibility Consulting, and Content Architecture — how KodeCite makes a website understandable to AI."
+      "topic": "Foundation Build, Agent Capability Build, and Platform Capability Layer — Pilot."
+    },
+    {
+      "type": "article",
+      "title": "From Recommended to Actionable — Luxe Window Works",
+      "url": "https://www.kodecite.ai/blog/from-recommended-to-actionable-luxe-window-works",
+      "topic": "Live production proof: discovery, capability contract, authorized test, duplicate suppression, conflict rejection."
     },
     {
       "type": "article",
       "title": "What Is an Entity Graph",
       "url": "https://www.kodecite.ai/blog/what-is-an-entity-graph",
-      "topic": "The definitive explainer on entity graphs and machine-readable business identity."
-    },
-    {
-      "type": "article",
-      "title": "Schema Markup: The Complete Guide",
-      "url": "https://www.kodecite.ai/blog/schema-markup-complete-guide",
-      "topic": "How to build a Schema.org entity graph correctly."
-    },
-    {
-      "type": "article",
-      "title": "Why Your Website Can't Talk to AI",
-      "url": "https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai",
-      "topic": "Why traditional sites are illegible to AI systems and how to fix it."
-    },
-    {
-      "type": "page",
-      "title": "Why Now",
-      "url": "https://www.kodecite.ai/why-now",
-      "topic": "The urgency case for building machine-readable infrastructure before AI-driven discovery fully consolidates."
+      "topic": "How one authoritative business record is published for people, search, and agents."
     }
   ],
   "primary_cta": {
-    "label": "Run a free Machine Read",
-    "url": "https://www.kodecite.ai/contact",
-    "description": "A free, plain-English report on what AI systems can and can't understand, verify, and trust about your business right now — across Clarity, Verification, and Trust. No pitch required."
+    "label": "Request an Agent Readiness Review",
+    "url": "https://www.kodecite.ai/machine-read",
+    "description": "See what AI can understand, verify, and safely do with your business today. This is a review request, not a booking."
   }
 }

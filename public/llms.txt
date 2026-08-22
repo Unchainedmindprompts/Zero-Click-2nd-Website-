@@ -1,29 +1,33 @@
 # KodeCite.ai
 
-> KodeCite is an AI-readable website infrastructure practice. We rebuild and restructure business websites so AI systems can understand the business clearly, verify its identity, and trust its claims through corroborated sources.
+> KodeCite builds owned business infrastructure for the agent-driven web. The website, schema, entity graph, llms.txt, agent.json, APIs, and forms are components. The product is an accurate business model plus controlled machine use.
 
 [Full reference (expanded)](https://www.kodecite.ai/llms-full.txt)
 
-KodeCite builds AI-readable website infrastructure for businesses that need to be understood, verified, and trusted by AI systems. Traditional websites were built for human visitors who scroll, read, and click. AI systems work differently — before they recommend a business they need to understand what it is, verify that it is real, and trust that its claims can be corroborated. KodeCite rebuilds the foundation beneath a website (server-rendered pages, a structured JSON-LD entity graph, answer-first content, and corroborated trust signals) on infrastructure the business owns.
+KodeCite is based in North Idaho and builds for service businesses anywhere. AI should not merely find a business. It should understand what the business does, know what it is allowed to do, and take the next safe step with a customer.
 
-## The CVT framework
+This file is identity and discovery. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.
 
-KodeCite organizes AI visibility around CVT — Clarity, Verification, Trust.
+## Outcomes
 
-- **Clarity**: AI can understand who the business is, what it does, where it serves, and what each page means. Built from site structure, answer-first content, clean service and location relationships, schema, internal linking, and clear entity definitions.
-- **Verification**: AI can confirm the business identity across trusted profiles, directories, reviews, credentials, and structured data — Google Business Profile, Bing Places, Apple Maps, Yelp, BBB, licensing, NAP consistency, sameAs links, and matching JSON-LD.
-- **Trust**: AI can corroborate what the business claims — through credible third-party sources, reviews, credentials, locations, citations, and schema relationships like mentions, sameAs, about, and spatialCoverage.
+Understandable. Verifiable. Recommendable. Actionable. Controlled.
 
-Trust is not what a business claims. Trust is what AI can corroborate.
+## Five layers
+
+- **Truth**: identity, people, services, products, locations, credentials, proof, policies, limitations
+- **Capability**: what can be requested, required information, geography, what success does and does not mean
+- **Control**: human confirmation, authorization, validation, rate limiting, idempotency, fail-closed behavior
+- **Action**: consultation, qualified inquiry, appointment request, or controlled handoff — only what the real business permits
+- **Distribution**: website, search, structured data, profiles, llms.txt, agent.json, protected APIs, future MCP
 
 ## Services
 
-- **Foundation Build**: a complete AI-readable rebuild (technical foundation, entity graph, answer-first structure, authority signals), handed off to the client. Built once. Owned forever.
-- **SEO + AI Visibility Consulting**: a scoped audit and strategy plan for an existing site that needs diagnosis, structure, and AI visibility guidance.
-- **Content Architecture**: a structure plan for what a site should say, how pages should connect, and how AI systems should read it.
-- **Machine Read** (free): a plain-English report on what AI systems can and can't understand, verify, and trust about a business right now.
+- **Foundation Build**: owned website, truth, and discovery foundation. Does not automatically include a production action endpoint.
+- **Agent Capability Build**: one defined action at a time, scoped after business rules are understood. No published price.
+- **Platform Capability Layer — Pilot**: sidecar for selected WordPress / Wix / Squarespace businesses. Application-only.
+- **Agent Readiness Review** (free, 24–48 hours): what AI can understand, verify, and safely do with a business today.
 
-You own everything (GitHub + Vercel). No platform lock-in. No required monthly retainer. Scoped engagements, plain-English explanations.
+You own the repo, the site, and the deployed infrastructure. No required retainer. Active capabilities may need maintenance and third-party costs.
 
 ## Key pages
 
@@ -31,40 +35,41 @@ You own everything (GitHub + Vercel). No platform lock-in. No required monthly r
 - [Services](https://www.kodecite.ai/services)
 - [Pricing](https://www.kodecite.ai/pricing)
 - [About](https://www.kodecite.ai/about)
-- [Insights (Blog)](https://www.kodecite.ai/blog)
-- [Why Now](https://www.kodecite.ai/why-now)
+- [Insights](https://www.kodecite.ai/blog)
 - [Case Studies](https://www.kodecite.ai/case-studies)
 - [Contact](https://www.kodecite.ai/contact)
-- [Machine Read — free AI-visibility diagnostic](https://www.kodecite.ai/machine-read)
+- [Agent Readiness Review](https://www.kodecite.ai/machine-read)
 
-## Service areas (local AI search optimization)
+## Locality
 
-- [AI Search Optimization in Coeur d'Alene, Idaho](https://www.kodecite.ai/locations/coeur-dalene)
-- [AI Search Optimization in Spokane, Washington](https://www.kodecite.ai/locations/spokane)
-- [Answer Engine Optimization for North Idaho](https://www.kodecite.ai/locations/north-idaho)
+Based in North Idaho. Built for service businesses anywhere. About may mention the PNW, Eastside Seattle, Bend, and the North Idaho–Spokane corridor. The offer is remote, not geo-limited.
+
+- [Coeur d'Alene](https://www.kodecite.ai/locations/coeur-dalene)
+- [Spokane](https://www.kodecite.ai/locations/spokane)
+- [North Idaho](https://www.kodecite.ai/locations/north-idaho)
 
 ## High-value content
 
-- [What Is an Entity Graph — the definitive explainer (pillar)](https://www.kodecite.ai/blog/what-is-an-entity-graph)
-- [Schema Markup: The Complete Guide — how to build the entity graph (pillar)](https://www.kodecite.ai/blog/schema-markup-complete-guide)
-- [AEO Is Technical SEO Done Correctly for the AI Search Era](https://www.kodecite.ai/blog/aeo-technical-seo-done-correctly)
-- [Your Google Reviews Won't Save You From AI Search](https://www.kodecite.ai/blog/google-reviews-wont-save-you-from-ai-search)
-- [Why Your Website Can't Talk to AI](https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai)
-- [What Is Zero-Click Search and Why Your Business Is Invisible](https://www.kodecite.ai/blog/what-is-zero-click-search)
-- [How to Rank in Google AI Overviews for Local Businesses](https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses)
-- [AEO + GEO Isn't Replacing SEO — It's Making It Better](https://www.kodecite.ai/blog/aeo-geo-making-seo-better)
-- [The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow](https://www.kodecite.ai/blog/false-legacy-layer-ai-visibility)
-- [The 2026 Digital Land Rush](https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility)
+- [From Recommended to Actionable — Luxe Window Works](https://www.kodecite.ai/blog/from-recommended-to-actionable-luxe-window-works)
+- [What Is an Entity Graph](https://www.kodecite.ai/blog/what-is-an-entity-graph)
+- [The Language Problem](https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai)
+- [Below the Content Layer](https://www.kodecite.ai/blog/below-the-content-layer)
+- [Schema Markup: The Complete Guide](https://www.kodecite.ai/blog/schema-markup-complete-guide)
+
+## Production proof
+
+Luxe Window Works publishes a machine-readable in-home consultation capability:
+
+https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation
+
+Contract 1.0. Readiness: request-submission-ready. Submission enabled. Human follow-up required. Booking, pricing, and checkout unavailable.
 
 ## Contact
 
-- Business locality: Coeur d'Alene, Idaho
-- Service area: North Idaho, Eastern Washington, Pacific Northwest, and remote-first engagements nationwide
+- Business locality: North Idaho
 - [Website](https://www.kodecite.ai)
-- Primary CTA: [Run a free Machine Read](https://www.kodecite.ai/machine-read)
+- Primary CTA: [Agent Readiness Review](https://www.kodecite.ai/machine-read)
 
-## Authority signals
+## Founder
 
-- Server-rendered Next.js on Vercel edge — full HTML on the first request
-- Structured JSON-LD entity graph; schema validation: 0 invalid items
-- Founder: Mark Abplanalp — 23 years operating service businesses, 30 years in sales
+Mark Abplanalp — 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial, one-person senior practice.

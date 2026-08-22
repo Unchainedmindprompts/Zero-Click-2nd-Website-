@@ -26,7 +26,7 @@ export default function FoundationOffer() {
               style={{ fontSize: 'clamp(30px, 4vw, 48px)', lineHeight: 1.07, letterSpacing: '-0.025em', color: 'var(--d-fg)' }}
             >
               The Foundation Build.<br />
-              <em className="serif">Built once. Owned forever.</em>
+              <em className="serif">Owned by you. Scoped honestly.</em>
             </h2>
             <p className="font-inter mb-8" style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300, maxWidth: '440px' }}>
               A defined-scope engagement that gives your business a complete, AI-readable foundation —
@@ -41,7 +41,7 @@ export default function FoundationOffer() {
               ))}
             </div>
             <div>
-              <Link href="/machine-read" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
+              <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
             </div>
           </div>
 

@@ -1,101 +1,116 @@
 # KodeCite.ai — Full Reference
 
-> Entity infrastructure for the AI web. We make a business understandable, verifiable, recommendable, and agent-ready — so search engines, AI answer engines, and AI agents can confidently recommend it.
+> KodeCite builds owned business infrastructure for the agent-driven web. We make a business understandable, verifiable, recommendable, actionable, and controlled — so people, search engines, and AI agents can use the same authoritative record.
 
-KodeCite.ai is an AI-readable website infrastructure practice based in Coeur d'Alene, Idaho. We rebuild and restructure business websites so AI systems can understand the business clearly, verify its identity, and trust its claims through corroborated sources — fast, server-rendered pages built on Next.js and deployed on Vercel's edge, structured with a Schema.org entity graph, llms.txt, and agent.json so AI systems like ChatGPT, Google AI Overviews, Perplexity, Gemini, and emerging AI agents can read, verify, and cite a business as an authoritative source.
+KodeCite.ai is based in North Idaho and builds for service businesses anywhere. The website, Next.js, schema, entity graph, llms.txt, agent.json, APIs, forms, and future MCP are components. The product is an accurate business model plus controlled machine use.
 
-KodeCite organizes AI visibility around CVT — Clarity, Verification, Trust. Clarity: AI can understand who the business is, what it does, where it serves, and what each page means. Verification: AI can confirm the business identity across trusted profiles, directories, reviews, credentials, and structured data. Trust: AI can corroborate what the business claims through credible third-party sources, reviews, credentials, locations, citations, and schema relationships. Trust is not what a business claims. Trust is what AI can corroborate.
+This file is identity and discovery. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai. This llms-full.txt is the expanded companion to /llms.txt.
 
-This llms-full.txt is the expanded companion to /llms.txt. It contains the full descriptions of KodeCite's positioning, framework, deliverables, and content.
+## The principle
 
-## The Shift: Pages → Entities
+AI should not merely find a business. It should understand what the business does, know what it is allowed to do, and take the next safe step with a customer.
 
-The old web was built around pages: publish pages, target keywords, rely on plugins, hope Google figures it out. The AI web is built around entities. AI systems do not think like a list of blue links — they verify entities. They ask: Who is this business? What does it do? Where does it operate? Is the information consistent across trusted sources? Can this business be safely recommended? Can a user take action without the AI guessing? A website that cannot answer those questions clearly can be skipped — even if it has better reviews, more experience, or a stronger real-world reputation than a competitor.
+## The problem
 
-## The Problem
+Most businesses are spread across a website, directories, forms, calendars, and unwritten rules. AI may find pieces. It cannot reliably reconstruct what the business can do or safely act. That is an infrastructure problem, not a content-volume problem.
 
-WordPress, Wix, and Squarespace were built for the page-based web — designed for publishing pages, adding plugins, and managing content. That worked when search was keyword-driven. AI search and agent-driven discovery require: canonical business identity, structured entity graphs, stable schema IDs, service and location relationships, citation trails, source-backed content, llms.txt, agent.json, action rules, quote and booking clarity, and machine-readable proof. Most platform websites treat these as add-ons. KodeCite treats them as the foundation.
+WordPress, Wix, and Squarespace are common platforms. They are not blank to every AI crawler. They often make it harder to publish one owned, consistent, machine-usable record. A full Next.js rebuild is the strongest path. A KodeCite-owned sidecar may fit selected pilots.
 
-## The KodeCite Difference
+## The five-layer model
 
-A normal website says "We are a dentist in Bend." A KodeCite website tells AI systems: this is the practice, this is the provider, these are the services, this is the location, these are the credentials, these are the reviews, these are the trusted external profiles, these are the FAQs, these are the citations, this is the correct next step, and this is what should not be assumed. That is the difference between a website and a machine-readable business foundation.
+### 01 — Truth
+Identity, people, services, products, locations and service areas, credentials, proof, policies, and limitations — published as one authoritative record.
 
-## The Framework: Four Layers, One Compounding Foundation
+### 02 — Capability
+What can be requested, what information is required, where the business works, which services are available, and what success does — and does not — mean.
 
-### Layer 01 — Infrastructure
-Built on Next.js, not plugin stacks. Fast, server-rendered, edge-deployed pages that AI crawlers and search engines read on the first request. No fragile plugin chain, no bloated theme stack, no hidden JavaScript dependency, no rented platform lock-in. Humans, search engines, and AI systems see the full page immediately.
+### 03 — Control
+Human confirmation, authorization, validation, rate limiting, idempotency, and fail-closed behavior. No false booking, pricing, purchase, or acceptance.
 
-### Layer 02 — Entity Graph
-The source of truth for the business. A structured Schema.org entity graph that connects business, people, services, locations, credentials, reviews, articles, FAQs, citations, and profiles through stable machine-readable @id references — not plugin schema, not disconnected snippets. AI systems can verify who you are, what you do, where you operate, and why you are credible.
+### 04 — Action
+Submit a consultation, send a qualified inquiry, request an appointment, or hand off to a human. Schedule or transact later only where the real business permits it. Not every client needs every action.
 
-### Layer 03 — Answer Architecture
-Content built for extraction, citation, and recommendation. Each important page answers a specific buyer question clearly. Services are structured, locations defined, FAQs visible, articles support real decision-making, internal links reinforce entity relationships, and claims are backed by sources. AI systems can quote, summarize, and recommend with confidence.
+### 05 — Distribution
+Website, search, structured data and entity graphs, external profiles, llms.txt, agent.json, capability discovery, protected APIs, and future MCP or browser agents. These are delivery surfaces — not the product category.
 
-### Layer 04 — Agent Readiness
-The next step beyond visibility. AI agents will help people compare providers, request quotes, book consultations, schedule appointments, and take action. KodeCite makes a business action-ready: what can a customer do next, can they request a quote, can they book online, what information is required, what services require consultation, what pricing should not be invented, what areas are served, and what AI agents should not promise. Entity infrastructure becomes agent-ready infrastructure.
+Not every AI system reads llms.txt, agent.json, or schema. Those files help when a system looks for them. They do not make AI know a business with certainty.
 
-## Verification (Schema Alone Is Not Trust)
+## What you get
 
-AI visibility only works when the entity graph matches the real business. The website, schema, Google Business Profile, Apple Maps, Bing Places, BBB, Yelp, licensing profiles, service areas, address strategy, and third-party citations must agree. When signals conflict, AI systems lose confidence — and confidence is the trust layer. KodeCite architects the verification system around the JSON-LD, not just the JSON-LD itself.
+### Foundation Build — $4,995
+Owned website (Next.js where appropriate), canonical truth, entity graph, services and geography, corroboration, machine discovery, and a capability map. Client-owned GitHub and Vercel. Does not automatically include a production action endpoint.
 
-## What You Get (The Foundation Build)
+### Agent Capability Build
+Custom-scoped after business rules are understood. One defined action at a time: contract, validation, security and abuse controls, idempotency, human handoff, production acceptance testing. No published price. Different actions carry different rules and risk.
 
-- Custom Next.js website, server-rendered and AI-readable on cold load
-- Full entity graph for business, people, services, credentials, locations, articles, FAQs, and citations
-- Custom JSON-LD per page, built as code — not plugin output
-- llms.txt and llms-full.txt
-- agent.json / agents.json for AI-agent guidance
-- Service and location architecture
-- FAQPage, Article, Breadcrumb, LocalBusiness, Person, Service, and Organization schema
-- Citation and profile cleanup across key trust sources
-- Clear quote, contact, booking, or consultation paths
-- Action rules that tell AI what can and cannot be assumed
-- GitHub repo and Vercel account owned by the client — no platform lock-in, no monthly website rent
+### Platform Capability Layer — Pilot
+For selected WordPress / Wix / Squarespace businesses remaining on those platforms: a KodeCite-owned Next.js/Vercel sidecar on a business-controlled domain or subdomain. No WordPress plugin dependency. Truth and capability publication, plus protected actions where appropriate. Application-only. Not universally proven.
 
-## Who It Is For
+### Agent Readiness Review
+See what AI can understand, verify, and safely do with a business today. Free written review in 24–48 hours when operationally available. Request at https://www.kodecite.ai/machine-read
 
-KodeCite is built for established operators with real-world credibility that AI systems cannot fully verify yet: home service businesses, dental and healthcare practices, attorneys and law firms, real estate professionals, financial advisors, property management companies, specialty trades, regional independent operators, owner-operated professional services, and local businesses with strong reviews, credentials, and reputation. If a business is trusted in the real world but unclear to AI systems, KodeCite is built for it.
+## Acceptance standard
 
-## The Machine Read (Free)
+Before a build, we agree what the system must publish, what AI must be able to understand, and — when an action is included — what the protected workflow must successfully do. The engagement is not complete until those agreed outputs pass tests. This is not a citation money-back guarantee and not a promise that a specific AI engine will cite the business.
 
-A Machine Read shows how a business appears to AI systems today — examining website, schema, citations, profiles, services, locations, content, and trust signals to identify where AI systems may lose confidence. It reveals what AI can verify, what is unclear, what is inconsistent, what competitors may be doing better, and what needs to be fixed first. Request at https://www.kodecite.ai/contact.
+## Who it is for
 
-## The Window
+Established high-trust, high-value service businesses. KodeCite is not a chatbot agency, a generic AI-automation shop, an SEO retainer, or a paid-media practice. We do not publish MCP or an action endpoint without reconciling the real business.
 
-Search is moving from pages to answers, answers to recommendations, and recommendations toward actions. AI visibility is still early — most businesses think they need more SEO, blog posts, or ads, not realizing they have an entity problem. The businesses that build machine-readable foundations now will be much harder to displace later. Enterprise and SaaS companies are already moving toward AI-ready infrastructure (modern frameworks, structured data, APIs, knowledge graphs); KodeCite brings that advantage to established local and regional businesses before national brands and private-equity rollups dominate AI recommendations.
+## Production proof — Luxe Window Works
 
-## Key Pages
+Luxe publishes a machine-readable in-home consultation capability:
+
+https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation
+
+Contract 1.0. Readiness: request-submission-ready. Submission enabled. Human follow-up required. Booking, pricing, and checkout unavailable.
+
+Authorized production test: one valid request returned HTTP 200 accepted / in_service_area and the email reached the Luxe inbox. The identical duplicate returned the original outcome and did not send a second email. The same key with a changed payload returned HTTP 409 idempotency_conflict. No appointment, price, purchase, or project acceptance was claimed.
+
+Significance: an outside agent could discover what Luxe permits, determine qualification, submit safely, and receive an honest machine-readable outcome.
+
+Discovery screenshots (ChatGPT, Google, Bing, Gemini) are separate evidence that visibility can follow better infrastructure. They are not the product category.
+
+Full case study: https://www.kodecite.ai/blog/from-recommended-to-actionable-luxe-window-works
+
+## Key pages
 
 - Homepage: https://www.kodecite.ai/
-- Why Now: https://www.kodecite.ai/why-now
 - Services: https://www.kodecite.ai/services
 - Pricing: https://www.kodecite.ai/pricing
-- Case Studies: https://www.kodecite.ai/case-studies
 - About: https://www.kodecite.ai/about
-- Blog (The Playbook): https://www.kodecite.ai/blog
-- Free Machine Read: https://www.kodecite.ai/contact
+- Insights: https://www.kodecite.ai/blog
+- Case studies: https://www.kodecite.ai/case-studies
+- Start here (FAQ): https://www.kodecite.ai/faq
+- Contact: https://www.kodecite.ai/contact
+- Agent Readiness Review: https://www.kodecite.ai/machine-read
 
-## Pillar Content
+## High-value content
 
-- What Is an Entity Graph (definitive explainer): https://www.kodecite.ai/blog/what-is-an-entity-graph
-- Schema Markup: The Complete Guide (how to build the entity graph): https://www.kodecite.ai/blog/schema-markup-complete-guide
-- Entity-First Search: How Local Businesses Become the Answer AI Systems Recommend: https://www.kodecite.ai/blog/entity-first-search-local-businesses
-- The F1 Framework for AEO: https://www.kodecite.ai/blog/f1-framework-for-aeo
-- Compressed Search Is Coming: Why Entity Trust Will Matter More Than Content Volume: https://www.kodecite.ai/blog/compressed-search-entity-trust
-- How to Rank in Google AI Overviews for Local Businesses: https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses
-- Why Is My Website Traffic Dropping in 2026?: https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026
-- The 2026 Digital Land Rush: https://www.kodecite.ai/blog/2026-digital-land-rush-ai-visibility
+- From Recommended to Actionable: https://www.kodecite.ai/blog/from-recommended-to-actionable-luxe-window-works
+- What Is an Entity Graph: https://www.kodecite.ai/blog/what-is-an-entity-graph
+- The Language Problem: https://www.kodecite.ai/blog/why-your-website-cant-talk-to-ai
+- Below the Content Layer: https://www.kodecite.ai/blog/below-the-content-layer
+- Schema Markup: The Complete Guide: https://www.kodecite.ai/blog/schema-markup-complete-guide
+- The AI Search Stack Nobody Is Building: https://www.kodecite.ai/blog/the-ai-search-stack-nobody-is-building-for-small-businesses
+- Compressed Search: https://www.kodecite.ai/blog/compressed-search-entity-trust
+- The Shortlist Problem: https://www.kodecite.ai/blog/the-shortlist-problem
+
+## Locality
+
+Based in North Idaho. Built for service businesses anywhere. About may mention the PNW, Eastside Seattle, Bend, and the North Idaho–Spokane corridor. The offer is remote, not geo-limited.
+
+- Coeur d'Alene: https://www.kodecite.ai/locations/coeur-dalene
+- Spokane: https://www.kodecite.ai/locations/spokane
+- North Idaho: https://www.kodecite.ai/locations/north-idaho
 
 ## Contact
 
-- Founder: Mark Abplanalp
-- Location: Coeur d'Alene, Idaho
+- Founder: Mark Abplanalp — 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial, one-person senior practice
+- Location: North Idaho
 - Website: https://www.kodecite.ai
-- Service Area: North Idaho, Pacific Northwest, and nationwide remote clients
+- Primary CTA: https://www.kodecite.ai/machine-read
 
-## Authority Signals
+## Ownership
 
-- Infrastructure: Next.js + Vercel Edge — sub-second load times
-- Schema: 0 invalid items across client sites; custom JSON-LD entity graphs
-- Clients own their codebase, GitHub repo, and Vercel account — no platform lock-in
-- Clients: INW Basecamp (real estate & relocation), Luxe Window Works, KodeCite.ai
+The client owns the repo, the site, and the deployed infrastructure. No mandatory retainer. Active capabilities may use third-party services with direct costs. APIs, credentials, and security may need maintenance. KodeCite does not claim an active endpoint runs forever without that work.

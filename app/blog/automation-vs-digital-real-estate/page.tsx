@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Automation Is Failing Most Businesses',
   description:
-    "AI automation is failing 80–95% of businesses. The smarter 2026 play isn't automating everything — it's making your business AI-visible and recommendable.",
+    "Automation without an accurate business model and a control layer is how false bookings and bad handoffs get created. Own the rules first.",
   alternates: {
     canonical: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   },
@@ -26,7 +26,7 @@ const articleSchema = {
   headline:
     'Why Automating Everything Is Failing Most Businesses — And Why Owning Your Digital Real Estate Is the Smarter Play in 2026',
   description:
-    "AI automation is failing 80–95% of businesses. The smarter play in 2026 isn't automating everything — it's making sure AI recommends you first.",
+    "Automation without an accurate business model and a control layer is how false bookings and bad handoffs get created. Own the rules first.",
   url: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
   datePublished: '2026-03-10T00:00:00-07:00',
   dateModified: '2026-03-10T00:00:00-07:00',
@@ -134,10 +134,10 @@ const faqPageSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What is a free AI Scaffolding Audit?',
+      name: 'What is an Agent Readiness Review?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "A free check of what AI systems currently see when they look at your business — your structured data health, site speed, llms.txt and agent.json presence, and overall AI citation authority. No sales pressure. Just an honest picture of where you stand. Takes about 15 minutes on our end.",
+        text: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps. Free in 24–48 hours when operationally available. It is a review request, not a booking.",
       },
     },
   ],
@@ -222,8 +222,8 @@ const faqItems = [
     a: "The main culprits are poor data quality, unclear goals, and no measurable ROI framework up front. For local professional service firms there's an added issue: automation addresses operational efficiency but does nothing to solve the client acquisition problem. You can run a perfectly automated practice with an empty calendar.",
   },
   {
-    q: 'What is a free AI Scaffolding Audit?',
-    a: "A free check of what AI systems currently see when they look at your business — your structured data health, site speed, llms.txt and agent.json presence, and overall AI citation authority. No sales pressure. Just an honest picture of where you stand. Takes about 15 minutes on our end.",
+    q: 'What is an Agent Readiness Review?',
+    a: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps. Free in 24–48 hours when operationally available. It is a review request, not a booking.",
   },
 ];
 
@@ -689,7 +689,7 @@ export default function AutomationVsDigitalRealEstate() {
                     Find out exactly how your site looks to AI right now — and what it takes to become the recommended name in your market.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Book Your Free Scaffolding Audit
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
@@ -748,7 +748,7 @@ export default function AutomationVsDigitalRealEstate() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Book Your Free Scaffolding Audit →
+              Request an Agent Readiness Review →
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

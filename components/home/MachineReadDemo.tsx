@@ -61,7 +61,7 @@ export default function MachineReadDemo() {
         </div>
 
         <div className="mt-8">
-          <Link href="/machine-read" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
         </div>
       </div>
     </section>

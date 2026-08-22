@@ -226,23 +226,23 @@ const pillars = [
   },
   {
     number: '03',
-    title: 'llms.txt — Your AI Identity File',
-    body: 'A structured plain-text file that tells every LLM crawling the web exactly what your business does, who it serves, and what it should be cited for.',
+    title: 'llms.txt — A discovery file',
+    body: 'A plain-text file some AI systems look for. Not every system reads it. It does not make AI know a business with certainty.',
   },
   {
     number: '04',
-    title: 'agent.json — A2A Commerce Ready',
-    body: "A machine-readable capability file that enables AI agents to transact with your business directly — booking appointments and initiating services on a user's behalf.",
+    title: 'agent.json — Discovery, then action if permitted',
+    body: "A machine-readable discovery file. On KodeCite.ai it is identity-only. A real action needs a published capability and control — and only when the business permits it. Not a booking or purchase by default.",
   },
 ];
 
 const checklistItems = [
   'Your schema errors drop to zero — Google immediately reads you as a trusted entity',
   'Your Core Web Vitals pass — AI crawlers and Google ranking systems both reward you',
-  'Your llms.txt is live — every LLM that indexes the web now knows exactly who you are',
-  'Your content answers real questions directly — AI systems extract and cite you',
-  'Your NAP is consistent everywhere — entity recognition becomes unambiguous',
-  'Your agent.json is deployed — you are ready for the A2A commerce era',
+  'Your llms.txt is live — a discovery file some systems look for, not a guarantee every model will use it',
+  'Your content answers real questions directly — easier to quote when a system looks',
+  'Your NAP is consistent everywhere — fewer conflicting identity signals',
+  'Your agent.json is honest — discovery only unless a real, controlled action is published',
 ];
 
 export default function AeoGeoMakingSEOBetter() {
@@ -664,7 +664,7 @@ export default function AeoGeoMakingSEOBetter() {
                     Find out exactly how your site looks to AI right now — and what it takes to become the trusted default in your market.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Book Your Free Scaffolding Audit
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
@@ -723,7 +723,7 @@ export default function AeoGeoMakingSEOBetter() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Book Your Free Scaffolding Audit
+              Request an Agent Readiness Review
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

@@ -420,13 +420,13 @@ export default function Indexed49Pages() {
                 {/* CTA Card */}
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
                   <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Is Your Site Invisible Like Luxe Was?
+                    See the later Luxe chapter
                   </p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    We audit your crawlability, schema, Core Web Vitals, and page architecture. Then we fix them — with the same methodology that indexed 49 pages in 48 hours.
+                    Indexing was the earlier chapter. The later chapter is a live, protected consultation capability. An Agent Readiness Review shows what AI can understand, verify, and safely do today.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get Your Site Audited
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 

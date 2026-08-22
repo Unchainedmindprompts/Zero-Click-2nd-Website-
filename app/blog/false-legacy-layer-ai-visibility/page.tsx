@@ -482,15 +482,15 @@ export default function FalseLegacyLayer() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
+                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> now builds owned business infrastructure — truth, capability, and control. Visibility can follow. We do not claim permanent AI placement.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   Get your{' '}
-                  <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
+                  <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">Agent Readiness Review</Link>{' '}
                   at{' '}
                   <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
-                  Find out how close you are to losing — or locking in — your position.
+                  See what AI can understand, verify, and safely do today.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[var(--d-line)]">

@@ -58,8 +58,8 @@ export default function CaseStudiesPage() {
               Luxe Window Works
             </h2>
             <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl leading-relaxed mb-12">
-              A complete technical SEO overhaul that transformed a slow, invisible WordPress site into
-              a fast, schema-validated Next.js powerhouse — indexed in under 48 hours.
+              The earlier chapter was an owned Next.js rebuild and indexing. The later chapter is a live,
+              protected in-home consultation capability — not a booking, price, or purchase.
             </p>
           </ScrollReveal>
 
@@ -69,7 +69,7 @@ export default function CaseStudiesPage() {
               { value: '93-100', label: 'Desktop PageSpeed score', sub: 'all categories' },
               { value: '100', label: 'SEO score', sub: 'all three sites' },
               { value: '0', label: 'Invalid schema items', sub: 'across all pages' },
-              { value: '66%', label: 'Better mobile performance', sub: 'than average WordPress site' },
+              { value: 'Live', label: 'Protected consultation', sub: 'authorized production test' },
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
                 <div className="bg-[#0d0d1a] rounded-xl p-6 text-center border border-[#D4A94A]/20 hover:border-[#D4A94A]/40 transition-all duration-300">
