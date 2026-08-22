@@ -51,14 +51,14 @@ export const HOME_SLIDES: HomeSlide[] = [
     // glow — the brand's opening title card. Dark plate (default theme) keeps
     // the white headline legible over the image.
     id: 'outcome',
-    kicker: 'Owned business infrastructure for the agent-driven web',
+    kicker: 'The trusted digital business layer',
     brandEyebrow: true,
     headline: [
       { text: 'Make your business' },
       { text: 'usable by AI.', accent: true },
     ],
     support:
-      'Kodecite builds the owned infrastructure that lets AI understand what you offer, verify what is true, recommend you accurately and take the next safe step with a customer.',
+      'Kodecite builds the trusted digital business layer that lets AI understand what you offer, evaluate what is true, recommend you accurately, and take the next authorized step with a customer.',
     image: '/home/slide-intro.webp',
     bg:
       'radial-gradient(60% 80% at 72% 30%, rgba(200,140,60,0.14), transparent 60%),' +
@@ -78,9 +78,9 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'to find a name.', accent: true },
     ],
     support:
-      'People still search. They also ask AI who to hire, whether a business can help, and what to do next. Finding a listing is no longer enough if the system cannot understand the work or take a safe step.',
+      'People still search websites themselves. They are also beginning to delegate discovery and next steps to AI agents. Human search is not dead. Agent commerce has not reached mass adoption. The commercial decision loop is still moving.',
     support2:
-      'AI should not merely find a business. It should understand what the business does, know what it is allowed to do, and take the next safe step with a customer.',
+      'As customers delegate more discovery and action, a business that cannot be reliably understood, evaluated, and acted upon may be excluded before the customer ever sees it.',
     image: '/home/slide-ai-web.webp',
     bg:
       'radial-gradient(58% 78% at 76% 24%, rgba(93,213,255,0.22), transparent 60%),' +
@@ -118,9 +118,9 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'system.', accent: true },
     ],
     support:
-      'Identity, services, locations, policies, proof, and allowed actions — published for people, search engines, and AI agents. That is the connective layer for service businesses. The category is early and fragmented. Kodecite is not claiming to own it.',
+      'The website stays the human-facing experience. The digital business layer is the verified, machine-facing representation. Truth, services, geography, policies, permissions, capabilities, and actions have to agree.',
     support2:
-      'Website, schema, and machine files are how it gets published. They are not the product.',
+      'Recommendation is only one stage. The larger goal is safe agent participation. The category is early and fragmented. Kodecite is not claiming to own it.',
     points: [
       'Truth',
       'Capability',
@@ -149,7 +149,7 @@ export const HOME_SLIDES: HomeSlide[] = [
     support:
       'Luxe Window Works publishes a machine-readable in-home consultation capability. An authorized production test submitted one valid request. It was accepted. The duplicate was suppressed. A conflicting replay was rejected. Booking, pricing, and checkout stayed unavailable.',
     support2:
-      'Luxe is production proof that the connective layer can work. Understandable. Verifiable. Recommendable. Actionable. Controlled.',
+      'Luxe is production proof that this is no longer hypothetical. Recommendation is only one stage. The larger goal is safe agent participation.',
     image: '/home/slide-outcome.webp',
     theme: 'light',
     bg:

@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     category: 'CASE STUDIES',
     date: 'August 22, 2026',
     readTime: '12 min read',
-    excerpt: 'How Luxe moved from AI discovery to a live, protected in-home consultation capability — production proof that the connective layer can work, and what the test did not prove.',
+    excerpt: 'How Luxe moved from AI discovery to a live, protected in-home consultation capability — production proof that the trusted digital business layer is no longer hypothetical, and what the test did not prove.',
     featured: true,
   },
   {

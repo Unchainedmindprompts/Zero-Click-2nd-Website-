@@ -1,12 +1,26 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
-import { CONNECTIVE_LAYER, ISOLATED_LAYERS_LINE, MARKET_SHAPE, NOT_A_CLAIM, REVIEW_HREF } from '@/lib/positioning';
+import {
+  AGREEMENT,
+  CONNECTIVE_LAYER,
+  CONSEQUENCE,
+  ISOLATED_LAYERS_LINE,
+  LUXE_CONNECTIVE,
+  MARKET_SHAPE,
+  NOT_A_CLAIM,
+  OPPORTUNITY,
+  RECOMMENDATION_STAGE,
+  REVIEW_HREF,
+  THESIS,
+  TRANSITION,
+  WEBSITE_ROLE,
+} from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Start Here — Usable by AI',
   description:
-    'What “usable by AI” means, how this differs from isolated AI-visibility or schema products, what agents can safely do, and how ownership and maintenance actually work.',
+    'What “usable by AI” means: the trusted digital business layer that lets agents understand, evaluate, recommend, and take authorized action. How this differs from ranking in ChatGPT, and what Luxe proved.',
   alternates: { canonical: 'https://www.kodecite.ai/faq' },
 };
 
@@ -14,8 +28,24 @@ const faqs: { q: string; a: string | string[] }[] = [
   {
     q: 'What does “usable by AI” mean?',
     a: [
-      'It means a system can understand what the business does, verify what is true, determine what the business is allowed to do, recommend it accurately, take the next authorized action, return an honest outcome, and hand off to a human when required.',
+      THESIS,
+      'It means a system can understand what the business does, evaluate what is true, determine what the business is allowed to do, recommend it accurately, take the next authorized action, return an honest outcome, and hand off to a human when required.',
       'Finding a name in a search result is not the same thing. Usable means the business can be understood and safely used — not merely discovered.',
+    ],
+  },
+  {
+    q: 'Is this just ranking in ChatGPT?',
+    a: [
+      OPPORTUNITY,
+      `${WEBSITE_ROLE} ${AGREEMENT}`,
+      `${RECOMMENDATION_STAGE} ${TRANSITION}`,
+    ],
+  },
+  {
+    q: 'Why does this matter now?',
+    a: [
+      CONSEQUENCE,
+      TRANSITION,
     ],
   },
   {
@@ -33,7 +63,7 @@ const faqs: { q: string; a: string | string[] }[] = [
     q: 'Is this an uncontested new market?',
     a: [
       `${MARKET_SHAPE} ${NOT_A_CLAIM}`,
-      `${ISOLATED_LAYERS_LINE} Kodecite is working on the connective layer those products usually leave open: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff.`,
+      `${ISOLATED_LAYERS_LINE} ${CONNECTIVE_LAYER}`,
     ],
   },
   {
@@ -76,7 +106,7 @@ const faqs: { q: string; a: string | string[] }[] = [
   },
   {
     q: 'What did the Luxe production test prove?',
-    a: 'That an outside agent could discover what Luxe permits, determine qualification, submit one valid in-home consultation request, receive an honest machine-readable outcome, and that a duplicate did not create a second email while a conflicting replay was rejected. It did not prove booking, pricing, checkout, or project acceptance. Those stayed unavailable.',
+    a: `That an outside agent could discover what Luxe permits, determine qualification, submit one valid in-home consultation request, receive an honest machine-readable outcome, and that a duplicate did not create a second email while a conflicting replay was rejected. It did not prove booking, pricing, checkout, or project acceptance. Those stayed unavailable. ${LUXE_CONNECTIVE}`,
   },
   {
     q: 'Who owns the work?',
@@ -155,8 +185,8 @@ export default function FAQPage() {
               maxWidth: '580px',
             }}
           >
-            Plain answers about the connective layer: truth, capabilities, controlled action, owned infrastructure, and human handoff.
-            AEO, GEO, schema, and scheduling show up as isolated layers — not as the category, and not as a claim that Kodecite owns the market.
+            Plain answers about the trusted digital business layer: truth, capabilities, controlled action, owned infrastructure, and human handoff.
+            The website remains the human-facing experience. Recommendation is only one stage. AEO, GEO, schema, and scheduling show up as isolated layers — not as the category, and not as a claim that Kodecite owns the market.
           </p>
         </div>
       </section>

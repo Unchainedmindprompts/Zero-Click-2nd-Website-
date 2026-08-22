@@ -550,7 +550,7 @@ export default function AISearchStackNobodyIsBuilding() {
                   That is the connective layer this article was pointing at: owned truth, explicit capability, and control for a real service business.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Read the original &ldquo;nobody is building&rdquo; title as a 2026 discovery essay, not as a current claim that Kodecite is first, only, or the category leader. The category is emerging and fragmented. Isolated layers already exist. Luxe is production proof the connective layer can work.
+                  Read the original &ldquo;nobody is building&rdquo; title as a 2026 discovery essay, not as a current claim that Kodecite is first, only, or the category leader. The category is emerging and fragmented. Isolated layers already exist. Luxe is production proof that the trusted digital business layer is no longer hypothetical.
                 </p>
 
                 <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6 mb-8">

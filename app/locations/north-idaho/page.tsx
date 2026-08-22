@@ -11,7 +11,7 @@ const PAGE_URL = `${ORIGIN}/locations/north-idaho`;
 export const metadata: Metadata = {
   title: 'North Idaho Business Infrastructure for the Agent-Driven Web',
   description:
-    'Based in North Idaho. KodeCite builds owned infrastructure that lets AI understand, verify, recommend, and take the next safe step with a service business — here or anywhere.',
+    'Based in North Idaho. KodeCite builds the trusted digital business layer that lets AI understand, evaluate, recommend, and take authorized action with a service business — here or anywhere.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'North Idaho Business Infrastructure for the Agent-Driven Web',
@@ -116,7 +116,7 @@ export default function NorthIdahoLocationPage() {
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
             KodeCite is based in North Idaho — Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, Sandpoint, and the Inland Northwest.
-            The offer is the connective layer for service businesses: remote, not geo-limited, and not an AEO retainer. The category is early and fragmented. Action is scoped only when the real business permits it.
+            The offer is the trusted digital business layer for service businesses: remote, not geo-limited, and not an AEO retainer. The website remains the human-facing experience. The category is early and fragmented. Action is scoped only when the real business permits it.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">{REVIEW_CTA} →</Link>

@@ -11,7 +11,7 @@ const PAGE_URL = `${ORIGIN}/locations/coeur-dalene`;
 export const metadata: Metadata = {
   title: "Coeur d'Alene Business Infrastructure for the Agent-Driven Web",
   description:
-    "Based in Coeur d'Alene, Idaho. KodeCite builds owned infrastructure that lets AI understand, verify, recommend, and take the next safe step with a service business — here or anywhere.",
+    "Based in Coeur d'Alene, Idaho. KodeCite builds the trusted digital business layer that lets AI understand, evaluate, recommend, and take authorized action with a service business — here or anywhere.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Coeur d'Alene Business Infrastructure for the Agent-Driven Web",
@@ -118,7 +118,7 @@ export default function CoeurDAleneLocationPage() {
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '660px' }}>
             KodeCite is based in Coeur d&apos;Alene. The offer is not a local AEO agency and not a citation guarantee.
-            We work on the connective layer for service businesses — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff.
+            We build the trusted digital business layer — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. The website remains the human-facing experience.
             The category is early and fragmented. Discovery can follow. Action is scoped only when the real business permits it.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">

@@ -11,7 +11,7 @@ const PAGE_URL = `${ORIGIN}/locations/spokane`;
 export const metadata: Metadata = {
   title: 'Spokane Business Infrastructure for the Agent-Driven Web',
   description:
-    'Based in North Idaho, building for Spokane and anywhere. KodeCite publishes owned truth, capability, and control so AI can understand a service business and take the next safe step.',
+    'Based in North Idaho, building for Spokane and anywhere. KodeCite builds the trusted digital business layer so AI can understand, evaluate, recommend, and take authorized action with a service business.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Spokane Business Infrastructure for the Agent-Driven Web',
@@ -115,7 +115,7 @@ export default function SpokaneLocationPage() {
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '660px' }}>
             KodeCite is based in North Idaho and works with Spokane, Spokane Valley, and Liberty Lake operators.
-            The offer is the connective layer for service businesses, not an AEO retainer and not a citation guarantee. The category is early and fragmented. Action is scoped only when the real business permits it.
+            The offer is the trusted digital business layer for service businesses, not an AEO retainer and not a citation guarantee. The website remains the human-facing experience. The category is early and fragmented. Action is scoped only when the real business permits it.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">{REVIEW_CTA} →</Link>

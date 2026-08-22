@@ -5,7 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'Case Studies — From recommended to actionable',
   description:
-    'Luxe Window Works: from AI discovery to a live, protected consultation capability. Earlier indexing and INW work remain on their original URLs.',
+    'Luxe Window Works: from AI discovery to a live, protected consultation capability — production proof that the trusted digital business layer is no longer hypothetical. Earlier indexing and INW work remain on their original URLs.',
   alternates: { canonical: 'https://www.kodecite.ai/case-studies' },
 };
 
@@ -33,7 +33,7 @@ export default function CaseStudiesPage() {
             <span className="text-[#D4A94A]">actionable</span>
           </h1>
           <p className="text-[#8A9BB5] text-xl font-poppins max-w-3xl mx-auto leading-relaxed">
-            The flagship proof is Luxe Window Works: discovery first, then a live protected consultation request. That is production proof the connective layer can work — not a claim of market dominance. Earlier indexing work and the INW launch remain on their original URLs.
+            The flagship proof is Luxe Window Works: discovery first, then a live protected consultation request. That is production proof the trusted digital business layer is no longer hypothetical — not a claim of market dominance. Earlier indexing work and the INW launch remain on their original URLs.
           </p>
           <div className="mt-10">
             <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">

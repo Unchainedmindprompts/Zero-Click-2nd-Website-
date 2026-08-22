@@ -5,12 +5,26 @@ import GlassPanel from '@/components/GlassPanel';
 import ProductionProof from '@/components/proof/ProductionProof';
 import ProofWall from '@/components/proof/ProofWall';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
-import { CONNECTIVE_LAYER, FIVE_LAYERS, ISOLATED_LAYERS, MARKET_SHAPE, NOT_A_CLAIM, REVIEW_HREF } from '@/lib/positioning';
+import {
+  AGREEMENT,
+  CONNECTIVE_LAYER,
+  CONSEQUENCE,
+  FIVE_LAYERS,
+  ISOLATED_LAYERS,
+  LUXE_CONNECTIVE,
+  MARKET_SHAPE,
+  NOT_A_CLAIM,
+  OPPORTUNITY,
+  RECOMMENDATION_STAGE,
+  REVIEW_HREF,
+  THESIS,
+  WEBSITE_ROLE,
+} from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Infrastructure that lets AI understand — and safely act with — your business. The connective layer for service businesses: verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff.',
+    'Kodecite builds the trusted digital business layer that lets AI agents understand, evaluate, recommend, and take authorized action with service businesses. The website stays the human-facing experience. Foundation Build starts at $4,995.',
   alternates: { canonical: `${ORIGIN}/services` },
 };
 
@@ -25,7 +39,7 @@ const servicesSchema = {
       url: PAGE_URL,
       name: 'Services — KodeCite.ai',
       description:
-        'How Kodecite builds the connective layer for service businesses — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. An emerging, fragmented category. Not a claim of market leadership.',
+        'How Kodecite builds the trusted digital business layer for service businesses — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. An emerging, fragmented category. Not a claim of market leadership.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -176,9 +190,7 @@ export default function ServicesPage() {
             Infrastructure that lets AI understand — <em className="serif" style={{ color: ACCENT }}>and safely act with</em> — your business.
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
-            Most businesses are spread across a website, directories, forms, calendars, and unwritten rules.
-            Kodecite builds the connective layer: one owned system for identity, services, locations, policies, proof, and allowed actions.
-            Based in North Idaho. Built for service businesses anywhere.
+            {THESIS} {WEBSITE_ROLE} Based in North Idaho. Built for service businesses anywhere.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>
@@ -191,17 +203,23 @@ export default function ServicesPage() {
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THE CATEGORY</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
-            Isolated layers are common. <em className="serif" style={{ color: ACCENT }}>The connective layer is not.</em>
+            Isolated layers are common. <em className="serif" style={{ color: ACCENT }}>The trusted layer is not.</em>
           </h2>
           <div className="flex flex-col gap-5 mb-8" style={{ maxWidth: '720px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              {MARKET_SHAPE} {NOT_A_CLAIM}
+              {OPPORTUNITY}
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              Current products generally address one isolated layer. Visibility, schema, scheduling, browser automation, commerce, and enterprise agent governance each matter. They rarely add up to a service business AI can understand, verify, and safely act with.
+              {MARKET_SHAPE} {NOT_A_CLAIM} Current products generally address one isolated layer. Visibility, schema, scheduling, browser automation, commerce, and enterprise agent governance each matter. They rarely add up to a service business AI can understand, evaluate, and safely act with.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              {CONNECTIVE_LAYER} Luxe Window Works is production proof that this layer can work.
+              {WEBSITE_ROLE} {AGREEMENT} {RECOMMENDATION_STAGE}
+            </p>
+            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+              {CONNECTIVE_LAYER} {LUXE_CONNECTIVE}
+            </p>
+            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+              {CONSEQUENCE}
             </p>
           </div>
           <div className="flex flex-wrap gap-2">

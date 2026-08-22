@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { blogPosts, getFeaturedPosts } from '@/lib/blog';
 import BlogFilter from '@/components/blog/BlogFilter';
-import { REVIEW_HREF } from '@/lib/positioning';
+import { CONSEQUENCE, OPPORTUNITY, REVIEW_HREF, THESIS } from '@/lib/positioning';
 
 export const metadata = {
   title: 'Insights',
   description:
-    'Strategic thinking on the connective layer for service businesses: verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. An emerging, fragmented category.',
+    'Strategic thinking on the trusted digital business layer: how AI agents understand, evaluate, recommend, and take authorized action with service businesses. An emerging, fragmented category.',
   alternates: { canonical: 'https://www.kodecite.ai/blog' },
 };
 
@@ -43,11 +43,9 @@ export default function BlogPage() {
               maxWidth: '640px',
             }}
           >
-            Strategic thinking on the connective layer for service businesses: verified
-            truth, explicit capabilities, controlled action, owned infrastructure, and
-            human handoff. Visibility, schema, and automation writing stays on the site
-            as isolated-layer notes. They are not the category, and Kodecite is not
-            claiming to own the market.
+            {THESIS} {OPPORTUNITY} Visibility, schema, and automation writing stays on
+            the site as isolated-layer notes. They are not the category, and Kodecite
+            is not claiming to own the market.
           </p>
         </div>
       </section>
@@ -86,8 +84,8 @@ export default function BlogPage() {
               fontWeight: 300,
             }}
           >
-            See what AI can understand, verify, and safely do with your business today.
-            That is a review of your current system — not a claim that Kodecite is first, only, or the category leader.
+            {CONSEQUENCE} The Agent Readiness Review is a look at your current system —
+            not a claim that Kodecite is first, only, or the category leader.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

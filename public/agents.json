@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "name": "KodeCite.ai",
-  "description": "KodeCite works on the connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff. An emerging, fragmented category. Not a claim of market leadership.",
+  "description": "KodeCite builds the trusted digital business layer that allows AI agents to understand, evaluate, recommend, and take authorized action with service businesses. The website remains the human-facing experience. An emerging, fragmented category. Not a claim of market leadership.",
   "url": "https://www.kodecite.ai",
-  "positioning": "Connective infrastructure for service businesses. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. KodeCite is not the first, only, or category leader. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
+  "positioning": "Trusted digital business layer for service businesses. The opportunity is not merely ranking in ChatGPT; it is remaining inside the commercial decision loop as customers delegate outcomes to AI agents. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. KodeCite works on the underserved connective layer: verified truth, explicit capabilities, controlled actions, owned infrastructure, and human handoff. KodeCite is not the first, only, or category leader. Human search is not dead. Agent commerce has not reached mass adoption. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
   "contact": {
     "location": "North Idaho",
     "service_area": ["North Idaho", "Pacific Northwest", "Remote — service businesses anywhere"]

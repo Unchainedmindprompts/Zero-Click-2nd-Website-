@@ -4,6 +4,27 @@
 export const CATEGORY =
   'Owned business infrastructure for the agent-driven web.';
 
+export const THESIS =
+  'Kodecite builds the trusted digital business layer that allows AI agents to understand, evaluate, recommend, and take authorized action with service businesses.';
+
+export const OPPORTUNITY =
+  'The opportunity is not merely helping a business rank in ChatGPT. It is keeping service businesses inside the commercial decision loop as customers move from searching websites themselves to delegating outcomes to AI agents.';
+
+export const TRANSITION =
+  'This is a rapidly emerging commercial transition, supported by growing agent capabilities and machine-generated web activity. Human search is not dead. Agent commerce has not reached mass adoption. Kodecite has competitors.';
+
+export const WEBSITE_ROLE =
+  'The website remains the human-facing experience. The digital business layer is the verified, machine-facing representation of the same business.';
+
+export const AGREEMENT =
+  'Business truth, services, geography, policies, permissions, capabilities, and actions must agree.';
+
+export const RECOMMENDATION_STAGE =
+  'Recommendation is only one stage. The larger goal is safe agent participation.';
+
+export const CONSEQUENCE =
+  'As customers delegate more discovery and action to AI agents, a business that cannot be reliably understood, evaluated, and acted upon may be excluded before the customer ever sees it.';
+
 export const MARKET_SHAPE =
   'This is an emerging, fragmented category — not an uncontested market and not a guaranteed opportunity.';
 
@@ -26,12 +47,12 @@ export const CONNECTIVE_LAYER =
   'Kodecite works on the underserved connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff.';
 
 export const LUXE_CONNECTIVE =
-  'Luxe Window Works is production proof that this connective layer can work — not proof of market dominance.';
+  'Luxe Window Works is production proof that this is no longer hypothetical — and not proof of market dominance.';
 
 export const HOME_H1 = 'Make your business usable by AI.';
 
 export const HOME_SUPPORT =
-  'Kodecite builds the owned infrastructure that lets AI understand what you offer, verify what is true, recommend you accurately and take the next safe step with a customer.';
+  'Kodecite builds the trusted digital business layer that lets AI understand what you offer, evaluate what is true, recommend you accurately, and take the next authorized step with a customer.';
 
 export const PRINCIPLE =
   'AI should not merely find a business. It should understand what the business does, know what it is allowed to do, and take the next safe step with a customer.';

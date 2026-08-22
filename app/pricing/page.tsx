@@ -3,12 +3,12 @@ import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
-import { REVIEW_HREF } from '@/lib/positioning';
+import { CONSEQUENCE, OPPORTUNITY, RECOMMENDATION_STAGE, REVIEW_HREF, THESIS, WEBSITE_ROLE } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
-    'Foundation Build — one-time $4,995 for an owned website, truth, and discovery foundation. Agent Capability Build is scoped by action. Platform Capability Layer is a founding pilot.',
+    'Foundation Build — one-time $4,995 for the trusted digital business layer: owned website, truth, and discovery. Agent Capability Build is scoped by action. Platform Capability Layer is a founding pilot.',
   alternates: { canonical: `${ORIGIN}/pricing` },
 };
 
@@ -95,8 +95,11 @@ export default function PricingPage() {
             Price the foundation. <em className="serif" style={{ color: ACCENT }}>Scope the action.</em>
           </h1>
           <p className="font-inter mb-9" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
-            The Foundation Build is a one-time $4,995 owned website, truth, and discovery system.
+            {THESIS} The Foundation Build is a one-time $4,995 owned website, truth, and discovery system.
             A production action is a different engagement. We do not promise a specific AI engine will cite you, and we do not claim Kodecite is first, only, or the category leader.
+          </p>
+          <p className="font-inter mb-9" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
+            {WEBSITE_ROLE} {RECOMMENDATION_STAGE} {OPPORTUNITY}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>
@@ -238,7 +241,7 @@ export default function PricingPage() {
             Start with an <em className="serif" style={{ color: ACCENT }}>Agent Readiness Review.</em>
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
-            See what AI can understand, verify, and safely do with your business today. Free. 24–48 hours. You keep the report either way.
+            {CONSEQUENCE} The Agent Readiness Review shows what AI can understand, evaluate, and safely do with your business today. Free. 24–48 hours. You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>

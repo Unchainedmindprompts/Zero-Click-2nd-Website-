@@ -1,8 +1,12 @@
 # KodeCite.ai
 
-> KodeCite works on the connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff. The website, schema, entity graph, llms.txt, agent.json, APIs, and forms are components. The product is an accurate business model plus controlled machine use.
+> KodeCite builds the trusted digital business layer that allows AI agents to understand, evaluate, recommend, and take authorized action with service businesses. The website remains the human-facing experience. The digital business layer is the verified, machine-facing representation. Business truth, services, geography, policies, permissions, capabilities, and actions must agree. The website, schema, entity graph, llms.txt, agent.json, APIs, and forms are components.
 
-This is an emerging, fragmented category — not an uncontested market and not a guaranteed opportunity. KodeCite is not the first, only, or category leader. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. Luxe Window Works is production proof that the connective layer can work.
+The opportunity is not merely helping a business rank in ChatGPT. It is keeping service businesses inside the commercial decision loop as customers move from searching websites themselves to delegating outcomes to AI agents. This is a rapidly emerging commercial transition, supported by growing agent capabilities and machine-generated web activity. Human search is not dead. Agent commerce has not reached mass adoption. KodeCite has competitors.
+
+This is an emerging, fragmented category — not an uncontested market and not a guaranteed opportunity. KodeCite is not the first, only, or category leader. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. KodeCite works on the underserved connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff. Recommendation is only one stage. The larger goal is safe agent participation. Luxe Window Works is production proof that this is no longer hypothetical — and not proof of market dominance.
+
+As customers delegate more discovery and action to AI agents, a business that cannot be reliably understood, evaluated, and acted upon may be excluded before the customer ever sees it.
 
 [Full reference (expanded)](https://www.kodecite.ai/llms-full.txt)
 
