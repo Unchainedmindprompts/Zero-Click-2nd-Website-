@@ -403,10 +403,10 @@ export default function GoogleReviewsWontSaveYou() {
                     Are you one of the names?
                   </p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    A free Machine Read shows how you show up across ChatGPT, Perplexity, Google AI, Bing Copilot, and Gemini — and exactly where the gap is.
+                    An Agent Readiness Review shows what AI can understand, verify, and safely do today — including whether discovery exists without a safe next step.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Run My Free Machine Read
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
@@ -454,12 +454,12 @@ export default function GoogleReviewsWontSaveYou() {
             Can AI actually find and recommend your business?
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            Run a free Machine Read — we check how you show up across ChatGPT, Perplexity, Google AI, Bing Copilot,
+            Request an Agent Readiness Review — we check what AI can understand, verify, and safely do, including discovery across ChatGPT, Perplexity, Google AI, Bing Copilot,
             and Gemini, and show you exactly where the gap is. No cost, no pitch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Run My Free Machine Read
+              Request an Agent Readiness Review
             </Link>
             <Link href="/services" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               See how it works

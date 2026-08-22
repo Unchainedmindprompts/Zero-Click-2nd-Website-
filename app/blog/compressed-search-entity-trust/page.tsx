@@ -876,10 +876,10 @@ export default function CompressedSearchEntityTrust() {
                     See Where Your Entity Stands
                   </p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    A Machine Read shows exactly what AI systems can verify about your business right now — and where the gaps are.
+                    An Agent Readiness Review shows what AI can understand, verify, and safely do with your business today.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get My Free Machine Read
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
@@ -894,9 +894,9 @@ export default function CompressedSearchEntityTrust() {
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">14 min read</p>
                     </Link>
                     <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/f1-framework-for-aeo" className="block group">
+                      <Link href="/blog/below-the-content-layer" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          The F1 Framework for AEO: Why Most Businesses Are Trying to Win the AI Race in an Economy Car
+                          Below The Content Layer — Where the Real Opportunity Lives
                         </p>
                         <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                       </Link>
@@ -910,9 +910,9 @@ export default function CompressedSearchEntityTrust() {
                       </Link>
                     </div>
                     <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
+                      <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost Your Business Everything
+                          From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
                         </p>
                         <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">7 min read</p>
                       </Link>
@@ -941,7 +941,7 @@ export default function CompressedSearchEntityTrust() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get My Free Machine Read
+              Request an Agent Readiness Review
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

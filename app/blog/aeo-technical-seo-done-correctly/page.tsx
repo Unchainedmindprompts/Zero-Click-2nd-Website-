@@ -231,11 +231,11 @@ export default function AeoTechnicalSeoDoneCorrectly() {
                   in a sentence.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The correct conclusion is not that SEO stopped mattering. The correct conclusion is that SEO got more
-                  technical, more entity-driven, and more dependent on infrastructure. AEO — Answer Engine Optimization — is
-                  not a competing discipline that replaces SEO. AEO is what proper technical SEO becomes when it is built
-                  correctly for the AI search era. That is the whole argument. The rest of this piece explains why, and what
-                  it means for your site.
+                  The correct conclusion is not that SEO stopped mattering. The correct conclusion is that SEO, AEO, and GEO
+                  are discovery practices. They help a business get found. They are not the product. The work underneath is
+                  an owned model of the business — truth, capability, control — so a system can understand what you do and,
+                  when you permit it, take a safe next step. This article was written when AEO was the category. Read it as
+                  the discovery chapter. The complete job is infrastructure.
                 </p>
 
                 <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">The search environment changed. The goal changed with it.</h2>
@@ -464,11 +464,11 @@ export default function AeoTechnicalSeoDoneCorrectly() {
                     What do the machines see?
                   </p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    A free Machine Read shows whether AI systems can understand and verify your business right now — the
+                    An Agent Readiness Review shows whether AI can understand and verify your business right now — the
                     entity graph, the schema, the identity signals — and exactly where they get confused.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Run My Free Machine Read
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
@@ -516,12 +516,12 @@ export default function AeoTechnicalSeoDoneCorrectly() {
             Find out what the machines see.
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            Run a free Machine Read — we look at your site the way an answer engine does, and show you exactly where it gets
+            Request an Agent Readiness Review — we look at what AI can understand, verify, and safely do, and show you exactly where it gets
             confused and where it gets confident. No jargon, no scare tactics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Run My Free Machine Read
+              Request an Agent Readiness Review
             </Link>
             <Link href="/services" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               See how it works

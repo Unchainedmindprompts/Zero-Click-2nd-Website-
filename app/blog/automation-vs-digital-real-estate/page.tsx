@@ -703,17 +703,17 @@ export default function AutomationVsDigitalRealEstate() {
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">10 min read</p>
                     </Link>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/false-legacy-layer-ai-visibility" className="block group">
+                      <Link href="/blog/the-shortlist-problem" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          The False Legacy Layer: Why Your AI Citations Could Disappear Tomorrow
+                          The Shortlist Problem: Why AI Will Recommend One Local Business
                         </p>
                         <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
                       </Link>
                     </div>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
+                      <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          The 2026 Digital Land Rush: Why Waiting Could Cost Your Business Everything
+                          From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
                         </p>
                         <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                       </Link>

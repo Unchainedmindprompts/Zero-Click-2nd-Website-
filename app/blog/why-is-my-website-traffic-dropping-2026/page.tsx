@@ -738,7 +738,7 @@ export default function WhyIsMyWebsiteTrafficDropping() {
                     We diagnose exactly why your traffic is dropping and rebuild your digital presence to get recommended — not just ranked.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get Your Free Audit
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 

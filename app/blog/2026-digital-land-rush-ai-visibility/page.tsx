@@ -465,7 +465,7 @@ export default function DigitalLandRush2026() {
                     Find out exactly where your business is invisible to AI — and what it takes to fix it. No obligation.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get My Free Machine Read
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
@@ -513,11 +513,11 @@ export default function DigitalLandRush2026() {
             Don&apos;t Let Competitors Claim Your Digital Territory
           </h2>
           <p className="text-[rgba(240,232,216,0.6)] font-inter mb-8 leading-relaxed">
-            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
+            The False Legacy Layer is real — and it has an expiration date. An Agent Readiness Review shows what AI can understand, verify, and safely do with your business today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get My Free Machine Read
+              Request an Agent Readiness Review
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

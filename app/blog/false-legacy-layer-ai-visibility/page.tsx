@@ -537,16 +537,16 @@ export default function FalseLegacyLayer() {
                     Find out exactly where your business is invisible to AI — and what it takes to build real authority. No obligation.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get My Free Machine Read
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
+                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
                       <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost You Everything
+                        From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
                       </p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                     </Link>
@@ -585,11 +585,11 @@ export default function FalseLegacyLayer() {
             Find out where you actually stand.
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
+            The False Legacy Layer is real — and it has an expiration date. An Agent Readiness Review shows what AI can understand, verify, and safely do with your business today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get My Free Machine Read
+              Request an Agent Readiness Review
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

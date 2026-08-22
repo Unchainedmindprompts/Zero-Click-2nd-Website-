@@ -441,9 +441,9 @@ export default function Indexed49Pages() {
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                     </Link>
                     <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/why-is-my-website-traffic-dropping-2026" className="block group">
+                      <Link href="/blog/what-is-zero-click-search" className="block group">
                         <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          Why Is My Website Traffic Dropping in 2026?
+                          What Is Zero Click Search and Why Your Business Is Invisible
                         </p>
                         <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                       </Link>
@@ -468,11 +468,11 @@ export default function Indexed49Pages() {
             Your Business Deserves to Be Found
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The Luxe Window Works result isn&apos;t an outlier — it&apos;s what happens when you build a site correctly for how AI search systems actually work. Let&apos;s do the same for your business.
+            This is the earlier Luxe chapter: owned rebuild and indexing. The later chapter is the live consultation capability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Start the Conversation
+            <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
+              Read the agent-ready chapter
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

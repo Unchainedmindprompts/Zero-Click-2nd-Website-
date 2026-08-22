@@ -454,10 +454,10 @@ export default function WhyYourWebsiteCantTalkToAI() {
                     What Does AI Actually See?
                   </p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    A Machine Read shows what AI systems can verify about your business right now — schema, entity completeness, NAP consistency, and cold-crawl readability.
+                    An Agent Readiness Review looks at identity, services, geography, policies, discovery, and whether a safe next action even exists.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get My Free Machine Read
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
@@ -506,11 +506,11 @@ export default function WhyYourWebsiteCantTalkToAI() {
             Find out what AI actually sees.
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            A Machine Read shows you exactly what AI systems can verify about your business right now — and where the gaps are.
+            An Agent Readiness Review shows what AI can understand, verify, and safely do with your business today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get My Free Machine Read
+              Request an Agent Readiness Review
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

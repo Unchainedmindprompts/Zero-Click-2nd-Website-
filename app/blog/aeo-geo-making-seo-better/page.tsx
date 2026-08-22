@@ -671,9 +671,9 @@ export default function AeoGeoMakingSEOBetter() {
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <Link href="/blog/false-legacy-layer-ai-visibility" className="block group">
+                    <Link href="/blog/the-shortlist-problem" className="block group">
                       <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        The False Legacy Layer: Why Your AI Citations Could Disappear Tomorrow
+                        The Shortlist Problem: Why AI Will Recommend One Local Business
                       </p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
                     </Link>
