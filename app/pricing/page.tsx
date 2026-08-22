@@ -3,19 +3,17 @@ import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
+import { REVIEW_HREF } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
-    'The Foundation Build — one-time $4,995. A rebuilt, AI-readable website with 60 days of citation tracking, owned forever, no retainer. Cited by name in 60 days or your money back.',
+    'Foundation Build — one-time $4,995 for an owned website, truth, and discovery foundation. Agent Capability Build is scoped by action. Platform Capability Layer is a founding pilot.',
   alternates: { canonical: `${ORIGIN}/pricing` },
 };
 
 const PAGE_URL = `${ORIGIN}/pricing`;
 
-// Single @graph for /pricing, connected into the site-wide entity graph
-// (#website, #business, #logo defined in app/layout.tsx) via canonical @ids
-// from lib/schema.ts — no hardcoded identity strings.
 const pricingSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -25,7 +23,7 @@ const pricingSchema = {
       url: PAGE_URL,
       name: 'Pricing — KodeCite.ai',
       description:
-        'The Foundation Build — one-time $4,995. A rebuilt, AI-readable website with 60 days of citation tracking, owned forever, no retainer.',
+        'Foundation Build — one-time $4,995 for an owned website, truth, and discovery foundation. Custom actions are scoped separately. No citation money-back guarantee.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -37,10 +35,10 @@ const pricingSchema = {
       '@type': 'Service',
       '@id': `${PAGE_URL}#foundation-build`,
       name: 'Foundation Build',
-      serviceType: 'AI Visibility Infrastructure',
+      serviceType: 'Owned business infrastructure',
       provider: businessRef,
       description:
-        'A one-time rebuild of your website into an AI-readable foundation AI engines can read, verify, and cite — with 60 days of citation tracking, transferred to you on handoff. No retainer. Cited by name in 60 days or your money back.',
+        'A one-time owned website, truth, and discovery foundation. Does not automatically include a custom protected action endpoint. Transferred to you on handoff. No required retainer.',
       areaServed: { '@type': 'Country', name: 'United States' },
       offers: {
         '@type': 'Offer',
@@ -49,7 +47,7 @@ const pricingSchema = {
         priceCurrency: 'USD',
         url: PAGE_URL,
         availability: 'https://schema.org/InStock',
-        description: 'One-time Foundation Build. Shipped in 15–20 business days. You own everything.',
+        description: 'One-time Foundation Build. You own the repo, site, and deployed infrastructure.',
       },
     },
     {
@@ -64,33 +62,21 @@ const pricingSchema = {
 };
 
 const whatYouGet = [
-  { t: 'A fast, AI-readable website.', d: 'Rebuilt around a clean technical foundation so search engines and AI systems can consistently crawl, understand, and connect your business information without the plugin conflicts, schema drift, and structural ambiguity common in traditional site stacks.' },
-  { t: 'Pages for every service and every area you serve.', d: 'So when someone asks about a specific service in a specific town, there’s a clear page for the AI to pull.' },
-  { t: 'Answer-first content.', d: 'Every page answers the exact questions your customers ask, written so an AI can lift the answer word-for-word and credit you.' },
-  { t: 'The trust layer.', d: 'We make your business identity match everywhere it needs to — Google, Bing, Apple, the major directories — so AI engines verify you’re real and trust what they find.' },
-  { t: 'The technical foundation that helps AI understand and verify you.', d: 'Canonical entities, structured relationships, stable schema IDs, clean metadata, internal linking, corroborating sources, and machine-readable signals — all built into one controlled system.' },
-  { t: '60 days of AI visibility tracking.', d: 'We watch the exact questions your customers ask, across every major engine, and show you the citations landing.' },
-];
-
-const paybackRows = [
-  { biz: 'High-end custom van builder (one build)', worth: '$150,000–$250,000+', pay: 'a rounding error on one build' },
-  { biz: 'Realtor (one commission)', worth: '~$10,000+', pay: 'half a deal' },
-  { biz: 'Custom home builder (one project)', worth: '$50,000+', pay: 'a fraction of one job' },
-  { biz: 'High-end home services (remodel, HVAC, window treatments)', worth: '$5,000–$60,000', pay: 'one job, often several times over' },
-  { biz: 'Cosmetic / implant dentistry (one case)', worth: '$5,000–$30,000', pay: 'one patient' },
-  { biz: 'Med spa / aesthetics (one client)', worth: '$3,000–$5,000+', pay: 'one client' },
+  { t: 'An owned website foundation.', d: 'A Next.js site where that is the right stack, on GitHub and Vercel accounts you control. Fast, server-rendered pages for people and machines.' },
+  { t: 'Canonical business truth.', d: 'Identity, people, services, products, locations or areas, credentials, proof, policies, and limitations — one authoritative record instead of scattered pieces.' },
+  { t: 'A connected entity graph.', d: 'Stable identifiers, structured relationships, clean metadata, and corroborating sources so search engines and AI systems can check the same facts.' },
+  { t: 'Machine discovery.', d: 'llms.txt, agent.json, and related discovery files where they help. These are publication formats. They do not make every AI system read your business with certainty.' },
+  { t: 'A capability map.', d: 'What can be requested, what information is required, where you work, and what success does not mean. This is the map — not an automatic live action endpoint.' },
+  { t: 'Handoff you can operate.', d: 'You own the repo and the deploy. No mandatory retainer. If you later want a protected action, that is a separate Agent Capability Build.' },
 ];
 
 const addOns = [
-  { t: 'Extra service or area pages', price: '$250 each (or 5 for $1,000)', d: 'Cover more towns and more services.' },
-  { t: 'Citation-ready articles', price: '$350 each (or 3 for $900)', d: 'The kind of in-depth answer content AI loves to quote.' },
-  { t: 'Review Language System', price: '$500', d: 'Set up so AI can quote your reviews for “best” and “safest”-type questions.' },
-  { t: 'Rush delivery', price: '+$1,500', d: 'Shipped in 10 business days instead of 15–20.' },
-  { t: 'Additional location or second vertical', price: '$2,500', d: 'A second full location/service set.' },
-  { t: 'Optional AI Visibility Tracking', price: '$200/month · cancel anytime', d: 'Keep watching your citations after day 60. Not required, no contract — pure optional.' },
+  { t: 'Extra service or area pages', price: '$250 each (or 5 for $1,000)', d: 'Cover more towns and more services on the owned foundation.' },
+  { t: 'Decision-support articles', price: '$350 each (or 3 for $900)', d: 'Owned pages that answer the questions buyers actually ask — written for people first, structured for machines second.' },
+  { t: 'Rush delivery', price: '+$1,500', d: 'Faster ship when the foundation is otherwise in scope.' },
+  { t: 'Additional location or second vertical', price: '$2,500', d: 'A second full location or service set on the same owned system.' },
 ];
 
-// shared text colors on glass
 const FG = 'var(--d-fg)';
 const DIM = 'rgba(233, 238, 255, 0.95)';
 const MUTE = 'rgba(219, 227, 255, 0.8)';
@@ -102,50 +88,47 @@ export default function PricingPage() {
     <SecondaryPageShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
 
-      {/* ── Hero ─────────────────────────────────────────── */}
       <section className="secondary-section secondary-hero">
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">PRICING</div>
-          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 4.8vw, 62px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: FG, maxWidth: '15ch' }}>
-            One build. One price. <em className="serif" style={{ color: ACCENT }}>One guarantee.</em>
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 4.8vw, 62px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
+            Price the foundation. <em className="serif" style={{ color: ACCENT }}>Scope the action.</em>
           </h1>
           <p className="font-inter mb-9" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
-            Everything it takes to make AI cite your business by name — built once, owned forever, no
-            retainer. Priced so a single new customer more than covers it.
+            The Foundation Build is a one-time $4,995 owned website, truth, and discovery system.
+            A production action is a different engagement. We do not promise a specific AI engine will cite you.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
-            <Link href="/machine-read" className="d-btn d-btn-primary justify-center">Run My Free Machine Read →</Link>
+            <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>
             <Link href="/services" className="d-btn d-btn-ghost justify-center">See how it works →</Link>
           </div>
-          {/* Proof strip — one line, links to the full ProofWall on Services */}
           <div className="glass-panel-soft flex flex-col sm:flex-row sm:items-center gap-x-3 gap-y-2" style={{ padding: '16px 22px' }}>
             <span className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.06em', color: MUTE }}>
-              Cited across ChatGPT · Perplexity · Google AI · Bing Copilot · Gemini.
+              Discovery evidence on Luxe, Shirin, and others is visibility — one outcome of clearer infrastructure.
             </span>
             <Link href="/services#proof" className="font-inter font-semibold" style={{ fontSize: '13px', color: ACCENT, whiteSpace: 'nowrap' }}>
-              See the proof →
+              See discovery proof →
             </Link>
           </div>
         </GlassPanel>
       </section>
 
-      {/* ── The Offer ────────────────────────────────────── */}
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">THE OFFER</div>
+          <div className="d-eyebrow mb-6">THE FOUNDATION</div>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
             <h2 className="font-inter font-semibold" style={{ fontSize: 'clamp(30px, 4vw, 48px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: FG }}>
-              The Foundation Build
+              Foundation Build
             </h2>
             <span className="font-inter font-semibold" style={{ fontSize: 'clamp(30px, 4vw, 48px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: ACCENT }}>$4,995</span>
           </div>
           <p className="font-mono mb-8" style={{ fontSize: '12px', letterSpacing: '0.1em', color: MUTE }}>
-            ONE-TIME · SHIPPED IN 15–20 BUSINESS DAYS · YOU OWN EVERYTHING
+            ONE-TIME · YOU OWN THE REPO, SITE, AND DEPLOY · NO REQUIRED RETAINER
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            We rebuild your site into one an AI can actually read, trust, and quote — then we track it for
-            60 days to prove it&apos;s working. Not a prettier website. The machine-readable foundation that
-            makes AI cite you by name.
+            The owned website / truth / discovery foundation. It does not include a custom protected action endpoint
+            for every client. If the business later needs a defined action — a consultation request, a qualified inquiry,
+            a controlled handoff — that is scoped as an Agent Capability Build.
           </p>
 
           <p className="font-mono mb-5" style={{ fontSize: '10px', letterSpacing: '0.18em', color: ACCENT }}>WHAT YOU GET</p>
@@ -164,18 +147,45 @@ export default function PricingPage() {
           </div>
 
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            <strong style={{ color: FG, fontWeight: 600 }}>When it&apos;s done, it&apos;s yours</strong> — the website, the
-            code, the domain, everything, transferred to you with the keys. <strong style={{ color: FG, fontWeight: 600 }}>No
-            monthly retainer. No lock-in. You own it forever.</strong>
-          </p>
-
-          <p className="font-inter mt-6" style={{ fontSize: '13.5px', lineHeight: 1.6, color: MUTE, fontWeight: 300, fontStyle: 'italic', maxWidth: '700px' }}>
-            Built for discovery today. Designed for the agent-driven web that comes next.
+            <strong style={{ color: FG, fontWeight: 600 }}>When it is done, it is yours</strong> — repository, site, and deployed infrastructure.
+            Active capabilities may use third-party services with direct costs. APIs, credentials, and security may need maintenance.
           </p>
         </GlassPanel>
       </section>
 
-      {/* ── The Guarantee (standout) ─────────────────────── */}
+      <section className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <div className="d-eyebrow mb-6">AGENT CAPABILITY BUILD</div>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
+            One defined action at a time. <em className="serif" style={{ color: ACCENT }}>No published price.</em>
+          </h2>
+          <div className="flex flex-col gap-5" style={{ maxWidth: '720px' }}>
+            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+              A consultation request is not a booking. A price inquiry is not a checkout. A commercial project is not a one-click accept.
+              Different actions carry different rules, different risk, and different control requirements.
+            </p>
+            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+              We only scope this after the business rules are understood: required information, geography, validation, authorization,
+              rate limiting, idempotency, human follow-up, and what success does not mean. Production acceptance testing is part of the work.
+            </p>
+          </div>
+        </GlassPanel>
+      </section>
+
+      <section className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <div className="d-eyebrow mb-6">PLATFORM CAPABILITY LAYER · PILOT</div>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
+            Application-only. <em className="serif" style={{ color: ACCENT }}>No invented price.</em>
+          </h2>
+          <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
+            For selected businesses remaining on WordPress, Wix, Squarespace, or similar platforms: a Kodecite-owned Next.js / Vercel sidecar
+            on a business-controlled domain or subdomain. Truth and capability publication, and protected actions where appropriate.
+            This is a founding pilot — not a universally proven product. A full rebuild is still the strongest path.
+          </p>
+        </GlassPanel>
+      </section>
+
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel
           style={{
@@ -186,132 +196,26 @@ export default function PricingPage() {
         >
           <div className="inline-flex items-center gap-2 mb-6" style={{ padding: '6px 14px', borderRadius: '999px', border: '1px solid rgba(93,213,255,0.4)', background: 'rgba(93,213,255,0.08)' }}>
             <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: ACCENT, boxShadow: '0 0 8px rgba(93,213,255,0.8)' }} />
-            <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.2em', color: ACCENT }}>THE 60-DAY GUARANTEE</span>
+            <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.2em', color: ACCENT }}>PRODUCTION ACCEPTANCE</span>
           </div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.8vw, 46px)', lineHeight: 1.08, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
-            Cited by name in 60 days, <em className="serif" style={{ color: ACCENT }}>or your money back.</em>
+            The work is not done until the <em className="serif" style={{ color: ACCENT }}>agreed outputs pass.</em>
           </h2>
-          <p className="font-inter mb-6" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            We keep this precise on purpose — a guarantee is only worth something if it&apos;s honest.
-          </p>
           <p className="font-inter mb-5" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            <strong style={{ color: FG, fontWeight: 600 }}>What we guarantee:</strong> your business named by AI in its
-            answer to the specific questions we agree to target, across the engines we agree to measure,
-            within 60 days. If it isn&apos;t, we refund the full $4,995 — and <strong style={{ color: FG, fontWeight: 600 }}>you
-            keep the entire website anyway.</strong>
-          </p>
-
-          <p className="font-inter mb-3" style={{ fontSize: '15px', lineHeight: 1.6, color: MUTE, fontWeight: 300 }}>We agree, in writing, before we start:</p>
-          <ul className="flex flex-col gap-2.5 mb-8" style={{ maxWidth: '680px' }}>
-            {[
-              <>the exact <strong style={{ color: FG, fontWeight: 600 }}>questions</strong> we&apos;re targeting,</>,
-              <>the exact <strong style={{ color: FG, fontWeight: 600 }}>engines</strong> we&apos;re measuring (from ChatGPT, Perplexity, Gemini, Google AI, Bing Copilot),</>,
-              <>and what counts: your business <strong style={{ color: FG, fontWeight: 600 }}>named in the AI&apos;s answer</strong> — not buried in a source footnote.</>,
-            ].map((node, i) => (
-              <li key={i} className="flex items-start gap-3 font-inter" style={{ fontSize: '15px', lineHeight: 1.55, color: DIM, fontWeight: 300 }}>
-                <span style={{ color: ACCENT, flexShrink: 0, marginTop: '1px' }}>✓</span>
-                <span>{node}</span>
-              </li>
-            ))}
-          </ul>
-
-          {/* Kept intentionally — the honest boundary */}
-          <div className="glass-panel-soft mb-8" style={{ padding: '26px 30px', borderLeft: '2px solid rgba(255,255,255,0.18)' }}>
-            <p className="font-inter mb-0" style={{ fontSize: '15px', lineHeight: 1.65, color: MUTE, fontWeight: 300 }}>
-              <strong style={{ color: DIM, fontWeight: 600 }}>What we don&apos;t pretend to guarantee:</strong> that you&apos;ll be
-              the #1 pick every single time. AI answers move around run to run — some days you&apos;re first, some
-              days you&apos;re third. Anyone promising you a permanent top spot in 60 days is selling you something
-              they can&apos;t deliver. Being <em>the</em> recommendation is earned over time as your reviews and
-              reputation grow. Getting <em>cited</em> — getting into the answer at all — is what we lock down now.
-            </p>
-          </div>
-
-          <p className="font-inter mb-5" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            <strong style={{ color: FG, fontWeight: 600 }}>New business or established, we scope it to what&apos;s
-            winnable.</strong> A newer site wins on the <em>research questions</em> your buyers ask along the way —
-            where great, well-structured content beats age and reviews. An established business with reviews can
-            also win the competitive &ldquo;best of&rdquo; questions. During your free Machine Read, we tell you exactly
-            which questions we can win for you — and if we can&apos;t win enough to make it worth your money, we say
-            so before you spend a dime.
+            Before a build starts, we agree in writing what the system must publish, what AI must be able to understand,
+            and — when an action is included — what the protected workflow must successfully do. The engagement is not complete until those tests pass.
           </p>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            You get the raw results on day 60. If we missed, you&apos;re refunded within 7 business days and you keep
-            everything. No strings.
+            This is an acceptance standard, not a money-back guarantee and not a promise that a specific AI engine will cite the business.
           </p>
         </GlassPanel>
       </section>
 
-      {/* ── Why this beats being #3 ──────────────────────── */}
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">WHY THIS BEATS BEING #3 ON A &ldquo;BEST OF&rdquo; LIST</div>
-          <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '22ch' }}>
-            For big decisions, the trusted source wins — <em className="serif" style={{ color: ACCENT }}>not one of five names.</em>
-          </h2>
-          <div className="flex flex-col gap-5" style={{ maxWidth: '720px' }}>
-            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              When someone makes an expensive, careful decision — a home, a custom van build, a major remodel,
-              dental work, a high-end install — they don&apos;t pick from a list in thirty seconds. They research for
-              weeks, asking AI a dozen questions along the way: how to choose, what to watch for, what&apos;s right for
-              their situation.
-            </p>
-            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              The business that gets <strong style={{ color: FG, fontWeight: 600 }}>cited as the authority</strong> on those
-              questions becomes the one they trust before they ever pick up the phone. By the time they&apos;re ready to
-              buy, you&apos;re not a stranger on a list — you&apos;re the expert they&apos;ve been reading the whole time. For a
-              slow, high-trust purchase, that&apos;s worth far more than being name #3 on &ldquo;best [category] in town.&rdquo;
-            </p>
-            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              That&apos;s exactly what we build: your business as the cited, trusted answer to the questions your
-              customers are actually asking <em>while they decide.</em> The &ldquo;best of&rdquo; spot comes later, on its own,
-              as your reputation compounds.
-            </p>
-          </div>
-        </GlassPanel>
-      </section>
-
-      {/* ── Why it's worth it (payback table) ────────────── */}
-      <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">WHY IT&apos;S WORTH IT · THE REAL MATH</div>
-          <p className="font-inter mb-8" style={{ fontSize: '17px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
-            $4,995 sounds like a lot until you count it against a single customer.
-          </p>
-
-          <div style={{ overflowX: 'auto' }}>
-            <table className="w-full" style={{ borderCollapse: 'collapse', minWidth: '640px' }}>
-              <thead>
-                <tr>
-                  {['Your business', 'One customer is worth', 'The build pays for itself in'].map((h) => (
-                    <th key={h} className="font-mono text-left" style={{ fontSize: '10px', letterSpacing: '0.14em', color: MUTE, fontWeight: 400, padding: '0 18px 14px', borderBottom: '1px solid rgba(255,255,255,0.14)', textTransform: 'uppercase' }}>{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {paybackRows.map((r, i) => (
-                  <tr key={r.biz} style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-                    <td className="font-inter" style={{ fontSize: '14.5px', lineHeight: 1.45, color: i === 0 ? FG : DIM, fontWeight: i === 0 ? 600 : 300, padding: '16px 18px', borderLeft: i === 0 ? '2px solid rgba(93,213,255,0.55)' : '2px solid transparent' }}>{r.biz}</td>
-                    <td className="font-inter" style={{ fontSize: '14.5px', lineHeight: 1.45, color: DIM, fontWeight: 400, padding: '16px 18px', whiteSpace: 'nowrap' }}>{r.worth}</td>
-                    <td className="font-inter font-semibold" style={{ fontSize: '14.5px', lineHeight: 1.45, color: ACCENT, padding: '16px 18px' }}>{r.pay}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <p className="font-inter mt-8" style={{ fontSize: '15px', lineHeight: 1.65, color: MUTE, fontWeight: 300, fontStyle: 'italic', maxWidth: '700px' }}>
-            For many high-value businesses, one additional customer can cover the entire build. Everything after that
-            compounds on an asset you own — with no monthly fee ever.
-          </p>
-        </GlassPanel>
-      </section>
-
-      {/* ── Add-ons ──────────────────────────────────────── */}
-      <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-4">ADD-ONS</div>
+          <div className="d-eyebrow mb-4">FOUNDATION ADD-ONS</div>
           <p className="font-inter mb-10" style={{ fontSize: '15px', lineHeight: 1.6, color: MUTE, fontWeight: 300, fontStyle: 'italic', maxWidth: '620px' }}>
-            Optional. All one-time — no subscriptions, no lock-in. Add what fits your business.
+            Optional. One-time. These extend the owned foundation. They are not citation-tracking retainers.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {addOns.map((a) => (
@@ -327,39 +231,21 @@ export default function PricingPage() {
         </GlassPanel>
       </section>
 
-      {/* ── For bigger jobs ──────────────────────────────── */}
-      <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(28px, 4vw, 44px)' }}>
-          <div className="d-eyebrow mb-4">FOR BIGGER JOBS</div>
-          <h2 className="font-inter font-semibold mb-3" style={{ fontSize: 'clamp(20px, 2.6vw, 28px)', letterSpacing: '-0.02em', color: FG }}>
-            Custom builds — <em className="serif" style={{ color: ACCENT }}>by application.</em>
-          </h2>
-          <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-            Multi-location businesses, complex sites, or fully bespoke design work go beyond the fixed Foundation
-            Build. Those are scoped and quoted individually. Start with a Machine Read and we&apos;ll tell you honestly
-            whether you need the $4,995 build or a custom engagement.
-          </p>
-        </GlassPanel>
-      </section>
-
-      {/* ── How to start (final CTA) ─────────────────────── */}
       <section className="secondary-section" style={{ ...sectionGap, paddingBottom: '120px' }}>
         <GlassPanel style={{ padding: 'clamp(40px, 6vw, 72px)', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">HOW TO START</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
-            It always starts with a <em className="serif" style={{ color: ACCENT }}>free Machine Read.</em>
+            Start with an <em className="serif" style={{ color: ACCENT }}>Agent Readiness Review.</em>
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
-            We run real customer questions about your business across every major AI engine and show you exactly
-            where you stand — who&apos;s getting named, who isn&apos;t, and what it&apos;s costing you. Free. 48 hours. No
-            pitch. You keep the report either way — even if the answer is &ldquo;you don&apos;t need us.&rdquo;
+            See what AI can understand, verify, and safely do with your business today. Free. 24–48 hours. You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
-            <Link href="/machine-read" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
+            <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
             <Link href="/services" className="d-btn d-btn-ghost">See how it works →</Link>
           </div>
           <p className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.14em', color: MUTE }}>
-            BUILT ONCE · OWNED FOREVER · FOUND BY AI
+            OWNED BY YOU · CONTROLLED BY YOU · READY FOR THE AGENT-DRIVEN WEB
           </p>
         </GlassPanel>
       </section>

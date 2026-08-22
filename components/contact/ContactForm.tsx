@@ -97,7 +97,7 @@ export default function ContactForm() {
           className="font-mono mb-3"
           style={{ fontSize: '10px', letterSpacing: '0.2em', color: 'var(--d-accent)' }}
         >
-          READ.v1 · QUEUED
+          REVIEW · QUEUED
         </p>
 
         <h2
@@ -108,7 +108,7 @@ export default function ContactForm() {
             color: 'var(--d-fg)',
           }}
         >
-          Your read is in the queue.
+          Your review is in the queue.
         </h2>
 
         <p
@@ -122,11 +122,11 @@ export default function ContactForm() {
             margin: '0 auto 40px',
           }}
         >
-          We&apos;ve received your request to read{' '}
+          We&apos;ve received your Agent Readiness Review for{' '}
           <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>{submitted.website}</strong>.
           You&apos;ll hear back at the email tied to{' '}
           <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>{submitted.businessName}</strong>{' '}
-          within 24–48 hours with a plain-language report.
+          within 24–48 hours with a written report.
         </p>
 
         <div
@@ -146,8 +146,8 @@ export default function ContactForm() {
           </p>
           <ol className="flex flex-col gap-4">
             {[
-              'We personally read your site against the four-layer scaffold.',
-              'You receive a written report — what’s there, what isn’t, what it means.',
+              'We review identity, services, geography, policies, discovery, and action paths.',
+              'You receive a written report — what AI can understand, verify, and safely do today.',
               'If we’re a fit, we talk. If not, the report is yours to keep.',
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4">
@@ -200,7 +200,7 @@ export default function ContactForm() {
           className="font-mono"
           style={{ fontSize: '10px', letterSpacing: '0.18em', color: 'var(--d-fg-dim)' }}
         >
-          READ.v1 / NEW REQUEST
+          REVIEW / NEW REQUEST
         </span>
         <div className="flex items-center gap-2">
           <span
@@ -292,13 +292,13 @@ export default function ContactForm() {
           className="font-mono block mb-1"
           style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
         >
-          What made you look us up?
+          What should a customer — or their AI agent — be able to accomplish?
         </span>
         <span
           className="font-inter block mb-2"
           style={{ fontSize: '12px', color: 'var(--d-fg-dim)', fontWeight: 300 }}
         >
-          A few sentences. The more specific, the more useful the read.
+          A few sentences. The more specific, the more useful the review.
         </span>
         <textarea
           className="d-input"
@@ -306,7 +306,7 @@ export default function ContactForm() {
           value={form.challenge}
           onChange={handleChange}
           rows={6}
-          placeholder="We rank okay on Google but I keep hearing about AI search — when people ask ChatGPT for a dentist in our area, we never come up. Is that fixable?"
+          placeholder="A homeowner or their AI agent should be able to tell what we install, whether we serve their city, and request an in-home consultation — without booking or pricing the job."
         />
       </label>
 
@@ -335,7 +335,7 @@ export default function ContactForm() {
           className="font-mono"
           style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'var(--d-fg-mute)' }}
         >
-          NO SALES PITCH · 24–48H · YOUR REPORT IS YOURS
+          NO SALES PITCH · 24–48H · YOUR REVIEW IS YOURS
         </span>
         <button
           type="submit"
@@ -362,7 +362,7 @@ export default function ContactForm() {
               Sending...
             </>
           ) : (
-            <>Run my site →</>
+            <>Request the review →</>
           )}
         </button>
       </div>
@@ -381,7 +381,7 @@ export default function ContactForm() {
           pointerEvents: 'none',
         }}
       >
-        READ.v1
+        REVIEW
       </span>
     </form>
   );

@@ -7,7 +7,7 @@ import GlassPanel from '@/components/GlassPanel';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact KodeCite for project inquiries, scope questions, partnerships, or direct conversations about AI-readable website infrastructure.',
+    'Contact Kodecite for project inquiries, scope questions, or a direct conversation about owned business infrastructure for the agent-driven web.',
   alternates: { canonical: 'https://www.kodecite.ai/contact' },
 };
 
@@ -17,7 +17,7 @@ const contactPageSchema = {
   name: 'Contact — KodeCite.ai',
   url: 'https://www.kodecite.ai/contact',
   description:
-    'Contact KodeCite for project inquiries, scope questions, partnerships, or direct conversations about AI-readable website infrastructure. For the free diagnostic, start with a Machine Read.',
+    'Contact Kodecite for project inquiries, scope questions, or a direct conversation. For the written diagnostic, start with an Agent Readiness Review.',
   publisher: { '@id': 'https://www.kodecite.ai/#business' },
 };
 
@@ -50,6 +50,7 @@ export default function ContactPage() {
             Get in <em className="serif" style={{ color: ACCENT }}>touch.</em>
           </h1>
           <p className="font-inter" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
+            This is the direct-contact page — not a second Agent Readiness Review.
             Questions about a project, timeline, or working together? Send a few
             details below and we&apos;ll get back to you — usually within one business day.
           </p>
@@ -74,9 +75,9 @@ export default function ContactPage() {
             </a>
 
             <Link href="/machine-read" className="glass-panel-soft secondary-jump" style={{ display: 'block', padding: '32px 36px', textDecoration: 'none' }}>
-              <p className="font-mono mb-3" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>FREE MACHINE READ</p>
-              <p className="font-inter font-semibold mb-2" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT }}>Want the free diagnostic first? →</p>
-              <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>See what AI systems understand about your current site.</p>
+              <p className="font-mono mb-3" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>AGENT READINESS REVIEW</p>
+              <p className="font-inter font-semibold mb-2" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT }}>Want the written review first? →</p>
+              <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>See what AI can understand, verify, and safely do with your business today.</p>
             </Link>
           </div>
         </GlassPanel>

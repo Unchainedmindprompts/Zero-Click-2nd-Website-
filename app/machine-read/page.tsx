@@ -4,19 +4,19 @@ import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 
 export const metadata: Metadata = {
-  title: 'Machine Read',
+  title: 'Agent Readiness Review',
   description:
-    'Run a free Machine Read on your site. We check schema, entity coherence, crawler accessibility, and AI visibility — then show you exactly what to fix.',
+    'See what AI can understand, verify and safely do with your business today. Free written review in 24–48 hours.',
   alternates: { canonical: 'https://www.kodecite.ai/machine-read' },
 };
 
 const machineReadPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Machine Read — KodeCite.ai',
+  name: 'Agent Readiness Review — KodeCite.ai',
   url: 'https://www.kodecite.ai/machine-read',
   description:
-    'A free Machine Read shows what AI systems can and can\'t understand, verify, and trust about your website — schema, entity coherence, crawler accessibility, and AI visibility — with a plain-language report in 24–48 hours.',
+    'A free Agent Readiness Review shows what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps — with a written report in 24–48 hours.',
   publisher: { '@id': 'https://www.kodecite.ai/#business' },
 };
 
@@ -25,14 +25,19 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
-    { '@type': 'ListItem', position: 2, name: 'Machine Read', item: 'https://www.kodecite.ai/machine-read' },
+    { '@type': 'ListItem', position: 2, name: 'Agent Readiness Review', item: 'https://www.kodecite.ai/machine-read' },
   ],
 };
 
-const heroStats = [
-  { num: '9/10', label: 'sites we read have foundation issues' },
-  { num: '24–48H', label: 'turnaround · no automation, real read' },
-  { num: '$0', label: "if we're not a fit, you still get the report" },
+const reviewCovers = [
+  { t: 'Identity', d: 'Who the business is, who runs it, and whether those facts agree across the site and the public record.' },
+  { t: 'Services and products', d: 'What is actually offered — and what is implied but never stated.' },
+  { t: 'Geography', d: 'Where the business works, where it does not, and whether that is machine-readable.' },
+  { t: 'Credentials and policies', d: 'Licenses, limitations, and the rules a safe recommendation has to respect.' },
+  { t: 'Machine discovery', d: 'What a crawler or agent can find today: site structure, structured data, discovery files. No claim that every system reads them.' },
+  { t: 'Action paths', d: 'What a customer — or their AI agent — can accomplish, and what still requires a human.' },
+  { t: 'Useful outcome', d: 'Whether a completed request is defined honestly, or whether the site over-promises booking, price, or acceptance.' },
+  { t: 'Control gaps', d: 'Human confirmation, validation, abuse, duplicates, platform constraints, and security.' },
 ];
 
 const FG = 'var(--d-fg)';
@@ -47,39 +52,39 @@ export default function MachineReadPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(machineReadPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* ── Hero ─────────────────────────────────────────── */}
       <section className="secondary-section secondary-hero">
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">THE MACHINE READ · FREE · 24–48H</div>
-          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(44px, 6vw, 80px)', lineHeight: 1.0, letterSpacing: '-0.03em', color: FG }}>
-            See your site<br />
-            the way <em className="serif" style={{ color: ACCENT }}>a machine</em> sees it.
+          <div className="d-eyebrow mb-6">AGENT READINESS REVIEW · FREE · 24–48H</div>
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 5.4vw, 68px)', lineHeight: 1.02, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
+            See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do</em> today.
           </h1>
-          <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
-            We run a structured read against your live site — schema, entity coherence,
-            crawler accessibility, AI visibility — and send back a plain-language report.
-            No sales pitch. No methodology lecture. Just what&apos;s there and what isn&apos;t.
+          <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px' }}>
+            A written review of your current system — not a citation score, not a ranking promise,
+            and not a claim that Kodecite already accepts autonomous agent submissions on this site.
           </p>
+        </GlassPanel>
+      </section>
 
-          <div className="flex flex-col sm:flex-row gap-3" style={{ maxWidth: '660px' }}>
-            {heroStats.map((s) => (
-              <div key={s.num} className="glass-panel-soft flex-1" style={{ padding: '20px 24px' }}>
-                <p className="font-inter font-semibold mb-1" style={{ fontSize: 'clamp(20px, 3vw, 28px)', lineHeight: 1, letterSpacing: '-0.02em', color: ACCENT }}>{s.num}</p>
-                <p className="font-inter" style={{ fontSize: '12px', lineHeight: 1.5, color: MUTE, fontWeight: 300 }}>{s.label}</p>
+      <section className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <div className="d-eyebrow mb-6">WHAT THE REVIEW COVERS</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {reviewCovers.map((item) => (
+              <div key={item.t} className="glass-panel-soft" style={{ padding: '22px 26px' }}>
+                <p className="font-inter font-semibold mb-2" style={{ fontSize: '15px', color: FG }}>{item.t}</p>
+                <p className="font-inter" style={{ fontSize: '13.5px', lineHeight: 1.6, color: MUTE, fontWeight: 300 }}>{item.d}</p>
               </div>
             ))}
           </div>
         </GlassPanel>
       </section>
 
-      {/* ── Machine Read Form ────────────────────────────── */}
       <section id="machine-read" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(32px, 4.5vw, 56px)', maxWidth: '760px', margin: '0 auto' }}>
           <ContactForm />
         </GlassPanel>
       </section>
 
-      {/* ── Direct line ──────────────────────────────────── */}
       <section className="secondary-section" style={{ ...sectionGap, paddingBottom: '120px' }}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -89,17 +94,18 @@ export default function MachineReadPage() {
                 Already know <em className="serif" style={{ color: ACCENT }}>what you need?</em>
               </h2>
               <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '440px' }}>
-                Skip the Machine Read. Send the site, timeline, and scope. We&apos;ll
-                respond with the clearest next step.
+                Skip the review. Use the contact page. Send the site, the timeline, and the scope.
               </p>
             </div>
 
             <div>
-              <a href="mailto:mark@kodecite.ai" className="glass-panel-soft secondary-jump" style={{ display: 'block', padding: '36px 40px', textDecoration: 'none' }}>
-                <p className="font-mono mb-4" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>EMAIL · DIRECT</p>
-                <p className="font-inter font-semibold mb-4" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT, wordBreak: 'break-all' }}>mark@kodecite.ai</p>
+              <a href="/contact" className="glass-panel-soft secondary-jump" style={{ display: 'block', padding: '36px 40px', textDecoration: 'none' }}>
+                <p className="font-mono mb-4" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>CONTACT · DIRECT</p>
+                <p className="font-inter font-semibold mb-4" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT }}>
+                  Go to the contact page →
+                </p>
                 <div className="flex flex-col gap-1 mb-5" style={{ borderTop: '1px solid rgba(255,255,255,0.10)', paddingTop: '16px' }}>
-                  <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>No sales handoff. A senior review, written in plain English.</p>
+                  <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>No sales handoff. A senior reply, written in plain English.</p>
                 </div>
                 <span style={{ color: ACCENT, fontSize: '18px' }}>→</span>
               </a>
