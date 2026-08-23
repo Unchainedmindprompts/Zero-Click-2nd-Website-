@@ -260,7 +260,7 @@ export default function FAQPage() {
               Request an Agent Readiness Review →
             </Link>
             <Link href="/services" className="d-btn d-btn-ghost">
-              See the five layers
+              See what Kodecite builds
             </Link>
           </div>
         </div>
