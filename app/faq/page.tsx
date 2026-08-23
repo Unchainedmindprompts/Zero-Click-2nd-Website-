@@ -30,7 +30,7 @@ const faqs: { q: string; a: string | string[] }[] = [
   {
     q: 'Is this SEO or ranking in ChatGPT?',
     a: [
-      'Clearer information can support discovery in Google, Bing, ChatGPT, and similar systems. Visibility is not the complete product, and it is not a promise of rankings, citations, or traffic.',
+      'Clearer information can support discovery in Google, Bing, ChatGPT, and similar systems. Visibility is not the complete product, and it is not a promise of rankings, citations, traffic, or recommendations.',
       'Discovery helps AI find the business. Kodecite helps AI understand, evaluate, and safely use the business.',
     ],
   },
