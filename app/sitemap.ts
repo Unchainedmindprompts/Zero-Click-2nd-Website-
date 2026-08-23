@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/machine-read`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/contact`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/about`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/faq`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/faq`, lastModified: new Date('2026-08-23').toISOString(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/case-studies`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/why-now`, lastModified: new Date('2026-08-22').toISOString(), changeFrequency: 'monthly', priority: 0.6 },
 
