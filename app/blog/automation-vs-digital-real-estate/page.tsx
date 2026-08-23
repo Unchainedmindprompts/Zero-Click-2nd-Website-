@@ -137,7 +137,7 @@ const faqPageSchema = {
       name: 'What is an Agent Readiness Review?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps. Free in 24–48 hours when operationally available. It is a review request, not a booking.",
+        text: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps. Free within two business days. It is a review request, not a booking.",
       },
     },
   ],
@@ -223,7 +223,7 @@ const faqItems = [
   },
   {
     q: 'What is an Agent Readiness Review?',
-    a: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps. Free in 24–48 hours when operationally available. It is a review request, not a booking.",
+    a: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps. Free within two business days. It is a review request, not a booking.",
   },
 ];
 

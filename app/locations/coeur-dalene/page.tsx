@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Coeur d'Alene Business Infrastructure for the Agent-Driven Web",
     description:
-      "Make your Coeur d'Alene business usable by AI. Owned truth, capability, and control — not an AEO retainer.",
+      "Make your Coeur d'Alene business usable by AI. Owned truth, capability, and control — so agents can take authorized next steps.",
     url: PAGE_URL,
     type: 'website',
     images: [{ url: `${ORIGIN}/og-image.png`, width: 1200, height: 630 }],
@@ -117,9 +117,7 @@ export default function CoeurDAleneLocationPage() {
             Owned infrastructure that lets AI understand what you offer, verify what is true, recommend you accurately, and take the next safe step.
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '660px' }}>
-            KodeCite is based in Coeur d&apos;Alene. The offer is not a local AEO agency and not a citation guarantee.
-            We build the trusted digital business layer — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. The website remains the human-facing experience.
-            The category is early and fragmented. Discovery can follow. Action is scoped only when the real business permits it.
+            KodeCite is based in Coeur d&apos;Alene. We build the trusted digital business layer — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. The website remains the human-facing experience. Action is scoped only when the real business permits it.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">{REVIEW_CTA} →</Link>

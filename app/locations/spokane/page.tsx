@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Spokane Business Infrastructure for the Agent-Driven Web',
     description:
-      'Make your Spokane business usable by AI. Owned infrastructure — not an AEO retainer or citation guarantee.',
+      'Make your Spokane business usable by AI. Owned infrastructure that helps AI understand, evaluate, and take authorized next steps.',
     url: PAGE_URL,
     type: 'website',
     images: [{ url: `${ORIGIN}/og-image.png`, width: 1200, height: 630 }],
@@ -115,7 +115,7 @@ export default function SpokaneLocationPage() {
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '660px' }}>
             KodeCite is based in North Idaho and works with Spokane, Spokane Valley, and Liberty Lake operators.
-            The offer is the trusted digital business layer for service businesses, not an AEO retainer and not a citation guarantee. The website remains the human-facing experience. The category is early and fragmented. Action is scoped only when the real business permits it.
+            The offer is the trusted digital business layer for service businesses. The website remains the human-facing experience. Action is scoped only when the real business permits it.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">{REVIEW_CTA} →</Link>

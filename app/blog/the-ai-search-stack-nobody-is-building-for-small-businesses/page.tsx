@@ -226,7 +226,7 @@ export default function AISearchStackNobodyIsBuilding() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Both tiers claim to solve the AI discoverability problem. Neither one actually does — for fundamentally different reasons. The connective work that sits in between is still underserved. That is not a claim that the category is empty or that Kodecite is the only practice in it.
+                  Both tiers claim to solve the AI discoverability problem. Neither one actually does — for fundamentally different reasons. The connective work that sits in between is still underserved.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
@@ -531,7 +531,7 @@ export default function AISearchStackNobodyIsBuilding() {
                   Subscription platforms were not built for AI. They were built for the SEO landscape of 2015 to 2020 — keyword-optimized pages, backlink accumulation, Google ranking factors that no longer dominate the buyer journey. The infrastructure they run on was never designed for the token-budget economics of AI crawlers. Retrofitting a slow, bloated WordPress site for AI discoverability is like installing a jet engine in a station wagon.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Connecting those layers for one service business takes time. It requires understanding both the technology and the business. That constraint is intentional. It is also the point. It is not a claim that nobody else is working in the category.
+                  Connecting those layers for one service business takes time. It requires understanding both the technology and the business. That constraint is intentional. It is also the point.
                 </p>
 
                 <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
@@ -550,7 +550,7 @@ export default function AISearchStackNobodyIsBuilding() {
                   That is the connective layer this article was pointing at: owned truth, explicit capability, and control for a real service business.
                 </p>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Read the original &ldquo;nobody is building&rdquo; title as a 2026 discovery essay, not as a current claim that Kodecite is first, only, or the category leader. The category is emerging and fragmented. Isolated layers already exist. Luxe is production proof that the trusted digital business layer is no longer hypothetical.
+                  Read the original &ldquo;nobody is building&rdquo; title as a 2026 discovery essay. Isolated layers already exist. Luxe is production proof that this infrastructure can work.
                 </p>
 
                 <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6 mb-8">

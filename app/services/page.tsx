@@ -6,17 +6,13 @@ import ProductionProof from '@/components/proof/ProductionProof';
 import ProofWall from '@/components/proof/ProofWall';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 import {
-  AGREEMENT,
   CONNECTIVE_LAYER,
-  CONSEQUENCE,
   FIVE_LAYERS,
-  ISOLATED_LAYERS,
-  LUXE_CONNECTIVE,
-  MARKET_SHAPE,
-  NOT_A_CLAIM,
-  OPPORTUNITY,
-  RECOMMENDATION_STAGE,
+  FOUNDATION_BOUNDARY,
+  LUXE_PROOF,
+  PLATFORM_SIDECAR,
   REVIEW_HREF,
+  REVIEW_TURNAROUND,
   THESIS,
   WEBSITE_ROLE,
 } from '@/lib/positioning';
@@ -24,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Kodecite builds the trusted digital business layer that lets AI agents understand, evaluate, recommend, and take authorized action with service businesses. The website stays the human-facing experience. Foundation Build starts at $4,995.',
+    'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses. Foundation Build starts at $4,995.',
   alternates: { canonical: `${ORIGIN}/services` },
 };
 
@@ -39,7 +35,7 @@ const servicesSchema = {
       url: PAGE_URL,
       name: 'Services — KodeCite.ai',
       description:
-        'How Kodecite builds the trusted digital business layer for service businesses — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. An emerging, fragmented category. Not a claim of market leadership.',
+        'How Kodecite builds the trusted digital business layer for service businesses — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -150,7 +146,7 @@ const offerPaths = [
   {
     n: '03',
     t: 'Platform Capability Layer — Pilot',
-    d: 'For selected businesses that remain on WordPress, Wix, Squarespace, or similar platforms: a Kodecite-owned Next.js / Vercel sidecar on a business-controlled domain or subdomain. Truth and capability publication, and protected actions where appropriate. No WordPress plugin dependency.',
+    d: `For selected businesses that remain on WordPress, Wix, Squarespace, or similar platforms: ${PLATFORM_SIDECAR}. Truth and capability publication, and protected actions where appropriate. No WordPress plugin dependency.`,
     note: 'This is a founding pilot, not a universally proven product. A full Next.js rebuild is still the strongest path. A sidecar may fit selected cases.',
   },
 ];
@@ -187,7 +183,7 @@ export default function ServicesPage() {
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">SERVICES · HOW IT WORKS</div>
           <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 4.8vw, 62px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: FG, maxWidth: '18ch' }}>
-            Infrastructure that lets AI understand — <em className="serif" style={{ color: ACCENT }}>and safely act with</em> — your business.
+            Infrastructure that lets AI understand — <em className="serif" style={{ color: ACCENT }}>and take authorized next steps with</em> — your business.
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
             {THESIS} {WEBSITE_ROLE} Based in North Idaho. Built for service businesses anywhere.
@@ -203,29 +199,15 @@ export default function ServicesPage() {
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THE CATEGORY</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
-            Isolated layers are common. <em className="serif" style={{ color: ACCENT }}>The trusted layer is not.</em>
+            Isolated layers are common. <em className="serif" style={{ color: ACCENT }}>A usable system is not.</em>
           </h2>
-          <div className="flex flex-col gap-5 mb-8" style={{ maxWidth: '720px' }}>
+          <div className="flex flex-col gap-5" style={{ maxWidth: '720px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              {OPPORTUNITY}
+              Existing tools often address one layer — visibility, schema, scheduling, automation, commerce, or governance. Service businesses still need those layers reconciled into one system AI can understand and take authorized next steps with.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              {MARKET_SHAPE} {NOT_A_CLAIM} Current products generally address one isolated layer. Visibility, schema, scheduling, browser automation, commerce, and enterprise agent governance each matter. They rarely add up to a service business AI can understand, evaluate, and safely act with.
+              {CONNECTIVE_LAYER} {LUXE_PROOF}
             </p>
-            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              {WEBSITE_ROLE} {AGREEMENT} {RECOMMENDATION_STAGE}
-            </p>
-            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              {CONNECTIVE_LAYER} {LUXE_CONNECTIVE}
-            </p>
-            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              {CONSEQUENCE}
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {ISOLATED_LAYERS.map((t) => (
-              <span key={t} className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.08em', color: MUTE, border: '1px solid var(--d-line)', borderRadius: '999px', padding: '6px 14px' }}>{t}</span>
-            ))}
           </div>
         </GlassPanel>
       </section>
@@ -397,7 +379,7 @@ export default function ServicesPage() {
             See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do</em> today.
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
-            The Agent Readiness Review is a written look at identity, services, geography, credentials, policies, machine discovery, action paths, and control gaps. Free. 24–48 hours. You keep the report either way.
+            The Agent Readiness Review is a written look at identity, services, geography, credentials, policies, machine discovery, action paths, and control gaps. {REVIEW_TURNAROUND} You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>

@@ -7,7 +7,7 @@ import { CONSEQUENCE } from '@/lib/positioning';
 export const metadata: Metadata = {
   title: 'Agent Readiness Review',
   description:
-    'See what AI can understand, verify and safely do with your business today. Free written review in 24–48 hours.',
+    'See what AI can understand, verify and safely do with your business today. Free written review within two business days.',
   alternates: { canonical: 'https://www.kodecite.ai/machine-read' },
 };
 
@@ -17,7 +17,7 @@ const machineReadPageSchema = {
   name: 'Agent Readiness Review — KodeCite.ai',
   url: 'https://www.kodecite.ai/machine-read',
   description:
-    'A free Agent Readiness Review shows what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps — with a written report in 24–48 hours.',
+    'A free Agent Readiness Review shows what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps — with a written report within two business days.',
   publisher: { '@id': 'https://www.kodecite.ai/#business' },
 };
 
@@ -55,13 +55,12 @@ export default function MachineReadPage() {
 
       <section className="secondary-section secondary-hero">
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">AGENT READINESS REVIEW · FREE · 24–48H</div>
+          <div className="d-eyebrow mb-6">AGENT READINESS REVIEW · FREE · TWO BUSINESS DAYS</div>
           <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 5.4vw, 68px)', lineHeight: 1.02, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
             See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do</em> today.
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px' }}>
-            {CONSEQUENCE} This is a written review of your current system — not a citation score, not a ranking promise,
-            and not a claim that Kodecite is first, only, or the category leader. This site does not currently accept autonomous agent submissions.
+            {CONSEQUENCE} This is a written review of your current system — identity, services, geography, policies, discovery, action paths, and control gaps. This site does not currently accept autonomous agent submissions.
           </p>
         </GlassPanel>
       </section>

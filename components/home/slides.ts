@@ -58,7 +58,7 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'usable by AI.', accent: true },
     ],
     support:
-      'Kodecite builds the trusted digital business layer that lets AI understand what you offer, evaluate what is true, recommend you accurately, and take the next authorized step with a customer.',
+      'Kodecite builds the trusted digital business layer that makes your company understandable, verifiable, recommendable, and safely actionable by AI—while keeping you in control.',
     image: '/home/slide-intro.webp',
     bg:
       'radial-gradient(60% 80% at 72% 30%, rgba(200,140,60,0.14), transparent 60%),' +
@@ -78,9 +78,9 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'to find a name.', accent: true },
     ],
     support:
-      'People still search websites themselves. They are also beginning to delegate discovery and next steps to AI agents. Human search is not dead. Agent commerce has not reached mass adoption. The commercial decision loop is still moving.',
+      'Customers still search. Increasingly, they are also asking AI to compare options, evaluate businesses, and take the next step.',
     support2:
-      'As customers delegate more discovery and action, a business that cannot be reliably understood, evaluated, and acted upon may be excluded before the customer ever sees it.',
+      'If your business cannot be reliably understood or safely acted upon, it may never enter the customer’s consideration set.',
     image: '/home/slide-ai-web.webp',
     bg:
       'radial-gradient(58% 78% at 76% 24%, rgba(93,213,255,0.22), transparent 60%),' +
@@ -99,7 +99,7 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'AI cannot reconstruct.' },
     ],
     support:
-      'Website, directories, forms, calendars, and unwritten rules live in different places. Tools usually cover one isolated layer — visibility, schema, scheduling, automation, commerce, or governance. AI may find pieces. It still cannot reliably reconstruct what the business can do or safely act.',
+      'Website, directories, forms, calendars, and unwritten rules live in different places. Tools usually cover one isolated layer — visibility, schema, scheduling, automation, commerce, or governance. AI may find pieces. It still cannot reliably reconstruct what the business can do or take an authorized next step.',
     image: '/home/slide-problem.webp',
     bg:
       'conic-gradient(from 210deg at 62% 38%, rgba(70,90,150,0.10), transparent 26%),' +
@@ -120,7 +120,7 @@ export const HOME_SLIDES: HomeSlide[] = [
     support:
       'The website stays the human-facing experience. The digital business layer is the verified, machine-facing representation. Truth, services, geography, policies, permissions, capabilities, and actions have to agree.',
     support2:
-      'Recommendation is only one stage. The larger goal is safe agent participation. The category is early and fragmented. Kodecite is not claiming to own it.',
+      'Recommendation is only one stage. The larger goal is safe agent participation.',
     points: [
       'Truth',
       'Capability',
@@ -149,7 +149,7 @@ export const HOME_SLIDES: HomeSlide[] = [
     support:
       'Luxe Window Works publishes a machine-readable in-home consultation capability. An authorized production test submitted one valid request. It was accepted. The duplicate was suppressed. A conflicting replay was rejected. Booking, pricing, and checkout stayed unavailable.',
     support2:
-      'Luxe is production proof that this is no longer hypothetical. Recommendation is only one stage. The larger goal is safe agent participation.',
+      'Luxe Window Works is production proof that this infrastructure can work.',
     image: '/home/slide-outcome.webp',
     theme: 'light',
     bg:

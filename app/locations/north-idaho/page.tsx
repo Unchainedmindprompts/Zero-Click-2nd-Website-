@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'North Idaho Business Infrastructure for the Agent-Driven Web',
     description:
-      'Make your North Idaho business usable by AI. Owned truth, capability, and control — not an AEO retainer.',
+      'Make your North Idaho business usable by AI. Owned truth, capability, and control — so agents can take authorized next steps.',
     url: PAGE_URL,
     type: 'website',
     images: [{ url: `${ORIGIN}/og-image.png`, width: 1200, height: 630 }],
@@ -116,7 +116,7 @@ export default function NorthIdahoLocationPage() {
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
             KodeCite is based in North Idaho — Coeur d&apos;Alene, Post Falls, Hayden, Rathdrum, Sandpoint, and the Inland Northwest.
-            The offer is the trusted digital business layer for service businesses: remote, not geo-limited, and not an AEO retainer. The website remains the human-facing experience. The category is early and fragmented. Action is scoped only when the real business permits it.
+            The offer is the trusted digital business layer for service businesses: remote, not geo-limited. The website remains the human-facing experience. Action is scoped only when the real business permits it.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">{REVIEW_CTA} →</Link>

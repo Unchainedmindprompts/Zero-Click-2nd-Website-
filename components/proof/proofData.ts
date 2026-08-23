@@ -73,7 +73,7 @@ export const proofCases: ProofCase[] = [
   {
     business: 'Real Estate With Shirin — North Idaho',
     tagline:
-      'A North Idaho realtor on a KodeCite-owned foundation. These screenshots are discovery evidence from April 1, 2026. AI answers vary and are not a permanent placement claim.',
+      'A North Idaho realtor on a Kodecite-built, client-owned foundation. These screenshots are discovery evidence from April 1, 2026. AI answers vary and are not a permanent placement claim.',
     items: [
       {
         src: '/shirin-gemini-realtors-seniors.png',

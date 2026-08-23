@@ -10,8 +10,11 @@ export type BlogPost = {
 
 // Insights taxonomy after the infrastructure reposition.
 // AEO/GEO are no longer primary. PAID MEDIA is removed from the filter chips.
-// Retired URLs stay live; they are simply not featured and not surfaced
-// as related reading from active articles.
+//
+// Retired URLs stay live at /blog/<slug> and remain in sitemap.ts.
+// They are excluded from Insights listing, featured cards, category chips,
+// category counts, and related-reading. Direct URL access is unchanged.
+// Do not redirect, noindex, delete, or 410 those pages in this PR.
 export const blogPosts: BlogPost[] = [
   {
     slug: 'from-recommended-to-actionable-luxe-window-works',
@@ -19,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     category: 'CASE STUDIES',
     date: 'August 22, 2026',
     readTime: '12 min read',
-    excerpt: 'How Luxe moved from AI discovery to a live, protected in-home consultation capability — production proof that the trusted digital business layer is no longer hypothetical, and what the test did not prove.',
+    excerpt: 'How Luxe moved from AI discovery to a live, protected in-home consultation capability — production proof that this infrastructure can work, and what the test did not prove.',
     featured: true,
   },
   {
@@ -130,7 +133,7 @@ export const blogPosts: BlogPost[] = [
     category: 'AGENTIC WEB',
     date: 'March 13, 2026',
     readTime: '6 min read',
-    excerpt: 'Enterprise stacks and subscription platforms leave isolated layers. The connective work for a service business is owned truth, explicit capability, and control — an early, fragmented category, not an uncontested market.',
+    excerpt: 'Enterprise stacks and subscription platforms leave isolated layers. The connective work for a service business is owned truth, explicit capability, and control.',
   },
   {
     slug: 'aeo-geo-making-seo-better',
@@ -253,11 +256,33 @@ export const RETIRED_FROM_SURFACING = [
   'custom-audiences-facebook',
 ] as const;
 
+// Retired URLs stay live at /blog/<slug> and remain in the sitemap.
+// They are excluded from Insights listing, featured cards, category chips,
+// category counts, and related-reading. Direct URL access is unchanged.
+const retiredSet = new Set<string>(RETIRED_FROM_SURFACING);
+
+export function isRetiredFromSurfacing(slug: string): boolean {
+  return retiredSet.has(slug);
+}
+
+export function getPublicPosts(): BlogPost[] {
+  return blogPosts.filter((p) => !isRetiredFromSurfacing(p.slug));
+}
+
 export function getFeaturedPosts(): BlogPost[] {
-  return blogPosts.filter((p) => p.featured);
+  return getPublicPosts().filter((p) => p.featured);
 }
 
 export function getPostsByCategory(category: Category): BlogPost[] {
-  if (category === 'ALL') return blogPosts;
-  return blogPosts.filter((p) => p.category === category);
+  const posts = getPublicPosts();
+  if (category === 'ALL') return posts;
+  return posts.filter((p) => p.category === category);
+}
+
+export function getVisibleCategories(): Category[] {
+  const publicPosts = getPublicPosts();
+  return CATEGORIES.filter((cat) => {
+    if (cat === 'ALL') return true;
+    return publicPosts.some((p) => p.category === cat);
+  });
 }

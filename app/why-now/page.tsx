@@ -119,7 +119,7 @@ const faqSchema = {
       name: 'What is an Agent Readiness Review?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, credentials, policies, discovery, action paths, and control gaps. Free in 24–48 hours when operationally available. It is a review request, not a booking.",
+        text: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, credentials, policies, discovery, action paths, and control gaps. Free within two business days. It is a review request, not a booking.",
       },
     },
   ],
@@ -468,7 +468,7 @@ export default function WhyNowPage() {
               },
               {
                 q: "What's the free review?",
-                a: "An Agent Readiness Review looks at what AI can understand, verify, and safely do with the business today. Free written review in 24–48 hours when operationally available. It is a review request, not a booking.",
+                a: "An Agent Readiness Review looks at what AI can understand, verify, and safely do with the business today. Free written review within two business days. It is a review request, not a booking.",
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 80}>
@@ -510,7 +510,7 @@ export default function WhyNowPage() {
               Request an Agent Readiness Review
             </Link>
             <p className="mt-4 text-[rgba(240,232,216,0.70)] font-poppins text-xs">
-              Free written review in 24–48 hours when operationally available. This is a review request, not a booking.
+              Free written review within two business days. This is a review request, not a booking.
             </p>
           </ScrollReveal>
         </div>

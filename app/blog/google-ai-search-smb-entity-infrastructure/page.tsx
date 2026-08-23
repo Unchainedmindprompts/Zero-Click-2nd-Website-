@@ -869,7 +869,7 @@ export default function GoogleAISearchSMBPage() {
                   </p>
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     Find out exactly how AI systems see your business — schema gaps, entity coherence, trust signals.
-                    Free. 24–48 hour turnaround.
+                    Free. Written within two business days.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
                     Request an Agent Readiness Review
@@ -921,7 +921,7 @@ export default function GoogleAISearchSMBPage() {
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
             An Agent Readiness Review shows where the business is hard to understand or unsafe to act with, and what it would take to
-            close the gap. Free. No pitch. 24–48 hour turnaround.
+            close the gap. Free. No pitch. Written within two business days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">

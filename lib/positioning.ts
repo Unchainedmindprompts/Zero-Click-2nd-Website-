@@ -1,17 +1,16 @@
-// Shared positioning copy. Keep this file honest: no invented endpoints,
-// no guaranteed citations, no claim that every client gets a production action.
+// Shared positioning copy.
+// Internal claim rules control what we write. They are not the public message.
+// Do not claim: first/only/category leader, human search is dead, mass adoption,
+// guaranteed rankings/citations, or that Foundation includes an action endpoint.
 
 export const CATEGORY =
   'Owned business infrastructure for the agent-driven web.';
 
 export const THESIS =
-  'Kodecite builds the trusted digital business layer that allows AI agents to understand, evaluate, recommend, and take authorized action with service businesses.';
+  'Kodecite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses.';
 
-export const OPPORTUNITY =
-  'The opportunity is not merely helping a business rank in ChatGPT. It is keeping service businesses inside the commercial decision loop as customers move from searching websites themselves to delegating outcomes to AI agents.';
-
-export const TRANSITION =
-  'This is a rapidly emerging commercial transition, supported by growing agent capabilities and machine-generated web activity. Human search is not dead. Agent commerce has not reached mass adoption. Kodecite has competitors.';
+export const CONSEQUENCE =
+  'As customers delegate more discovery and action to AI, businesses need to remain understandable, verifiable, and safely actionable inside the commercial decision loop.';
 
 export const WEBSITE_ROLE =
   'The website remains the human-facing experience. The digital business layer is the verified, machine-facing representation of the same business.';
@@ -22,40 +21,23 @@ export const AGREEMENT =
 export const RECOMMENDATION_STAGE =
   'Recommendation is only one stage. The larger goal is safe agent participation.';
 
-export const CONSEQUENCE =
-  'As customers delegate more discovery and action to AI agents, a business that cannot be reliably understood, evaluated, and acted upon may be excluded before the customer ever sees it.';
-
+// FAQ-only: one concise competitive-market explanation. Do not repeat on other pages.
 export const MARKET_SHAPE =
-  'This is an emerging, fragmented category — not an uncontested market and not a guaranteed opportunity.';
-
-export const NOT_A_CLAIM =
-  'Kodecite is not the first, only, or category leader.';
-
-export const ISOLATED_LAYERS = [
-  'AI visibility',
-  'Schema',
-  'Scheduling',
-  'Browser automation',
-  'Commerce',
-  'Enterprise agent governance',
-] as const;
-
-export const ISOLATED_LAYERS_LINE =
-  'Current products generally address isolated layers: AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance.';
+  'This is an emerging, fragmented category. Existing tools often address individual layers — visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. Service businesses still need those layers reconciled into one usable system.';
 
 export const CONNECTIVE_LAYER =
-  'Kodecite works on the underserved connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff.';
+  'Kodecite connects verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff.';
 
-export const LUXE_CONNECTIVE =
-  'Luxe Window Works is production proof that this is no longer hypothetical — and not proof of market dominance.';
+export const LUXE_PROOF =
+  'Luxe Window Works is production proof that this infrastructure can work.';
 
 export const HOME_H1 = 'Make your business usable by AI.';
 
 export const HOME_SUPPORT =
-  'Kodecite builds the trusted digital business layer that lets AI understand what you offer, evaluate what is true, recommend you accurately, and take the next authorized step with a customer.';
+  'Kodecite builds the trusted digital business layer that makes your company understandable, verifiable, recommendable, and safely actionable by AI—while keeping you in control.';
 
 export const PRINCIPLE =
-  'AI should not merely find a business. It should understand what the business does, know what it is allowed to do, and take the next safe step with a customer.';
+  'AI should not merely find a business. It should understand what the business does, know what it is allowed to do, and take the next authorized step with a customer.';
 
 export const OUTCOMES = [
   'Understandable',
@@ -77,7 +59,13 @@ export const REVIEW_PROMISE =
   'See what AI can understand, verify and safely do with your business today.';
 export const REVIEW_CTA = 'Request an Agent Readiness Review';
 export const REVIEW_CTA_SHORT = 'Agent Readiness Review';
-export const REVIEW_TURNAROUND = 'Free. Written in 24–48 hours.';
+export const REVIEW_TURNAROUND = 'Free. Written within two business days.';
+
+export const PLATFORM_SIDECAR =
+  'a Kodecite-built, business-owned Next.js/Vercel sidecar deployed on infrastructure and a domain the client controls';
+
+export const FOUNDATION_BOUNDARY =
+  'The $4,995 Foundation Build includes an owned website, canonical business truth, entity graph, discovery, and capability mapping. It does not automatically include a production action endpoint.';
 
 export const FIVE_LAYERS = [
   {
@@ -101,8 +89,8 @@ export const FIVE_LAYERS = [
   {
     n: '04',
     name: 'Action',
-    h: 'The next safe step.',
-    d: 'Submit a consultation, send a qualified inquiry, request an appointment, or hand off to a human. Schedule or transact later only where the real business permits it. Not every client needs every action.',
+    h: 'The next authorized step.',
+    d: 'Submit a consultation, send a qualified inquiry, request an appointment, or hand off to a human. Schedule or transact later only where the real business permits it. Not every client needs every action. A production action is a separately scoped Agent Capability Build.',
   },
   {
     n: '05',

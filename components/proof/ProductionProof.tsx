@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import GlassPanel from '@/components/GlassPanel';
-import { LUXE_CAPABILITY_URL, LUXE_CONNECTIVE, LUXE_FLAGSHIP_HREF, RECOMMENDATION_STAGE } from '@/lib/positioning';
+import { LUXE_CAPABILITY_URL, LUXE_FLAGSHIP_HREF, LUXE_PROOF } from '@/lib/positioning';
 
 const FG = 'var(--d-fg)';
 const DIM = 'rgba(233, 238, 255, 0.95)';
@@ -44,7 +44,7 @@ export default function ProductionProof() {
           Luxe Window Works — a request an agent could <em className="serif" style={{ color: ACCENT }}>discover and submit.</em>
         </h2>
         <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-          An outside agent could discover what Luxe permits, determine qualification, submit safely, receive an honest machine-readable outcome, and leave the next conversation to a human. {LUXE_CONNECTIVE} {RECOMMENDATION_STAGE}
+          An outside agent could discover what Luxe permits, determine qualification, submit a permitted request, receive an honest machine-readable outcome, and leave the next conversation to a human. {LUXE_PROOF}
         </p>
 
         <div className="flex flex-wrap gap-2 mb-10">

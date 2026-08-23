@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "name": "KodeCite.ai",
-  "description": "KodeCite builds the trusted digital business layer that allows AI agents to understand, evaluate, recommend, and take authorized action with service businesses. The website remains the human-facing experience. An emerging, fragmented category. Not a claim of market leadership.",
+  "description": "KodeCite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience.",
   "url": "https://www.kodecite.ai",
-  "positioning": "Trusted digital business layer for service businesses. The opportunity is not merely ranking in ChatGPT; it is remaining inside the commercial decision loop as customers delegate outcomes to AI agents. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. KodeCite works on the underserved connective layer: verified truth, explicit capabilities, controlled actions, owned infrastructure, and human handoff. KodeCite is not the first, only, or category leader. Human search is not dead. Agent commerce has not reached mass adoption. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
+  "positioning": "Trusted digital business layer for service businesses. Existing tools often address individual layers; KodeCite connects verified truth, explicit capabilities, controlled actions, owned infrastructure, and human handoff. Luxe Window Works is production proof that this infrastructure can work. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
   "contact": {
     "location": "North Idaho",
     "service_area": ["North Idaho", "Pacific Northwest", "Remote — service businesses anywhere"]
@@ -32,13 +32,13 @@
     },
     {
       "name": "Platform Capability Layer — Pilot",
-      "description": "For selected WordPress, Wix, or Squarespace businesses: a KodeCite-owned Next.js/Vercel sidecar on a business-controlled domain or subdomain. Application-only. Not universally proven.",
+      "description": "For selected WordPress, Wix, or Squarespace businesses: a KodeCite-built, business-owned Next.js/Vercel sidecar deployed on infrastructure and a domain the client controls. Application-only.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "Agent Readiness Review",
-      "description": "See what AI can understand, verify, and safely do with a business today. Identity, services, geography, credentials, policies, machine discovery, action paths, and control gaps. Free written review in 24–48 hours when operationally available.",
+      "description": "See what AI can understand, verify, and safely do with a business today. Identity, services, geography, credentials, policies, machine discovery, action paths, and control gaps. Free written review within two business days.",
       "url": "https://www.kodecite.ai/machine-read",
       "type": "service",
       "cost": "free"

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { BlogPost, CATEGORIES, Category } from '@/lib/blog';
+import { BlogPost, Category, getVisibleCategories } from '@/lib/blog';
 
 // ─── Category chip ────────────────────────────────────────
 function Chip({
@@ -224,13 +224,15 @@ export default function BlogFilter({
 }) {
   const [active, setActive] = useState<Category>('ALL');
 
+  const visibleCategories = useMemo(() => getVisibleCategories(), []);
+
   const counts = useMemo(() => {
     const result: Record<string, number> = { ALL: posts.length };
-    CATEGORIES.forEach((cat) => {
+    visibleCategories.forEach((cat) => {
       if (cat !== 'ALL') result[cat] = posts.filter((p) => p.category === cat).length;
     });
     return result;
-  }, [posts]);
+  }, [posts, visibleCategories]);
 
   const showFeatured = active === 'ALL';
   const filteredPosts = active === 'ALL'
@@ -259,7 +261,7 @@ export default function BlogFilter({
             scrollbarWidth: 'none',
           }}
         >
-          {CATEGORIES.map((cat) => (
+          {visibleCategories.map((cat) => (
             <Chip
               key={cat}
               label={cat}

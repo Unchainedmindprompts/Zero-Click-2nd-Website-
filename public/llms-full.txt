@@ -1,12 +1,8 @@
 # KodeCite.ai — Full Reference
 
-> KodeCite builds the trusted digital business layer that allows AI agents to understand, evaluate, recommend, and take authorized action with service businesses. The website remains the human-facing experience. The digital business layer is the verified, machine-facing representation of the same business. We make a business understandable, verifiable, recommendable, actionable, and controlled — so people, search engines, and AI agents can use the same authoritative record.
+> KodeCite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience. The digital business layer is the verified, machine-facing representation of the same business. We make a business understandable, verifiable, recommendable, actionable, and controlled — so people, search engines, and AI agents can use the same authoritative record.
 
-The opportunity is not merely helping a business rank in ChatGPT. It is keeping service businesses inside the commercial decision loop as customers move from searching websites themselves to delegating outcomes to AI agents. This is a rapidly emerging commercial transition, supported by growing agent capabilities and machine-generated web activity. Human search is not dead. Agent commerce has not reached mass adoption. KodeCite has competitors.
-
-This is an emerging, fragmented category — not an uncontested market and not a guaranteed opportunity. KodeCite is not the first, only, or category leader. Current products generally address isolated layers such as AI visibility, schema, scheduling, browser automation, commerce, or enterprise agent governance. KodeCite works on the underserved connective layer for service businesses: verified business truth, explicit capabilities, controlled agent actions, owned infrastructure, and human handoff. Recommendation is only one stage. The larger goal is safe agent participation. Luxe Window Works is production proof that this is no longer hypothetical — and not proof of market dominance.
-
-As customers delegate more discovery and action to AI agents, a business that cannot be reliably understood, evaluated, and acted upon may be excluded before the customer ever sees it.
+As customers delegate more discovery and action to AI, businesses need to remain understandable, verifiable, and safely actionable inside the commercial decision loop. Luxe Window Works is production proof that this infrastructure can work.
 
 KodeCite.ai is based in North Idaho and builds for service businesses anywhere. The website, Next.js, schema, entity graph, llms.txt, agent.json, APIs, forms, and future MCP are components. The product is an accurate business model plus controlled machine use.
 
@@ -18,9 +14,9 @@ AI should not merely find a business. It should understand what the business doe
 
 ## The problem
 
-Most businesses are spread across a website, directories, forms, calendars, and unwritten rules. AI may find pieces. It cannot reliably reconstruct what the business can do or safely act. That is an infrastructure problem, not a content-volume problem.
+Most businesses are spread across a website, directories, forms, calendars, and unwritten rules. AI may find pieces. It cannot reliably reconstruct what the business can do or take an authorized next step. That is an infrastructure problem, not a content-volume problem.
 
-WordPress, Wix, and Squarespace are common platforms. They are not blank to every AI crawler. They often make it harder to publish one owned, consistent, machine-usable record. A full Next.js rebuild is the strongest path. A KodeCite-owned sidecar may fit selected pilots.
+WordPress, Wix, and Squarespace are common platforms. They are not blank to every AI crawler. They often make it harder to publish one owned, consistent, machine-usable record. A full Next.js rebuild is the strongest path. A Kodecite-built, business-owned sidecar may fit selected pilots.
 
 ## The five-layer model
 
@@ -50,10 +46,10 @@ Owned website (Next.js where appropriate), canonical truth, entity graph, servic
 Custom-scoped after business rules are understood. One defined action at a time: contract, validation, security and abuse controls, idempotency, human handoff, production acceptance testing. No published price. Different actions carry different rules and risk.
 
 ### Platform Capability Layer — Pilot
-For selected WordPress / Wix / Squarespace businesses remaining on those platforms: a KodeCite-owned Next.js/Vercel sidecar on a business-controlled domain or subdomain. No WordPress plugin dependency. Truth and capability publication, plus protected actions where appropriate. Application-only. Not universally proven.
+For selected WordPress / Wix / Squarespace businesses remaining on those platforms: a Kodecite-built, business-owned Next.js/Vercel sidecar deployed on infrastructure and a domain the client controls. No WordPress plugin dependency. Truth and capability publication, plus protected actions where appropriate. Application-only.
 
 ### Agent Readiness Review
-See what AI can understand, verify, and safely do with a business today. Free written review in 24–48 hours when operationally available. Request at https://www.kodecite.ai/machine-read
+See what AI can understand, verify, and safely do with a business today. Free written review within two business days. Request at https://www.kodecite.ai/machine-read
 
 ## Acceptance standard
 

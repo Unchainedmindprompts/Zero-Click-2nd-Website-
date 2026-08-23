@@ -126,7 +126,7 @@ export default function ContactForm() {
           <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>{submitted.website}</strong>.
           You&apos;ll hear back at the email tied to{' '}
           <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>{submitted.businessName}</strong>{' '}
-          within 24–48 hours with a written report.
+          within two business days with a written report.
         </p>
 
         <div
@@ -335,7 +335,7 @@ export default function ContactForm() {
           className="font-mono"
           style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'var(--d-fg-mute)' }}
         >
-          NO SALES PITCH · 24–48H · YOUR REVIEW IS YOURS
+          NO SALES PITCH · TWO BUSINESS DAYS · YOUR REVIEW IS YOURS
         </span>
         <button
           type="submit"

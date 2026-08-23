@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
-import { LUXE_CAPABILITY_URL, LUXE_CONNECTIVE, RECOMMENDATION_STAGE, REVIEW_HREF, WEBSITE_ROLE } from '@/lib/positioning';
+import { LUXE_CAPABILITY_URL, LUXE_PROOF, REVIEW_HREF } from '@/lib/positioning';
 
 const SLUG = 'from-recommended-to-actionable-luxe-window-works';
 const PAGE_URL = `https://www.kodecite.ai/blog/${SLUG}`;
 const TITLE = 'From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents';
 const DESCRIPTION =
-  'How Luxe Window Works moved from AI discovery to a live, protected in-home consultation capability — production proof that the trusted digital business layer is no longer hypothetical, and what the authorized test did not prove.';
+  'How Luxe Window Works moved from AI discovery to a live, protected in-home consultation capability — production proof that this infrastructure can work, and what the authorized test did not prove.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -146,7 +146,7 @@ export default function LuxeAgentCaseStudyPage() {
           </h1>
 
           <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            Discovery was the first chapter. The second was a live, protected consultation request an outside agent could find, qualify, submit, and receive an honest answer for — without pretending the job was booked. {LUXE_CONNECTIVE} {RECOMMENDATION_STAGE}
+            Discovery was the first chapter. The second was a live, protected consultation request an outside agent could find, qualify, submit, and receive an honest answer for — without pretending the job was booked. {LUXE_PROOF}
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
@@ -162,8 +162,7 @@ export default function LuxeAgentCaseStudyPage() {
         <article className="max-w-3xl mx-auto font-inter" style={{ fontSize: '17px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}>
           <p className="mb-8">
             The story is short if you tell it honestly: Luxe became understandable, then verifiable, then recommendable, then actionable, then controlled.
-            {` ${WEBSITE_ROLE} `}
-            Visibility, schema, scheduling, automation, commerce, and governance tools usually stop at one isolated layer. This build connected them for a real service business — without claiming the market is uncontested or that Kodecite is first, only, or the leader.
+            Visibility, schema, scheduling, automation, commerce, and governance tools usually stop at one isolated layer. This build connected them for a real service business.
           </p>
 
           {sections.map((s) => (

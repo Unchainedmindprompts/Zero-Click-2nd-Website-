@@ -204,7 +204,7 @@ const faqSchema = {
       name: 'Does it matter which website platform I use for entity-first search?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Platform choice matters, but WordPress, Wix, and Squarespace sites are not blank to every AI crawler. Those platforms often make it harder to publish one owned, consistent record. A purpose-built Next.js site is the strongest path. A KodeCite-owned sidecar may fit selected pilots that stay on their current CMS.',
+        text: 'Platform choice matters, but WordPress, Wix, and Squarespace sites are not blank to every AI crawler. Those platforms often make it harder to publish one owned, consistent record. A purpose-built Next.js site is the strongest path. A Kodecite-built, business-owned sidecar may fit selected pilots that stay on their current CMS.',
       },
     },
     {

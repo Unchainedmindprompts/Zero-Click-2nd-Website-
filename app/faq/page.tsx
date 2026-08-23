@@ -3,24 +3,21 @@ import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import {
   AGREEMENT,
-  CONNECTIVE_LAYER,
   CONSEQUENCE,
-  ISOLATED_LAYERS_LINE,
-  LUXE_CONNECTIVE,
+  FOUNDATION_BOUNDARY,
+  LUXE_PROOF,
   MARKET_SHAPE,
-  NOT_A_CLAIM,
-  OPPORTUNITY,
-  RECOMMENDATION_STAGE,
+  PLATFORM_SIDECAR,
   REVIEW_HREF,
+  REVIEW_TURNAROUND,
   THESIS,
-  TRANSITION,
   WEBSITE_ROLE,
 } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Start Here — Usable by AI',
   description:
-    'What “usable by AI” means: the trusted digital business layer that lets agents understand, evaluate, recommend, and take authorized action. How this differs from ranking in ChatGPT, and what Luxe proved.',
+    'What “usable by AI” means: the trusted digital business layer that helps agents understand, evaluate, recommend, and take authorized next steps with a service business.',
   alternates: { canonical: 'https://www.kodecite.ai/faq' },
 };
 
@@ -36,23 +33,20 @@ const faqs: { q: string; a: string | string[] }[] = [
   {
     q: 'Is this just ranking in ChatGPT?',
     a: [
-      OPPORTUNITY,
+      'Visibility in ChatGPT or other systems can follow clearer infrastructure. It is not the product.',
       `${WEBSITE_ROLE} ${AGREEMENT}`,
-      `${RECOMMENDATION_STAGE} ${TRANSITION}`,
+      CONSEQUENCE,
     ],
   },
   {
     q: 'Why does this matter now?',
-    a: [
-      CONSEQUENCE,
-      TRANSITION,
-    ],
+    a: CONSEQUENCE,
   },
   {
     q: 'How is this different from AEO, GEO, or SEO?',
     a: [
-      'SEO, AEO, and GEO are discovery practices. They matter. They are isolated layers, not the product category.',
-      `${CONNECTIVE_LAYER} Visibility in Google, Bing, ChatGPT, or other systems can be evidence that the infrastructure is clearer. It is not a promise, and it is not the whole job.`,
+      'SEO, AEO, and GEO are discovery practices. They matter. They are layers, not the complete product.',
+      'Visibility in Google, Bing, ChatGPT, or other systems can be evidence that the infrastructure is clearer. It is not a promise, and it is not the whole job.',
     ],
   },
   {
@@ -60,11 +54,8 @@ const faqs: { q: string; a: string | string[] }[] = [
     a: 'Yes, when the same authoritative record is published for people, search engines, and agents. Clean identity, services, locations, and proof help traditional search and AI discovery. We treat that as a useful outcome of better infrastructure — not a guaranteed ranking or citation.',
   },
   {
-    q: 'Is this an uncontested new market?',
-    a: [
-      `${MARKET_SHAPE} ${NOT_A_CLAIM}`,
-      `${ISOLATED_LAYERS_LINE} ${CONNECTIVE_LAYER}`,
-    ],
+    q: 'How is this category shaped today?',
+    a: MARKET_SHAPE,
   },
   {
     q: 'What is authoritative truth?',
@@ -78,7 +69,7 @@ const faqs: { q: string; a: string | string[] }[] = [
     q: 'What can agents actually do with a Kodecite business?',
     a: [
       'Only what that business has modeled and permitted. Typical first actions are a consultation request, a qualified inquiry, an appointment request, or a controlled human handoff.',
-      'Not every client gets a production action endpoint. Foundation Build publishes the truth and the map. Agent Capability Build implements one defined action after the rules are understood.',
+      `${FOUNDATION_BOUNDARY} Agent Capability Build implements one defined protected action after the rules are understood.`,
     ],
   },
   {
@@ -96,7 +87,7 @@ const faqs: { q: string; a: string | string[] }[] = [
   {
     q: 'I am on WordPress, Wix, or Squarespace. Can you still help?',
     a: [
-      'Yes, in selected cases. A full Next.js rebuild is the strongest path. For some businesses remaining on those platforms, a founding Platform Capability Layer pilot can publish truth and capability from a Kodecite-owned Next.js / Vercel sidecar on a domain you control. No WordPress plugin dependency.',
+      `Yes, in selected cases. A full Next.js rebuild is the strongest path. For some businesses remaining on those platforms, a founding Platform Capability Layer pilot can publish truth and capability from ${PLATFORM_SIDECAR}. No WordPress plugin dependency.`,
       'We will not claim those platforms are equivalent, and we will not claim they are invisible to every AI crawler. The honest problem is usually scattered truth and missing control — not a blank page in every case.',
     ],
   },
@@ -106,7 +97,7 @@ const faqs: { q: string; a: string | string[] }[] = [
   },
   {
     q: 'What did the Luxe production test prove?',
-    a: `That an outside agent could discover what Luxe permits, determine qualification, submit one valid in-home consultation request, receive an honest machine-readable outcome, and that a duplicate did not create a second email while a conflicting replay was rejected. It did not prove booking, pricing, checkout, or project acceptance. Those stayed unavailable. ${LUXE_CONNECTIVE}`,
+    a: `That an outside agent could discover what Luxe permits, determine qualification, submit one valid in-home consultation request, receive an honest machine-readable outcome, and that a duplicate did not create a second email while a conflicting replay was rejected. It did not prove booking, pricing, checkout, or project acceptance. Those stayed unavailable. ${LUXE_PROOF}`,
   },
   {
     q: 'Who owns the work?',
@@ -186,7 +177,6 @@ export default function FAQPage() {
             }}
           >
             Plain answers about the trusted digital business layer: truth, capabilities, controlled action, owned infrastructure, and human handoff.
-            The website remains the human-facing experience. Recommendation is only one stage. AEO, GEO, schema, and scheduling show up as isolated layers — not as the category, and not as a claim that Kodecite owns the market.
           </p>
         </div>
       </section>
@@ -294,7 +284,7 @@ export default function FAQPage() {
               fontWeight: 300,
             }}
           >
-            A written review of identity, services, geography, policies, discovery, action paths, and control gaps. Free. 24–48 hours.
+            A written review of identity, services, geography, policies, discovery, action paths, and control gaps. {REVIEW_TURNAROUND}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

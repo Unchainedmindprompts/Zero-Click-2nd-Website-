@@ -2,24 +2,12 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
-import {
-  AGREEMENT,
-  CONNECTIVE_LAYER,
-  LUXE_CONNECTIVE,
-  MARKET_SHAPE,
-  NOT_A_CLAIM,
-  OPPORTUNITY,
-  RECOMMENDATION_STAGE,
-  REVIEW_HREF,
-  THESIS,
-  TRANSITION,
-  WEBSITE_ROLE,
-} from '@/lib/positioning';
+import { LUXE_PROOF, REVIEW_HREF, THESIS, WEBSITE_ROLE } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'About KodeCite — Business truth before technology',
   description:
-    'Kodecite builds the trusted digital business layer that lets AI agents understand, evaluate, recommend, and take authorized action with service businesses. Founded by Mark Abplanalp in Coeur d\'Alene, Idaho.',
+    'Kodecite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. Founded by Mark Abplanalp in Coeur d\'Alene, Idaho.',
   alternates: { canonical: 'https://www.kodecite.ai/about' },
 };
 
@@ -112,7 +100,7 @@ export default function AboutPage() {
             <em className="serif" style={{ color: ACCENT }}>technology.</em>
           </h1>
           <p className="font-inter" style={{ ...leadStyle, maxWidth: '660px' }}>
-            {THESIS} {WEBSITE_ROLE} Schema, JSON, APIs, and a future MCP connection are how that infrastructure gets published.
+            {THESIS} Schema, JSON, APIs, and a future MCP connection are how that infrastructure gets published.
             The product is an accurate model of the business — and controlled machine use of it.
           </p>
         </div>
@@ -128,19 +116,13 @@ export default function AboutPage() {
             <p className="font-inter mb-6" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
               The practice started with Luxe Window Works. The first job was accurate understanding and recommendation:
               identity, entity, services, geography, and policies that machines could check instead of guess.
-              {` ${WEBSITE_ROLE} ${AGREEMENT}`}
+              {` ${WEBSITE_ROLE}`}
             </p>
             <p className="font-inter" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
               That foundation made a second job possible: a live, protected in-home consultation capability.
               An outside system can now discover what Luxe permits, submit a request, and get an honest outcome — without booking, pricing, or accepting a project.
-              {` ${RECOMMENDATION_STAGE}`} Kodecite exists to make that kind of infrastructure repeatable for other service businesses.
-              {` ${LUXE_CONNECTIVE}`}
-            </p>
-            <p className="font-inter" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75, marginTop: '24px' }}>
-              {OPPORTUNITY} {TRANSITION}
-            </p>
-            <p className="font-inter" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75, marginTop: '24px' }}>
-              {MARKET_SHAPE} {NOT_A_CLAIM} {CONNECTIVE_LAYER} Visibility tools, schema products, schedulers, browser automation, commerce rails, and enterprise agent governance already exist as isolated layers.
+              Kodecite exists to make that kind of infrastructure repeatable for other service businesses.
+              {` ${LUXE_PROOF}`}
             </p>
           </div>
         </div>

@@ -1,16 +1,17 @@
 import Link from 'next/link';
-import { blogPosts, getFeaturedPosts } from '@/lib/blog';
+import { getFeaturedPosts, getPublicPosts } from '@/lib/blog';
 import BlogFilter from '@/components/blog/BlogFilter';
-import { CONSEQUENCE, OPPORTUNITY, REVIEW_HREF, THESIS } from '@/lib/positioning';
+import { REVIEW_HREF, THESIS } from '@/lib/positioning';
 
 export const metadata = {
   title: 'Insights',
   description:
-    'Strategic thinking on the trusted digital business layer: how AI agents understand, evaluate, recommend, and take authorized action with service businesses. An emerging, fragmented category.',
+    'Notes on the trusted digital business layer: how AI agents understand, evaluate, recommend, and take authorized next steps with service businesses.',
   alternates: { canonical: 'https://www.kodecite.ai/blog' },
 };
 
 export default function BlogPage() {
+  const posts = getPublicPosts();
   const featured = getFeaturedPosts();
 
   return (
@@ -43,14 +44,13 @@ export default function BlogPage() {
               maxWidth: '640px',
             }}
           >
-            {THESIS} {OPPORTUNITY} Visibility, schema, and automation writing stays on
-            the site as isolated-layer notes. They are not the category, and Kodecite
-            is not claiming to own the market.
+            {THESIS} Notes on business truth, controlled action, and what a usable
+            system actually requires.
           </p>
         </div>
       </section>
 
-      <BlogFilter posts={blogPosts} featured={featured} />
+      <BlogFilter posts={posts} featured={featured} />
 
       <section
         style={{
@@ -84,8 +84,8 @@ export default function BlogPage() {
               fontWeight: 300,
             }}
           >
-            {CONSEQUENCE} The Agent Readiness Review is a look at your current system —
-            not a claim that Kodecite is first, only, or the category leader.
+            The Agent Readiness Review is a look at what AI can understand, evaluate,
+            and safely do with your business today.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
