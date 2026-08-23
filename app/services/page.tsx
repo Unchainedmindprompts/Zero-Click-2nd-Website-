@@ -2,14 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
-import ProductionProof from '@/components/proof/ProductionProof';
 import ProofWall from '@/components/proof/ProofWall';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 import {
-  CONNECTIVE_LAYER,
-  FIVE_LAYERS,
+  LUXE_CAPABILITY_URL,
+  LUXE_FLAGSHIP_HREF,
   LUXE_PROOF,
-  PLATFORM_SIDECAR,
   REVIEW_HREF,
   REVIEW_TURNAROUND,
 } from '@/lib/positioning';
@@ -47,7 +45,7 @@ const servicesSchema = {
       serviceType: 'Owned business infrastructure',
       provider: businessRef,
       description:
-        'An owned website and truth/discovery foundation: canonical business truth, entity graph, services and geography, corroboration, and machine discovery. Does not automatically include a production action endpoint.',
+        'An owned website and digital business foundation so AI can understand and evaluate the business. The client owns the site and infrastructure. Does not automatically include a live action endpoint.',
       areaServed: { '@type': 'Country', name: 'United States' },
     },
     {
@@ -63,12 +61,12 @@ const servicesSchema = {
         { '@type': 'Country', name: 'United States' },
       ],
       description:
-        'Custom Next.js websites, where appropriate, deployed to client-owned Vercel infrastructure and structured so people, search engines, and AI agents can read the same business truth. Fast sites are a component. The product is the owned system underneath.',
+        'An owned website and digital business foundation so people, search, and AI can read the same accurate information. Fast sites are a component. The product is the owned system underneath.',
       additionalProperty: [
-        { '@type': 'PropertyValue', name: 'Framework', value: 'Next.js (React) where appropriate' },
-        { '@type': 'PropertyValue', name: 'Hosting', value: 'Vercel — client-owned' },
-        { '@type': 'PropertyValue', name: 'Ownership', value: 'Client owns the repo, site, and deployed infrastructure' },
-        { '@type': 'PropertyValue', name: 'Action endpoint', value: 'Not included automatically' },
+        { '@type': 'PropertyValue', name: 'Stack', value: 'Owned website where that is the right path' },
+        { '@type': 'PropertyValue', name: 'Hosting', value: 'Client-owned hosting' },
+        { '@type': 'PropertyValue', name: 'Ownership', value: 'Client owns the site and the accounts it runs on' },
+        { '@type': 'PropertyValue', name: 'Live action', value: 'Not included automatically' },
       ],
     },
     {
@@ -78,7 +76,7 @@ const servicesSchema = {
       serviceType: 'Business infrastructure for the agent-driven web',
       provider: businessRef,
       description:
-        'Canonical identity, services, locations, policies, proof, and — when the business permits — a defined capability contract so AI can understand, verify, recommend, and take a controlled next step.',
+        'One reliable record of identity, services, locations, policies, and proof — and, when the business permits, approved next steps AI may take.',
     },
     {
       '@type': 'OfferCatalog',
@@ -96,7 +94,7 @@ const servicesSchema = {
       url: 'https://www.realestatewithshirin.com',
       creator: businessRef,
       description:
-        'Owned Next.js real-estate website with a connected entity graph — discovery evidence that visibility can follow clearer infrastructure.',
+        'Owned real-estate website — discovery evidence that visibility can follow clearer infrastructure.',
     },
     {
       '@type': 'CreativeWork',
@@ -105,7 +103,7 @@ const servicesSchema = {
       url: 'https://www.chelseyfanning.com',
       creator: businessRef,
       description:
-        'Owned Next.js real-estate website with a connected entity graph — discovery evidence that visibility can follow clearer infrastructure.',
+        'Owned real-estate website — discovery evidence that visibility can follow clearer infrastructure.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -118,13 +116,38 @@ const servicesSchema = {
   ],
 };
 
-const layerConsequences: Record<(typeof FIVE_LAYERS)[number]['name'], string> = {
-  Truth: 'So AI can state what you actually do, where you work, and what you will not do — instead of guessing.',
-  Capability: 'So it can tell a qualified request from one you do not take.',
-  Control: 'So it cannot pretend to book, price, or accept work you have not allowed.',
-  Action: 'So the next step, when there is one, is a step you approved.',
-  Distribution: 'So people, search, and AI can find the same agreed facts.',
-};
+const fiveLayers = [
+  {
+    n: '01',
+    name: 'Truth',
+    h: 'What is true about the business.',
+    d: 'Identity, services, area, credibility, policies, and limitations — one reliable record. AI can accurately explain what the business does and whether it serves the customer.',
+  },
+  {
+    n: '02',
+    name: 'Capability',
+    h: 'What can actually be requested.',
+    d: 'What a customer or their assistant may ask for. AI can distinguish a qualified request from what the business does not offer.',
+  },
+  {
+    n: '03',
+    name: 'Control',
+    h: 'Rules that keep the owner in charge.',
+    d: 'Invalid, unauthorized, abusive, or duplicate requests do not become false bookings or repeated leads.',
+  },
+  {
+    n: '04',
+    name: 'Action',
+    h: 'The next approved step.',
+    d: 'A consultation request, a qualified inquiry, an appointment request, or a handoff to a person. The relationship can move forward without AI inventing a price, booking, purchase, or acceptance. Not every client needs every action.',
+  },
+  {
+    n: '05',
+    name: 'Distribution',
+    h: 'The same accurate information, everywhere it is encountered.',
+    d: 'People, search, and AI see one consistent version of the business — not scattered or conflicting facts.',
+  },
+];
 
 const buyerNeeds = [
   { t: 'Know what is true', d: 'Services, geography, credentials, and limits have to be clear enough to evaluate.' },
@@ -139,45 +162,45 @@ const whoWeBuildFor = [
   'Realtors and real-estate teams',
   'Custom home builders and specialty trades',
   'Specialty dental, med spas, and other considered-purchase practices',
-  'Operators who already have a reputation worth making machine-usable',
+  'Operators who already have a reputation worth making understandable to AI',
 ];
 
 const offerPaths = [
   {
     n: '01',
     t: 'Foundation Build',
-    d: 'The owned foundation: a Next.js site where that is the right stack, canonical business truth, an entity graph, services and geography, corroboration, machine discovery, and a capability map. You own the GitHub repo and the Vercel deploy.',
-    note: 'This does not automatically include a production action endpoint. Most businesses need the foundation before a safe action can be scoped.',
+    d: 'An owned website and digital business foundation so AI can understand and evaluate the business. You own the site and the infrastructure.',
+    note: 'This does not automatically include a live action endpoint. Most businesses need the foundation before a safe action can be scoped.',
   },
   {
     n: '02',
     t: 'Agent Capability Build',
-    d: 'Custom-scoped after the real business rules are understood. One defined action at a time: a contract, validation, security and abuse controls, idempotency, human handoff, and production acceptance testing.',
-    note: 'No fixed public price. Different actions carry different rules and different risk. Booking, pricing, and checkout stay false until the business actually permits them.',
+    d: 'One clearly defined approved action, scoped after the real business rules are understood. It protects against invalid, unauthorized, abusive, or duplicate requests, returns an honest outcome, and hands the work to a person where required.',
+    note: 'No published price. Different actions carry different rules and different risk. Booking, pricing, and checkout stay unavailable until the business actually permits them.',
   },
   {
     n: '03',
     t: 'Platform Capability Layer — Pilot',
-    d: `For selected businesses that remain on WordPress, Wix, Squarespace, or similar platforms: ${PLATFORM_SIDECAR}. Truth and capability publication, and protected actions where appropriate. No WordPress plugin dependency.`,
-    note: 'This is a founding pilot, not a universally proven product. A full Next.js rebuild is still the strongest path. A sidecar may fit selected cases.',
+    d: 'For selected businesses that remain on WordPress, Wix, Squarespace, or similar platforms: an owned capability layer that can sit alongside the existing website, on infrastructure and a domain the client controls.',
+    note: 'This is a founding pilot. A full rebuild is still the strongest path.',
   },
 ];
 
 const processSteps = [
-  { w: 'PHASE 01', t: 'Discovery', d: 'We read the current site, the real services, the geography, the policies, and the actions the business will and will not permit.' },
-  { w: 'PHASE 02', t: 'Truth and architecture', d: 'We design the identity, services, locations, proof, and capability map. You approve it before the build starts.' },
-  { w: 'PHASE 03', t: 'Build', d: 'Page by page, live preview at every push. You review as we go.' },
-  { w: 'PHASE 04', t: 'Acceptance', d: 'Before we start we agree what the system must publish, what AI must be able to understand, and — when action is included — what the protected workflow must successfully do. The engagement is not complete until those agreed outputs pass the tests.' },
-  { w: 'PHASE 05', t: 'Handoff', d: 'Repo, hosting, and domain transferred to you. Walkthrough included. You own it. Active capabilities may still need maintenance.' },
+  { w: 'PHASE 01', t: 'Discovery', d: 'We read the current site, the real services, the area, the policies, and the actions the business will and will not permit.' },
+  { w: 'PHASE 02', t: 'Design', d: 'We design identity, services, locations, proof, and what may later be requested. You approve it before the build starts.' },
+  { w: 'PHASE 03', t: 'Build', d: 'Page by page, with a live preview as we go. You review along the way.' },
+  { w: 'PHASE 04', t: 'Acceptance', d: 'Before we start, we agree what must be published, what AI must be able to understand, and — when an action is included — what the approved workflow must successfully do. The engagement is not complete until those agreed outputs pass.' },
+  { w: 'PHASE 05', t: 'Handoff', d: 'The site, hosting, and domain transfer to you. Walkthrough included. You own it. Active capabilities may still need maintenance.' },
 ];
 
 const dontDo = [
-  { t: 'Chatbot agency work', d: 'We do not install a generic chatbot and call the business agent-ready.' },
-  { t: 'Generic AI automation', d: 'We do not wire tools to act on a business that has not first been modeled and controlled.' },
-  { t: 'SEO retainers', d: 'No monthly ranking packages. Visibility can be evidence that the infrastructure is clearer — it is not the category.' },
+  { t: 'Chatbot agency work', d: 'We do not install a generic chatbot and call the business ready for AI.' },
+  { t: 'Generic AI automation', d: 'We do not connect tools to act on a business that has not first been understood and controlled.' },
+  { t: 'SEO retainers', d: 'No monthly ranking packages. Visibility can follow clearer information — it is not the product.' },
   { t: 'Paid media', d: 'Not this practice. Plenty of people do that work well.' },
-  { t: 'MCP without the business', d: 'We will not publish a machine interface that has not reconciled what the business can actually do.' },
-  { t: 'Agents without control', d: 'No false booking, pricing, purchase, or acceptance. Fail closed. Hand off to a human when required.' },
+  { t: 'Actions before the business is understood', d: 'We will not connect AI to take actions before the real services, rules, and permissions are clear.' },
+  { t: 'Agents without control', d: 'No false booking, pricing, purchase, or acceptance. When judgment is required, the work goes to a person.' },
 ];
 
 const FG = 'var(--d-fg)';
@@ -215,10 +238,10 @@ export default function ServicesPage() {
           </h2>
           <div className="flex flex-col gap-5" style={{ maxWidth: '720px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              Existing tools often address one layer — visibility, schema, scheduling, automation, commerce, or governance. Service businesses still need those layers reconciled into one system AI can understand and take authorized next steps with.
+              Existing tools often address one piece — visibility, scheduling, automation, or commerce. Service businesses still need those pieces working as one system AI can understand and take authorized next steps with.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              {CONNECTIVE_LAYER} {LUXE_PROOF}
+              Kodecite connects what is true about the business, what may be requested, what the owner permits, owned infrastructure, and human handoff. {LUXE_PROOF}
             </p>
           </div>
         </GlassPanel>
@@ -232,11 +255,10 @@ export default function ServicesPage() {
           </h2>
           <div className="flex flex-col gap-5 mb-8" style={{ maxWidth: '720px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              The website, the entity graph, <code>llms.txt</code>, <code>agent.json</code>, forms, APIs, and a future MCP connection are components.
-              The product is the system that lets AI understand what you do, verify what is true, determine what you can and cannot do, recommend you accurately, take the next authorized action, return an honest outcome, and hand off to a human when required.
+              The product is the owned system that lets AI understand what you do, verify what is true, determine what you can and cannot do, recommend you accurately, take the next approved step, return an honest result, and hand the work to a person when required.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              A full Next.js rebuild is the strongest path. If you stay on WordPress, Wix, or Squarespace, we may still help selected businesses through a sidecar pilot. We will not pretend every platform is equal.
+              A complete rebuild is the strongest path. If you stay on WordPress, Wix, or Squarespace, we may still help selected businesses through an owned capability layer that sits alongside the existing site. We will not pretend every platform is equal.
             </p>
           </div>
 
@@ -288,11 +310,11 @@ export default function ServicesPage() {
             Model only what the <em className="serif" style={{ color: ACCENT }}>real business permits.</em>
           </h2>
           <p className="font-inter mb-12" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
-            Not every client needs every action. We do not invent a booking endpoint, a price, or an acceptance the business does not give.
+            Not every client needs every action. We do not invent a booking, a price, or an acceptance the business does not give.
           </p>
 
           <div className="flex flex-col gap-4">
-            {FIVE_LAYERS.map((l) => (
+            {fiveLayers.map((l) => (
               <article key={l.n} className="glass-panel-soft" style={{ padding: 'clamp(24px, 3vw, 34px)' }}>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="font-inter font-semibold" style={{ fontSize: '15px', color: ACCENT }}>{l.n}</span>
@@ -301,11 +323,8 @@ export default function ServicesPage() {
                 <h3 className="font-inter font-semibold mb-3" style={{ fontSize: 'clamp(19px, 2.4vw, 24px)', lineHeight: 1.2, letterSpacing: '-0.015em', color: FG }}>
                   {l.h}
                 </h3>
-                <p className="font-inter mb-3" style={{ fontSize: '15.5px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
+                <p className="font-inter" style={{ fontSize: '15.5px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
                   {l.d}
-                </p>
-                <p className="font-inter" style={{ fontSize: '14.5px', lineHeight: 1.6, color: ACCENT, fontWeight: 400, maxWidth: '720px' }}>
-                  {layerConsequences[l.name]}
                 </p>
               </article>
             ))}
@@ -331,7 +350,34 @@ export default function ServicesPage() {
         </GlassPanel>
       </section>
 
-      <ProductionProof />
+      <section id="live-production-proof" className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <div className="d-eyebrow mb-6">LIVE PRODUCTION PROOF</div>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '20ch' }}>
+            Luxe Window Works — a request an assistant could <em className="serif" style={{ color: ACCENT }}>find and submit.</em>
+          </h2>
+          <p className="font-inter mb-5" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
+            An outside AI found what Luxe permitted, established that the request qualified, and submitted one consultation request. Luxe received one email. Repeating the same request did not create another lead. Changing the request while reusing the same request identity was rejected. A person still follows up.
+          </p>
+          <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
+            That is not booking, calendar, pricing, checkout, or acceptance. {LUXE_PROOF}
+          </p>
+          <p className="font-inter mb-6" style={{ fontSize: '14px', lineHeight: 1.65, color: MUTE, fontWeight: 300, maxWidth: '720px' }}>
+            Public discovery contract:{' '}
+            <a
+              href={LUXE_CAPABILITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)', wordBreak: 'break-all' }}
+            >
+              luxewindowworks.com/api/capabilities/request-in-home-consultation
+            </a>
+          </p>
+          <Link href={LUXE_FLAGSHIP_HREF} className="d-btn d-btn-ghost">
+            Read the Luxe case study →
+          </Link>
+        </GlassPanel>
+      </section>
 
       <ProofWall />
 
@@ -360,12 +406,12 @@ export default function ServicesPage() {
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)', borderLeft: '2px solid rgba(93,213,255,0.55)' }}>
           <div className="d-eyebrow mb-6">WHAT YOU OWN</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.2vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
-            The repo. The site. <em className="serif" style={{ color: ACCENT }}>The deployed infrastructure.</em>
+            The site. The accounts. <em className="serif" style={{ color: ACCENT }}>The finished system.</em>
           </h2>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            You own the GitHub repository and the Vercel project. There is no mandatory retainer.
-            Active capabilities may use third-party services with direct costs. APIs, credentials, and security may need maintenance.
-            We do not claim an active endpoint runs forever without that work.
+            You own the finished website and the hosting and code accounts it runs on. There is no mandatory retainer.
+            Active capabilities may use third-party services with direct costs, and they may need occasional maintenance.
+            We do not claim a live action runs forever without that work.
           </p>
         </GlassPanel>
       </section>
@@ -415,7 +461,7 @@ export default function ServicesPage() {
             See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do</em> today.
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
-            The Agent Readiness Review is a written look at identity, services, geography, credentials, policies, machine discovery, action paths, and control gaps. {REVIEW_TURNAROUND} You keep the report either way.
+            The Agent Readiness Review is a written look at identity, services, area, credentials, policies, what AI can understand today, and where control is missing. {REVIEW_TURNAROUND} You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>

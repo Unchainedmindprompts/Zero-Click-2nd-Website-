@@ -3,7 +3,7 @@ import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
-import { PLATFORM_SIDECAR, PRICING_CONTEXT, REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
+import { PRICING_CONTEXT, REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Pricing',
@@ -47,7 +47,7 @@ const pricingSchema = {
         priceCurrency: 'USD',
         url: PAGE_URL,
         availability: 'https://schema.org/InStock',
-        description: 'One-time Foundation Build. You own the repo, site, and deployed infrastructure.',
+        description: 'One-time Foundation Build. You own the site and the accounts it runs on.',
       },
     },
     {
@@ -62,12 +62,12 @@ const pricingSchema = {
 };
 
 const whatYouGet = [
-  { t: 'An owned website foundation.', d: 'A Next.js site where that is the right stack, on GitHub and Vercel accounts you control. Fast, server-rendered pages for people and machines.' },
-  { t: 'Canonical business truth.', d: 'Identity, people, services, products, locations or areas, credentials, proof, policies, and limitations — one authoritative record instead of scattered pieces.' },
-  { t: 'A connected entity graph.', d: 'Stable identifiers, structured relationships, clean metadata, and corroborating sources so search engines and AI systems can check the same facts.' },
-  { t: 'Machine discovery.', d: 'llms.txt, agent.json, and related discovery files where they help. These are publication formats. They do not make every AI system read your business with certainty.' },
-  { t: 'A capability map.', d: 'What can be requested, what information is required, where you work, and what success does not mean. This is the map — not an automatic live action endpoint.' },
-  { t: 'Handoff you can operate.', d: 'You own the repo and the deploy. No mandatory retainer. If you later want a protected action, that is a separate Agent Capability Build.' },
+  { t: 'An owned high-performance website.', d: 'Fast pages for people, on accounts you control.' },
+  { t: 'One reliable record of the business.', d: 'Identity, services, locations, credentials, proof, policies, and limitations — not scattered pieces.' },
+  { t: 'Connected services, locations, credibility, and proof.', d: 'So search and AI can check the same facts.' },
+  { t: 'Published clearly for search and AI.', d: 'The same accurate information, published so people and assistants can find it. This does not make every system read the business with certainty.' },
+  { t: 'A map of actions AI may eventually request.', d: 'What can be asked for, what information is required, where you work, and what success does not mean. This is the map — not an automatic live action endpoint.' },
+  { t: 'A system and handoff the business can operate and own.', d: 'You own the site and the accounts it runs on. No mandatory retainer. A protected action later is a separate Agent Capability Build.' },
 ];
 
 const addOns = [
@@ -122,7 +122,7 @@ export default function PricingPage() {
             <span className="font-inter font-semibold" style={{ fontSize: 'clamp(30px, 4vw, 48px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: ACCENT }}>$4,995</span>
           </div>
           <p className="font-mono mb-8" style={{ fontSize: '12px', letterSpacing: '0.1em', color: MUTE }}>
-            ONE-TIME · YOU OWN THE REPO, SITE, AND DEPLOY · NO REQUIRED RETAINER
+            ONE-TIME · YOU OWN THE SITE AND THE ACCOUNTS · NO REQUIRED RETAINER
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
             The owned foundation AI can understand and evaluate. It does not automatically include a live agent-action
@@ -146,8 +146,8 @@ export default function PricingPage() {
           </div>
 
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            <strong style={{ color: FG, fontWeight: 600 }}>When it is done, it is yours</strong> — repository, site, and deployed infrastructure.
-            Active capabilities may use third-party services with direct costs. APIs, credentials, and security may need maintenance.
+            <strong style={{ color: FG, fontWeight: 600 }}>When it is done, it is yours</strong> — the website, the hosting, and the code accounts.
+            Active capabilities may use third-party services with direct costs. Credentials and security may need maintenance.
           </p>
         </GlassPanel>
       </section>
@@ -164,8 +164,8 @@ export default function PricingPage() {
               Different actions carry different rules, different risk, and different control requirements.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              We only scope this after the business rules are understood: required information, geography, validation, authorization,
-              rate limiting, idempotency, human follow-up, and what success does not mean. Production acceptance testing is part of the work.
+              We only scope this after the business rules are understood: required customer information, service area, permission checks,
+              protection from invalid, abusive, or duplicate requests, human follow-up, and a clear meaning of success. Checking the agreed result is part of the work.
             </p>
           </div>
         </GlassPanel>
@@ -178,8 +178,7 @@ export default function PricingPage() {
             Application-only. <em className="serif" style={{ color: ACCENT }}>No invented price.</em>
           </h2>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-            For selected businesses remaining on WordPress, Wix, Squarespace, or similar platforms: {PLATFORM_SIDECAR}.
-            Truth and capability publication, and protected actions where appropriate.
+            For selected businesses remaining on WordPress, Wix, Squarespace, or similar platforms: an owned capability layer that can sit alongside the existing website, on infrastructure and a domain you control.
             This is a founding pilot. A full rebuild is still the strongest path.
           </p>
         </GlassPanel>

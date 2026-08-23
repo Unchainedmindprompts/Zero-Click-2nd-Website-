@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
-import { ABOUT_MISSION, LUXE_PROOF, REVIEW_HREF, WEBSITE_ROLE } from '@/lib/positioning';
+import { ABOUT_MISSION, LUXE_PROOF, REVIEW_HREF } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'About KodeCite — Business truth before technology',
@@ -49,25 +49,25 @@ const layers = [
   {
     k: '3', t: 'CONTROL',
     q: 'Can it refuse the things you do not permit?',
-    d: 'Human confirmation, authorization, validation, rate limiting, idempotency, and fail-closed behavior. No false booking, pricing, purchase, or acceptance.',
+    d: 'Rules that keep the owner in charge. Invalid or unauthorized requests do not become false bookings, prices, purchases, or acceptance. Duplicates and abuse do not become repeated leads.',
   },
 ];
 
 const buildItems = [
-  'Canonical business truth before any file format',
-  'Owned Next.js / Vercel infrastructure where that is the right stack',
-  'Entity graph and structured data as delivery, not the product',
-  'Capability maps and, when permitted, protected actions',
-  'llms.txt and agent.json as discovery files — not a claim that every system reads them',
-  'Human handoff when the request requires a person',
-  'GitHub and Vercel accounts you own',
+  'One reliable record of the business',
+  'Infrastructure and accounts the client owns',
+  'Clear services, locations, credibility, and limits',
+  'Approved actions only when the business permits them',
+  'The same accurate information for people, search, and AI',
+  'Human follow-up when judgment is required',
+  'Site, hosting, and code accounts you own',
   'No mandatory retainer',
 ];
 
 const principles = [
-  { n: '01', h: 'You own everything.', d: 'Your repository, your domain, your hosting account. If the engagement ends, the business does not skip a beat.' },
+  { n: '01', h: 'You own everything.', d: 'Your website, your domain, your hosting account. If the engagement ends, the business does not skip a beat.' },
   { n: '02', h: 'No required retainer.', d: 'We scope, build, and hand off. If you need more later, we scope a new engagement. Active capabilities may still need maintenance and third-party costs.' },
-  { n: '03', h: 'Business truth comes before technology.', d: 'Schema, JSON, APIs, and MCP are delivery formats. The real product is an accurate business model plus controlled machine use.' },
+  { n: '03', h: 'Business truth comes before technology.', d: 'How information gets published is secondary. The product is an accurate picture of the business — and controlled use of it.' },
   { n: '04', h: 'Speak plainly. Show the work.', d: 'No jargon walls. No black boxes. Every recommendation is explained in language you can use to decide.' },
   { n: '05', h: 'Model only what the business permits.', d: 'We do not publish an action the owner has not authorized, and we do not call a consultation request a booking.' },
 ];
@@ -114,8 +114,8 @@ export default function AboutPage() {
           <div style={{ maxWidth: '720px' }}>
             <p className="font-inter mb-6" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
               The practice started with Luxe Window Works. The first job was to remain understandable when a customer — or their assistant — needed to evaluate fit:
-              identity, services, geography, and policies that could be checked instead of guessed.
-              {` ${WEBSITE_ROLE}`}
+              identity, services, area, and policies that could be checked instead of guessed.
+              The website remains the human-facing experience. The owned digital layer is the consistent representation of the same business.
             </p>
             <p className="font-inter" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
               That foundation made a second job possible. An outside AI discovered what Luxe allowed, established that a request qualified, and submitted one protected consultation request.
