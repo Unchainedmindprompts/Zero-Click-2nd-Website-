@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     template: '%s | KodeCite.ai',
   },
   description:
-    'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses.',
+    'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Kodecite keeps service businesses eligible by making them understandable, verifiable, and safely actionable — with the owner in control.',
   keywords: [
     'business infrastructure', 'agent-ready website', 'entity graph',
     'Schema.org implementation', 'capability contract', 'controlled action',
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'KodeCite.ai — Make your business usable by AI',
     description:
-      'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses.',
+      'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Kodecite keeps service businesses eligible by making them understandable, verifiable, and safely actionable — with the owner in control.',
     url: 'https://www.kodecite.ai',
     siteName: 'KodeCite.ai',
     images: [{ url: 'https://www.kodecite.ai/og-image.png?v=2', width: 1200, height: 630, alt: 'KodeCite.ai — AI-readable business infrastructure' }],
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'KodeCite.ai — Make your business usable by AI',
     description:
-      'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses.',
+      'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Kodecite keeps service businesses eligible by making them understandable, verifiable, and safely actionable — with the owner in control.',
     images: ['https://www.kodecite.ai/og-image.png?v=2'],
   },
   robots: {
@@ -122,7 +122,7 @@ const siteSchema = {
       },
       image: { '@id': 'https://www.kodecite.ai/#logo' },
       description:
-        'KodeCite.ai builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience. Luxe Window Works is production proof that this infrastructure can work.',
+        'KodeCite.ai builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. Luxe Window Works is production proof that this can work today.',
       email: 'mark@kodecite.ai',
       telephone: '+14803239740',
       priceRange: '$$',
@@ -152,7 +152,7 @@ const siteSchema = {
       url: 'https://www.kodecite.ai',
       homeLocation: { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
       description:
-        'Founder of KodeCite.ai, based in North Idaho. 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial. Builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses.',
+        'Founder of KodeCite.ai, based in North Idaho. 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial. Builds the owned digital business layer that helps AI understand a service business, determine fit, and take only the next steps the owner approves.',
       knowsAbout: [
         'Owned business infrastructure', 'Entity Graph Infrastructure', 'Schema.org Implementation',
         'Capability contracts', 'Controlled agent action', 'JSON-LD Schema Markup',

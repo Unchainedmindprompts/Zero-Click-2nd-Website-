@@ -3,12 +3,12 @@ import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
-import { FOUNDATION_BOUNDARY, PLATFORM_SIDECAR, REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
+import { PLATFORM_SIDECAR, PRICING_CONTEXT, REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
-    'Foundation Build — one-time $4,995 for an owned website, truth, and discovery foundation. A production action is a separately scoped Agent Capability Build.',
+    'Foundation Build — one-time $4,995 for the owned foundation AI can understand and evaluate. Agent Capability adds one approved action after the rules are clear. Foundation does not automatically include a live agent-action endpoint.',
   alternates: { canonical: `${ORIGIN}/pricing` },
 };
 
@@ -23,7 +23,7 @@ const pricingSchema = {
       url: PAGE_URL,
       name: 'Pricing — KodeCite.ai',
       description:
-        'Foundation Build — one-time $4,995 for an owned website, truth, and discovery foundation. Custom actions are scoped separately. No citation money-back guarantee.',
+        'Foundation Build — one-time $4,995 for the owned foundation AI can understand and evaluate. Custom actions are scoped separately. No citation money-back guarantee.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -95,7 +95,7 @@ export default function PricingPage() {
             Price the foundation. <em className="serif" style={{ color: ACCENT }}>Scope the action.</em>
           </h1>
           <p className="font-inter mb-9" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
-            {FOUNDATION_BOUNDARY} A protected production action is a separately scoped Agent Capability Build.
+            As customers begin to delegate outcomes to AI, the assistant has to understand the business and decide whether it fits. {PRICING_CONTEXT}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>
@@ -125,9 +125,9 @@ export default function PricingPage() {
             ONE-TIME · YOU OWN THE REPO, SITE, AND DEPLOY · NO REQUIRED RETAINER
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            The owned website / truth / discovery foundation. It does not include a custom protected action endpoint
-            for every client. If the business later needs a defined action — a consultation request, a qualified inquiry,
-            a controlled handoff — that is scoped as an Agent Capability Build.
+            The owned foundation AI can understand and evaluate. It does not automatically include a live agent-action
+            endpoint. If the business later needs a defined action — a consultation request, a qualified inquiry,
+            a controlled handoff — that is scoped as an Agent Capability Build after the rules are clear.
           </p>
 
           <p className="font-mono mb-5" style={{ fontSize: '10px', letterSpacing: '0.18em', color: ACCENT }}>WHAT YOU GET</p>

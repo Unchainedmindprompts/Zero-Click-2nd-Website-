@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
-import { LUXE_PROOF, REVIEW_HREF, THESIS, WEBSITE_ROLE } from '@/lib/positioning';
+import { ABOUT_MISSION, LUXE_PROOF, REVIEW_HREF, WEBSITE_ROLE } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'About KodeCite — Business truth before technology',
   description:
-    'Kodecite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. Founded by Mark Abplanalp in Coeur d\'Alene, Idaho.',
+    'Kodecite exists to keep service businesses inside the commercial decision process as customers increasingly delegate discovery, evaluation, and next steps to AI. Founded by Mark Abplanalp in Coeur d\'Alene, Idaho.',
   alternates: { canonical: 'https://www.kodecite.ai/about' },
 };
 
@@ -100,8 +100,7 @@ export default function AboutPage() {
             <em className="serif" style={{ color: ACCENT }}>technology.</em>
           </h1>
           <p className="font-inter" style={{ ...leadStyle, maxWidth: '660px' }}>
-            {THESIS} Schema, JSON, APIs, and a future MCP connection are how that infrastructure gets published.
-            The product is an accurate model of the business — and controlled machine use of it.
+            {ABOUT_MISSION} We build the owned digital business layer that helps AI understand what you do, determine when you are a good fit, recommend you accurately, and take only the next steps you approve.
           </p>
         </div>
       </section>
@@ -110,18 +109,18 @@ export default function AboutPage() {
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>01 / WHY KODECITE EXISTS</p>
           <h2 className="font-inter font-semibold mb-6" style={{ ...h2Style, maxWidth: '760px' }}>
-            Luxe needed to be understood. <em className="serif" style={{ color: ACCENT }}>Then it needed to be usable.</em>
+            Keep the business inside the <em className="serif" style={{ color: ACCENT }}>commercial decision.</em>
           </h2>
           <div style={{ maxWidth: '720px' }}>
             <p className="font-inter mb-6" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
-              The practice started with Luxe Window Works. The first job was accurate understanding and recommendation:
-              identity, entity, services, geography, and policies that machines could check instead of guess.
+              The practice started with Luxe Window Works. The first job was to remain understandable when a customer — or their assistant — needed to evaluate fit:
+              identity, services, geography, and policies that could be checked instead of guessed.
               {` ${WEBSITE_ROLE}`}
             </p>
             <p className="font-inter" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
-              That foundation made a second job possible: a live, protected in-home consultation capability.
-              An outside system can now discover what Luxe permits, submit a request, and get an honest outcome — without booking, pricing, or accepting a project.
-              Kodecite exists to make that kind of infrastructure repeatable for other service businesses.
+              That foundation made a second job possible. An outside AI discovered what Luxe allowed, established that a request qualified, and submitted one protected consultation request.
+              An honest result came back. Duplicate handling prevented a second request. A person still follows up — without booking, pricing, or accepting a project.
+              Kodecite exists to make that kind of owned infrastructure repeatable for other service businesses.
               {` ${LUXE_PROOF}`}
             </p>
           </div>

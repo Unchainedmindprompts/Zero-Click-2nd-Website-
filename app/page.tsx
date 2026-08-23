@@ -16,7 +16,7 @@ const webPageSchema = {
   url: 'https://www.kodecite.ai/',
   name: 'KodeCite.ai — Make your business usable by AI',
   description:
-    'Kodecite builds owned business infrastructure for the agent-driven web — so AI can understand what you offer, verify what is true, recommend you accurately, and take the next safe step with a customer.',
+    'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Kodecite keeps you eligible by making the business understandable, verifiable, and safely actionable — with only the next steps you approve.',
   inLanguage: 'en-US',
   isPartOf: { '@id': 'https://www.kodecite.ai/#website' },
   about: { '@id': 'https://www.kodecite.ai/#business' },

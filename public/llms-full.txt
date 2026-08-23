@@ -1,8 +1,8 @@
 # KodeCite.ai — Full Reference
 
-> KodeCite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience. The digital business layer is the verified, machine-facing representation of the same business. We make a business understandable, verifiable, recommendable, actionable, and controlled — so people, search engines, and AI agents can use the same authoritative record.
+> KodeCite builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. The website remains the human-facing experience. The digital business layer is the consistent owned representation of the same business. We make a business understandable, verifiable, recommendable, actionable, and controlled.
 
-As customers delegate more discovery and action to AI, businesses need to remain understandable, verifiable, and safely actionable inside the commercial decision loop. Luxe Window Works is production proof that this infrastructure can work.
+As customers begin to delegate discovery, evaluation, and next steps to AI, the assistant may evaluate a business before the customer visits. If it cannot establish fit or an approved next step, the business may never enter the customer’s decision. Luxe Window Works is production proof that this can work today.
 
 KodeCite.ai is based in North Idaho and builds for service businesses anywhere. The website, Next.js, schema, entity graph, llms.txt, agent.json, APIs, forms, and future MCP are components. The product is an accurate business model plus controlled machine use.
 

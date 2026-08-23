@@ -8,19 +8,16 @@ import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 import {
   CONNECTIVE_LAYER,
   FIVE_LAYERS,
-  FOUNDATION_BOUNDARY,
   LUXE_PROOF,
   PLATFORM_SIDECAR,
   REVIEW_HREF,
   REVIEW_TURNAROUND,
-  THESIS,
-  WEBSITE_ROLE,
 } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses. Foundation Build starts at $4,995.',
+    'When a customer delegates an outcome to AI, the assistant must know what is true, determine fit, know the actions you permit, and return an honest result or hand off. Foundation Build starts at $4,995.',
   alternates: { canonical: `${ORIGIN}/services` },
 };
 
@@ -35,7 +32,7 @@ const servicesSchema = {
       url: PAGE_URL,
       name: 'Services — KodeCite.ai',
       description:
-        'How Kodecite builds the trusted digital business layer for service businesses — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff.',
+        'How Kodecite keeps a service business inside the commercial decision as customers begin to delegate outcomes to AI — what is true, whether it fits, what actions are permitted, and an honest result or handoff.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -121,6 +118,21 @@ const servicesSchema = {
   ],
 };
 
+const layerConsequences: Record<(typeof FIVE_LAYERS)[number]['name'], string> = {
+  Truth: 'So AI can state what you actually do, where you work, and what you will not do — instead of guessing.',
+  Capability: 'So it can tell a qualified request from one you do not take.',
+  Control: 'So it cannot pretend to book, price, or accept work you have not allowed.',
+  Action: 'So the next step, when there is one, is a step you approved.',
+  Distribution: 'So people, search, and AI can find the same agreed facts.',
+};
+
+const buyerNeeds = [
+  { t: 'Know what is true', d: 'Services, geography, credentials, and limits have to be clear enough to evaluate.' },
+  { t: 'Determine fit', d: 'The assistant has to decide whether your business matches the request.' },
+  { t: 'Know permitted actions', d: 'It must see the next step you allow — and refuse the ones you do not.' },
+  { t: 'Return an honest result or hand off', d: 'If the work needs a person, the system says so and leaves follow-up with you.' },
+];
+
 const whoWeBuildFor = [
   'Established high-trust, high-value service businesses',
   'Premium home services — window treatments, remodels, HVAC, roofing',
@@ -186,7 +198,7 @@ export default function ServicesPage() {
             Infrastructure that lets AI understand — <em className="serif" style={{ color: ACCENT }}>and take authorized next steps with</em> — your business.
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
-            {THESIS} {WEBSITE_ROLE} Based in North Idaho. Built for service businesses anywhere.
+            When a customer delegates an outcome to AI, the assistant may evaluate your business before anyone visits. To keep you in that decision, it must know what is true, determine whether you fit, know the actions you permit, and return an honest result or hand the work to a person. Based in North Idaho. Built for service businesses anywhere.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>
@@ -248,6 +260,27 @@ export default function ServicesPage() {
         </GlassPanel>
       </section>
 
+      <section id="what-ai-must-do" className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <div className="d-eyebrow mb-6">BEFORE THE LAYERS</div>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '20ch' }}>
+            AI has to finish this work <em className="serif" style={{ color: ACCENT }}>before you stay in the decision.</em>
+          </h2>
+          <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
+            If it cannot complete these four jobs with confidence, the customer connection may end before it begins.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            {buyerNeeds.map((item, i) => (
+              <article key={item.t} className="glass-panel-soft" style={{ padding: 'clamp(22px, 3vw, 28px)' }}>
+                <p className="font-mono mb-3" style={{ fontSize: '10px', letterSpacing: '0.18em', color: ACCENT }}>{String(i + 1).padStart(2, '0')}</p>
+                <h3 className="font-inter font-semibold mb-2" style={{ fontSize: '17px', color: FG, letterSpacing: '-0.01em' }}>{item.t}</h3>
+                <p className="font-inter" style={{ fontSize: '14.5px', lineHeight: 1.6, color: DIM, fontWeight: 300 }}>{item.d}</p>
+              </article>
+            ))}
+          </div>
+        </GlassPanel>
+      </section>
+
       <section id="how-it-works" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THE FIVE LAYERS</div>
@@ -268,8 +301,11 @@ export default function ServicesPage() {
                 <h3 className="font-inter font-semibold mb-3" style={{ fontSize: 'clamp(19px, 2.4vw, 24px)', lineHeight: 1.2, letterSpacing: '-0.015em', color: FG }}>
                   {l.h}
                 </h3>
-                <p className="font-inter" style={{ fontSize: '15.5px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
+                <p className="font-inter mb-3" style={{ fontSize: '15.5px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
                   {l.d}
+                </p>
+                <p className="font-inter" style={{ fontSize: '14.5px', lineHeight: 1.6, color: ACCENT, fontWeight: 400, maxWidth: '720px' }}>
+                  {layerConsequences[l.name]}
                 </p>
               </article>
             ))}

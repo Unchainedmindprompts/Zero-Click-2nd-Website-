@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "name": "KodeCite.ai",
-  "description": "KodeCite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience.",
+  "description": "KodeCite builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. As customers begin to delegate discovery and next steps to AI, that layer keeps the business eligible for the commercial decision.",
   "url": "https://www.kodecite.ai",
-  "positioning": "Trusted digital business layer for service businesses. Existing tools often address individual layers; KodeCite connects verified truth, explicit capabilities, controlled actions, owned infrastructure, and human handoff. Luxe Window Works is production proof that this infrastructure can work. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
+  "positioning": "Owned digital business layer for service businesses. As customers begin to delegate outcomes to AI, the assistant may evaluate a business before the customer visits. KodeCite makes the business understandable, verifiable, and safely usable, with the owner controlling what AI may do. Luxe Window Works is production proof that this can work today. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
   "contact": {
     "location": "North Idaho",
     "service_area": ["North Idaho", "Pacific Northwest", "Remote — service businesses anywhere"]
@@ -75,7 +75,7 @@
       "type": "page",
       "title": "Start Here (FAQ)",
       "url": "https://www.kodecite.ai/faq",
-      "topic": "What usable by AI means for a service business, why it matters now, whether this is SEO or ChatGPT ranking, what AI can do, what Kodecite builds, how it works with an existing website, what Luxe Window Works proved, what it costs and who owns it, and whether a business is a good fit."
+      "topic": "What usable by AI means for a service business, why it matters as customers begin to delegate outcomes to AI, whether this is SEO or ChatGPT ranking, what AI can do, what Kodecite builds, how it works with an existing website, what Luxe Window Works proved, what it costs and who owns it, and whether a business is a good fit."
     },
     {
       "type": "page",
