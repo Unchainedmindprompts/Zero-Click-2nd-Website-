@@ -1,115 +1,83 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
-import {
-  AGREEMENT,
-  CONSEQUENCE,
-  FOUNDATION_BOUNDARY,
-  LUXE_PROOF,
-  MARKET_SHAPE,
-  PLATFORM_SIDECAR,
-  REVIEW_HREF,
-  REVIEW_TURNAROUND,
-  THESIS,
-  WEBSITE_ROLE,
-} from '@/lib/positioning';
+import { REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Start Here — Usable by AI',
   description:
-    'What “usable by AI” means: the trusted digital business layer that helps agents understand, evaluate, recommend, and take authorized next steps with a service business.',
+    'Plain answers about how Kodecite helps AI understand your business, recommend it accurately, and take only the next steps you approve.',
   alternates: { canonical: 'https://www.kodecite.ai/faq' },
 };
 
+// Visible Q&As and FAQPage schema share this list so they cannot drift.
 const faqs: { q: string; a: string | string[] }[] = [
   {
-    q: 'What does “usable by AI” mean?',
+    q: 'What does “usable by AI” mean for my business?',
     a: [
-      THESIS,
-      'It means a system can understand what the business does, evaluate what is true, determine what the business is allowed to do, recommend it accurately, take the next authorized action, return an honest outcome, and hand off to a human when required.',
-      'Finding a name in a search result is not the same thing. Usable means the business can be understood and safely used — not merely discovered.',
-    ],
-  },
-  {
-    q: 'Is this just ranking in ChatGPT?',
-    a: [
-      'Visibility in ChatGPT or other systems can follow clearer infrastructure. It is not the product.',
-      `${WEBSITE_ROLE} ${AGREEMENT}`,
-      CONSEQUENCE,
+      'AI can already find businesses. “Usable by AI” means it can accurately understand what you do, where you operate, who you serve, what makes you credible, and which actions you permit.',
+      'For a window-treatment company, that can mean recommending a qualified installer and submitting an approved consultation request. That is different from merely finding a name in search.',
+      'People stay in control.',
     ],
   },
   {
     q: 'Why does this matter now?',
-    a: CONSEQUENCE,
-  },
-  {
-    q: 'How is this different from AEO, GEO, or SEO?',
     a: [
-      'SEO, AEO, and GEO are discovery practices. They matter. They are layers, not the complete product.',
-      'Visibility in Google, Bing, ChatGPT, or other systems can be evidence that the infrastructure is clearer. It is not a promise, and it is not the whole job.',
+      'Customers are beginning to delegate more discovery, comparison, and next steps to AI. If AI cannot confidently understand and use your business, it may leave you outside the decision.',
+      'Websites and search still matter. This is about remaining clear when more of that work starts happening through AI.',
     ],
   },
   {
-    q: 'Does this still help with Google, Bing, and ChatGPT?',
-    a: 'Yes, when the same authoritative record is published for people, search engines, and agents. Clean identity, services, locations, and proof help traditional search and AI discovery. We treat that as a useful outcome of better infrastructure — not a guaranteed ranking or citation.',
-  },
-  {
-    q: 'How is this category shaped today?',
-    a: MARKET_SHAPE,
-  },
-  {
-    q: 'What is authoritative truth?',
-    a: 'One owned record of identity, people, services, products, locations, credentials, proof, policies, and limitations. Directories, reviews, and profiles should corroborate that record. When they conflict, machines lose confidence — and people get wrong answers.',
-  },
-  {
-    q: 'What is a capability contract?',
-    a: 'A machine-readable description of one action the business actually permits: required information, geography, available services, what success means, and what it does not mean. Luxe Window Works publishes an in-home consultation contract. That contract does not book, price, or check out a visit.',
-  },
-  {
-    q: 'What can agents actually do with a Kodecite business?',
+    q: 'Is this SEO or ranking in ChatGPT?',
     a: [
-      'Only what that business has modeled and permitted. Typical first actions are a consultation request, a qualified inquiry, an appointment request, or a controlled human handoff.',
-      `${FOUNDATION_BOUNDARY} Agent Capability Build implements one defined protected action after the rules are understood.`,
+      'Clearer information can support discovery in Google, Bing, ChatGPT, and similar systems. Visibility is not the complete product, and it is not a promise of rankings, citations, or traffic.',
+      'Discovery helps AI find the business. Kodecite helps AI understand, evaluate, and safely use the business.',
     ],
   },
   {
-    q: 'Will AI automatically book or purchase from my business?',
-    a: 'Not unless you explicitly permit that action, and even then only inside the controls we build. Kodecite does not treat a consultation request as a booking. We do not invent pricing, checkout, or project acceptance.',
-  },
-  {
-    q: 'Who decides what an agent is allowed to do?',
-    a: 'You do. The business owner sets permissions. We model only what the real business permits, then fail closed when a request is incomplete, out of area, conflicting, or unauthorized.',
-  },
-  {
-    q: 'What happens with duplicates or abuse?',
-    a: 'Protected actions use validation, rate limiting, and idempotency. A replay of the same valid request should return the original outcome instead of creating a second job. A same key with a changed payload should be rejected. Thresholds stay unpublished so they cannot be gamed.',
-  },
-  {
-    q: 'I am on WordPress, Wix, or Squarespace. Can you still help?',
+    q: 'What can AI actually do with my business?',
     a: [
-      `Yes, in selected cases. A full Next.js rebuild is the strongest path. For some businesses remaining on those platforms, a founding Platform Capability Layer pilot can publish truth and capability from ${PLATFORM_SIDECAR}. No WordPress plugin dependency.`,
-      'We will not claim those platforms are equivalent, and we will not claim they are invisible to every AI crawler. The honest problem is usually scattered truth and missing control — not a blank page in every case.',
+      'You decide what is permitted.',
+      'Approved actions can include submitting a consultation request, sending a qualified inquiry, requesting an appointment, or handing the customer to a person.',
+      'Kodecite does not automatically invent prices, schedule confirmed appointments, accept projects, or complete purchases unless you explicitly authorize and support those actions.',
     ],
   },
   {
-    q: 'Is this an API, an MCP server, a chatbot, or a website?',
-    a: 'Those are components. The product is the business model plus controlled machine use. A website, schema, JSON files, APIs, and a future MCP connection are how that model gets published and used. Kodecite’s own agent.json is identity and discovery only — this site does not currently accept autonomous agent submissions.',
+    q: 'What does Kodecite build?',
+    a: [
+      'Kodecite works in two stages.',
+      'Foundation Build — $4,995. An owned website and trusted digital business foundation so AI can understand and evaluate your business. It also identifies which agent actions could safely be added. It does not automatically include a live agent-action endpoint.',
+      'Agent Capability Build is separately scoped. It adds one protected approved action after the rules and boundaries are understood.',
+    ],
   },
   {
-    q: 'What did the Luxe production test prove?',
-    a: `That an outside agent could discover what Luxe permits, determine qualification, submit one valid in-home consultation request, receive an honest machine-readable outcome, and that a duplicate did not create a second email while a conflicting replay was rejected. It did not prove booking, pricing, checkout, or project acceptance. Those stayed unavailable. ${LUXE_PROOF}`,
+    q: 'Can this work with my existing website?',
+    a: [
+      'A complete rebuild is the strongest path. In selected cases, we can add an owned capability layer while your existing website remains.',
+      'Kodecite reviews your platform and recommends the most reliable path.',
+    ],
   },
   {
-    q: 'Who owns the work?',
-    a: 'You do. The repository, the site, and the deployed infrastructure transfer to you. There is no mandatory retainer and no platform that holds the site hostage.',
+    q: 'What did Luxe Window Works prove?',
+    a: [
+      'An outside AI found what Luxe permitted, determined the request qualified, and submitted one valid in-home consultation request. Luxe received one email. Repeating the same request did not create a duplicate. Changing the request while reusing the same request identity was rejected. A person still controls follow-up.',
+      'That proved a consultation-request capability — not automated booking, pricing, checkout, or project acceptance.',
+    ],
   },
   {
-    q: 'Does the system run forever without maintenance?',
-    a: 'The owned foundation can sit still. Active capabilities may use third-party services with direct costs. APIs, credentials, rate limits, and security may need maintenance. We do not claim an active endpoint operates forever without that work.',
+    q: 'What does it cost, and who owns it?',
+    a: [
+      'Foundation Build is $4,995. Agent Capability Build is separately scoped.',
+      'You own the repository, the website, and the deployed infrastructure. There is no mandatory retainer.',
+      'Active capabilities may have third-party costs and occasional maintenance.',
+    ],
   },
   {
-    q: 'Who is the best fit?',
-    a: 'Established, high-trust, high-value service businesses — operators who already have a reputation, defined services, and real rules about what they will and will not do. This is not a shortcut for a brand-new business with nothing to verify.',
+    q: 'Is my business a good fit?',
+    a: [
+      'This is for established service businesses making high-trust, high-value decisions. You have defined services and a defined area, existing reputation, credentials, reviews, or other proof, and clear rules about what you will and will not do. You want long-term owned infrastructure — not a temporary marketing tactic.',
+      'It is not a shortcut for a new business with nothing established or verifiable.',
+    ],
   },
 ];
 
@@ -173,10 +141,10 @@ export default function FAQPage() {
               lineHeight: 1.65,
               color: 'var(--d-fg-dim)',
               fontWeight: 300,
-              maxWidth: '580px',
+              maxWidth: '680px',
             }}
           >
-            Plain answers about the trusted digital business layer: truth, capabilities, controlled action, owned infrastructure, and human handoff.
+            Plain answers about how Kodecite helps AI understand your business, recommend it accurately, and take only the next steps you approve.
           </p>
         </div>
       </section>
