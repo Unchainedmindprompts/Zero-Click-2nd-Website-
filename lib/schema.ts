@@ -68,8 +68,8 @@ export const businessRef = { '@id': BUSINESS_ID } as const;
 // Canonical areaServed for the #business node (imported by app/layout.tsx so it
 // propagates to every page). Typed local City / AdministrativeArea nodes with
 // Wikipedia sameAs for entity resolution, plus Country so we stay nationally
-// declared — a local signal for "AEO agency North Idaho / Spokane" queries
-// without self-limiting to one market.
+// declared — a locality signal for North Idaho / Spokane without implying
+// the offer is geo-limited. Built for service businesses anywhere.
 export const businessAreaServed = [
   { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
   { '@type': 'City', name: 'Post Falls', sameAs: 'https://en.wikipedia.org/wiki/Post_Falls,_Idaho' },

@@ -24,9 +24,11 @@ export interface HomeSlide {
   headline: HomeSlideLine[];
   support: string;
   /** Optional second supporting paragraph, rendered directly under `support`
-   *  with slightly more emphasis (heavier weight + stronger text color). Only
-   *  the transformation slide uses this. */
+   *  with slightly more emphasis (heavier weight + stronger text color). */
   support2?: string;
+  /** Compact outcome / layer list. Used only when a slide needs five short
+   *  labels without turning the homepage into an architecture diagram. */
+  points?: string[];
   /** Suppress the "NN / NN — kicker" eyebrow. The intro/title slide's headline
    *  IS the tagline, so it carries no eyebrow (the KODECITE.AI wordmark already
    *  lives in the header). */
@@ -48,15 +50,15 @@ export const HOME_SLIDES: HomeSlide[] = [
     // ART DIRECTION: cinematic night city + glass office with warm interior
     // glow — the brand's opening title card. Dark plate (default theme) keeps
     // the white headline legible over the image.
-    id: 'intro',
-    kicker: 'High-Performance Websites Built to Be Recommended by AI',
+    id: 'outcome',
+    kicker: 'The trusted digital business layer',
     brandEyebrow: true,
     headline: [
-      { text: 'High-Performance Websites' },
-      { text: 'Built to Be Recommended by AI', accent: true },
+      { text: 'Make your business' },
+      { text: 'usable by AI.', accent: true },
     ],
     support:
-      'Fast, custom Next.js websites — engineered to be found, trusted, and recommended by AI search.',
+      'Kodecite builds the trusted digital business layer that makes your company understandable, verifiable, recommendable, and safely actionable by AI—while keeping you in control.',
     image: '/home/slide-intro.webp',
     bg:
       'radial-gradient(60% 80% at 72% 30%, rgba(200,140,60,0.14), transparent 60%),' +
@@ -68,15 +70,17 @@ export const HOME_SLIDES: HomeSlide[] = [
     // glass building / office on the right — "the AI web" as a place business
     // life happens. Natively text-free; the left scrim (kc-slide-bg__plate)
     // darkens the bright street so the real HTML headline/CTAs stay legible.
-    id: 'ai-web',
-    kicker: 'AI is already reading the web.',
+    id: 'behavior',
+    kicker: 'THE NEW CUSTOMER BEHAVIOR',
     headline: [
-      { text: 'Most business websites' },
-      { text: 'were never built to be' },
-      { text: 'understood by AI.', accent: true },
+      { text: 'Customers are asking' },
+      { text: 'AI to act — not just' },
+      { text: 'to find a name.', accent: true },
     ],
     support:
-      'KodeCite rebuilds business websites into AI-readable infrastructure — so AI systems can understand who you are, verify what you claim, and trust why you should be recommended.',
+      'Customers still search. Increasingly, they are also asking AI to compare options, evaluate businesses, and take the next step.',
+    support2:
+      'If your business cannot be reliably understood or safely acted upon, it may never enter the customer’s consideration set.',
     image: '/home/slide-ai-web.webp',
     bg:
       'radial-gradient(58% 78% at 76% 24%, rgba(93,213,255,0.22), transparent 60%),' +
@@ -90,15 +94,12 @@ export const HOME_SLIDES: HomeSlide[] = [
     id: 'problem',
     kicker: 'THE PROBLEM',
     headline: [
-      { text: 'AI can’t recommend' },
-      { text: 'what it can’t verify.', accent: true },
+      { text: 'Most businesses are' },
+      { text: 'spread across pieces', accent: true },
+      { text: 'AI cannot reconstruct.' },
     ],
     support:
-      'Most websites leave business identity, services, locations, proof, and next actions disconnected.',
-    // ART DIRECTION: warm golden-hour avenue framed by glass towers and lit
-    // interiors — the real-world business world the AI web has to read. Part of
-    // the cohesive urban photographic series with slide 1. Natively text-free;
-    // the left scrim (kc-slide-bg__plate) seats the headline over the bright street.
+      'Website, directories, forms, calendars, and unwritten rules live in different places. Tools usually cover one isolated layer — visibility, schema, scheduling, automation, commerce, or governance. AI may find pieces. It still cannot reliably reconstruct what the business can do or take an authorized next step.',
     image: '/home/slide-problem.webp',
     bg:
       'conic-gradient(from 210deg at 62% 38%, rgba(70,90,150,0.10), transparent 26%),' +
@@ -110,19 +111,23 @@ export const HOME_SLIDES: HomeSlide[] = [
     // ART DIRECTION: fragments beginning to align and flow into structure.
     // Elegant light paths, architectural clarity — the move from noise to
     // order. Left stays dark for text.
-    id: 'transformation',
-    kicker: 'THE TRANSFORMATION',
+    id: 'system',
+    kicker: 'THE KODECITE SYSTEM',
     headline: [
-      { text: 'From website to' },
-      { text: 'machine-readable foundation.', accent: true },
+      { text: 'One authoritative' },
+      { text: 'system.', accent: true },
     ],
     support:
-      'KodeCite connects your business, people, services, locations, citations, FAQs, and action paths into one connected, machine-readable foundation.',
+      'The website stays the human-facing experience. The digital business layer is the verified, machine-facing representation. Truth, services, geography, policies, permissions, capabilities, and actions have to agree.',
     support2:
-      'Today, that makes your business understandable and verifiable to AI. Tomorrow, that same foundation allows AI agents to confidently do business with you.',
-    // ART DIRECTION: bright golden-hour boardroom with a city skyline through
-    // glass — structure and clarity. Near-white render, so this slide uses the
-    // light treatment (dark text, no darkening of the image). Natively text-free.
+      'Recommendation is only one stage. The larger goal is safe agent participation.',
+    points: [
+      'Truth',
+      'Capability',
+      'Control',
+      'Action',
+      'Distribution',
+    ],
     image: '/home/slide-transformation.webp',
     theme: 'light',
     bg:
@@ -134,18 +139,17 @@ export const HOME_SLIDES: HomeSlide[] = [
     // ART DIRECTION: calm, resolved, premium, trusted. The portal / world is
     // open; the business identity reads as clear, structured, and ready. Left
     // stays dark for text.
-    id: 'outcome',
-    kicker: 'THE OUTCOME',
+    id: 'proof',
+    kicker: 'LIVE PRODUCTION PROOF',
     headline: [
-      { text: 'Understandable.' },
-      { text: 'Verifiable.' },
-      { text: 'Recommendable.' },
-      { text: 'Agent-ready.', accent: true },
+      { text: 'Discovered.' },
+      { text: 'Understood.' },
+      { text: 'Actioned.', accent: true },
     ],
-    support: 'Built once. Owned forever. Found by AI.',
-    // ART DIRECTION: golden-hour skyline terrace beside a glass office —
-    // resolved, calm, optimistic; the world is open. Bright render, so it uses
-    // the light treatment (dark text, image kept bright). Natively text-free.
+    support:
+      'Luxe Window Works publishes a machine-readable in-home consultation capability. An authorized production test submitted one valid request. It was accepted. The duplicate was suppressed. A conflicting replay was rejected. Booking, pricing, and checkout stayed unavailable.',
+    support2:
+      'Luxe Window Works is production proof that this infrastructure can work.',
     image: '/home/slide-outcome.webp',
     theme: 'light',
     bg:

@@ -37,7 +37,7 @@ export const proofCases: ProofCase[] = [
   {
     business: "Luxe Window Works — Coeur d'Alene",
     tagline:
-      "Our founder's own business, rebuilt on a KodeCite entity-graph foundation. When North Idaho homeowners ask AI who to hire, Luxe comes back first.",
+      "The founder's own window-treatment business. These screenshots are discovery evidence from April 1, 2026 — separate from the later production consultation test.",
     items: [
       {
         src: '/chatgpt-luxe-first-recommendation.jpeg',
@@ -73,7 +73,7 @@ export const proofCases: ProofCase[] = [
   {
     business: 'Real Estate With Shirin — North Idaho',
     tagline:
-      'A North Idaho realtor rebuilt on a KodeCite entity-graph foundation. When people ask AI for an agent — especially seniors looking for SRES-designated help — Shirin comes back by name, across engines.',
+      'A North Idaho realtor on a Kodecite-built, client-owned foundation. These screenshots are discovery evidence from April 1, 2026. AI answers vary and are not a permanent placement claim.',
     items: [
       {
         src: '/shirin-gemini-realtors-seniors.png',

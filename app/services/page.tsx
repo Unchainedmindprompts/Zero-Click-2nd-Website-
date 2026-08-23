@@ -2,22 +2,30 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
+import ProductionProof from '@/components/proof/ProductionProof';
 import ProofWall from '@/components/proof/ProofWall';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
+import {
+  CONNECTIVE_LAYER,
+  FIVE_LAYERS,
+  FOUNDATION_BOUNDARY,
+  LUXE_PROOF,
+  PLATFORM_SIDECAR,
+  REVIEW_HREF,
+  REVIEW_TURNAROUND,
+  THESIS,
+  WEBSITE_ROLE,
+} from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'We rebuild your website so AI engines — ChatGPT, Perplexity, Google AI, Bing Copilot, Gemini — can read it, trust it, and cite your business by name. Built once. Owned forever. No retainer.',
+    'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses. Foundation Build starts at $4,995.',
   alternates: { canonical: `${ORIGIN}/services` },
 };
 
 const PAGE_URL = `${ORIGIN}/services`;
 
-// Single @graph for /services, connected into the site-wide entity graph
-// (#website, #business, #logo in app/layout.tsx) via canonical @ids from
-// lib/schema.ts. The Foundation Build Service is the page's mainEntity;
-// its Offer (price) lives on /pricing.
 const servicesSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -27,7 +35,7 @@ const servicesSchema = {
       url: PAGE_URL,
       name: 'Services — KodeCite.ai',
       description:
-        'How KodeCite rebuilds your website so AI engines can read it, verify your business, and cite you by name.',
+        'How Kodecite builds the trusted digital business layer for service businesses — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -39,16 +47,16 @@ const servicesSchema = {
       '@type': 'Service',
       '@id': `${PAGE_URL}#foundation-build`,
       name: 'Foundation Build',
-      serviceType: 'AI Visibility Infrastructure',
+      serviceType: 'Owned business infrastructure',
       provider: businessRef,
       description:
-        'KodeCite rebuilds your website so AI engines can read it, verify your business, and cite you by name — a fast server-rendered site, a connected entity graph, answer-first pages, and aligned trust signals, then handed off to you. Owned forever. No retainer.',
+        'An owned website and truth/discovery foundation: canonical business truth, entity graph, services and geography, corroboration, and machine discovery. Does not automatically include a production action endpoint.',
       areaServed: { '@type': 'Country', name: 'United States' },
     },
     {
       '@type': 'Service',
       '@id': `${ORIGIN}/#service-web-development`,
-      name: 'High-Performance Website Development',
+      name: 'Owned Website and Truth Foundation',
       serviceType: 'Website Development',
       provider: businessRef,
       areaServed: [
@@ -58,24 +66,22 @@ const servicesSchema = {
         { '@type': 'Country', name: 'United States' },
       ],
       description:
-        'Custom, high-performance websites built on Next.js and deployed to client-owned Vercel edge infrastructure. Engineered for sub-1-second edge loads and strong Core Web Vitals, and structured with a full entity graph and JSON-LD so AI and traditional search can read, verify, and recommend the business. Not static digital business cards — sites built to perform and be found.',
+        'Custom Next.js websites, where appropriate, deployed to client-owned Vercel infrastructure and structured so people, search engines, and AI agents can read the same business truth. Fast sites are a component. The product is the owned system underneath.',
       additionalProperty: [
-        { '@type': 'PropertyValue', name: 'Framework', value: 'Next.js (React)' },
-        { '@type': 'PropertyValue', name: 'Hosting', value: 'Vercel Edge — client-owned' },
-        { '@type': 'PropertyValue', name: 'Load Performance', value: 'Sub-1s edge response' },
-        { '@type': 'PropertyValue', name: 'Core Web Vitals', value: 'Optimized — LCP, CLS, INP' },
-        { '@type': 'PropertyValue', name: 'Search Readiness', value: 'Entity graph + JSON-LD on every page' },
-        { '@type': 'PropertyValue', name: 'Ownership', value: 'Client owns the code and infrastructure' },
+        { '@type': 'PropertyValue', name: 'Framework', value: 'Next.js (React) where appropriate' },
+        { '@type': 'PropertyValue', name: 'Hosting', value: 'Vercel — client-owned' },
+        { '@type': 'PropertyValue', name: 'Ownership', value: 'Client owns the repo, site, and deployed infrastructure' },
+        { '@type': 'PropertyValue', name: 'Action endpoint', value: 'Not included automatically' },
       ],
     },
     {
       '@type': 'Service',
       '@id': `${ORIGIN}/#service-entity-graph`,
-      name: 'Entity Graph & Answer Engine Optimization',
-      serviceType: 'Answer Engine Optimization',
+      name: 'Business Truth and Capability Infrastructure',
+      serviceType: 'Business infrastructure for the agent-driven web',
       provider: businessRef,
       description:
-        'Schema.org deployed correctly as a connected entity graph — business, people, services, locations, citations, and FAQs linked into one machine-readable identity, plus llms.txt and agent.json, so AI systems can understand, verify, and cite the business.',
+        'Canonical identity, services, locations, policies, proof, and — when the business permits — a defined capability contract so AI can understand, verify, recommend, and take a controlled next step.',
     },
     {
       '@type': 'OfferCatalog',
@@ -93,7 +99,7 @@ const servicesSchema = {
       url: 'https://www.realestatewithshirin.com',
       creator: businessRef,
       description:
-        'High-performance Next.js real-estate website with a complete entity graph, built to be found and recommended by AI search.',
+        'Owned Next.js real-estate website with a connected entity graph — discovery evidence that visibility can follow clearer infrastructure.',
     },
     {
       '@type': 'CreativeWork',
@@ -102,7 +108,7 @@ const servicesSchema = {
       url: 'https://www.chelseyfanning.com',
       creator: businessRef,
       description:
-        'High-performance Next.js real-estate website with a complete entity graph, built to be found and recommended by AI search.',
+        'Owned Next.js real-estate website with a connected entity graph — discovery evidence that visibility can follow clearer infrastructure.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -116,61 +122,52 @@ const servicesSchema = {
 };
 
 const whoWeBuildFor = [
-  'High-end custom van builders',
+  'Established high-trust, high-value service businesses',
+  'Premium home services — window treatments, remodels, HVAC, roofing',
   'Realtors and real-estate teams',
-  'Custom home builders',
-  'Premium home services — remodels, HVAC, roofing, window treatments',
-  'Specialty dental — implants, cosmetic, ortho',
-  'Med spas and aesthetic practices',
-  'Any boutique specialist whose customers research before they buy',
+  'Custom home builders and specialty trades',
+  'Specialty dental, med spas, and other considered-purchase practices',
+  'Operators who already have a reputation worth making machine-usable',
 ];
 
-// F1 codename kept as a light nod (small tag); the plain-English outcome leads.
-const layers = [
+const offerPaths = [
   {
-    n: '01', code: 'CHASSIS',
-    h: 'A site AI can actually read.',
-    d: 'We rebuild your site so every page loads fully-formed, fast, and readable to every AI crawler — no blank pages, no missed content. This alone fixes the #1 reason businesses are invisible to AI.',
-    hood: 'a modern, server-rendered build on fast infrastructure.',
+    n: '01',
+    t: 'Foundation Build',
+    d: 'The owned foundation: a Next.js site where that is the right stack, canonical business truth, an entity graph, services and geography, corroboration, machine discovery, and a capability map. You own the GitHub repo and the Vercel deploy.',
+    note: 'This does not automatically include a production action endpoint. Most businesses need the foundation before a safe action can be scoped.',
   },
   {
-    n: '02', code: 'ENGINE',
-    h: 'An identity AI can verify.',
-    d: 'We wire your business, your people, your services, your location, and your credentials into a connected map AI reads to understand exactly who you are — then make sure it matches everywhere it needs to (Google, Bing, Apple, the major directories) so there are no contradictions. AI won’t recommend a business it can’t verify. This is the part everyone else charges a fortune for and explains badly. We just do it.',
-    hood: 'a hand-built entity graph.',
+    n: '02',
+    t: 'Agent Capability Build',
+    d: 'Custom-scoped after the real business rules are understood. One defined action at a time: a contract, validation, security and abuse controls, idempotency, human handoff, and production acceptance testing.',
+    note: 'No fixed public price. Different actions carry different rules and different risk. Booking, pricing, and checkout stay false until the business actually permits them.',
   },
   {
-    n: '03', code: 'AERO',
-    h: 'Answers AI can quote.',
-    d: 'Every page is written to answer the exact questions your customers ask, in a form an AI can lift word-for-word and credit you. When someone researches their decision, your page is the clean, quotable answer.',
-    hood: null,
-  },
-  {
-    n: '04', code: 'GRAPHICS',
-    h: 'Signals AI trusts.',
-    d: 'The connections, consistency, and authority markers AI engines look for before they’ll put you in an answer — all aligned so the whole thing holds together.',
-    hood: null,
+    n: '03',
+    t: 'Platform Capability Layer — Pilot',
+    d: `For selected businesses that remain on WordPress, Wix, Squarespace, or similar platforms: ${PLATFORM_SIDECAR}. Truth and capability publication, and protected actions where appropriate. No WordPress plugin dependency.`,
+    note: 'This is a founding pilot, not a universally proven product. A full Next.js rebuild is still the strongest path. A sidecar may fit selected cases.',
   },
 ];
 
 const processSteps = [
-  { w: 'PHASE 01', t: 'Discovery + audit', d: 'We read your current site, your goals, and the exact questions your customers ask. You get a plan: what’s kept, what’s rebuilt, what’s cut.' },
-  { w: 'PHASE 02', t: 'Architecture', d: 'We design the structure and the identity map, and you approve it before any real build starts.' },
+  { w: 'PHASE 01', t: 'Discovery', d: 'We read the current site, the real services, the geography, the policies, and the actions the business will and will not permit.' },
+  { w: 'PHASE 02', t: 'Truth and architecture', d: 'We design the identity, services, locations, proof, and capability map. You approve it before the build starts.' },
   { w: 'PHASE 03', t: 'Build', d: 'Page by page, live preview at every push. You review as we go.' },
-  { w: 'PHASE 04', t: 'Content + QA', d: 'Your content moves into the new system, checked across browsers, speed, and structure.' },
-  { w: 'PHASE 05', t: 'Handoff', d: 'Everything transferred to you — repo, hosting, domain. Walkthrough included. You own it.' },
+  { w: 'PHASE 04', t: 'Acceptance', d: 'Before we start we agree what the system must publish, what AI must be able to understand, and — when action is included — what the protected workflow must successfully do. The engagement is not complete until those agreed outputs pass the tests.' },
+  { w: 'PHASE 05', t: 'Handoff', d: 'Repo, hosting, and domain transferred to you. Walkthrough included. You own it. Active capabilities may still need maintenance.' },
 ];
 
 const dontDo = [
-  { t: 'Copywriting', d: 'We design the structure; your writer (or you) supplies the words. We can recommend writers we trust.' },
-  { t: 'Monthly retainers', d: 'No managed services, no ongoing fees. We build it, you own it.' },
-  { t: 'WordPress / Wix / Squarespace', d: 'We don’t build on platforms that can’t do this properly. If you’re committed to one, we’re not your team.' },
-  { t: 'Paid ads + social media', d: 'Not our practice. Plenty of great agencies do this.' },
-  { t: 'Chasing Reddit upvotes and “hacks”', d: 'We don’t play the gimmick game. Real AI visibility is structural — that’s the work we do.' },
-  { t: 'Guaranteed-rankings SEO packages', d: 'No keyword stuffing, no link farms, no snake oil.' },
+  { t: 'Chatbot agency work', d: 'We do not install a generic chatbot and call the business agent-ready.' },
+  { t: 'Generic AI automation', d: 'We do not wire tools to act on a business that has not first been modeled and controlled.' },
+  { t: 'SEO retainers', d: 'No monthly ranking packages. Visibility can be evidence that the infrastructure is clearer — it is not the category.' },
+  { t: 'Paid media', d: 'Not this practice. Plenty of people do that work well.' },
+  { t: 'MCP without the business', d: 'We will not publish a machine interface that has not reconciled what the business can actually do.' },
+  { t: 'Agents without control', d: 'No false booking, pricing, purchase, or acceptance. Fail closed. Hand off to a human when required.' },
 ];
 
-// shared text colors on glass
 const FG = 'var(--d-fg)';
 const DIM = 'rgba(233, 238, 255, 0.95)';
 const MUTE = 'rgba(219, 227, 255, 0.8)';
@@ -182,66 +179,61 @@ export default function ServicesPage() {
     <SecondaryPageShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
 
-      {/* ── Hero ─────────────────────────────────────────── */}
       <section className="secondary-section secondary-hero">
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">SERVICES · HOW IT WORKS</div>
-          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 4.8vw, 62px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
-            The website that makes AI <em className="serif" style={{ color: ACCENT }}>name your business.</em>
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 4.8vw, 62px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: FG, maxWidth: '18ch' }}>
+            Infrastructure that lets AI understand — <em className="serif" style={{ color: ACCENT }}>and take authorized next steps with</em> — your business.
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
-            Your customers are asking ChatGPT, Perplexity, and Google&apos;s AI who to hire — and those
-            answers now decide who gets the call. We rebuild your website so AI engines can read it,
-            trust it, and cite you by name, with proof it worked.
+            {THESIS} {WEBSITE_ROLE} Based in North Idaho. Built for service businesses anywhere.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/machine-read" className="d-btn d-btn-primary justify-center">Run My Free Machine Read →</Link>
+            <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>
             <Link href="/pricing" className="d-btn d-btn-ghost justify-center">See Pricing →</Link>
           </div>
         </GlassPanel>
       </section>
 
-      {/* ── Service areas (local landing pages) ──────────── */}
-      <section className="secondary-section" style={sectionGap}>
-        <Link href="/locations/coeur-dalene" className="glass-panel-soft secondary-jump" style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '18px 24px', textDecoration: 'none' }}>
-          <span className="font-mono flex-shrink-0" style={{ fontSize: '9px', letterSpacing: '0.16em', color: ACCENT }}>LOCAL</span>
-          <span className="font-inter flex-1" style={{ fontSize: '14.5px', color: DIM, fontWeight: 300 }}>
-            <span style={{ color: FG, fontWeight: 500 }}>Serving Coeur d&apos;Alene, Spokane, Post Falls &amp; North Idaho.</span>{' '}
-            AI search optimization, local.
-          </span>
-          <span style={{ color: ACCENT, fontSize: '15px', flexShrink: 0 }}>→</span>
-        </Link>
+      <section id="the-category" className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <div className="d-eyebrow mb-6">THE CATEGORY</div>
+          <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
+            Isolated layers are common. <em className="serif" style={{ color: ACCENT }}>A usable system is not.</em>
+          </h2>
+          <div className="flex flex-col gap-5" style={{ maxWidth: '720px' }}>
+            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+              Existing tools often address one layer — visibility, schema, scheduling, automation, commerce, or governance. Service businesses still need those layers reconciled into one system AI can understand and take authorized next steps with.
+            </p>
+            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
+              {CONNECTIVE_LAYER} {LUXE_PROOF}
+            </p>
+          </div>
+        </GlassPanel>
       </section>
 
-      {/* ── Website Development (positioning) ─────────────── */}
       <section id="website-development" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">WEBSITE DEVELOPMENT</div>
+          <div className="d-eyebrow mb-6">THE PRODUCT</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
-            High-Performance Websites <em className="serif" style={{ color: ACCENT }}>Built to Be Recommended by AI.</em>
+            Owned infrastructure for the <em className="serif" style={{ color: ACCENT }}>agent-driven web.</em>
           </h2>
           <div className="flex flex-col gap-5 mb-8" style={{ maxWidth: '720px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              KodeCite builds high-performance, custom <strong style={{ color: FG, fontWeight: 600 }}>Next.js</strong> websites on
-              infrastructure you own — fast, modern, server-rendered sites engineered so AI search engines can read,
-              trust, and recommend your business.
+              The website, the entity graph, <code>llms.txt</code>, <code>agent.json</code>, forms, APIs, and a future MCP connection are components.
+              The product is the system that lets AI understand what you do, verify what is true, determine what you can and cannot do, recommend you accurately, take the next authorized action, return an honest outcome, and hand off to a human when required.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              The website and the AI visibility aren&apos;t two services — they&apos;re{' '}
-              <strong style={{ color: FG, fontWeight: 600 }}>one build.</strong> The entity graph, the schema, the sub-second
-              speed, and the answer-first content are the same foundation: a site that&apos;s beautiful and fast for people,
-              and legible and citable for machines. You own the code, the repo, and the domain on handoff.
+              A full Next.js rebuild is the strongest path. If you stay on WordPress, Wix, or Squarespace, we may still help selected businesses through a sidecar pilot. We will not pretend every platform is equal.
             </p>
           </div>
 
-          {/* Visible service-type labels */}
           <div className="flex flex-wrap gap-2 mb-12">
-            {['Next.js Website Development', 'High-Performance Web Development', 'Entity-Graph AEO', 'Client-Owned Infrastructure'].map((t) => (
+            {['Truth', 'Capability', 'Control', 'Action', 'Distribution'].map((t) => (
               <span key={t} className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.08em', color: ACCENT, border: '1px solid rgba(93,213,255,0.35)', borderRadius: '999px', padding: '6px 14px' }}>{t}</span>
             ))}
           </div>
 
-          {/* Recent Builds — real client work (result lines are placeholders for Mark to fill) */}
           <p className="font-mono mb-4" style={{ fontSize: '10px', letterSpacing: '0.18em', color: MUTE }}>RECENT BUILDS</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="glass-panel-soft" style={{ padding: '24px 28px' }}>
@@ -256,44 +248,62 @@ export default function ServicesPage() {
         </GlassPanel>
       </section>
 
-      {/* ── The Problem ──────────────────────────────────── */}
-      <section className="secondary-section" style={sectionGap}>
+      <section id="how-it-works" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">THE PROBLEM</div>
-          <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '20ch' }}>
-            Your customers changed how they search.{' '}
-            <em className="serif" style={{ color: ACCENT }}>Your website didn&apos;t change how it shows up.</em>
+          <div className="d-eyebrow mb-6">THE FIVE LAYERS</div>
+          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
+            Model only what the <em className="serif" style={{ color: ACCENT }}>real business permits.</em>
           </h2>
-          <div className="flex flex-col gap-5" style={{ maxWidth: '680px' }}>
-            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              Ask any AI assistant about a decision like the one your customers make, and it confidently
-              names a few businesses. Those businesses get found before a single Google result loads. Right
-              now, for most local businesses, the AI names a competitor — not because they&apos;re better, but
-              because their website is <em>readable</em> to AI and yours isn&apos;t.
-            </p>
-            <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              Most sites can&apos;t be read by AI at all. A typical WordPress, Wix, or Squarespace site loads its
-              content with code that AI crawlers don&apos;t run — so when the AI looks at your page, it sees a
-              blank. You can be the best in your market and still be invisible to the tool your customers are
-              asking.
-            </p>
-            <p className="font-inter font-medium" style={{ fontSize: '17px', lineHeight: 1.6, color: FG }}>
-              That&apos;s the whole problem. <em className="serif" style={{ color: ACCENT }}>And it&apos;s fixable.</em>
-            </p>
+          <p className="font-inter mb-12" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
+            Not every client needs every action. We do not invent a booking endpoint, a price, or an acceptance the business does not give.
+          </p>
+
+          <div className="flex flex-col gap-4">
+            {FIVE_LAYERS.map((l) => (
+              <article key={l.n} className="glass-panel-soft" style={{ padding: 'clamp(24px, 3vw, 34px)' }}>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="font-inter font-semibold" style={{ fontSize: '15px', color: ACCENT }}>{l.n}</span>
+                  <span className="font-mono" style={{ fontSize: '9px', letterSpacing: '0.22em', color: MUTE }}>{l.name.toUpperCase()}</span>
+                </div>
+                <h3 className="font-inter font-semibold mb-3" style={{ fontSize: 'clamp(19px, 2.4vw, 24px)', lineHeight: 1.2, letterSpacing: '-0.015em', color: FG }}>
+                  {l.h}
+                </h3>
+                <p className="font-inter" style={{ fontSize: '15.5px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
+                  {l.d}
+                </p>
+              </article>
+            ))}
           </div>
         </GlassPanel>
       </section>
 
-      {/* ── Proof (existing ProofWall) ───────────────────── */}
+      <section className="secondary-section" style={sectionGap}>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+          <div className="d-eyebrow mb-6">THREE OFFER PATHS</div>
+          <div className="flex flex-col gap-4">
+            {offerPaths.map((o) => (
+              <article key={o.n} className="glass-panel-soft" style={{ padding: 'clamp(24px, 3vw, 34px)' }}>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="font-inter font-semibold" style={{ fontSize: '15px', color: ACCENT }}>{o.n}</span>
+                  <h3 className="font-inter font-semibold" style={{ fontSize: 'clamp(19px, 2.4vw, 24px)', color: FG }}>{o.t}</h3>
+                </div>
+                <p className="font-inter mb-3" style={{ fontSize: '15.5px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>{o.d}</p>
+                <p className="font-inter" style={{ fontSize: '13px', lineHeight: 1.55, color: MUTE, fontStyle: 'italic' }}>{o.note}</p>
+              </article>
+            ))}
+          </div>
+        </GlassPanel>
+      </section>
+
+      <ProductionProof />
+
       <ProofWall />
 
-      {/* ── Who we build for ─────────────────────────────── */}
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">WHO WE BUILD FOR</div>
           <p className="font-inter font-semibold mb-8" style={{ fontSize: 'clamp(20px, 2.6vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em', color: FG, maxWidth: '22ch' }}>
-            You&apos;re a fit if you&apos;re a <em className="serif" style={{ color: ACCENT }}>high-trust, high-ticket business</em> with a
-            real reputation and a buyer who takes time to decide:
+            Established, <em className="serif" style={{ color: ACCENT }}>high-trust, high-value</em> service businesses.
           </p>
           <ul className="flex flex-col gap-3 mb-8" style={{ maxWidth: '640px' }}>
             {whoWeBuildFor.map((w) => (
@@ -304,73 +314,33 @@ export default function ServicesPage() {
             ))}
           </ul>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: MUTE, fontWeight: 300, maxWidth: '680px' }}>
-            If your customers make a considered, expensive decision and research it first, this is built for
-            you. If you&apos;re a commodity or price-driven business where nobody researches, it isn&apos;t — and
-            we&apos;ll tell you that straight.
+            If your customers make a considered, expensive decision, this is built for you.
+            If you need a chatbot, a paid-media team, or an SEO retainer, we will tell you we are the wrong shop.
           </p>
         </GlassPanel>
       </section>
 
-      {/* ── How it works (four layers) ───────────────────── */}
-      <section id="how-it-works" className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">HOW IT WORKS</div>
-          <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
-            We rebuild your site into something AI can <em className="serif" style={{ color: ACCENT }}>read, trust, and quote.</em>
-          </h2>
-          <p className="font-inter mb-12" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
-            Under the hood it&apos;s serious engineering. What it <em>does</em> for you is simple: it turns your
-            business into the answer AI gives. Four layers do the work — you&apos;ll never see three of them, and
-            that&apos;s the point.
-          </p>
-
-          <div className="flex flex-col gap-4">
-            {layers.map((l) => (
-              <article key={l.n} className="glass-panel-soft" style={{ padding: 'clamp(24px, 3vw, 34px)' }}>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="font-inter font-semibold" style={{ fontSize: '15px', color: ACCENT }}>{l.n}</span>
-                  <span className="font-mono" style={{ fontSize: '9px', letterSpacing: '0.22em', color: MUTE }}>{l.code}</span>
-                </div>
-                <h3 className="font-inter font-semibold mb-3" style={{ fontSize: 'clamp(19px, 2.4vw, 24px)', lineHeight: 1.2, letterSpacing: '-0.015em', color: FG }}>
-                  {l.h}
-                </h3>
-                <p className="font-inter" style={{ fontSize: '15.5px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-                  {l.d}
-                </p>
-                {l.hood && (
-                  <p className="font-inter mt-4" style={{ fontSize: '13px', lineHeight: 1.5, color: MUTE, fontStyle: 'italic', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '14px' }}>
-                    Under the hood: {l.hood}
-                  </p>
-                )}
-              </article>
-            ))}
-          </div>
-        </GlassPanel>
-      </section>
-
-      {/* ── What you own ─────────────────────────────────── */}
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)', borderLeft: '2px solid rgba(93,213,255,0.55)' }}>
           <div className="d-eyebrow mb-6">WHAT YOU OWN</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.2vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
-            Everything. <em className="serif" style={{ color: ACCENT }}>With the keys.</em>
+            The repo. The site. <em className="serif" style={{ color: ACCENT }}>The deployed infrastructure.</em>
           </h2>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            When it&apos;s done, it&apos;s yours — the website, the code, the domain, all of it, transferred to your
-            account. <strong style={{ color: FG, fontWeight: 600 }}>No monthly retainer. No lock-in. You own it
-            forever.</strong> If you want help later, we scope a new project. We never rent you your own website.
+            You own the GitHub repository and the Vercel project. There is no mandatory retainer.
+            Active capabilities may use third-party services with direct costs. APIs, credentials, and security may need maintenance.
+            We do not claim an active endpoint runs forever without that work.
           </p>
         </GlassPanel>
       </section>
 
-      {/* ── How the engagement runs ──────────────────────── */}
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">HOW THE ENGAGEMENT RUNS</div>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
             Built in focused phases, with a live preview at every step — no big reveal at the end.
           </p>
-          <div className="mb-10">
+          <div className="mb-4">
             {processSteps.map((s, i) => (
               <div key={s.w} className="flex gap-6">
                 <div className="flex flex-col items-center flex-shrink-0" style={{ width: '12px' }}>
@@ -385,21 +355,12 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-          <p className="font-inter" style={{ fontSize: '15px', lineHeight: 1.6, color: MUTE, fontWeight: 300 }}>
-            Then we track your citations for 60 days to prove it worked.{' '}
-            <Link href="/pricing" style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>See the guarantee on the Pricing page →</Link>
-          </p>
         </GlassPanel>
       </section>
 
-      {/* ── What we don't do ─────────────────────────────── */}
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">WHAT WE DON&apos;T DO</div>
-          <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
-            We do one thing exceptionally well: build AI-native web infrastructure. Here&apos;s where we stop, so
-            you know who else to hire:
-          </p>
+          <div className="d-eyebrow mb-6">WHAT WE ARE NOT</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {dontDo.map((s) => (
               <div key={s.t} className="glass-panel-soft" style={{ padding: '22px 26px' }}>
@@ -411,37 +372,21 @@ export default function ServicesPage() {
         </GlassPanel>
       </section>
 
-      {/* ── Other ways to work together (demoted) ────────── */}
-      <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(28px, 4vw, 44px)' }}>
-          <div className="d-eyebrow mb-4">OTHER WAYS TO WORK TOGETHER</div>
-          <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-            Not ready for a full rebuild? If your site is structurally fine but the strategy isn&apos;t, we also do{' '}
-            <strong style={{ color: FG, fontWeight: 600 }}>audits and structure plans</strong> — a diagnosis and a
-            prioritized action plan your existing team can run. Ask about it on your{' '}
-            <Link href="/machine-read" style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>Machine Read</Link>.
-          </p>
-        </GlassPanel>
-      </section>
-
-      {/* ── Start here (final CTA) ───────────────────────── */}
       <section className="secondary-section" style={{ ...sectionGap, paddingBottom: '120px' }}>
         <GlassPanel style={{ padding: 'clamp(40px, 6vw, 72px)', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">START HERE</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
-            It always starts with a <em className="serif" style={{ color: ACCENT }}>free Machine Read.</em>
+            See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do</em> today.
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
-            We run real customer questions about your business across every major AI engine and show you exactly
-            where you stand — who&apos;s getting named, who isn&apos;t, and what it&apos;s costing you. Free. 48 hours. No
-            pitch. You keep the report either way, even if the answer is &ldquo;you don&apos;t need us.&rdquo;
+            The Agent Readiness Review is a written look at identity, services, geography, credentials, policies, machine discovery, action paths, and control gaps. {REVIEW_TURNAROUND} You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
-            <Link href="/machine-read" className="d-btn d-btn-primary">Run My Free Machine Read →</Link>
+            <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
             <Link href="/pricing" className="d-btn d-btn-ghost">See Pricing →</Link>
           </div>
           <p className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.14em', color: MUTE }}>
-            BUILT ONCE · OWNED FOREVER · FOUND BY AI
+            OWNED BY YOU · CONTROLLED BY YOU · READY FOR THE AGENT-DRIVEN WEB
           </p>
         </GlassPanel>
       </section>

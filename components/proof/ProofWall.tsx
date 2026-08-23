@@ -59,11 +59,12 @@ export default function ProofWall() {
     <section id="proof" className="secondary-section" style={{ marginTop: '30px' }}>
       <div className="glass-panel" style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
         {/* Header */}
-        <div className="d-eyebrow mb-5">PROOF · REAL AI ANSWERS, REAL QUERIES</div>
+        <div className="d-eyebrow mb-5">DISCOVERY PROOF · REAL AI ANSWERS, REAL QUERIES</div>
         <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '760px' }}>
-          Real answers from ChatGPT, Google AI Mode, Bing Copilot, and Gemini, captured
-          April 1, 2026. AI answers vary by user and change over time — these are real
-          results, not guarantees.
+          Visibility is one outcome of clearer infrastructure — not the product category.
+          These are real answers from ChatGPT, Google AI Mode, Bing Copilot, and Gemini,
+          captured April 1, 2026. AI answers vary by user and change over time. They are
+          evidence, not a guarantee of permanent placement.
         </p>
 
         {/* Engine strip */}

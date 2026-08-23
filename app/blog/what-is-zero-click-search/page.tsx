@@ -301,7 +301,7 @@ export default function WhatIsZeroClickSearch() {
                   Content Structure for AI Discoverability
                 </h3>
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Beyond schema, your site needs to load fast (under 2.5 seconds to Largest Contentful Paint), have clean heading structure that machines can traverse, and contain content that directly and concisely answers questions your customers are actually asking. Not content written for algorithms. Content written as answers — in plain language, with clear context and specific details. The businesses that will thrive in the next five years of search are not the ones with the most backlinks or the most content. They&apos;re the ones that look authoritative to a machine.
+                  Beyond schema, your site needs to load fast, have clean heading structure, and contain content that answers questions your customers actually ask. That is discovery work. Visibility in a zero-click answer is one layer. It is not a complete product. A business still has to be understandable, verifiable, and safe to act with after it has been found.
                 </p>
 
                 {/* Back to blog */}
@@ -351,7 +351,7 @@ export default function WhatIsZeroClickSearch() {
                     We audit your site&apos;s schema, Core Web Vitals, and content structure to identify exactly where AI crawlers lose you — and fix it.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get Your Free Audit
+                    Get Your Agent Readiness Review
                   </Link>
                 </div>
 

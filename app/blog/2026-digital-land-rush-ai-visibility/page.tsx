@@ -414,11 +414,11 @@ export default function DigitalLandRush2026() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
+                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> now builds owned business infrastructure — truth, capability, and control. Visibility can follow. We do not claim permanent AI placement.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Get your <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link> at <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
+                  Request an <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">Agent Readiness Review</Link> at <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
@@ -465,7 +465,7 @@ export default function DigitalLandRush2026() {
                     Find out exactly where your business is invisible to AI — and what it takes to fix it. No obligation.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get My Free Machine Read
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
@@ -513,11 +513,11 @@ export default function DigitalLandRush2026() {
             Don&apos;t Let Competitors Claim Your Digital Territory
           </h2>
           <p className="text-[rgba(240,232,216,0.6)] font-inter mb-8 leading-relaxed">
-            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
+            The False Legacy Layer is real — and it has an expiration date. An Agent Readiness Review shows what AI can understand, verify, and safely do with your business today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get My Free Machine Read
+              Request an Agent Readiness Review
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

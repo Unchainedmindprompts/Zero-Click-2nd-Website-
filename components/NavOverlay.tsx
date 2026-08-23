@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { href: '/blog',     label: 'Insights' },
   { href: '/about',    label: 'About' },
   { href: '/contact',  label: 'Contact' },
-  { href: '/machine-read',  label: 'Machine Read' },
+  { href: '/machine-read',  label: 'Agent Readiness Review' },
 ];
 
 /**
@@ -64,7 +64,7 @@ export default function NavOverlay({
 
       <div className="kc-overlay__meta">
         <span>KODECITE.AI</span>
-        <span>ENTITY INFRASTRUCTURE FOR THE AI WEB</span>
+        <span>OWNED INFRASTRUCTURE FOR THE AGENT-DRIVEN WEB</span>
       </div>
     </div>
   );

@@ -14,9 +14,9 @@ const webPageSchema = {
   '@type': 'WebPage',
   '@id': 'https://www.kodecite.ai/#webpage',
   url: 'https://www.kodecite.ai/',
-  name: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
+  name: 'KodeCite.ai — Make your business usable by AI',
   description:
-    'KodeCite rebuilds your website into a structured, source-backed entity foundation that AI search engines, answer engines, and future agents can understand, trust, and recommend.',
+    'Kodecite builds owned business infrastructure for the agent-driven web — so AI can understand what you offer, verify what is true, recommend you accurately, and take the next safe step with a customer.',
   inLanguage: 'en-US',
   isPartOf: { '@id': 'https://www.kodecite.ai/#website' },
   about: { '@id': 'https://www.kodecite.ai/#business' },

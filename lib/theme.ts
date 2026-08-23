@@ -22,8 +22,7 @@ const ROUTE_THEMES: ReadonlyArray<{ prefix: string; theme: KcTheme }> = [
   { prefix: '/blog',         theme: { bg: '#18181b', fg: '#fafafa' } },
   { prefix: '/faq',          theme: { bg: '#101018', fg: '#e4e4e7' } },
   { prefix: '/contact',      theme: { bg: '#050816', fg: '#fafafa' } },
-  // Machine Read — its own route today maps to /contact, but the dedicated
-  // theme is kept here for when a standalone Machine Read route ships.
+  // Agent Readiness Review lives at /machine-read (URL preserved).
   { prefix: '/machine-read', theme: { bg: '#07111f', fg: '#dbeafe' } },
 ];
 

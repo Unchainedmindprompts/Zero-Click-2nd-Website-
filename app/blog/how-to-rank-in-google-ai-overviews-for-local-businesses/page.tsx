@@ -585,7 +585,7 @@ export default function HowToRankInGoogleAIOverviews() {
                     We audit your schema, content structure, and NAP consistency — then fix what&apos;s keeping you out of AI Overviews.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get Your Free Audit
+                    Get Your Agent Readiness Review
                   </Link>
                 </div>
 

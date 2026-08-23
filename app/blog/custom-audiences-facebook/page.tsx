@@ -345,9 +345,9 @@ export default function CustomAudiencesFacebook() {
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <Link href="/blog/facebook-ads-local-business-2026" className="block group">
+                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
                       <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        Facebook Ads for Local Service Businesses: The Flywheel Method
+                        From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
                       </p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
                     </Link>

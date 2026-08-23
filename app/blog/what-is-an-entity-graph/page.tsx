@@ -410,7 +410,7 @@ export default function WhatIsAnEntityGraph() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your schema stack and entity signals — and show you exactly what AI systems can and can&apos;t understand about your business right now.
                   </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get My Free Machine Read</Link>
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Request an Agent Readiness Review</Link>
                 </div>
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
@@ -421,8 +421,8 @@ export default function WhatIsAnEntityGraph() {
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
                     </Link>
                     <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/why-is-my-website-traffic-dropping-2026" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">Why Is My Website Traffic Dropping in 2026?</p>
+                      <Link href="/blog/what-is-zero-click-search" className="block group">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">What Is Zero Click Search and Why Your Business Is Invisible</p>
                         <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                       </Link>
                     </div>
@@ -452,10 +452,10 @@ export default function WhatIsAnEntityGraph() {
             AI Systems Either Understand Your Business — or They Skip It Entirely
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
+            Visibility is one layer. The complete job is making the business understandable, verifiable, and safe to act with. An Agent Readiness Review shows where you stand today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Get My Free Machine Read</Link>
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Request an Agent Readiness Review</Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read More Articles</Link>
           </div>
         </div>

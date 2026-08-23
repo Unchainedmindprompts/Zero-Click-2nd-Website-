@@ -377,13 +377,13 @@ export default function WhenCustomerStopsSearchingPage() {
               <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-8 mt-12 mb-8">
                 <p className="font-inter font-semibold text-[var(--d-accent)] mb-3">Not sure where you stand?</p>
                 <p className="font-inter text-[var(--d-fg-mute)] leading-relaxed mb-5">
-                  Get a free AI Scaffolding Audit — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews. By the end of the audit, you&apos;ll know whether you can get away with tuning what you already have or whether you&apos;re better off with a rebuild. No pitch. No pressure.
+                  Request an Agent Readiness Review — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews. By the end of the audit, you&apos;ll know whether you can get away with tuning what you already have or whether you&apos;re better off with a rebuild. No pitch. No pressure.
                 </p>
                 <a
                   href="/machine-read"
                   className="inline-block bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
-                  Get My Free Machine Read
+                  Request an Agent Readiness Review
                 </a>
               </div>
 
@@ -418,14 +418,14 @@ export default function WhenCustomerStopsSearchingPage() {
                 </div>
 
                 <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-6">
-                  <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-3">Free Audit</p>
+                  <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-3">Agent Readiness Review</p>
                   <p className="font-inter text-xl text-white mb-3">Find Out Where You Stand</p>
                   <p className="font-inter text-sm text-[var(--d-fg-mute)] mb-5 leading-relaxed">See exactly how your business appears in AI today — and whether your infrastructure is ready for what&apos;s coming.</p>
                   <a
                     href="/machine-read"
                     className="block text-center bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
                   >
-                    Get My Free Machine Read
+                    Request an Agent Readiness Review
                   </a>
                 </div>
 
@@ -437,14 +437,14 @@ export default function WhenCustomerStopsSearchingPage() {
                       <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">10 min read</p>
                     </a>
                     <div className="border-t border-[var(--d-line-s)] pt-4">
-                      <a href="/blog/false-legacy-layer-ai-visibility" className="block group">
-                        <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The False Legacy Layer: Why Your AI Mentions Today Could Disappear Tomorrow</p>
+                      <a href="/blog/the-shortlist-problem" className="block group">
+                        <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The Shortlist Problem: Why AI Will Recommend One Local Business</p>
                         <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">9 min read</p>
                       </a>
                     </div>
                     <div className="border-t border-[var(--d-line-s)] pt-4">
-                      <a href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
-                        <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">The 2026 Digital Land Rush: Why Waiting Could Cost You Everything</p>
+                      <a href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
+                        <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents</p>
                         <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">8 min read</p>
                       </a>
                     </div>
@@ -467,14 +467,14 @@ export default function WhenCustomerStopsSearchingPage() {
             Find Out If Your Business Is Ready
           </h2>
           <p className="font-inter text-[var(--d-fg-mute)] text-lg mb-10 leading-relaxed">
-            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
+            Visibility is one layer. The complete job is making the business understandable, verifiable, and safe to act with. An Agent Readiness Review shows where you stand today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/machine-read"
               className="bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
             >
-              Get My Free Machine Read
+              Request an Agent Readiness Review
             </a>
             <a
               href="/blog"

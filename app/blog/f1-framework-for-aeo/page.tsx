@@ -468,7 +468,7 @@ export default function F1FrameworkForAEO() {
                   <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
                     We audit your chassis, engine, and aero — and show you exactly where the gaps are before you spend another dollar on graphics.
                   </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Get My Free Machine Read</Link>
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Request an Agent Readiness Review</Link>
                 </div>
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
@@ -485,8 +485,8 @@ export default function F1FrameworkForAEO() {
                       </Link>
                     </div>
                     <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/why-is-my-website-traffic-dropping-2026" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">Why Is My Website Traffic Dropping in 2026?</p>
+                      <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
+                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents</p>
                         <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                       </Link>
                     </div>
@@ -510,10 +510,10 @@ export default function F1FrameworkForAEO() {
             Fix the Foundation. Then Everything Else Compounds.
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
+            The False Legacy Layer is real — and it has an expiration date. An Agent Readiness Review shows what AI can understand, verify, and safely do with your business today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Get My Free Machine Read</Link>
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Request an Agent Readiness Review</Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read More Articles</Link>
           </div>
         </div>

@@ -207,7 +207,7 @@ export default function CinematicHomeSlider() {
         style={{ maxWidth: '1320px', bottom: 'clamp(72px, 9vh, 108px)' }}
       >
         <Link href="/machine-read" className="d-btn d-btn-primary w-full sm:w-auto justify-center">
-          Run My Free Machine Read →
+          Request an Agent Readiness Review →
         </Link>
         <Link href="/faq" className="d-btn d-btn-ghost w-full sm:w-auto justify-center">
           Start Here

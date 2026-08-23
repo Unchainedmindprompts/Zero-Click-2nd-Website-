@@ -3,16 +3,16 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Why Now: The AI Land Grab',
+  title: 'Why Now: Businesses Need a Usable Model, Not Just Visibility',
   description:
-    'Hundreds of billions committed, hardware shipping, AI agents routing around invisible businesses. Why the window to claim AI visibility is closing fast.',
+    'Customers already ask AI. Finding a name is not enough. A business needs one owned record of what is true, what is allowed, and what a safe next step is.',
   alternates: {
     canonical: 'https://www.kodecite.ai/why-now',
   },
   openGraph: {
-    title: 'Why Now — The AI Land Grab Is Already Underway',
+    title: 'Why Now — Usable by AI, Not Just Findable',
     description:
-      "The biggest companies in the world aren't spending hundreds of billions to make better memes. They're rebuilding how customers find businesses. Here's what that means for yours.",
+      'Large companies are rebuilding how customers find and act with businesses. The practical response is owned infrastructure — not a land grab and not a citation guarantee.',
     url: 'https://www.kodecite.ai/why-now',
     type: 'article',
   },
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Why Now — The AI Land Grab Is Already Underway',
+  headline: 'Why Now — Usable by AI, Not Just Findable',
   description:
-    "Hundreds of billions committed. Hardware shipping. AI agents routing around invisible businesses. Here's why the window to claim your AI search territory is open right now.",
+    'Customers already ask AI. Finding a name is not enough. A business needs one owned record of what is true, what is allowed, and what a safe next step is.',
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
@@ -40,11 +40,11 @@ const articleSchema = {
     url: 'https://www.kodecite.ai',
   },
   about: [
-    'Answer Engine Optimization',
-    'AI Search Visibility',
-    'Agent-to-Agent Economy',
+    'Owned business infrastructure',
+    'Agent-ready businesses',
+    'Capability contracts',
+    'Controlled action',
     'AI Hardware',
-    'Local Business Marketing',
     'llms.txt',
     'agent.json',
   ],
@@ -79,7 +79,7 @@ const faqSchema = {
       name: 'Why do businesses need to optimize for AI search now?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI systems including ChatGPT, Perplexity, and Google AI Overviews are already handling hundreds of millions of searches per day. The authority signals these systems use to decide who to recommend are being established now — before AI hardware like the OpenAI/Jony Ive device ships in early 2027. Businesses that build machine-readable infrastructure today claim territory before the mainstream wave arrives.',
+        text: 'People already ask ChatGPT, Perplexity, and Google AI. Hardware may change the interface later. The practical work now is publishing one owned record of what the business is, what it can do, and what a safe next step is. That is not a land grab and not a promise of permanent placement.',
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: 'What is llms.txt and why does my business need one?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "llms.txt is a plain text file placed at your domain root that acts as a digital ID card for AI systems. It tells every major AI model — ChatGPT, Claude, Gemini, Perplexity — exactly who your business is, what you do, where you're located, and what topics to cite you for. Adoption is currently under 1% among local businesses, making it a significant first-mover opportunity.",
+        text: "llms.txt is a plain-text discovery file at the domain root. Some AI systems look for it. Not every system reads it. It does not make AI know a business with certainty. KodeCite publishes one as a component of distribution — not as the product.",
       },
     },
     {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: 'What is agent.json?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'agent.json is a machine-readable file that tells AI agents what your business offers and how to interact with it — booking, referrals, service queries. As AI helpers become capable of taking actions on behalf of users, this file creates a direct line between your business and the systems making recommendations. Virtually no local businesses have one yet.',
+        text: 'agent.json is a machine-readable discovery file. On KodeCite.ai it is identity and discovery only. It does not accept autonomous agent submissions. A real action requires a published capability, validation, and control — and only when the business permits it.',
       },
     },
     {
@@ -111,15 +111,15 @@ const faqSchema = {
       name: 'How long does it take to see results from AI search optimization?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Technical wins appear in 30–60 days: schema errors clear, rich results appear, page speed improves. AI systems begin recognizing your business as a trusted entity within 60–90 days. The compounding effect — consistent AI recommendations over competitors — builds over 3–6 months and accelerates from there.',
+        text: 'Technical cleanup can show quickly when pages are fast and schema is valid. Recommendation and action are separate. We do not publish a time-to-citation or promise that a specific engine will name the business.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is a free AI Scaffolding Audit?',
+      name: 'What is an Agent Readiness Review?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "A free assessment of what AI systems currently see when they look at your business. KodeCite.AI checks your structured data health, page speed, llms.txt and agent.json presence, and overall AI citation authority — then shows you exactly where you stand compared to competitors in your market. No obligation, takes about 15 minutes.",
+        text: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, credentials, policies, discovery, action paths, and control gaps. Free within two business days. It is a review request, not a booking.",
       },
     },
   ],
@@ -147,11 +147,11 @@ export default function WhyNowPage() {
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="eyebrow mb-4">WHY NOW</p>
           <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight max-w-4xl">
-            The Shift Is{' '}
-            <span className="text-[#a0723a]">Already Here.</span>
+            Finding you is not the same as{' '}
+            <span className="text-[#a0723a]">being usable.</span>
           </h1>
           <p className="font-cormorant italic text-2xl md:text-3xl text-[#6a5a48] max-w-3xl leading-relaxed">
-            Most businesses don&apos;t see it yet. The ones that do are moving now.
+            Customers already ask AI. The work is publishing what is true, what is allowed, and what a safe next step is.
           </p>
         </div>
       </section>
@@ -171,7 +171,7 @@ export default function WhyNowPage() {
                 They&apos;re building the highways, the railways, and the electric grid of a new economy. The infrastructure that everything else will run on. And one of the changes that comes with that shift is how people discover and interact with businesses like yours.
               </p>
               <p>
-                This isn&apos;t something coming in five years. It&apos;s happening right now, on every phone in every pocket. The hardware just makes it impossible to ignore.
+                That change is already on phones. Hardware may make it louder later. The practical response is owned infrastructure — not a land grab, and not a promise that every AI system will read a discovery file.
               </p>
             </div>
           </ScrollReveal>
@@ -260,7 +260,7 @@ export default function WhyNowPage() {
                 Think of it like having a neon sign vs. a handwritten note in a dark window. Both exist. Only one gets seen.
               </p>
               <p>
-                Businesses with the right setup get recommended. Businesses without it get skipped entirely — not penalized, just invisible. And the AI moves on in milliseconds.
+                A business with a clear, owned record is easier to understand and safer to recommend. A business without one can still exist and still be found in pieces. The gap is reliability, not a claim that every other site is invisible.
               </p>
             </div>
           </ScrollReveal>
@@ -417,16 +417,16 @@ export default function WhyNowPage() {
                 But here&apos;s what doesn&apos;t have variables: the AI systems are live right now. ChatGPT has over <strong className="text-[#0a0806]">300 million weekly users</strong>. Google&apos;s AI answers appear on over a <strong className="text-[#0a0806]">billion searches every day</strong>. Perplexity is growing fast. The recommendations those systems are making today are being shaped by the signals businesses have already put in place.
               </p>
               <p>
-                You have time — if you start soon. The setup that makes you visible to AI happens now, before the devices ship and before everyone rushes to do what you&apos;ve already done.
+                Hardware timelines have variables. The work that does not depend on a ship date is publishing one owned record of the business.
               </p>
               <p>
                 And even if the hardware takes a bit longer to go mainstream — 2027 or 2028 for most people — the AI answers happening on phones today are already shifting recommendations right now.
               </p>
               <p>
-                Waiting until these gadgets are everywhere means higher costs, tougher competition, and markets where the best positions are already taken.
+                Waiting does not make the underlying problem disappear. It also does not mean a competitor automatically owns a permanent slot.
               </p>
               <p>
-                The businesses that move in the next 6–12 months are the ones that own their category when the wave fully arrives.
+                The useful move is the same either way: make the business understandable, verifiable, and safe to act with.
               </p>
             </div>
           </ScrollReveal>
@@ -448,27 +448,27 @@ export default function WhyNowPage() {
             {[
               {
                 q: "I'm not very technical. Is this something I can actually understand?",
-                a: "Yes — and that's the whole point. You don't need to understand how any of this works under the hood. You need to understand that your competitors are either already doing it or don't know it exists yet. We handle every technical piece. You just need to decide whether you want to be early or late.",
+                a: "Yes. You need to understand what is true about the business, what a customer can request, and what must stay human. We handle the technical pieces. We do not sell early-or-late fear.",
               },
               {
                 q: 'How is this different from regular SEO?',
-                a: "Traditional SEO gets you in front of people who are already searching on Google. AI search optimization gets you recommended by AI systems before someone even thinks to search — and soon, by devices that are proactively surfacing businesses in real-time based on context. They work together, but AI optimization is the newer, less crowded layer.",
+                a: "SEO, AEO, and GEO overlap as discovery. They help people and engines find a business. The complete job is publishing one owned record so a system can understand the business, know what it is allowed to do, and take the next safe step when you permit it.",
               },
               {
                 q: 'What exactly is a "digital ID card" for my business?',
-                a: 'It\'s a simple file that lives on your website called llms.txt. It tells every major AI model — ChatGPT, Claude, Gemini, Perplexity — exactly who you are, what you do, where you\'re located, what topics to cite you for, and how to send customers to you. Think of it like your business\'s entry in an AI-readable directory. Most businesses don\'t have one. Adoption is currently under 1% among local businesses.',
+                a: 'llms.txt is a plain-text discovery file. Some AI systems look for it. Not every system reads it. It does not make AI know a business with certainty. It is a distribution component — not the product.',
               },
               {
                 q: 'What\'s the "AI agent" file you mentioned?',
-                a: "It's called agent.json. As AI helpers become more capable of taking actions — booking appointments, comparing services, routing referrals — this file tells them what your business offers and how to interact with it. It's like setting up a direct line between your business and the AI systems that will be making recommendations. It doesn't exist yet at most businesses.",
+                a: "agent.json is a machine-readable discovery file. On KodeCite.ai it is identity and discovery only. It does not accept autonomous submissions. A real action needs a published capability and control — only when the business permits it.",
               },
               {
                 q: 'How long before I see results?',
-                a: 'Technical wins show up in 30–60 days — your business starts appearing in rich results, schema errors clear, page speed improves. AI systems start recognizing your business as a trusted entity within 60–90 days. The compounding effect — where AI consistently recommends you over competitors — builds over 3–6 months and accelerates from there.',
+                a: 'Technical cleanup can show quickly when pages are fast and schema is valid. Recommendation and action are separate. We do not publish a time-to-citation or promise that a specific engine will name the business.',
               },
               {
-                q: "What's the free audit?",
-                a: "A straightforward look at what AI systems currently see when they look at your business. We check your structured data, your page speed, whether you have the right signals in place, and how you compare to competitors in your market. No sales pressure. Just an honest picture of where you stand today. Takes about 15 minutes on our end.",
+                q: "What's the free review?",
+                a: "An Agent Readiness Review looks at what AI can understand, verify, and safely do with the business today. Free written review within two business days. It is a review request, not a booking.",
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 80}>
@@ -490,15 +490,15 @@ export default function WhyNowPage() {
           <ScrollReveal>
             <p className="eyebrow mb-4" style={{ color: '#a0723a' }}>YOUR NEXT STEP</p>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#f0e8d8] mb-6 leading-tight">
-              See Exactly Where You Stand —{' '}
-              <span className="text-[#a0723a]">Before the Rush Does.</span>
+              See what AI can understand, verify, and{' '}
+              <span className="text-[#a0723a]">safely do today.</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="text-[rgba(240,232,216,0.7)] font-poppins leading-relaxed text-lg mb-10">
-              You&apos;ve built real trust the hard way — one customer, one job, one year at a time. Don&apos;t let it become invisible to the systems deciding tomorrow&apos;s recommendations.
+              You&apos;ve built real trust the hard way. The next job is publishing that truth so a system can use it without inventing a booking, a price, or an acceptance.
               <br /><br />
-              We start every conversation with a free AI Scaffolding Audit. No obligation. No pitch. Just an honest look at your current visibility to AI systems and what it would take to make you the obvious recommendation in your market.
+              We start with an Agent Readiness Review — identity, services, geography, policies, discovery, and whether a safe next action exists. No citation guarantee.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={250}>
@@ -507,10 +507,10 @@ export default function WhyNowPage() {
               className="inline-block font-poppins font-semibold text-white px-10 py-4 rounded-md text-base transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#1a56db' }}
             >
-              Get My Free Audit
+              Request an Agent Readiness Review
             </Link>
             <p className="mt-4 text-[rgba(240,232,216,0.70)] font-poppins text-xs">
-              Takes about 15 minutes. We&apos;ll show you exactly what AI systems see when they look at your business today.
+              Free written review within two business days. This is a review request, not a booking.
             </p>
           </ScrollReveal>
         </div>

@@ -482,15 +482,15 @@ export default function FalseLegacyLayer() {
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> helps independent local and regional businesses build structured AI visibility through high-performance sites, machine-readable authority layers, and Answer Engine Optimization strategies that turn local expertise into permanent AI dominance.
+                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> now builds owned business infrastructure — truth, capability, and control. Visibility can follow. We do not claim permanent AI placement.
                 </p>
 
                 <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
                   Get your{' '}
-                  <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">free AEO Audit</Link>{' '}
+                  <Link href="/machine-read" className="text-[var(--d-accent)] hover:underline">Agent Readiness Review</Link>{' '}
                   at{' '}
                   <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link>.
-                  Find out how close you are to losing — or locking in — your position.
+                  See what AI can understand, verify, and safely do today.
                 </p>
 
                 <div className="mt-12 pt-8 border-t border-[var(--d-line)]">
@@ -537,16 +537,16 @@ export default function FalseLegacyLayer() {
                     Find out exactly where your business is invisible to AI — and what it takes to build real authority. No obligation.
                   </p>
                   <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get My Free Machine Read
+                    Request an Agent Readiness Review
                   </Link>
                 </div>
 
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <Link href="/blog/2026-digital-land-rush-ai-visibility" className="block group">
+                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
                       <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        The 2026 Digital Land Rush: Why Waiting on AI Visibility Could Cost You Everything
+                        From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
                       </p>
                       <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
                     </Link>
@@ -585,11 +585,11 @@ export default function FalseLegacyLayer() {
             Find out where you actually stand.
           </h2>
           <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The False Legacy Layer is real — and it has an expiration date. A Machine Read shows you exactly what AI systems can verify about your business right now, and where the gaps are.
+            The False Legacy Layer is real — and it has an expiration date. An Agent Readiness Review shows what AI can understand, verify, and safely do with your business today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get My Free Machine Read
+              Request an Agent Readiness Review
             </Link>
             <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
               Read More Articles

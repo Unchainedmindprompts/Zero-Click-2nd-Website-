@@ -63,25 +63,24 @@ const cormorantGaramond = Cormorant_Garamond({
 // ── Metadata ──────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: {
-    default: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
+    default: 'KodeCite.ai — Make your business usable by AI',
     template: '%s | KodeCite.ai',
   },
   description:
-    'Most businesses are invisible to AI. KodeCite.ai builds AI-readable website infrastructure that makes you understandable, verifiable, and recommendable. Based in Coeur d\'Alene, Idaho.',
+    'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses.',
   keywords: [
-    'SEO', 'schema markup', 'entity graph', 'Schema.org implementation',
-    'AI search optimization', 'answer engine optimization',
-    "why my business doesn't show up in ChatGPT", 'Google AI Overviews',
-    'AI search visibility', 'local SEO', 'digital marketing',
-    'website infrastructure', 'AEO agency', 'Perplexity SEO', 'llms.txt', 'JSON-LD schema',
+    'business infrastructure', 'agent-ready website', 'entity graph',
+    'Schema.org implementation', 'capability contract', 'controlled action',
+    'AI agents', 'Next.js website infrastructure', 'llms.txt', 'agent.json',
+    'JSON-LD schema', 'owned website infrastructure',
   ],
   authors: [{ name: 'KodeCite.ai' }],
   creator: 'KodeCite.ai',
   metadataBase: new URL('https://www.kodecite.ai'),
   openGraph: {
-    title: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
+    title: 'KodeCite.ai — Make your business usable by AI',
     description:
-      'Schema.org has been the language of the internet for 15 years. An entity graph is Schema used correctly — the foundation that makes your business visible in both AI discovery and traditional search.',
+      'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses.',
     url: 'https://www.kodecite.ai',
     siteName: 'KodeCite.ai',
     images: [{ url: 'https://www.kodecite.ai/og-image.png?v=2', width: 1200, height: 630, alt: 'KodeCite.ai — AI-readable business infrastructure' }],
@@ -90,9 +89,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KodeCite.ai — High-Performance Websites Built to Be Recommended by AI',
+    title: 'KodeCite.ai — Make your business usable by AI',
     description:
-      'An entity graph is Schema.org used correctly. Almost no business has one built right. We build it — on infrastructure you own.',
+      'Kodecite builds owned digital business infrastructure that helps AI understand, evaluate, recommend, and take authorized next steps with service businesses.',
     images: ['https://www.kodecite.ai/og-image.png?v=2'],
   },
   robots: {
@@ -123,7 +122,7 @@ const siteSchema = {
       },
       image: { '@id': 'https://www.kodecite.ai/#logo' },
       description:
-        'KodeCite.ai builds high-performance, custom Next.js websites — deployed to client-owned edge infrastructure and structured with a complete entity graph (Schema.org done right, custom JSON-LD on every page, plus llms.txt and agent.json) — so AI systems can read, verify, and recommend the business. Fast sites built to be found, not static digital business cards.',
+        'KodeCite.ai builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience. Luxe Window Works is production proof that this infrastructure can work.',
       email: 'mark@kodecite.ai',
       telephone: '+14803239740',
       priceRange: '$$',
@@ -131,8 +130,12 @@ const siteSchema = {
       founder: { '@id': 'https://www.kodecite.ai/#founder' },
       areaServed: businessAreaServed,
       serviceType: [
-        'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
-        'AI Search Optimization', 'Next.js Website Development', 'JSON-LD Schema Markup',
+        'Owned business infrastructure',
+        'Entity Graph Infrastructure',
+        'Capability contracts',
+        'Controlled agent action',
+        'Next.js Website Development',
+        'JSON-LD Schema Markup',
       ],
       sameAs: [
         'https://www.facebook.com/profile.php?id=61586478347376',
@@ -149,12 +152,12 @@ const siteSchema = {
       url: 'https://www.kodecite.ai',
       homeLocation: { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
       description:
-        'Founder of KodeCite.ai, based in Coeur d\'Alene, North Idaho. 30 years of sales experience, 23 years as an entrepreneur, 1,000+ hours of AEO and GEO research. Builds AI-ready web infrastructure for businesses that want to be recommended by AI search engines.',
+        'Founder of KodeCite.ai, based in North Idaho. 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial. Builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses.',
       knowsAbout: [
-        'Entity Graph Infrastructure', 'Schema.org Implementation', 'Answer Engine Optimization',
-        'Generative Engine Optimization', 'AI Search Visibility', 'JSON-LD Schema Markup',
-        'Next.js Development', 'Vercel Edge Hosting', 'llms.txt', 'agent.json',
-        'Local Business Entity Graphs', 'Machine-Readable Business Identity', 'Traditional SEO',
+        'Owned business infrastructure', 'Entity Graph Infrastructure', 'Schema.org Implementation',
+        'Capability contracts', 'Controlled agent action', 'JSON-LD Schema Markup',
+        'Next.js Development', 'Vercel hosting', 'llms.txt', 'agent.json',
+        'Local Business Entity Graphs', 'Machine-Readable Business Identity',
       ],
       sameAs: [
         'https://www.linkedin.com/in/mark-abplanalp-46a272371',
@@ -175,9 +178,9 @@ const siteSchema = {
     {
       '@type': 'DefinedTermSet',
       '@id': 'https://www.kodecite.ai/#glossary',
-      name: 'KodeCite AEO & Entity Glossary',
+      name: 'KodeCite infrastructure glossary',
       description:
-        'Defined terms used across KodeCite for AI search, answer engine optimization, and entity-graph infrastructure.',
+        'Defined terms used across KodeCite for business truth, agent capabilities, controlled action, and entity-graph infrastructure.',
       url: 'https://www.kodecite.ai/#glossary',
       publisher: { '@id': 'https://www.kodecite.ai/#business' },
     },

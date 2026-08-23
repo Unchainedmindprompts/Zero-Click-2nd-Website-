@@ -91,8 +91,8 @@ export default function AIVisibilityCheck() {
           className="font-inter mb-10"
           style={{ fontSize: '17px', lineHeight: 1.65, color: 'var(--d-fg-dim)', fontWeight: 300 }}
         >
-          Paste your URL. We&apos;ll show you a simulated grade card across the four F1 layers.
-          Want the real audit? Run a Machine Read.
+          Paste your URL. This is a simulated grade card, not a live crawl.
+          The real path is an Agent Readiness Review.
         </p>
 
         {/* Input row */}
@@ -226,15 +226,14 @@ export default function AIVisibilityCheck() {
                 <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>
                   simulated grades based on platform patterns
                 </strong>
-                {' '}— not a live crawl. The real Machine Read checks ChatGPT, Perplexity, and Google AI
-                Overviews directly and gives you specific, actionable findings. No pitch. Just data.
+                {' '}— not a live crawl. An Agent Readiness Review looks at what AI can understand, verify, and safely do. No pitch.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href={`/machine-read?url=${encodeURIComponent(url)}`}
                   className="d-btn d-btn-primary"
                 >
-                  Get My Real Machine Read →
+                  Request an Agent Readiness Review →
                 </Link>
                 <button onClick={reset} className="d-btn d-btn-ghost">
                   Try another URL
