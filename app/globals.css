@@ -1145,7 +1145,7 @@ em.serif {
     height: auto !important;
     /* 64px sticky shell + comfortable gap + iOS safe area. 88px was too tight
        and put the H1 against the logo/hamburger. */
-    padding: calc(var(--kc-shell-h, 64px) + 36px + env(safe-area-inset-top, 0px)) 20px 28px !important;
+    padding: calc(var(--kc-shell-h, 64px) + 52px + env(safe-area-inset-top, 0px)) 20px 28px !important;
   }
   .kc-slide-copy--journey {
     padding-bottom: 28px !important;
