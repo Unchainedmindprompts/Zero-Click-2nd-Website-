@@ -1050,6 +1050,67 @@ em.serif {
   touch-action: pan-y;
 }
 
+/* Single chapter tree. Desktop: layers fill the slider. Phone (below)
+   restyles the same nodes into stacked document sections. */
+.kc-slider-track {
+  position: absolute;
+  inset: 0;
+}
+.kc-chapter {
+  position: absolute;
+  inset: 0;
+}
+.kc-chapter-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.kc-chapter-scrim {
+  display: none;
+}
+.kc-hero-cta {
+  display: none;
+}
+.kc-intro-lead,
+.kc-chapter-body {
+  position: absolute;
+  inset: 0;
+}
+.kc-slide-copy {
+  z-index: 1;
+}
+.kc-journey-band {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  /* Intro: photo stays full-bleed; H1 + journey sit in one bottom stack
+     so the pills stay on the plate (not a second copy). */
+  .kc-chapter--intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .kc-chapter--intro .kc-intro-lead {
+    display: contents;
+  }
+  .kc-chapter--intro .kc-slide-copy {
+    position: relative;
+    height: auto !important;
+    justify-content: flex-start;
+    padding-bottom: 0 !important;
+  }
+  .kc-chapter--intro .kc-journey-band {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 32px clamp(150px, 22vh, 240px);
+    background: transparent;
+  }
+}
+
 /* Journey defaults (desktop: compact horizontal pills + arrows). */
 .kc-journey {
   display: flex;
@@ -1107,10 +1168,7 @@ em.serif {
     overflow-x: clip;
   }
 
-  /* Phone homepage is the stacked story — hide the cinematic slider. */
-  .kc-home-desktop {
-    display: none !important;
-  }
+  /* Phone homepage is the same chapter tree in document flow. */
   .kc-indicators {
     display: none !important;
   }
@@ -1132,35 +1190,59 @@ em.serif {
     min-height: 0;
     overflow: visible;
   }
-
-  /* Active slide is in-flow and defines slider height. Inactive/leaving
-     layers stay absolutely positioned so they do not add extra height. */
-  .kc-slide-stack {
+  .kc-slider-track {
     position: relative;
     inset: auto;
   }
 
-  .kc-slide-text.is-active {
+  /* Every chapter is in normal flow — ignore carousel hide/leave layers. */
+  .kc-chapter,
+  .kc-chapter.kc-slide-text,
+  .kc-chapter.kc-slide-text.is-active,
+  .kc-chapter.kc-slide-text.kc-leave-next,
+  .kc-chapter.kc-slide-text.kc-leave-prev {
+    position: relative !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    height: auto !important;
+    transform: none !important;
+    animation: none !important;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .kc-intro-lead,
+  .kc-chapter-body {
     position: relative;
     inset: auto;
-    height: auto;
+    display: block;
   }
-  .kc-slide-text.kc-leave-next,
-  .kc-slide-text.kc-leave-prev {
+  .kc-chapter-media,
+  .kc-chapter-media.is-active,
+  .kc-chapter .kc-slide-bg,
+  .kc-chapter .kc-slide-bg.is-active {
     position: absolute;
     inset: 0;
-    height: 100%;
+    opacity: 1;
+    transform: none;
+    filter: none;
+    will-change: auto;
   }
 
   .kc-slide-copy {
     justify-content: flex-start !important;
     height: auto !important;
-    /* 64px sticky shell + comfortable gap + iOS safe area. 88px was too tight
-       and put the H1 against the logo/hamburger. */
-    padding: calc(var(--kc-shell-h, 64px) + 52px + env(safe-area-inset-top, 0px)) 20px 28px !important;
+    max-width: 40rem !important;
+    /* Content-height hero: H1 clears the opaque sticky header. */
+    padding: calc(var(--kc-shell-h, 64px) + 1.75rem) 22px 40px !important;
+  }
+  .kc-chapter:not(.kc-chapter--intro) .kc-slide-copy {
+    padding: 48px 22px 56px !important;
   }
   .kc-slide-copy--journey {
-    padding-bottom: 28px !important;
+    padding-bottom: 40px !important;
   }
   .kc-slide-copy .kc-slide-reveal.font-inter,
   .kc-slide-copy p {
@@ -1169,6 +1251,64 @@ em.serif {
   .kc-slide-h {
     max-width: none !important;
     text-wrap: balance;
+    font-size: clamp(2rem, 8.2vw, 2.6rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.03em !important;
+    color: #f4f7ff !important;
+    text-shadow: 0 2px 28px rgba(3, 5, 14, 0.65) !important;
+  }
+  .kc-slide-h .serif {
+    color: var(--d-accent-2) !important;
+  }
+  .kc-support-more {
+    display: none;
+  }
+  .kc-hero-cta {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+  .kc-journey-band {
+    position: relative;
+    background: #070b16;
+    padding: 40px 22px 48px;
+    max-width: none;
+  }
+  .kc-journey-consequence {
+    font-weight: 500 !important;
+    color: #f4f7ff !important;
+    max-width: 36rem !important;
+  }
+  .kc-chapter-scrim {
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(4, 6, 14, 0.78) 0%, rgba(4, 6, 14, 0.58) 26%, rgba(4, 6, 14, 0.70) 58%, rgba(4, 6, 14, 0.92) 100%),
+      radial-gradient(110% 80% at 16% 72%, rgba(4, 6, 14, 0.55) 0%, transparent 68%);
+  }
+  /* Office / water plates (theme: light) — keep body/H2 on a dark wash. */
+  .kc-chapter--light .kc-chapter-scrim {
+    background:
+      linear-gradient(180deg, rgba(4, 6, 14, 0.88) 0%, rgba(4, 6, 14, 0.74) 24%, rgba(4, 6, 14, 0.82) 58%, rgba(4, 6, 14, 0.96) 100%),
+      radial-gradient(125% 90% at 18% 70%, rgba(4, 6, 14, 0.7) 0%, transparent 72%);
+  }
+  .kc-slide-bg__plate--light {
+    display: none;
+  }
+  .kc-chapter--light .kc-slide-copy p,
+  .kc-chapter--light .kc-slide-copy .d-eyebrow,
+  .kc-chapter--light .kc-slide-copy li {
+    color: rgba(236, 241, 255, 0.94) !important;
+    text-shadow: 0 1px 18px rgba(3, 5, 14, 0.55) !important;
+    border-color: rgba(93, 213, 255, 0.35) !important;
+  }
+  .kc-chapter .kc-slide-copy p,
+  .kc-journey-consequence {
+    color: rgba(236, 241, 255, 0.94) !important;
+    text-shadow: 0 1px 18px rgba(3, 5, 14, 0.55) !important;
   }
 
   .kc-slider-cta {
@@ -1177,7 +1317,8 @@ em.serif {
     bottom: auto !important;
     max-width: none !important;
     margin: 0 !important;
-    padding: 8px 20px 16px !important;
+    padding: 28px 22px 48px !important;
+    background: #05080f;
   }
 
   .kc-indicators {
@@ -1190,57 +1331,53 @@ em.serif {
     margin: 4px auto 28px;
   }
 
-  /* Deliberate vertical journey — number rail + wrapping labels. */
+  /* Numbered journey cards — same HOME_JOURNEY nodes as the desktop pills. */
   .kc-journey {
     flex-direction: column;
     align-items: stretch;
     flex-wrap: nowrap;
-    gap: 0;
+    gap: 14px;
     max-width: none;
-    margin-top: 22px;
+    margin-top: 0;
   }
   .kc-journey-item {
     display: grid;
-    grid-template-columns: 28px minmax(0, 1fr);
-    column-gap: 12px;
-    align-items: stretch;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
     width: 100%;
+    padding: 16px 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
   }
   .kc-journey-rail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
     padding-top: 2px;
   }
   .kc-journey-index {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 999px;
-    border: 1px solid currentColor;
-    font-size: 10px;
-    letter-spacing: 0.06em;
-    flex-shrink: 0;
+    display: block;
+    width: auto;
+    height: auto;
+    border: 0;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--d-accent);
   }
   .kc-journey-stem {
-    display: block;
-    width: 1px;
-    flex: 1;
-    min-height: 14px;
-    margin: 6px 0 2px;
-    background: currentColor;
-    opacity: 0.35;
+    display: none;
   }
   .kc-journey-card {
     display: block;
-    border-radius: 12px;
-    padding: 10px 14px 14px;
-    margin-bottom: 10px;
-    letter-spacing: 0.06em;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0;
+    text-transform: none;
     line-height: 1.45;
     white-space: normal;
+    background: transparent;
   }
   .kc-journey-num {
     display: none;
@@ -1248,6 +1385,12 @@ em.serif {
   .kc-journey-label {
     display: block;
     overflow-wrap: anywhere;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #f4f7ff;
+    font-family: var(--font-inter), Inter, sans-serif;
   }
   .kc-journey-arrow {
     display: none;
@@ -1611,172 +1754,6 @@ em.serif {
     mask-image: radial-gradient(ellipse 70% 50% at 50% 22%, black 18%, transparent 72%);
   }
 
-  /* ── Mobile homepage story ─────────────────────────────────────────── */
-  .kc-mhome {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    color: var(--d-fg);
-  }
-  .kc-mhome-block {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    overflow: hidden;
-  }
-  .kc-mhome-hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    /* Height follows H1 + lede + CTA. Do not stretch to 100dvh — that
-       left ~350px of empty art under the button before the journey. */
-    min-height: 0;
-  }
-  .kc-mhome-media {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    overflow: hidden;
-  }
-  .kc-mhome-img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 32% center;
-  }
-  .kc-mhome-scrim {
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(180deg, rgba(4, 6, 14, 0.78) 0%, rgba(4, 6, 14, 0.58) 26%, rgba(4, 6, 14, 0.70) 58%, rgba(4, 6, 14, 0.92) 100%),
-      radial-gradient(110% 80% at 16% 72%, rgba(4, 6, 14, 0.55) 0%, transparent 68%);
-  }
-  .kc-mhome-copy {
-    position: relative;
-    z-index: 1;
-    padding: 48px 22px 56px;
-    max-width: 40rem;
-    min-width: 0;
-  }
-  .kc-mhome-hero .kc-mhome-copy {
-    padding-top: calc(var(--kc-shell-h, 64px) + 1.75rem);
-    padding-bottom: 40px;
-  }
-  .kc-mhome-h {
-    margin: 0;
-    font-size: clamp(2rem, 8.2vw, 2.6rem);
-    line-height: 1.15;
-    letter-spacing: -0.03em;
-    text-wrap: balance;
-    color: #f4f7ff;
-    text-shadow: 0 2px 28px rgba(3, 5, 14, 0.65);
-  }
-  .kc-mhome-accent {
-    color: var(--d-accent-2);
-    font-style: italic;
-  }
-  .kc-mhome-kicker {
-    margin: 0 0 14px;
-    color: rgba(233, 238, 255, 0.72);
-  }
-  .kc-mhome-lede,
-  .kc-mhome-body,
-  .kc-mhome-consequence {
-    margin: 1.15rem 0 0;
-    font-size: 1.0625rem;
-    line-height: 1.6;
-    font-weight: 300;
-    color: rgba(236, 241, 255, 0.94);
-    text-shadow: 0 1px 18px rgba(3, 5, 14, 0.55);
-    max-width: 36rem;
-  }
-  .kc-mhome-body--strong {
-    font-weight: 450;
-    color: #f4f7ff;
-  }
-  .kc-mhome-consequence {
-    font-weight: 500;
-    color: #f4f7ff;
-  }
-  .kc-mhome-cta {
-    margin-top: 1.5rem;
-    width: 100%;
-  }
-  .kc-mhome-cta + .kc-mhome-cta {
-    margin-top: 0.75rem;
-  }
-  .kc-mhome-journey {
-    background: #070b16;
-  }
-  .kc-mhome-journey .kc-mhome-copy {
-    padding-top: 40px;
-    padding-bottom: 48px;
-  }
-  .kc-mhome-steps {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .kc-mhome-step {
-    display: grid;
-    grid-template-columns: 2.5rem minmax(0, 1fr);
-    column-gap: 14px;
-    align-items: start;
-    padding: 16px 16px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.04);
-  }
-  .kc-mhome-step-num {
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    color: var(--d-accent);
-    padding-top: 2px;
-  }
-  .kc-mhome-step-label {
-    font-size: 1.0625rem;
-    line-height: 1.45;
-    font-weight: 500;
-    color: #f4f7ff;
-  }
-  .kc-mhome-points {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    list-style: none;
-    margin: 1.25rem 0 0;
-    padding: 0;
-  }
-  .kc-mhome-points li {
-    border: 1px solid rgba(93, 213, 255, 0.35);
-    border-radius: 999px;
-    padding: 7px 12px;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(236, 241, 255, 0.92);
-  }
-  .kc-mhome-close {
-    background: #05080f;
-  }
-  .kc-mhome-close .kc-mhome-copy {
-    padding-top: 28px;
-    padding-bottom: 48px;
-  }
-}
-
-@media (min-width: 768px) {
-  .kc-home-mobile {
-    display: none !important;
-  }
 }
 
 /* Light slides: dark ghost CTA so it reads on the bright art (primary stays dark) */
@@ -1910,6 +1887,15 @@ em.serif {
     padding-left: clamp(80px, 6vw, 150px) !important;
     padding-right: 72px !important;
     padding-bottom: clamp(230px, 26vh, 340px) !important;
+  }
+  .kc-chapter--intro .kc-slide-copy {
+    padding-bottom: 0 !important;
+  }
+  .kc-chapter--intro .kc-journey-band {
+    max-width: 1480px;
+    padding-left: clamp(80px, 6vw, 150px);
+    padding-right: 72px;
+    padding-bottom: clamp(230px, 26vh, 340px);
   }
   .kc-slider-cta {
     max-width: 1480px !important;

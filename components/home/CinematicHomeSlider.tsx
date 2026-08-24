@@ -3,24 +3,19 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { HOME_SLIDES } from './slides';
-import FluidImageTransition from './FluidImageTransition';
 import CinematicSlide from './CinematicSlide';
 import SlideIndicators from './SlideIndicators';
 
 const AUTOPLAY_MS = 7000;
-const WHEEL_LOCK_MS = 750; // one wheel gesture = one slide
-const SWIPE_THRESHOLD = 48; // px of horizontal travel to register a swipe
+const WHEEL_LOCK_MS = 750;
+const SWIPE_THRESHOLD = 48;
 
 /**
- * CinematicHomeSlider — full-viewport, Blackbook-inspired opening experience.
+ * CinematicHomeSlider — one HOME_SLIDES tree, two presentations.
  *
- * Cinematic slide-deck feel: background crossfade/blur/scale, copy drifts in
- * horizontally (direction-aware). Advances via autoplay, dots, keyboard, touch
- * swipe, trackpad horizontal swipe, and (on desktop only) vertical wheel while
- * the hero fills the viewport. Mobile is a normal scrolling page: the wheel
- * listener is not attached, so the first thumb flick is never swallowed.
- * NOT a full scroll-hijack: on the last slide a further scroll down releases
- * into the normal page; scrolling back up re-engages it.
+ * Desktop (≥768px): full-viewport carousel (autoplay, dots, Ken Burns, wheel).
+ * Phone: the same chapter nodes in normal document flow (no autoplay, no dots).
+ * Presentation is CSS. JS only gates carousel behavior and aria-hidden.
  */
 export default function CinematicHomeSlider() {
   const total = HOME_SLIDES.length;
@@ -40,7 +35,6 @@ export default function CinematicHomeSlider() {
 
   useEffect(() => { activeRef.current = active; }, [active]);
 
-  // Reduced-motion (disables autoplay + wheel hijack).
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
     const sync = () => setReduced(mq.matches);
@@ -49,8 +43,6 @@ export default function CinematicHomeSlider() {
     return () => mq.removeEventListener('change', sync);
   }, []);
 
-  // Phone widths use MobileHomeStory. Never autoplay, swipe, or hijack
-  // keys on a hidden/inert slider if this tree is still mounted.
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 768px)');
     const sync = () => setDesktop(mq.matches);
@@ -59,7 +51,6 @@ export default function CinematicHomeSlider() {
     return () => mq.removeEventListener('change', sync);
   }, []);
 
-  // Single source of truth for changing slides — tracks previous + direction.
   const change = useCallback(
     (target: number, dir: 1 | -1) => {
       const cur = activeRef.current;
@@ -77,15 +68,12 @@ export default function CinematicHomeSlider() {
     [change],
   );
 
-  // Autoplay — desktop only. Resets on every slide change; off while
-  // paused/interacting/reduced or when the phone story is showing.
   useEffect(() => {
     if (!desktop || paused || interacting || reduced) return;
     const id = window.setTimeout(() => advance(1), AUTOPLAY_MS);
     return () => window.clearTimeout(id);
   }, [desktop, paused, interacting, reduced, active, advance]);
 
-  // Track whether the hero substantially fills the viewport (wheel gating).
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -99,9 +87,6 @@ export default function CinematicHomeSlider() {
     return () => io.disconnect();
   }, []);
 
-  // Desktop wheel → slide. Never attach on mobile: a non-passive wheel
-  // listener (even one that returns early) can delay the first flick, and
-  // preventDefault on slide 0 swallows the opening downward swipe.
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -114,15 +99,13 @@ export default function CinematicHomeSlider() {
       const horizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
       const delta = horizontal ? e.deltaX : e.deltaY;
       if (Math.abs(delta) < 6) return;
-      const forward = delta > 0; // down or right → next
+      const forward = delta > 0;
       const cur = activeRef.current;
 
-      // Edge release: vertical scroll past the first/last slide → let the page move.
       const atEdgeRelease =
         !horizontal &&
         ((forward && cur === total - 1) || (!forward && cur === 0));
       if (atEdgeRelease) {
-        // absorb the tail of the same gesture that just landed on the edge
         if (wheelLockRef.current) e.preventDefault();
         return;
       }
@@ -156,7 +139,6 @@ export default function CinematicHomeSlider() {
     };
   }, [reduced, total, advance]);
 
-  // Keyboard — desktop carousel only.
   const onKeyDown = (e: React.KeyboardEvent) => {
     if (!desktop) return;
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); advance(1); }
@@ -165,7 +147,6 @@ export default function CinematicHomeSlider() {
     else if (e.key === 'End') { e.preventDefault(); select(total - 1); }
   };
 
-  // Touch / pen swipe (mouse excluded so desktop text selection isn't hijacked).
   const onPointerDown = (e: React.PointerEvent) => {
     if (!desktop || e.pointerType === 'mouse') return;
     dragRef.current = { x: e.clientX, y: e.clientY, active: true };
@@ -179,7 +160,7 @@ export default function CinematicHomeSlider() {
     const dx = e.clientX - d.x;
     const dy = e.clientY - d.y;
     if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.2) {
-      advance(dx < 0 ? 1 : -1); // swipe left → next, swipe right → prev
+      advance(dx < 0 ? 1 : -1);
     }
   };
   const onPointerCancel = () => {
@@ -198,48 +179,32 @@ export default function CinematicHomeSlider() {
     <section
       ref={sectionRef}
       className="kc-slider"
-      aria-roledescription="carousel"
+      aria-roledescription={desktop ? 'carousel' : undefined}
       aria-label="KodeCite introduction"
       tabIndex={0}
       onKeyDown={onKeyDown}
       onPointerDown={onPointerDown}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerCancel}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
+      onMouseEnter={() => desktop && setPaused(true)}
+      onMouseLeave={() => desktop && setPaused(false)}
+      onFocus={() => desktop && setPaused(true)}
+      onBlur={() => desktop && setPaused(false)}
     >
-      {/* Cinematic background layers (crossfade + blur + scale) */}
-      <FluidImageTransition slides={HOME_SLIDES} active={active} />
-
-      {/* Atmospheric drift (CSS only) */}
-      <div
-        className="pointer-events-none absolute inset-0 hero-aura"
-        aria-hidden
-        style={{
-          background:
-            'radial-gradient(40% 50% at 80% 18%, rgba(93,213,255,0.08), transparent 70%)',
-        }}
-      />
-
-      {/* Text layers — all rendered for crawlability, one visible at a time */}
-      <div className="kc-slide-stack absolute inset-0 z-10">
+      <div className="kc-slider-track">
         {HOME_SLIDES.map((s, i) => (
-          <div
+          <CinematicSlide
             key={s.id}
+            slide={s}
+            index={i}
+            total={total}
+            isActive={i === active}
             className={layerClass(i)}
-            role="group"
-            aria-roledescription="slide"
-            aria-label={`${i + 1} of ${total}: ${s.kicker}`}
-            aria-hidden={i !== active}
-          >
-            <CinematicSlide slide={s} index={i} total={total} />
-          </div>
+            ariaHidden={desktop && i !== active}
+          />
         ))}
       </div>
 
-      {/* Persistent CTAs (stable across slides; ghost button adapts on light slides) */}
       <div
         className={`kc-slider-cta absolute z-20 left-0 right-0 mx-auto px-8 flex flex-col sm:flex-row gap-3 ${
           HOME_SLIDES[active].theme === 'light' ? 'kc-cta-light' : ''

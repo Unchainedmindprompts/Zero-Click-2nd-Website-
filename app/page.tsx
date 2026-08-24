@@ -1,7 +1,5 @@
 import CinematicHomeSlider from '@/components/home/CinematicHomeSlider';
 import HomeScrollLock from '@/components/home/HomeScrollLock';
-import HomeExperience from '@/components/home/HomeExperience';
-import MobileHomeStory from '@/components/home/MobileHomeStory';
 
 export const metadata = {
   alternates: {
@@ -25,9 +23,8 @@ const webPageSchema = {
   primaryImageOfPage: { '@id': 'https://www.kodecite.ai/#logo' },
 };
 
-// Desktop (≥768px): locked cinematic slider. Phone widths: stacked
-// MobileHomeStory from the same HOME_SLIDES source. Interior routes are
-// unchanged. Former lower homepage sections remain in the repo for reuse.
+// One HOME_SLIDES tree. Desktop CSS is the cinematic carousel; phone CSS
+// is stacked document sections. Interior routes are unchanged.
 export default function HomePage() {
   return (
     <>
@@ -37,10 +34,7 @@ export default function HomePage() {
       />
 
       <HomeScrollLock />
-      <HomeExperience
-        desktop={<CinematicHomeSlider />}
-        mobile={<MobileHomeStory />}
-      />
+      <CinematicHomeSlider />
     </>
   );
 }
