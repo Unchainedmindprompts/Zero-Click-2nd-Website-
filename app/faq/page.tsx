@@ -128,7 +128,6 @@ export default function FAQPage() {
               letterSpacing: '-0.03em',
               color: 'var(--d-fg)',
               maxWidth: '820px',
-              textWrap: 'balance',
             }}
           >
             What “usable by AI”{' '}

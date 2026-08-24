@@ -1285,6 +1285,14 @@ em.serif {
   .site-footer-inner {
     padding: 56px 20px 32px;
   }
+  .footer-nav {
+    gap: 14px;
+  }
+  .footer-nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
 
   .kc-overlay {
     padding: 96px 20px 40px;
@@ -1307,14 +1315,16 @@ em.serif {
 /* Homepage lock — applied to <html> only on `/` (via HomeScrollLock).
    The homepage is a locked full-screen slider: no vertical scroll, and nothing
    below it (the footer) is reachable. Interior pages are unaffected. */
-html.kc-home-locked,
-html.kc-home-locked body {
-  overflow: hidden;
-  height: 100%;
-  overscroll-behavior: none;
-}
-html.kc-home-locked footer {
-  display: none;
+@media (min-width: 768px) {
+  html.kc-home-locked,
+  html.kc-home-locked body {
+    overflow: hidden;
+    height: 100%;
+    overscroll-behavior: none;
+  }
+  html.kc-home-locked footer {
+    display: none;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
