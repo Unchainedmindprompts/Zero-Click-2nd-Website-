@@ -856,6 +856,7 @@ em.serif {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 60;
+  --kc-shell-h: 64px;
   transition: background-color 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease;
   border-bottom: 1px solid transparent;
 }
@@ -1116,7 +1117,7 @@ em.serif {
 
   .kc-slider {
     height: auto;
-    min-height: 100svh;
+    min-height: 0;
     overflow: visible;
   }
 
@@ -1142,10 +1143,16 @@ em.serif {
   .kc-slide-copy {
     justify-content: flex-start !important;
     height: auto !important;
-    padding: 88px 20px 20px !important;
+    /* 64px sticky shell + comfortable gap + iOS safe area. 88px was too tight
+       and put the H1 against the logo/hamburger. */
+    padding: calc(var(--kc-shell-h, 64px) + 36px + env(safe-area-inset-top, 0px)) 20px 28px !important;
   }
   .kc-slide-copy--journey {
-    padding-bottom: 20px !important;
+    padding-bottom: 28px !important;
+  }
+  .kc-slide-copy .kc-slide-reveal.font-inter,
+  .kc-slide-copy p {
+    margin-top: 1.25rem;
   }
   .kc-slide-h {
     max-width: none !important;
@@ -1239,11 +1246,24 @@ em.serif {
   }
 
   .d-btn {
-    white-space: normal;
+    white-space: normal !important;
     text-align: center;
     min-height: 44px;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
     padding: 12px 16px;
-    line-height: 1.25;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    flex-shrink: 1;
+    box-sizing: border-box;
+  }
+
+  .capability-url {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    display: inline;
+    max-width: 100%;
   }
 
   .d-eyebrow {

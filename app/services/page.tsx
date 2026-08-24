@@ -368,7 +368,8 @@ export default function ServicesPage() {
               href={LUXE_CAPABILITY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)', wordBreak: 'break-all' }}
+              className="capability-url"
+              style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}
             >
               luxewindowworks.com/api/capabilities/request-in-home-consultation
             </a>
