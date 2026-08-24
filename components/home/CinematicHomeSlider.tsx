@@ -184,7 +184,7 @@ export default function CinematicHomeSlider() {
       />
 
       {/* Text layers — all rendered for crawlability, one visible at a time */}
-      <div className="absolute inset-0 z-10">
+      <div className="kc-slide-stack absolute inset-0 z-10">
         {HOME_SLIDES.map((s, i) => (
           <div
             key={s.id}

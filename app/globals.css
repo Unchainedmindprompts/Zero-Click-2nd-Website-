@@ -1045,20 +1045,256 @@ em.serif {
   touch-action: pan-y;
 }
 
-/* Mobile: the persistent CTA stacks vertically (taller), so give the slide copy
-   extra bottom clearance so the buttons never overlap the paragraph above. */
-@media (max-width: 639px) {
-  .kc-slide-copy { padding-bottom: 200px !important; }
-  .kc-slide-copy--journey { padding-bottom: 216px !important; }
+/* Journey defaults (desktop: compact horizontal pills + arrows). */
+.kc-journey {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 8px;
+  max-width: 640px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+.kc-journey-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.kc-journey-rail {
+  display: none;
+}
+.kc-journey-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+.kc-journey-arrow {
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.page-section {
+  padding: 100px 32px;
+}
+.page-section--hero {
+  padding: 120px 32px 80px;
+}
+.faq-item {
+  padding: 48px 0;
+}
+.site-footer-inner {
+  padding: 80px 32px 40px;
+}
+
+/* Mobile homepage + site-wide responsive layout. */
+@media (max-width: 767px) {
+  html, body {
+    overflow-x: clip;
+  }
+
+  /* Unlock the cinematic lock so the opening slide can grow and the footer
+     is reachable. Desktop remains a locked full-viewport slider. */
+  html.kc-home-locked,
+  html.kc-home-locked body {
+    overflow: auto;
+    height: auto;
+    overscroll-behavior: auto;
+  }
+  html.kc-home-locked footer {
+    display: block;
+  }
+
+  .kc-slider {
+    height: auto;
+    min-height: 100svh;
+    overflow: visible;
+  }
+
+  /* Active slide is in-flow and defines slider height. Inactive/leaving
+     layers stay absolutely positioned so they do not add extra height. */
+  .kc-slide-stack {
+    position: relative;
+    inset: auto;
+  }
+
+  .kc-slide-text.is-active {
+    position: relative;
+    inset: auto;
+    height: auto;
+  }
+  .kc-slide-text.kc-leave-next,
+  .kc-slide-text.kc-leave-prev {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .kc-slide-copy {
+    justify-content: flex-start !important;
+    height: auto !important;
+    padding: 88px 20px 20px !important;
+  }
+  .kc-slide-copy--journey {
+    padding-bottom: 20px !important;
+  }
+  .kc-slide-h {
+    max-width: none !important;
+    text-wrap: balance;
+  }
+
+  .kc-slider-cta {
+    position: relative !important;
+    inset: auto !important;
+    bottom: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 8px 20px 16px !important;
+  }
+
+  .kc-indicators {
+    position: relative !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 4px auto 28px;
+  }
+
+  /* Deliberate vertical journey — number rail + wrapping labels. */
   .kc-journey {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0;
+    max-width: none;
+    margin-top: 22px;
+  }
+  .kc-journey-item {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 12px;
+    align-items: stretch;
+    width: 100%;
+  }
+  .kc-journey-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2px;
+  }
+  .kc-journey-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+  .kc-journey-stem {
+    display: block;
+    width: 1px;
+    flex: 1;
+    min-height: 14px;
+    margin: 6px 0 2px;
+    background: currentColor;
+    opacity: 0.35;
+  }
+  .kc-journey-card {
+    display: block;
+    border-radius: 12px;
+    padding: 10px 14px 14px;
+    margin-bottom: 10px;
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+    white-space: normal;
+  }
+  .kc-journey-num {
+    display: none;
+  }
+  .kc-journey-label {
+    display: block;
+    overflow-wrap: anywhere;
   }
   .kc-journey-arrow {
     display: none;
   }
+
+  .kc-shell__inner {
+    padding: 0 20px;
+  }
+
+  .d-btn {
+    white-space: normal;
+    text-align: center;
+    min-height: 44px;
+    padding: 12px 16px;
+    line-height: 1.25;
+  }
+
+  .d-eyebrow {
+    flex-wrap: wrap;
+    letter-spacing: 0.12em;
+    line-height: 1.45;
+    row-gap: 6px;
+  }
+
+  .secondary-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .secondary-hero {
+    padding-top: 100px;
+  }
+  .secondary-page h1,
+  .secondary-page h2 {
+    text-wrap: balance;
+  }
+  .secondary-page a {
+    overflow-wrap: anywhere;
+  }
+
+  .page-section {
+    padding: 56px 20px;
+  }
+  .page-section--hero {
+    padding-top: 100px;
+    padding-bottom: 48px;
+  }
+  .faq-item {
+    padding: 32px 0;
+  }
+  .faq-num-spacer {
+    display: none;
+  }
+
+  .site-footer-inner {
+    padding: 56px 20px 32px;
+  }
+
+  .kc-overlay {
+    padding: 96px 20px 40px;
+  }
+  .kc-overlay__link {
+    font-size: clamp(28px, 8vw, 42px);
+    gap: 12px;
+  }
 }
+
 
 /* Top-bar "Machine Read" button: hidden on mobile (only on tablet/desktop).
    !important because .d-btn sets display:inline-flex and is defined after

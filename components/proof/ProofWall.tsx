@@ -57,7 +57,7 @@ export default function ProofWall() {
 
   return (
     <section id="proof" className="secondary-section" style={{ marginTop: '30px' }}>
-      <div className="glass-panel" style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+      <div className="glass-panel" style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
         {/* Header */}
         <div className="d-eyebrow mb-5">DISCOVERY PROOF · REAL AI ANSWERS, REAL QUERIES</div>
         <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '760px' }}>
@@ -68,11 +68,11 @@ export default function ProofWall() {
         </p>
 
         {/* Engine strip */}
-        <div className="flex items-center gap-4 mt-7 mb-12">
-          <span className="font-mono flex-shrink-0" style={{ fontSize: '10px', letterSpacing: '0.12em', color: MUTE }}>
+        <div className="flex items-start sm:items-center gap-3 mt-7 mb-12">
+          <span className="font-mono min-w-0" style={{ fontSize: '10px', letterSpacing: '0.08em', color: MUTE, lineHeight: 1.55 }}>
             Cited across {PROOF_ENGINES.join(' · ')}
           </span>
-          <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(93,213,255,0.28), transparent)' }} />
+          <div className="hidden sm:block" style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(93,213,255,0.28), transparent)' }} />
         </div>
 
         {/* One block per business */}

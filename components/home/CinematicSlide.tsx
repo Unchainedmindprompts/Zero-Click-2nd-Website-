@@ -61,10 +61,10 @@ export default function CinematicSlide({
       )}
 
       <Heading
-        className="kc-slide-focus font-inter font-semibold"
+        className="kc-slide-focus kc-slide-h font-inter font-semibold"
         style={{
-          fontSize: 'clamp(36px, 4.4vw, 84px)',
-          lineHeight: 1.03,
+          fontSize: 'clamp(32px, 4.4vw, 84px)',
+          lineHeight: 1.08,
           letterSpacing: '-0.045em',
           color: c.fg,
           maxWidth: '18ch',
@@ -105,54 +105,36 @@ export default function CinematicSlide({
 
       {slide.steps && slide.steps.length > 0 && (
         <ol
-          className="kc-slide-reveal kc-journey mt-6"
+          className="kc-slide-reveal kc-journey"
           aria-label="Customer delegates an outcome, AI evaluates, then qualified businesses are recommended or contacted"
-          style={{
-            animationDelay: '0.24s',
-            maxWidth: '640px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '10px 8px',
-            padding: 0,
-            marginTop: '24px',
-            listStyle: 'none',
-          }}
+          style={{ animationDelay: '0.24s' }}
         >
           {slide.steps.map((step, i) => (
-            <li
-              key={step}
-              className="flex items-center gap-2"
-              style={{ minWidth: 0 }}
-            >
-              <span
-                className="font-mono"
-                style={{
-                  fontSize: '10px',
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  color: c.fg,
-                  border: `1px solid ${slide.theme === 'light' ? 'rgba(11,16,28,0.22)' : 'rgba(93,213,255,0.35)'}`,
-                  borderRadius: '999px',
-                  padding: '7px 12px',
-                  textShadow: c.bodyShadow,
-                  lineHeight: 1.35,
-                }}
-              >
-                <span style={{ color: c.accent, marginRight: '8px' }}>
+            <li key={step} className="kc-journey-item">
+              <div className="kc-journey-rail" aria-hidden>
+                <span className="kc-journey-index font-mono" style={{ color: c.accent }}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                {step}
-              </span>
+                {i < (slide.steps?.length ?? 0) - 1 && <span className="kc-journey-stem" />}
+              </div>
+              <div
+                className="kc-journey-card font-mono"
+                style={{
+                  color: c.fg,
+                  borderColor: slide.theme === 'light' ? 'rgba(11,16,28,0.22)' : 'rgba(93,213,255,0.35)',
+                  textShadow: c.bodyShadow,
+                }}
+              >
+                <span className="kc-journey-num font-mono" style={{ color: c.accent }}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="kc-journey-label">{step}</span>
+              </div>
               {i < (slide.steps?.length ?? 0) - 1 && (
                 <span
                   aria-hidden
-                  className="font-inter kc-journey-arrow"
-                  style={{
-                    color: c.accent,
-                    fontSize: '16px',
-                    lineHeight: 1,
-                    padding: '0 2px',
-                  }}
+                  className="kc-journey-arrow font-inter"
+                  style={{ color: c.accent }}
                 >
                   →
                 </span>

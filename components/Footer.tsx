@@ -28,7 +28,7 @@ export default function Footer() {
         background: 'linear-gradient(to bottom, transparent 0%, rgba(3, 7, 14, 0.30) 55%, rgba(2, 5, 11, 0.55) 100%)',
       }}
     >
-      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 32px 40px' }}>
+      <div className="site-footer-inner" style={{ maxWidth: '1240px', margin: '0 auto' }}>
 
         {/* Top — brand + links */}
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
