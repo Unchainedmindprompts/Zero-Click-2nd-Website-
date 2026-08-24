@@ -21,12 +21,11 @@ function Headline({
   return (
     <Tag id={id} className="kc-mhome-h font-inter font-semibold">
       {slide.headline.map((line, li) => (
-        <span
-          key={`${line.text}-${li}`}
-          className={line.accent ? 'kc-mhome-accent serif' : undefined}
-        >
-          {line.text}
-          {li < slide.headline.length - 1 ? ' ' : ''}
+        <span key={`${line.text}-${li}`}>
+          {li > 0 ? ' ' : ''}
+          <span className={line.accent ? 'kc-mhome-accent serif' : undefined}>
+            {line.text}
+          </span>
         </span>
       ))}
     </Tag>

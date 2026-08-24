@@ -1609,7 +1609,7 @@ em.serif {
   .kc-mhome-hero {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     min-height: 100dvh;
   }
   .kc-mhome-media {
@@ -1631,19 +1631,19 @@ em.serif {
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, rgba(4, 6, 14, 0.55) 0%, rgba(4, 6, 14, 0.28) 28%, rgba(4, 6, 14, 0.62) 62%, rgba(4, 6, 14, 0.88) 100%),
-      radial-gradient(90% 70% at 18% 78%, rgba(4, 6, 14, 0.55) 0%, transparent 70%);
+      linear-gradient(180deg, rgba(4, 6, 14, 0.78) 0%, rgba(4, 6, 14, 0.58) 26%, rgba(4, 6, 14, 0.70) 58%, rgba(4, 6, 14, 0.92) 100%),
+      radial-gradient(110% 80% at 16% 72%, rgba(4, 6, 14, 0.55) 0%, transparent 68%);
   }
   .kc-mhome-copy {
     position: relative;
     z-index: 1;
-    padding: 36px 22px 40px;
+    padding: 48px 22px 56px;
     max-width: 40rem;
     min-width: 0;
   }
   .kc-mhome-hero .kc-mhome-copy {
-    padding-top: calc(var(--kc-shell-h, 64px) + 1.5rem);
-    padding-bottom: 36px;
+    padding-top: calc(var(--kc-shell-h, 64px) + 1.75rem);
+    padding-bottom: 56px;
   }
   .kc-mhome-h {
     margin: 0;
