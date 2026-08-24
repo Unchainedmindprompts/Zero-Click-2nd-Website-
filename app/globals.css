@@ -413,9 +413,12 @@ body {
   content: '';
   position: absolute;
   bottom: 10%;
-  right: -10%;
+  /* Stay inside the fixed viewport box. `right: -10%` made scrollWidth
+     viewport+10% (413 vs 375, 429 vs 390) even with overflow:hidden. */
+  right: 0;
   width: 50vw;
   height: 50vw;
+  max-width: 100%;
   background: radial-gradient(circle, rgba(138,90,255,0.06) 0%, transparent 65%);
   border-radius: 50%;
 }
@@ -1562,6 +1565,22 @@ em.serif {
     min-width: 0;
     height: auto;
   }
+
+  /* Site-wide atmospheric layer lives in the root layout. Keep blobs inside
+     the fixed box so leaf scrollWidth matches the viewport. */
+  .d-atmos,
+  .d-grid {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .d-atmos::before,
+  .d-atmos::after {
+    max-width: 100%;
+  }
+  .d-atmos::before { left: 0; }
+  .d-atmos::after { right: 0; }
 }
 
 /* Light slides: dark ghost CTA so it reads on the bright art (primary stays dark) */
