@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import NavOverlay from './NavOverlay';
 
@@ -18,11 +18,33 @@ export default function Shell() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   // Close the overlay on navigation.
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
+
+  // Publish the live header height (safe-area + inner bar) so page content
+  // clears the sticky nav without a per-viewport magic number.
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const publish = () => {
+      const h = el.getBoundingClientRect().height;
+      document.documentElement.style.setProperty('--kc-shell-h', `${Math.round(h)}px`);
+    };
+    publish();
+    const ro = new ResizeObserver(publish);
+    ro.observe(el);
+    window.addEventListener('resize', publish);
+    window.addEventListener('orientationchange', publish);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', publish);
+      window.removeEventListener('orientationchange', publish);
+    };
+  }, [open, scrolled]);
 
   // Elevate the shell once the page is scrolled.
   useEffect(() => {
@@ -52,7 +74,7 @@ export default function Shell() {
 
   return (
     <>
-      <header className={`kc-shell ${scrolled || open ? 'kc-shell--scrolled' : ''}`}>
+      <header ref={headerRef} className={`kc-shell ${scrolled || open ? 'kc-shell--scrolled' : ''}`}>
         <div className="kc-shell__inner">
           {/* Brand — top-left, persistent */}
           <Link href="/" className="kc-brand" aria-label="KodeCite.ai home">

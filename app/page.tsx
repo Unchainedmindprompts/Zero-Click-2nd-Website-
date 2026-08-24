@@ -1,5 +1,7 @@
 import CinematicHomeSlider from '@/components/home/CinematicHomeSlider';
 import HomeScrollLock from '@/components/home/HomeScrollLock';
+import HomeExperience from '@/components/home/HomeExperience';
+import MobileHomeStory from '@/components/home/MobileHomeStory';
 
 export const metadata = {
   alternates: {
@@ -23,12 +25,9 @@ const webPageSchema = {
   primaryImageOfPage: { '@id': 'https://www.kodecite.ai/#logo' },
 };
 
-// The homepage is a locked, full-screen cinematic slide experience — only the
-// shell, slider, controls, and slide copy/CTAs are visible. Deeper content is
-// reached via the nav/menu and CTAs (Services, About, Blog, FAQ, Contact, …).
-// The former lower sections (TransformationStatement, ShiftFromPagesToEntities,
-// FrameworkLayers, MachineReadPreview, FoundationOffer, final CTA) are no longer
-// rendered here; their components remain in the repo for reuse on routes.
+// Desktop (≥768px): locked cinematic slider. Phone widths: stacked
+// MobileHomeStory from the same HOME_SLIDES source. Interior routes are
+// unchanged. Former lower homepage sections remain in the repo for reuse.
 export default function HomePage() {
   return (
     <>
@@ -38,7 +37,10 @@ export default function HomePage() {
       />
 
       <HomeScrollLock />
-      <CinematicHomeSlider />
+      <HomeExperience
+        desktop={<CinematicHomeSlider />}
+        mobile={<MobileHomeStory />}
+      />
     </>
   );
 }

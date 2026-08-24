@@ -860,6 +860,7 @@ em.serif {
   top: 0; left: 0; right: 0;
   z-index: 60;
   --kc-shell-h: 64px;
+  padding-top: env(safe-area-inset-top, 0px);
   transition: background-color 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease;
   border-bottom: 1px solid transparent;
 }
@@ -1104,6 +1105,14 @@ em.serif {
 @media (max-width: 767px) {
   html, body {
     overflow-x: clip;
+  }
+
+  /* Phone homepage is the stacked story — hide the cinematic slider. */
+  .kc-home-desktop {
+    display: none !important;
+  }
+  .kc-indicators {
+    display: none !important;
   }
 
   /* Unlock the cinematic lock so the opening slide can grow and the footer
@@ -1581,6 +1590,171 @@ em.serif {
   }
   .d-atmos::before { left: 0; }
   .d-atmos::after { right: 0; }
+
+  /* ── Mobile homepage story ─────────────────────────────────────────── */
+  .kc-mhome {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    color: var(--d-fg);
+  }
+  .kc-mhome-block {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .kc-mhome-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100dvh;
+  }
+  .kc-mhome-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .kc-mhome-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 32% center;
+  }
+  .kc-mhome-scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(4, 6, 14, 0.55) 0%, rgba(4, 6, 14, 0.28) 28%, rgba(4, 6, 14, 0.62) 62%, rgba(4, 6, 14, 0.88) 100%),
+      radial-gradient(90% 70% at 18% 78%, rgba(4, 6, 14, 0.55) 0%, transparent 70%);
+  }
+  .kc-mhome-copy {
+    position: relative;
+    z-index: 1;
+    padding: 36px 22px 40px;
+    max-width: 40rem;
+    min-width: 0;
+  }
+  .kc-mhome-hero .kc-mhome-copy {
+    padding-top: calc(var(--kc-shell-h, 64px) + 1.5rem);
+    padding-bottom: 36px;
+  }
+  .kc-mhome-h {
+    margin: 0;
+    font-size: clamp(2rem, 8.2vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    color: #f4f7ff;
+    text-shadow: 0 2px 28px rgba(3, 5, 14, 0.65);
+  }
+  .kc-mhome-accent {
+    color: var(--d-accent-2);
+    font-style: italic;
+  }
+  .kc-mhome-kicker {
+    margin: 0 0 14px;
+    color: rgba(233, 238, 255, 0.72);
+  }
+  .kc-mhome-lede,
+  .kc-mhome-body,
+  .kc-mhome-consequence {
+    margin: 1.15rem 0 0;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: rgba(236, 241, 255, 0.94);
+    text-shadow: 0 1px 18px rgba(3, 5, 14, 0.55);
+    max-width: 36rem;
+  }
+  .kc-mhome-body--strong {
+    font-weight: 450;
+    color: #f4f7ff;
+  }
+  .kc-mhome-consequence {
+    font-weight: 500;
+    color: #f4f7ff;
+  }
+  .kc-mhome-cta {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  .kc-mhome-cta + .kc-mhome-cta {
+    margin-top: 0.75rem;
+  }
+  .kc-mhome-journey {
+    background: #070b16;
+  }
+  .kc-mhome-journey .kc-mhome-copy {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  .kc-mhome-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .kc-mhome-step {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+    padding: 16px 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .kc-mhome-step-num {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--d-accent);
+    padding-top: 2px;
+  }
+  .kc-mhome-step-label {
+    font-size: 1.0625rem;
+    line-height: 1.45;
+    font-weight: 500;
+    color: #f4f7ff;
+  }
+  .kc-mhome-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+  }
+  .kc-mhome-points li {
+    border: 1px solid rgba(93, 213, 255, 0.35);
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(236, 241, 255, 0.92);
+  }
+  .kc-mhome-close {
+    background: #05080f;
+  }
+  .kc-mhome-close .kc-mhome-copy {
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .kc-home-mobile {
+    display: none !important;
+  }
 }
 
 /* Light slides: dark ghost CTA so it reads on the bright art (primary stays dark) */

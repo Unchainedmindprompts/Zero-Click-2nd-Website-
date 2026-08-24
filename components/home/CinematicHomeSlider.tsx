@@ -30,6 +30,7 @@ export default function CinematicHomeSlider() {
   const [paused, setPaused] = useState(false);
   const [interacting, setInteracting] = useState(false);
   const [reduced, setReduced] = useState(false);
+  const [desktop, setDesktop] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
   const activeRef = useRef(0);
@@ -43,6 +44,16 @@ export default function CinematicHomeSlider() {
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
     const sync = () => setReduced(mq.matches);
+    sync();
+    mq.addEventListener('change', sync);
+    return () => mq.removeEventListener('change', sync);
+  }, []);
+
+  // Phone widths use MobileHomeStory. Never autoplay, swipe, or hijack
+  // keys on a hidden/inert slider if this tree is still mounted.
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    const sync = () => setDesktop(mq.matches);
     sync();
     mq.addEventListener('change', sync);
     return () => mq.removeEventListener('change', sync);
@@ -66,12 +77,13 @@ export default function CinematicHomeSlider() {
     [change],
   );
 
-  // Autoplay — resets on every slide change; off while paused/interacting/reduced.
+  // Autoplay — desktop only. Resets on every slide change; off while
+  // paused/interacting/reduced or when the phone story is showing.
   useEffect(() => {
-    if (paused || interacting || reduced) return;
+    if (!desktop || paused || interacting || reduced) return;
     const id = window.setTimeout(() => advance(1), AUTOPLAY_MS);
     return () => window.clearTimeout(id);
-  }, [paused, interacting, reduced, active, advance]);
+  }, [desktop, paused, interacting, reduced, active, advance]);
 
   // Track whether the hero substantially fills the viewport (wheel gating).
   useEffect(() => {
@@ -144,8 +156,9 @@ export default function CinematicHomeSlider() {
     };
   }, [reduced, total, advance]);
 
-  // Keyboard.
+  // Keyboard — desktop carousel only.
   const onKeyDown = (e: React.KeyboardEvent) => {
+    if (!desktop) return;
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); advance(1); }
     else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); advance(-1); }
     else if (e.key === 'Home') { e.preventDefault(); select(0); }
@@ -154,7 +167,7 @@ export default function CinematicHomeSlider() {
 
   // Touch / pen swipe (mouse excluded so desktop text selection isn't hijacked).
   const onPointerDown = (e: React.PointerEvent) => {
-    if (e.pointerType === 'mouse') return;
+    if (!desktop || e.pointerType === 'mouse') return;
     dragRef.current = { x: e.clientX, y: e.clientY, active: true };
     setInteracting(true);
   };
