@@ -1,8 +1,8 @@
 # KodeCite.ai — Full Reference
 
-> KodeCite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience. The digital business layer is the verified, machine-facing representation of the same business. We make a business understandable, verifiable, recommendable, actionable, and controlled — so people, search engines, and AI agents can use the same authoritative record.
+> KodeCite builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. The website remains the human-facing experience. The digital business layer is the consistent owned representation of the same business. We make a business understandable, verifiable, recommendable, actionable, and controlled.
 
-As customers delegate more discovery and action to AI, businesses need to remain understandable, verifiable, and safely actionable inside the commercial decision loop. Luxe Window Works is production proof that this infrastructure can work.
+As customers begin to delegate discovery, evaluation, and next steps to AI, the assistant may evaluate a business before the customer visits. If it cannot establish fit or an approved next step, the business may never enter the customer’s decision. Luxe Window Works is production proof that this can work today.
 
 KodeCite.ai is based in North Idaho and builds for service businesses anywhere. The website, Next.js, schema, entity graph, llms.txt, agent.json, APIs, forms, and future MCP are components. The product is an accurate business model plus controlled machine use.
 
@@ -40,13 +40,13 @@ Not every AI system reads llms.txt, agent.json, or schema. Those files help when
 ## What you get
 
 ### Foundation Build — $4,995
-Owned website (Next.js where appropriate), canonical truth, entity graph, services and geography, corroboration, machine discovery, and a capability map. Client-owned GitHub and Vercel. Does not automatically include a production action endpoint.
+Owned website and digital business foundation so AI can understand and evaluate the business. Client owns the site and the accounts it runs on. Does not automatically include a live action endpoint.
 
 ### Agent Capability Build
-Custom-scoped after business rules are understood. One defined action at a time: contract, validation, security and abuse controls, idempotency, human handoff, production acceptance testing. No published price. Different actions carry different rules and risk.
+One clearly defined approved action after business rules are understood. Protects against invalid, unauthorized, abusive, or duplicate requests. Honest outcome and human handoff where required. No published price. Different actions carry different rules and risk.
 
 ### Platform Capability Layer — Pilot
-For selected WordPress / Wix / Squarespace businesses remaining on those platforms: a Kodecite-built, business-owned Next.js/Vercel sidecar deployed on infrastructure and a domain the client controls. No WordPress plugin dependency. Truth and capability publication, plus protected actions where appropriate. Application-only.
+For selected WordPress / Wix / Squarespace businesses remaining on those platforms: an owned capability layer that can sit alongside the existing website, on infrastructure and a domain the client controls. Application-only founding pilot. A full rebuild is still the strongest path.
 
 ### Agent Readiness Review
 See what AI can understand, verify, and safely do with a business today. Free written review within two business days. Request at https://www.kodecite.ai/machine-read

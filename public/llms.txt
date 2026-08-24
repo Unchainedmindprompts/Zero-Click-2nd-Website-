@@ -1,8 +1,8 @@
 # KodeCite.ai
 
-> KodeCite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience. The digital business layer is the verified, machine-facing representation. Business truth, services, geography, policies, permissions, capabilities, and actions must agree.
+> KodeCite builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. The website remains the human-facing experience. The digital business layer is the consistent owned representation of the same business.
 
-As customers delegate more discovery and action to AI, businesses need to remain understandable, verifiable, and safely actionable inside the commercial decision loop. Luxe Window Works is production proof that this infrastructure can work.
+As customers begin to delegate discovery, evaluation, and next steps to AI, the assistant may evaluate a business before the customer visits. If it cannot establish fit or an approved next step, the business may never enter the customer’s decision. Luxe Window Works is production proof that this can work today.
 
 [Full reference (expanded)](https://www.kodecite.ai/llms-full.txt)
 
@@ -18,15 +18,15 @@ Understandable. Verifiable. Recommendable. Actionable. Controlled.
 
 - **Truth**: identity, people, services, products, locations, credentials, proof, policies, limitations
 - **Capability**: what can be requested, required information, geography, what success does and does not mean
-- **Control**: human confirmation, authorization, validation, rate limiting, idempotency, fail-closed behavior
+- **Control**: rules that keep the owner in charge — invalid, unauthorized, abusive, or duplicate requests do not become false bookings or repeated leads
 - **Action**: consultation, qualified inquiry, appointment request, or controlled handoff — only what the real business permits
-- **Distribution**: website, search, structured data, profiles, llms.txt, agent.json, protected APIs, future MCP
+- **Distribution**: the same accurate information wherever people, search, or AI encounter the business
 
 ## Services
 
-- **Foundation Build**: owned website, truth, and discovery foundation. Does not automatically include a production action endpoint.
-- **Agent Capability Build**: one defined action at a time, scoped after business rules are understood. No published price.
-- **Platform Capability Layer — Pilot**: a Kodecite-built, business-owned Next.js/Vercel sidecar deployed on infrastructure and a domain the client controls. Application-only.
+- **Foundation Build**: owned website and digital business foundation so AI can understand and evaluate the business. Does not automatically include a live action endpoint.
+- **Agent Capability Build**: one clearly defined approved action after business rules are understood. Protects against invalid, unauthorized, abusive, or duplicate requests. No published price.
+- **Platform Capability Layer — Pilot**: an owned capability layer that can sit alongside an existing WordPress, Wix, or Squarespace website, on infrastructure and a domain the client controls. Application-only.
 - **Agent Readiness Review** (free, within two business days): what AI can understand, verify, and safely do with a business today.
 
 You own the repo, the site, and the deployed infrastructure. No required retainer. Active capabilities may need maintenance and third-party costs.

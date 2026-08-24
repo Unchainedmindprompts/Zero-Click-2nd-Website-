@@ -6,7 +6,7 @@ import { REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
 export const metadata: Metadata = {
   title: 'Start Here — Usable by AI',
   description:
-    'Plain answers about how Kodecite helps AI understand your business, recommend it accurately, and take only the next steps you approve.',
+    'As customers begin to delegate discovery and next steps to AI, the first evaluator may be an assistant — not a visitor on your site. Plain answers about what that means and what stays in your control.',
   alternates: { canonical: 'https://www.kodecite.ai/faq' },
 };
 
@@ -15,16 +15,16 @@ const faqs: { q: string; a: string | string[] }[] = [
   {
     q: 'What does “usable by AI” mean for my business?',
     a: [
-      'AI can already find businesses. “Usable by AI” means it can accurately understand what you do, where you operate, who you serve, what makes you credible, and which actions you permit.',
-      'For a window-treatment company, that can mean recommending a qualified installer and submitting an approved consultation request. That is different from merely finding a name in search.',
+      'AI can already find businesses. “Usable by AI” means it can confidently understand what you do, verify that you fit the request, and determine an approved next step.',
+      'If it cannot establish that, your business may never enter the customer’s decision — even if your website is strong. For a window-treatment company, usable can mean recommending a qualified installer and submitting an approved consultation request. That is different from merely finding a name in search.',
       'People stay in control.',
     ],
   },
   {
     q: 'Why does this matter now?',
     a: [
-      'Customers are beginning to delegate more discovery, comparison, and next steps to AI. If AI cannot confidently understand and use your business, it may leave you outside the decision.',
-      'Websites and search still matter. This is about remaining clear when more of that work starts happening through AI.',
+      'Customers are beginning to delegate discovery, comparison, and next steps to AI. The assistant may evaluate businesses before the customer ever visits a website.',
+      'If it cannot confidently understand your services, location, credibility, and permitted next step, your business may be omitted before you know a decision was underway. Websites and search still matter. This is about remaining inside that evaluation as more of the work starts happening through AI.',
     ],
   },
   {
@@ -144,7 +144,7 @@ export default function FAQPage() {
               maxWidth: '680px',
             }}
           >
-            Plain answers about how Kodecite helps AI understand your business, recommend it accurately, and take only the next steps you approve.
+            As customers begin to delegate discovery and next steps to AI, the first evaluator may be an assistant — not a visitor on your site. These answers explain what that means, why it matters, and what stays in your control.
           </p>
         </div>
       </section>

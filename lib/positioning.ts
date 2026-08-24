@@ -34,7 +34,22 @@ export const LUXE_PROOF =
 export const HOME_H1 = 'Make your business usable by AI.';
 
 export const HOME_SUPPORT =
-  'Kodecite builds the trusted digital business layer that makes your company understandable, verifiable, recommendable, and safely actionable by AI—while keeping you in control.';
+  'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Before they visit your website, the AI may determine which businesses fit. If it cannot establish fit or trust, your business may never reach that customer. Kodecite keeps you eligible by making the business understandable, verifiable, and safely actionable.';
+
+export const HOME_CONSEQUENCE =
+  'If AI cannot establish that your business fits, the customer connection may end before it begins.';
+
+export const HOME_JOURNEY = [
+  'Customer delegates an outcome',
+  'AI evaluates businesses',
+  'Qualified businesses are recommended or contacted',
+] as const;
+
+export const ABOUT_MISSION =
+  'Kodecite exists to keep service businesses inside the commercial decision process as customers increasingly delegate discovery, evaluation, and next steps to AI.';
+
+export const PRICING_CONTEXT =
+  'Foundation Build creates the owned foundation AI can understand and evaluate. Agent Capability Build adds one approved action after the rules are clear. Foundation does not automatically include a live agent-action endpoint.';
 
 export const PRINCIPLE =
   'AI should not merely find a business. It should understand what the business does, know what it is allowed to do, and take the next authorized step with a customer.';

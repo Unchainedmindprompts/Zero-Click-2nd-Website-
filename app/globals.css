@@ -1049,6 +1049,15 @@ em.serif {
    extra bottom clearance so the buttons never overlap the paragraph above. */
 @media (max-width: 639px) {
   .kc-slide-copy { padding-bottom: 200px !important; }
+  .kc-slide-copy--journey { padding-bottom: 216px !important; }
+  .kc-journey {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  .kc-journey-arrow {
+    display: none;
+  }
 }
 
 /* Top-bar "Machine Read" button: hidden on mobile (only on tablet/desktop).

@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "name": "KodeCite.ai",
-  "description": "KodeCite builds the trusted digital business layer that helps AI agents understand, evaluate, recommend, and take authorized next steps with service businesses. The website remains the human-facing experience.",
+  "description": "KodeCite builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. As customers begin to delegate discovery and next steps to AI, that layer keeps the business eligible for the commercial decision.",
   "url": "https://www.kodecite.ai",
-  "positioning": "Trusted digital business layer for service businesses. Existing tools often address individual layers; KodeCite connects verified truth, explicit capabilities, controlled actions, owned infrastructure, and human handoff. Luxe Window Works is production proof that this infrastructure can work. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
+  "positioning": "Owned digital business layer for service businesses. As customers begin to delegate outcomes to AI, the assistant may evaluate a business before the customer visits. KodeCite makes the business understandable, verifiable, and safely usable, with the owner controlling what AI may do. Luxe Window Works is production proof that this can work today. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
   "contact": {
     "location": "North Idaho",
     "service_area": ["North Idaho", "Pacific Northwest", "Remote — service businesses anywhere"]
@@ -13,26 +13,26 @@
     "summary": "Truth, Capability, Control, Action, Distribution. Outcomes: Understandable. Verifiable. Recommendable. Actionable. Controlled.",
     "truth": "Identity, people, services, products, locations, credentials, proof, policies, and limitations — one authoritative record.",
     "capability": "What can be requested, required information, geography, available services, and what success does and does not mean.",
-    "control": "Human confirmation, authorization, validation, rate limiting, idempotency, fail-closed behavior. No false booking, pricing, purchase, or acceptance.",
+    "control": "Rules that keep the owner in charge. Invalid, unauthorized, abusive, or duplicate requests do not become false bookings or repeated leads.",
     "action": "Consultation, qualified inquiry, appointment request, or controlled handoff — only what the real business permits. Not every client needs every action.",
-    "distribution": "Website, search, structured data, profiles, llms.txt, agent.json, protected APIs, and future MCP. Delivery surfaces, not the product category."
+    "distribution": "The same accurate information wherever people, search, or AI encounter the business. One consistent version, not scattered or conflicting facts."
   },
   "capabilities": [
     {
       "name": "Foundation Build",
-      "description": "Owned website, canonical truth, entity graph, services and geography, corroboration, and machine discovery. Does not automatically include a production action endpoint.",
+      "description": "Owned website and digital business foundation so AI can understand and evaluate the business. Client owns the site and infrastructure. Does not automatically include a live action endpoint.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "Agent Capability Build",
-      "description": "Custom-scoped after business rules are understood. One defined action at a time: contract, validation, security, idempotency, human handoff, production acceptance testing. No published price.",
+      "description": "One clearly defined approved action after business rules are understood. Protects against invalid, unauthorized, abusive, or duplicate requests. Honest outcome and human handoff where required. No published price.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "Platform Capability Layer — Pilot",
-      "description": "For selected WordPress, Wix, or Squarespace businesses: a KodeCite-built, business-owned Next.js/Vercel sidecar deployed on infrastructure and a domain the client controls. Application-only.",
+      "description": "For selected WordPress, Wix, or Squarespace businesses: an owned capability layer that can sit alongside the existing website, on infrastructure and a domain the client controls. Application-only founding pilot.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
@@ -75,7 +75,7 @@
       "type": "page",
       "title": "Start Here (FAQ)",
       "url": "https://www.kodecite.ai/faq",
-      "topic": "What usable by AI means for a service business, why it matters now, whether this is SEO or ChatGPT ranking, what AI can do, what Kodecite builds, how it works with an existing website, what Luxe Window Works proved, what it costs and who owns it, and whether a business is a good fit."
+      "topic": "What usable by AI means for a service business, why it matters as customers begin to delegate outcomes to AI, whether this is SEO or ChatGPT ranking, what AI can do, what Kodecite builds, how it works with an existing website, what Luxe Window Works proved, what it costs and who owns it, and whether a business is a good fit."
     },
     {
       "type": "page",

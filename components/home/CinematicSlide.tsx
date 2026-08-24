@@ -44,7 +44,7 @@ export default function CinematicSlide({
 
   return (
     <div
-      className="kc-slide-copy relative h-full w-full mx-auto px-8 flex flex-col justify-end"
+      className={`kc-slide-copy relative h-full w-full mx-auto px-8 flex flex-col justify-end${slide.steps?.length ? ' kc-slide-copy--journey' : ''}`}
       style={{
         maxWidth: '1320px',
         paddingTop: '120px',
@@ -102,6 +102,65 @@ export default function CinematicSlide({
       >
         {slide.support}
       </p>
+
+      {slide.steps && slide.steps.length > 0 && (
+        <ol
+          className="kc-slide-reveal kc-journey mt-6"
+          aria-label="Customer delegates an outcome, AI evaluates, then qualified businesses are recommended or contacted"
+          style={{
+            animationDelay: '0.24s',
+            maxWidth: '640px',
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '10px 8px',
+            padding: 0,
+            marginTop: '24px',
+            listStyle: 'none',
+          }}
+        >
+          {slide.steps.map((step, i) => (
+            <li
+              key={step}
+              className="flex items-center gap-2"
+              style={{ minWidth: 0 }}
+            >
+              <span
+                className="font-mono"
+                style={{
+                  fontSize: '10px',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: c.fg,
+                  border: `1px solid ${slide.theme === 'light' ? 'rgba(11,16,28,0.22)' : 'rgba(93,213,255,0.35)'}`,
+                  borderRadius: '999px',
+                  padding: '7px 12px',
+                  textShadow: c.bodyShadow,
+                  lineHeight: 1.35,
+                }}
+              >
+                <span style={{ color: c.accent, marginRight: '8px' }}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                {step}
+              </span>
+              {i < (slide.steps?.length ?? 0) - 1 && (
+                <span
+                  aria-hidden
+                  className="font-inter kc-journey-arrow"
+                  style={{
+                    color: c.accent,
+                    fontSize: '16px',
+                    lineHeight: 1,
+                    padding: '0 2px',
+                  }}
+                >
+                  →
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      )}
 
       {slide.support2 && (
         <p

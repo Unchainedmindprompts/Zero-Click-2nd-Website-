@@ -1,3 +1,5 @@
+import { HOME_CONSEQUENCE, HOME_JOURNEY, HOME_SUPPORT } from '@/lib/positioning';
+
 // ── Homepage cinematic slider — slide content + visuals ──────────────────────
 //
 // SWAP POINT FOR FINAL ART:
@@ -29,6 +31,9 @@ export interface HomeSlide {
   /** Compact outcome / layer list. Used only when a slide needs five short
    *  labels without turning the homepage into an architecture diagram. */
   points?: string[];
+  /** Compact cause-and-effect steps. Used on the opening slide as a
+   *  three-part journey, not a feature list. */
+  steps?: string[];
   /** Suppress the "NN / NN — kicker" eyebrow. The intro/title slide's headline
    *  IS the tagline, so it carries no eyebrow (the KODECITE.AI wordmark already
    *  lives in the header). */
@@ -57,8 +62,9 @@ export const HOME_SLIDES: HomeSlide[] = [
       { text: 'Make your business' },
       { text: 'usable by AI.', accent: true },
     ],
-    support:
-      'Kodecite builds the trusted digital business layer that makes your company understandable, verifiable, recommendable, and safely actionable by AI—while keeping you in control.',
+    support: HOME_SUPPORT,
+    support2: HOME_CONSEQUENCE,
+    steps: [...HOME_JOURNEY],
     image: '/home/slide-intro.webp',
     bg:
       'radial-gradient(60% 80% at 72% 30%, rgba(200,140,60,0.14), transparent 60%),' +
@@ -71,16 +77,16 @@ export const HOME_SLIDES: HomeSlide[] = [
     // life happens. Natively text-free; the left scrim (kc-slide-bg__plate)
     // darkens the bright street so the real HTML headline/CTAs stay legible.
     id: 'behavior',
-    kicker: 'THE NEW CUSTOMER BEHAVIOR',
+    kicker: 'THE NEW CUSTOMER JOURNEY',
     headline: [
-      { text: 'Customers are asking' },
-      { text: 'AI to act — not just' },
-      { text: 'to find a name.', accent: true },
+      { text: 'AI may evaluate' },
+      { text: 'before the customer', accent: true },
+      { text: 'ever visits.' },
     ],
     support:
-      'Customers still search. Increasingly, they are also asking AI to compare options, evaluate businesses, and take the next step.',
+      'Customers still search. As they begin to delegate discovery and next steps, an assistant may compare options and establish fit before anyone reaches your website.',
     support2:
-      'If your business cannot be reliably understood or safely acted upon, it may never enter the customer’s consideration set.',
+      'If it cannot confidently understand your services, location, credibility, or permitted next step, your business may be omitted before you know a decision was underway.',
     image: '/home/slide-ai-web.webp',
     bg:
       'radial-gradient(58% 78% at 76% 24%, rgba(93,213,255,0.22), transparent 60%),' +
@@ -92,14 +98,15 @@ export const HOME_SLIDES: HomeSlide[] = [
     // web/search/review/profile fragments drifting in disconnected space — no
     // portal yet. AI sees disconnected pieces. Left stays dark for text.
     id: 'problem',
-    kicker: 'THE PROBLEM',
+    kicker: 'WHY ORDINARY COPY IS NOT ALWAYS ENOUGH',
     headline: [
-      { text: 'Most businesses are' },
-      { text: 'spread across pieces', accent: true },
-      { text: 'AI cannot reconstruct.' },
+      { text: 'Copy persuades people.' },
+      { text: 'AI needs more certainty.', accent: true },
     ],
     support:
-      'Website, directories, forms, calendars, and unwritten rules live in different places. Tools usually cover one isolated layer — visibility, schema, scheduling, automation, commerce, or governance. AI may find pieces. It still cannot reliably reconstruct what the business can do or take an authorized next step.',
+      'Traditional website copy is written to persuade a person. Facts may be scattered, implied, inconsistent, or incomplete. Humans call with questions. AI needs greater clarity on services, geography, credibility, limitations, and allowed actions.',
+    support2:
+      'Copy helps. It may not provide enough certainty to evaluate fit or safely take a next step. Kodecite reconciles the human website with a consistent owned digital representation.',
     image: '/home/slide-problem.webp',
     bg:
       'conic-gradient(from 210deg at 62% 38%, rgba(70,90,150,0.10), transparent 26%),' +
@@ -112,21 +119,20 @@ export const HOME_SLIDES: HomeSlide[] = [
     // Elegant light paths, architectural clarity — the move from noise to
     // order. Left stays dark for text.
     id: 'system',
-    kicker: 'THE KODECITE SYSTEM',
+    kicker: 'WHAT KODECITE BUILDS',
     headline: [
-      { text: 'One authoritative' },
-      { text: 'system.', accent: true },
+      { text: 'Understandable.' },
+      { text: 'Verifiable.' },
+      { text: 'Safely usable.', accent: true },
     ],
     support:
-      'The website stays the human-facing experience. The digital business layer is the verified, machine-facing representation. Truth, services, geography, policies, permissions, capabilities, and actions have to agree.',
+      'Kodecite builds the owned digital business layer that helps AI understand what you do, determine when you are a good fit, recommend you accurately, and take only the next steps you approve.',
     support2:
-      'Recommendation is only one stage. The larger goal is safe agent participation.',
+      'You decide what AI may do. People remain in control of follow-up, booking, pricing, and acceptance.',
     points: [
-      'Truth',
-      'Capability',
-      'Control',
-      'Action',
-      'Distribution',
+      'Owner-controlled',
+      'Approved next steps only',
+      'Human follow-up stays yours',
     ],
     image: '/home/slide-transformation.webp',
     theme: 'light',
@@ -142,14 +148,14 @@ export const HOME_SLIDES: HomeSlide[] = [
     id: 'proof',
     kicker: 'LIVE PRODUCTION PROOF',
     headline: [
-      { text: 'Discovered.' },
-      { text: 'Understood.' },
-      { text: 'Actioned.', accent: true },
+      { text: 'This can work' },
+      { text: 'in production', accent: true },
+      { text: 'today.' },
     ],
     support:
-      'Luxe Window Works publishes a machine-readable in-home consultation capability. An authorized production test submitted one valid request. It was accepted. The duplicate was suppressed. A conflicting replay was rejected. Booking, pricing, and checkout stayed unavailable.',
+      'An outside AI discovered what Luxe Window Works allowed, established that the request qualified, and submitted one protected consultation request. An honest result came back. Duplicate handling prevented a second request. A person still follows up.',
     support2:
-      'Luxe Window Works is production proof that this infrastructure can work.',
+      'That is not booking, calendar, pricing, checkout, or acceptance. It is proof that a controlled next step can work.',
     image: '/home/slide-outcome.webp',
     theme: 'light',
     bg:
