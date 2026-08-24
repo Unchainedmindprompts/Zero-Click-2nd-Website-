@@ -53,17 +53,10 @@ export default function CinematicSlide({
   const c = slide.theme === 'light' ? PALETTE.light : PALETTE.dark;
   const themeClass = slide.theme === 'light' ? ' kc-chapter--light' : '';
   const introClass = isIntro ? ' kc-chapter--intro' : '';
-  // Mobile-only overlay strength. Desktop still hides .kc-chapter-scrim.
-  const overlayClass =
-    slide.id === 'outcome' || slide.id === 'problem'
-      ? ' kc-overlay-soft'
-      : slide.id === 'proof'
-        ? ' kc-overlay-proof'
-        : ' kc-overlay-lift';
 
   return (
     <article
-      className={`kc-chapter${themeClass}${introClass}${overlayClass} ${className ?? ''}`.trim()}
+      className={`kc-chapter${themeClass}${introClass} ${className ?? ''}`.trim()}
       role="group"
       aria-roledescription="slide"
       aria-label={`${index + 1} of ${total}: ${slide.kicker}`}
