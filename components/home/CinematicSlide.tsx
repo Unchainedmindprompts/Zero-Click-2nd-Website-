@@ -95,175 +95,177 @@ export default function CinematicSlide({
             paddingBottom: 'clamp(150px, 22vh, 240px)',
           }}
         >
-          {!slide.brandEyebrow && (
-            <div
-              className="kc-slide-reveal d-eyebrow mb-6"
-              style={{ animationDelay: '0.05s', ...(c.eyebrow ? { color: c.eyebrow } : {}) }}
-            >
-              {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')} — {slide.kicker}
-            </div>
-          )}
-
-          <Heading
-            className="kc-slide-focus kc-slide-h font-inter font-semibold"
-            style={{
-              fontSize: 'clamp(32px, 4.4vw, 84px)',
-              lineHeight: 1.08,
-              letterSpacing: '-0.045em',
-              color: c.fg,
-              maxWidth: '18ch',
-              textShadow: c.headShadow,
-            }}
-          >
-            {slide.headline.map((line, li) =>
-              line.accent ? (
-                <span
-                  key={li}
-                  className="serif"
-                  style={{ display: 'block', color: c.accent, fontStyle: 'italic' }}
-                >
-                  {line.text}
-                </span>
-              ) : (
-                <span key={li} style={{ display: 'block' }}>
-                  {line.text}
-                </span>
-              ),
+          <div className={isIntro ? 'kc-intro-copy' : undefined}>
+            {!slide.brandEyebrow && (
+              <div
+                className="kc-slide-reveal d-eyebrow mb-6"
+                style={{ animationDelay: '0.05s', ...(c.eyebrow ? { color: c.eyebrow } : {}) }}
+              >
+                {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')} — {slide.kicker}
+              </div>
             )}
-          </Heading>
 
-          <p
-            className="kc-slide-reveal font-inter mt-7"
-            style={{
-              animationDelay: '0.2s',
-              fontSize: 'clamp(16px, 1.9vw, 20px)',
-              lineHeight: 1.55,
-              color: c.dim,
-              fontWeight: 300,
-              maxWidth: '560px',
-              textShadow: c.bodyShadow,
-            }}
-          >
-            {isIntro ? (
-              <>
-                <span className="kc-support-hero">{HOME_SUPPORT_HERO}</span>
-                {' '}
-                <span className="kc-support-more">{HOME_SUPPORT_ELIGIBILITY}</span>
-              </>
-            ) : (
-              slide.support
-            )}
-          </p>
-
-          {isIntro && (
-            <Link href={REVIEW_HREF} className="d-btn d-btn-primary kc-hero-cta">
-              {REVIEW_CTA} →
-            </Link>
-          )}
-
-          {!isIntro && slide.support2 && (
-            <p
-              className="kc-slide-reveal font-inter mt-4"
+            <Heading
+              className="kc-slide-focus kc-slide-h font-inter font-semibold"
               style={{
-                animationDelay: '0.28s',
+                fontSize: 'clamp(32px, 4.4vw, 84px)',
+                lineHeight: 1.08,
+                letterSpacing: '-0.045em',
+                color: c.fg,
+                maxWidth: '18ch',
+                textShadow: c.headShadow,
+              }}
+            >
+              {slide.headline.map((line, li) =>
+                line.accent ? (
+                  <span
+                    key={li}
+                    className="serif"
+                    style={{ display: 'block', color: c.accent, fontStyle: 'italic' }}
+                  >
+                    {line.text}
+                  </span>
+                ) : (
+                  <span key={li} style={{ display: 'block' }}>
+                    {line.text}
+                  </span>
+                ),
+              )}
+            </Heading>
+
+            <p
+              className="kc-slide-reveal font-inter mt-7"
+              style={{
+                animationDelay: '0.2s',
                 fontSize: 'clamp(16px, 1.9vw, 20px)',
                 lineHeight: 1.55,
-                color: c.fg,
-                fontWeight: 450,
+                color: c.dim,
+                fontWeight: 300,
                 maxWidth: '560px',
                 textShadow: c.bodyShadow,
               }}
             >
-              {slide.support2}
+              {isIntro ? (
+                <>
+                  <span className="kc-support-hero">{HOME_SUPPORT_HERO}</span>
+                  {' '}
+                  <span className="kc-support-more">{HOME_SUPPORT_ELIGIBILITY}</span>
+                </>
+              ) : (
+                slide.support
+              )}
             </p>
-          )}
 
-          {slide.points && slide.points.length > 0 && (
-            <ul
-              className="kc-slide-reveal mt-5 flex flex-wrap gap-2"
-              style={{ animationDelay: '0.32s', maxWidth: '640px' }}
-            >
-              {slide.points.map((point) => (
-                <li
-                  key={point}
-                  className="font-mono"
+            {isIntro && (
+              <Link href={REVIEW_HREF} className="d-btn d-btn-primary kc-hero-cta">
+                {REVIEW_CTA} →
+              </Link>
+            )}
+
+            {!isIntro && slide.support2 && (
+              <p
+                className="kc-slide-reveal font-inter mt-4"
+                style={{
+                  animationDelay: '0.28s',
+                  fontSize: 'clamp(16px, 1.9vw, 20px)',
+                  lineHeight: 1.55,
+                  color: c.fg,
+                  fontWeight: 450,
+                  maxWidth: '560px',
+                  textShadow: c.bodyShadow,
+                }}
+              >
+                {slide.support2}
+              </p>
+            )}
+
+            {slide.points && slide.points.length > 0 && (
+              <ul
+                className="kc-slide-reveal mt-5 flex flex-wrap gap-2"
+                style={{ animationDelay: '0.32s', maxWidth: '640px' }}
+              >
+                {slide.points.map((point) => (
+                  <li
+                    key={point}
+                    className="font-mono"
+                    style={{
+                      fontSize: '10px',
+                      letterSpacing: '0.14em',
+                      textTransform: 'uppercase',
+                      color: c.fg,
+                      border: `1px solid ${slide.theme === 'light' ? 'rgba(11,16,28,0.22)' : 'rgba(93,213,255,0.35)'}`,
+                      borderRadius: '999px',
+                      padding: '6px 12px',
+                      textShadow: c.bodyShadow,
+                    }}
+                  >
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {isIntro && slide.steps && slide.steps.length > 0 && (
+            <div className="kc-journey-band">
+              <ol
+                className="kc-slide-reveal kc-journey"
+                aria-label="Customer delegates an outcome, AI evaluates, then qualified businesses are recommended or contacted"
+                style={{ animationDelay: '0.24s' }}
+              >
+                {slide.steps.map((step, i) => (
+                  <li key={step} className="kc-journey-item">
+                    <div className="kc-journey-rail" aria-hidden>
+                      <span className="kc-journey-index font-mono" style={{ color: c.accent }}>
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      {i < (slide.steps?.length ?? 0) - 1 && <span className="kc-journey-stem" />}
+                    </div>
+                    <div
+                      className="kc-journey-card font-mono"
+                      style={{
+                        color: c.fg,
+                        borderColor: slide.theme === 'light' ? 'rgba(11,16,28,0.22)' : 'rgba(93,213,255,0.35)',
+                        textShadow: c.bodyShadow,
+                      }}
+                    >
+                      <span className="kc-journey-num font-mono" style={{ color: c.accent }}>
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="kc-journey-label">{step}</span>
+                    </div>
+                    {i < (slide.steps?.length ?? 0) - 1 && (
+                      <span
+                        aria-hidden
+                        className="kc-journey-arrow font-inter"
+                        style={{ color: c.accent }}
+                      >
+                        →
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+              {slide.support2 && (
+                <p
+                  className="kc-slide-reveal kc-journey-consequence font-inter mt-4"
                   style={{
-                    fontSize: '10px',
-                    letterSpacing: '0.14em',
-                    textTransform: 'uppercase',
+                    animationDelay: '0.28s',
+                    fontSize: 'clamp(16px, 1.9vw, 20px)',
+                    lineHeight: 1.55,
                     color: c.fg,
-                    border: `1px solid ${slide.theme === 'light' ? 'rgba(11,16,28,0.22)' : 'rgba(93,213,255,0.35)'}`,
-                    borderRadius: '999px',
-                    padding: '6px 12px',
+                    fontWeight: 450,
+                    maxWidth: '560px',
                     textShadow: c.bodyShadow,
                   }}
                 >
-                  {point}
-                </li>
-              ))}
-            </ul>
+                  {slide.support2}
+                </p>
+              )}
+            </div>
           )}
         </div>
       </div>
-
-      {isIntro && slide.steps && slide.steps.length > 0 && (
-        <div className="kc-journey-band">
-          <ol
-            className="kc-slide-reveal kc-journey"
-            aria-label="Customer delegates an outcome, AI evaluates, then qualified businesses are recommended or contacted"
-            style={{ animationDelay: '0.24s' }}
-          >
-            {slide.steps.map((step, i) => (
-              <li key={step} className="kc-journey-item">
-                <div className="kc-journey-rail" aria-hidden>
-                  <span className="kc-journey-index font-mono" style={{ color: c.accent }}>
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  {i < (slide.steps?.length ?? 0) - 1 && <span className="kc-journey-stem" />}
-                </div>
-                <div
-                  className="kc-journey-card font-mono"
-                  style={{
-                    color: c.fg,
-                    borderColor: slide.theme === 'light' ? 'rgba(11,16,28,0.22)' : 'rgba(93,213,255,0.35)',
-                    textShadow: c.bodyShadow,
-                  }}
-                >
-                  <span className="kc-journey-num font-mono" style={{ color: c.accent }}>
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <span className="kc-journey-label">{step}</span>
-                </div>
-                {i < (slide.steps?.length ?? 0) - 1 && (
-                  <span
-                    aria-hidden
-                    className="kc-journey-arrow font-inter"
-                    style={{ color: c.accent }}
-                  >
-                    →
-                  </span>
-                )}
-              </li>
-            ))}
-          </ol>
-          {slide.support2 && (
-            <p
-              className="kc-slide-reveal kc-journey-consequence font-inter mt-4"
-              style={{
-                animationDelay: '0.28s',
-                fontSize: 'clamp(16px, 1.9vw, 20px)',
-                lineHeight: 1.55,
-                color: c.fg,
-                fontWeight: 450,
-                maxWidth: '560px',
-                textShadow: c.bodyShadow,
-              }}
-            >
-              {slide.support2}
-            </p>
-          )}
-        </div>
-      )}
     </article>
   );
 }

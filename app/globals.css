@@ -1086,28 +1086,12 @@ em.serif {
 }
 
 @media (min-width: 768px) {
-  /* Intro: photo stays full-bleed; H1 + journey sit in one bottom stack
-     so the pills stay on the plate (not a second copy). */
-  .kc-chapter--intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
+  /* Intro photo stays full-bleed. H1 + journey stay in the original
+     flex-end overlay (one column, pills on the plate). */
   .kc-chapter--intro .kc-intro-lead {
-    display: contents;
-  }
-  .kc-chapter--intro .kc-slide-copy {
-    position: relative;
-    height: auto !important;
-    justify-content: flex-start;
-    padding-bottom: 0 !important;
-  }
-  .kc-chapter--intro .kc-journey-band {
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 32px clamp(150px, 22vh, 240px);
-    background: transparent;
+    display: block;
+    position: absolute;
+    inset: 0;
   }
 }
 
@@ -1231,11 +1215,34 @@ em.serif {
     will-change: auto;
   }
 
+  .kc-chapter--intro .kc-intro-lead {
+    display: grid;
+    grid-template-areas: "lead" "journey";
+    position: relative;
+    inset: auto;
+  }
+  .kc-chapter--intro .kc-slide-copy {
+    display: contents;
+  }
+  .kc-chapter--intro .kc-chapter-media {
+    grid-area: lead;
+  }
+  .kc-intro-copy {
+    grid-area: lead;
+    position: relative;
+    z-index: 1;
+    /* Content-height hero: H1 clears the opaque sticky header. */
+    padding: calc(var(--kc-shell-h, 64px) + 1.75rem) 22px 40px;
+    max-width: 40rem;
+  }
+  .kc-chapter--intro .kc-journey-band {
+    grid-area: journey;
+  }
+
   .kc-slide-copy {
     justify-content: flex-start !important;
     height: auto !important;
     max-width: 40rem !important;
-    /* Content-height hero: H1 clears the opaque sticky header. */
     padding: calc(var(--kc-shell-h, 64px) + 1.75rem) 22px 40px !important;
   }
   .kc-chapter:not(.kc-chapter--intro) .kc-slide-copy {
@@ -1889,13 +1896,7 @@ em.serif {
     padding-bottom: clamp(230px, 26vh, 340px) !important;
   }
   .kc-chapter--intro .kc-slide-copy {
-    padding-bottom: 0 !important;
-  }
-  .kc-chapter--intro .kc-journey-band {
-    max-width: 1480px;
-    padding-left: clamp(80px, 6vw, 150px);
-    padding-right: 72px;
-    padding-bottom: clamp(230px, 26vh, 340px);
+    padding-bottom: clamp(230px, 26vh, 340px) !important;
   }
   .kc-slider-cta {
     max-width: 1480px !important;
