@@ -1261,11 +1261,6 @@ em.serif {
     font-size: clamp(2rem, 8.2vw, 2.6rem) !important;
     line-height: 1.15 !important;
     letter-spacing: -0.03em !important;
-    color: #f4f7ff !important;
-    text-shadow: 0 2px 28px rgba(3, 5, 14, 0.65) !important;
-  }
-  .kc-slide-h .serif {
-    color: var(--d-accent-2) !important;
   }
   .kc-support-more {
     display: none;
@@ -1287,36 +1282,9 @@ em.serif {
     color: #f4f7ff !important;
     max-width: 36rem !important;
   }
-  .kc-chapter-scrim {
-    display: block;
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-      linear-gradient(180deg, rgba(4, 6, 14, 0.78) 0%, rgba(4, 6, 14, 0.58) 26%, rgba(4, 6, 14, 0.70) 58%, rgba(4, 6, 14, 0.92) 100%),
-      radial-gradient(110% 80% at 16% 72%, rgba(4, 6, 14, 0.55) 0%, transparent 68%);
-  }
-  /* Office / water plates (theme: light) — keep body/H2 on a dark wash. */
-  .kc-chapter--light .kc-chapter-scrim {
-    background:
-      linear-gradient(180deg, rgba(4, 6, 14, 0.88) 0%, rgba(4, 6, 14, 0.74) 24%, rgba(4, 6, 14, 0.82) 58%, rgba(4, 6, 14, 0.96) 100%),
-      radial-gradient(125% 90% at 18% 70%, rgba(4, 6, 14, 0.7) 0%, transparent 72%);
-  }
-  .kc-slide-bg__plate--light {
-    display: none;
-  }
-  .kc-chapter--light .kc-slide-copy p,
-  .kc-chapter--light .kc-slide-copy .d-eyebrow,
-  .kc-chapter--light .kc-slide-copy li {
-    color: rgba(236, 241, 255, 0.94) !important;
-    text-shadow: 0 1px 18px rgba(3, 5, 14, 0.55) !important;
-    border-color: rgba(93, 213, 255, 0.35) !important;
-  }
-  .kc-chapter .kc-slide-copy p,
-  .kc-journey-consequence {
-    color: rgba(236, 241, 255, 0.94) !important;
-    text-shadow: 0 1px 18px rgba(3, 5, 14, 0.55) !important;
-  }
+  /* Photograph treatment matches desktop: .kc-chapter-scrim stays hidden
+     (base rule display:none). Phones use the same .kc-slide-bg__plate
+     colors/stops as desktop — no extra mobile black wash. */
 
   .kc-slider-cta {
     position: relative !important;
@@ -1649,28 +1617,12 @@ em.serif {
     radial-gradient(80% 90% at 24% 70%, rgba(5, 7, 16, 0.68) 0%, rgba(5, 7, 16, 0.30) 46%, transparent 66%),
     linear-gradient(100deg, rgba(5, 7, 16, 0.40) 0%, rgba(5, 7, 16, 0.10) 30%, transparent 52%);
 }
-@media (max-width: 768px) {
-  /* favour the dark left so left-aligned text stays readable on phones */
-  .kc-slide-img { object-position: 34% center; }
-  .kc-slide-bg__plate {
-    background:
-      radial-gradient(110% 80% at 32% 74%, rgba(5, 7, 16, 0.66) 0%, rgba(5, 7, 16, 0.28) 48%, transparent 72%),
-      linear-gradient(180deg, rgba(5, 7, 16, 0) 44%, rgba(5, 7, 16, 0.48) 100%);
-  }
-}
-
 /* Light (bright-image) slides: faint white lift behind dark copy — keeps the
-   image bright, no darkening. Overrides the dark plate above. */
+   image bright, no darkening. Overrides the dark plate above. Same stops
+   on every viewport; do not add a mobile-only black wash. */
 .kc-slide-bg__plate--light {
   background:
     radial-gradient(86% 96% at 24% 68%, rgba(252, 253, 255, 0.62) 0%, rgba(252, 253, 255, 0.30) 46%, transparent 72%);
-}
-@media (max-width: 768px) {
-  .kc-slide-bg__plate--light {
-    background:
-      radial-gradient(135% 90% at 34% 72%, rgba(252, 253, 255, 0.72) 0%, rgba(252, 253, 255, 0.36) 50%, transparent 82%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0) 42%, rgba(252, 253, 255, 0.46) 100%);
-  }
 }
 
 /* Mobile: size cinematic layers to the viewport. Ken Burns scale(1.08) paints
