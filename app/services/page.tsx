@@ -215,9 +215,9 @@ export default function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
 
       <section className="secondary-section secondary-hero">
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">SERVICES · HOW IT WORKS</div>
-          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 4.8vw, 62px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: FG, maxWidth: '18ch' }}>
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(30px, 4.8vw, 62px)', lineHeight: 1.12, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
             Infrastructure that lets AI understand — <em className="serif" style={{ color: ACCENT }}>and take authorized next steps with</em> — your business.
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
@@ -231,7 +231,7 @@ export default function ServicesPage() {
       </section>
 
       <section id="the-category" className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THE CATEGORY</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
             Isolated layers are common. <em className="serif" style={{ color: ACCENT }}>A usable system is not.</em>
@@ -248,7 +248,7 @@ export default function ServicesPage() {
       </section>
 
       <section id="website-development" className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THE PRODUCT</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
             Owned infrastructure for the <em className="serif" style={{ color: ACCENT }}>agent-driven web.</em>
@@ -283,7 +283,7 @@ export default function ServicesPage() {
       </section>
 
       <section id="what-ai-must-do" className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">BEFORE THE LAYERS</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '20ch' }}>
             AI has to finish this work <em className="serif" style={{ color: ACCENT }}>before you stay in the decision.</em>
@@ -304,7 +304,7 @@ export default function ServicesPage() {
       </section>
 
       <section id="how-it-works" className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THE FIVE LAYERS</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
             Model only what the <em className="serif" style={{ color: ACCENT }}>real business permits.</em>
@@ -333,7 +333,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THREE OFFER PATHS</div>
           <div className="flex flex-col gap-4">
             {offerPaths.map((o) => (
@@ -351,7 +351,7 @@ export default function ServicesPage() {
       </section>
 
       <section id="live-production-proof" className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">LIVE PRODUCTION PROOF</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '20ch' }}>
             Luxe Window Works — a request an assistant could <em className="serif" style={{ color: ACCENT }}>find and submit.</em>
@@ -368,7 +368,8 @@ export default function ServicesPage() {
               href={LUXE_CAPABILITY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)', wordBreak: 'break-all' }}
+              className="capability-url"
+              style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}
             >
               luxewindowworks.com/api/capabilities/request-in-home-consultation
             </a>
@@ -382,7 +383,7 @@ export default function ServicesPage() {
       <ProofWall />
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">WHO WE BUILD FOR</div>
           <p className="font-inter font-semibold mb-8" style={{ fontSize: 'clamp(20px, 2.6vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em', color: FG, maxWidth: '22ch' }}>
             Established, <em className="serif" style={{ color: ACCENT }}>high-trust, high-value</em> service businesses.
@@ -403,7 +404,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)', borderLeft: '2px solid rgba(93,213,255,0.55)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)', borderLeft: '2px solid rgba(93,213,255,0.55)' }}>
           <div className="d-eyebrow mb-6">WHAT YOU OWN</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.2vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
             The site. The accounts. <em className="serif" style={{ color: ACCENT }}>The finished system.</em>
@@ -417,7 +418,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">HOW THE ENGAGEMENT RUNS</div>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
             Built in focused phases, with a live preview at every step — no big reveal at the end.
@@ -441,9 +442,9 @@ export default function ServicesPage() {
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">WHAT WE ARE NOT</div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {dontDo.map((s) => (
               <div key={s.t} className="glass-panel-soft" style={{ padding: '22px 26px' }}>
                 <p className="font-inter font-semibold mb-2" style={{ fontSize: '15px', color: FG, letterSpacing: '-0.01em' }}>{s.t}</p>
@@ -454,8 +455,8 @@ export default function ServicesPage() {
         </GlassPanel>
       </section>
 
-      <section className="secondary-section" style={{ ...sectionGap, paddingBottom: '120px' }}>
-        <GlassPanel style={{ padding: 'clamp(40px, 6vw, 72px)', textAlign: 'center' }}>
+      <section className="secondary-section" style={{ ...sectionGap, paddingBottom: 'clamp(48px, 10vw, 120px)' }}>
+        <GlassPanel style={{ padding: 'clamp(28px, 6vw, 72px)', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">START HERE</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
             See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do</em> today.

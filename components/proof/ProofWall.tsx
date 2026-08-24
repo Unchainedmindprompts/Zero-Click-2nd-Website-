@@ -57,7 +57,7 @@ export default function ProofWall() {
 
   return (
     <section id="proof" className="secondary-section" style={{ marginTop: '30px' }}>
-      <div className="glass-panel" style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+      <div className="glass-panel" style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
         {/* Header */}
         <div className="d-eyebrow mb-5">DISCOVERY PROOF · REAL AI ANSWERS, REAL QUERIES</div>
         <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '760px' }}>
@@ -68,11 +68,11 @@ export default function ProofWall() {
         </p>
 
         {/* Engine strip */}
-        <div className="flex items-center gap-4 mt-7 mb-12">
-          <span className="font-mono flex-shrink-0" style={{ fontSize: '10px', letterSpacing: '0.12em', color: MUTE }}>
+        <div className="flex items-start sm:items-center gap-3 mt-7 mb-12">
+          <span className="font-mono min-w-0" style={{ fontSize: '10px', letterSpacing: '0.08em', color: MUTE, lineHeight: 1.55 }}>
             Cited across {PROOF_ENGINES.join(' · ')}
           </span>
-          <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(93,213,255,0.28), transparent)' }} />
+          <div className="hidden sm:block" style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, rgba(93,213,255,0.28), transparent)' }} />
         </div>
 
         {/* One block per business */}
@@ -85,28 +85,28 @@ export default function ProofWall() {
               {c.tagline}
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="proof-shot-rail grid grid-cols-1 md:grid-cols-2 gap-5 min-w-0">
               {c.items.map((item) => {
                 globalIndex += 1;
                 const idx = globalIndex;
                 return (
-                  <figure key={item.src} className="glass-panel-soft overflow-hidden" style={{ padding: 0 }}>
+                  <figure key={item.src} className="proof-shot glass-panel-soft overflow-hidden min-w-0 max-w-full" style={{ padding: 0 }}>
                     <button
                       type="button"
                       onClick={() => setActive(idx)}
                       className="block w-full text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--d-accent)]"
                       aria-label={`Enlarge screenshot: ${item.result}`}
                     >
-                      <div className="relative">
+                      <div className="relative min-w-0 max-w-full">
                         <Image
                           src={item.src}
                           alt={item.result}
                           width={1600}
                           height={1000}
-                          sizes="(max-width: 768px) 100vw, 50vw"
+                          sizes="(max-width: 768px) calc(100vw - 76px), 50vw"
                           loading="lazy"
-                          className="w-full h-auto"
-                          style={{ objectPosition: 'top', display: 'block' }}
+                          className="proof-shot-img w-full h-auto max-w-full min-w-0"
+                          style={{ objectPosition: 'top', display: 'block', width: '100%', height: 'auto', maxWidth: '100%' }}
                         />
                         <div
                           className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"

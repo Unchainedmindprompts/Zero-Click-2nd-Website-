@@ -116,15 +116,15 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <section style={{ padding: '120px 32px 80px', backgroundColor: 'var(--d-bg)' }}>
+      <section className="page-section page-section--hero" style={{ backgroundColor: 'var(--d-bg)' }}>
         <div style={{ maxWidth: '1240px', margin: '0 auto' }}>
           <div className="d-eyebrow mb-6">START HERE</div>
 
           <h1
             className="font-inter font-semibold mb-6"
             style={{
-              fontSize: 'clamp(40px, 5.5vw, 72px)',
-              lineHeight: 1.05,
+              fontSize: 'clamp(32px, 5.5vw, 72px)',
+              lineHeight: 1.12,
               letterSpacing: '-0.03em',
               color: 'var(--d-fg)',
               maxWidth: '820px',
@@ -149,12 +149,13 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <section style={{ padding: '0 32px 120px', backgroundColor: 'var(--d-bg)' }}>
+      <section className="page-section" style={{ paddingTop: 0, backgroundColor: 'var(--d-bg)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           {faqs.map((item, i) => (
             <div
               key={item.q}
-              style={{ borderTop: '1px solid var(--d-line)', padding: '48px 0' }}
+              className="faq-item"
+              style={{ borderTop: '1px solid var(--d-line)' }}
             >
               <div className="flex gap-5 mb-5">
                 <span
@@ -183,7 +184,7 @@ export default function FAQPage() {
               </div>
 
               <div className="flex gap-5">
-                <span style={{ minWidth: '24px', flexShrink: 0 }} />
+                <span className="faq-num-spacer" style={{ minWidth: '24px', flexShrink: 0 }} />
                 <div className="flex flex-col gap-4">
                   {(Array.isArray(item.a) ? item.a : [item.a]).map((para) => (
                     <p
@@ -221,8 +222,8 @@ export default function FAQPage() {
       </section>
 
       <section
+        className="page-section"
         style={{
-          padding: '100px 32px',
           backgroundColor: 'var(--d-bg-2)',
           borderTop: '1px solid var(--d-line)',
         }}

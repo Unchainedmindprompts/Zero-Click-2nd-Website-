@@ -33,8 +33,16 @@ export const LUXE_PROOF =
 
 export const HOME_H1 = 'Make your business usable by AI.';
 
-export const HOME_SUPPORT =
-  'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Before they visit your website, the AI may determine which businesses fit. If it cannot establish fit or trust, your business may never reach that customer. Kodecite keeps you eligible by making the business understandable, verifiable, and safely actionable.';
+/** Opening two sentences — first mobile hero only. Concatenates with
+ *  HOME_SUPPORT_ELIGIBILITY to form HOME_SUPPORT. Do not rewrite. */
+export const HOME_SUPPORT_HERO =
+  'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Before they visit your website, the AI may determine which businesses fit.';
+
+/** Remainder of HOME_SUPPORT — shown after the mobile journey. */
+export const HOME_SUPPORT_ELIGIBILITY =
+  'If it cannot establish fit or trust, your business may never reach that customer. Kodecite keeps you eligible by making the business understandable, verifiable, and safely actionable.';
+
+export const HOME_SUPPORT = `${HOME_SUPPORT_HERO} ${HOME_SUPPORT_ELIGIBILITY}`;
 
 export const HOME_CONSEQUENCE =
   'If AI cannot establish that your business fits, the customer connection may end before it begins.';

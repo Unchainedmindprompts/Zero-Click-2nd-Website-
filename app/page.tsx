@@ -23,12 +23,8 @@ const webPageSchema = {
   primaryImageOfPage: { '@id': 'https://www.kodecite.ai/#logo' },
 };
 
-// The homepage is a locked, full-screen cinematic slide experience — only the
-// shell, slider, controls, and slide copy/CTAs are visible. Deeper content is
-// reached via the nav/menu and CTAs (Services, About, Blog, FAQ, Contact, …).
-// The former lower sections (TransformationStatement, ShiftFromPagesToEntities,
-// FrameworkLayers, MachineReadPreview, FoundationOffer, final CTA) are no longer
-// rendered here; their components remain in the repo for reuse on routes.
+// One HOME_SLIDES tree. Desktop CSS is the cinematic carousel; phone CSS
+// is stacked document sections. Interior routes are unchanged.
 export default function HomePage() {
   return (
     <>

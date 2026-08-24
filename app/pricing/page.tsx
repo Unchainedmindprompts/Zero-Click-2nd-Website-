@@ -89,9 +89,9 @@ export default function PricingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
 
       <section className="secondary-section secondary-hero">
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">PRICING</div>
-          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 4.8vw, 62px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(30px, 4.8vw, 62px)', lineHeight: 1.12, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
             Price the foundation. <em className="serif" style={{ color: ACCENT }}>Scope the action.</em>
           </h1>
           <p className="font-inter mb-9" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
@@ -105,7 +105,7 @@ export default function PricingPage() {
             <span className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.06em', color: MUTE }}>
               Discovery evidence on Luxe, Shirin, and others is visibility — one outcome of clearer infrastructure.
             </span>
-            <Link href="/services#proof" className="font-inter font-semibold" style={{ fontSize: '13px', color: ACCENT, whiteSpace: 'nowrap' }}>
+            <Link href="/services#proof" className="font-inter font-semibold" style={{ fontSize: '13px', color: ACCENT }}>
               See discovery proof →
             </Link>
           </div>
@@ -113,7 +113,7 @@ export default function PricingPage() {
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THE FOUNDATION</div>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-3">
             <h2 className="font-inter font-semibold" style={{ fontSize: 'clamp(30px, 4vw, 48px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: FG }}>
@@ -153,7 +153,7 @@ export default function PricingPage() {
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">AGENT CAPABILITY BUILD</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
             One defined action at a time. <em className="serif" style={{ color: ACCENT }}>No published price.</em>
@@ -172,7 +172,7 @@ export default function PricingPage() {
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">PLATFORM CAPABILITY LAYER · PILOT</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
             Application-only. <em className="serif" style={{ color: ACCENT }}>No invented price.</em>
@@ -187,7 +187,7 @@ export default function PricingPage() {
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel
           style={{
-            padding: 'clamp(36px, 5vw, 64px)',
+            padding: 'clamp(22px, 5vw, 64px)',
             border: '1px solid rgba(93,213,255,0.45)',
             boxShadow: '0 0 0 1px rgba(93,213,255,0.15), 0 24px 70px -30px rgba(93,213,255,0.45)',
           }}
@@ -210,7 +210,7 @@ export default function PricingPage() {
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-4">FOUNDATION ADD-ONS</div>
           <p className="font-inter mb-10" style={{ fontSize: '15px', lineHeight: 1.6, color: MUTE, fontWeight: 300, fontStyle: 'italic', maxWidth: '620px' }}>
             Optional. One-time. These extend the owned foundation. They are not citation-tracking retainers.
@@ -229,8 +229,8 @@ export default function PricingPage() {
         </GlassPanel>
       </section>
 
-      <section className="secondary-section" style={{ ...sectionGap, paddingBottom: '120px' }}>
-        <GlassPanel style={{ padding: 'clamp(40px, 6vw, 72px)', textAlign: 'center' }}>
+      <section className="secondary-section" style={{ ...sectionGap, paddingBottom: 'clamp(48px, 10vw, 120px)' }}>
+        <GlassPanel style={{ padding: 'clamp(28px, 6vw, 72px)', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">HOW TO START</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
             Start with an <em className="serif" style={{ color: ACCENT }}>Agent Readiness Review.</em>

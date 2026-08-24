@@ -413,9 +413,12 @@ body {
   content: '';
   position: absolute;
   bottom: 10%;
-  right: -10%;
+  /* Stay inside the fixed viewport box. `right: -10%` made scrollWidth
+     viewport+10% (413 vs 375, 429 vs 390) even with overflow:hidden. */
+  right: 0;
   width: 50vw;
   height: 50vw;
+  max-width: 100%;
   background: radial-gradient(circle, rgba(138,90,255,0.06) 0%, transparent 65%);
   border-radius: 50%;
 }
@@ -856,6 +859,8 @@ em.serif {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 60;
+  --kc-shell-h: 64px;
+  padding-top: env(safe-area-inset-top, 0px);
   transition: background-color 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease;
   border-bottom: 1px solid transparent;
 }
@@ -1045,20 +1050,452 @@ em.serif {
   touch-action: pan-y;
 }
 
-/* Mobile: the persistent CTA stacks vertically (taller), so give the slide copy
-   extra bottom clearance so the buttons never overlap the paragraph above. */
-@media (max-width: 639px) {
-  .kc-slide-copy { padding-bottom: 200px !important; }
-  .kc-slide-copy--journey { padding-bottom: 216px !important; }
+/* Single chapter tree. Desktop: layers fill the slider. Phone (below)
+   restyles the same nodes into stacked document sections. */
+.kc-slider-track {
+  position: absolute;
+  inset: 0;
+}
+.kc-chapter {
+  position: absolute;
+  inset: 0;
+}
+.kc-chapter-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.kc-chapter-scrim {
+  display: none;
+}
+.kc-hero-cta {
+  display: none;
+}
+.kc-intro-lead,
+.kc-chapter-body {
+  position: absolute;
+  inset: 0;
+}
+.kc-slide-copy {
+  z-index: 1;
+}
+.kc-journey-band {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  /* Intro photo stays full-bleed. H1 + journey stay in the original
+     flex-end overlay (one column, pills on the plate). */
+  .kc-chapter--intro .kc-intro-lead {
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+}
+
+/* Journey defaults (desktop: compact horizontal pills + arrows). */
+.kc-journey {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 8px;
+  max-width: 640px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+.kc-journey-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.kc-journey-rail {
+  display: none;
+}
+.kc-journey-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+.kc-journey-arrow {
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.page-section {
+  padding: 100px 32px;
+}
+.page-section--hero {
+  padding: 120px 32px 80px;
+}
+.faq-item {
+  padding: 48px 0;
+}
+.site-footer-inner {
+  padding: 80px 32px 40px;
+}
+
+/* Mobile homepage + site-wide responsive layout. */
+@media (max-width: 767px) {
+  html, body {
+    overflow-x: clip;
+  }
+
+  /* Phone homepage is the same chapter tree in document flow. */
+  .kc-indicators {
+    display: none !important;
+  }
+
+  /* Unlock the cinematic lock so the opening slide can grow and the footer
+     is reachable. Desktop remains a locked full-viewport slider. */
+  html.kc-home-locked,
+  html.kc-home-locked body {
+    overflow: auto;
+    height: auto;
+    overscroll-behavior: auto;
+  }
+  html.kc-home-locked footer {
+    display: block;
+  }
+
+  .kc-slider {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+  .kc-slider-track {
+    position: relative;
+    inset: auto;
+  }
+
+  /* Every chapter is in normal flow — ignore carousel hide/leave layers. */
+  .kc-chapter,
+  .kc-chapter.kc-slide-text,
+  .kc-chapter.kc-slide-text.is-active,
+  .kc-chapter.kc-slide-text.kc-leave-next,
+  .kc-chapter.kc-slide-text.kc-leave-prev {
+    position: relative !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    height: auto !important;
+    transform: none !important;
+    animation: none !important;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .kc-intro-lead,
+  .kc-chapter-body {
+    position: relative;
+    inset: auto;
+    display: block;
+  }
+  .kc-chapter-media,
+  .kc-chapter-media.is-active,
+  .kc-chapter .kc-slide-bg,
+  .kc-chapter .kc-slide-bg.is-active {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    transform: none;
+    filter: none;
+    will-change: auto;
+  }
+
+  .kc-chapter--intro .kc-intro-lead {
+    display: grid;
+    grid-template-areas: "lead" "journey";
+    position: relative;
+    inset: auto;
+  }
+  .kc-chapter--intro .kc-slide-copy {
+    display: contents;
+  }
+  .kc-chapter--intro .kc-chapter-media {
+    grid-area: lead;
+  }
+  .kc-intro-copy {
+    grid-area: lead;
+    position: relative;
+    z-index: 1;
+    /* Content-height hero: H1 clears the opaque sticky header. */
+    padding: calc(var(--kc-shell-h, 64px) + 1.75rem) 22px 40px;
+    max-width: 40rem;
+  }
+  .kc-chapter--intro .kc-journey-band {
+    grid-area: journey;
+  }
+
+  .kc-slide-copy {
+    justify-content: flex-start !important;
+    height: auto !important;
+    max-width: 40rem !important;
+    padding: calc(var(--kc-shell-h, 64px) + 1.75rem) 22px 40px !important;
+  }
+  .kc-chapter:not(.kc-chapter--intro) .kc-slide-copy {
+    padding: 48px 22px 56px !important;
+  }
+  .kc-slide-copy--journey {
+    padding-bottom: 40px !important;
+  }
+  .kc-slide-copy .kc-slide-reveal.font-inter,
+  .kc-slide-copy p {
+    margin-top: 1.25rem;
+  }
+  .kc-slide-h {
+    max-width: none !important;
+    text-wrap: balance;
+    font-size: clamp(2rem, 8.2vw, 2.6rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.03em !important;
+    color: #f4f7ff !important;
+    text-shadow: 0 2px 28px rgba(3, 5, 14, 0.65) !important;
+  }
+  .kc-slide-h .serif {
+    color: var(--d-accent-2) !important;
+  }
+  .kc-support-more {
+    display: none;
+  }
+  .kc-hero-cta {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+  .kc-journey-band {
+    position: relative;
+    background: #070b16;
+    padding: 40px 22px 48px;
+    max-width: none;
+  }
+  .kc-journey-consequence {
+    font-weight: 500 !important;
+    color: #f4f7ff !important;
+    max-width: 36rem !important;
+  }
+  .kc-chapter-scrim {
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(4, 6, 14, 0.78) 0%, rgba(4, 6, 14, 0.58) 26%, rgba(4, 6, 14, 0.70) 58%, rgba(4, 6, 14, 0.92) 100%),
+      radial-gradient(110% 80% at 16% 72%, rgba(4, 6, 14, 0.55) 0%, transparent 68%);
+  }
+  /* Office / water plates (theme: light) — keep body/H2 on a dark wash. */
+  .kc-chapter--light .kc-chapter-scrim {
+    background:
+      linear-gradient(180deg, rgba(4, 6, 14, 0.88) 0%, rgba(4, 6, 14, 0.74) 24%, rgba(4, 6, 14, 0.82) 58%, rgba(4, 6, 14, 0.96) 100%),
+      radial-gradient(125% 90% at 18% 70%, rgba(4, 6, 14, 0.7) 0%, transparent 72%);
+  }
+  .kc-slide-bg__plate--light {
+    display: none;
+  }
+  .kc-chapter--light .kc-slide-copy p,
+  .kc-chapter--light .kc-slide-copy .d-eyebrow,
+  .kc-chapter--light .kc-slide-copy li {
+    color: rgba(236, 241, 255, 0.94) !important;
+    text-shadow: 0 1px 18px rgba(3, 5, 14, 0.55) !important;
+    border-color: rgba(93, 213, 255, 0.35) !important;
+  }
+  .kc-chapter .kc-slide-copy p,
+  .kc-journey-consequence {
+    color: rgba(236, 241, 255, 0.94) !important;
+    text-shadow: 0 1px 18px rgba(3, 5, 14, 0.55) !important;
+  }
+
+  .kc-slider-cta {
+    position: relative !important;
+    inset: auto !important;
+    bottom: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 28px 22px 48px !important;
+    background: #05080f;
+  }
+
+  .kc-indicators {
+    position: relative !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 4px auto 28px;
+  }
+
+  /* Numbered journey cards — same HOME_JOURNEY nodes as the desktop pills. */
   .kc-journey {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 14px;
+    max-width: none;
+    margin-top: 0;
+  }
+  .kc-journey-item {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+    width: 100%;
+    padding: 16px 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .kc-journey-rail {
+    display: block;
+    padding-top: 2px;
+  }
+  .kc-journey-index {
+    display: block;
+    width: auto;
+    height: auto;
+    border: 0;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--d-accent);
+  }
+  .kc-journey-stem {
+    display: none;
+  }
+  .kc-journey-card {
+    display: block;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.45;
+    white-space: normal;
+    background: transparent;
+  }
+  .kc-journey-num {
+    display: none;
+  }
+  .kc-journey-label {
+    display: block;
+    overflow-wrap: anywhere;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #f4f7ff;
+    font-family: var(--font-inter), Inter, sans-serif;
   }
   .kc-journey-arrow {
     display: none;
   }
+
+  .kc-shell__inner {
+    padding: 0 20px;
+  }
+
+  /* Always treat the sticky bar as a plate on phones so the wordmark
+     and hamburger never sit on scrolling body copy. Desktop still
+     starts clear and only elevates after scroll. */
+  .kc-shell,
+  .kc-shell--scrolled {
+    background-color: color-mix(in srgb, var(--kc-bg) 92%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom-color: var(--d-line-s);
+  }
+
+  .d-btn {
+    white-space: normal !important;
+    text-align: center;
+    min-height: 44px;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 16px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    flex-shrink: 1;
+    box-sizing: border-box;
+  }
+
+  .capability-url {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    display: inline;
+    max-width: 100%;
+  }
+
+  .d-eyebrow {
+    flex-wrap: wrap;
+    letter-spacing: 0.12em;
+    line-height: 1.45;
+    row-gap: 6px;
+  }
+
+  .secondary-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .secondary-hero {
+    padding-top: 100px;
+  }
+  .secondary-page h1,
+  .secondary-page h2 {
+    text-wrap: balance;
+  }
+  .secondary-page a {
+    overflow-wrap: anywhere;
+  }
+
+  .page-section {
+    padding: 56px 20px;
+  }
+  .page-section--hero {
+    padding-top: 100px;
+    padding-bottom: 48px;
+  }
+  .faq-item {
+    padding: 32px 0;
+  }
+  .faq-num-spacer {
+    display: none;
+  }
+
+  .site-footer-inner {
+    padding: 56px 20px 32px;
+  }
+  .footer-nav {
+    gap: 14px;
+  }
+  .footer-nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .kc-overlay {
+    padding: 96px 20px 40px;
+  }
+  .kc-overlay__link {
+    font-size: clamp(28px, 8vw, 42px);
+    gap: 12px;
+  }
 }
+
 
 /* Top-bar "Machine Read" button: hidden on mobile (only on tablet/desktop).
    !important because .d-btn sets display:inline-flex and is defined after
@@ -1071,14 +1508,16 @@ em.serif {
 /* Homepage lock — applied to <html> only on `/` (via HomeScrollLock).
    The homepage is a locked full-screen slider: no vertical scroll, and nothing
    below it (the footer) is reachable. Interior pages are unaffected. */
-html.kc-home-locked,
-html.kc-home-locked body {
-  overflow: hidden;
-  height: 100%;
-  overscroll-behavior: none;
-}
-html.kc-home-locked footer {
-  display: none;
+@media (min-width: 768px) {
+  html.kc-home-locked,
+  html.kc-home-locked body {
+    overflow: hidden;
+    height: 100%;
+    overscroll-behavior: none;
+  }
+  html.kc-home-locked footer {
+    display: none;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -1234,6 +1673,96 @@ html.kc-home-locked footer {
   }
 }
 
+/* Mobile: size cinematic layers to the viewport. Ken Burns scale(1.08) paints
+   ~421px at x=-16 on a 390-wide screen; do not hide that with overflow clip. */
+@media (max-width: 767px) {
+  .kc-slide-bg-stack,
+  .kc-slide-bg,
+  .kc-slide-bg.is-active,
+  .kc-slide-img,
+  .kc-slide-bg__plate,
+  .kc-slider__scrim,
+  .kc-slider__vignette {
+    inset: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    transform: none;
+  }
+  .kc-slide-bg,
+  .kc-slide-bg.is-active {
+    transform: none;
+    filter: none;
+    will-change: opacity;
+  }
+
+  /* Opening enter/focus animations translate or scale a full-bleed layer for
+     ~1s and intercept the first thumb flick. Mobile is a scrolling page. */
+  .kc-slide-text.kc-enter-next,
+  .kc-slide-text.kc-enter-prev,
+  .kc-slide-text.kc-leave-next,
+  .kc-slide-text.kc-leave-prev,
+  .kc-slide-text.is-active .kc-slide-focus,
+  .kc-slide-text.is-active .kc-slide-reveal {
+    animation: none;
+  }
+  .kc-slide-reveal { opacity: 1; }
+  .kc-slide-text.is-active {
+    transform: none;
+    touch-action: pan-y;
+  }
+
+  /* Screenshot / image rails: never layout as 100vw inside padded glass. */
+  .secondary-page,
+  .secondary-page-content,
+  .secondary-section,
+  .glass-panel,
+  .glass-panel-soft,
+  .proof-shot-rail,
+  .proof-shot,
+  #proof .grid {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .proof-shot-img,
+  #proof img,
+  .secondary-page figure img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  /* Site-wide atmospheric layer lives in the root layout. Keep blobs inside
+     the fixed box so leaf scrollWidth matches the viewport. */
+  .d-atmos,
+  .d-grid {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .d-atmos::before,
+  .d-atmos::after {
+    max-width: 100%;
+  }
+  .d-atmos::before { left: 0; }
+  .d-atmos::after { right: 0; }
+
+  /* Softer site-wide grid so it does not read as a 5-column overlay
+     cutting through stacked footer links. */
+  .d-grid {
+    opacity: 0.28;
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 22%, black 18%, transparent 72%);
+    mask-image: radial-gradient(ellipse 70% 50% at 50% 22%, black 18%, transparent 72%);
+  }
+
+}
+
 /* Light slides: dark ghost CTA so it reads on the bright art (primary stays dark) */
 .kc-cta-light .d-btn-ghost {
   color: #14192a;
@@ -1364,6 +1893,9 @@ html.kc-home-locked footer {
     margin-inline: 0 !important;
     padding-left: clamp(80px, 6vw, 150px) !important;
     padding-right: 72px !important;
+    padding-bottom: clamp(230px, 26vh, 340px) !important;
+  }
+  .kc-chapter--intro .kc-slide-copy {
     padding-bottom: clamp(230px, 26vh, 340px) !important;
   }
   .kc-slider-cta {

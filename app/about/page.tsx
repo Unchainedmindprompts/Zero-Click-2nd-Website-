@@ -77,8 +77,8 @@ const DIM = 'var(--d-fg-dim)';
 const MUTE = 'var(--d-fg-mute)';
 const ACCENT = 'var(--d-accent)';
 const wrap = { maxWidth: '1180px', margin: '0 auto' } as const;
-const sectionA = { padding: '100px 32px', backgroundColor: 'var(--d-bg)' };
-const sectionB = { padding: '100px 32px', backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' };
+const sectionA = { backgroundColor: 'var(--d-bg)' };
+const sectionB = { backgroundColor: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' };
 const eyebrow = { fontSize: '11px', letterSpacing: '0.18em', color: ACCENT } as const;
 const h2Style = { fontSize: 'clamp(28px, 4vw, 48px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: FG } as const;
 const leadStyle = { fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300 } as const;
@@ -89,12 +89,12 @@ export default function AboutPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section style={{ padding: '120px 32px 80px', backgroundColor: 'var(--d-bg)' }}>
+      <section className="page-section page-section--hero" style={{ backgroundColor: 'var(--d-bg)' }}>
         <div style={wrap}>
           <div className="d-eyebrow mb-6">ABOUT KODECITE</div>
           <h1
             className="font-inter font-semibold mb-7"
-            style={{ fontSize: 'clamp(30px, 3.9vw, 52px)', lineHeight: 1.08, letterSpacing: '-0.03em', color: FG, maxWidth: '900px' }}
+            style={{ fontSize: 'clamp(30px, 3.9vw, 52px)', lineHeight: 1.14, letterSpacing: '-0.03em', color: FG, maxWidth: '900px', textWrap: 'balance' }}
           >
             Business truth comes before{' '}
             <em className="serif" style={{ color: ACCENT }}>technology.</em>
@@ -105,7 +105,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={sectionB}>
+      <section className="page-section" style={sectionB}>
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>01 / WHY KODECITE EXISTS</p>
           <h2 className="font-inter font-semibold mb-6" style={{ ...h2Style, maxWidth: '760px' }}>
@@ -127,7 +127,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={sectionA}>
+      <section className="page-section" style={sectionA}>
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>02 / THE WORK</p>
           <h2 className="font-inter font-semibold mb-3" style={h2Style}>
@@ -143,9 +143,9 @@ export default function AboutPage() {
                 key={c.k}
                 style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)', borderRadius: '14px', padding: '32px 30px' }}
               >
-                <div className="flex items-baseline gap-3 mb-5">
+                <div className="about-layer-label flex items-baseline gap-3 mb-5">
                   <span className="serif" style={{ fontSize: '40px', lineHeight: 1, color: ACCENT }}>{c.k}</span>
-                  <span className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.18em', color: MUTE }}>{c.t}</span>
+                  <span className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.14em', color: MUTE }}>{c.t}</span>
                 </div>
                 <p className="font-inter font-semibold mb-4" style={{ fontSize: '16px', lineHeight: 1.35, letterSpacing: '-0.01em', color: FG }}>
                   {c.q}
@@ -166,7 +166,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={sectionB}>
+      <section className="page-section" style={sectionB}>
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>03 / WHAT WE BUILD</p>
           <h2 className="font-inter font-semibold mb-6" style={{ ...h2Style, maxWidth: '760px' }}>
@@ -190,7 +190,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={sectionA}>
+      <section className="page-section" style={sectionA}>
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>04 / HOW THE PRACTICE OPERATES</p>
           <h2 className="font-inter font-semibold mb-6" style={h2Style}>
@@ -212,7 +212,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={sectionB}>
+      <section className="page-section" style={sectionB}>
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>05 / THE OPERATOR</p>
           <h2 className="font-inter font-semibold mb-10" style={h2Style}>
@@ -256,7 +256,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section style={{ ...sectionA, paddingBottom: '120px' }}>
+      <section className="page-section" style={sectionA}>
         <div style={{ maxWidth: '720px', margin: '0 auto', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">START WITH THE EVIDENCE</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>

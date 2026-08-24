@@ -28,7 +28,7 @@ export default function Footer() {
         background: 'linear-gradient(to bottom, transparent 0%, rgba(3, 7, 14, 0.30) 55%, rgba(2, 5, 11, 0.55) 100%)',
       }}
     >
-      <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '80px 32px 40px' }}>
+      <div className="site-footer-inner" style={{ maxWidth: '1240px', margin: '0 auto' }}>
 
         {/* Top — brand + links */}
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-x-16 gap-y-8">
-            <nav className="flex flex-wrap gap-x-10 gap-y-3 content-start pt-1">
+            <nav className="footer-nav flex flex-col sm:flex-row sm:flex-wrap gap-x-10 gap-y-3 content-start pt-1">
               {footerLinks.map((link) => (
                 <Link
                   key={link.href}
