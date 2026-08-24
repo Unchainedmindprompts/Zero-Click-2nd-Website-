@@ -16,9 +16,11 @@ const SWIPE_THRESHOLD = 48; // px of horizontal travel to register a swipe
  *
  * Cinematic slide-deck feel: background crossfade/blur/scale, copy drifts in
  * horizontally (direction-aware). Advances via autoplay, dots, keyboard, touch
- * swipe, trackpad horizontal swipe, and (on desktop) vertical wheel while the
- * hero fills the viewport. NOT a full scroll-hijack: on the last slide a further
- * scroll down releases into the normal page; scrolling back up re-engages it.
+ * swipe, trackpad horizontal swipe, and (on desktop only) vertical wheel while
+ * the hero fills the viewport. Mobile is a normal scrolling page: the wheel
+ * listener is not attached, so the first thumb flick is never swallowed.
+ * NOT a full scroll-hijack: on the last slide a further scroll down releases
+ * into the normal page; scrolling back up re-engages it.
  */
 export default function CinematicHomeSlider() {
   const total = HOME_SLIDES.length;
@@ -85,12 +87,18 @@ export default function CinematicHomeSlider() {
     return () => io.disconnect();
   }, []);
 
-  // Wheel → slide. Native listener so we can preventDefault (React wheel is passive).
+  // Desktop wheel → slide. Never attach on mobile: a non-passive wheel
+  // listener (even one that returns early) can delay the first flick, and
+  // preventDefault on slide 0 swallows the opening downward swipe.
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
+
+    const mq = window.matchMedia('(max-width: 767px)');
+    let attached = false;
+
     const onWheel = (e: WheelEvent) => {
-      if (reduced || !inViewRef.current) return;
+      if (mq.matches || reduced || !inViewRef.current) return;
       const horizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
       const delta = horizontal ? e.deltaX : e.deltaY;
       if (Math.abs(delta) < 6) return;
@@ -113,8 +121,27 @@ export default function CinematicHomeSlider() {
       window.setTimeout(() => { wheelLockRef.current = false; }, WHEEL_LOCK_MS);
       advance(forward ? 1 : -1);
     };
-    el.addEventListener('wheel', onWheel, { passive: false });
-    return () => el.removeEventListener('wheel', onWheel);
+
+    const sync = () => {
+      if (mq.matches) {
+        if (attached) {
+          el.removeEventListener('wheel', onWheel);
+          attached = false;
+        }
+        return;
+      }
+      if (!attached) {
+        el.addEventListener('wheel', onWheel, { passive: false });
+        attached = true;
+      }
+    };
+
+    sync();
+    mq.addEventListener('change', sync);
+    return () => {
+      mq.removeEventListener('change', sync);
+      if (attached) el.removeEventListener('wheel', onWheel);
+    };
   }, [reduced, total, advance]);
 
   // Keyboard.

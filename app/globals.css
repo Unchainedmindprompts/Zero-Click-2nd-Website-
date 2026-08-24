@@ -1500,6 +1500,70 @@ em.serif {
   }
 }
 
+/* Mobile: size cinematic layers to the viewport. Ken Burns scale(1.08) paints
+   ~421px at x=-16 on a 390-wide screen; do not hide that with overflow clip. */
+@media (max-width: 767px) {
+  .kc-slide-bg-stack,
+  .kc-slide-bg,
+  .kc-slide-bg.is-active,
+  .kc-slide-img,
+  .kc-slide-bg__plate,
+  .kc-slider__scrim,
+  .kc-slider__vignette {
+    inset: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    transform: none;
+  }
+  .kc-slide-bg,
+  .kc-slide-bg.is-active {
+    transform: none;
+    filter: none;
+    will-change: opacity;
+  }
+
+  /* Opening enter/focus animations translate or scale a full-bleed layer for
+     ~1s and intercept the first thumb flick. Mobile is a scrolling page. */
+  .kc-slide-text.kc-enter-next,
+  .kc-slide-text.kc-enter-prev,
+  .kc-slide-text.kc-leave-next,
+  .kc-slide-text.kc-leave-prev,
+  .kc-slide-text.is-active .kc-slide-focus,
+  .kc-slide-text.is-active .kc-slide-reveal {
+    animation: none;
+  }
+  .kc-slide-reveal { opacity: 1; }
+  .kc-slide-text.is-active {
+    transform: none;
+    touch-action: pan-y;
+  }
+
+  /* Screenshot / image rails: never layout as 100vw inside padded glass. */
+  .secondary-page,
+  .secondary-page-content,
+  .secondary-section,
+  .glass-panel,
+  .glass-panel-soft,
+  .proof-shot-rail,
+  .proof-shot,
+  #proof .grid {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .proof-shot-img,
+  #proof img,
+  .secondary-page figure img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+}
+
 /* Light slides: dark ghost CTA so it reads on the bright art (primary stays dark) */
 .kc-cta-light .d-btn-ghost {
   color: #14192a;

@@ -19,7 +19,7 @@ export default function FluidImageTransition({
   active: number;
 }) {
   return (
-    <div className="absolute inset-0" aria-hidden>
+    <div className="kc-slide-bg-stack absolute inset-0" aria-hidden>
       {slides.map((s, i) => (
         <div key={s.id} className={`kc-slide-bg ${i === active ? 'is-active' : ''}`}>
           {s.image ? (
