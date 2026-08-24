@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { HOME_SLIDES, type HomeSlide } from './slides';
 import {
   HOME_SUPPORT_HERO,
-  HOME_SUPPORT_ELIGIBILITY,
   HOME_CONSEQUENCE,
   HOME_JOURNEY,
   REVIEW_HREF,
@@ -85,7 +84,6 @@ export default function MobileHomeStory() {
             ))}
           </ol>
           <p className="kc-mhome-consequence font-inter">{HOME_CONSEQUENCE}</p>
-          <p className="kc-mhome-body font-inter">{HOME_SUPPORT_ELIGIBILITY}</p>
         </div>
       </section>
 

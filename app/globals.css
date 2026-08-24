@@ -1257,6 +1257,17 @@ em.serif {
     padding: 0 20px;
   }
 
+  /* Always treat the sticky bar as a plate on phones so the wordmark
+     and hamburger never sit on scrolling body copy. Desktop still
+     starts clear and only elevates after scroll. */
+  .kc-shell,
+  .kc-shell--scrolled {
+    background-color: color-mix(in srgb, var(--kc-bg) 92%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom-color: var(--d-line-s);
+  }
+
   .d-btn {
     white-space: normal !important;
     text-align: center;
@@ -1591,6 +1602,15 @@ em.serif {
   .d-atmos::before { left: 0; }
   .d-atmos::after { right: 0; }
 
+  /* Softer site-wide grid so it does not read as a 5-column overlay
+     cutting through stacked footer links. */
+  .d-grid {
+    opacity: 0.28;
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 22%, black 18%, transparent 72%);
+    mask-image: radial-gradient(ellipse 70% 50% at 50% 22%, black 18%, transparent 72%);
+  }
+
   /* ── Mobile homepage story ─────────────────────────────────────────── */
   .kc-mhome {
     position: relative;
@@ -1610,7 +1630,9 @@ em.serif {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 100dvh;
+    /* Height follows H1 + lede + CTA. Do not stretch to 100dvh — that
+       left ~350px of empty art under the button before the journey. */
+    min-height: 0;
   }
   .kc-mhome-media {
     position: absolute;
@@ -1643,7 +1665,7 @@ em.serif {
   }
   .kc-mhome-hero .kc-mhome-copy {
     padding-top: calc(var(--kc-shell-h, 64px) + 1.75rem);
-    padding-bottom: 56px;
+    padding-bottom: 40px;
   }
   .kc-mhome-h {
     margin: 0;
