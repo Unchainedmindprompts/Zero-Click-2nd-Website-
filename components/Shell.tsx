@@ -40,12 +40,12 @@ export default function Shell() {
             {links.map(link => <Link key={link.href} href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</Link>)}
           </nav>
           <div className="header-actions">
-            <Link className="header-review" href="/machine-read">Free readiness review <span aria-hidden="true">↗</span></Link>
+            <Link className="header-review" href="/machine-read">Free readiness review <span aria-hidden="true">→</span></Link>
             <button ref={menuRef} className="mobile-menu-toggle" type="button" aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>{open ? 'Close −' : 'Menu +'}</button>
           </div>
         </div>
         {open && <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation">
-          {[...links, { href: '/why-now', label: 'Why now' }, { href: '/faq', label: 'Your questions' }, { href: '/contact', label: 'Contact' }, { href: '/machine-read', label: 'Free readiness review ↗' }].map(link => <Link key={link.href} href={link.href} onClick={() => setOpen(false)} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</Link>)}
+          {[...links, { href: '/why-now', label: 'Why now' }, { href: '/faq', label: 'Your questions' }, { href: '/contact', label: 'Contact' }, { href: '/machine-read', label: 'Free readiness review →' }].map(link => <Link key={link.href} href={link.href} onClick={() => setOpen(false)} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</Link>)}
         </nav>}
       </header>
     </>
