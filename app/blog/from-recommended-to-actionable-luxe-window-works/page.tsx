@@ -127,11 +127,11 @@ export default function LuxeAgentCaseStudyPage() {
 
       <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
-            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <span aria-hidden>/</span>
-            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Insights</Link>
-            <span aria-hidden>/</span>
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
+            <Link href="/" className="shrink-0 whitespace-nowrap hover:text-[var(--d-accent)] transition-colors">Home</Link>
+            <span aria-hidden className="shrink-0">/</span>
+            <Link href="/blog" className="shrink-0 whitespace-nowrap hover:text-[var(--d-accent)] transition-colors">Insights</Link>
+            <span aria-hidden className="shrink-0">/</span>
             <span className="text-[var(--d-fg)] truncate">Luxe: recommended to actionable</span>
           </nav>
 

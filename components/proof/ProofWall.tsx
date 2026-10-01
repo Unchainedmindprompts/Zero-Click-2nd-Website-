@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { proofCases, PROOF_ENGINES, PROOF_DATE } from './proofData';
@@ -32,6 +32,8 @@ function CaptionBar({ engine, query }: { engine: string; query: string }) {
 export default function ProofWall() {
   const [active, setActive] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const isOpen = active !== null;
   useEffect(() => setMounted(true), []);
 
   const close = useCallback(() => setActive(null), []);
@@ -39,19 +41,31 @@ export default function ProofWall() {
   const next = useCallback(() => setActive((i) => (i === null ? null : (i + 1) % ALL_ITEMS.length)), []);
 
   useEffect(() => {
-    if (active === null) return;
+    if (!isOpen) return;
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousOverflow = document.body.style.overflow;
+    dialogRef.current?.querySelector<HTMLButtonElement>('button')?.focus();
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') close();
-      if (e.key === 'ArrowLeft') prev();
-      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+      if (e.key === 'Tab') {
+        const buttons = dialogRef.current?.querySelectorAll<HTMLButtonElement>('button');
+        if (!buttons?.length) return;
+        const first = buttons[0];
+        const last = buttons[buttons.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
     };
     window.addEventListener('keydown', handler);
     document.body.style.overflow = 'hidden';
     return () => {
       window.removeEventListener('keydown', handler);
-      document.body.style.overflow = '';
+      document.body.style.overflow = previousOverflow;
+      previousFocus?.focus();
     };
-  }, [active, close, prev, next]);
+  }, [isOpen, close, prev, next]);
 
   let globalIndex = -1;
 
@@ -134,21 +148,22 @@ export default function ProofWall() {
           otherwise traps it inside the section. */}
       {mounted && active !== null && createPortal(
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center p-4"
+          ref={dialogRef}
+          className="fixed inset-0 z-[200] flex items-center justify-center p-4"
           style={{ background: 'rgba(4,6,16,0.93)' }}
           onClick={close}
           role="dialog"
           aria-modal="true"
           aria-label={ALL_ITEMS[active].result}
         >
-          <button className="absolute top-4 right-4 text-white opacity-70 hover:opacity-100 transition-opacity" onClick={close} aria-label="Close">
+          <button className="absolute top-4 right-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-white opacity-70 hover:opacity-100 transition-opacity" onClick={close} aria-label="Close">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white opacity-70 hover:opacity-100 transition-opacity"
+            className="absolute left-4 z-20 top-1/2 -translate-y-1/2 text-white opacity-70 hover:opacity-100 transition-opacity"
             onClick={(e) => { e.stopPropagation(); prev(); }}
             aria-label="Previous"
           >
@@ -182,7 +197,7 @@ export default function ProofWall() {
           </div>
 
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white opacity-70 hover:opacity-100 transition-opacity"
+            className="absolute right-4 z-20 top-1/2 -translate-y-1/2 text-white opacity-70 hover:opacity-100 transition-opacity"
             onClick={(e) => { e.stopPropagation(); next(); }}
             aria-label="Next"
           >
