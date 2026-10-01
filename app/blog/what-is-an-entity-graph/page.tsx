@@ -1,463 +1,244 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+import { blogPosts } from '@/lib/blog';
+
+type Section = { h: string; p: string[]; items?: string[]; source?: string };
+const ARTICLE: { slug: string; title: string; description: string; date: string; category: string; intro: string; sections: Section[]; sources: string[][]; related: string[]; example?: object } = {
+  "slug": "what-is-an-entity-graph",
+  "title": "What Is an Entity Graph? A Connected Map of Your Business",
+  "description": "Understand how an entity graph connects a business, its owner, services, locations and evidence, and where live agent capabilities begin.",
+  "date": "2026-04-17",
+  "category": "BUSINESS TRUTH",
+  "intro": "An entity graph is a connected representation of real things and their relationships. For a service business, it can describe who runs the company, what it offers, where it works and what evidence supports its claims. The value is a clearer business, not simply more markup.",
+  "sections": [
+    {
+      "h": "Begin with things, then connect them",
+      "p": [
+        "Take a hypothetical window-treatment company. The company is one entity. Its owner is another. Its consultation service, service area and project article are others. The graph describes relationships: the person founded the company, the company provides the service, and the article documents relevant work.",
+        "This is more useful than repeating a business name everywhere without explaining the connections. It also makes maintenance easier. When one service changes, the model gives the publisher a way to identify which pages and interfaces depend on that information."
+      ]
+    },
+    {
+      "h": "Schema.org supplies vocabulary; JSON-LD supplies a format",
+      "p": [
+        "Schema.org is a shared vocabulary of types and properties. JSON-LD is a standardized way to express linked data in JSON. They are commonly used together on websites, but neither is the business strategy itself.",
+        "The vocabulary includes types such as Organization, LocalBusiness, Person and Service. The implementation should choose types that genuinely describe the business. Specificity is useful when accurate; choosing a more prestigious type or adding unsupported properties does not improve the underlying facts."
+      ],
+      "source": "schema"
+    },
+    {
+      "h": "Stable identifiers keep references consistent",
+      "p": [
+        "A stable @id gives an entity an identifier that other objects can reference. A service can point to the same business identity that publishes an article. The author can point to the same person described on the About page. In JSON-LD, related nodes can be grouped in an @graph.",
+        "One giant block is not mandatory, and multiple blocks are not automatically wrong. What matters is coherent identifiers and relationships in the published data. Avoid creating contradictory versions of the same organization with different names, addresses or service areas."
+      ],
+      "source": "jsonld"
+    },
+    {
+      "h": "A useful graph starts with owner-approved facts",
+      "p": [
+        "The owner’s identity and the business’s trading name should be clear. Services need scope and geography. Credentials belong to the actual holder. Awards need a recipient, issuer and date. External profile links should identify the same person or business, rather than unrelated pages with useful keywords.",
+        "The sameAs property is for identity links. It is not a generic place to put every authority website you would like associated with your brand. Other evidence may belong in visible citations or appropriately modeled relationships. Start with what a claim means, then choose how to represent it."
+      ]
+    },
+    {
+      "h": "Evidence remains separate from assertion",
+      "p": [
+        "A business can publish that it has an award. An issuing organization’s public record may corroborate the claim. Those are different sources. A good website makes that distinction understandable instead of treating its own markup as verification.",
+        "Some facts, such as current service limits, may be authoritative because the business itself sets them. Others need independent support. Maintain source links where possible and review them over time. A broken credential link or expired certification should trigger a check, not remain a permanent trust badge."
+      ]
+    },
+    {
+      "h": "A graph supports understanding; it does not guarantee selection",
+      "p": [
+        "AI systems can use ordinary text, search results, structured information and other sources. There is no universal rule that a graph is required before a business can be recommended. Different consumers use different parts of the web.",
+        "The graph’s practical value is to publish deliberate, consistent relationships that supported consumers can use. It can help reduce ambiguity, but it does not force a platform to accept every claim or grant a permanent position. Measure actual behavior without attributing every positive result to one technical feature."
+      ]
+    },
+    {
+      "h": "The step from identity to capability",
+      "p": [
+        "Once an assistant understands the business, its customer may ask it to do something. A description saying consultations are available does not tell software how to submit a request, what information to include or what the response means.",
+        "That needs an additional capability description and, where scoped, a working interface. It should define the action, conditions, permissions and outcome. The business model remains the source of the rules, while the action system enforces them. A personal assistant can then make a useful request without confusing it with a confirmed appointment."
+      ]
+    },
+    {
+      "h": "How to review your own business map",
+      "p": [
+        "Choose a service and follow the relationships from the customer’s question to the next step. Can you identify the provider, relevant person, service area, evidence and request process? Are the visible pages and structured data telling the same story?"
+      ],
+      "items": [
+        "Check that repeated identities have consistent names and identifiers.",
+        "Confirm that services and evidence connect to the correct business or person.",
+        "Inspect facts that change: location, availability, price conditions and credentials.",
+        "Test whether the next action is real, documented and accurately confirmed."
+      ]
+    },
+    {
+      "h": "Ownership includes maintenance",
+      "p": [
+        "An owned graph can travel with the website and be reused in future interfaces. It still needs an accountable person and an update process. A maintained representation of the business is sometimes called a digital twin; here, that means a useful model of the real business, not an autonomous replacement for its owner.",
+        "The work succeeds when customers and their assistants can understand the business more easily, make a better decision and take an appropriate next step."
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "Schema.org: About the vocabulary",
+      "https://schema.org/docs/about.html"
+    ],
+    [
+      "W3C: JSON-LD 1.1",
+      "https://www.w3.org/TR/json-ld11/"
+    ],
+    [
+      "Schema.org: LocalBusiness",
+      "https://schema.org/LocalBusiness"
+    ],
+    [
+      "Schema.org: Service",
+      "https://schema.org/Service"
+    ]
+  ],
+  "related": [
+    "below-the-content-layer",
+    "schema-markup-complete-guide"
+  ]
+};
+const SOURCE_LINKS: Record<string, string[]> = {
+  "google": [
+    "Google Search Central: AI features and your website",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
+  "schema": [
+    "Schema.org: About the vocabulary",
+    "https://schema.org/docs/about.html"
+  ],
+  "jsonld": [
+    "W3C: JSON-LD 1.1",
+    "https://www.w3.org/TR/json-ld11/"
+  ],
+  "local": [
+    "Schema.org: LocalBusiness",
+    "https://schema.org/LocalBusiness"
+  ],
+  "service": [
+    "Schema.org: Service",
+    "https://schema.org/Service"
+  ],
+  "offer": [
+    "Schema.org: Offer",
+    "https://schema.org/Offer"
+  ],
+  "updates": [
+    "Google Search documentation updates",
+    "https://developers.google.com/search/updates"
+  ],
+  "crawl": [
+    "Vercel: The rise of the AI crawler",
+    "https://vercel.com/blog/the-rise-of-the-ai-crawler"
+  ],
+  "reviews": [
+    "Google Business Profile: Local ranking guidance",
+    "https://support.google.com/business/answer/7091?hl=en"
+  ],
+  "sitemap": [
+    "Google Search Central: Sitemaps",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+  ],
+  "luxe": [
+    "Luxe Window Works: Public consultation capability",
+    "https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation"
+  ],
+  "meta": [
+    "Meta Business Help Center",
+    "https://www.facebook.com/business/help"
+  ],
+  "terms": [
+    "Meta: Customer List Custom Audiences Terms",
+    "https://www.facebook.com/legal/terms/customaudience"
+  ]
+};
+const PAGE_URL = `https://www.kodecite.ai/blog/${ARTICLE.slug}`;
+const WORD_COUNT = 870;
+const READ_TIME = '5 min read';
+const PUBLISHED = 'April 17, 2026';
 
 export const metadata: Metadata = {
-  title: 'What Is an Entity Graph? (And Why AI Needs One)',
-  description:
-    'An entity graph is Schema.org done right: one connected, machine-readable identity AI can trust and recommend. What it is, how it differs from basic schema, and why it matters now.',
-  alternates: { canonical: 'https://www.kodecite.ai/blog/what-is-an-entity-graph' },
-  openGraph: {
-    title: 'What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade',
-    description:
-      "Schema.org launched in 2011 as the standard language of the internet. Over a decade later it's still misunderstood and misused — even by digital marketing practitioners. Here's what schema actually is, what an entity graph is, and why it matters more right now than it ever has.",
-    url: 'https://www.kodecite.ai/blog/what-is-an-entity-graph',
-    type: 'article',
-    publishedTime: '2026-04-17',
-    authors: ['Mark Abplanalp'],
-  },
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: ARTICLE.title, description: ARTICLE.description, url: PAGE_URL, type: 'article', publishedTime: `${ARTICLE.date}T00:00:00-07:00`, modifiedTime: '2026-10-01T15:00:00Z' },
 };
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/what-is-an-entity-graph#article',
-  headline: 'What Is an Entity Graph — And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade',
-  description:
-    "Schema.org launched in 2011 as the standard language of the internet. Over a decade later it's still misunderstood and misused — even by digital marketing practitioners. Here's what schema actually is, what an entity graph is, and why it matters more right now than it ever has.",
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  datePublished: '2026-04-17T00:00:00-07:00',
-  dateModified: '2026-04-17T00:00:00-07:00',
-  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kodecite.ai/blog/what-is-an-entity-graph' },
-  url: 'https://www.kodecite.ai/blog/what-is-an-entity-graph',
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  keywords: ['entity graph', 'schema markup', 'schema.org', 'JSON-LD', 'AI search visibility', 'structured data', 'AEO', 'answer engine optimization', 'AI search optimization'],
-  articleSection: 'AEO & AI Search',
-  wordCount: 2100,
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  about: [
-    {
-      '@type': 'DefinedTerm',
-      '@id': 'https://www.kodecite.ai/#entity-graph',
-      name: 'Entity Graph',
-      description:
-        'A connected, machine-readable map of a business — its identity, people, services, location, and content — expressed in Schema.org JSON-LD so AI systems can read, verify, and cite it.',
-      url: 'https://www.kodecite.ai/blog/what-is-an-entity-graph',
-      inDefinedTermSet: {
-        '@type': 'DefinedTermSet',
-        '@id': 'https://www.kodecite.ai/#glossary',
-        name: 'KodeCite.ai AI Search Glossary',
-      },
-    },
-    { '@type': 'DefinedTerm', name: 'Schema Markup' },
-    { '@type': 'DefinedTerm', name: 'JSON-LD' },
-    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
-    { '@id': 'https://www.kodecite.ai/#business' },
-  ],
-  mentions: [
-    { '@type': 'Organization', '@id': 'https://schema.org/', name: 'Schema.org', url: 'https://schema.org/', sameAs: 'https://www.wikidata.org/wiki/Q3475322' },
-    { '@type': 'Organization', '@id': 'https://www.google.com/', name: 'Google', url: 'https://www.google.com/', sameAs: 'https://www.wikidata.org/wiki/Q95' },
-    { '@type': 'Organization', '@id': 'https://www.bing.com/', name: 'Microsoft Bing', url: 'https://www.bing.com/', sameAs: 'https://www.wikidata.org/wiki/Q182496' },
-    { '@type': 'Organization', '@id': 'https://www.yahoo.com/', name: 'Yahoo', url: 'https://www.yahoo.com/', sameAs: 'https://www.wikidata.org/wiki/Q37093' },
-    { '@type': 'Organization', '@id': 'https://yandex.com/', name: 'Yandex', url: 'https://yandex.com/', sameAs: 'https://www.wikidata.org/wiki/Q5281' },
-    { '@type': 'Thing', name: 'Google Knowledge Graph', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', sameAs: 'https://www.wikidata.org/wiki/Q648625' },
-    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
-    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
-    { '@type': 'Thing', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'WebSite', name: 'Google Rich Results Test', url: 'https://search.google.com/test/rich-results' },
-    { '@type': 'Organization', name: 'Yoast', url: 'https://yoast.com/' },
-    { '@type': 'Organization', name: 'Rank Math', url: 'https://rankmath.com/' },
-  ],
-  citation: [
-    { '@type': 'WebPage', name: 'Introducing Schema.org: Bing, Google and Yahoo Unite to Build the Web of Objects', url: 'https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni', publisher: { '@type': 'Organization', name: 'Microsoft Bing' }, datePublished: '2011-06-02' },
-    { '@type': 'ScholarlyArticle', name: 'Schema.org: Evolution of Structured Data on the Web', author: [{ '@type': 'Person', name: 'R.V. Guha' }, { '@type': 'Person', name: 'Dan Brickley' }, { '@type': 'Person', name: 'Steve Macbeth' }], url: 'https://cacm.acm.org/practice/schema-org/', publisher: { '@type': 'Organization', name: 'Communications of the ACM' }, datePublished: '2016-02-01' },
-    { '@type': 'WebPage', name: 'Introducing the Knowledge Graph: things, not strings', url: 'https://blog.google/products/search/introducing-knowledge-graph-things-not/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2012-05-16' },
-    { '@type': 'WebPage', name: 'Schema.org — Person type', url: 'https://schema.org/Person', publisher: { '@type': 'Organization', name: 'Schema.org' } },
-    { '@type': 'WebPage', name: 'Schema.org — Organization type', url: 'https://schema.org/Organization', publisher: { '@type': 'Organization', name: 'Schema.org' } },
-    { '@type': 'WebPage', name: 'Schema.org — LocalBusiness type', url: 'https://schema.org/LocalBusiness', publisher: { '@type': 'Organization', name: 'Schema.org' } },
-    { '@type': 'CreativeWork', name: 'JSON-LD 1.1 Specification (W3C)', url: 'https://www.w3.org/TR/json-ld11/' },
-    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
+  '@context': 'https://schema.org', '@type': 'Article', '@id': `${PAGE_URL}#article`,
+  headline: ARTICLE.title, description: ARTICLE.description,
+  datePublished: `${ARTICLE.date}T00:00:00-07:00`, dateModified: '2026-10-01T15:00:00Z',
+  wordCount: WORD_COUNT, articleSection: ARTICLE.category,
+  author: articleAuthor, publisher: articlePublisher, isPartOf: blogCollectionPage,
+  url: PAGE_URL, mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+  image: 'https://www.kodecite.ai/og-image.png', about: [businessRef],
+  citation: ARTICLE.sources.map(([name, url]) => ({ '@type': 'CreativeWork', name, url })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', '@id': `${PAGE_URL}#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: ARTICLE.title, item: PAGE_URL },
   ],
 };
 
-export default function WhatIsAnEntityGraph() {
+export default function ArticlePage() {
+  const related = ARTICLE.related.map((slug) => blogPosts.find((post) => post.slug === slug)).filter(Boolean);
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
-            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            <span className="text-[var(--d-fg)] truncate">What Is an Entity Graph</span>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <header className="pt-36 pb-16 px-5 md:px-8" style={{ background: 'var(--d-bg)', borderBottom: '1px solid var(--d-line)' }}>
+        <div className="max-w-4xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex gap-3 text-sm font-inter text-[var(--d-fg-dim)] mb-9">
+            <Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/blog">Insights</Link>
           </nav>
-
-          <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">AEO &amp; AI Search</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">14 min read</span>
-          </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            What Is an Entity Graph —{' '}
-            <span className="text-[var(--d-accent)]">And Why the Technology Behind It Has Been Hiding in Plain Sight for Over a Decade</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            Schema.org launched in 2011 as the standard language of the internet. Over a decade later it&apos;s still misunderstood and misused — even by digital marketing practitioners. Here&apos;s what schema actually is, what an entity graph is, and why it matters more right now than it ever has.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[var(--d-line)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">MA</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">April 17, 2026</p>
-              </div>
-            </div>
+          <p className="d-eyebrow mb-6">{ARTICLE.category} · {READ_TIME}</p>
+          <h1 className="font-inter font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-[var(--d-fg)] mb-8">{ARTICLE.title}</h1>
+          <p className="font-inter text-lg md:text-xl leading-relaxed text-[var(--d-fg-dim)] max-w-3xl">{ARTICLE.intro}</p>
+          <div className="mt-9 pt-6 font-inter text-sm text-[var(--d-fg-dim)]" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <p className="font-semibold text-[var(--d-fg)] mb-1">Mark Abplanalp · Kodecite</p>
+            <p>Published {PUBLISHED} · Updated October 1, 2026</p>
           </div>
         </div>
+      </header>
+      <section className="px-5 md:px-8 py-16 md:py-20" style={{ background: 'var(--d-bg)' }}>
+        <article className="max-w-3xl mx-auto font-inter text-[var(--d-fg-dim)]" style={{ fontSize: '17px', lineHeight: 1.85 }}>
+          {ARTICLE.sections.map((section) => (
+            <section key={section.h} className="mb-12">
+              <h2 className="font-inter font-semibold text-2xl md:text-3xl leading-tight tracking-tight text-[var(--d-fg)] mb-5">{section.h}</h2>
+              {section.p.map((paragraph) => <p key={paragraph} className="mb-5">{paragraph}</p>)}
+              {section.items && <ul className="space-y-3 pl-6 mb-5 list-disc">{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
+              {section.source && SOURCE_LINKS[section.source] && <p className="text-sm"><a href={SOURCE_LINKS[section.source][1]} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{SOURCE_LINKS[section.source][0]} ↗</a></p>}
+              {section.h === 'A small connected example' && ARTICLE.example && <pre className="overflow-x-auto rounded-xl p-5 text-xs md:text-sm leading-relaxed my-6" style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)' }}><code>{JSON.stringify(ARTICLE.example, null, 2)}</code></pre>}
+            </section>
+          ))}
+          <section className="pt-8 mt-12" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Sources and further reading</h2>
+            <ul className="space-y-3 text-sm">{ARTICLE.sources.map(([label, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{label} ↗</a></li>)}</ul>
+          </section>
+          <section className="pt-8 mt-10" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Keep reading</h2>
+            <ul className="space-y-4">{related.map((post) => post && <li key={post.slug}><Link href={`/blog/${post.slug}`} className="text-[var(--d-accent)] hover:underline">{post.title} →</Link></li>)}</ul>
+            <Link href="/blog" className="inline-block mt-8 text-sm text-[var(--d-fg-dim)] hover:text-[var(--d-fg)]">← All insights</Link>
+          </section>
+        </article>
       </section>
-
-      <div className="section-divider" />
-
-      {/* Body + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-6">
-                  Schema.org launched in June 2011.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-6">
-                  Google, Microsoft, and Yahoo — three companies that competed fiercely on almost everything — <a href="https://blogs.bing.com/search/June-2011/Introducing-Schema-org-Bing,-Google-and-Yahoo-Uni" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">agreed on something together</a>. They created a shared vocabulary for the web. A universal language that would allow any website to communicate its meaning directly to machines, not just humans. (Yandex joined the effort later that year, completing the alignment.)
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  A year later, in 2012, Google launched its <a href="https://blog.google/products/search/introducing-knowledge-graph-things-not/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Knowledge Graph</a> — the first large-scale, consumer-facing entity graph, and an early signal of where structured data was heading.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The idea was elegant. Instead of forcing search engines to guess what a page was about by analyzing words and links, website owners could simply label their content. This is a business. This is the owner. This is what we do. This is where we operate. This is how you reach us.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  No inference required. No guessing. Just clear, structured, machine-readable identity.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  That was 2011.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  It is now 2026. And the overwhelming majority of websites on the internet either have no schema at all, have schema that is technically broken, or have schema that is so generic and disconnected it communicates almost nothing useful to the systems now making the most important decisions about who gets found and who stays invisible.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The technology that was designed to be the standard language of the internet is still, after more than a decade, one of the most misunderstood and misused tools in digital marketing.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
-                  That gap is not an accident. And closing it is now more important than it has ever been.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">What Schema Actually Is — Stripped Down to Plain Language</h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Before we talk about entity graphs, you need to understand what schema markup actually is. Because most explanations make it sound more complicated than it needs to be.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Schema is a label.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  That is it. At its core, schema markup is a standardized system of labels that tells machines what your content <em>means</em> — not just what it says.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Here is the difference. Your website might say: &ldquo;Mark Abplanalp has been installing window treatments since 2002.&rdquo; A human reads that and understands immediately — experienced professional, long track record, trustworthy.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  A machine reads that and sees words. It can infer meaning, but inference is imperfect. It might associate &ldquo;Mark Abplanalp&rdquo; with window treatments. It might not. It depends on context, links, and a hundred other signals the algorithm is weighing simultaneously.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Schema removes the inference. With proper markup, that same information becomes a structured statement the machine reads with complete clarity: this is a Person, their name is Mark Abplanalp, their job title is Owner and Window Treatment Specialist, they have been working in this industry since 2002, they work for this specific business, and that business is located at this address and serves these cities.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  No guessing. No inference. Direct communication between your website and the machine reading it.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
-                  Schema.org provides the vocabulary — a shared dictionary of types and properties that every major search engine and AI platform has agreed to recognize. <a href="https://schema.org/Person" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Person</a>. <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Organization</a>. <a href="https://schema.org/LocalBusiness" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">LocalBusiness</a>. BlogPosting. FAQPage. Product. Service. Each type has defined properties. Each property has an accepted format. When you use them correctly, you are speaking the native language of the machines that determine whether your business gets found.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">Why Most Schema Implementations Are Wrong</h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Here is the uncomfortable truth about schema in 2026: most websites that have it are doing it wrong. And most digital marketing practitioners selling schema services either don&apos;t understand the depth of what&apos;s possible or don&apos;t have the technical ability to implement it correctly.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The most common failure is template schema — the same generic block copy-pasted across every page of a site with a few variables swapped in. A business name here. A phone number there. Maybe an address. The result is schema that technically validates but communicates almost nothing useful. It tells machines you exist. It doesn&apos;t tell them who you are.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The second most common failure is disconnected schema — multiple blocks on the same site that don&apos;t reference each other. A LocalBusiness block that doesn&apos;t connect to the Person who owns it. Blog articles with author fields that point to a flat name string rather than a verified identity. An Organization block that has no relationship to the services it offers or the expert behind them.
-                </p>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6 my-8">
-                  <p className="eyebrow mb-3 text-xs">THE IDENTITY GAP</p>
-                  <p className="text-[var(--d-fg-dim)] font-inter text-sm leading-relaxed">
-                    Disconnected schema is the digital equivalent of a business card with no name on it. The information is present. The identity isn&apos;t.
-                  </p>
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10">
-                  The third failure — and this one is especially common among WordPress sites using plugins like <a href="https://yoast.com/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Yoast</a> or <a href="https://rankmath.com/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Rank Math</a> — is conflicting schema. Multiple plugins attempting to mark up the same page simultaneously, producing contradictory structured data that confuses rather than clarifies. Google&apos;s <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Rich Results Test</a> flags errors and warnings on the majority of plugin-generated schema implementations. The practitioners selling these implementations rarely check.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">What an Entity Graph Actually Is</h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  This is where it gets important.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  An entity graph is what happens when schema stops being a collection of isolated labels and becomes a connected system of identity.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Think of it this way. A label tells a machine: <em>this thing exists</em>. An entity graph tells a machine: <em>this thing exists, it is connected to these other things, those things are verified by these external sources, and all of it is consistent across every page of this website and every platform where this business has a presence.</em>
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8 font-medium" style={{ color: '#0a0806' }}>
-                  The difference between a label and an entity graph is the difference between a name tag and a verified identity.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Here is what a properly built entity graph looks like in practice. Every page of your website references the same named entities through stable, unique identifiers called <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code> anchors. Your business has an <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code>. The person who owns the business has an <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code>. Every article published on the site lists its author as a reference to that person&apos;s <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code> — not a name string, not a flat object, but a direct connection to the verified identity that owns the expertise behind the content.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  When an AI engine crawls your site, it doesn&apos;t just see pages. It sees a network. The business connects to the owner. The owner connects to their expertise, their credentials, their external profiles. Every article connects back to the same expert. Every service page connects back to the same business. The <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">sameAs</code> arrays on your Organization and Person blocks point to your Google Business Profile, your Yelp listing, your LinkedIn profile, your BBB page — external sources that corroborate the identity you&apos;re claiming.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  The machine builds a picture. And the picture is clear, consistent, and verifiable from multiple independent sources.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
-                  That is an entity graph.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">Why It Matters More Right Now Than It Ever Has</h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Schema.org has existed for over a decade. So why does this matter so much more in 2026 than it did in 2015?
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Because the systems processing your structured data changed fundamentally.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  For most of schema&apos;s history, the primary consumer was Google&apos;s ranking algorithm. Schema helped you qualify for rich results — the star ratings, FAQ dropdowns, and breadcrumb trails that made your listing stand out in search results. Valuable, but ultimately incremental.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Then large language models entered the picture.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  ChatGPT, Perplexity, Google AI Overviews, and the growing ecosystem of AI-powered search tools don&apos;t rank pages. They identify trusted sources. They synthesize information from across the web and cite the businesses, experts, and organizations they have enough structured evidence to recommend with confidence.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Entity clarity is not a nice-to-have for these systems. It is a prerequisite.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  An AI engine encountering a business with a complete, connected entity graph — verified identity, linked expertise, corroborated by external sources, consistent across every page — has everything it needs to make a confident recommendation. An AI engine encountering a website with no schema, template schema, or disconnected schema has to guess. And when AI engines guess, they default to the sources they can verify.
-                </p>
-
-                <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-6 my-8">
-                  <p className="font-inter leading-relaxed" style={{ color: 'rgba(240,232,216,0.85)' }}>
-                    Your competitor with better entity infrastructure gets recommended. You don&apos;t. Not because their content is better. Not because their business is better. Because the machine knows who they are and isn&apos;t sure about you.
-                  </p>
-                </div>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">Building an Entity Graph: What It Actually Takes</h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  A complete entity graph for a local service business has a small number of core components, but every one of them has to be built correctly and connected to the others.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The foundation is a LocalBusiness or Organization block at the layout level — meaning it appears on every page of the site — with a stable <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code> anchor that every other block on the site can reference. This block includes the business name, contact information, service area, hours, offer catalog, and a <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">sameAs</code> array pointing to every verified external profile where the business has a presence.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Nested inside that block — or connected to it through a separate Person block — is the owner entity. A real named person with their own <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code>, their job title, a description of their expertise, a <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">knowsAbout</code> array covering every topic they have genuine authority on, and their own <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">sameAs</code> array pointing to their LinkedIn profile, their professional social presence, and any other verifiable external identity.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Every blog article published on the site connects to both of these entities. The author field doesn&apos;t say &ldquo;Mark Abplanalp.&rdquo; It references the <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code> of the Person block. The publisher field doesn&apos;t say &ldquo;KodeCite.ai.&rdquo; It references the <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">@id</code> of the business block. The <code className="bg-[var(--d-bg-2)] px-1.5 py-0.5 rounded text-[var(--d-accent)] text-sm">isPartOf</code> field connects the article to the site&apos;s blog entity, which in turn connects back to the business.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Every connection compounds. Every article published strengthens the same entity. Every external citation corroborates the same identity. Over time the machine&apos;s picture of who you are becomes sharper, more confident, and harder for a competitor to displace.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
-                  That compounding effect is the moat.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">The Window That Is Still Open</h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Most businesses don&apos;t have this. Most digital marketing agencies don&apos;t build it. Most web developers don&apos;t know it exists.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Schema.org has been the standard language of the internet for over a decade. The vocabulary has been there the whole time. The practitioners who should have been teaching it and implementing it correctly largely haven&apos;t.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  That gap is closing — but it hasn&apos;t closed yet.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The businesses building complete, connected entity graphs right now are establishing AI visibility before their competitors understand what is happening. AI systems build trust in sources over time. The entity that gets verified and cited first holds that position through future model updates and algorithm changes.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-10 font-medium" style={{ color: '#0a0806' }}>
-                  The technology isn&apos;t new. The urgency is.
-                </p>
-
-                <div className="mt-12 pt-8 border-t border-[var(--d-line)]">
-                  <Link href="/blog" className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[#8a5f2e] transition-colors">
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
-
-              </div>
-            </article>
-
-            <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
-                  <p className="eyebrow mb-4 text-xs">ENTITY GRAPH BY THE NUMBERS</p>
-                  <div className="space-y-4">
-                    <div className="border-b border-[var(--d-line)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">2011</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">Schema.org launched — co-created by Google, Microsoft, and Yahoo (Yandex joined later that year)</p>
-                    </div>
-                    <div className="border-b border-[var(--d-line)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">&lt;10%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of websites implement schema markup correctly, even today</p>
-                    </div>
-                    <div>
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">700+</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">schema types defined on Schema.org — most businesses need fewer than 10</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">See Your Entity Graph Gaps</p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    We audit your schema stack and entity signals — and show you exactly what AI systems can and can&apos;t understand about your business right now.
-                  </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Request an Agent Readiness Review</Link>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
-                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/schema-markup-complete-guide" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">Schema Markup: The Complete Guide for Local Businesses</p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
-                    </Link>
-                    <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/what-is-zero-click-search" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">What Is Zero Click Search and Why Your Business Is Invisible</p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
-                      </Link>
-                    </div>
-                    <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/aeo-geo-making-seo-better" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">AEO and GEO Aren&apos;t Replacing SEO — They&apos;re Making It Better</p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </aside>
-
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* CTA */}
-      <section className="py-20 bg-[var(--d-bg-3)] px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">YOUR ENTITY GRAPH IS EITHER WORKING OR IT ISN&apos;T</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            AI Systems Either Understand Your Business — or They Skip It Entirely
-          </h2>
-          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            Visibility is one layer. The complete job is making the business understandable, verifiable, and safe to act with. An Agent Readiness Review shows where you stand today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Request an Agent Readiness Review</Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read More Articles</Link>
-          </div>
+      <section className="py-20 px-5 md:px-8" style={{ background: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="d-eyebrow mb-5">YOUR BUSINESS, CLEARLY UNDERSTOOD</p>
+          <h2 className="font-inter text-3xl md:text-4xl font-semibold tracking-tight text-[var(--d-fg)] mb-5">Make the next step easier for your customer and their AI assistant.</h2>
+          <p className="font-inter text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">An Agent Readiness Review looks at your business information, supporting evidence and the next steps a customer can take. Start with the gaps that matter to a real inquiry.</p>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
         </div>
       </section>
     </>

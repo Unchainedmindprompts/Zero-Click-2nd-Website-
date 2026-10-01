@@ -1,12 +1,16 @@
 {
   "schema_version": "1.0",
   "name": "KodeCite.ai",
-  "description": "KodeCite builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. As customers begin to delegate discovery and next steps to AI, that layer keeps the business eligible for the commercial decision.",
+  "description": "Kodecite makes businesses easier for customers and their AI assistants to understand, trust and do business with. Business-owned websites connect identity, services, fit, evidence and clear next steps.",
   "url": "https://www.kodecite.ai",
-  "positioning": "Owned digital business layer for service businesses. As customers begin to delegate outcomes to AI, the assistant may evaluate a business before the customer visits. KodeCite makes the business understandable, verifiable, and safely usable, with the owner controlling what AI may do. Luxe Window Works is production proof that this can work today. This file is identity and discovery only. KodeCite does not currently publish an autonomous agent submission endpoint on kodecite.ai.",
+  "positioning": "Customers delegate research and next steps to assistants to reduce effort. Kodecite publishes a consistent, evidence-backed representation of the real business, and separately scopes action connections with required inputs, permission checks, confirmed outcomes and human handoff. These discovery files are optional descriptive resources, not a universal agent protocol or authorization to act.",
   "contact": {
     "location": "North Idaho",
-    "service_area": ["North Idaho", "Pacific Northwest", "Remote — service businesses anywhere"]
+    "service_area": [
+      "North Idaho",
+      "Pacific Northwest",
+      "Remote — service businesses anywhere"
+    ]
   },
   "framework": {
     "name": "Five layers",
@@ -20,13 +24,13 @@
   "capabilities": [
     {
       "name": "Foundation Build",
-      "description": "Owned website and digital business foundation so AI can understand and evaluate the business. Client owns the site and infrastructure. Does not automatically include a live action endpoint.",
+      "description": "A one-time $4,995 Foundation Build: client-owned website, connected business identity, services and evidence, discovery and capability mapping. Client owns the site and accounts. No mandatory retainer. A live action endpoint is separately scoped.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
     {
       "name": "Agent Capability Build",
-      "description": "One clearly defined approved action after business rules are understood. Protects against invalid, unauthorized, abusive, or duplicate requests. Honest outcome and human handoff where required. No published price.",
+      "description": "One separately scoped approved action, with required information, validation, permission, duplicate handling, result checks and human follow-up. Pricing is determined by the agreed scope.",
       "url": "https://www.kodecite.ai/services",
       "type": "service"
     },
@@ -87,7 +91,7 @@
       "type": "article",
       "title": "From Recommended to Actionable — Luxe Window Works",
       "url": "https://www.kodecite.ai/blog/from-recommended-to-actionable-luxe-window-works",
-      "topic": "Live production proof: discovery, capability contract, authorized test, duplicate suppression, conflict rejection."
+      "topic": "Documented historical production consultation-request test: discovery, capability description, authorized request, duplicate suppression and conflict rejection. It does not certify current delivery or provide booking, pricing or checkout."
     },
     {
       "type": "article",

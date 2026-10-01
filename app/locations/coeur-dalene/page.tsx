@@ -4,19 +4,19 @@ import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 import ProductionProof from '@/components/proof/ProductionProof';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
-import { REVIEW_CTA, REVIEW_HREF } from '@/lib/positioning';
+import { REVIEW_CTA, REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
 
 const PAGE_URL = `${ORIGIN}/locations/coeur-dalene`;
 
 export const metadata: Metadata = {
-  title: "Coeur d'Alene Business Infrastructure for the Agent-Driven Web",
+  title: "Coeur d'Alene Websites for Customers and AI Assistants",
   description:
-    "Based in Coeur d'Alene, Idaho. KodeCite builds the trusted digital business layer that lets AI understand, evaluate, recommend, and take authorized action with a service business — here or anywhere.",
+    "Based in Coeur d'Alene, Kodecite builds websites and approved next steps that make service businesses easier for customers and their AI assistants to understand, trust, and contact.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "Coeur d'Alene Business Infrastructure for the Agent-Driven Web",
+    title: "Coeur d'Alene Websites for Customers and AI Assistants",
     description:
-      "Make your Coeur d'Alene business usable by AI. Owned truth, capability, and control — so agents can take authorized next steps.",
+      "Clear offers, credible evidence, and useful customer next steps for Coeur d'Alene businesses. A website and accounts you own.",
     url: PAGE_URL,
     type: 'website',
     images: [{ url: `${ORIGIN}/og-image.png`, width: 1200, height: 630 }],
@@ -29,23 +29,23 @@ const KOOTENAI = { '@type': 'AdministrativeArea', name: 'Kootenai County', sameA
 const faqItems = [
   {
     q: 'Are you a Coeur d’Alene SEO company?',
-    a: 'We are based in Coeur d’Alene. Search visibility can follow better infrastructure. The category is owned business infrastructure for the agent-driven web — not an SEO retainer and not a promise that a specific engine will cite you.',
+    a: 'We are based in Coeur d’Alene and build business-owned websites and approved customer actions. The work includes clear information that supports discovery, then goes further into fit, evidence, permission, and what happens after a customer chooses you.',
   },
   {
     q: 'Do you only work with Coeur d’Alene businesses?',
-    a: 'No. We are based in North Idaho and build for service businesses anywhere. The offer is remote, not geo-limited.',
+    a: 'We work with businesses in Coeur d’Alene and across North Idaho, and deliver projects remotely for service businesses elsewhere too.',
   },
   {
     q: 'Is this AEO or AI search optimization?',
-    a: 'AEO and GEO describe discovery. They are supporting outcomes, not the product. The work is making the business understandable, verifiable, recommendable, actionable, and controlled.',
+    a: 'Those terms focus on appearing in AI answers. Our work also covers the customer journey after discovery: understanding the offer, checking its evidence, making an approved request, and getting a clear result.',
   },
   {
     q: 'Does every build include an action endpoint?',
-    a: 'No. Foundation Build publishes owned truth and discovery. A protected action is scoped separately after the real business rules are understood.',
+    a: 'Foundation Build includes the website, connected business information, and a plan for possible next steps. A live agent-action endpoint is separately scoped around an approved action and its business rules.',
   },
   {
     q: 'Is KodeCite actually local?',
-    a: 'Yes — based in Coeur d’Alene / North Idaho. About may mention the PNW, Eastside Seattle, Bend, and the North Idaho–Spokane corridor. The practice is one-person and operator-led.',
+    a: 'Yes. Kodecite is based in Coeur d’Alene, in North Idaho. You work directly with founder Mark Abplanalp.',
   },
 ];
 
@@ -58,7 +58,7 @@ const locationSchema = {
       url: PAGE_URL,
       name: "Coeur d'Alene Business Infrastructure — KodeCite.ai",
       description:
-        "KodeCite is based in Coeur d'Alene and builds owned business infrastructure so AI can understand a service business and take the next safe step.",
+        "KodeCite is based in Coeur d'Alene and builds websites and approved next steps that help customers and AI assistants understand, trust, and contact service businesses.",
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -69,12 +69,12 @@ const locationSchema = {
     {
       '@type': 'Service',
       '@id': `${PAGE_URL}#service`,
-      name: 'Owned business infrastructure',
-      serviceType: ['Owned business infrastructure', 'Entity graph infrastructure', 'Controlled agent action'],
+      name: 'Websites and approved actions for customer AI assistants',
+      serviceType: ['Business-owned websites', 'Connected business information', 'Approved agent capabilities'],
       provider: businessRef,
       areaServed: [CDA, KOOTENAI],
       description:
-        "Owned website, truth, discovery, and — when the business permits — protected actions. Based in Coeur d'Alene. Built for service businesses anywhere. Foundation does not automatically include a production action endpoint.",
+        "Business-owned website, clear offers and evidence, connected information, and separately scoped approved actions. Based in Coeur d'Alene. Built for service businesses anywhere. A live agent-action endpoint is scoped separately from Foundation Build.",
     },
     {
       '@type': 'FAQPage',
@@ -97,8 +97,8 @@ const locationSchema = {
 };
 
 const FG = 'var(--d-fg)';
-const DIM = 'rgba(233, 238, 255, 0.95)';
-const MUTE = 'rgba(219, 227, 255, 0.8)';
+const DIM = 'var(--d-fg-dim)';
+const MUTE = 'var(--d-fg-mute)';
 const ACCENT = 'var(--d-accent)';
 const sectionGap = { marginTop: '30px' };
 
@@ -111,13 +111,13 @@ export default function CoeurDAleneLocationPage() {
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">BASED IN COEUR D&apos;ALENE · BUILT FOR ANYWHERE</div>
           <h1 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(34px, 4.6vw, 58px)', lineHeight: 1.06, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
-            Make your <em className="serif" style={{ color: ACCENT }}>Coeur d&apos;Alene</em> business usable by AI.
+            Make your <em className="serif" style={{ color: ACCENT }}>Coeur d&apos;Alene</em> business easier to choose.
           </h1>
           <p className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(17px, 2.2vw, 21px)', lineHeight: 1.4, color: FG, maxWidth: '640px' }}>
-            Owned infrastructure that lets AI understand what you offer, verify what is true, recommend you accurately, and take the next safe step.
+            Help customers and their assistants understand your offer, check that it fits, and take a useful next step.
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '660px' }}>
-            KodeCite is based in Coeur d&apos;Alene. We build the trusted digital business layer — verified truth, explicit capabilities, controlled action, owned infrastructure, and human handoff. The website remains the human-facing experience. Action is scoped only when the real business permits it.
+            Kodecite is based here in Coeur d&apos;Alene. We build business-owned websites and the connected information an assistant needs to help a customer. When the next step should happen through an assistant, we build that specific workflow with your rules and your team in control.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">{REVIEW_CTA} →</Link>
@@ -128,18 +128,16 @@ export default function CoeurDAleneLocationPage() {
 
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">THE PROBLEM</div>
+          <div className="d-eyebrow mb-6">A BETTER CUSTOMER JOURNEY</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '22ch' }}>
-            AI may find pieces of the business. <em className="serif" style={{ color: ACCENT }}>It still may not be able to act safely.</em>
+            Your local reputation, <em className="serif" style={{ color: ACCENT }}>made easier to understand.</em>
           </h2>
           <div className="flex flex-col gap-5" style={{ maxWidth: '700px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              Most Coeur d&apos;Alene businesses are spread across a website, directories, forms, calendars, and unwritten rules.
-              A customer — or their agent — can find a name and still not know what can be requested, where the business works, or what happens next.
+              A homeowner comparing service providers needs more than a name and a phone number. Do you handle this type of project? Do you serve their address? What experience can they see? How does an estimate or consultation begin? Your website should make those answers easy for the customer and their assistant to find.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              WordPress, Wix, and Squarespace sites are not blank to every crawler. They often make it harder to publish one owned record.
-              A full rebuild is the strongest path. A sidecar may fit selected pilots.
+              We connect the answers across your website and business information, then scope an action where it helps. If you are keeping an existing WordPress, Wix, or Squarespace site, the application-only platform pilot may be an option.
             </p>
           </div>
         </GlassPanel>
@@ -147,24 +145,24 @@ export default function CoeurDAleneLocationPage() {
 
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">DISCOVERY PROOF</div>
+          <div className="d-eyebrow mb-6">LOCAL WORK, DOCUMENTED RESULTS</div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             <div className="glass-panel-soft" style={{ padding: '26px 30px' }}>
               <p className="font-inter font-semibold mb-2" style={{ fontSize: '16px', color: FG }}>Real Estate With Shirin <span style={{ color: MUTE, fontWeight: 400 }}>· North Idaho</span></p>
               <p className="font-inter" style={{ fontSize: '14.5px', lineHeight: 1.6, color: DIM, fontWeight: 300 }}>
-                Rebuilt on an owned entity-graph foundation. Dated screenshots show discovery across Bing, Google AI, ChatGPT, and Gemini. Visibility is evidence, not a permanent placement claim.
+                A business-owned real-estate website with connected identity, services, and evidence. Dated screenshots document appearances across Bing, Google AI, ChatGPT, and Gemini.
               </p>
             </div>
             <div className="glass-panel-soft" style={{ padding: '26px 30px' }}>
               <p className="font-inter font-semibold mb-2" style={{ fontSize: '16px', color: FG }}>Luxe Window Works <span style={{ color: MUTE, fontWeight: 400 }}>· Post Falls</span></p>
               <p className="font-inter" style={{ fontSize: '14.5px', lineHeight: 1.6, color: DIM, fontWeight: 300 }}>
-                Discovery came first. The later chapter is a live, protected in-home consultation capability — not a booking, price, or purchase.
+                The documented authorized test went further than discovery: an assistant submitted a consultation request, one email reached the team, and duplicate and changed-request checks behaved as intended.
               </p>
             </div>
           </div>
           <p className="font-inter" style={{ fontSize: '13.5px', lineHeight: 1.6, color: MUTE, fontWeight: 300, fontStyle: 'italic', maxWidth: '640px' }}>
             AI answers vary. These are dated results, not a guarantee that any engine will cite a business.{' '}
-            <Link href="/services#proof" style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>See discovery screenshots →</Link>
+            <Link href="/services#proof" style={{ color: ACCENT, borderBottom: '1px solid var(--d-line-s)' }}>See discovery screenshots →</Link>
           </p>
         </GlassPanel>
       </section>
@@ -175,13 +173,13 @@ export default function CoeurDAleneLocationPage() {
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">WHAT WE BUILD</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(24px, 3vw, 36px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG }}>
-            Three paths. <em className="serif" style={{ color: ACCENT }}>Honest scope.</em>
+            Start with the foundation. <em className="serif" style={{ color: ACCENT }}>Add what helps.</em>
           </h2>
           <ul className="flex flex-col gap-3 mb-8" style={{ maxWidth: '700px' }}>
             {[
-              'Foundation Build — owned website, truth, and discovery. $4,995. Does not automatically include a production action endpoint.',
-              'Agent Capability Build — one defined action at a time after the rules are understood. No published price.',
-              'Platform Capability Layer — Pilot — sidecar for selected WordPress / Wix / Squarespace businesses. Application-only.',
+              'Foundation Build: $4,995 one-time for a business-owned website, clear offers and evidence, and connected information. A live agent-action endpoint is separate.',
+              'Agent Capability Build: one useful action with defined requirements, permission, result, and human follow-up. Separately scoped and priced.',
+              'Platform Capability Layer: application-only pilot for selected businesses keeping WordPress, Wix, Squarespace, or a similar platform. Scope follows a review of the site and workflow.',
             ].map((s) => (
               <li key={s} className="flex items-start gap-3 font-inter" style={{ fontSize: '15.5px', lineHeight: 1.6, color: DIM, fontWeight: 300 }}>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="flex-shrink-0" style={{ marginTop: '1px' }}>
@@ -192,25 +190,24 @@ export default function CoeurDAleneLocationPage() {
             ))}
           </ul>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.6, color: FG, fontWeight: 500 }}>
-            You own the repo, the site, and the deployed infrastructure. No required retainer. Active capabilities may need maintenance.
+            You own the website, code, and operating accounts. No mandatory retainer. Direct service costs and maintenance needs for active capabilities are made clear.
           </p>
           <div className="d-eyebrow mb-4">WHO IT&apos;S FOR</div>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            Established high-trust, high-value service businesses — custom home, specialty healthcare, premium home services, and similar operators whose customers research before they buy.
+            Home-service providers, real-estate teams, custom builders, specialty practices, and other established businesses whose customers want to understand the fit before making a call.
           </p>
         </GlassPanel>
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)', border: '1px solid rgba(93,213,255,0.45)', boxShadow: '0 0 0 1px rgba(93,213,255,0.12), 0 24px 70px -30px rgba(93,213,255,0.4)' }}>
-          <div className="d-eyebrow mb-6">ACCEPTANCE STANDARD</div>
+        <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)', border: '1px solid var(--d-line-s)', boxShadow: 'none' }}>
+          <div className="d-eyebrow mb-6">CHECKING THE WORK</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
-            Agreed outputs must <em className="serif" style={{ color: ACCENT }}>pass tests.</em>
+            Know what is being built. <em className="serif" style={{ color: ACCENT }}>See it checked.</em>
           </h2>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            Before a build, we agree what the system must publish, what AI must be able to understand, and — when an action is included — what the protected workflow must successfully do.
-            The engagement is not complete until those tests pass. This is not a citation money-back guarantee.{' '}
-            <Link href="/pricing" style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>Details on Pricing →</Link>
+            Before a build, we agree the content, reading paths, customer journey, and any action to be tested. The work is complete when the agreed checks pass, including the relevant result and handoff. Third-party recommendations are outside our control.{' '}
+            <Link href="/pricing" style={{ color: ACCENT, borderBottom: '1px solid var(--d-line-s)' }}>Details on Pricing →</Link>
           </p>
         </GlassPanel>
       </section>
@@ -233,10 +230,10 @@ export default function CoeurDAleneLocationPage() {
         <GlassPanel style={{ padding: 'clamp(40px, 6vw, 72px)', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">AGENT READINESS REVIEW</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
-            See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do.</em>
+            Make it easier <em className="serif" style={{ color: ACCENT }}>to get started with you.</em>
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
-            A review of identity, services, geography, policies, discovery, and whether a safe next action exists. This is a review request, not a booking.
+            Get practical priorities for your offer, evidence, business information, and customer next steps. {REVIEW_TURNAROUND} You keep the report whether or not we work together.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary">{REVIEW_CTA} →</Link>

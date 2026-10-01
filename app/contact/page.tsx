@@ -7,7 +7,7 @@ import GlassPanel from '@/components/GlassPanel';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Kodecite for project inquiries, scope questions, or a direct conversation about owned business infrastructure for the agent-driven web.',
+    'Talk to Kodecite about making your business easier for customers and their AI assistants to understand, trust, and do business with. Project and scope inquiries welcome.',
   alternates: { canonical: 'https://www.kodecite.ai/contact' },
 };
 
@@ -31,8 +31,8 @@ const breadcrumbSchema = {
 };
 
 const FG = 'var(--d-fg)';
-const DIM = 'rgba(233, 238, 255, 0.95)';
-const MUTE = 'rgba(219, 227, 255, 0.8)';
+const DIM = 'var(--d-fg-dim)';
+const MUTE = 'var(--d-fg-mute)';
 const ACCENT = 'var(--d-accent)';
 const sectionGap = { marginTop: '30px' };
 
@@ -47,12 +47,10 @@ export default function ContactPage() {
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">CONTACT</div>
           <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(40px, 5.5vw, 72px)', lineHeight: 1.02, letterSpacing: '-0.03em', color: FG }}>
-            Get in <em className="serif" style={{ color: ACCENT }}>touch.</em>
+            What would make your business <em className="serif" style={{ color: ACCENT }}>easier to work with?</em>
           </h1>
           <p className="font-inter" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '560px' }}>
-            This is the direct-contact page — not a second Agent Readiness Review.
-            Questions about a project, timeline, or working together? Send a few
-            details below and we&apos;ll get back to you — usually within one business day.
+            Tell us about your business, the website you have, and what you want customers or their assistants to be able to do. Questions about a build, a specific workflow, or a timeline are welcome. We usually reply within one business day.
           </p>
         </GlassPanel>
       </section>
@@ -77,7 +75,7 @@ export default function ContactPage() {
             <Link href="/machine-read" className="glass-panel-soft secondary-jump" style={{ display: 'block', padding: '32px 36px', textDecoration: 'none' }}>
               <p className="font-mono mb-3" style={{ fontSize: '9px', letterSpacing: '0.2em', color: MUTE }}>AGENT READINESS REVIEW</p>
               <p className="font-inter font-semibold mb-2" style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', letterSpacing: '-0.015em', color: ACCENT }}>Want the written review first? →</p>
-              <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>See what AI can understand, verify, and safely do with your business today.</p>
+              <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>Get practical priorities for your website and customer journey. Free, written within two business days.</p>
             </Link>
           </div>
         </GlassPanel>

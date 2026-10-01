@@ -1,520 +1,307 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ScrollReveal from '@/components/ScrollReveal';
+import SecondaryPageShell from '@/components/SecondaryPageShell';
+import GlassPanel from '@/components/GlassPanel';
+import { ORIGIN, businessRef } from '@/lib/schema';
+import { LUXE_CAPABILITY_URL, LUXE_FLAGSHIP_HREF, REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
+
+const PAGE_URL = `${ORIGIN}/why-now`;
+const TITLE = 'Why Now: Make Doing Business With You Easier';
+const DESCRIPTION = 'Customer AI assistants can help with research and next steps. Give them clear offers, credible evidence, permission, and a useful way to move forward with your business.';
+const sources = {
+  agent: 'https://openai.com/index/introducing-chatgpt-agent/',
+  google: 'https://developers.google.com/search/docs/appearance/ai-features',
+  mcp: 'https://www.anthropic.com/news/model-context-protocol',
+  llms: 'https://llmstxt.org/',
+};
 
 export const metadata: Metadata = {
-  title: 'Why Now: Businesses Need a Usable Model, Not Just Visibility',
-  description:
-    'Customers already ask AI. Finding a name is not enough. A business needs one owned record of what is true, what is allowed, and what a safe next step is.',
-  alternates: {
-    canonical: 'https://www.kodecite.ai/why-now',
-  },
-  openGraph: {
-    title: 'Why Now — Usable by AI, Not Just Findable',
-    description:
-      'Large companies are rebuilding how customers find and act with businesses. The practical response is owned infrastructure — not a land grab and not a citation guarantee.',
-    url: 'https://www.kodecite.ai/why-now',
-    type: 'article',
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: PAGE_URL, type: 'article' },
 };
+
+const questions = [
+  {
+    q: 'Do I need to wait for a new device or a universal agent standard?',
+    a: 'No. Clear services, evidence, conditions, and contact paths are useful on the web today. Specific action integrations can be added when they solve a real customer problem and can be tested. Hardware release dates do not determine whether that work is worthwhile.',
+  },
+  {
+    q: 'Does this replace SEO or my website?',
+    a: 'Your website remains a place customers can use directly and a source assistants may consult. Search helps people find information. Kodecite connects that information to fit, trust, and the next customer step. The work should improve the journey across those routes.',
+  },
+  {
+    q: 'Will every assistant read the information I publish?',
+    a: 'No. Assistants use different sources, tools, permissions, and retrieval methods. Publishing accurate, accessible information gives them something useful to work with, but does not guarantee that a particular system will read, cite, or recommend the business.',
+  },
+  {
+    q: 'Can an assistant make commitments on my behalf?',
+    a: 'Only an explicitly supported workflow should make a business commitment. A received consultation request leaves scheduling and acceptance with your team. Confirmed booking, pricing, or checkout requires its own rules, permission checks, and integrations.',
+  },
+  {
+    q: 'How do I know whether the work is useful?',
+    a: 'Start with the customer journey. Can people and the tested assistants understand the offer, establish fit, find supporting evidence, and reach the next step? For an action, check the result, repeat submissions, failures, and human handoff. Agree those tests before building.',
+  },
+  {
+    q: 'Where should I start?',
+    a: 'The Agent Readiness Review is a free written review within two business days. It checks your business information, evidence, customer next steps, and permission or handoff gaps, then gives you practical priorities. You keep it whether or not you hire Kodecite.',
+  },
+];
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Why Now — Usable by AI, Not Just Findable',
-  description:
-    'Customers already ask AI. Finding a name is not enough. A business needs one owned record of what is true, what is allowed, and what a safe next step is.',
+  headline: TITLE,
+  description: DESCRIPTION,
   author: {
     '@type': 'Person',
     name: 'Mark Abplanalp',
     jobTitle: 'Founder',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'KodeCite.AI',
-      url: 'https://www.kodecite.ai',
-    },
+    worksFor: businessRef,
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'KodeCite.AI',
-    url: 'https://www.kodecite.ai',
-  },
-  about: [
-    'Owned business infrastructure',
-    'Agent-ready businesses',
-    'Capability contracts',
-    'Controlled action',
-    'AI Hardware',
-    'llms.txt',
-    'agent.json',
-  ],
-  mentions: [
-    { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
-    { '@type': 'Organization', name: 'Microsoft', url: 'https://microsoft.com' },
-    {
-      '@type': 'Person',
-      name: 'Sam Altman',
-      jobTitle: 'CEO',
-      worksFor: { '@type': 'Organization', name: 'OpenAI' },
-    },
-    {
-      '@type': 'Person',
-      name: 'Jony Ive',
-      jobTitle: 'Founder',
-      worksFor: { '@type': 'Organization', name: 'io Products' },
-    },
-  ],
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/why-now',
-  },
+  publisher: businessRef,
+  about: ['Customer AI assistants', 'Business identity and evidence', 'Approved customer actions', 'Business-owned websites'],
+  citation: Object.values(sources),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
 };
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Why do businesses need to optimize for AI search now?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'People already ask ChatGPT, Perplexity, and Google AI. Hardware may change the interface later. The practical work now is publishing one owned record of what the business is, what it can do, and what a safe next step is. That is not a land grab and not a promise of permanent placement.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the OpenAI Jony Ive AI device?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "OpenAI acquired Jony Ive's design studio io for $6.4 billion in 2025 to build a family of AI-native hardware devices. The first is a screenless, pocket-sized device with cameras and microphones that builds contextual awareness of the user's world and routes queries to AI agents. Expected to unveil late 2026, first shipments no earlier than early 2027.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is llms.txt and why does my business need one?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "llms.txt is a plain-text discovery file at the domain root. Some AI systems look for it. Not every system reads it. It does not make AI know a business with certainty. KodeCite publishes one as a component of distribution — not as the product.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is agent.json?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'agent.json is a machine-readable discovery file. On KodeCite.ai it is identity and discovery only. It does not accept autonomous agent submissions. A real action requires a published capability, validation, and control — and only when the business permits it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to see results from AI search optimization?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Technical cleanup can show quickly when pages are fast and schema is valid. Recommendation and action are separate. We do not publish a time-to-citation or promise that a specific engine will name the business.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is an Agent Readiness Review?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, credentials, policies, discovery, action paths, and control gaps. Free within two business days. It is a review request, not a booking.",
-      },
-    },
-  ],
+  mainEntity: questions.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Why Now', item: 'https://www.kodecite.ai/why-now' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: ORIGIN },
+    { '@type': 'ListItem', position: 2, name: 'Why Now', item: PAGE_URL },
   ],
 };
 
+const customerQuestions = [
+  { n: '01', t: 'Identity', d: 'Who am I dealing with? Give the customer a consistent business name, real people, location, and a way to reach you.' },
+  { n: '02', t: 'Offer and fit', d: 'Can this business help me? Explain the work, service area, relevant limits, and conditions that determine whether a request is a good fit.' },
+  { n: '03', t: 'Evidence', d: 'What supports the claim? Connect credentials, examples, reviews, and sources to the offer they help establish.' },
+  { n: '04', t: 'Available next steps', d: 'What can I ask for? Make the available request or contact route clear, along with the information it needs.' },
+  { n: '05', t: 'Permission', d: 'What needs approval? Respect what the customer authorizes and which business decisions still need a person.' },
+  { n: '06', t: 'Result and handoff', d: 'What happened? Confirm the actual outcome, identify anything still pending, and explain who takes over.' },
+];
+
+const FG = 'var(--d-fg)';
+const DIM = 'var(--d-fg-dim)';
+const MUTE = 'var(--d-fg-mute)';
+const ACCENT = 'var(--d-accent)';
+const panelStyle = { padding: 'clamp(24px, 5vw, 64px)' };
+const sectionStyle = { marginTop: '30px' };
+const bodyStyle = { fontSize: '16px', lineHeight: 1.75, color: DIM, fontWeight: 300 };
+const headingStyle = { fontSize: 'clamp(28px, 3.7vw, 44px)', lineHeight: 1.15, letterSpacing: '-0.025em', color: FG };
+const sourceStyle = { color: ACCENT, textDecoration: 'underline', textUnderlineOffset: '4px' };
+
 export default function WhyNowPage() {
   return (
-    <>
+    <SecondaryPageShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#f8f5f0] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-30 pointer-events-none" />
-        <div className="max-w-5xl mx-auto relative z-10">
-          <p className="eyebrow mb-4">WHY NOW</p>
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-[#0a0806] mb-6 leading-tight max-w-4xl">
-            Finding you is not the same as{' '}
-            <span className="text-[#a0723a]">being usable.</span>
+      <section className="secondary-section secondary-hero">
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">WHY NOW</div>
+          <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(34px, 5vw, 66px)', lineHeight: 1.08, letterSpacing: '-0.035em', color: FG, maxWidth: '20ch' }}>
+            Your customers have better things to do <em className="serif" style={{ color: ACCENT }}>than chase answers.</em>
           </h1>
-          <p className="font-cormorant italic text-2xl md:text-3xl text-[#6a5a48] max-w-3xl leading-relaxed">
-            Customers already ask AI. The work is publishing what is true, what is allowed, and what a safe next step is.
+          <p className="font-inter mb-8" style={{ ...bodyStyle, fontSize: '19px', maxWidth: '740px' }}>
+            An AI assistant can help them research, compare, and take the next step. Your business should be easy to understand, trust, and work with along the way.
           </p>
-        </div>
+          <p className="font-mono" style={{ fontSize: '11px', color: MUTE, letterSpacing: '0.08em' }}>MARK ABPLANALP · FOUNDER, KODECITE</p>
+        </GlassPanel>
       </section>
 
-      <div className="section-divider" />
-
-      {/* Intro */}
-      <section className="py-20 bg-[#f2ede4] px-4">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed text-lg">
-              <p>
-                The biggest tech companies in the world are collectively spending around{' '}
-                <strong className="text-[#0a0806]">$700 billion on AI infrastructure in 2026 alone</strong>. They&apos;re not doing it to make better memes or prettier pictures.
-              </p>
-              <p>
-                They&apos;re building the highways, the railways, and the electric grid of a new economy. The infrastructure that everything else will run on. And one of the changes that comes with that shift is how people discover and interact with businesses like yours.
-              </p>
-              <p>
-                That change is already on phones. Hardware may make it louder later. The practical response is owned infrastructure — not a land grab, and not a promise that every AI system will read a discovery file.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* OpenAI / Jony Ive */}
-      <section className="py-24 md:py-32 bg-[#f8f5f0] px-4">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">THE BIG BET: OPENAI&apos;S $6 BILLION MOVE</p>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              Why Would OpenAI Spend $6.4 Billion on a{' '}
-              <span className="text-[#a0723a]">Pocket-Sized Device?</span>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
-              <p>
-                In 2025, OpenAI — the company behind ChatGPT — paid $6.4 billion to acquire Jony Ive&apos;s design studio. Ive is the designer behind the original iPhone, iPod, and iPad. Their mission: build a family of AI devices starting with something small enough to fit in your pocket, with no screen, always aware of your world through cameras and microphones.
-              </p>
-              <p>
-                Sam Altman, OpenAI&apos;s CEO, described why they&apos;re building it. He said using today&apos;s phones feels like &ldquo;walking through Times Square with flashing lights and people bumping into you.&rdquo; The new device should feel like &ldquo;sitting in the most beautiful cabin by a lake and in the mountains and just enjoying the peace and calm.&rdquo;
-              </p>
-              <p>
-                He added: <em>&ldquo;You trust it over time, and it does have just this incredible contextual awareness of your whole life.&rdquo;</em>
-              </p>
-              <p>
-                Think about what that means. Imagine walking past a business and your pocket AI quietly says: &ldquo;Hey — that&apos;s a great spot for exactly what you need.&rdquo; But only if your business is easy for it to see and trust.
-              </p>
-              <p>
-                The first device is expected to <strong className="text-[#0a0806]">unveil in late 2026</strong>, with first shipments no earlier than early 2027.
-              </p>
-              <p>
-                It&apos;s not replacing your phone — it&apos;s supplementing it with something quieter and smarter.
-              </p>
-              <p>
-                And think about it — Ray-Ban and Oakley AI glasses are already here. People are wearing them right now. This isn&apos;t the beginning of a maybe. It&apos;s the early chapter of something already in motion.
-              </p>
-              <p>
-                Funded. Prototyped. Designed. With a ship date.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Pull Quote */}
-          <ScrollReveal delay={250}>
-            <blockquote className="mt-12 border-l-4 border-[#1a56db] pl-6 py-2">
-              <p className="font-cormorant italic text-2xl md:text-3xl text-[#0a0806] leading-relaxed mb-4">
-                &ldquo;Sitting in the most beautiful cabin by a lake and in the mountains and just enjoying the peace and calm&hellip; You trust it over time, and it does have just this incredible contextual awareness of your whole life.&rdquo;
-              </p>
-              <cite className="font-poppins text-sm text-[#6a5a48] not-italic">
-                — Sam Altman, CEO, OpenAI, Emerson Collective Demo Day 2025
-              </cite>
-            </blockquote>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* What Happens to Invisible Businesses */}
-      <section className="py-24 md:py-32 bg-[#f2ede4] px-4">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">WHAT HAPPENS WHEN AI KNOWS YOUR WORLD BETTER THAN YOU DO?</p>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              When Someone Asks Their AI for a Recommendation —{' '}
-              <span className="text-[#a0723a]">What Happens to Your Business?</span>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
-              <p>
-                Here&apos;s the scenario. Someone asks their phone — or soon, their glasses or pocket device: &ldquo;Find me the best [your service] near me.&rdquo;
-              </p>
-              <p>
-                The AI doesn&apos;t show ten blue links. It picks one or two businesses and says: &ldquo;This one.&rdquo;
-              </p>
-              <p>
-                How does it decide? It looks for businesses it can read and trust. Businesses with clean, structured information it can understand — not just a website built for humans to browse, but signals that tell AI systems exactly who you are, what you do, where you are, and why you&apos;re trustworthy.
-              </p>
-              <p>
-                Think of it like having a neon sign vs. a handwritten note in a dark window. Both exist. Only one gets seen.
-              </p>
-              <p>
-                A business with a clear, owned record is easier to understand and safer to recommend. A business without one can still exist and still be found in pieces. The gap is reliability, not a claim that every other site is invisible.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Callout Card */}
-          <ScrollReveal delay={250}>
-            <div className="mt-12 rounded-2xl border-l-4 border-[#1a56db] bg-[#f8f5f0] p-8 shadow-sm">
-              <p className="font-poppins font-semibold text-[#0a0806] mb-3 uppercase tracking-widest text-xs">
-                This Is Already Happening — Not Just Coming
-              </p>
-              <p className="font-poppins text-[#6a5a48] leading-relaxed">
-                ChatGPT, Perplexity, Grok, and Google&apos;s AI answers are already handling hundreds of millions of searches per day without showing traditional results. The hardware just accelerates what&apos;s already in motion.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Simple Timeline Graphic */}
-          <ScrollReveal delay={350}>
-            <div className="mt-10 rounded-2xl bg-[#f8f5f0] border border-[rgba(100,70,30,0.15)] p-8">
-              <div className="flex flex-col md:flex-row md:items-start relative">
-                <div className="hidden md:block absolute" style={{ top: '16px', left: 'calc(16.666% + 16px)', right: 'calc(16.666% + 16px)', height: '2px', background: '#a0723a', opacity: 0.35 }} />
-                {[
-                  { label: 'NOW', heading: 'AI answers live', lines: ['ChatGPT · Perplexity', 'Google AI Overviews'] },
-                  { label: 'LATE 2026', heading: 'OpenAI device unveils', lines: ['Ray-Ban already here', 'First shipments announced'] },
-                  { label: '2027+', heading: 'Everyday use begins', lines: ['Ambient AI goes mainstream', 'The rush starts'] },
-                ].map((step, i) => (
-                  <div key={step.label} className="flex-1 flex flex-col items-center text-center px-4 relative">
-                    <div className="w-8 h-8 rounded-full border-2 flex items-center justify-center mb-3 relative z-10" style={{ borderColor: '#a0723a', background: '#f8f5f0' }}>
-                      <div className="w-3 h-3 rounded-full" style={{ background: '#a0723a' }} />
-                    </div>
-                    {i < 2 && <div className="md:hidden w-px h-6 mb-3" style={{ background: 'rgba(160,114,58,0.3)' }} />}
-                    <span className="font-poppins font-bold text-xs mb-1" style={{ color: '#a0723a', letterSpacing: '0.18em' }}>{step.label}</span>
-                    <p className="font-poppins font-semibold text-[#0a0806] text-sm mb-1">{step.heading}</p>
-                    {step.lines.map((line) => <p key={line} className="font-poppins text-xs text-[#6a5a48]">{line}</p>)}
-                    {i < 2 && <div className="md:hidden h-4" />}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* Nationals / Consolidation */}
-      <section className="py-24 md:py-32 bg-[#f8f5f0] px-4">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">BIG CHAINS ARE QUIETLY GETTING AHEAD — HERE&apos;S HOW</p>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              The Nationals Already Know.{' '}
-              <span className="text-[#a0723a]">Your Competitors Might Not. Yet.</span>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
-              <p>
-                While most independent business owners are focused on running their operations — which is exactly what they should be doing — national chains and private equity roll-ups are quietly building the infrastructure to dominate AI recommendations at scale.
-              </p>
-              <p>
-                They&apos;re rebuilding their websites on faster platforms. They&apos;re adding machine-readable signals across thousands of locations at once. They&apos;re making themselves easy for AI to find, read, and recommend — before most people even know that&apos;s a thing.
-              </p>
-              <p>
-                Here in Coeur d&apos;Alene, Spokane, and across the Inland Northwest, you&apos;ve built your reputation one neighbor at a time. Real reviews. Real relationships. Real expertise. That&apos;s exactly the raw material AI systems are designed to reward.
-              </p>
-              <p>
-                But only if it&apos;s structured in a way AI can actually read.
-              </p>
-              <p>
-                A PE-backed chain with 200 locations can deploy this across all of them in a week. You have to do it one business at a time. The good news: you only have to do it once. And the trust you&apos;ve already built? That&apos;s something no national chain can manufacture overnight.
-              </p>
-              <p>
-                Once the rush hits in 2027 and everyone scrambles to catch up, doing this costs significantly more — and in some markets, the best territory will already be gone.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* What We Do (plain language) */}
-      <section className="py-24 md:py-32 bg-[#f2ede4] px-4">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">THE SIMPLE, SMART WAY TO FIGHT BACK</p>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-4 leading-tight">
-              Fast. Clear.{' '}
-              <span className="text-[#a0723a]">Built So AI Picks You First.</span>
-            </h2>
-            <p className="text-[#6a5a48] font-poppins leading-relaxed mb-10">
-              Here&apos;s what we actually do — without the tech jargon.
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">START WITH THE PERSON</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>The customer wants the problem handled.</h2>
+          <div className="flex flex-col gap-5" style={{ maxWidth: '800px' }}>
+            <p className="font-inter" style={bodyStyle}>
+              Think about the work involved in choosing a service business. Open a few websites. Figure out who serves the area. Find evidence of the right experience. Work out whether the service is actually what you need. Fill in a form, then wonder whether it reached anyone.
             </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={150}>
-            <div className="space-y-8">
-              {[
-                {
-                  title: 'We build fast websites from scratch.',
-                  body: <>Not patches on slow, outdated platforms. Modern sites that load instantly anywhere in the world. Why does speed matter? AI helpers won&apos;t wait for slow pages. <strong className="text-[#0a0806]">Think of it like a shop with a long line out the door versus one that&apos;s quick and easy — customers and AI both go to the fast one.</strong></>,
-                },
-                {
-                  title: 'We give your business a digital ID card.',
-                  body: 'A simple file that tells every major AI system exactly who you are, what you do, where you\'re located, and why you should be trusted. Most businesses don\'t have one. You will.',
-                },
-                {
-                  title: 'We tell AI agents how to work with your business.',
-                  body: 'A behind-the-scenes file that lets AI helpers understand your services and send customers your way — automatically, without anyone typing a search. Think of it as your business having a direct line to the AI systems making recommendations.',
-                },
-                {
-                  title: 'We structure your content so AI cites you.',
-                  body: 'Every page, every article, every FAQ — formatted so that when an AI is deciding who to reference as the local expert, your content is already in the right shape to be chosen.',
-                },
-              ].map((item, i) => (
-                <div key={i} className="flex gap-5 items-start">
-                  <div className="mt-2 w-2.5 h-2.5 rounded-full bg-[#1a56db] flex-shrink-0" />
-                  <p className="text-[#6a5a48] font-poppins leading-relaxed">
-                    <span className="font-semibold text-[#0a0806]">{item.title} </span>
-                    {item.body}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={250}>
-            <p className="mt-10 text-[#6a5a48] font-poppins leading-relaxed">
-              This isn&apos;t about gaming anything. It&apos;s about making sure your real expertise and community trust are visible to the systems that are increasingly deciding who gets the call.
+            <p className="font-inter" style={bodyStyle}>
+              A customer might ask an assistant: “Find someone who can help with window treatments for my home, compare the options, and help me request a consultation.” That is a practical job with several decisions inside it. A list of names only gets the customer part of the way there.
             </p>
-          </ScrollReveal>
-        </div>
+            <p className="font-inter" style={bodyStyle}>
+              Kodecite&apos;s view is simple: make each of those steps easier, whether the customer does it themselves or asks an assistant to help. The opportunity is less friction, better-informed inquiries, and a clear start to the relationship.
+            </p>
+          </div>
+        </GlassPanel>
       </section>
 
-      <div className="section-divider" />
-
-      {/* Timeline */}
-      <section className="py-24 md:py-32 bg-[#f8f5f0] px-4">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">WHEN IS THIS REALLY HITTING? (SPOILER: THE SETUP STARTS NOW)</p>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#0a0806] mb-8 leading-tight">
-              Nobody Knows the Exact Date.{' '}
-              <span className="text-[#a0723a]">Everybody Knows It&apos;s Coming.</span>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="space-y-6 text-[#6a5a48] font-poppins leading-relaxed">
-              <p>
-                Will it be twelve months before this reshapes your market? Twenty-four? The honest answer is that hardware timelines have variables — manufacturing, regulations, consumer adoption.
-              </p>
-              <p>
-                But here&apos;s what doesn&apos;t have variables: the AI systems are live right now. ChatGPT has over <strong className="text-[#0a0806]">300 million weekly users</strong>. Google&apos;s AI answers appear on over a <strong className="text-[#0a0806]">billion searches every day</strong>. Perplexity is growing fast. The recommendations those systems are making today are being shaped by the signals businesses have already put in place.
-              </p>
-              <p>
-                Hardware timelines have variables. The work that does not depend on a ship date is publishing one owned record of the business.
-              </p>
-              <p>
-                And even if the hardware takes a bit longer to go mainstream — 2027 or 2028 for most people — the AI answers happening on phones today are already shifting recommendations right now.
-              </p>
-              <p>
-                Waiting does not make the underlying problem disappear. It also does not mean a competitor automatically owns a permanent slot.
-              </p>
-              <p>
-                The useful move is the same either way: make the business understandable, verifiable, and safe to act with.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">WHAT HAS CHANGED</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>Research and action can happen in the same conversation.</h2>
+          <div className="flex flex-col gap-5" style={{ maxWidth: '800px' }}>
+            <p className="font-inter" style={bodyStyle}>
+              In its July 2025 ChatGPT agent launch, OpenAI described a system that could research across websites and use tools to take actions, with user control and permission for consequential steps. That is a documented example of the shift from answering a question to helping finish a task. <a href={sources.agent} target="_blank" rel="noopener noreferrer" style={sourceStyle}>Read the original OpenAI announcement</a>.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              Connections to business software are developing too. Anthropic introduced the Model Context Protocol to connect AI assistants with external data and tools. A protocol provides a way to connect; a useful business workflow still needs accurate information, permission, and a result that means something. <a href={sources.mcp} target="_blank" rel="noopener noreferrer" style={sourceStyle}>Read the MCP introduction</a>.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              These developments support a practical direction, rather than a claim that every customer already uses an agent or every assistant can complete every task. We do not need a hardware launch date or a universal adoption forecast to start improving the customer journey.
+            </p>
+          </div>
+        </GlassPanel>
       </section>
 
-      <div className="section-divider" />
-
-      {/* FAQ */}
-      <section className="py-24 bg-[#f2ede4] px-4">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">QUICK ANSWERS TO COMMON QUESTIONS</p>
-            <h2 className="font-playfair font-bold text-3xl text-[#0a0806] mb-10">
-              Things People Ask Us All the Time
-            </h2>
-          </ScrollReveal>
-          <div className="space-y-8">
-            {[
-              {
-                q: "I'm not very technical. Is this something I can actually understand?",
-                a: "Yes. You need to understand what is true about the business, what a customer can request, and what must stay human. We handle the technical pieces. We do not sell early-or-late fear.",
-              },
-              {
-                q: 'How is this different from regular SEO?',
-                a: "SEO, AEO, and GEO overlap as discovery. They help people and engines find a business. The complete job is publishing one owned record so a system can understand the business, know what it is allowed to do, and take the next safe step when you permit it.",
-              },
-              {
-                q: 'What exactly is a "digital ID card" for my business?',
-                a: 'llms.txt is a plain-text discovery file. Some AI systems look for it. Not every system reads it. It does not make AI know a business with certainty. It is a distribution component — not the product.',
-              },
-              {
-                q: 'What\'s the "AI agent" file you mentioned?',
-                a: "agent.json is a machine-readable discovery file. On KodeCite.ai it is identity and discovery only. It does not accept autonomous submissions. A real action needs a published capability and control — only when the business permits it.",
-              },
-              {
-                q: 'How long before I see results?',
-                a: 'Technical cleanup can show quickly when pages are fast and schema is valid. Recommendation and action are separate. We do not publish a time-to-citation or promise that a specific engine will name the business.',
-              },
-              {
-                q: "What's the free review?",
-                a: "An Agent Readiness Review looks at what AI can understand, verify, and safely do with the business today. Free written review within two business days. It is a review request, not a booking.",
-              },
-            ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 80}>
-                <div className="border-b border-[rgba(100,70,30,0.15)] pb-8">
-                  <h3 className="font-poppins font-semibold text-[#0a0806] text-base mb-3">{item.q}</h3>
-                  <p className="text-[#6a5a48] font-poppins leading-relaxed text-sm">{item.a}</p>
-                </div>
-              </ScrollReveal>
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">WHAT YOUR BUSINESS NEEDS TO EXPLAIN</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>Six questions between interest and action.</h2>
+          <p className="font-inter mb-8" style={{ ...bodyStyle, maxWidth: '800px' }}>Your best customer-facing person already answers these questions. The website and its connected information should carry the same knowledge.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {customerQuestions.map((item) => (
+              <article key={item.n} className="glass-panel-soft" style={{ padding: '26px' }}>
+                <p className="font-mono mb-3" style={{ fontSize: '11px', letterSpacing: '0.12em', color: ACCENT }}>{item.n}</p>
+                <h3 className="font-inter font-semibold mb-3" style={{ fontSize: '20px', color: FG }}>{item.t}</h3>
+                <p className="font-inter" style={bodyStyle}>{item.d}</p>
+              </article>
             ))}
           </div>
-        </div>
+        </GlassPanel>
       </section>
 
-      <div className="section-divider" />
-
-      {/* CTA */}
-      <section className="py-24 bg-[#1c1814] px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <ScrollReveal>
-            <p className="eyebrow mb-4" style={{ color: '#a0723a' }}>YOUR NEXT STEP</p>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-[#f0e8d8] mb-6 leading-tight">
-              See what AI can understand, verify, and{' '}
-              <span className="text-[#a0723a]">safely do today.</span>
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="text-[rgba(240,232,216,0.7)] font-poppins leading-relaxed text-lg mb-10">
-              You&apos;ve built real trust the hard way. The next job is publishing that truth so a system can use it without inventing a booking, a price, or an acceptance.
-              <br /><br />
-              We start with an Agent Readiness Review — identity, services, geography, policies, discovery, and whether a safe next action exists. No citation guarantee.
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">A USEFUL CUSTOMER JOURNEY</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>Make one next step work well.</h2>
+          <div className="flex flex-col gap-5" style={{ maxWidth: '800px' }}>
+            <p className="font-inter" style={bodyStyle}>
+              Take that window-treatment inquiry. An assistant needs to establish that the business offers the relevant work and serves the home&apos;s location. It should find evidence the customer can inspect, then explain the consultation process and the information required.
             </p>
-          </ScrollReveal>
-          <ScrollReveal delay={250}>
-            <Link
-              href="/machine-read"
-              className="inline-block font-poppins font-semibold text-white px-10 py-4 rounded-md text-base transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#1a56db' }}
-            >
-              Request an Agent Readiness Review
-            </Link>
-            <p className="mt-4 text-[rgba(240,232,216,0.70)] font-poppins text-xs">
-              Free written review within two business days. This is a review request, not a booking.
+            <p className="font-inter" style={bodyStyle}>
+              If the customer authorizes the request and a supported capability is available, the assistant can submit it. The business checks the information and returns the actual result. If the request reached the team, say that. If scheduling still needs a conversation, make that clear.
             </p>
-          </ScrollReveal>
-        </div>
+            <p className="font-inter" style={bodyStyle}>
+              The less visible details matter just as much. An accidental repeat should not become a second lead. A changed request should not reuse an old confirmation. A failed delivery should not be reported as success. When a person needs to take over, the customer should know whom to expect and what remains open.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              That is the kind of convenience worth building: a customer can make progress without surrendering the decisions that matter, and your team gets a request it can use.
+            </p>
+          </div>
+        </GlassPanel>
       </section>
-    </>
+
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">WHAT THE TECHNICAL PIECES DO</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>A clear website and working connections, built around the same facts.</h2>
+          <div className="flex flex-col gap-5" style={{ maxWidth: '800px' }}>
+            <p className="font-inter" style={bodyStyle}>
+              Your website remains important. People use it directly, and assistants may read it through search or a browser. Its visible content should agree with structured business information, external profiles, and any published capability. A polished page that contradicts a form or service-area rule creates work for everyone.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              Search has its own requirements. Google says its AI search features do not require special AI files or special schema markup, and appearance is not guaranteed. That is a good reason to focus on useful, accessible content rather than treating a file as a shortcut to recommendations. <a href={sources.google} target="_blank" rel="noopener noreferrer" style={sourceStyle}>Read Google&apos;s guidance for site owners</a>.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              Discovery files can still have a role. The <a href={sources.llms} target="_blank" rel="noopener noreferrer" style={sourceStyle}>llms.txt proposal</a> describes a way to provide concise information and links for assistants. A business-specific agent.json can describe identity and capabilities. Neither is a universally adopted business-action standard, and neither makes a request happen by itself.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              A real action needs a supported route, such as a form, API, or tool connection, with its own validation, authorization, and result. Which route is appropriate depends on the business and the assistant. On Kodecite.ai, our discovery files describe the business; this site does not currently accept autonomous agent submissions.
+            </p>
+          </div>
+        </GlassPanel>
+      </section>
+
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">THE BUSINESS YOU ALREADY BUILT</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>Your experience is the material. Make it easy to evaluate.</h2>
+          <div className="flex flex-col gap-5" style={{ maxWidth: '800px' }}>
+            <p className="font-inter" style={bodyStyle}>
+              An established service business has valuable detail that often lives in the owner&apos;s head: the jobs you do best, the questions that reveal fit, the work you decline, and the reasons clients trust you. Bringing that knowledge onto the website gives both customers and their assistants a better basis for a decision.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              Ownership matters because those facts change. Your service area expands. Your offer becomes more specific. A policy or contact changes. You should own the website, code, and accounts that publish your business information, and know who will keep them accurate. Active capabilities also have service costs and maintenance dependencies that need to be understood.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              The useful measures are close to the customer: can they establish fit, find the evidence, make the request, and understand the reply? Discovery is worth observing too, but a screenshot of an AI answer and a successfully handled customer request establish different things.
+            </p>
+          </div>
+        </GlassPanel>
+      </section>
+
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">A DOCUMENTED EXAMPLE</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>Luxe Window Works: a request that reached the team.</h2>
+          <div className="flex flex-col gap-5 mb-8" style={{ maxWidth: '800px' }}>
+            <p className="font-inter" style={bodyStyle}>
+              In the documented authorized test, an outside AI found Luxe&apos;s published in-home consultation capability, checked that a request qualified, and submitted it. One email reached the Luxe inbox. Replaying the identical request did not send another email. Reusing the request identity with changed information was rejected.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              The result was a received consultation request, with follow-up left to a person. It did not demonstrate automated booking, pricing, checkout, or project acceptance. It demonstrated a specific customer step with a clear result and controls around it.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              The <a href={LUXE_CAPABILITY_URL} target="_blank" rel="noopener noreferrer" style={sourceStyle}>published capability description</a> explains the request. The case study records the historical test and its scope.
+            </p>
+          </div>
+          <Link href={LUXE_FLAGSHIP_HREF} className="d-btn d-btn-ghost">Read the Luxe case study →</Link>
+        </GlassPanel>
+      </section>
+
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">A PRACTICAL WAY TO START</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>Improve the foundation. Add an action when it earns its place.</h2>
+          <div className="flex flex-col gap-5 mb-8" style={{ maxWidth: '800px' }}>
+            <p className="font-inter" style={bodyStyle}>
+              Foundation Build is $4,995 one-time for a business-owned website and clear, connected information. It helps people and assistants understand your offer, evaluate the evidence, and find the next step. You own the website and its accounts, with no mandatory retainer. A live agent-action endpoint is scoped separately.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              Agent Capability Build adds one approved action after we agree the requirements, permission, result, and handoff. If you are keeping an existing platform, the application-only Platform Capability Layer pilot may be a fit. We review the site and workflow before recommending a path.
+            </p>
+            <p className="font-inter" style={bodyStyle}>
+              Begin with the customer journey you actually have. Clear information and a dependable next step are useful now, and they give you a better starting point as assistants become more capable.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/services" className="d-btn d-btn-primary">See how we build it →</Link>
+            <Link href="/pricing" className="d-btn d-btn-ghost">See scope and pricing →</Link>
+          </div>
+        </GlassPanel>
+      </section>
+
+      <section className="secondary-section" style={sectionStyle}>
+        <GlassPanel style={panelStyle}>
+          <div className="d-eyebrow mb-6">COMMON QUESTIONS</div>
+          <div className="flex flex-col gap-6">
+            {questions.map((item) => (
+              <div key={item.q} className="glass-panel-soft" style={{ padding: '26px' }}>
+                <h2 className="font-inter font-semibold mb-3" style={{ fontSize: '20px', lineHeight: 1.35, color: FG }}>{item.q}</h2>
+                <p className="font-inter" style={bodyStyle}>{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </GlassPanel>
+      </section>
+
+      <section className="secondary-section" style={{ ...sectionStyle, paddingBottom: '100px' }}>
+        <GlassPanel style={{ ...panelStyle, textAlign: 'center' }}>
+          <div className="d-eyebrow d-eyebrow-center mb-6">AGENT READINESS REVIEW</div>
+          <h2 className="font-inter font-semibold mb-6" style={headingStyle}>Find the next thing worth making easier.</h2>
+          <p className="font-inter mb-8" style={{ ...bodyStyle, maxWidth: '680px', margin: '0 auto 32px' }}>
+            Get a written review of your offer, evidence, business information, and customer next steps, with practical priorities for what to improve. {REVIEW_TURNAROUND} You keep the report either way.
+          </p>
+          <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
+        </GlassPanel>
+      </section>
+    </SecondaryPageShell>
   );
 }

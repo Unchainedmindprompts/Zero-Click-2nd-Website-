@@ -1,802 +1,275 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+
+const article = {
+  "slug": "why-is-my-website-traffic-dropping-2026",
+  "title": "Why Is Your Website Traffic Dropping? Diagnose It First",
+  "description": "Investigate a traffic drop with tracking, indexing, query, and customer-outcome checks before attributing it to AI Overviews or zero-click search.",
+  "date": "2026-03-11",
+  "intro": "AI answers can affect search clicks, but a falling traffic chart does not identify the cause. Check measurement, technical changes, demand, and the affected pages before choosing a fix.",
+  "sections": [
+    {
+      "heading": "First establish what actually fell",
+      "paragraphs": [
+        "“Traffic is down” can mean fewer analytics sessions, fewer Google clicks, fewer visits to one article, or fewer qualified inquiries. Those measures are related but not interchangeable.",
+        "Compare a meaningful period with the previous period and with the same season last year where data exists. Separate core service pages from general informational content. Note site releases, marketing changes, tracking changes, and unusual business conditions near the start of the decline.",
+        "Ask the team what changed in actual inquiries and completed work. A measurement failure needs a different response from a demand drop. A widely read article losing casual visits may matter differently from the loss of a page that consistently generates suitable customers."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Rule out tracking and technical problems",
+      "paragraphs": [
+        "Check whether the analytics setup still records visits and important events correctly. A consent change, altered tag, or new form can change the chart without an equivalent change in customer behavior. Compare independent evidence such as Search Console clicks, server records where available, and received inquiries.",
+        "For affected pages, inspect access, indexing, redirects, canonical references, and accidental exclusions. Check whether a deployment changed URLs or removed important content. Review service outages and any relevant Search Console warnings.",
+        "Google's traffic-drop guidance identifies technical issues, ranking changes, security or spam problems, seasonality, and migrations among the possible causes. Its recommended comparison across pages, queries, devices, and regions is a useful way to narrow the investigation."
+      ],
+      "items": [],
+      "sources": [
+        {
+          "label": "Google Search Central: diagnosing traffic drops",
+          "href": "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops"
+        }
+      ]
+    },
+    {
+      "heading": "Read query patterns without overclaiming the cause",
+      "paragraphs": [
+        "A fall in both impressions and clicks may reflect reduced demand, less search visibility, or a change in the queries for which a page appears. Stable impressions with fewer clicks can point toward a changed results page, a less compelling snippet, or different query intent. Neither pattern alone proves an AI effect.",
+        "Average position can hide changes in the mix of queries and devices. Compare similar groups rather than relying only on the whole-site average. Look separately at named-business searches, service searches, and general informational questions.",
+        "Inspect current results for a representative sample and record what is present: ads, maps, snippets, AI summaries, and competing pages. One manual search is a snapshot, not a reconstruction of every result a customer saw during the decline."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "What the AI click studies contribute",
+      "paragraphs": [
+        "Ahrefs's April 2025 analysis of 300,000 keywords associated AI Overviews with an estimated 34.5% lower average click-through rate for the top-ranking page, using informational keyword groups and a historical comparison. This was a study estimate, not a measured percentage loss for every website.",
+        "Pew Research Center's March 2025 browsing study of 900 US adults observed traditional-result clicks on 8% of visits with an AI summary, compared with 15% without. It provides additional evidence that click behavior differs, with its own sample and methodology.",
+        "These dated studies justify considering AI summaries as one possible contributor. They do not establish that a particular local business's decline was caused by AI or that adding schema will restore the lost visits."
+      ],
+      "items": [],
+      "sources": [
+        {
+          "label": "Ahrefs: April 2025 AI Overview click-through study",
+          "href": "https://ahrefs.com/blog/ai-overviews-reduce-clicks/"
+        },
+        {
+          "label": "Pew Research Center: March 2025 search behavior study",
+          "href": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+        }
+      ]
+    },
+    {
+      "heading": "Choose the correction that matches the evidence",
+      "paragraphs": [
+        "If a technical change blocked an important page, correct it and verify recovery of access and indexing. If the offer became outdated, update the facts. If demand is seasonal, adjust expectations using the business cycle. If competing results answer the customer better, improve the substance and usefulness of the page.",
+        "If the results page is meeting an informational need without a click, reconsider what that page is meant to accomplish. It may still educate customers, support the business's expertise, or lead a smaller group to a high-value next step. Avoid replacing every useful article with a sales page in response to one metric.",
+        "Where the next step is weak, fix it. Make service fit, evidence, required information, and the request process clear. This can improve the journey for people who arrive through search, referrals, or an AI assistant, even if raw visit counts do not return to an earlier peak."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Add a business-outcome view",
+      "paragraphs": [
+        "Track qualified inquiries, response time, booked work where confirmed, and the reasons inquiries do not proceed. Ask customers how they found the business without treating their answer as perfect attribution.",
+        "For supported agent actions, distinguish an attempt from a completed request and a completed request from a sale. Log enough to diagnose failures and duplicate submissions while minimizing unnecessary personal information.",
+        "An outside assistant may help a customer make contact without producing the same browser journey your old analytics assumed. That possibility is worth measuring, not a reason to label every unattributed lead as AI-generated. Keep uncertain sources explicit."
+      ],
+      "items": [
+        "Relevant search and referral traffic",
+        "Correct descriptions of priority services",
+        "Qualified requests received",
+        "Timely human follow-up",
+        "Confirmed appointments or completed work"
+      ],
+      "sources": []
+    },
+    {
+      "heading": "A practical investigation brief",
+      "paragraphs": [
+        "Before buying a rebuild or a visibility campaign, prepare a short record: when the decline began, which pages and query groups changed, what business outcomes changed, recent releases, and the evidence for the leading explanation.",
+        "A useful review should show what is known, what remains uncertain, and which next test would resolve the uncertainty. It should not diagnose an unseen website from a general industry statistic.",
+        "KodeCite's Agent Readiness Review can examine whether the business is easy to understand, verify, and engage through current customer journeys. When traffic diagnosis requires private analytics or search data, that access and the investigation need to be explicit. Clear evidence should determine the next investment."
+      ],
+      "items": [],
+      "sources": []
+    }
+  ],
+  "takeaways": [
+    "Separate measurement from demand",
+    "Treat AI as a hypothesis to test",
+    "Use customer outcomes to choose the fix"
+  ],
+  "faq": [
+    {
+      "q": "Do stable rankings and falling clicks prove AI is responsible?",
+      "a": "No. Query mix, snippets, competing search features, and measurement changes can also affect the pattern. Investigate the affected pages and queries."
+    },
+    {
+      "q": "Will schema recover my lost traffic?",
+      "a": "There is no such guarantee. Fixes should address the demonstrated cause, and structured data should accurately describe visible information."
+    },
+    {
+      "q": "Should I stop tracking visits?",
+      "a": "No. Keep traffic data and add qualified inquiries, follow-up, and completed outcomes so the business impact is visible."
+    }
+  ]
+};
+const canonical = `https://www.kodecite.ai/blog/${article.slug}`;
+const modified = '2026-10-01T00:00:00Z';
+const published = `${article.date}T00:00:00-07:00`;
+const imageUrl = "https://www.kodecite.ai/blog-hero.png";
+const articleText = [article.intro, ...article.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...section.items]), ...article.faq.flatMap((item) => [item.q, item.a])].join(' ');
+const wordCount = articleText.trim().split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+const publishedLabel = new Date(`${article.date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const sources = article.sections.flatMap((section) => section.sources).filter((source, index, list) => list.findIndex((item) => item.href === source.href) === index);
+
 export const metadata: Metadata = {
-  title: 'Why Is My Website Traffic Dropping in 2026?',
-  description:
-    'Ahrefs measured a 34.5% click drop on the #1 result. Here\'s why AI Overviews and zero-click search are eroding your website traffic in 2026 — and how to fix it.',
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
-  },
+  title: article.title,
+  description: article.description,
+  alternates: { canonical },
   openGraph: {
-    title: 'Why Is My Website Traffic Dropping in 2026?',
-    description:
-      'Your rankings are fine. Your traffic is falling. Here\'s the real reason — and what to do about it.',
-    url: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
+    title: article.title,
+    description: article.description,
+    url: canonical,
     type: 'article',
+    publishedTime: published,
+    modifiedTime: modified,
+    authors: ['Mark Abplanalp'],
+    images: [{ url: imageUrl }],
   },
+  twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [imageUrl] },
 };
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026#article',
-  headline: 'Why Is My Website Traffic Dropping in 2026?',
-  description:
-    'If your organic traffic is declining in 2025 or 2026 and nothing has changed on your end, Google AI Overviews and zero-click search are almost certainly the cause. Here\'s what\'s happening and how to fix it.',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  datePublished: '2026-03-11T00:00:00-07:00',
-  dateModified: '2026-03-11T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
-  },
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  keywords: [
-    'website traffic dropping',
-    'Google AI Overviews',
-    'zero-click search',
-    'AEO',
-    'answer engine optimization',
-    'AI search optimization',
-    'organic traffic decline 2026',
-  ],
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  mentions: [
-    { '@type': 'Organization', '@id': 'https://www.google.com/#organization', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
-    { '@type': 'Organization', name: 'Ahrefs', url: 'https://ahrefs.com', sameAs: 'https://www.wikidata.org/wiki/Q107533769' },
-    { '@type': 'Organization', name: 'Pew Research Center', url: 'https://www.pewresearch.org', sameAs: 'https://www.wikidata.org/wiki/Q1635722' },
-    { '@type': 'Organization', name: 'SparkToro', url: 'https://sparktoro.com' },
-  ],
-  citation: [
-    { '@type': 'ScholarlyArticle', headline: 'AI Overviews Reduce Clicks by 34.5%', url: 'https://ahrefs.com/blog/ai-overviews-reduce-clicks/', publisher: { '@type': 'Organization', name: 'Ahrefs' } },
-    { '@type': 'ScholarlyArticle', headline: 'Google users are less likely to click on links when an AI summary appears in the results', url: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/', publisher: { '@type': 'Organization', name: 'Pew Research Center' }, datePublished: '2025-07-22' },
-    { '@type': 'ScholarlyArticle', headline: '2024 Zero-Click Search Study', url: 'https://sparktoro.com/blog/2024-zero-click-search-study-for-every-1000-us-google-searches-only-374-clicks-go-to-the-open-web-in-the-eu-its-360/', author: { '@type': 'Person', name: 'Rand Fishkin' }, publisher: { '@type': 'Organization', name: 'SparkToro' }, datePublished: '2024-07-01' },
-    { '@type': 'NewsArticle', headline: 'Google Search I/O 2026 updates: AI Mode becomes the default Search experience', url: 'https://blog.google/products-and-platforms/products/search/search-io-2026/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2026-05-20' },
-    { '@type': 'NewsArticle', headline: 'AI Overviews in Google Search expanding to more than 100 countries', url: 'https://blog.google/products/search/ai-overviews-search-october-2024/', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2024-10-28' },
-    { '@type': 'BlogPosting', headline: 'Our latest update to the quality rater guidelines: E-E-A-T', url: 'https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t', publisher: { '@type': 'Organization', name: 'Google' }, datePublished: '2022-12-15' },
-    { '@type': 'TechArticle', name: 'Creating helpful, reliable, people-first content', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
-    { '@type': 'TechArticle', name: 'Introduction to structured data markup in Google Search', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
-    { '@type': 'TechArticle', name: 'Core Web Vitals report', url: 'https://developers.google.com/search/docs/appearance/core-web-vitals' },
-  ],
+  '@id': `${canonical}#article`,
+  headline: article.title,
+  description: article.description,
+  author: articleAuthor,
+  publisher: articlePublisher,
+  datePublished: published,
+  dateModified: modified,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  url: canonical,
+  image: imageUrl,
+  isPartOf: blogCollectionPage,
+  about: [businessRef],
+  articleSection: 'AI Business Strategy',
+  wordCount,
+  citation: sources.filter((source) => source.href.startsWith('https://')).map((source) => ({ '@type': 'CreativeWork', name: source.label, url: source.href })),
 };
-
-const faqPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Why is my website traffic dropping in 2026?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most common cause of organic traffic drops in 2025 and 2026 is Google\'s AI Overviews, which answer search queries directly on the results page — eliminating the need for users to click through to any website. This zero-click phenomenon is well documented — Ahrefs measured a 34.5% drop in clicks to the top-ranking page when an AI Overview appears, even when rankings haven\'t changed.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is zero-click search and how does it affect my business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Zero-click search happens when Google answers a query directly in the search results through features like AI Overviews, Featured Snippets, or Knowledge Panels — meaning the user gets their answer without visiting any website. For businesses that rely on informational content to drive awareness and leads, zero-click search can significantly reduce organic traffic even while maintaining strong rankings.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I know if Google AI Overviews are causing my traffic drop?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'In Google Search Console, look for queries where impressions are holding steady or growing but clicks are declining. This divergence pattern — impressions up, clicks down — is the fingerprint of AI Overview impact. You can also manually search your top keywords to see if an AI Overview now appears at the top of results.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between SEO and AEO?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Traditional SEO (Search Engine Optimization) focuses on ranking in Google\'s blue link results through keywords, backlinks, and on-page optimization. AEO (Answer Engine Optimization) focuses on becoming the trusted source that AI systems select to generate their answers — which requires structured data, answer-first content, and consistent entity signals across the web.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I get my business to appear in Google AI Overviews?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'To appear in Google AI Overviews, businesses need to implement structured data (schema markup), create content that directly answers customer questions in a clear answer-first format, maintain consistent business information across all online directories, and build strong E-E-A-T signals.',
-      },
-    },
-  ],
-};
-
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026#breadcrumb',
+  '@id': `${canonical}#breadcrumb`,
   itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://www.kodecite.ai',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Blog',
-      item: 'https://www.kodecite.ai/blog',
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'Why Is My Website Traffic Dropping in 2026?',
-      item: 'https://www.kodecite.ai/blog/why-is-my-website-traffic-dropping-2026',
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: article.title, item: canonical },
   ],
 };
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${canonical}#faq`,
+  mainEntity: article.faq.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
+};
 
-// Chart data
-const chartData = [
-  { month: 'Mo 1', impressions: 20, clicks: 18 },
-  { month: 'Mo 2', impressions: 25, clicks: 20 },
-  { month: 'Mo 3', impressions: 32, clicks: 22 },
-  { month: 'Mo 4', impressions: 42, clicks: 20 },
-  { month: 'Mo 5', impressions: 55, clicks: 17 },
-  { month: 'Mo 6', impressions: 65, clicks: 14 },
-  { month: 'Mo 7', impressions: 72, clicks: 12 },
-  { month: 'Mo 8', impressions: 80, clicks: 10 },
-  { month: 'Mo 9', impressions: 85, clicks: 9 },
-  { month: 'Mo 10', impressions: 90, clicks: 8 },
-  { month: 'Mo 11', impressions: 95, clicks: 7 },
-  { month: 'Mo 12', impressions: 100, clicks: 6 },
-];
-
-function TrafficDivergenceChart() {
-  const width = 560;
-  const height = 260;
-  const paddingLeft = 48;
-  const paddingRight = 24;
-  const paddingTop = 40;
-  const paddingBottom = 48;
-  const chartW = width - paddingLeft - paddingRight;
-  const chartH = height - paddingTop - paddingBottom;
-
-  const maxVal = 100;
-  const toX = (i: number) => paddingLeft + (i / (chartData.length - 1)) * chartW;
-  const toY = (val: number) => paddingTop + chartH - (val / maxVal) * chartH;
-
-  const impressionsPath = chartData
-    .map((d, i) => `${i === 0 ? 'M' : 'L'}${toX(i)},${toY(d.impressions)}`)
-    .join(' ');
-  const clicksPath = chartData
-    .map((d, i) => `${i === 0 ? 'M' : 'L'}${toX(i)},${toY(d.clicks)}`)
-    .join(' ');
-
-  const yTicks = [0, 25, 50, 75, 100];
-
-  return (
-    <div className="my-10 bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6 overflow-x-auto">
-      <p className="font-inter font-bold text-[var(--d-fg)] text-sm mb-1">
-        The AI Overview Traffic Pattern: Impressions Rise, Clicks Fall
-      </p>
-      <p className="font-inter text-[var(--d-fg-dim)] text-xs mb-4">Relative Volume (0–100) over 12 months — illustrative data</p>
-      <svg
-        viewBox={`0 0 ${width} ${height}`}
-        className="w-full max-w-[560px]"
-        aria-label="Chart showing impressions rising while clicks fall over 12 months"
-      >
-        {/* Grid lines */}
-        {yTicks.map((tick) => (
-          <g key={tick}>
-            <line
-              x1={paddingLeft}
-              y1={toY(tick)}
-              x2={width - paddingRight}
-              y2={toY(tick)}
-              stroke="rgba(100,70,30,0.12)"
-              strokeWidth={1}
-            />
-            <text
-              x={paddingLeft - 6}
-              y={toY(tick) + 4}
-              textAnchor="end"
-              fontSize={10}
-              fill="var(--d-fg-mute)"
-              fontFamily="sans-serif"
-            >
-              {tick}
-            </text>
-          </g>
-        ))}
-
-        {/* X axis labels */}
-        {chartData.map((d, i) => (
-          i % 2 === 0 ? (
-            <text
-              key={i}
-              x={toX(i)}
-              y={height - 8}
-              textAnchor="middle"
-              fontSize={9}
-              fill="var(--d-fg-mute)"
-              fontFamily="sans-serif"
-            >
-              {d.month}
-            </text>
-          ) : null
-        ))}
-
-        {/* AI Overviews annotation at month 3 */}
-        <line
-          x1={toX(2)}
-          y1={paddingTop}
-          x2={toX(2)}
-          y2={paddingTop + chartH}
-          stroke="rgba(100,70,30,0.25)"
-          strokeWidth={1}
-          strokeDasharray="4,3"
-        />
-        <text
-          x={toX(2) + 4}
-          y={paddingTop + 14}
-          fontSize={9}
-          fill="#a0723a"
-          fontFamily="sans-serif"
-          fontWeight="600"
-        >
-          AI Overviews expand
-        </text>
-
-        {/* Impressions line (purple) */}
-        <path
-          d={impressionsPath}
-          fill="none"
-          stroke="#7c3aed"
-          strokeWidth={2.5}
-          strokeLinejoin="round"
-          strokeLinecap="round"
-        />
-
-        {/* Clicks line (orange) */}
-        <path
-          d={clicksPath}
-          fill="none"
-          stroke="#f97316"
-          strokeWidth={2.5}
-          strokeLinejoin="round"
-          strokeLinecap="round"
-        />
-
-        {/* Legend */}
-        <circle cx={paddingLeft + 8} cy={paddingTop - 18} r={5} fill="#7c3aed" />
-        <text x={paddingLeft + 18} y={paddingTop - 14} fontSize={10} fill="#0a0806" fontFamily="sans-serif">
-          Impressions
-        </text>
-        <circle cx={paddingLeft + 100} cy={paddingTop - 18} r={5} fill="#f97316" />
-        <text x={paddingLeft + 110} y={paddingTop - 14} fontSize={10} fill="#0a0806" fontFamily="sans-serif">
-          Clicks
-        </text>
-      </svg>
-    </div>
-  );
-}
-
-export default function WhyIsMyWebsiteTrafficDropping() {
+export default function ArticlePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }} />
+      <section className="bg-[var(--d-bg)] pt-36 pb-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <nav aria-label="Breadcrumb" className="text-sm text-[var(--d-fg-dim)] mb-6 font-inter">
             <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="mx-2">/</span>
             <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[var(--d-fg)] truncate">Why Is My Website Traffic Dropping in 2026?</span>
+            <span className="mx-2">/</span>
+            <span className="text-[var(--d-fg)]">{article.title}</span>
           </nav>
-
           <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">AEO &amp; AI Search</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">9 min read</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] font-inter">AI Business Strategy</span>
+            <span className="text-[var(--d-fg-dim)] text-xs font-inter">·</span>
+            <span className="text-xs text-[var(--d-fg-dim)] font-inter">{readingTime} min read</span>
           </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            Why Is My Website Traffic{' '}
-            <span className="text-[var(--d-accent)]">Dropping in 2026?</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            If your Google Analytics looks like a ski slope heading downhill and nothing has changed on your end — no redesign, no penalties, no obvious mistakes — you&apos;re not alone. Here&apos;s what&apos;s actually happening.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">KC</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">March 11, 2026</p>
-              </div>
+          <h1 className="font-inter text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] leading-tight mb-6">{article.title}</h1>
+          <p className="font-inter text-lg text-[var(--d-fg-dim)] max-w-3xl mb-8 leading-relaxed">{article.intro}</p>
+          <div className="flex items-center gap-4">
+            <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center text-white font-inter font-semibold text-sm">MA</div>
+            <div>
+              <p className="font-inter font-semibold text-sm text-[var(--d-fg)]">Mark Abplanalp</p>
+              <p className="font-inter text-xs text-[var(--d-fg-dim)]"><time dateTime={article.date}>{publishedLabel}</time> · Updated <time dateTime="2026-10-01">October 1, 2026</time></p>
             </div>
           </div>
         </div>
       </section>
 
       <div className="section-divider" />
-
-      {/* Article + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            {/* Article Content */}
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Thousands of business owners are watching their organic traffic decline in 2025 and 2026 with no idea why. The answer isn&apos;t a Google penalty. It&apos;s not your competitors outranking you. It&apos;s something far more fundamental — and if you don&apos;t understand what&apos;s happening, no amount of traditional SEO work will fix it.
-                </p>
-
-                {/* ── The Real Reason ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Real Reason Your Traffic Is Dropping
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Google changed the game. Again.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  For the past two decades, the path was simple: rank on page one, get clicks, get customers. SEO was the lever. Keywords, backlinks, page speed — pull the right levers and the traffic followed.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  That model is breaking down.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Google&apos;s AI Overviews — the AI-generated answer blocks that now appear at the top of search results — are answering questions directly on the results page. Users are getting what they need without clicking a single link. Google has <a href="https://blog.google/products/search/ai-overviews-search-october-2024/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">rolled AI Overviews out to more than 100 countries</a>, and in May 2026 it <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">made AI Mode the default Search experience</a>. This phenomenon is called zero-click search, and it is the primary driver behind the traffic drops businesses are experiencing right now.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The data is stark. <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Ahrefs measured a <strong className="text-[var(--d-fg)]">34.5% drop in clicks</strong> to the top-ranking page when an AI Overview appears</a> — even when a website&apos;s rankings haven&apos;t moved at all. <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity">Pew Research independently confirmed it</a>: users clicked a result in just 8% of visits when an AI summary appeared, versus 15% without. You can be ranking #1 and still losing traffic. That&apos;s the new reality.
-                </p>
-
-                {/* ── Zero-Click Search ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  What Is Zero-Click Search and Why Does It Matter?
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Zero-click search happens when Google answers a query directly in the search results, eliminating the need for the user to visit any website. This isn&apos;t new — Featured Snippets have done this for years — but AI Overviews have dramatically expanded the scope.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Where Featured Snippets answered simple factual questions, AI Overviews now synthesize complex answers from multiple sources, covering topics that used to require clicking through to read a full article.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  The Queries Most Affected
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Not all traffic is affected equally. The queries hit hardest by zero-click are:
-                </p>
-                <ul className="list-disc pl-6 mb-6 space-y-2 text-[var(--d-fg-dim)]">
-                  <li><strong className="text-[var(--d-fg)]">Informational queries</strong> — &ldquo;how to,&rdquo; &ldquo;what is,&rdquo; &ldquo;why does&rdquo; — content that answers questions</li>
-                  <li><strong className="text-[var(--d-fg)]">Local service queries</strong> — &ldquo;best HVAC company near me,&rdquo; &ldquo;top divorce attorney in [city]&rdquo;</li>
-                  <li><strong className="text-[var(--d-fg)]">Definition and comparison queries</strong> — &ldquo;difference between X and Y,&rdquo; &ldquo;is X worth it&rdquo;</li>
-                  <li><strong className="text-[var(--d-fg)]">Process queries</strong> — step-by-step guides, tutorials, checklists</li>
-                </ul>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  If your business relies on informational content to drive awareness and leads, this is where you&apos;re feeling the pain most acutely.
-                </p>
-
-                {/* ── Traditional SEO vs AI-Era ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  Traditional SEO vs. AI-Era Visibility
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  The fundamental shift happening right now is the difference between <em>ranking</em> and being <em>recommended</em>.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Traditional SEO got you ranked. Being ranked meant being visible. Being visible meant getting clicks. AI search works differently — Google&apos;s AI doesn&apos;t just rank pages, it selects sources it trusts enough to pull from and synthesize into an answer. Getting selected requires a different set of signals than getting ranked.
-                </p>
-
-                {/* Comparison Table */}
-                <div className="my-10 rounded-xl overflow-hidden border border-[rgba(100,70,30,0.2)]">
-                  <div className="bg-[rgba(255,255,255,0.10)] px-6 py-4">
-                    <p className="font-inter font-bold text-[rgba(240,232,216,0.9)] text-base tracking-wide">
-                      Traditional SEO vs. AI-Era Visibility
-                    </p>
-                  </div>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm font-inter">
-                      <thead>
-                        <tr className="bg-[var(--d-bg-2)]">
-                          <th className="text-left px-6 py-3 font-semibold text-[var(--d-fg)] border-b border-[rgba(100,70,30,0.2)] w-1/2">
-                            Traditional SEO
-                          </th>
-                          <th className="text-left px-6 py-3 font-semibold text-[var(--d-accent)] border-b border-[rgba(100,70,30,0.2)] w-1/2">
-                            AI-Era Visibility
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {[
-                          ['Optimizes for keyword rankings', 'Optimizes for AI citation and recommendation'],
-                          ['Targets human readers primarily', 'Must communicate clearly to both humans and AI'],
-                          ['Focuses on backlinks and domain authority', 'Focuses on structured data and entity clarity'],
-                          ['Success metric: page one rankings', 'Success metric: AI citations and zero-click mentions'],
-                          ['Page-level optimization', 'Site-wide schema and trust signal architecture'],
-                          ['Measured in weeks', 'Compounding authority built over months'],
-                        ].map(([left, right], i) => (
-                          <tr key={i} className={i % 2 === 0 ? 'bg-[var(--d-bg)]' : 'bg-[var(--d-bg-2)]'}>
-                            <td className="px-6 py-3.5 text-[var(--d-fg-dim)] border-b border-[rgba(100,70,30,0.08)]">{left}</td>
-                            <td className="px-6 py-3.5 text-[var(--d-fg-dim)] border-b border-[rgba(100,70,30,0.08)]">{right}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The businesses appearing inside AI Overviews aren&apos;t just well-ranked — they&apos;re structured, authoritative, and clearly readable by AI systems. That&apos;s the new competitive advantage.
-                </p>
-
-                {/* ── How to Tell ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  How to Tell If AI Overviews Are Causing Your Drop
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Before you fix anything, confirm the diagnosis. Here&apos;s how to check:
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Step 1: Open Google Search Console
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Go to Performance → Search type: Web → set the date range to the last 6 months. Look for queries where your impressions are holding steady or growing but your clicks are declining. That pattern — <strong className="text-[var(--d-fg)]">impressions up, clicks down</strong> — is the fingerprint of AI Overview impact.
-                </p>
-
-                <TrafficDivergenceChart />
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Step 2: Search Your Top Queries Manually
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Take the keywords that used to drive your most traffic and search them in Google. Is there an AI Overview at the top? If yes, that&apos;s your answer.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Step 3: Check Your Click-Through Rate Trend
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  In Search Console, toggle on Average CTR. If your CTR has been declining steadily over the past 6–12 months without a corresponding drop in position, AI Overviews are almost certainly absorbing the clicks that used to come to you.
-                </p>
-
-                {/* ── Three Levers ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Three Levers That Determine AI Visibility
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  If traditional rankings no longer guarantee traffic, what does? There are three foundational signals that determine whether Google&apos;s AI pulls from your site or passes you by.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Lever 1: Structured Data and Schema Markup
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Schema markup is code added to your website that tells search engines — and AI systems — exactly what your business does, who it serves, where it operates, and why it&apos;s credible. It&apos;s the difference between Google guessing what your content means and knowing with certainty.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  For local businesses and professional service firms, the most critical schema types are:
-                </p>
-                <ul className="list-disc pl-6 mb-4 space-y-2 text-[var(--d-fg-dim)]">
-                  <li><strong className="text-[var(--d-fg)]">LocalBusiness schema</strong> — your name, address, phone, hours, service area</li>
-                  <li><strong className="text-[var(--d-fg)]">Service schema</strong> — specific offerings and who they&apos;re for</li>
-                  <li><strong className="text-[var(--d-fg)]">FAQPage schema</strong> — direct answers to the questions your customers ask</li>
-                  <li><strong className="text-[var(--d-fg)]">Article/BlogPosting schema</strong> — signals content authority and authorship</li>
-                  <li><strong className="text-[var(--d-fg)]">BreadcrumbList schema</strong> — helps AI understand your site structure</li>
-                </ul>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Properly implemented schema markup is how you make those facts machine-readable and unambiguous to AI systems — and most small business websites have none of it.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Lever 2: Answer-First Content Structure
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  AI systems are built to extract answers. They favor content that is structured to deliver the answer first, then the supporting detail — what journalists call the inverted pyramid.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  This means moving away from long introductions and burying the answer five paragraphs in. Lead with the answer. Use clear H2 and H3 headings that mirror the questions people are actually asking. Write in complete, standalone sentences that make sense without context. The goal is to make your content as easy as possible for an AI system to extract a precise, trustworthy answer from.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Lever 3: Entity Authority and Consistency
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  AI systems don&apos;t just evaluate individual pages — they build a picture of your entire business entity across the web. Your website, your Google Business Profile, review sites, directories, social profiles, and press mentions all contribute to how AI systems perceive your authority and trustworthiness.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Inconsistent information — different phone numbers, varying business names, outdated addresses — creates uncertainty. AI systems prioritize certainty. The businesses that get recommended are the ones where every data point across the web confirms the same clear, consistent identity.
-                </p>
-
-                {/* ── Industry ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  What This Means for Your Industry
-                </h2>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Lawyers and Law Firms
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Legal queries are among the most heavily affected by AI Overviews. When someone searches &ldquo;do I need a personal injury lawyer&rdquo; or &ldquo;what does an estate attorney do,&rdquo; Google&apos;s AI now answers directly. Firms that aren&apos;t structured as authoritative sources for AI extraction are losing the awareness-stage traffic that used to feed their intake funnel.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  CPAs and Accounting Firms
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Tax and financial queries are high-intent and heavily searched. &ldquo;What can I deduct as a home office&rdquo; and &ldquo;do I need a CPA for my small business&rdquo; are exactly the types of questions AI Overviews now answer. CPAs who aren&apos;t optimized for AI citation are invisible at the moment a potential client is forming their decision.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Insurance Brokers
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Insurance queries are comparison-heavy — exactly the content type AI Overviews excel at synthesizing. Brokers who don&apos;t have structured, AI-readable content explaining their offerings, their differentiators, and their local service area are being passed over.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Trades — HVAC, Electricians, Plumbers
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Local service queries are increasingly answered with AI-generated recommendations. When someone searches &ldquo;best HVAC company in [city]&rdquo; or &ldquo;how do I know if my furnace needs replacing,&rdquo; Google&apos;s AI is synthesizing an answer and surfacing specific businesses. Trades that have invested in structured local data and authoritative content are the ones getting recommended.
-                </p>
-
-                {/* ── Winning ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Businesses Winning Right Now
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  The traffic drop you&apos;re experiencing isn&apos;t permanent — it&apos;s a transition. And like every transition, it rewards early movers.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  The businesses gaining ground right now share a common profile:
-                </p>
-                <ul className="list-disc pl-6 mb-4 space-y-2 text-[var(--d-fg-dim)]">
-                  <li>Their websites speak clearly to AI systems through structured data</li>
-                  <li>Their content directly answers the questions their customers are asking</li>
-                  <li>Their digital presence is consistent, verified, and authoritative across the web</li>
-                  <li>They&apos;ve moved beyond thinking about &ldquo;ranking&rdquo; and started thinking about being <em>recommended</em></li>
-                </ul>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  This isn&apos;t a small tweak to your existing SEO strategy. It&apos;s a new layer — Answer Engine Optimization (AEO) — built on top of traditional SEO fundamentals but designed specifically for the AI-driven search environment.
-                </p>
-
-                {/* ── Next Steps ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  Your Next Steps
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  If your traffic is dropping and you now understand why, here&apos;s where to start:
-                </p>
-                <ol className="list-decimal pl-6 mb-6 space-y-3 text-[var(--d-fg-dim)]">
-                  <li><strong className="text-[var(--d-fg)]">Run the Search Console diagnosis</strong> described above. Confirm that AI Overviews are the driver before changing anything.</li>
-                  <li><strong className="text-[var(--d-fg)]">Audit your schema markup.</strong> Use Google&apos;s Rich Results Test to check what structured data your site currently has. If the answer is nothing or very little, that&apos;s your first fix.</li>
-                  <li><strong className="text-[var(--d-fg)]">Review your content structure.</strong> Are you leading with answers? Are your headings written as questions your customers actually ask? Are your pages easy to scan and extract from?</li>
-                  <li><strong className="text-[var(--d-fg)]">Verify your entity consistency.</strong> Search your business name across Google, Yelp, your industry directories, and your Google Business Profile. Make sure every listing matches exactly.</li>
-                  <li><strong className="text-[var(--d-fg)]">Add an FAQ section to your key pages.</strong> Marked up with FAQPage schema, these become prime candidates for AI extraction and can appear directly in AI Overviews.</li>
-                </ol>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  The businesses that take these steps in the next 6–12 months will be the ones showing up in AI Overviews while their competitors keep watching their traffic slide.
-                </p>
-
-                {/* Visual Checklist */}
-                <div className="my-10 bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-8">
-                  <p className="eyebrow mb-6 text-xs justify-start">YOUR AI VISIBILITY DIAGNOSTIC CHECKLIST</p>
-                  <ul className="space-y-4">
-                    {[
-                      'Run Search Console diagnosis — look for impressions up, clicks down pattern',
-                      "Audit schema markup with Google's Rich Results Test",
-                      'Review content structure — are you leading with answers?',
-                      'Verify entity consistency across all directories and listings',
-                      'Add FAQ section with FAQPage schema to key pages',
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 mt-0.5 rounded border-2 border-[var(--d-accent)] bg-white flex items-center justify-center">
-                          <svg className="w-3 h-3 text-[var(--d-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </span>
-                        <span className="text-[var(--d-fg-dim)] font-inter text-sm leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* FAQ Section */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-6">
-                  Frequently Asked Questions
-                </h2>
-                <div className="space-y-6 mb-10">
-                  {[
-                    {
-                      q: 'Why is my website traffic dropping in 2026?',
-                      a: "The most common cause of organic traffic drops in 2025 and 2026 is Google's AI Overviews, which answer search queries directly on the results page — eliminating the need for users to click through to any website. This zero-click phenomenon is well documented — Ahrefs measured a 34.5% drop in clicks to the top-ranking page when an AI Overview appears, even when rankings haven't changed.",
-                    },
-                    {
-                      q: 'What is zero-click search and how does it affect my business?',
-                      a: 'Zero-click search happens when Google answers a query directly in the search results through features like AI Overviews, Featured Snippets, or Knowledge Panels — meaning the user gets their answer without visiting any website. For businesses that rely on informational content to drive awareness and leads, zero-click search can significantly reduce organic traffic even while maintaining strong rankings.',
-                    },
-                    {
-                      q: 'How do I know if Google AI Overviews are causing my traffic drop?',
-                      a: 'In Google Search Console, look for queries where impressions are holding steady or growing but clicks are declining. This divergence pattern — impressions up, clicks down — is the fingerprint of AI Overview impact. You can also manually search your top keywords to see if an AI Overview now appears at the top of results.',
-                    },
-                    {
-                      q: 'What is the difference between SEO and AEO?',
-                      a: "Traditional SEO (Search Engine Optimization) focuses on ranking in Google's blue link results through keywords, backlinks, and on-page optimization. AEO (Answer Engine Optimization) focuses on becoming the trusted source that AI systems select to generate their answers — which requires structured data, answer-first content, and consistent entity signals across the web.",
-                    },
-                    {
-                      q: 'How do I get my business to appear in Google AI Overviews?',
-                      a: 'To appear in Google AI Overviews, businesses need to implement structured data (schema markup), create content that directly answers customer questions in a clear answer-first format, maintain consistent business information across all online directories, and build strong E-E-A-T signals.',
-                    },
-                  ].map(({ q, a }, i) => (
-                    <div key={i} className="border-b border-[rgba(100,70,30,0.15)] pb-6">
-                      <h3 className="font-inter font-semibold text-[var(--d-fg)] text-base mb-2">{q}</h3>
-                      <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed">{a}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Back to blog */}
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
-
+      <section className="bg-[var(--d-bg)] py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-12">
+            <article className="lg:col-span-2 prose-content font-inter text-[var(--d-fg-dim)]">
+              {article.sections.map((section, index) => (
+                <section key={section.heading} aria-labelledby={`section-${index}`}>
+                  <h2 id={`section-${index}`} className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">{section.heading}</h2>
+                  {section.paragraphs.map((paragraph) => <p key={paragraph} className="leading-relaxed mb-6">{paragraph}</p>)}
+                  {section.items.length > 0 && <ul className="list-disc pl-6 space-y-3 mb-8">{section.items.map((item) => <li key={item} className="leading-relaxed">{item}</li>)}</ul>}
+                  {section.sources.length > 0 && <ul className="space-y-2 mb-8">{section.sources.map((source) => <li key={source.href}><a href={source.href} className="text-sm text-[var(--d-accent)] hover:underline">{source.label}</a></li>)}</ul>}
+                </section>
+              ))}
+              <section aria-labelledby="article-faq" className="mt-12 pt-8 border-t border-[var(--d-line)]">
+                <h2 id="article-faq" className="font-inter text-3xl text-[var(--d-fg)] mb-6">Frequently asked questions</h2>
+                {article.faq.map((item) => <div key={item.q} className="mb-8"><h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mb-3">{item.q}</h3><p className="leading-relaxed">{item.a}</p></div>)}
+              </section>
+              <div className="mt-12 pt-8 border-t border-[var(--d-line)]">
+                <Link href="/blog" className="text-[var(--d-accent)] font-semibold hover:underline">Back to the articles</Link>
               </div>
             </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
+            <aside className="lg:col-span-1 mt-12 lg:mt-0">
               <div className="sticky top-28 space-y-6">
-
-                {/* Key Stats */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
-                  <p className="eyebrow mb-4 text-xs justify-start">BY THE NUMBERS</p>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="eyebrow mb-4 text-xs">THE PRACTICAL TAKEAWAY</p>
+                  <ul className="space-y-4">{article.takeaways.map((takeaway) => <li key={takeaway} className="text-sm leading-relaxed text-[var(--d-fg)]">{takeaway}</li>)}</ul>
+                </div>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="font-inter font-semibold text-[var(--d-fg)] text-lg mb-3">See what your customer’s assistant can understand</p>
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">Review the business facts, evidence, and next step before deciding what to build.</p>
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Request an Agent Readiness Review</Link>
+                </div>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">34.5%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">drop in clicks to the top-ranking page when an AI Overview appears (Ahrefs)</p>
-                    </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">8%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of visits with an AI summary end in a click — versus 15% without (Pew Research)</p>
-                    </div>
-                    <div>
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">~60%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of US Google searches now end without a click to the open web (SparkToro)</p>
-                    </div>
+                    <Link href="/blog/what-is-an-entity-graph" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">How an entity graph connects the business facts</Link>
+                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">The Luxe Window Works consultation-request proof</Link>
+                    <Link href="/blog" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">More practical guides for AI-ready businesses</Link>
                   </div>
                 </div>
-
-                {/* CTA Card */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Is AI Killing Your Traffic?
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    We diagnose exactly why your traffic is dropping and rebuild your digital presence to get recommended — not just ranked.
-                  </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Request an Agent Readiness Review
-                  </Link>
-                </div>
-
-                {/* Related Posts */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
-                  <p className="eyebrow mb-4 text-xs justify-start">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/what-is-zero-click-search" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        What Is Zero Click Search and Why Your Business Is Invisible
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
-                    </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/how-to-rank-in-google-ai-overviews-for-local-businesses" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          How to Rank in Google AI Overviews for Local Businesses
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">10 min read</p>
-                      </Link>
-                    </div>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/schema-markup-complete-guide" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          Schema Markup: The Complete Guide for Local Service Businesses
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </aside>
-
           </div>
         </div>
       </section>
-
       <div className="section-divider" />
-
-      {/* CTA */}
-      <section className="py-20 bg-[var(--d-bg)] px-4">
+      <section className="py-20 bg-[var(--d-bg-3)] px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">STOP LOSING TRAFFIC</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            Ready to Get Recommended Instead of Ignored?
-          </h2>
-          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The structured data, content strategy, and entity clarity that earns AI citations takes less time to build than you think — and the competitive window won&apos;t stay open. Let&apos;s talk about your site.
-          </p>
+          <p className="eyebrow mb-4">BE UNDERSTOOD. BE CHOSEN. MAKE THE NEXT STEP WORK.</p>
+          <h2 className="font-inter text-3xl md:text-4xl text-[var(--d-fg)] mb-4">Make your business easy for your customer’s AI assistant to understand, trust and do business with.</h2>
+          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">Start with an Agent Readiness Review. The owned foundation is $4,995 one time, with no required retainer. A live action is separately scoped; a platform-layer pilot is a separate engagement.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Start the Conversation
-            </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read More Articles
-            </Link>
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Request an Agent Readiness Review</Link>
+            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read more articles</Link>
           </div>
         </div>
       </section>

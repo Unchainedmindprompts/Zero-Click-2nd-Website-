@@ -4,79 +4,97 @@ import SecondaryPageShell from '@/components/SecondaryPageShell';
 import { REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
 
 export const metadata: Metadata = {
-  title: 'Start Here — Usable by AI',
+  title: 'Questions About Working With Customer AI Assistants',
   description:
-    'As customers begin to delegate discovery and next steps to AI, the first evaluator may be an assistant — not a visitor on your site. Plain answers about what that means and what stays in your control.',
+    'Plain answers about making your business easier for customers and AI assistants to understand, trust, and contact. Pricing, ownership, permissions, proof, and next steps.',
   alternates: { canonical: 'https://www.kodecite.ai/faq' },
 };
 
 // Visible Q&As and FAQPage schema share this list so they cannot drift.
 const faqs: { q: string; a: string | string[] }[] = [
   {
-    q: 'What does “usable by AI” mean for my business?',
+    q: 'What does it mean to make my business usable by AI?',
     a: [
-      'AI can already find businesses. “Usable by AI” means it can confidently understand what you do, verify that you fit the request, and determine an approved next step.',
-      'If it cannot establish that, your business may never enter the customer’s decision — even if your website is strong. For a window-treatment company, usable can mean recommending a qualified installer and submitting an approved consultation request. That is different from merely finding a name in search.',
-      'People stay in control.',
+      'It means helping a customer’s assistant answer the questions a person would ask before choosing you: who you are, what you offer, whether it fits, what supports your claims, and how to move forward.',
+      'Where an action has been built and approved, it also means an assistant can make a specific request and get a clear result. For a window-treatment business, that might be requesting an in-home consultation and knowing it reached the team. The customer does less legwork, and your team gets a better-informed starting point.',
     ],
   },
   {
     q: 'Why does this matter now?',
     a: [
-      'Customers are beginning to delegate discovery, comparison, and next steps to AI. The assistant may evaluate businesses before the customer ever visits a website.',
-      'If it cannot confidently understand your services, location, credibility, and permitted next step, your business may be omitted before you know a decision was underway. Websites and search still matter. This is about remaining inside that evaluation as more of the work starts happening through AI.',
+      'AI assistants can already help people research options and, with the right tools and permission, take actions on the web. A customer may ask an assistant to compare providers and contact one rather than doing every step themselves.',
+      'The useful work today is straightforward: make your services, evidence, conditions, and next steps clear. That improves the experience for people visiting your site too. It does not require a prediction about when everyone will use an AI agent.',
     ],
   },
   {
-    q: 'Is this SEO or ranking in ChatGPT?',
+    q: 'Is this SEO or getting recommended in ChatGPT?',
     a: [
-      'Clearer information can support discovery in Google, Bing, ChatGPT, and similar systems. Visibility is not the complete product, and it is not a promise of rankings, citations, traffic, or recommendations.',
-      'Discovery helps AI find the business. Kodecite helps AI understand, evaluate, and safely use the business.',
+      'Search and AI discovery can help customers find you. Kodecite also works on what happens next: understanding the offer, checking fit and evidence, requesting something useful, and knowing the result.',
+      'Clear pages and connected business information support that journey. No one can guarantee that every assistant will read a site, cite it, or recommend a business. Different systems use different sources and tools.',
     ],
   },
   {
-    q: 'What can AI actually do with my business?',
+    q: 'What can an assistant actually do with my business?',
     a: [
-      'You decide what is permitted.',
-      'Approved actions can include submitting a consultation request, sending a qualified inquiry, requesting an appointment, or handing the customer to a person.',
-      'Kodecite does not automatically invent prices, schedule confirmed appointments, accept projects, or complete purchases unless you explicitly authorize and support those actions.',
+      'That depends on the workflow your business supports and the permission the customer gives. A separately scoped capability might submit a consultation request, send a qualified inquiry, request an appointment, or hand the customer to a person.',
+      'The response must describe what happened accurately. A request received by your team does not confirm a booking, price, purchase, or project acceptance. Those commitments require explicit business rules and working integrations of their own.',
     ],
   },
   {
     q: 'What does Kodecite build?',
     a: [
-      'Kodecite works in two stages.',
-      'Foundation Build — $4,995. An owned website and trusted digital business foundation so AI can understand and evaluate your business. It also identifies which agent actions could safely be added. It does not automatically include a live agent-action endpoint.',
-      'Agent Capability Build is separately scoped. It adds one protected approved action after the rules and boundaries are understood.',
+      'Foundation Build is $4,995 one-time. It creates a business-owned website with clear identity, services, proof, policies, and connected information for people and assistants. It also maps which next steps could be supported. A live agent-action endpoint is scoped separately.',
+      'Agent Capability Build adds one approved action after its requirements are understood, including validation, permission, duplicate protection, a clear result, and human follow-up where needed.',
+      'The Platform Capability Layer is an application-only pilot for selected businesses keeping their current website. We assess whether an owned layer alongside that site can support the needed workflow.',
     ],
   },
   {
-    q: 'Can this work with my existing website?',
+    q: 'Can I keep my existing website?',
     a: [
-      'A complete rebuild is the strongest path. In selected cases, we can add an owned capability layer while your existing website remains.',
-      'Kodecite reviews your platform and recommends the most reliable path.',
+      'Possibly. The Platform Capability Layer pilot is for selected businesses on WordPress, Wix, Squarespace, or similar platforms. We review the existing content, platform access, and requested capability before recommending it.',
+      'A full rebuild gives us more control over the complete customer journey. The right recommendation depends on the current site and the work it needs, rather than its platform name alone.',
     ],
   },
   {
-    q: 'What did Luxe Window Works prove?',
+    q: 'What did the Luxe Window Works test demonstrate?',
     a: [
-      'An outside AI found what Luxe permitted, determined the request qualified, and submitted one valid in-home consultation request. Luxe received one email. Repeating the same request did not create a duplicate. Changing the request while reusing the same request identity was rejected. A person still controls follow-up.',
-      'That proved a consultation-request capability — not automated booking, pricing, checkout, or project acceptance.',
+      'In the documented authorized test, an outside AI found the published capability, checked that a request qualified, and submitted one in-home consultation request. One email reached Luxe. Replaying the identical request produced no second email. A changed request using the same identity was rejected.',
+      'That demonstrated a controlled request with a clear result and human follow-up. The test did not confirm an appointment, set a price, complete checkout, or accept a project.',
     ],
   },
   {
-    q: 'What does it cost, and who owns it?',
+    q: 'Who owns the website, and are there ongoing costs?',
     a: [
-      'Foundation Build is $4,995. Agent Capability Build is separately scoped.',
-      'You own the repository, the website, and the deployed infrastructure. There is no mandatory retainer.',
-      'Active capabilities may have third-party costs and occasional maintenance.',
+      'You own the website, code repository, and the accounts it runs on. Foundation Build is $4,995 one-time, with no mandatory retainer. Agent Capability Build is priced separately after scope is agreed; the platform pilot has no published price.',
+      'Ownership does not remove direct hosting or third-party service costs. An active capability may also need maintenance as credentials, services, security requirements, or business rules change. Those dependencies are made clear at handoff.',
     ],
   },
   {
-    q: 'Is my business a good fit?',
+    q: 'Do llms.txt, agent.json, or schema make this work automatically?',
     a: [
-      'This is for established service businesses making high-trust, high-value decisions. You have defined services and a defined area, existing reputation, credentials, reviews, or other proof, and clear rules about what you will and will not do. You want long-term owned infrastructure — not a temporary marketing tactic.',
-      'It is not a shortcut for a new business with nothing established or verifiable.',
+      'No. Structured data and discovery files can help describe a business, but they do not create permission, send a request, or prove an action succeeded. llms.txt is a proposal, and this site’s agent.json is a business-specific discovery description, not a universally adopted agent standard.',
+      'On Kodecite.ai, those files describe identity and discovery. This site does not currently accept autonomous agent submissions. A real action needs a supported connection, validation, and a result that can be checked.',
+    ],
+  },
+  {
+    q: 'What stays under human control?',
+    a: [
+      'The customer controls what they ask an assistant to do and what information they authorize it to share. Your business controls the actions it offers, the conditions for using them, and the decisions that require a person.',
+      'The goal is to remove repetitive work while keeping judgment where it belongs. An assistant can help prepare a useful inquiry; your team can still confirm fit, discuss details, quote, and schedule.',
+    ],
+  },
+  {
+    q: 'How do you check that the work is done?',
+    a: [
+      'Before the build, we agree in writing what will be published and which customer journeys and reading paths will be checked. If an action is included, the acceptance checks cover the agreed success, invalid-request, repeat-submission, and handoff behavior.',
+      'The work is complete when the agreed outputs pass. Those tests cover what we build, rather than a guaranteed ranking, citation, or recommendation from a third-party AI system.',
+    ],
+  },
+  {
+    q: 'Is this right for my business?',
+    a: [
+      'It is especially useful for established service businesses where customers compare carefully: home services, real estate, custom building, specialty practices, and similar work. Clear offers, real evidence, and a defined customer process give us something useful to build on.',
+      'Start with the free Agent Readiness Review. Within two business days, you get written findings on what is clear, where trust or fit is hard to establish, and where the next step could be easier. You keep the report whether or not we work together.',
     ],
   },
 ];
@@ -130,8 +148,8 @@ export default function FAQPage() {
               maxWidth: '820px',
             }}
           >
-            What “usable by AI”{' '}
-            <em className="serif">actually means.</em>
+            Your business. Their assistant. {' '}
+            <em className="serif">Practical answers.</em>
           </h1>
 
           <p
@@ -144,7 +162,7 @@ export default function FAQPage() {
               maxWidth: '680px',
             }}
           >
-            As customers begin to delegate discovery and next steps to AI, the first evaluator may be an assistant — not a visitor on your site. These answers explain what that means, why it matters, and what stays in your control.
+            What should an assistant understand about your business? What can it do for a customer, and who stays in control? Here is how we approach the work, what the offers include, and what the evidence supports.
           </p>
         </div>
       </section>
@@ -212,8 +230,11 @@ export default function FAQPage() {
               className="font-inter mb-6"
               style={{ fontSize: '16px', color: 'var(--d-fg-dim)', fontWeight: 300 }}
             >
-              Prefer a direct conversation?
+              See the documented example, or ask about your own business.
             </p>
+            <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="d-btn d-btn-ghost mb-3 mr-3">
+              Read the Luxe case study →
+            </Link>
             <Link href="/contact" className="d-btn d-btn-primary">
               Contact Kodecite →
             </Link>
@@ -240,8 +261,8 @@ export default function FAQPage() {
               color: 'var(--d-fg)',
             }}
           >
-            See what AI can understand, verify, and{' '}
-            <em className="serif">safely do</em> today.
+            Make the next step{' '}
+            <em className="serif">easier to take.</em>
           </h2>
 
           <p
@@ -253,7 +274,7 @@ export default function FAQPage() {
               fontWeight: 300,
             }}
           >
-            A written review of identity, services, geography, policies, discovery, action paths, and control gaps. {REVIEW_TURNAROUND}
+            Get a written look at how your business explains its offer, earns trust, and helps a customer or their assistant move forward. Practical priorities, with no obligation. {REVIEW_TURNAROUND}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

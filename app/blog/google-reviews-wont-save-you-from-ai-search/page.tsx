@@ -1,470 +1,245 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+import { blogPosts } from '@/lib/blog';
 
-const URL = 'https://www.kodecite.ai/blog/google-reviews-wont-save-you-from-ai-search';
+type Section = { h: string; p: string[]; items?: string[]; source?: string };
+const ARTICLE: { slug: string; title: string; description: string; date: string; category: string; intro: string; sections: Section[]; sources: string[][]; related: string[]; example?: object } = {
+  "slug": "google-reviews-wont-save-you-from-ai-search",
+  "title": "Turn Your Reputation Into Evidence an AI Assistant Can Check",
+  "description": "Reviews matter. Connect them with relevant services, people, credentials and project evidence so customers and their assistants can assess fit.",
+  "date": "2026-07-02",
+  "category": "BUSINESS TRUTH",
+  "intro": "A strong reputation is worth making easy to understand. Your reviews may show that customers trust you, while still leaving their AI assistant unsure what you do, which projects fit and how to move a request forward.",
+  "sections": [
+    {
+      "h": "Reviews answer an important question",
+      "p": [
+        "Reviews describe customer experiences. They can reveal responsiveness, workmanship, communication and the kinds of problems a business has solved. They remain useful to people evaluating a provider, and Google says review count and positive ratings can help local ranking.",
+        "That does not make a review total a universal ranking formula. A specific customer may need a particular service, qualification, location or timescale. A highly rated business can be a poor fit for that request, while a less familiar specialist can be relevant. The missing information often concerns suitability rather than popularity."
+      ],
+      "source": "reviews"
+    },
+    {
+      "h": "A small visibility test cannot explain causation",
+      "p": [
+        "An earlier version of this article described a local test in which a highly reviewed HVAC business was absent from several ChatGPT answers. That observation can prompt a useful investigation. It cannot establish that reviews are irrelevant, that the website platform caused the omission or that schema would have changed the result.",
+        "AI answers vary with the query, location, available sources, timing and product behavior. If you test your own visibility, record those conditions and preserve the answers. Treat the result as a sample of what happened, not a complete diagnosis of how an engine chooses businesses."
+      ]
+    },
+    {
+      "h": "Customer research supports a broader evidence strategy",
+      "p": [
+        "BrightLocal’s March 2026 report found that 45% of its survey respondents had used AI tools for local business recommendations. The research used a representative panel of 1,002 US adults; some AI-specific results used the subset of 455 respondents who had used those tools. That is a reported survey result, not a measurement of every customer in your market.",
+        "The report also found that many AI users check original review sources. For an owner, the useful implication is to make evidence easy to inspect after an assistant introduces the business. Maintain the original profiles and the relevant context on your own site, so a customer can move from a summary to the details that matter to them."
+      ],
+      "source": "brightlocal"
+    },
+    {
+      "h": "Connect reputation to the work being considered",
+      "p": [
+        "A homeowner comparing providers for custom shades benefits from reviews of comparable work. The context matters: product category, installation complexity, communication and aftercare. A broad five-star summary provides less detail than a truthful account of a relevant project.",
+        "Organize existing evidence around the questions customers ask. Link a service page to an appropriate completed project and to public review sources where available. Keep quotations accurate and attributed. Do not turn one customer’s experience into a claim that every project produces the same result."
+      ]
+    },
+    {
+      "h": "Add evidence reviews cannot supply",
+      "p": [
+        "Reviews do not establish every important fact. Credentials should identify the holder and issuing organization. Awards should name the category and year. A dealer relationship should match the manufacturer’s current description. Service coverage and availability need an owner-approved source.",
+        "Use evidence proportionately. A membership can support a membership claim; it does not prove superior workmanship. A project photograph can demonstrate experience with that type of work; it does not establish a professional license. Clear distinctions make the business easier to assess honestly."
+      ]
+    },
+    {
+      "h": "Publish a consistent picture",
+      "p": [
+        "The website, public profiles and structured data should agree on the business identity, services and geography. Connect evidence to the specific claims it supports. An assistant that retrieves a page should find enough visible explanation to understand the context without relying on hidden markup.",
+        "Schema.org can help express relationships between a business, its people and its offerings. It is a publishing format, not an independent endorsement. Adding an award field does not make an award genuine, and adding a rating does not guarantee stars or inclusion in an AI answer."
+      ]
+    },
+    {
+      "h": "Make the next step match the promise",
+      "p": [
+        "Trust can be lost after discovery if the contact process is confusing. A customer who asks their assistant to arrange a consultation needs to know what can actually happen: what details are required, whether their area qualifies and whether the response confirms a request or a scheduled appointment.",
+        "That is where reputation and capability meet. If the business promises personal attention, a useful handoff should preserve the project context for the person who follows up. The assistant should not need to invent an answer merely because the website has no way to explain the next step."
+      ]
+    },
+    {
+      "h": "A reputation-to-evidence audit",
+      "p": [
+        "Start with the reasons recent customers chose you. Gather the existing sources that support those reasons, then check whether the website makes the connections visible."
+      ],
+      "items": [
+        "Choose three services where the business is a particularly good fit.",
+        "Identify relevant completed work, reviews and professional evidence for each.",
+        "Check the recipient, issuer, dates and current status of credentials or awards.",
+        "Remove unsupported superlatives and outdated claims.",
+        "Confirm that a customer can request the right next step without losing context."
+      ]
+    },
+    {
+      "h": "Measure a better outcome than being named",
+      "p": [
+        "Keep tracking reviews and search visibility, but also watch the quality of inquiries. Do customers understand the offering? Are fewer requests outside your scope? Does the team spend less time correcting assumptions?",
+        "Those are useful signs that the business is being understood. Kodecite’s work starts with making that real business and its evidence legible, then adds the appropriate action when there is a defined process to support it."
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "Google Business Profile: Local ranking guidance",
+      "https://support.google.com/business/answer/7091?hl=en"
+    ],
+    [
+      "Schema.org: About the vocabulary",
+      "https://schema.org/docs/about.html"
+    ],
+    [
+      "BrightLocal: Local recommendations and AI trust, March 2026",
+      "https://www.brightlocal.com/research/lcrs-ai-trust/"
+    ]
+  ],
+  "related": [
+    "entity-first-search-local-businesses",
+    "from-recommended-to-actionable-luxe-window-works"
+  ]
+};
+const SOURCE_LINKS: Record<string, string[]> = {
+  "google": [
+    "Google Search Central: AI features and your website",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
+  "schema": [
+    "Schema.org: About the vocabulary",
+    "https://schema.org/docs/about.html"
+  ],
+  "jsonld": [
+    "W3C: JSON-LD 1.1",
+    "https://www.w3.org/TR/json-ld11/"
+  ],
+  "local": [
+    "Schema.org: LocalBusiness",
+    "https://schema.org/LocalBusiness"
+  ],
+  "service": [
+    "Schema.org: Service",
+    "https://schema.org/Service"
+  ],
+  "offer": [
+    "Schema.org: Offer",
+    "https://schema.org/Offer"
+  ],
+  "updates": [
+    "Google Search documentation updates",
+    "https://developers.google.com/search/updates"
+  ],
+  "crawl": [
+    "Vercel: The rise of the AI crawler",
+    "https://vercel.com/blog/the-rise-of-the-ai-crawler"
+  ],
+  "reviews": [
+    "Google Business Profile: Local ranking guidance",
+    "https://support.google.com/business/answer/7091?hl=en"
+  ],
+  "sitemap": [
+    "Google Search Central: Sitemaps",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+  ],
+  "luxe": [
+    "Luxe Window Works: Public consultation capability",
+    "https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation"
+  ],
+  "meta": [
+    "Meta Business Help Center",
+    "https://www.facebook.com/business/help"
+  ],
+  "terms": [
+    "Meta: Customer List Custom Audiences Terms",
+    "https://www.facebook.com/legal/terms/customaudience"
+  ],
+  "brightlocal": [
+    "BrightLocal: Local recommendations and AI trust, March 2026",
+    "https://www.brightlocal.com/research/lcrs-ai-trust/"
+  ]
+};
+const PAGE_URL = `https://www.kodecite.ai/blog/${ARTICLE.slug}`;
+const WORD_COUNT = 899;
+const READ_TIME = '5 min read';
+const PUBLISHED = 'July 2, 2026';
 
 export const metadata: Metadata = {
-  title: "Your Google Reviews Won't Save You From AI Search",
-  description:
-    'Reviews win the Google map pack. They do not win AI answers. Why a North Idaho business with 1,375 reviews can still be invisible to ChatGPT — and what actually gets you recommended.',
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Your Google Reviews Won't Save You From AI Search",
-    description:
-      'Why a North Idaho business with 1,375 reviews can still be invisible to ChatGPT — and what actually gets you cited by AI answer engines.',
-    url: URL,
-    type: 'article',
-    publishedTime: '2026-07-02',
-    authors: ['Mark Abplanalp'],
-    images: [{ url: 'https://www.kodecite.ai/og-image.png', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Your Google Reviews Won't Save You From AI Search",
-    description:
-      'Why a North Idaho business with 1,375 reviews can still be invisible to ChatGPT — and what actually gets you cited by AI answer engines.',
-    images: ['https://www.kodecite.ai/og-image.png'],
-  },
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: ARTICLE.title, description: ARTICLE.description, url: PAGE_URL, type: 'article', publishedTime: `${ARTICLE.date}T00:00:00-07:00`, modifiedTime: '2026-10-01T15:00:00Z' },
 };
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  '@id': `${URL}#article`,
-  headline: "Your Google Reviews Won't Save You From AI Search",
-  description:
-    'Reviews win the Google map pack; they do not win AI answers. A North Idaho business with 1,375 five-star reviews can still be invisible to ChatGPT, because AI recommendation depends on machine-readable structure, not star count — here is the evidence and what actually gets you cited.',
-  author: articleAuthor,
-  publisher: articlePublisher,
-  isPartOf: blogCollectionPage,
-  datePublished: '2026-07-02T00:00:00-07:00',
-  dateModified: '2026-07-02T00:00:00-07:00',
-  mainEntityOfPage: { '@type': 'WebPage', '@id': URL },
-  url: URL,
-  image: { '@type': 'ImageObject', url: 'https://www.kodecite.ai/og-image.png', width: 1200, height: 630 },
-  articleSection: 'AEO & AI Search',
-  wordCount: 1850,
-  keywords: [
-    'Google reviews', 'AI search visibility', 'AI Overviews', 'answer engine optimization',
-    'local SEO', 'ChatGPT local recommendations', 'entity graph', 'structured data',
-    'North Idaho', 'Spokane', 'map pack',
-  ],
-  about: [
-    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
-    { '@type': 'DefinedTerm', name: 'AI Search Visibility' },
-    { '@type': 'DefinedTerm', name: 'Google Reviews' },
-    { '@type': 'DefinedTerm', name: 'Local Search' },
-    { '@type': 'DefinedTerm', name: 'Structured Data' },
-    businessRef,
-  ],
-  mentions: [
-    { '@type': 'Organization', name: 'OpenAI (ChatGPT)', url: 'https://openai.com', sameAs: 'https://www.wikidata.org/wiki/Q21708200' },
-    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
-    { '@type': 'Organization', name: 'Google', url: 'https://www.google.com', sameAs: 'https://www.wikidata.org/wiki/Q95' },
-    { '@type': 'Thing', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'Organization', name: 'Google Gemini', url: 'https://gemini.google.com' },
-    { '@type': 'Organization', name: 'Microsoft Copilot', url: 'https://copilot.microsoft.com' },
-    { '@type': 'Organization', name: 'BrightLocal', url: 'https://www.brightlocal.com' },
-    { '@type': 'Organization', name: 'Local Falcon', url: 'https://www.localfalcon.com' },
-    { '@type': 'Organization', name: 'Ahrefs', url: 'https://ahrefs.com' },
-    { '@type': 'Organization', name: 'Semrush', url: 'https://www.semrush.com' },
-    { '@type': 'Organization', name: 'Vercel', url: 'https://vercel.com' },
-    { '@type': 'City', name: "Coeur d'Alene", sameAs: 'https://en.wikipedia.org/wiki/Coeur_d%27Alene,_Idaho' },
-    { '@type': 'City', name: 'Spokane', sameAs: 'https://en.wikipedia.org/wiki/Spokane,_Washington' },
-    { '@type': 'AdministrativeArea', name: 'North Idaho', sameAs: 'https://en.wikipedia.org/wiki/Idaho_Panhandle' },
-  ],
-  citation: [
-    { '@type': 'Report', name: 'Local Consumer Review Survey 2026: AI & Trust', url: 'https://www.brightlocal.com/research/lcrs-ai-trust/', publisher: { '@type': 'Organization', name: 'BrightLocal' } },
-    { '@type': 'Report', name: 'The Impact of Google AI Overviews on Local Business Search Visibility', url: 'https://www.localfalcon.com/blog/whitepaper-studies-the-impact-of-google-ai-overviews-on-local-business-search-visibility', publisher: { '@type': 'Organization', name: 'Local Falcon' } },
-    { '@type': 'TechArticle', name: 'Does Ranking Higher on Google Mean You’ll Get Cited in AI Overviews?', url: 'https://ahrefs.com/blog/does-ranking-higher-on-google-mean-youll-get-cited-in-ai-overviews/', publisher: { '@type': 'Organization', name: 'Ahrefs' } },
-    { '@type': 'TechArticle', name: 'AI Search Citation Overlap Study', url: 'https://ahrefs.com/blog/ai-search-overlap/', publisher: { '@type': 'Organization', name: 'Ahrefs' } },
-    { '@type': 'TechArticle', name: 'Google AI Overview Citations From Top-Ranking Pages Drop Sharply', url: 'https://www.searchenginejournal.com/google-ai-overview-citations-from-top-ranking-pages-drop-sharply/568637/', publisher: { '@type': 'Organization', name: 'Search Engine Journal' } },
-    { '@type': 'TechArticle', name: 'The Rise of the AI Crawler', url: 'https://vercel.com/blog/the-rise-of-the-ai-crawler', publisher: { '@type': 'Organization', name: 'Vercel' } },
-    { '@type': 'TechArticle', name: 'Technical SEO Impact on AI Search: A Study of 5M URLs', url: 'https://www.semrush.com/blog/technical-seo-impact-on-ai-search-study/', publisher: { '@type': 'Organization', name: 'Semrush' } },
-    { '@type': 'TechArticle', name: 'Content Optimization for AI Search: A Study of ~12,000 Prompts', url: 'https://www.semrush.com/blog/content-optimization-ai-search-study/', publisher: { '@type': 'Organization', name: 'Semrush' } },
-    { '@type': 'WebPage', name: 'Improve your local ranking on Google (Business Profile Help)', url: 'https://support.google.com/business/answer/7091?hl=en', publisher: { '@type': 'Organization', name: 'Google' } },
-    { '@type': 'WebPage', name: 'Google Local Algorithm & Ranking Factors', url: 'https://www.brightlocal.com/learn/google-local-algorithm-and-ranking-factors/', publisher: { '@type': 'Organization', name: 'BrightLocal' } },
-    { '@type': 'ScholarlyArticle', name: 'GEO: Generative Engine Optimization', url: 'https://arxiv.org/abs/2311.09735', publisher: { '@type': 'Organization', name: 'Princeton University & Georgia Tech' } },
-  ],
+  '@context': 'https://schema.org', '@type': 'Article', '@id': `${PAGE_URL}#article`,
+  headline: ARTICLE.title, description: ARTICLE.description,
+  datePublished: `${ARTICLE.date}T00:00:00-07:00`, dateModified: '2026-10-01T15:00:00Z',
+  wordCount: WORD_COUNT, articleSection: ARTICLE.category,
+  author: articleAuthor, publisher: articlePublisher, isPartOf: blogCollectionPage,
+  url: PAGE_URL, mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+  image: 'https://www.kodecite.ai/og-image.png', about: [businessRef],
+  citation: ARTICLE.sources.map(([name, url]) => ({ '@type': 'CreativeWork', name, url })),
 };
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  '@id': `${URL}#faq`,
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Do Google reviews help with AI search visibility?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Not directly. In our test, a Coeur d’Alene-area HVAC company with 1,375 five-star reviews was named in zero of four ChatGPT queries for its core services — ChatGPT instead recommended seven other local companies. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why doesn’t my business show up in ChatGPT even though I rank on Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Because AI answers don’t mirror Google rankings. Ahrefs found only a 0.347 correlation between a Google top-10 ranking and being cited in AI Overviews, and just ~11% citation overlap between AI assistants and Google/Bing’s top 10. Ranking well is not the same as being cited by AI.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What actually makes AI recommend a local business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A machine-readable foundation: server-rendered content AI crawlers can read (GPTBot, ClaudeBot, and PerplexityBot don’t run JavaScript), a connected structured-data / entity graph, and clear, answer-first, fact-backed content. In Semrush’s analysis of 5 million cited URLs, Organization, Article, and BreadcrumbList schema were the structured-data types that appeared most often on the pages AI engines cite.',
-      },
-    },
-  ],
-};
-
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': `${URL}#breadcrumb`,
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', '@id': `${PAGE_URL}#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
-    { '@type': 'ListItem', position: 3, name: "Your Google Reviews Won't Save You From AI Search", item: URL },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: ARTICLE.title, item: PAGE_URL },
   ],
 };
 
-const link = 'text-[var(--d-accent)] underline underline-offset-2 hover:opacity-80 transition-opacity';
-
-const faqItems = [
-  {
-    q: 'Do Google reviews help with AI search visibility?',
-    a: 'Not directly. In our test, a Coeur d’Alene-area HVAC company with 1,375 five-star reviews was named in zero of four ChatGPT queries for its core services — ChatGPT instead recommended seven other local companies. Reviews strongly influence the Google map pack, but AI answer engines decide who to name based on machine-readable structure and clear entity signals — not star count.',
-  },
-  {
-    q: 'Why doesn’t my business show up in ChatGPT even though I rank on Google?',
-    a: 'Because AI answers don’t mirror Google rankings. Ahrefs found only a 0.347 correlation between a Google top-10 ranking and being cited in AI Overviews, and just ~11% citation overlap between AI assistants and Google/Bing’s top 10. Ranking well is not the same as being cited by AI.',
-  },
-  {
-    q: 'What actually makes AI recommend a local business?',
-    a: 'A machine-readable foundation: server-rendered content AI crawlers can read (GPTBot, ClaudeBot, and PerplexityBot don’t run JavaScript), a connected structured-data / entity graph, and clear, answer-first, fact-backed content. In Semrush’s analysis of 5 million cited URLs, Organization, Article, and BreadcrumbList schema were the types that appeared most often on the pages AI engines cite.',
-  },
-];
-
-const sources: [string, string][] = [
-  ['BrightLocal — Local Consumer Review Survey 2026: AI & Trust', 'https://www.brightlocal.com/research/lcrs-ai-trust/'],
-  ['Local Falcon — The Impact of Google AI Overviews on Local Business Search Visibility', 'https://www.localfalcon.com/blog/whitepaper-studies-the-impact-of-google-ai-overviews-on-local-business-search-visibility'],
-  ['Ahrefs — Does Ranking Higher on Google Mean You’ll Get Cited in AI Overviews?', 'https://ahrefs.com/blog/does-ranking-higher-on-google-mean-youll-get-cited-in-ai-overviews/'],
-  ['Ahrefs — AI Search Citation Overlap Study', 'https://ahrefs.com/blog/ai-search-overlap/'],
-  ['Search Engine Journal — AI Overview Citations From Top-Ranking Pages Drop Sharply', 'https://www.searchenginejournal.com/google-ai-overview-citations-from-top-ranking-pages-drop-sharply/568637/'],
-  ['Vercel — The Rise of the AI Crawler', 'https://vercel.com/blog/the-rise-of-the-ai-crawler'],
-  ['Semrush — Technical SEO Impact on AI Search (5M URLs)', 'https://www.semrush.com/blog/technical-seo-impact-on-ai-search-study/'],
-  ['Semrush — Content Optimization for AI Search (~12,000 prompts)', 'https://www.semrush.com/blog/content-optimization-ai-search-study/'],
-  ['Google Business Profile Help — Improve your local ranking on Google', 'https://support.google.com/business/answer/7091?hl=en'],
-  ['BrightLocal — Google Local Algorithm & Ranking Factors', 'https://www.brightlocal.com/learn/google-local-algorithm-and-ranking-factors/'],
-  ['Princeton & Georgia Tech — GEO: Generative Engine Optimization (arXiv)', 'https://arxiv.org/abs/2311.09735'],
-];
-
-export default function GoogleReviewsWontSaveYou() {
+export default function ArticlePage() {
+  const related = ARTICLE.related.map((slug) => blogPosts.find((post) => post.slug === slug)).filter(Boolean);
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-
-      {/* ── Hero ──────────────────────────────────────────── */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
-            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            <span className="text-[var(--d-fg)] truncate">Your Google Reviews Won&apos;t Save You From AI Search</span>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <header className="pt-36 pb-16 px-5 md:px-8" style={{ background: 'var(--d-bg)', borderBottom: '1px solid var(--d-line)' }}>
+        <div className="max-w-4xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex gap-3 text-sm font-inter text-[var(--d-fg-dim)] mb-9">
+            <Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/blog">Insights</Link>
           </nav>
-
-          <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">AEO &amp; AI Search</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">9 min read</span>
-          </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            Your Google Reviews{' '}
-            <span className="text-[var(--d-accent)]">Won&apos;t Save You From AI Search</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            Why a North Idaho business with 1,375 reviews can still be invisible to ChatGPT — and
-            what actually gets you recommended.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[var(--d-line)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#a0723a] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">MA</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">July 2, 2026</p>
-              </div>
-            </div>
+          <p className="d-eyebrow mb-6">{ARTICLE.category} · {READ_TIME}</p>
+          <h1 className="font-inter font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-[var(--d-fg)] mb-8">{ARTICLE.title}</h1>
+          <p className="font-inter text-lg md:text-xl leading-relaxed text-[var(--d-fg-dim)] max-w-3xl">{ARTICLE.intro}</p>
+          <div className="mt-9 pt-6 font-inter text-sm text-[var(--d-fg-dim)]" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <p className="font-semibold text-[var(--d-fg)] mb-1">Mark Abplanalp · Kodecite</p>
+            <p>Published {PUBLISHED} · Updated October 1, 2026</p>
           </div>
         </div>
+      </header>
+      <section className="px-5 md:px-8 py-16 md:py-20" style={{ background: 'var(--d-bg)' }}>
+        <article className="max-w-3xl mx-auto font-inter text-[var(--d-fg-dim)]" style={{ fontSize: '17px', lineHeight: 1.85 }}>
+          {ARTICLE.sections.map((section) => (
+            <section key={section.h} className="mb-12">
+              <h2 className="font-inter font-semibold text-2xl md:text-3xl leading-tight tracking-tight text-[var(--d-fg)] mb-5">{section.h}</h2>
+              {section.p.map((paragraph) => <p key={paragraph} className="mb-5">{paragraph}</p>)}
+              {section.items && <ul className="space-y-3 pl-6 mb-5 list-disc">{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
+              {section.source && SOURCE_LINKS[section.source] && <p className="text-sm"><a href={SOURCE_LINKS[section.source][1]} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{SOURCE_LINKS[section.source][0]} ↗</a></p>}
+              {section.h === 'A small connected example' && ARTICLE.example && <pre className="overflow-x-auto rounded-xl p-5 text-xs md:text-sm leading-relaxed my-6" style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)' }}><code>{JSON.stringify(ARTICLE.example, null, 2)}</code></pre>}
+            </section>
+          ))}
+          <section className="pt-8 mt-12" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Sources and further reading</h2>
+            <ul className="space-y-3 text-sm">{ARTICLE.sources.map(([label, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{label} ↗</a></li>)}</ul>
+          </section>
+          <section className="pt-8 mt-10" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Keep reading</h2>
+            <ul className="space-y-4">{related.map((post) => post && <li key={post.slug}><Link href={`/blog/${post.slug}`} className="text-[var(--d-accent)] hover:underline">{post.title} →</Link></li>)}</ul>
+            <Link href="/blog" className="inline-block mt-8 text-sm text-[var(--d-fg-dim)] hover:text-[var(--d-fg)]">← All insights</Link>
+          </section>
+        </article>
       </section>
-
-      <div className="section-divider" />
-
-      {/* ── Body + Sidebar ──────────────────────────────────── */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            {/* ── Article body ─────────────────────────────── */}
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                <p className="text-[var(--d-fg)] leading-relaxed mb-6 font-medium text-lg">
-                  Reviews win the Google map pack. They do not win AI answers.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  When a customer asks ChatGPT or Perplexity for the best business in your town, the AI doesn&apos;t
-                  rank by star count — it names the businesses it can <em>read and verify</em>. A North Idaho company
-                  with 1,375 five-star reviews can still go unnamed, because AI recommendation depends on
-                  machine-readable structure, not reputation. Here&apos;s the evidence.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">People are asking AI now — not just Google</h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  This isn&apos;t a someday problem. In{' '}
-                  <a href="https://www.brightlocal.com/research/lcrs-ai-trust/" target="_blank" rel="noopener noreferrer" className={link}>BrightLocal&apos;s 2026 Local Consumer Review Survey</a>,{' '}
-                  <strong className="text-[var(--d-fg)]">45% of consumers said they now use AI tools like ChatGPT, Google&apos;s AI Mode, or Gemini to find local
-                  business recommendations — up from just 6% a year earlier.</strong> ChatGPT led at 31%, Google&apos;s AI
-                  Mode at 23%.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  And it&apos;s showing up inside regular search too: a{' '}
-                  <a href="https://www.localfalcon.com/blog/whitepaper-studies-the-impact-of-google-ai-overviews-on-local-business-search-visibility" target="_blank" rel="noopener noreferrer" className={link}>Local Falcon whitepaper</a>{' '}
-                  found Google AI Overviews appeared in <strong className="text-[var(--d-fg)]">40.2% of local-business queries</strong> — and higher still for
-                  high-commercial service categories (over 60% in categories like cleaning and legal), which is exactly
-                  where most local service businesses live. When someone Googles &ldquo;best HVAC company in Coeur
-                  d&apos;Alene,&rdquo; an AI-generated answer increasingly sits above the old blue links — and it names a
-                  handful of businesses before the customer ever scrolls.
-                </p>
-                <p className="text-[var(--d-fg)] leading-relaxed mb-6 font-medium">
-                  If your business isn&apos;t one of the names, you&apos;re not losing the click. You&apos;re losing the <em>consideration.</em>
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">The paradox: a thousand reviews, still invisible</h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  We recently ran a test: we asked ChatGPT the questions its customers actually ask — starting with the best
-                  HVAC company in Coeur d&apos;Alene — and looked at who it named. One of the businesses we checked is the
-                  area&apos;s #1-reviewed HVAC company: <strong className="text-[var(--d-fg)]">1,375 five-star Google reviews</strong>, the clear market
-                  leader. By every traditional measure, they&apos;ve won — they dominate the map pack.
-                </p>
-
-                <blockquote className="my-8 border-l-2 border-[var(--d-accent)] pl-6">
-                  <p className="font-inter text-[var(--d-fg)] text-lg md:text-xl leading-relaxed italic">
-                    Asked for the best HVAC company in Coeur d&apos;Alene, ChatGPT recommended seven local businesses. The one
-                    with 1,375 five-star reviews — the clear market leader — wasn&apos;t one of them.
-                  </p>
-                </blockquote>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Across four ChatGPT queries for its core services, the market leader was named <strong className="text-[var(--d-fg)]">zero times</strong> —
-                  ChatGPT instead recommended seven other local companies. The reason is structural. Their reviews live on
-                  Google Maps. Their website runs on a page-builder with plugin-generated markup — no connected,
-                  machine-readable identity for an AI to read. So ChatGPT had thousands of reasons to <em>trust</em> them on
-                  Google Maps and almost nothing to <em>cite</em> them with in an answer.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  More reviews didn&apos;t help. That&apos;s not a fluke — it&apos;s how the two systems actually work.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">Reviews are a <em>map pack</em> signal, not an <em>AI citation</em> signal</h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Here&apos;s the part most business owners never hear: Google reviews and AI recommendations are two
-                  different machines. Reviews are one of the strongest drivers of the{' '}
-                  <strong className="text-[var(--d-fg)]">local pack / Google Maps.</strong> Google&apos;s own{' '}
-                  <a href="https://support.google.com/business/answer/7091?hl=en" target="_blank" rel="noopener noreferrer" className={link}>Business Profile documentation</a>{' '}
-                  says local ranking is based on &ldquo;relevance, distance, and prominence,&rdquo; and that &ldquo;more reviews
-                  and positive ratings can help your business&apos;s local ranking.&rdquo; In the{' '}
-                  <a href="https://www.brightlocal.com/learn/google-local-algorithm-and-ranking-factors/" target="_blank" rel="noopener noreferrer" className={link}>expert-consensus local ranking factors</a>,
-                  review signals carry roughly <strong className="text-[var(--d-fg)]">15–20% of the weight</strong> for the map pack — meaningful, but behind
-                  Google Business Profile and on-page signals.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  But that&apos;s the <em>map pack.</em> AI answer engines are a separate system with a different weighting —
-                  and they&apos;re not reading your star count to decide who to name. Reviews are worth having. They&apos;re just
-                  not the lever you think they are for AI.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">AI answers don&apos;t even work like Google rankings</h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  You might assume &ldquo;well, if I rank #1 on Google, the AI will just cite me.&rdquo; It won&apos;t reliably do
-                  that either.
-                </p>
-                <ul className="flex flex-col gap-3 mb-6 pl-5 list-disc marker:text-[var(--d-accent)]">
-                  <li className="text-[var(--d-fg-dim)] leading-relaxed">
-                    <a href="https://ahrefs.com/blog/does-ranking-higher-on-google-mean-youll-get-cited-in-ai-overviews/" target="_blank" rel="noopener noreferrer" className={link}>Ahrefs analyzed 1 million keywords</a>{' '}
-                    and found the correlation between ranking in Google&apos;s top 10 and being cited in AI Overviews was only{' '}
-                    <strong className="text-[var(--d-fg)]">0.347</strong> — &ldquo;even pages ranking #1 only appear in the top three cited links in AI Overviews about
-                    50% of the time.&rdquo;
-                  </li>
-                  <li className="text-[var(--d-fg-dim)] leading-relaxed">
-                    Across AI assistants,{' '}
-                    <a href="https://ahrefs.com/blog/ai-search-overlap/" target="_blank" rel="noopener noreferrer" className={link}>the citation overlap with Google and Bing&apos;s top 10 is just 11% on average</a>{' '}
-                    (Perplexity is the outlier at ~28.6%).
-                  </li>
-                  <li className="text-[var(--d-fg-dim)] leading-relaxed">
-                    And the trend is accelerating:{' '}
-                    <a href="https://www.searchenginejournal.com/google-ai-overview-citations-from-top-ranking-pages-drop-sharply/568637/" target="_blank" rel="noopener noreferrer" className={link}>only 38% of pages cited in Google AI Overviews also ranked in the top 10 — down from 76% seven months earlier.</a>
-                  </li>
-                </ul>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Translation: neither your reviews nor your Google ranking guarantees the AI will name you. It&apos;s a
-                  different game with different rules.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">What AI actually rewards: structure it can read</h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  So what <em>does</em> get you cited? Machine-readable structure. Two hard findings make this concrete.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  <strong className="text-[var(--d-fg)]">AI crawlers mostly can&apos;t run your website.</strong>{' '}
-                  <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler" target="_blank" rel="noopener noreferrer" className={link}>Vercel&apos;s analysis of AI crawler behavior</a>{' '}
-                  found that GPTBot, ClaudeBot, and PerplexityBot <strong className="text-[var(--d-fg)]">do not execute JavaScript</strong> — they read the raw HTML your
-                  server sends. If your site renders its content with JavaScript in the browser (as many builder platforms
-                  do), those crawlers can arrive at a nearly blank page. (Google&apos;s own crawler <em>does</em> render
-                  JavaScript, which is part of why a site can look fine to Google and be invisible to the pure-AI crawlers.)
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  <strong className="text-[var(--d-fg)]">Structured data shows up on the pages AI cites.</strong>{' '}
-                  <a href="https://www.semrush.com/blog/technical-seo-impact-on-ai-search-study/" target="_blank" rel="noopener noreferrer" className={link}>Semrush&apos;s study of 5 million cited URLs</a>{' '}
-                  found Organization, Article, and BreadcrumbList schema appear most frequently on pages AI engines cite. In
-                  a{' '}
-                  <a href="https://www.semrush.com/blog/content-optimization-ai-search-study/" target="_blank" rel="noopener noreferrer" className={link}>separate Semrush study of nearly 12,000 prompts</a>,
-                  the strongest correlations with AI citation were content-quality signals: clarity (<strong className="text-[var(--d-fg)]">+32.83%</strong>),
-                  E-E-A-T signals (<strong className="text-[var(--d-fg)]">+30.64%</strong>), and Q&amp;A formatting (<strong className="text-[var(--d-fg)]">+25.45%</strong>) — while promotional, salesy tone
-                  correlated negatively.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  And the academic work agrees. The peer-reviewed{' '}
-                  <a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer" className={link}>GEO study from Princeton and Georgia Tech</a>{' '}
-                  (KDD 2024) showed that adding statistics, citations, and quotations can boost visibility in AI answers by{' '}
-                  <strong className="text-[var(--d-fg)]">up to 40%</strong> — while keyword stuffing, the old traditional-SEO trick, did nothing.
-                </p>
-                <p className="text-[var(--d-fg)] leading-relaxed mb-6 font-medium">
-                  Reviews build human trust. Structure builds <em>machine</em> trust. AI answers run on the second one.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-12 mb-5">What this means for your business</h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  If you&apos;ve poured years into earning reviews, keep them — they still win the map pack, and they still
-                  matter to human buyers. But understand what they <em>won&apos;t</em> do: they will not, on their own, make an
-                  AI name you when a customer asks for a recommendation.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The businesses that get cited by AI aren&apos;t the ones with the most reviews. They&apos;re the ones an AI can{' '}
-                  <em>read, verify, and quote</em> — because their website is built as machine-readable infrastructure, not a
-                  brochure. That&apos;s the gap. And right now, across North Idaho and Spokane, almost no local business has
-                  closed it.
-                </p>
-
-                {/* ── FAQ ────────────────────────────────────── */}
-                <h2 className="font-inter font-bold text-2xl md:text-3xl text-[var(--d-fg)] mt-16 mb-6">Frequently asked questions</h2>
-                <div className="flex flex-col gap-5">
-                  {faqItems.map((item, i) => (
-                    <div key={i} className="border-t border-[var(--d-line)] pt-5">
-                      <p className="font-inter font-semibold text-[var(--d-fg)] mb-2">{item.q}</p>
-                      <p className="font-inter text-[var(--d-fg-dim)] text-sm leading-relaxed">{item.a}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* ── Sources ────────────────────────────────── */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-16 mb-6">Sources</h2>
-                <ul className="flex flex-col gap-2.5">
-                  {sources.map(([name, url]) => (
-                    <li key={url} className="text-sm leading-relaxed">
-                      <a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] hover:underline break-words">
-                        {name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-
-              </div>
-            </article>
-
-            {/* ── Sidebar ──────────────────────────────────── */}
-            <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Are you one of the names?
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    An Agent Readiness Review shows what AI can understand, verify, and safely do today — including whether discovery exists without a safe next step.
-                  </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Request an Agent Readiness Review
-                  </Link>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
-                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/why-your-website-cant-talk-to-ai" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        The Language Problem: Why Your Website Can&apos;t Talk to AI
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">14 min read</p>
-                    </Link>
-                    <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/entity-first-search-local-businesses" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          Entity-First Search: How Local Businesses Become the Answer AI Systems Recommend
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">16 min read</p>
-                      </Link>
-                    </div>
-                    <div className="border-t border-[var(--d-line)] pt-4">
-                      <Link href="/blog/how-to-rank-in-google-ai-overviews-for-local-businesses" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          How to Rank in Google AI Overviews for Local Businesses
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </aside>
-
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ── Bottom CTA ──────────────────────────────────────── */}
-      <section className="py-20 bg-[var(--d-bg-3)] px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">SEE WHERE YOU STAND</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            Can AI actually find and recommend your business?
-          </h2>
-          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            Request an Agent Readiness Review — we check what AI can understand, verify, and safely do, including discovery across ChatGPT, Perplexity, Google AI, Bing Copilot,
-            and Gemini, and show you exactly where the gap is. No cost, no pitch.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Request an Agent Readiness Review
-            </Link>
-            <Link href="/services" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              See how it works
-            </Link>
-          </div>
+      <section className="py-20 px-5 md:px-8" style={{ background: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="d-eyebrow mb-5">YOUR BUSINESS, CLEARLY UNDERSTOOD</p>
+          <h2 className="font-inter text-3xl md:text-4xl font-semibold tracking-tight text-[var(--d-fg)] mb-5">Make the next step easier for your customer and their AI assistant.</h2>
+          <p className="font-inter text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">An Agent Readiness Review looks at your business information, supporting evidence and the next steps a customer can take. Start with the gaps that matter to a real inquiry.</p>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
         </div>
       </section>
     </>

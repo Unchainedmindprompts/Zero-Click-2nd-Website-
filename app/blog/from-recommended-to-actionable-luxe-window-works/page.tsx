@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
-import { LUXE_CAPABILITY_URL, LUXE_PROOF, REVIEW_HREF } from '@/lib/positioning';
+import { LUXE_CAPABILITY_URL, REVIEW_HREF } from '@/lib/positioning';
 
 const SLUG = 'from-recommended-to-actionable-luxe-window-works';
 const PAGE_URL = `https://www.kodecite.ai/blog/${SLUG}`;
-const TITLE = 'From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents';
+const TITLE = 'How an AI Assistant Sent Luxe Window Works a Real Consultation Request';
 const DESCRIPTION =
-  'How Luxe Window Works moved from AI discovery to a live, protected in-home consultation capability — production proof that this infrastructure can work, and what the authorized test did not prove.';
+  'The business information, request rules and production test that let an outside AI submit one real consultation request to Luxe Window Works.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -28,8 +28,8 @@ const articleSchema = {
   headline: TITLE,
   description: DESCRIPTION,
   datePublished: '2026-08-22T00:00:00-07:00',
-  dateModified: '2026-08-22T00:00:00-07:00',
-  wordCount: 1600,
+  dateModified: '2026-10-01T15:00:00Z',
+  wordCount: 1370,
   keywords:
     'agent-ready business infrastructure, capability contract, controlled action, Luxe Window Works, in-home consultation, idempotency',
   author: articleAuthor,
@@ -57,44 +57,44 @@ const breadcrumbSchema = {
 
 const sections = [
   {
-    h: 'The visibility foundation came first',
+    h: 'The customer needs a suitable business and a useful next step',
     p: [
-      'Luxe did not start with an action endpoint. It started with a business that needed to be understood: who it is, what it installs, where it works, and why a homeowner should take it seriously.',
-      'That work produced an owned site, a connected entity graph, service and geography pages, and the discovery evidence already published on Kodecite — real answers from ChatGPT, Google AI Mode, Bing Copilot, and Gemini, captured April 1, 2026. Those screenshots are discovery proof. They are not this story.',
+      'A homeowner may ask a personal AI assistant to find a window-treatment specialist and start the conversation. The convenience comes from reducing the work between a need and a useful response. That requires the assistant to understand the provider and have a real way to move the request forward.',
+      'Luxe Window Works is the founder’s own business. Its owned site, connected business information, service pages and geography pages provided the foundation. The dated AI-answer screenshots already published on Kodecite, captured April 1, 2026, show discovery observations. The consultation test examined what could happen after that research.',
     ],
   },
   {
-    h: 'Services and geography had to be explicit',
+    h: 'Represent the real business before connecting the request',
     p: [
-      'A window-treatment business is not “we do everything, everywhere.” Luxe has product categories, service towns, and a real edge between in-area, nearby, and out-of-area.',
-      'Until those facts lived in one place, an AI system could recommend Luxe and still invent a visit, a product, or a city the business does not cover. Recommendation without a capability model is how wrong next steps get created.',
+      'The assistant needed a coherent picture of Luxe: the business and the people behind it, its window-treatment offerings, the work it can do, the areas it serves and the evidence a homeowner can use to evaluate it. Those facts connect identity to the customer’s specific project.',
+      'The consultation rules then make fit operational. In-area, nearby and out-of-area requests need appropriate handling. Product questions, commercial work, third-party repairs and existing-customer issues can need different paths. The request flow should preserve those distinctions rather than collect every inquiry in the same way.',
     ],
   },
   {
     h: 'Policies had to be reconciled before any action',
     p: [
-      'The hard part was not the form. It was deciding what a request is allowed to mean.',
+      'The key design decision was what a successful submission would mean for the customer and for the person receiving it.',
       'An in-home consultation request is a request for human follow-up. It is not a reserved time. It is not a price. It is not project acceptance. Commercial work, third-party repair, price-only questions, and existing-customer issues are different intents. Those distinctions existed in the business before they existed in a contract.',
     ],
   },
   {
     h: 'The consultation capability',
     p: [
-      'Luxe now publishes a machine-readable in-home consultation capability. The public contract is version 1.0. Readiness is request-submission-ready. Submission is enabled. Human follow-up is required.',
+      'The production test used Luxe’s published version 1.0 consultation capability: request-submission-ready, with submission enabled and human follow-up required. It described a specific available action, the information needed and how the response should be interpreted.',
       'The discovery URL is public on purpose. An outside agent should be able to read what Luxe permits without guessing from marketing copy.',
     ],
   },
   {
-    h: 'Why booking stayed false',
+    h: 'Make success unambiguous',
     p: [
-      'Because Luxe does not let a machine book the calendar. Direct booking, pricing, and checkout are unpublished. Success means the request was delivered for a human to follow up — not that a visit exists.',
-      'That is control. Calling the request a booking would have been a more exciting sentence. It would also have been false.',
+      'For this workflow, success means that a qualified consultation request was delivered for human follow-up. Scheduling and project details remain a conversation with the business. The response gives the assistant enough information to explain that next step accurately to its customer.',
+      'Direct booking, pricing and checkout were outside the tested capability. Each would require its own working system and operating rules. The consultation request was valuable on its own because it moved a real inquiry into the business without creating a false commitment.',
     ],
   },
   {
-    h: 'Rate limits and idempotency',
+    h: 'Make retries safe for the customer and the inbox',
     p: [
-      'Agent-intended requests are rate limited. Thresholds are not published.',
+      'Software may retry when a response is delayed or uncertain. The workflow needs to protect the customer and the receiving team from repeated submissions. The tested interface used rate limiting and a request identity for that purpose.',
       'Every agent request must include an idempotency key. A replay of the same key and the same request returns the original public result. A different payload with the same key is rejected. That is how you keep a confused agent — or a retry loop — from creating a second job in a real inbox.',
     ],
   },
@@ -137,22 +137,22 @@ export default function LuxeAgentCaseStudyPage() {
 
           <div className="flex items-center gap-3 mb-6">
             <span className="category-tag">Case Studies</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">12 min read</span>
+            <span className="text-[var(--d-fg-dim)] text-sm font-inter">7 min read</span>
           </div>
 
           <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            From Recommended to Actionable:{' '}
-            <span className="text-[var(--d-accent)]">How Luxe Window Works Became Ready for AI Agents</span>
+            How an AI Assistant Sent Luxe Window Works{' '}
+            <span className="text-[var(--d-accent)]">a Real Consultation Request</span>
           </h1>
 
           <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            Discovery was the first chapter. The second was a live, protected consultation request an outside agent could find, qualify, submit, and receive an honest answer for — without pretending the job was booked. {LUXE_PROOF}
+            An outside AI read what Luxe offered, checked that a consultation request fit, submitted it and received a real result. One email reached the business. This case shows the information and working interface that made that step possible.
           </p>
 
           <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
             <div>
               <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
-              <p className="text-[var(--d-fg-dim)] text-xs font-inter">August 22, 2026</p>
+              <p className="text-[var(--d-fg-dim)] text-xs font-inter">Published August 22, 2026 · Updated October 1, 2026</p>
             </div>
           </div>
         </div>
@@ -161,8 +161,7 @@ export default function LuxeAgentCaseStudyPage() {
       <section className="py-16 px-4 bg-[var(--d-bg)]">
         <article className="max-w-3xl mx-auto font-inter" style={{ fontSize: '17px', lineHeight: 1.75, color: 'var(--d-fg-dim)', fontWeight: 300 }}>
           <p className="mb-8">
-            The story is short if you tell it honestly: Luxe became understandable, then verifiable, then recommendable, then actionable, then controlled.
-            Visibility, schema, scheduling, automation, commerce, and governance tools usually stop at one isolated layer. This build connected them for a real service business.
+            The customer’s goal is simple: find a suitable specialist and get the conversation started. The business needs enough context to respond usefully. This build connected that customer intent to one defined request, with the business facts and rules made explicit before an action was enabled.
           </p>
 
           {sections.map((s) => (
@@ -181,7 +180,7 @@ export default function LuxeAgentCaseStudyPage() {
               Production discovery
             </h2>
             <p className="mb-4">
-              The contract is live at:
+              The public discovery address for the capability is:
             </p>
             <p className="mb-4">
               <a
@@ -195,7 +194,7 @@ export default function LuxeAgentCaseStudyPage() {
               </a>
             </p>
             <p>
-              Anyone can read it. It states required fields, allowed intents, eligible markets, response statuses, and the rule that a successful request is not an appointment. That is the point of publishing a capability instead of hoping an agent infers one from a contact page.
+              The published contract describes required fields, allowed intents, eligible markets and response statuses. An outside agent can use that description to determine how to make the request. Discoverability by every AI platform is not assumed; this test established that the participating agent could read and use it.
             </p>
           </section>
 
@@ -241,10 +240,10 @@ export default function LuxeAgentCaseStudyPage() {
               Transferability
             </h2>
             <p className="mb-4">
-              The transferable piece is the sequence: truth, then capability, then control, then one action, then production acceptance. Recommendation is only one stage. The larger goal is safe agent participation. The Luxe contract is specific to in-home window-treatment consultations in a defined geography.
+              The transferable sequence is to understand the business, describe the available request, implement its rules and test the actual result. This can help a customer move from comparison to engagement with less repeated explanation. The Luxe contract remains specific to in-home window-treatment consultations in a defined geography.
             </p>
             <p className="mb-4">
-              Another business gets a different action, or no action yet. A Foundation Build can stop at truth and discovery. An Agent Capability Build is scoped after the real rules are understood. Kodecite’s own site does not currently publish an autonomous submission endpoint.
+              Another business might benefit from an appointment request, a qualified project inquiry or a handoff to a specialist. The action should follow the real buying process. Kodecite’s $4,995 Foundation Build provides the owned website and business foundation; a live action is separately scoped after the operating rules are understood.
             </p>
             <p>
               If you want the earlier indexing chapter — the owned rebuild, the schema work, the crawl — that remains at{' '}
@@ -262,17 +261,17 @@ export default function LuxeAgentCaseStudyPage() {
           <p className="d-eyebrow d-eyebrow-center mb-6">RELATED READING</p>
           <div className="flex flex-col gap-3 mb-12 text-left max-w-xl mx-auto">
             <Link href="/blog/how-we-indexed-49-pages-48-hours" className="text-[var(--d-fg)] hover:text-[var(--d-accent)]">
-              How We Indexed 49 New Pages in 48 Hours — the earlier Luxe chapter
+              How We Indexed 49 New Pages in 48 Hours: the earlier Luxe chapter
             </Link>
             <Link href="/blog/what-is-an-entity-graph" className="text-[var(--d-fg)] hover:text-[var(--d-accent)]">
               What Is an Entity Graph
             </Link>
             <Link href="/blog/why-your-website-cant-talk-to-ai" className="text-[var(--d-fg)] hover:text-[var(--d-accent)]">
-              The Language Problem
+              Can Your Customer’s AI Assistant Understand Your Website?
             </Link>
           </div>
           <h2 className="font-inter font-semibold text-[var(--d-fg)] mb-4" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)' }}>
-            See what AI can understand, verify, and safely do with your business.
+            Make it easier for your customer’s AI assistant to understand your business and take the next step.
           </h2>
           <Link href={REVIEW_HREF} className="d-btn d-btn-primary mt-4">
             Request an Agent Readiness Review →

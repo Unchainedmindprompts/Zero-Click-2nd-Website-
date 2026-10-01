@@ -1,8 +1,8 @@
 # KodeCite.ai
 
-> KodeCite builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. The website remains the human-facing experience. The digital business layer is the consistent owned representation of the same business.
+> Kodecite makes a business easy for the customer’s AI assistant to understand, trust and do business with. We build business-owned websites and connected information about identity, services, fit, evidence and next steps. Live action connections are separately scoped around the business’s actual permissions and process.
 
-As customers begin to delegate discovery, evaluation, and next steps to AI, the assistant may evaluate a business before the customer visits. If it cannot establish fit or an approved next step, the business may never enter the customer’s decision. Luxe Window Works is production proof that this can work today.
+Customers delegate research and next steps to assistants to save effort. A business can help by publishing useful, consistent facts and a dependable contact or request path. The Luxe Window Works case study documents one authorized production consultation-request test, not a guarantee of current delivery or general agent compatibility.
 
 [Full reference (expanded)](https://www.kodecite.ai/llms-full.txt)
 
@@ -24,8 +24,8 @@ Understandable. Verifiable. Recommendable. Actionable. Controlled.
 
 ## Services
 
-- **Foundation Build**: owned website and digital business foundation so AI can understand and evaluate the business. Does not automatically include a live action endpoint.
-- **Agent Capability Build**: one clearly defined approved action after business rules are understood. Protects against invalid, unauthorized, abusive, or duplicate requests. No published price.
+- **Foundation Build** ($4,995 one-time): owned website and digital business foundation so AI can understand and evaluate the business. Does not automatically include a live action endpoint.
+- **Agent Capability Build**: one clearly defined approved action after business rules are understood. Protects against invalid, unauthorized, abusive, or duplicate requests. Priced after the action and safeguards are scoped.
 - **Platform Capability Layer — Pilot**: an owned capability layer that can sit alongside an existing WordPress, Wix, or Squarespace website, on infrastructure and a domain the client controls. Application-only.
 - **Agent Readiness Review** (free, within two business days): what AI can understand, verify, and safely do with a business today.
 
@@ -58,13 +58,13 @@ Based in North Idaho. Built for service businesses anywhere. About may mention t
 - [Below the Content Layer](https://www.kodecite.ai/blog/below-the-content-layer)
 - [Schema Markup: The Complete Guide](https://www.kodecite.ai/blog/schema-markup-complete-guide)
 
-## Production proof
+## Documented production test
 
 Luxe Window Works publishes a machine-readable in-home consultation capability:
 
 https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation
 
-Contract 1.0. Readiness: request-submission-ready. Submission enabled. Human follow-up required. Booking, pricing, and checkout unavailable.
+The published contract describes version 1.0, request-submission-ready, submission enabled and human follow-up required. Booking, pricing and checkout are unavailable. This is not a new test of the delivery path.
 
 ## Contact
 
@@ -75,3 +75,7 @@ Contract 1.0. Readiness: request-submission-ready. Submission enabled. Human fol
 ## Founder
 
 Mark Abplanalp — 30 years in sales, entrepreneur since 2002, window-treatment operator, Apple retail commercial, one-person senior practice.
+
+## Interoperability boundary
+
+llms.txt and agent.json are optional discovery aids. They are not universally supported standards, do not grant customer permission and do not establish a working transaction connection. Read the business rules and verify the outcome for each supported action.
