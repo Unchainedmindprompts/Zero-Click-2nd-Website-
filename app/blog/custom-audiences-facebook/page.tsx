@@ -1,393 +1,223 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+import { blogPosts } from '@/lib/blog';
+
+type Section = { h: string; p: string[]; items?: string[]; source?: string };
+const ARTICLE: { slug: string; title: string; description: string; date: string; category: string; intro: string; sections: Section[]; sources: string[][]; related: string[]; example?: object } = {
+  "slug": "custom-audiences-facebook",
+  "title": "Customer Context, Better Inquiries and the Limits of Audience Targeting",
+  "description": "An updated archival guide to engagement, website and customer audiences, with a focus on permission, fit and the owned customer journey.",
+  "date": "2026-02-27",
+  "category": "ARCHIVE",
+  "intro": "Audience tools can help organize advertising, but behavior is not the same as intent. This updated archival guide explains three kinds of customer context and the website work that makes a resulting inquiry useful. Paid media is not part of Kodecite’s current offer.",
+  "sections": [
+    {
+      "h": "A signal needs interpretation",
+      "p": [
+        "Watching a video, visiting a service page and becoming a customer are different events. They can inform a campaign, but none tells you everything about what a person needs now. A video may be entertainment; a page visit may be research for someone else.",
+        "Treat those events as hypotheses about relevance. The next message and landing page should help the person decide whether the offering fits, rather than assume that a past action establishes readiness to buy."
+      ]
+    },
+    {
+      "h": "1. Engagement context",
+      "p": [
+        "People who interact with a business’s content may already recognize its name or work. A useful follow-up can add a different piece of information: how a project starts, what a service includes or an example of a similar job.",
+        "Do not attach a fixed conversion value to a particular viewing percentage. Video length, placement, creative and audience all affect the meaning of engagement. Keep claims about superior performance grounded in the campaign’s own evidence, with enough data to distinguish a pattern from noise."
+      ]
+    },
+    {
+      "h": "2. Website context",
+      "p": [
+        "A visit to a detailed service page may indicate a different question from a visit to the home page. Where tracking is permitted and available, that context can help a media specialist design a more relevant message.",
+        "The more important website question is whether the page actually answered the visitor’s need. If people repeatedly open the contact page but fail to submit, investigate missing information, unclear expectations and form friction. Advertising cannot repair a confusing request process on its own."
+      ]
+    },
+    {
+      "h": "3. Customer context",
+      "p": [
+        "An existing customer relationship may reveal useful patterns about the kinds of work the business serves well. Those patterns can guide the offer and the examples shown on the website even without uploading a customer list anywhere.",
+        "If customer-list or similar audience tools are used, review the platform’s current terms and the rights applicable to that data. A list is not automatically available for every advertising purpose. Sensitive information and restricted categories require particular care. Confirm the permitted scope before any transmission."
+      ],
+      "source": "terms"
+    },
+    {
+      "h": "Keep audience design proportionate",
+      "p": [
+        "A small local business may not benefit from splitting every behavior into a separate campaign. Too many segments can make results harder to interpret and leave each group with little usable data. The best structure depends on actual audience size, customer journey and platform options.",
+        "Start with a clear business question. Are you trying to explain a new service, remind interested customers of the next step or reach suitable people beyond an existing audience? Give each experiment a purpose and measure the outcome that corresponds to it."
+      ]
+    },
+    {
+      "h": "Make the landing page carry the context",
+      "p": [
+        "A customer who has already watched an installation example may need practical answers about service area and consultation. Someone encountering the business for the first time may need more introduction and proof. Both should reach the same accurate business facts.",
+        "Build reusable service information rather than separate, contradictory offers for each campaign. The owner, offerings, credentials, examples and policies should agree wherever the customer encounters them. That consistency also helps assistants collecting information from multiple pages."
+      ]
+    },
+    {
+      "h": "Look at inquiry quality and follow-up",
+      "p": [
+        "Review the path from interest to actual work. How many requests were in area? How many matched the service? Did the team have enough information to respond? Were customers clear that submission requested follow-up rather than reserving a time?",
+        "A better result may come from a clearer service description or a shorter form rather than another audience filter. Keep the people handling inquiries involved, because the dashboard cannot show every misunderstanding that appears in the conversation."
+      ]
+    },
+    {
+      "h": "Why this matters when an assistant represents the customer",
+      "p": [
+        "A personal AI assistant may carry explicit context: the customer’s project, location and constraints. The business should help it determine suitability and identify the appropriate next step. That is often more actionable than inferring intent from a past click.",
+        "Where a live capability exists, the assistant should submit only the information and action its customer has approved, and receive an accurate result or handoff. Kodecite’s current work focuses on that understandable business foundation and separately scoped requests, while these paid-media lessons remain historical background."
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "Meta Business Help Center",
+      "https://www.facebook.com/business/help"
+    ],
+    [
+      "Meta: Customer List Custom Audiences Terms",
+      "https://www.facebook.com/legal/terms/customaudience"
+    ]
+  ],
+  "related": [
+    "entity-first-search-local-businesses",
+    "from-recommended-to-actionable-luxe-window-works"
+  ]
+};
+const SOURCE_LINKS: Record<string, string[]> = {
+  "google": [
+    "Google Search Central: AI features and your website",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
+  "schema": [
+    "Schema.org: About the vocabulary",
+    "https://schema.org/docs/about.html"
+  ],
+  "jsonld": [
+    "W3C: JSON-LD 1.1",
+    "https://www.w3.org/TR/json-ld11/"
+  ],
+  "local": [
+    "Schema.org: LocalBusiness",
+    "https://schema.org/LocalBusiness"
+  ],
+  "service": [
+    "Schema.org: Service",
+    "https://schema.org/Service"
+  ],
+  "offer": [
+    "Schema.org: Offer",
+    "https://schema.org/Offer"
+  ],
+  "updates": [
+    "Google Search documentation updates",
+    "https://developers.google.com/search/updates"
+  ],
+  "crawl": [
+    "Vercel: The rise of the AI crawler",
+    "https://vercel.com/blog/the-rise-of-the-ai-crawler"
+  ],
+  "reviews": [
+    "Google Business Profile: Local ranking guidance",
+    "https://support.google.com/business/answer/7091?hl=en"
+  ],
+  "sitemap": [
+    "Google Search Central: Sitemaps",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+  ],
+  "luxe": [
+    "Luxe Window Works: Public consultation capability",
+    "https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation"
+  ],
+  "meta": [
+    "Meta Business Help Center",
+    "https://www.facebook.com/business/help"
+  ],
+  "terms": [
+    "Meta: Customer List Custom Audiences Terms",
+    "https://www.facebook.com/legal/terms/customaudience"
+  ]
+};
+const PAGE_URL = `https://www.kodecite.ai/blog/${ARTICLE.slug}`;
+const WORD_COUNT = 737;
+const READ_TIME = '4 min read';
+const PUBLISHED = 'February 27, 2026';
 
 export const metadata: Metadata = {
-  title: '3 Facebook Custom Audiences for Local Business',
-  description:
-    'The three layered Facebook custom audiences every local business needs — awareness, retargeting, and lookalike — and how to build them to convert.',
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
-  },
-  openGraph: {
-    title: 'The Three Custom Audiences Every Local Business Needs on Facebook',
-    description:
-      'The three-audience system that replaces broad interest targeting and makes Facebook ads work for local service businesses.',
-    url: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
-    type: 'article',
-  },
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: ARTICLE.title, description: ARTICLE.description, url: PAGE_URL, type: 'article', publishedTime: `${ARTICLE.date}T00:00:00-07:00`, modifiedTime: '2026-10-01T15:00:00Z' },
 };
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/custom-audiences-facebook#article',
-  headline: 'The Three Custom Audiences Every Local Business Needs on Facebook',
-  description:
-    'Most businesses set up one broad audience and wonder why their ads don\'t convert. These three layered audiences — awareness, intent, and retargeting — are the foundation of every campaign we build.',
-  datePublished: '2026-02-27T00:00:00-07:00',
-  dateModified: '2026-02-27T00:00:00-07:00',
-  wordCount: 900,
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  keywords: 'Facebook custom audiences, video view audience, website retargeting, lookalike audiences, Meta pixel, local business Facebook ads, audience segmentation',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  url: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/custom-audiences-facebook',
-  },
-  citation: [
-    { '@type': 'CreativeWork', name: 'Meta Business Help Center — Custom Audiences', url: 'https://www.facebook.com/business/help/744354708981227' },
-    { '@type': 'CreativeWork', name: 'Meta Ads Manager Guide', url: 'https://www.facebook.com/business/help/200000840044554' },
-    { '@type': 'CreativeWork', name: 'Meta Business Help Center', url: 'https://www.facebook.com/business/help' },
-  ],
+  '@context': 'https://schema.org', '@type': 'Article', '@id': `${PAGE_URL}#article`,
+  headline: ARTICLE.title, description: ARTICLE.description,
+  datePublished: `${ARTICLE.date}T00:00:00-07:00`, dateModified: '2026-10-01T15:00:00Z',
+  wordCount: WORD_COUNT, articleSection: ARTICLE.category,
+  author: articleAuthor, publisher: articlePublisher, isPartOf: blogCollectionPage,
+  url: PAGE_URL, mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+  image: 'https://www.kodecite.ai/og-image.png', about: [businessRef],
+  citation: ARTICLE.sources.map(([name, url]) => ({ '@type': 'CreativeWork', name, url })),
 };
-
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': 'https://www.kodecite.ai/blog/custom-audiences-facebook#breadcrumb',
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', '@id': `${PAGE_URL}#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'Three Custom Audiences for Local Businesses',
-      item: 'https://www.kodecite.ai/blog/custom-audiences-facebook',
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: ARTICLE.title, item: PAGE_URL },
   ],
 };
 
-const faqPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is a custom audience on Facebook?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A custom audience is a targeting group built from your own data — website visitors tracked by the Facebook pixel, video viewers, email lists, or customer files — rather than Facebook\'s interest and demographic categories. Custom audiences are more precise and typically produce significantly lower cost-per-lead than cold interest-based audiences because they target people who already have some connection to your business.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need the Facebook pixel to use custom audiences?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For website visitor custom audiences, yes — the Meta Pixel must be installed on your website. For video view audiences, no pixel is needed — those audiences are built from engagement with your Facebook and Instagram content within Meta\'s platform. Starting with video view audiences allows you to begin building warm audiences even before your pixel has collected significant data.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How many website visitors do I need before retargeting audiences are effective?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Facebook requires a minimum of 100 people in a custom audience before it can be used for advertising. In practice, retargeting audiences become statistically reliable at around 1,000 monthly website visitors. Below that threshold, video view audiences are a more practical starting point for building warm audiences without requiring existing website traffic.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is a lookalike audience and how does it differ from a custom audience?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A lookalike audience is built by Facebook\'s algorithm to find people who share characteristics with a source custom audience such as your customer list or best website visitors. Custom audiences retarget people who already know your business. Lookalike audiences find new people who resemble your best customers — making them the most efficient cold-targeting method available and the scaling engine of a mature Facebook ad strategy.',
-      },
-    },
-  ],
-};
-
-export default function CustomAudiencesFacebook() {
+export default function ArticlePage() {
+  const related = ARTICLE.related.map((slug) => blogPosts.find((post) => post.slug === slug)).filter(Boolean);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
-            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[var(--d-fg)] truncate">Three Custom Audiences</span>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <header className="pt-36 pb-16 px-5 md:px-8" style={{ background: 'var(--d-bg)', borderBottom: '1px solid var(--d-line)' }}>
+        <div className="max-w-4xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex gap-3 text-sm font-inter text-[var(--d-fg-dim)] mb-9">
+            <Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/blog">Insights</Link>
           </nav>
-
-          <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">Facebook Ads</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">6 min read</span>
-          </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            The Three Custom Audiences Every{' '}
-            <span className="text-[var(--d-accent)]">Local Business Needs on Facebook</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            One broad audience is not a strategy. The businesses consistently generating leads from Facebook run three layered custom audiences that together create a pipeline from cold awareness to warm conversion.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">ZC</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">KodeCite.ai</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">February 27, 2026</p>
-              </div>
-            </div>
+          <p className="d-eyebrow mb-6">{ARTICLE.category} · {READ_TIME}</p>
+          <h1 className="font-inter font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-[var(--d-fg)] mb-8">{ARTICLE.title}</h1>
+          <p className="font-inter text-lg md:text-xl leading-relaxed text-[var(--d-fg-dim)] max-w-3xl">{ARTICLE.intro}</p>
+          <div className="mt-9 pt-6 font-inter text-sm text-[var(--d-fg-dim)]" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <p className="font-semibold text-[var(--d-fg)] mb-1">Mark Abplanalp · Kodecite</p>
+            <p>Published {PUBLISHED} · Updated October 1, 2026</p>
           </div>
         </div>
+      </header>
+      <section className="px-5 md:px-8 py-16 md:py-20" style={{ background: 'var(--d-bg)' }}>
+        <article className="max-w-3xl mx-auto font-inter text-[var(--d-fg-dim)]" style={{ fontSize: '17px', lineHeight: 1.85 }}>
+          {ARTICLE.sections.map((section) => (
+            <section key={section.h} className="mb-12">
+              <h2 className="font-inter font-semibold text-2xl md:text-3xl leading-tight tracking-tight text-[var(--d-fg)] mb-5">{section.h}</h2>
+              {section.p.map((paragraph) => <p key={paragraph} className="mb-5">{paragraph}</p>)}
+              {section.items && <ul className="space-y-3 pl-6 mb-5 list-disc">{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
+              {section.source && SOURCE_LINKS[section.source] && <p className="text-sm"><a href={SOURCE_LINKS[section.source][1]} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{SOURCE_LINKS[section.source][0]} →</a></p>}
+              {section.h === 'A small connected example' && ARTICLE.example && <pre className="overflow-x-auto rounded-xl p-5 text-xs md:text-sm leading-relaxed my-6" style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)' }}><code>{JSON.stringify(ARTICLE.example, null, 2)}</code></pre>}
+            </section>
+          ))}
+          <section className="pt-8 mt-12" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Sources and further reading</h2>
+            <ul className="space-y-3 text-sm">{ARTICLE.sources.map(([label, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{label} →</a></li>)}</ul>
+          </section>
+          <section className="pt-8 mt-10" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Keep reading</h2>
+            <ul className="space-y-4">{related.map((post) => post && <li key={post.slug}><Link href={`/blog/${post.slug}`} className="text-[var(--d-accent)] hover:underline">{post.title} →</Link></li>)}</ul>
+            <Link href="/blog" className="inline-block mt-8 text-sm text-[var(--d-fg-dim)] hover:text-[var(--d-fg)]">← All insights</Link>
+          </section>
+        </article>
       </section>
-
-      <div className="section-divider" />
-
-      {/* Article + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
-                  Most local businesses running Facebook ads use one audience: a broad demographic and interest-based targeting set they defined when they set up their first campaign and never revisited. That audience is their best performer on good days and a budget drain on bad ones. The businesses that consistently generate leads from Facebook have a different architecture: three layered custom audiences that together create a pipeline from cold awareness to warm conversion.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Why Custom Audiences Outperform Interest Targeting
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  The Problem With Interest-Based Targeting
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Interest-based targeting — selecting demographics and categories from Facebook&apos;s menu of options — is a best-guess approximation of your customer profile. Facebook assigns interest categories based on content engagement, page likes, and behavioral signals. Someone categorized as interested in &ldquo;home improvement&rdquo; might be a homeowner actively seeking renovation contractors or a renter who occasionally reads HGTV articles. The signal quality is low, and the audience size is large — which means your ad budget is spread across a wide range of people with varying relevance.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Interest-based audiences also don&apos;t improve over time. The same broad category that was available when you set up your account two years ago is the same category today. There&apos;s no feedback loop, no learning from your actual customers, no compounding efficiency. The cost per lead stays roughly constant because the input stays constant.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  How Custom Audiences Use Your Real Data
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Custom audiences are built from your actual business data — the people who have watched your videos, visited your website, or become your customers. These are real signals of real interest, not inferred categories. A person who watched 75% of your window cleaning demonstration video and then visited your estimate page is a demonstrably high-intent prospect. Targeting that person specifically, with messaging that acknowledges their familiarity, converts at a fraction of the cost of targeting a broad interest category that might contain them — mixed with millions of irrelevant users.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Audience 1 — Video View Audiences (Awareness Layer)
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Building a Video View Custom Audience
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  A video view custom audience captures everyone who has watched a specified percentage of a video you&apos;ve run as an ad or posted organically. In Facebook Ads Manager, navigate to Audiences, create a new Custom Audience, select Video as the source, choose your video, and select a view threshold — 50%, 75%, or 95%. We recommend building separate audiences for each threshold so you can target the more engaged 75%+ viewers with different messaging than the 50%+ viewers.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The video itself can be anything that demonstrates your work: a 30 to 60 second job walkthrough, a before-and-after transformation, a customer testimonial. The production quality matters less than the authenticity. Real job footage from a smartphone consistently outperforms stock imagery or professionally produced brand videos for local service businesses. People evaluating a local contractor want to see real work. Show them real work.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Using View Depth for Qualification
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  View depth is a qualification signal. Someone who watches 25% of a video probably saw it autoplay in their feed and kept scrolling. Someone who watches 75% made a deliberate choice to watch something that required attention. Treat these two groups differently. The 25% viewers belong in a broad awareness retargeting bucket. The 75%+ viewers belong in a high-intent retargeting bucket with stronger conversion messaging. Segmenting by view depth typically cuts cost-per-lead in half compared to treating all video viewers as the same audience.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Audience 2 — Website Visitor Retargeting (Intent Layer)
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Pixel Setup and Event Tracking
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The Meta Pixel is a snippet of JavaScript placed on every page of your website. Once installed, it tracks every page visit and can be configured to track specific events — form submissions, phone number clicks, estimate page visits, thank-you page loads. If you don&apos;t have the pixel installed on your site, installing it is the single highest-priority action you can take before running any Facebook ads. A website with no pixel is generating traffic that produces zero audience data for future campaigns.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Standard event tracking should capture at minimum: PageView (all pages), ViewContent (service-specific pages), Lead (any form submission), and Contact (phone or email link clicks). These event types allow you to build segmented audiences based on what actions visitors took rather than just that they visited the site.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Segmenting Visitors by Page and Behavior
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Not all website visitors are equal. Build separate custom audiences for: all website visitors (last 30 days), estimate or contact page visitors who did not submit (highest intent, did not convert), service-specific page visitors (medium intent, researching), and thank-you page visitors (past leads or customers — exclude from conversion campaigns, include in upsell or referral campaigns). Each of these segments requires different ad messaging. Serving the same &ldquo;call for a free estimate&rdquo; ad to someone who just submitted an estimate request as to someone who visited your homepage once is a waste of budget and a poor user experience.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Audience 3 — Customer Lookalikes (Scaling Layer)
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Building the Source Audience
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  A lookalike audience requires a source — a custom audience that Facebook uses to identify characteristics of your best customers and find similar people. The source can be a customer email list, a list of converted leads, a website visitor audience filtered to people who submitted a form, or a video view audience of 95%+ viewers. The higher the quality and specificity of the source, the higher the quality of the resulting lookalike.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  For most local service businesses, the highest-quality source is a customer email list. Upload your customer database (minimum 100 records, ideally 500+) as a Custom Audience, then create a 1% Lookalike from that audience targeting your service area. Facebook identifies the common characteristics — age, income range, behavioral signals, content preferences — of your actual customers and finds similar people who haven&apos;t encountered your brand yet.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Lookalike Percentage and Scale Trade-offs
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Lookalike audiences are built in percentage increments from 1% to 10%, where 1% is the most similar to your source and 10% is the broadest match. For local service businesses, we always start at 1% — the tightest match, the smallest audience, the highest similarity to your actual customers. As you scale budget, you can expand to 2% or 3%. Going beyond 3% typically produces audiences that are too dissimilar from your customer profile to convert efficiently.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Connecting the Three Audiences Into a System
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Exclusion Lists That Keep Audiences Clean
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Exclusion lists prevent audience overlap and control where budget is spent. Your awareness campaigns targeting cold lookalike audiences should exclude current website visitors and video viewers (who should be in retargeting campaigns). Your retargeting campaigns should exclude past customers (who should be in a separate upsell or referral campaign). Your customer lookalike campaigns should exclude all existing customers. Without these exclusions, the same person appears in multiple campaigns simultaneously — you bid against your own campaigns for the same impression.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Refreshing and Maintaining Audience Quality
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Custom audiences are not set-and-forget. Video view audiences should be set to rolling 30 to 90 day windows so they capture recent engagement, not engagement from two years ago. Website visitor audiences should be refreshed to 30-day windows unless your conversion cycle is longer. Customer lookalike source audiences should be updated whenever you add a significant number of new customers — quarterly at minimum, monthly if you have high booking volume. An audience built from stale data produces stale results. Maintain these audiences as actively as you maintain any other business system.
-                </p>
-
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
-              </div>
-            </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
-                  <p className="eyebrow mb-4 text-xs">THE THREE AUDIENCES</p>
-                  <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-sm font-inter mb-1">Audience 1</p>
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Video View Custom Audience</p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">50%+ and 75%+ view thresholds, segmented</p>
-                    </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-sm font-inter mb-1">Audience 2</p>
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Website Visitor Retargeting</p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">Pixel-based, segmented by page visited</p>
-                    </div>
-                    <div>
-                      <p className="text-[var(--d-accent)] font-bold text-sm font-inter mb-1">Audience 3</p>
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Customer Lookalike</p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">1% lookalike from customer email list</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Running One Audience?
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    We build and manage the full three-audience system — with proper pixel setup, audience segmentation, exclusion lists, and creative tailored to each layer.
-                  </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get the Full System
-                  </Link>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
-                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
-                    </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/what-is-zero-click-search" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          What Is Zero Click Search and Why Your Business Is Invisible
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </aside>
-
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      <section className="py-20 bg-[var(--d-bg)] px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">STOP GUESSING ON AUDIENCES</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            Your Customers Are Already on Facebook. Build the System to Find Them.
-          </h2>
-          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The three-audience system turns your pixel data, video engagement, and customer list into a compounding lead generation engine. Let&apos;s build it for your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Start the Conversation
-            </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read More Articles
-            </Link>
-          </div>
+      <section className="py-20 px-5 md:px-8" style={{ background: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="d-eyebrow mb-5">YOUR BUSINESS, CLEARLY UNDERSTOOD</p>
+          <h2 className="font-inter text-3xl md:text-4xl font-semibold tracking-tight text-[var(--d-fg)] mb-5">Make the next step easier for your customer and their AI assistant.</h2>
+          <p className="font-inter text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">An Agent Readiness Review looks at your business information, supporting evidence and the next steps a customer can take. Start with the gaps that matter to a real inquiry.</p>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
         </div>
       </section>
     </>

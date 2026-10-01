@@ -3,12 +3,12 @@ import Link from 'next/link';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
 import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
-import { PRICING_CONTEXT, REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
+import { REVIEW_HREF, REVIEW_TURNAROUND } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
-    'Foundation Build — one-time $4,995 for the owned foundation AI can understand and evaluate. Agent Capability adds one approved action after the rules are clear. Foundation does not automatically include a live agent-action endpoint.',
+    'A business-owned website and clear information for customers and their AI assistants. Foundation Build: $4,995 one-time. Actions scoped separately. No mandatory retainer.',
   alternates: { canonical: `${ORIGIN}/pricing` },
 };
 
@@ -23,7 +23,7 @@ const pricingSchema = {
       url: PAGE_URL,
       name: 'Pricing — KodeCite.ai',
       description:
-        'Foundation Build — one-time $4,995 for the owned foundation AI can understand and evaluate. Custom actions are scoped separately. No citation money-back guarantee.',
+        'Foundation Build costs $4,995 one-time for a business-owned website and connected information. Agent Capability Build is separately scoped. Platform Capability Layer is an application-only pilot.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -38,7 +38,7 @@ const pricingSchema = {
       serviceType: 'Owned business infrastructure',
       provider: businessRef,
       description:
-        'A one-time owned website, truth, and discovery foundation. Does not automatically include a custom protected action endpoint. Transferred to you on handoff. No required retainer.',
+        'A business-owned website with clear identity, offers, evidence, policies, and connected business information. A live agent-action endpoint is scoped separately. No mandatory retainer.',
       areaServed: { '@type': 'Country', name: 'United States' },
       offers: {
         '@type': 'Offer',
@@ -62,12 +62,12 @@ const pricingSchema = {
 };
 
 const whatYouGet = [
-  { t: 'An owned high-performance website.', d: 'Fast pages for people, on accounts you control.' },
-  { t: 'One reliable record of the business.', d: 'Identity, services, locations, credentials, proof, policies, and limitations — not scattered pieces.' },
-  { t: 'Connected services, locations, credibility, and proof.', d: 'So search and AI can check the same facts.' },
-  { t: 'Published clearly for search and AI.', d: 'The same accurate information, published so people and assistants can find it. This does not make every system read the business with certainty.' },
-  { t: 'A map of actions AI may eventually request.', d: 'What can be asked for, what information is required, where you work, and what success does not mean. This is the map — not an automatic live action endpoint.' },
-  { t: 'A system and handoff the business can operate and own.', d: 'You own the site and the accounts it runs on. No mandatory retainer. A protected action later is a separate Agent Capability Build.' },
+  { t: 'A website customers can use comfortably.', d: 'Fast, clear pages that make your services, evidence, and next steps easy to find.' },
+  { t: 'A consistent business identity.', d: 'Your people, locations, service area, and contact details connected to one accurate record.' },
+  { t: 'Offers with enough detail to assess fit.', d: 'Services, relevant limits, credentials, examples, and policies explained together.' },
+  { t: 'Connected information for assistants.', d: 'Structured business information and appropriate discovery files that agree with what customers see on the site.' },
+  { t: 'A plan for useful next steps.', d: 'Which actions could be supported, what information they need, who approves them, and what a successful result would mean. Implementation of a live agent action is scoped separately.' },
+  { t: 'Ownership and a practical handoff.', d: 'The website, code, and operating accounts are yours. You get a walkthrough and clear dependencies, without a mandatory retainer.' },
 ];
 
 const addOns = [
@@ -78,8 +78,8 @@ const addOns = [
 ];
 
 const FG = 'var(--d-fg)';
-const DIM = 'rgba(233, 238, 255, 0.95)';
-const MUTE = 'rgba(219, 227, 255, 0.8)';
+const DIM = 'var(--d-fg-dim)';
+const MUTE = 'var(--d-fg-mute)';
 const ACCENT = 'var(--d-accent)';
 const sectionGap = { marginTop: '30px' };
 
@@ -92,10 +92,10 @@ export default function PricingPage() {
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">PRICING</div>
           <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(30px, 4.8vw, 62px)', lineHeight: 1.12, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
-            Price the foundation. <em className="serif" style={{ color: ACCENT }}>Scope the action.</em>
+            A foundation you own. <em className="serif" style={{ color: ACCENT }}>An action when you need it.</em>
           </h1>
           <p className="font-inter mb-9" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '620px' }}>
-            As customers begin to delegate outcomes to AI, the assistant has to understand the business and decide whether it fits. {PRICING_CONTEXT}
+            Start with a $4,995 one-time Foundation Build: a website and connected business information you own. Add one approved assistant action when you need it, with its scope and price agreed separately.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>
@@ -103,7 +103,7 @@ export default function PricingPage() {
           </div>
           <div className="glass-panel-soft flex flex-col sm:flex-row sm:items-center gap-x-3 gap-y-2" style={{ padding: '16px 22px' }}>
             <span className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.06em', color: MUTE }}>
-              Discovery evidence on Luxe, Shirin, and others is visibility — one outcome of clearer infrastructure.
+              See dated examples of how client businesses have appeared in search and AI answers.
             </span>
             <Link href="/services#proof" className="font-inter font-semibold" style={{ fontSize: '13px', color: ACCENT }}>
               See discovery proof →
@@ -125,9 +125,7 @@ export default function PricingPage() {
             ONE-TIME · YOU OWN THE SITE AND THE ACCOUNTS · NO REQUIRED RETAINER
           </p>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            The owned foundation AI can understand and evaluate. It does not automatically include a live agent-action
-            endpoint. If the business later needs a defined action — a consultation request, a qualified inquiry,
-            a controlled handoff — that is scoped as an Agent Capability Build after the rules are clear.
+            A complete website and connected business information: who you are, what you offer, who it fits, why a customer can trust it, and how to take the next step. A live agent-action endpoint is a separate Agent Capability Build, scoped around one defined workflow.
           </p>
 
           <p className="font-mono mb-5" style={{ fontSize: '10px', letterSpacing: '0.18em', color: ACCENT }}>WHAT YOU GET</p>
@@ -156,16 +154,14 @@ export default function PricingPage() {
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">AGENT CAPABILITY BUILD</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
-            One defined action at a time. <em className="serif" style={{ color: ACCENT }}>No published price.</em>
+            One useful action. <em className="serif" style={{ color: ACCENT }}>Scoped around your business.</em>
           </h2>
           <div className="flex flex-col gap-5" style={{ maxWidth: '720px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              A consultation request is not a booking. A price inquiry is not a checkout. A commercial project is not a one-click accept.
-              Different actions carry different rules, different risk, and different control requirements.
+              Choose a next step worth making easier: a consultation request, a qualified inquiry, or a handoff to your team. We define the required information, customer permission, business conditions, and the result the customer should receive.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              We only scope this after the business rules are understood: required customer information, service area, permission checks,
-              protection from invalid, abusive, or duplicate requests, human follow-up, and a clear meaning of success. Checking the agreed result is part of the work.
+              Pricing follows that scope. The build includes the agreed validation, duplicate protection, delivery, response, and handoff checks. If the result is a request for follow-up, it says so clearly. Confirmed bookings, prices, or purchases require their own supported rules and integrations.
             </p>
           </div>
         </GlassPanel>
@@ -175,11 +171,10 @@ export default function PricingPage() {
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">PLATFORM CAPABILITY LAYER · PILOT</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.4vw, 42px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
-            Application-only. <em className="serif" style={{ color: ACCENT }}>No invented price.</em>
+            Keeping your website? <em className="serif" style={{ color: ACCENT }}>Apply for the pilot.</em>
           </h2>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-            For selected businesses remaining on WordPress, Wix, Squarespace, or similar platforms: an owned capability layer that can sit alongside the existing website, on infrastructure and a domain you control.
-            This is a founding pilot. A full rebuild is still the strongest path.
+            For selected businesses on WordPress, Wix, Squarespace, or similar platforms, we assess a business-owned layer alongside the existing site. The pilot is application-only, with scope determined by your platform and the workflow you need. We review fit before quoting; there is no published pilot price.
           </p>
         </GlassPanel>
       </section>
@@ -188,23 +183,22 @@ export default function PricingPage() {
         <GlassPanel
           style={{
             padding: 'clamp(22px, 5vw, 64px)',
-            border: '1px solid rgba(93,213,255,0.45)',
-            boxShadow: '0 0 0 1px rgba(93,213,255,0.15), 0 24px 70px -30px rgba(93,213,255,0.45)',
+            border: '1px solid var(--d-line-s)',
+            boxShadow: 'none',
           }}
         >
-          <div className="inline-flex items-center gap-2 mb-6" style={{ padding: '6px 14px', borderRadius: '999px', border: '1px solid rgba(93,213,255,0.4)', background: 'rgba(93,213,255,0.08)' }}>
-            <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: ACCENT, boxShadow: '0 0 8px rgba(93,213,255,0.8)' }} />
-            <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.2em', color: ACCENT }}>PRODUCTION ACCEPTANCE</span>
+          <div className="inline-flex items-center gap-2 mb-6" style={{ padding: '6px 14px', borderRadius: '999px', border: '1px solid var(--d-line-s)', background: 'var(--d-bg-3)' }}>
+            <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: ACCENT, boxShadow: 'none' }} />
+            <span className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.2em', color: ACCENT }}>HOW WE CHECK THE WORK</span>
           </div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.8vw, 46px)', lineHeight: 1.08, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
-            The work is not done until the <em className="serif" style={{ color: ACCENT }}>agreed outputs pass.</em>
+            Agree what good looks like. <em className="serif" style={{ color: ACCENT }}>Then test it.</em>
           </h2>
           <p className="font-inter mb-5" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            Before a build starts, we agree in writing what the system must publish, what AI must be able to understand,
-            and — when an action is included — what the protected workflow must successfully do. The engagement is not complete until those tests pass.
+            Before the build, we agree in writing what will be published, which reading and customer journeys will be checked, and what any included action must do. We verify those outputs, including relevant failure and handoff paths, before calling the work complete.
           </p>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
-            This is an acceptance standard, not a money-back guarantee and not a promise that a specific AI engine will cite the business.
+            The commitment covers the agreed build and tests. It is not a money-back guarantee tied to citations, and it cannot guarantee that a particular assistant will read, rank, or recommend your business.
           </p>
         </GlassPanel>
       </section>
@@ -213,7 +207,7 @@ export default function PricingPage() {
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-4">FOUNDATION ADD-ONS</div>
           <p className="font-inter mb-10" style={{ fontSize: '15px', lineHeight: 1.6, color: MUTE, fontWeight: 300, fontStyle: 'italic', maxWidth: '620px' }}>
-            Optional. One-time. These extend the owned foundation. They are not citation-tracking retainers.
+            Optional, one-time additions for more services, locations, or questions your customers need answered.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {addOns.map((a) => (
@@ -236,14 +230,14 @@ export default function PricingPage() {
             Start with an <em className="serif" style={{ color: ACCENT }}>Agent Readiness Review.</em>
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
-            The Agent Readiness Review shows what AI can understand, evaluate, and safely do with your business today. {REVIEW_TURNAROUND} You keep the report either way.
+            See where customers and their assistants can understand your offer, verify it, and take the next step, and where they may get stuck. The review gives you practical priorities before you choose a build. {REVIEW_TURNAROUND} You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
             <Link href="/services" className="d-btn d-btn-ghost">See how it works →</Link>
           </div>
           <p className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.14em', color: MUTE }}>
-            OWNED BY YOU · CONTROLLED BY YOU · READY FOR THE AGENT-DRIVEN WEB
+            CLEAR SCOPE · BUSINESS OWNERSHIP · NO MANDATORY RETAINER
           </p>
         </GlassPanel>
       </section>

@@ -1,734 +1,237 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import BarChart from './BarChart';
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+import { blogPosts } from '@/lib/blog';
+
+type Section = { h: string; p: string[]; items?: string[]; source?: string };
+const ARTICLE: { slug: string; title: string; description: string; date: string; category: string; intro: string; sections: Section[]; sources: string[][]; related: string[]; example?: object } = {
+  "slug": "aeo-geo-making-seo-better",
+  "title": "SEO, AEO and GEO: One Business, Many Ways to Be Found",
+  "description": "How search visibility, AI recommendations and delegated customer requests connect through accurate business information and a useful next step.",
+  "date": "2026-03-08",
+  "category": "DISCOVERY",
+  "intro": "Your customer wants a good decision with less work. Sometimes that starts with a Google search. Sometimes it starts with asking a personal AI assistant to compare providers and contact the right one. Your business needs to make sense throughout that journey.",
+  "sections": [
+    {
+      "h": "Start with the customer’s job",
+      "p": [
+        "An owner can spend a lot of time deciding which acronym to buy. SEO usually describes work on search visibility. AEO emphasizes answers, while GEO emphasizes generative search. Agencies use those terms differently. A useful buying question is more concrete: what will this work help a customer understand or accomplish?",
+        "Consider a homeowner researching motorized shades. They need to know whether a provider serves their town, offers the right products, understands the installation, and can arrange a consultation. A ranking, an AI mention and a submitted request each describe a different part of that experience. None is a substitute for the others."
+      ]
+    },
+    {
+      "h": "Build facts that can travel between channels",
+      "p": [
+        "A clear service page can help a person reading it, a search engine indexing it, and an assistant gathering information for a comparison. The information should survive being summarized: what the service includes, who it is suitable for, where it is available, what affects cost, and how to move forward.",
+        "Put the same facts in the visible page and the appropriate machine-readable representation. Connect the service to the business that provides it, and connect important claims to evidence. This creates a reusable source of business information rather than a different story written for every interface."
+      ]
+    },
+    {
+      "h": "What the original GEO research contributes",
+      "p": [
+        "The GEO research accepted at KDD 2024 studied how changes to source content affected visibility within a generative-search benchmark. It reported improvements of up to 40% in its evaluations, with effectiveness varying by domain. Those are experimental results from that setting, not a forecast for a service business or a guarantee across current products.",
+        "The useful lesson is to pay attention to how information is presented and supported, then test what happens in the relevant environment. A research result about answer visibility also leaves a separate business question: can the interested customer make a qualified request and get a useful response?"
+      ],
+      "source": "geo"
+    },
+    {
+      "h": "Keep the overlap, without promising identical results",
+      "p": [
+        "Readable pages, useful content, crawl access and consistent information are sensible foundations across channels. Google’s own guidance says the established SEO fundamentals remain relevant to its AI search features. That is a useful reference for Google; it is not a specification for every AI assistant.",
+        "Different systems retrieve different sources and may use browsing, search indexes, platform feeds or configured tools. Their answers also depend on the question and context. Improving the foundation does not guarantee a particular ranking or recommendation. Test the channels your customers actually use instead of declaring that one change wins everywhere."
+      ],
+      "source": "google"
+    },
+    {
+      "h": "Give the assistant reasons to choose you",
+      "p": [
+        "A list of keywords says little about fit. A named owner, relevant experience, a real credential, a completed project and a review of similar work give the customer a better basis for a decision. Publish the issuer and date of an award where relevant. Explain which service a credential supports. Link to the original source when one is public.",
+        "This is particularly valuable for established service businesses whose reputation is stronger than their website explains. The goal is to make the real reason a customer would choose the business easier to find and check. It is not to dress ordinary claims in more technical markup."
+      ]
+    },
+    {
+      "h": "Prepare the step after the recommendation",
+      "p": [
+        "An assistant may be asked to go further than research. The customer might say, “Ask whether they can help with my project.” A useful business interface explains the available request, the information needed, the conditions that apply and what will happen next.",
+        "That requires actual working software when a request is submitted. A descriptive page or schema block can describe an offer, but it does not deliver an inquiry or create an appointment. The receiving system must confirm the real result. If a person needs to discuss timing or price, the customer should hear that clearly."
+      ]
+    },
+    {
+      "h": "Measure the journey in separate steps",
+      "p": [
+        "Track whether the business information is correct, whether important pages are accessible, what assistants actually say, and what happens to resulting inquiries. Keep dated examples of the question, answer and source links. A favorable answer is useful evidence of that test, not permanent ownership of a position.",
+        "On the business side, measure qualified inquiries, appointments, won work and the time required to respond. A smaller number of well-matched inquiries can matter more than a rise in mentions. Those observations help decide whether the next investment belongs in clearer information, stronger proof or a better request flow."
+      ],
+      "items": [
+        "Discovery: can customers and assistants find accurate information?",
+        "Evaluation: can they understand suitability and check evidence?",
+        "Engagement: does the next step work and return a clear outcome?"
+      ]
+    },
+    {
+      "h": "Choose an engagement by its deliverables",
+      "p": [
+        "Ask a provider to show the business record they will build, the pages and code you will own, the evidence they will reconcile, and the tests that define completion. If actions are included, ask which ones and who maintains them. This is easier to evaluate than an open-ended promise to make you “AI visible.”",
+        "Kodecite starts with an owned foundation and scopes live actions separately. The larger aim stays the same across search engines, personal assistants and outside agents: make your business easy to understand, trust and do business with."
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "Google Search Central: AI features and your website",
+      "https://developers.google.com/search/docs/appearance/ai-features"
+    ],
+    [
+      "Schema.org: About the vocabulary",
+      "https://schema.org/docs/about.html"
+    ],
+    [
+      "GEO: Generative Engine Optimization, KDD 2024 research",
+      "https://arxiv.org/abs/2311.09735"
+    ]
+  ],
+  "related": [
+    "aeo-technical-seo-done-correctly",
+    "from-recommended-to-actionable-luxe-window-works"
+  ]
+};
+const SOURCE_LINKS: Record<string, string[]> = {
+  "google": [
+    "Google Search Central: AI features and your website",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
+  "schema": [
+    "Schema.org: About the vocabulary",
+    "https://schema.org/docs/about.html"
+  ],
+  "jsonld": [
+    "W3C: JSON-LD 1.1",
+    "https://www.w3.org/TR/json-ld11/"
+  ],
+  "local": [
+    "Schema.org: LocalBusiness",
+    "https://schema.org/LocalBusiness"
+  ],
+  "service": [
+    "Schema.org: Service",
+    "https://schema.org/Service"
+  ],
+  "offer": [
+    "Schema.org: Offer",
+    "https://schema.org/Offer"
+  ],
+  "updates": [
+    "Google Search documentation updates",
+    "https://developers.google.com/search/updates"
+  ],
+  "crawl": [
+    "Vercel: The rise of the AI crawler",
+    "https://vercel.com/blog/the-rise-of-the-ai-crawler"
+  ],
+  "reviews": [
+    "Google Business Profile: Local ranking guidance",
+    "https://support.google.com/business/answer/7091?hl=en"
+  ],
+  "sitemap": [
+    "Google Search Central: Sitemaps",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+  ],
+  "luxe": [
+    "Luxe Window Works: Public consultation capability",
+    "https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation"
+  ],
+  "meta": [
+    "Meta Business Help Center",
+    "https://www.facebook.com/business/help"
+  ],
+  "terms": [
+    "Meta: Customer List Custom Audiences Terms",
+    "https://www.facebook.com/legal/terms/customaudience"
+  ],
+  "geo": [
+    "GEO: Generative Engine Optimization, KDD 2024 research",
+    "https://arxiv.org/abs/2311.09735"
+  ]
+};
+const PAGE_URL = `https://www.kodecite.ai/blog/${ARTICLE.slug}`;
+const WORD_COUNT = 911;
+const READ_TIME = '5 min read';
+const PUBLISHED = 'March 8, 2026';
 
 export const metadata: Metadata = {
-  title: 'How AEO and GEO Make SEO Stronger',
-  description:
-    "AEO and GEO don't replace SEO — they amplify it. Build sites language models understand and cite, and you win AI answers and rankings together.",
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
-  },
-  openGraph: {
-    title: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
-    description:
-      'When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct.',
-    url: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
-    type: 'article',
-    publishedTime: '2026-03-08',
-    authors: ['Mark Abplanalp'],
-  },
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: ARTICLE.title, description: ARTICLE.description, url: PAGE_URL, type: 'article', publishedTime: `${ARTICLE.date}T00:00:00-07:00`, modifiedTime: '2026-10-01T15:00:00Z' },
 };
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better#article',
-  headline: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
-  description:
-    "When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here's exactly why local businesses should act now.",
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  datePublished: '2026-03-08T00:00:00-07:00',
-  dateModified: '2026-08-03T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
-  },
-  url: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  keywords: [
-    'AEO',
-    'GEO',
-    'answer engine optimization',
-    'generative engine optimization',
-    'AI search optimization',
-    'local business SEO',
-    'structured schema',
-    'llms.txt',
-    'agent.json',
-    'AI recommendations',
-    'local service business AI',
-  ],
-  articleSection: 'Search Strategy',
-  wordCount: 1800,
-  about: [
-    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
-    { '@type': 'DefinedTerm', name: 'Generative Engine Optimization' },
-    { '@type': 'DefinedTerm', name: 'Search Engine Optimization' },
-    { '@type': 'DefinedTerm', name: 'Local Business Marketing' },
-    { '@type': 'DefinedTerm', name: 'Structured Data' },
-    { '@type': 'DefinedTerm', name: 'Agent-to-Agent Commerce' },
-  ],
-  citation: [
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
-    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
-    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
-  ],
+  '@context': 'https://schema.org', '@type': 'Article', '@id': `${PAGE_URL}#article`,
+  headline: ARTICLE.title, description: ARTICLE.description,
+  datePublished: `${ARTICLE.date}T00:00:00-07:00`, dateModified: '2026-10-01T15:00:00Z',
+  wordCount: WORD_COUNT, articleSection: ARTICLE.category,
+  author: articleAuthor, publisher: articlePublisher, isPartOf: blogCollectionPage,
+  url: PAGE_URL, mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+  image: 'https://www.kodecite.ai/og-image.png', about: [businessRef],
+  citation: ARTICLE.sources.map(([name, url]) => ({ '@type': 'CreativeWork', name, url })),
 };
-
-const faqPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Does AEO replace traditional SEO?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) do not replace traditional SEO — they amplify it. The same infrastructure that makes a site readable and trustworthy for AI language models also improves Google rankings, rich snippets, and Core Web Vitals scores. It is one strategy that wins across every channel simultaneously.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is GEO a replacement for SEO, or an addition?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "GEO (Generative Engine Optimization) is an addition to SEO, not a replacement. Traditional SEO still earns your rankings and clicks in Google's blue links; GEO earns your citations inside AI-generated answers on Google AI Overviews, ChatGPT, and Perplexity. They share the same foundation — a fast, structured, machine-readable website — so building GEO strengthens your SEO at the same time. You don't drop SEO; you extend it into the AI-answer channel with one investment that wins both.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do large language models decide which local business to recommend?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'LLMs evaluate four factors: extractability (can the model cleanly parse your business facts), factual consistency (does your information match across all platforms), entity authority (do you have clear E-E-A-T signals), and citation worthiness (has your content been referenced by trusted sources). The business with the most machine-readable, factually consistent, structurally complete presence wins the recommendation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the Four-Layer Authority Engine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "The Four-Layer Authority Engine is KodeCite.AI's framework for making a local business the trusted default recommendation for both AI agents and traditional search. The four layers are: (1) High-Performance Edge Infrastructure — sub-1-second load times on Next.js; (2) Zero-Error Structured Schema — LocalBusiness, Service, FAQ, and Review schema; (3) llms.txt — a structured plain-text file that tells language models what your business does and who it serves; (4) agent.json — a machine-readable capability file that enables Agent-to-Agent commerce.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is llms.txt and why does it matter for local businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "llms.txt is a structured plain-text file placed at your domain root that tells language models exactly what your business does, who it serves, and what it should be cited for. It functions as your business's handshake document with every LLM that indexes the web, helping AI systems accurately represent your business rather than guessing or hallucinating details.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is agent.json and how does it enable Agent-to-Agent commerce?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'agent.json is a machine-readable capability file that enables direct Agent-to-Agent (A2A) transactions. As AI agents begin booking appointments and placing orders on behalf of users, businesses with agent.json implemented will be the ones agents can transact with directly — booking appointments, placing service requests, and initiating commerce without requiring human intervention.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which local service businesses are most affected by AI agent discovery?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Local services with high-intent, time-sensitive, trust-dependent decisions are most immediately affected: home services (HVAC, plumbing, roofing), professional services (legal, financial, real estate), health and wellness (dentists, chiropractors, physical therapy), restaurants, and auto repair. These are exactly the categories where people are most likely to delegate the discovery decision to an AI agent.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is GEO — Generative Engine Optimization?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Generative Engine Optimization (GEO) is the practice of optimizing your digital presence to be cited and recommended by AI-generated responses. As AI platforms like Google AI Overviews, ChatGPT, and Perplexity increasingly answer search queries directly rather than returning a list of links, GEO focuses on becoming the trusted source these systems select — through structured data, authoritative content, and consistent entity signals across the web.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is AEO — Answer Engine Optimization?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Answer Engine Optimization (AEO) focuses specifically on structuring content to directly answer the questions people ask AI systems — in a format that can be extracted and presented as an authoritative response. This includes FAQPage schema markup, answer-first content structure where the direct answer comes before supporting detail, and clear definitive statements that AI can cite with confidence.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between GEO and SEO?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'SEO optimizes your website to rank in traditional search engine results through keywords, backlinks, and technical site health. GEO optimizes your presence to be cited inside AI-generated answers across Google AI Overviews, ChatGPT, Perplexity, and other LLM platforms. GEO requires additional signals SEO doesn\'t — including structured schema markup, answer-first content structure, entity consistency across the web, and AI-readable files like llms.txt.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need to do both SEO and GEO?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes — the businesses winning AI visibility right now have both. They have the SEO foundation that AI systems use to evaluate trustworthiness, and they've added the structured data, answer-first content, and entity signals that AI systems use to select their sources. Abandoning SEO for GEO, or waiting to add GEO until later, are both mistakes that leave visibility on the table.",
-      },
-    },
-  ],
-};
-
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better#breadcrumb',
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', '@id': `${PAGE_URL}#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: "AEO + GEO Isn't Replacing SEO — It's Making It Better",
-      item: 'https://www.kodecite.ai/blog/aeo-geo-making-seo-better',
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: ARTICLE.title, item: PAGE_URL },
   ],
 };
 
-const industryRows = [
-  { industry: 'Home Services', examples: 'HVAC, Plumbing, Roofing', urgency: 'Critical', tag: 'High Intent' },
-  { industry: 'Professional Services', examples: 'Legal, Financial, Real Estate', urgency: 'Critical', tag: 'Trust-Dependent' },
-  { industry: 'Health & Wellness', examples: 'Dentists, Chiro, PT', urgency: 'High', tag: 'Time-Sensitive' },
-  { industry: 'Restaurants & Food', examples: 'Dining, Catering, Delivery', urgency: 'High', tag: 'High Frequency' },
-  { industry: 'Auto Services', examples: 'Repair, Detailing, Tires', urgency: 'High', tag: 'Urgent Need' },
-];
-
-const pillars = [
-  {
-    number: '01',
-    title: 'High-Performance Edge Infrastructure',
-    body: 'Sub-1-second load times via Next.js on Vercel Edge. AI crawlers abandon slow sites before reading them — speed is table stakes, not a bonus.',
-  },
-  {
-    number: '02',
-    title: 'Zero-Error Structured Schema',
-    body: 'LocalBusiness, Service, FAQ, and Review schema with zero validation errors. Every field is a machine-readable fact that AI systems can cite with confidence.',
-  },
-  {
-    number: '03',
-    title: 'llms.txt — A discovery file',
-    body: 'A plain-text file some AI systems look for. Not every system reads it. It does not make AI know a business with certainty.',
-  },
-  {
-    number: '04',
-    title: 'agent.json — Discovery, then action if permitted',
-    body: "A machine-readable discovery file. On KodeCite.ai it is identity-only. A real action needs a published capability and control — and only when the business permits it. Not a booking or purchase by default.",
-  },
-];
-
-const checklistItems = [
-  'Your schema errors drop to zero — Google immediately reads you as a trusted entity',
-  'Your Core Web Vitals pass — AI crawlers and Google ranking systems both reward you',
-  'Your llms.txt is live — a discovery file some systems look for, not a guarantee every model will use it',
-  'Your content answers real questions directly — easier to quote when a system looks',
-  'Your NAP is consistent everywhere — fewer conflicting identity signals',
-  'Your agent.json is honest — discovery only unless a real, controlled action is published',
-];
-
-export default function AeoGeoMakingSEOBetter() {
+export default function ArticlePage() {
+  const related = ARTICLE.related.map((slug) => blogPosts.find((post) => post.slug === slug)).filter(Boolean);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
-            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[var(--d-fg)] truncate">AEO + GEO Making SEO Better</span>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <header className="pt-36 pb-16 px-5 md:px-8" style={{ background: 'var(--d-bg)', borderBottom: '1px solid var(--d-line)' }}>
+        <div className="max-w-4xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex gap-3 text-sm font-inter text-[var(--d-fg-dim)] mb-9">
+            <Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/blog">Insights</Link>
           </nav>
-
-          <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">Search Strategy</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">10 min read</span>
-          </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            AEO + GEO Isn&apos;t Replacing SEO —{' '}
-            <span className="text-[var(--d-accent)]">It&apos;s Making It Better</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            When you build websites that language models can truly understand, trust, and cite, you get stronger rankings, richer snippets, and AI recommendations as a natural byproduct. Here&apos;s exactly why local businesses should act now.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">MA</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">March 8, 2026</p>
-              </div>
-            </div>
+          <p className="d-eyebrow mb-6">{ARTICLE.category} · {READ_TIME}</p>
+          <h1 className="font-inter font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-[var(--d-fg)] mb-8">{ARTICLE.title}</h1>
+          <p className="font-inter text-lg md:text-xl leading-relaxed text-[var(--d-fg-dim)] max-w-3xl">{ARTICLE.intro}</p>
+          <div className="mt-9 pt-6 font-inter text-sm text-[var(--d-fg-dim)]" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <p className="font-semibold text-[var(--d-fg)] mb-1">Mark Abplanalp · Kodecite</p>
+            <p>Published {PUBLISHED} · Updated October 1, 2026</p>
           </div>
         </div>
+      </header>
+      <section className="px-5 md:px-8 py-16 md:py-20" style={{ background: 'var(--d-bg)' }}>
+        <article className="max-w-3xl mx-auto font-inter text-[var(--d-fg-dim)]" style={{ fontSize: '17px', lineHeight: 1.85 }}>
+          {ARTICLE.sections.map((section) => (
+            <section key={section.h} className="mb-12">
+              <h2 className="font-inter font-semibold text-2xl md:text-3xl leading-tight tracking-tight text-[var(--d-fg)] mb-5">{section.h}</h2>
+              {section.p.map((paragraph) => <p key={paragraph} className="mb-5">{paragraph}</p>)}
+              {section.items && <ul className="space-y-3 pl-6 mb-5 list-disc">{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
+              {section.source && SOURCE_LINKS[section.source] && <p className="text-sm"><a href={SOURCE_LINKS[section.source][1]} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{SOURCE_LINKS[section.source][0]} →</a></p>}
+              {section.h === 'A small connected example' && ARTICLE.example && <pre className="overflow-x-auto rounded-xl p-5 text-xs md:text-sm leading-relaxed my-6" style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)' }}><code>{JSON.stringify(ARTICLE.example, null, 2)}</code></pre>}
+            </section>
+          ))}
+          <section className="pt-8 mt-12" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Sources and further reading</h2>
+            <ul className="space-y-3 text-sm">{ARTICLE.sources.map(([label, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{label} →</a></li>)}</ul>
+          </section>
+          <section className="pt-8 mt-10" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Keep reading</h2>
+            <ul className="space-y-4">{related.map((post) => post && <li key={post.slug}><Link href={`/blog/${post.slug}`} className="text-[var(--d-accent)] hover:underline">{post.title} →</Link></li>)}</ul>
+            <Link href="/blog" className="inline-block mt-8 text-sm text-[var(--d-fg-dim)] hover:text-[var(--d-fg)]">← All insights</Link>
+          </section>
+        </article>
       </section>
-
-      <div className="section-divider" />
-
-      {/* Article + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
-                  Every week, a local business owner asks some version of the same question: &ldquo;Should I be doing AEO and GEO instead of SEO — or in addition to it?&rdquo; The answer reframes the question entirely. AEO and GEO do not compete with SEO. They are SEO, upgraded. When you build websites that language models can truly parse and trust, traditional search rewards you too. It is one investment that wins every channel simultaneously.
-                </p>
-
-                {/* Section 1: The Moment Everything Changed */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Moment Everything Changed
-                </h2>
-
-                {/* Scenario Box */}
-                <div
-                  className="my-8 rounded-xl p-8 relative overflow-hidden"
-                  style={{ background: '#1a2940', border: '1px solid rgba(255,255,255,0.08)' }}
-                >
-                  <div
-                    className="absolute top-4 left-5 text-8xl leading-none select-none pointer-events-none"
-                    style={{ color: 'rgba(255,255,255,0.08)', fontFamily: 'Georgia, serif' }}
-                  >
-                    &ldquo;
-                  </div>
-                  <div className="relative z-10">
-                    <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#a0723a' }}>
-                      THE COEUR D&apos;ALENE SCENARIO
-                    </p>
-                    <p className="text-base leading-relaxed mb-4" style={{ color: 'rgba(240,232,216,0.85)' }}>
-                      A homeowner in Coeur d&apos;Alene asks Apple Intelligence: &ldquo;Find me the best-reviewed HVAC company near me that can do emergency service today.&rdquo; Apple Intelligence does not open Google. It queries its AI layer, synthesizes business data, cross-references structured signals, and returns one name. The homeowner calls that business.
-                    </p>
-                    <p className="text-base leading-relaxed" style={{ color: 'rgba(240,232,216,0.7)' }}>
-                      The business that gets recommended was not the one that spent the most on Google Ads last month. It was the one whose digital infrastructure was readable, consistent, and credible enough for the AI to trust with a recommendation. That infrastructure is exactly what makes you rank in traditional search too.
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  This scenario is not a projection. It is already happening via Meta Ray-Ban glasses, Perplexity, ChatGPT, and Google AI Overviews today. The businesses that win these recommendations share one characteristic: they have built websites that machines can read as clearly as humans do.
-                </p>
-
-                {/* Section 2: Why Rankings Are Becoming Secondary */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Why Rankings Are Becoming Secondary — And Why That Helps You
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  BrightEdge research found that 99% of AI Overview sources come from the top organic results. That single data point rewrites the conventional wisdom. A GEO win — being cited in an AI-generated answer — is nearly always also an SEO win. The infrastructure that earns AI trust earns ranking trust simultaneously. Here is why:
-                </p>
-
-                <ol className="space-y-4 mb-8">
-                  {[
-                    {
-                      n: '1',
-                      title: 'Extractability',
-                      body: 'Can the model cleanly parse your business facts? Clean HTML, logical heading hierarchy, and direct-answer content all improve crawl efficiency — which is also what Google rewards with better rankings and featured snippets.',
-                    },
-                    {
-                      n: '2',
-                      title: 'Factual Consistency',
-                      body: 'Does your information match across all platforms? Consistent NAP data, matching schema, and unified business details are the foundation of both local SEO and AI entity recognition.',
-                    },
-                    {
-                      n: '3',
-                      title: 'Entity Authority',
-                      body: 'Do you have clear E-E-A-T signals? Schema, citations, reviews, and content depth that demonstrate genuine expertise are exactly what Google\'s quality raters and AI recommendation engines both look for.',
-                    },
-                    {
-                      n: '4',
-                      title: 'Citation Worthiness',
-                      body: 'Has your content been referenced by trusted sources? Inbound links and references that build traditional domain authority also signal to language models that your content is worth citing.',
-                    },
-                  ].map((item) => (
-                    <li key={item.n} className="flex gap-4">
-                      <div
-                        className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-sm"
-                        style={{ background: '#a0723a', color: '#f8f5f0' }}
-                      >
-                        {item.n}
-                      </div>
-                      <div>
-                        <p className="font-semibold text-[var(--d-fg)] mb-1">{item.title}</p>
-                        <p className="text-[var(--d-fg-dim)] leading-relaxed text-sm">{item.body}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-
-                {/* Animated Bar Chart */}
-                <BarChart />
-
-                {/* Stat Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
-                  {[
-                    { stat: '99%', label: 'of AI Overview sources rank in organic top 10', source: 'BrightEdge 2025' },
-                    { stat: '3×', label: 'more AI citations for sites with zero schema errors', source: 'Semrush AI Report' },
-                    { stat: '68%', label: 'of local searches now trigger an AI-generated answer', source: 'Gartner Digital Markets' },
-                  ].map((card) => (
-                    <div
-                      key={card.stat}
-                      className="rounded-xl p-5 text-center"
-                      style={{ background: '#1a2940', border: '1px solid rgba(255,255,255,0.07)' }}
-                    >
-                      <p className="font-inter text-4xl font-bold mb-1" style={{ color: '#a0723a' }}>
-                        {card.stat}
-                      </p>
-                      <p className="text-sm leading-snug mb-2" style={{ color: 'rgba(240,232,216,0.8)' }}>
-                        {card.label}
-                      </p>
-                      <p className="text-xs" style={{ color: 'rgba(240,232,216,0.68)' }}>{card.source}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Section 3: Four-Layer Authority Engine */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The{' '}
-                  <Link href="/services" className="text-[var(--d-accent)] hover:underline">
-                    Four-Layer Authority Engine
-                  </Link>
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  KodeCite.AI&apos;s framework for making a local business the trusted default for both AI agents and traditional search is built on four layers that reinforce each other. Each layer independently improves traditional SEO metrics. Together, they create the machine-readable authority that AI systems cite and recommend.
-                </p>
-
-                {/* 2x2 Pillars Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
-                  {pillars.map((pillar) => (
-                    <div
-                      key={pillar.number}
-                      className="rounded-xl p-6 transition-all duration-300 border hover:border-[rgba(160,114,58,0.6)]"
-                      style={{
-                        background: '#f2ede4',
-                        border: '1px solid rgba(160,114,58,0.2)',
-                      }}
-                    >
-                      <p className="font-inter text-3xl font-bold mb-3" style={{ color: 'rgba(160,114,58,0.4)' }}>
-                        {pillar.number}
-                      </p>
-                      <p className="font-semibold text-[var(--d-fg)] mb-2 leading-snug">{pillar.title}</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed">{pillar.body}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Notice what every one of these layers does in parallel: it improves your traditional search performance. A faster site ranks better. Zero-error schema earns rich snippets. Consistent entity signals boost local pack visibility. Content that answers questions directly wins featured snippets. The{' '}
-                  <Link href="/services" className="text-[var(--d-accent)] hover:underline">
-                    Four-Layer Authority Engine
-                  </Link>{' '}
-                  is not a separate strategy from SEO. It is SEO done at the level AI demands.
-                </p>
-
-                {/* Section 4: Local Service Businesses */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Local Service Businesses: Who Gets Hit First — And Who Wins First
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Not all businesses are equally affected by AI agent discovery. The categories most immediately impacted share three characteristics: high intent (the user has already decided to buy), time sensitivity (the decision has to be made now), and trust dependence (the wrong choice has real consequences). These are exactly the categories where people delegate the discovery decision to an AI agent.
-                </p>
-
-                {/* Four Scenario Boxes */}
-                <div className="space-y-4 mb-8">
-                  {[
-                    {
-                      title: '"Find me an HVAC tech who can come today."',
-                      body: "A user asks their phone's AI assistant to book emergency HVAC service. The AI queries structured business data, checks reviews, confirms availability signals — and calls the business with the clearest, most complete profile. No Google search. No scrolling.",
-                    },
-                    {
-                      title: '"Which dentist near me is accepting new patients?"',
-                      body: 'A relocating family asks ChatGPT for a dentist recommendation in their new city. The AI synthesizes reviews, practice schema, and entity signals. The practice with FAQPage schema answering this exact question gets cited. The one without it does not exist in the response.',
-                    },
-                    {
-                      title: '"Book a table for two at the best-reviewed Italian place."',
-                      body: "An Apple Intelligence user doesn't search — they delegate. The AI cross-references restaurant schema, review signals, and reservation capability data. Businesses with agent.json deployed can complete the booking without human intervention.",
-                    },
-                    {
-                      title: '"Who does the best roof replacement in Spokane Valley?"',
-                      body: "Perplexity synthesizes contractor reviews, license signals, geographic schema, and structured content. The roofing company with hyper-local content and zero-error LocalBusiness schema becomes the cited authority. The one without it is invisible to the query.",
-                    },
-                  ].map((scenario, i) => (
-                    <div
-                      key={i}
-                      className="rounded-xl p-6 relative overflow-hidden"
-                      style={{ background: '#1a2940', border: '1px solid rgba(255,255,255,0.06)' }}
-                    >
-                      <div
-                        className="absolute top-3 left-4 text-6xl leading-none select-none pointer-events-none"
-                        style={{ color: 'rgba(255,255,255,0.06)', fontFamily: 'Georgia, serif' }}
-                      >
-                        &ldquo;
-                      </div>
-                      <div className="relative z-10">
-                        <p className="font-semibold mb-2 italic" style={{ color: '#a0723a' }}>
-                          {scenario.title}
-                        </p>
-                        <p className="text-sm leading-relaxed" style={{ color: 'rgba(240,232,216,0.75)' }}>
-                          {scenario.body}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Industry Table */}
-                <div className="my-8 overflow-x-auto rounded-xl" style={{ border: '1px solid rgba(160,114,58,0.2)' }}>
-                  <table className="w-full min-w-[500px] text-sm">
-                    <thead>
-                      <tr style={{ background: '#1a2940' }}>
-                        <th className="text-left px-5 py-3 font-semibold text-xs tracking-wider uppercase" style={{ color: 'rgba(240,232,216,0.6)' }}>Industry</th>
-                        <th className="text-left px-5 py-3 font-semibold text-xs tracking-wider uppercase" style={{ color: 'rgba(240,232,216,0.6)' }}>Examples</th>
-                        <th className="text-left px-5 py-3 font-semibold text-xs tracking-wider uppercase" style={{ color: 'rgba(240,232,216,0.6)' }}>AI Urgency</th>
-                        <th className="text-left px-5 py-3 font-semibold text-xs tracking-wider uppercase" style={{ color: 'rgba(240,232,216,0.6)' }}>Signal</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {industryRows.map((row, i) => (
-                        <tr
-                          key={row.industry}
-                          style={{ background: i % 2 === 0 ? '#f2ede4' : '#f8f5f0' }}
-                        >
-                          <td className="px-5 py-3 font-semibold text-[var(--d-fg)]">{row.industry}</td>
-                          <td className="px-5 py-3 text-[var(--d-fg-dim)]">{row.examples}</td>
-                          <td className="px-5 py-3">
-                            <span
-                              className="px-2 py-0.5 rounded text-xs font-semibold"
-                              style={{
-                                background: row.urgency === 'Critical' ? 'rgba(220,38,38,0.12)' : 'rgba(234,179,8,0.12)',
-                                color: row.urgency === 'Critical' ? '#dc2626' : '#b45309',
-                              }}
-                            >
-                              {row.urgency}
-                            </span>
-                          </td>
-                          <td className="px-5 py-3">
-                            <span
-                              className="px-2 py-0.5 rounded text-xs font-semibold"
-                              style={{ background: 'rgba(160,114,58,0.15)', color: '#a0723a' }}
-                            >
-                              {row.tag}
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Section 5: The Beautiful Side Effect */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Beautiful Side Effect
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Here is what makes the AEO + GEO + SEO convergence so powerful for local businesses right now: every action you take to become AI-readable automatically improves your traditional search performance. There is no tradeoff. When you fix your AEO infrastructure, you get a traditional SEO upgrade as a free side effect.
-                </p>
-
-                <div className="space-y-3 my-8">
-                  {checklistItems.map((item) => (
-                    <div key={item} className="flex items-start gap-3">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                        style={{ background: '#1d4ed8' }}
-                      >
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="white" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p className="text-[var(--d-fg-dim)] leading-relaxed">{item}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Each one of those actions is an AEO action. Each one also improves your Google rankings, your rich snippet eligibility, your local pack visibility, and your Core Web Vitals scores. One infrastructure investment. Every channel rewarded.
-                </p>
-
-                {/* Section 6: What This Means Right Now */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  What This Means Right Now
-                </h2>
-
-                {/* Pull Quote */}
-                <blockquote
-                  className="my-8 pl-6 py-2"
-                  style={{ borderLeft: '4px solid #1d4ed8' }}
-                >
-                  <p className="text-xl font-semibold italic leading-relaxed" style={{ color: '#0a0806' }}>
-                    &ldquo;The question is no longer whether to do AEO alongside SEO. The question is whether you want to run one strategy that wins everywhere, or two separate strategies that each win somewhere.&rdquo;
-                  </p>
-                  <footer className="mt-3 text-sm" style={{ color: 'var(--d-fg-mute)' }}>
-                    — Mark Abplanalp, KodeCite.AI
-                  </footer>
-                </blockquote>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Local service businesses in North Idaho, Eastern Washington, and markets like yours are still in the early window. Most competitors have not structured their presence for machine discovery. The businesses that move now get compounding advantages — AI citations build trust signals that improve rankings, which generate more AI citations. The flywheel starts with the first correctly implemented schema tag.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The businesses that wait are not just late to a new channel. They are watching their traditional SEO positions get eroded by competitors who built the infrastructure that wins both games simultaneously.
-                </p>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  <Link href="https://www.kodecite.ai" className="text-[var(--d-accent)] hover:underline">KodeCite.ai</Link> builds the complete infrastructure — high-performance Next.js sites, zero-error schema, <Link href="/services" className="text-[var(--d-accent)] hover:underline">llms.txt</Link> and <Link href="/services" className="text-[var(--d-accent)] hover:underline">agent.json</Link> — so local businesses become the trusted default for both AI recommendations and traditional search simultaneously.
-                </p>
-
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
-              </div>
-            </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="eyebrow mb-4 text-xs">AEO + GEO WIN = SEO WIN</p>
-                  <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">99%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of AI Overview sources rank in organic top results</p>
-                    </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">1×</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">infrastructure investment wins AI and traditional search</p>
-                    </div>
-                    <div>
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">Now</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">the window is still open in most local markets</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Ready to Win Both Channels?
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    Find out exactly how your site looks to AI right now — and what it takes to become the trusted default in your market.
-                  </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Request an Agent Readiness Review
-                  </Link>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
-                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/the-shortlist-problem" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        The Shortlist Problem: Why AI Will Recommend One Local Business
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
-                    </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/schema-markup-complete-guide" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          Schema Markup: The Complete Guide for Local Service Businesses
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
-                      </Link>
-                    </div>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/how-to-rank-in-google-ai-overviews-for-local-businesses" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          How to Rank in Google AI Overviews for Local Businesses
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </aside>
-
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* CTA Block with radial glow */}
-      <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#1c1814' }}>
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(160,114,58,0.12) 0%, transparent 70%)',
-          }}
-        />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="eyebrow mb-4">ONE STRATEGY. EVERY CHANNEL.</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl mb-4" style={{ color: 'rgba(240,232,216,0.9)' }}>
-            Build the Infrastructure That Wins AI <em>and</em> Google Simultaneously
-          </h2>
-          <p className="font-inter mb-8 leading-relaxed" style={{ color: 'rgba(240,232,216,0.6)' }}>
-            Most businesses still think they have to choose. They don&apos;t. Let&apos;s show you exactly where your current site falls short — and what it takes to become the cited, recommended, and ranked authority in your market.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Request an Agent Readiness Review
-            </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read More Articles
-            </Link>
-          </div>
+      <section className="py-20 px-5 md:px-8" style={{ background: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="d-eyebrow mb-5">YOUR BUSINESS, CLEARLY UNDERSTOOD</p>
+          <h2 className="font-inter text-3xl md:text-4xl font-semibold tracking-tight text-[var(--d-fg)] mb-5">Make the next step easier for your customer and their AI assistant.</h2>
+          <p className="font-inter text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">An Agent Readiness Review looks at your business information, supporting evidence and the next steps a customer can take. Start with the gaps that matter to a real inquiry.</p>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
         </div>
       </section>
     </>

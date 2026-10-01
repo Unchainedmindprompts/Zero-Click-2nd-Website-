@@ -7,7 +7,6 @@ import { ORIGIN, WEBSITE_ID, businessRef } from '@/lib/schema';
 import {
   LUXE_CAPABILITY_URL,
   LUXE_FLAGSHIP_HREF,
-  LUXE_PROOF,
   REVIEW_HREF,
   REVIEW_TURNAROUND,
 } from '@/lib/positioning';
@@ -15,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'When a customer delegates an outcome to AI, the assistant must know what is true, determine fit, know the actions you permit, and return an honest result or hand off. Foundation Build starts at $4,995.',
+    'Make your business easier for customers and their AI assistants to understand, trust, and contact. Business-owned Foundation Build: $4,995 one-time. Approved actions scoped separately.',
   alternates: { canonical: `${ORIGIN}/services` },
 };
 
@@ -30,7 +29,7 @@ const servicesSchema = {
       url: PAGE_URL,
       name: 'Services — KodeCite.ai',
       description:
-        'How Kodecite keeps a service business inside the commercial decision as customers begin to delegate outcomes to AI — what is true, whether it fits, what actions are permitted, and an honest result or handoff.',
+        'Kodecite builds business-owned websites and approved action paths that help customers and their AI assistants understand the offer, assess fit, check evidence, and take a useful next step.',
       inLanguage: 'en-US',
       isPartOf: { '@id': WEBSITE_ID },
       about: businessRef,
@@ -45,13 +44,13 @@ const servicesSchema = {
       serviceType: 'Owned business infrastructure',
       provider: businessRef,
       description:
-        'An owned website and digital business foundation so AI can understand and evaluate the business. The client owns the site and infrastructure. Does not automatically include a live action endpoint.',
+        'A business-owned website with clear identity, offers, evidence, policies, and connected information for people and AI assistants. Live agent-action endpoints are scoped separately.',
       areaServed: { '@type': 'Country', name: 'United States' },
     },
     {
       '@type': 'Service',
       '@id': `${ORIGIN}/#service-web-development`,
-      name: 'Owned Website and Truth Foundation',
+      name: 'Business-Owned Website and Information',
       serviceType: 'Website Development',
       provider: businessRef,
       areaServed: [
@@ -61,18 +60,18 @@ const servicesSchema = {
         { '@type': 'Country', name: 'United States' },
       ],
       description:
-        'An owned website and digital business foundation so people, search, and AI can read the same accurate information. Fast sites are a component. The product is the owned system underneath.',
+        'A business-owned website that helps customers and their assistants understand services, assess fit, check evidence, and find the next step using consistent, accessible information.',
       additionalProperty: [
-        { '@type': 'PropertyValue', name: 'Stack', value: 'Owned website where that is the right path' },
+        { '@type': 'PropertyValue', name: 'Foundation', value: 'Business-owned website and connected information' },
         { '@type': 'PropertyValue', name: 'Hosting', value: 'Client-owned hosting' },
         { '@type': 'PropertyValue', name: 'Ownership', value: 'Client owns the site and the accounts it runs on' },
-        { '@type': 'PropertyValue', name: 'Live action', value: 'Not included automatically' },
+        { '@type': 'PropertyValue', name: 'Live action', value: 'Scoped separately from Foundation Build' },
       ],
     },
     {
       '@type': 'Service',
       '@id': `${ORIGIN}/#service-entity-graph`,
-      name: 'Business Truth and Capability Infrastructure',
+      name: 'Connected Business Information and Approved Actions',
       serviceType: 'Business infrastructure for the agent-driven web',
       provider: businessRef,
       description:
@@ -94,7 +93,7 @@ const servicesSchema = {
       url: 'https://www.realestatewithshirin.com',
       creator: businessRef,
       description:
-        'Owned real-estate website — discovery evidence that visibility can follow clearer infrastructure.',
+        'Business-owned real-estate website with dated discovery evidence shown in the case studies.',
     },
     {
       '@type': 'CreativeWork',
@@ -103,7 +102,7 @@ const servicesSchema = {
       url: 'https://www.chelseyfanning.com',
       creator: businessRef,
       description:
-        'Owned real-estate website — discovery evidence that visibility can follow clearer infrastructure.',
+        'Business-owned real-estate website with dated discovery evidence shown in the case studies.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -118,94 +117,82 @@ const servicesSchema = {
 
 const fiveLayers = [
   {
-    n: '01',
-    name: 'Truth',
-    h: 'What is true about the business.',
-    d: 'Identity, services, area, credibility, policies, and limitations — one reliable record. AI can accurately explain what the business does and whether it serves the customer.',
+    n: '01', name: 'Business facts', h: 'Give the customer a clear picture.',
+    d: 'Connect your identity, people, services, locations, credentials, policies, and evidence. The website and its machine-readable information should describe the same real business, with sources for claims that matter.',
   },
   {
-    n: '02',
-    name: 'Capability',
-    h: 'What can actually be requested.',
-    d: 'What a customer or their assistant may ask for. AI can distinguish a qualified request from what the business does not offer.',
+    n: '02', name: 'Fit and capabilities', h: 'Explain who you can help and how.',
+    d: 'Describe the work you take on, where you do it, relevant limits, and the next steps available. A customer’s assistant should be able to tell a good fit from a request that needs a different provider.',
   },
   {
-    n: '03',
-    name: 'Control',
-    h: 'Rules that keep the owner in charge.',
-    d: 'Invalid, unauthorized, abusive, or duplicate requests do not become false bookings or repeated leads.',
+    n: '03', name: 'Permission and conditions', h: 'Keep decisions with the right person.',
+    d: 'Make required information, customer permission, business approval, and human review explicit. For an action we build, validation and duplicate protection keep a request from becoming an unintended commitment.',
   },
   {
-    n: '04',
-    name: 'Action',
-    h: 'The next approved step.',
-    d: 'A consultation request, a qualified inquiry, an appointment request, or a handoff to a person. The relationship can move forward without AI inventing a price, booking, purchase, or acceptance. Not every client needs every action.',
+    n: '04', name: 'Action and result', h: 'Make the next step useful.',
+    d: 'Where separately scoped, let an assistant submit a consultation request, send a qualified inquiry, or hand the customer to your team. Return what actually happened, what remains pending, and who follows up.',
   },
   {
-    n: '05',
-    name: 'Distribution',
-    h: 'The same accurate information, everywhere it is encountered.',
-    d: 'People, search, and AI see one consistent version of the business — not scattered or conflicting facts.',
+    n: '05', name: 'Publication and upkeep', h: 'Keep the same story across the business.',
+    d: 'Publish clear pages, connected business data, and appropriate discovery and capability information. Keep them aligned as services or policies change. Different assistants use different sources; no file guarantees universal adoption.',
   },
 ];
 
 const buyerNeeds = [
-  { t: 'Know what is true', d: 'Services, geography, credentials, and limits have to be clear enough to evaluate.' },
-  { t: 'Determine fit', d: 'The assistant has to decide whether your business matches the request.' },
-  { t: 'Know permitted actions', d: 'It must see the next step you allow — and refuse the ones you do not.' },
-  { t: 'Return an honest result or hand off', d: 'If the work needs a person, the system says so and leaves follow-up with you.' },
+  { t: 'Who is this business?', d: 'A clear identity, real people, contact details, and a service area.' },
+  { t: 'Does it fit my needs?', d: 'Specific offers, relevant limitations, and enough detail to compare options.' },
+  { t: 'What supports its claims?', d: 'Credentials, examples, reviews, or other evidence tied to the right business.' },
+  { t: 'What can I do next?', d: 'An available request or a clear way to reach the person who can help.' },
+  { t: 'What needs my approval?', d: 'Required information, permission, and conditions before a request goes through.' },
+  { t: 'Did it work?', d: 'A confirmed result or a clear handoff, with no confusion about what remains to be done.' },
 ];
 
 const whoWeBuildFor = [
-  'Established high-trust, high-value service businesses',
-  'Premium home services — window treatments, remodels, HVAC, roofing',
-  'Realtors and real-estate teams',
-  'Custom home builders and specialty trades',
-  'Specialty dental, med spas, and other considered-purchase practices',
-  'Operators who already have a reputation worth making understandable to AI',
+  'Premium home services, including window treatments, remodels, HVAC, and roofing',
+  'Realtors and real-estate teams helping clients make considered decisions',
+  'Custom home builders and specialty trades with distinct project requirements',
+  'Specialty dental, med spas, and other practices where human judgment matters',
+  'Established operators with expertise, a reputation, and a clear offer to explain',
 ];
 
 const offerPaths = [
   {
-    n: '01',
-    t: 'Foundation Build',
-    d: 'An owned website and digital business foundation so AI can understand and evaluate the business. You own the site and the infrastructure.',
-    note: 'This does not automatically include a live action endpoint. Most businesses need the foundation before a safe action can be scoped.',
+    n: '01', t: 'Foundation Build · $4,995 one-time',
+    d: 'A business-owned website with clear offers, evidence, policies, and connected information for people and AI assistants. Includes mapping the next steps that could be supported safely.',
+    note: 'You own the website and the accounts it runs on. No mandatory retainer. A live agent-action endpoint is separate from this build.',
   },
   {
-    n: '02',
-    t: 'Agent Capability Build',
-    d: 'One clearly defined approved action, scoped after the real business rules are understood. It protects against invalid, unauthorized, abusive, or duplicate requests, returns an honest outcome, and hands the work to a person where required.',
-    note: 'No published price. Different actions carry different rules and different risk. Booking, pricing, and checkout stay unavailable until the business actually permits them.',
+    n: '02', t: 'Agent Capability Build',
+    d: 'One approved action, from the information an assistant needs to the result the customer receives. We scope the business rules, permission checks, validation, duplicate protection, delivery, and human follow-up together.',
+    note: 'Separately scoped and priced after the action is defined. An inquiry, an appointment request, and a confirmed booking are different commitments.',
   },
   {
-    n: '03',
-    t: 'Platform Capability Layer — Pilot',
-    d: 'For selected businesses that remain on WordPress, Wix, Squarespace, or similar platforms: an owned capability layer that can sit alongside the existing website, on infrastructure and a domain the client controls.',
-    note: 'This is a founding pilot. A full rebuild is still the strongest path.',
+    n: '03', t: 'Platform Capability Layer · Pilot',
+    d: 'For selected businesses keeping WordPress, Wix, Squarespace, or a similar platform. We assess whether a business-owned layer alongside the existing site can support the needed information and capability.',
+    note: 'Application-only pilot. Scope depends on the platform, the quality of the current site, and the requested workflow.',
   },
 ];
 
 const processSteps = [
-  { w: 'PHASE 01', t: 'Discovery', d: 'We read the current site, the real services, the area, the policies, and the actions the business will and will not permit.' },
-  { w: 'PHASE 02', t: 'Design', d: 'We design identity, services, locations, proof, and what may later be requested. You approve it before the build starts.' },
-  { w: 'PHASE 03', t: 'Build', d: 'Page by page, with a live preview as we go. You review along the way.' },
-  { w: 'PHASE 04', t: 'Acceptance', d: 'Before we start, we agree what must be published, what AI must be able to understand, and — when an action is included — what the approved workflow must successfully do. The engagement is not complete until those agreed outputs pass.' },
-  { w: 'PHASE 05', t: 'Handoff', d: 'The site, hosting, and domain transfer to you. Walkthrough included. You own it. Active capabilities may still need maintenance.' },
+  { w: 'PHASE 01', t: 'Understand the customer journey', d: 'We review how customers choose you, the questions they ask, the evidence they need, and where a request gets stuck. Then we confirm your services, area, policies, and approval rules.' },
+  { w: 'PHASE 02', t: 'Agree the plan', d: 'You review the content, the site structure, and any proposed action. We put the scope and acceptance checks in writing before building.' },
+  { w: 'PHASE 03', t: 'Build with a working preview', d: 'Review the pages and customer journey as they take shape. We connect the visible content to the same business facts in the machine-readable layer.' },
+  { w: 'PHASE 04', t: 'Check the agreed result', d: 'We verify the published information, the agreed ways of reading it, and the customer journey. Where an action is included, we test success, invalid requests, repeat submissions, and handoff against the written scope.' },
+  { w: 'PHASE 05', t: 'Hand over ownership', d: 'You receive the site, code, and accounts, with a walkthrough. We document any third-party services and maintenance an active capability depends on.' },
 ];
 
-const dontDo = [
-  { t: 'Chatbot agency work', d: 'We do not install a generic chatbot and call the business ready for AI.' },
-  { t: 'Generic AI automation', d: 'We do not connect tools to act on a business that has not first been understood and controlled.' },
-  { t: 'SEO retainers', d: 'No monthly ranking packages. Visibility can follow clearer information — it is not the product.' },
-  { t: 'Paid media', d: 'Not this practice. Plenty of people do that work well.' },
-  { t: 'Actions before the business is understood', d: 'We will not connect AI to take actions before the real services, rules, and permissions are clear.' },
-  { t: 'Agents without control', d: 'No false booking, pricing, purchase, or acceptance. When judgment is required, the work goes to a person.' },
+const operatingPrinciples = [
+  { t: 'Your real offer leads', d: 'The build starts with what customers can buy or request from your business, supported by the experience and evidence you already have.' },
+  { t: 'The customer gives permission', d: 'A request must respect the customer’s consent and the information they choose to share.' },
+  { t: 'Your team keeps its judgment', d: 'Quoting, scheduling, accepting a project, or making a professional judgment stays with a person unless a specific supported workflow says otherwise.' },
+  { t: 'The result says what happened', d: 'A received inquiry is labeled as a received inquiry. The customer knows whether anything is confirmed and what comes next.' },
+  { t: 'Ownership is practical', d: 'Your website, code, and operating accounts belong to you. Direct service costs and maintenance needs are made clear.' },
+  { t: 'Success is checked', d: 'We test the outputs and workflows we agree to build. Third-party rankings and AI recommendations remain outside our control.' },
 ];
 
 const FG = 'var(--d-fg)';
-const DIM = 'rgba(233, 238, 255, 0.95)';
-const MUTE = 'rgba(219, 227, 255, 0.8)';
+const DIM = 'var(--d-fg-dim)';
+const MUTE = 'var(--d-fg-mute)';
 const ACCENT = 'var(--d-accent)';
 const sectionGap = { marginTop: '30px' };
 
@@ -218,10 +205,10 @@ export default function ServicesPage() {
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">SERVICES · HOW IT WORKS</div>
           <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(30px, 4.8vw, 62px)', lineHeight: 1.12, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
-            Infrastructure that lets AI understand — <em className="serif" style={{ color: ACCENT }}>and take authorized next steps with</em> — your business.
+            Help customers do business with you <em className="serif" style={{ color: ACCENT }}>through their AI assistant.</em>
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '18px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
-            When a customer delegates an outcome to AI, the assistant may evaluate your business before anyone visits. To keep you in that decision, it must know what is true, determine whether you fit, know the actions you permit, and return an honest result or hand the work to a person. Based in North Idaho. Built for service businesses anywhere.
+            Make it easier to understand your offer, check that you are a fit, and take the next step. We build the website and connected business information first, then add a specific action when it serves your customers and your team. Based in North Idaho. Working with service businesses anywhere.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary justify-center">Request an Agent Readiness Review →</Link>
@@ -232,16 +219,16 @@ export default function ServicesPage() {
 
       <section id="the-category" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">THE CATEGORY</div>
+          <div className="d-eyebrow mb-6">THE CUSTOMER EXPERIENCE</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
-            Isolated layers are common. <em className="serif" style={{ color: ACCENT }}>A usable system is not.</em>
+            Less work for your customer. <em className="serif" style={{ color: ACCENT }}>A better start for your team.</em>
           </h2>
           <div className="flex flex-col gap-5" style={{ maxWidth: '720px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              Existing tools often address one piece — visibility, scheduling, automation, or commerce. Service businesses still need those pieces working as one system AI can understand and take authorized next steps with.
+              A customer should not need to open five tabs, reconcile conflicting details, and repeat their story just to find out whether you can help. Their assistant needs the same answers your best front-desk person would give: what you do, who it is for, what supports it, and how to get started.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              Kodecite connects what is true about the business, what may be requested, what the owner permits, owned infrastructure, and human handoff. {LUXE_PROOF}
+              Kodecite connects those answers to a usable customer journey. Clear information helps an assistant compare and explain your business. A separately built capability can carry an approved request through to your team, with a result the customer can understand.
             </p>
           </div>
         </GlassPanel>
@@ -249,22 +236,22 @@ export default function ServicesPage() {
 
       <section id="website-development" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">THE PRODUCT</div>
+          <div className="d-eyebrow mb-6">WHAT WE BUILD</div>
           <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.7vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.03em', color: FG, maxWidth: '20ch' }}>
-            Owned infrastructure for the <em className="serif" style={{ color: ACCENT }}>agent-driven web.</em>
+            A clear business, online. <em className="serif" style={{ color: ACCENT }}>A useful next step.</em>
           </h2>
           <div className="flex flex-col gap-5 mb-8" style={{ maxWidth: '720px' }}>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              The product is the owned system that lets AI understand what you do, verify what is true, determine what you can and cannot do, recommend you accurately, take the next approved step, return an honest result, and hand the work to a person when required.
+              The foundation is a website people enjoy using, backed by a consistent record of your business. Services, locations, people, proof, and policies belong together. The next step should explain what a customer can request and what they can expect in return.
             </p>
             <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300 }}>
-              A complete rebuild is the strongest path. If you stay on WordPress, Wix, or Squarespace, we may still help selected businesses through an owned capability layer that sits alongside the existing site. We will not pretend every platform is equal.
+              A full rebuild gives us control over the content, performance, and connections. If your current site is staying, we can assess the application-only Platform Capability Layer pilot. The right path depends on what needs fixing and what your platform supports.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-2 mb-12">
-            {['Truth', 'Capability', 'Control', 'Action', 'Distribution'].map((t) => (
-              <span key={t} className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.08em', color: ACCENT, border: '1px solid rgba(93,213,255,0.35)', borderRadius: '999px', padding: '6px 14px' }}>{t}</span>
+            {['Identity', 'Offers and fit', 'Evidence', 'Permission', 'Action and result'].map((t) => (
+              <span key={t} className="font-mono" style={{ fontSize: '10px', letterSpacing: '0.08em', color: ACCENT, border: '1px solid var(--d-line-s)', borderRadius: '999px', padding: '6px 14px' }}>{t}</span>
             ))}
           </div>
 
@@ -272,11 +259,11 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="glass-panel-soft" style={{ padding: '24px 28px' }}>
               <p className="font-inter font-semibold mb-1" style={{ fontSize: '16px', color: FG }}>Real Estate With Shirin</p>
-              <a href="https://www.realestatewithshirin.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>realestatewithshirin.com</a>
+              <a href="https://www.realestatewithshirin.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid var(--d-line-s)' }}>realestatewithshirin.com</a>
             </div>
             <div className="glass-panel-soft" style={{ padding: '24px 28px' }}>
               <p className="font-inter font-semibold mb-1" style={{ fontSize: '16px', color: FG }}>Chelsey Fanning</p>
-              <a href="https://www.chelseyfanning.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}>chelseyfanning.com</a>
+              <a href="https://www.chelseyfanning.com" target="_blank" rel="noopener noreferrer" className="font-inter" style={{ fontSize: '13px', color: ACCENT, borderBottom: '1px solid var(--d-line-s)' }}>chelseyfanning.com</a>
             </div>
           </div>
         </GlassPanel>
@@ -284,12 +271,12 @@ export default function ServicesPage() {
 
       <section id="what-ai-must-do" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">BEFORE THE LAYERS</div>
+          <div className="d-eyebrow mb-6">THE QUESTIONS THAT MATTER</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '20ch' }}>
-            AI has to finish this work <em className="serif" style={{ color: ACCENT }}>before you stay in the decision.</em>
+            Answer the questions <em className="serif" style={{ color: ACCENT }}>behind a good decision.</em>
           </h2>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
-            If it cannot complete these four jobs with confidence, the customer connection may end before it begins.
+            Whether a person is browsing or an assistant is helping, these six questions shape a useful customer experience.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {buyerNeeds.map((item, i) => (
@@ -305,12 +292,12 @@ export default function ServicesPage() {
 
       <section id="how-it-works" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">THE FIVE LAYERS</div>
+          <div className="d-eyebrow mb-6">HOW IT FITS TOGETHER</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '18ch' }}>
-            Model only what the <em className="serif" style={{ color: ACCENT }}>real business permits.</em>
+            From a clear offer to <em className="serif" style={{ color: ACCENT }}>a dependable result.</em>
           </h2>
           <p className="font-inter mb-12" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '680px' }}>
-            Not every client needs every action. We do not invent a booking, a price, or an acceptance the business does not give.
+            We work through the whole journey, then build the parts you need. Sometimes the most useful next step is a well-informed conversation with your team.
           </p>
 
           <div className="flex flex-col gap-4">
@@ -335,9 +322,10 @@ export default function ServicesPage() {
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">THREE OFFER PATHS</div>
+          <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', color: FG }}>Choose the scope that helps your customers.</h2>
           <div className="flex flex-col gap-4">
             {offerPaths.map((o) => (
-              <article key={o.n} className="glass-panel-soft" style={{ padding: 'clamp(24px, 3vw, 34px)' }}>
+              <article id={o.n === '01' ? 'foundation-build' : o.n === '02' ? 'agent-capability' : 'platform-pilot'} key={o.n} className="glass-panel-soft" style={{ padding: 'clamp(24px, 3vw, 34px)' }}>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="font-inter font-semibold" style={{ fontSize: '15px', color: ACCENT }}>{o.n}</span>
                   <h3 className="font-inter font-semibold" style={{ fontSize: 'clamp(19px, 2.4vw, 24px)', color: FG }}>{o.t}</h3>
@@ -352,24 +340,24 @@ export default function ServicesPage() {
 
       <section id="live-production-proof" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">LIVE PRODUCTION PROOF</div>
+          <div className="d-eyebrow mb-6">A DOCUMENTED CUSTOMER REQUEST</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '20ch' }}>
             Luxe Window Works — a request an assistant could <em className="serif" style={{ color: ACCENT }}>find and submit.</em>
           </h2>
           <p className="font-inter mb-5" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-            An outside AI found what Luxe permitted, established that the request qualified, and submitted one consultation request. Luxe received one email. Repeating the same request did not create another lead. Changing the request while reusing the same request identity was rejected. A person still follows up.
+            In the documented authorized test, an outside AI found what Luxe permitted, checked that the request qualified, and submitted an in-home consultation request. Luxe received one email. Replaying the identical request produced no second lead. Changing the request while reusing its identity was rejected.
           </p>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-            That is not booking, calendar, pricing, checkout, or acceptance. {LUXE_PROOF}
+            The result was a received request ready for human follow-up. It did not confirm an appointment, set a price, complete a purchase, or accept a project. Read the case study for the test details and scope.
           </p>
           <p className="font-inter mb-6" style={{ fontSize: '14px', lineHeight: 1.65, color: MUTE, fontWeight: 300, maxWidth: '720px' }}>
-            Public discovery contract:{' '}
+            Read the published capability:{' '}
             <a
               href={LUXE_CAPABILITY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="capability-url"
-              style={{ color: ACCENT, borderBottom: '1px solid rgba(93,213,255,0.4)' }}
+              style={{ color: ACCENT, borderBottom: '1px solid var(--d-line-s)' }}
             >
               luxewindowworks.com/api/capabilities/request-in-home-consultation
             </a>
@@ -386,7 +374,7 @@ export default function ServicesPage() {
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">WHO WE BUILD FOR</div>
           <p className="font-inter font-semibold mb-8" style={{ fontSize: 'clamp(20px, 2.6vw, 28px)', lineHeight: 1.3, letterSpacing: '-0.02em', color: FG, maxWidth: '22ch' }}>
-            Established, <em className="serif" style={{ color: ACCENT }}>high-trust, high-value</em> service businesses.
+            For businesses where <em className="serif" style={{ color: ACCENT }}>the choice takes care.</em>
           </p>
           <ul className="flex flex-col gap-3 mb-8" style={{ maxWidth: '640px' }}>
             {whoWeBuildFor.map((w) => (
@@ -397,22 +385,21 @@ export default function ServicesPage() {
             ))}
           </ul>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: MUTE, fontWeight: 300, maxWidth: '680px' }}>
-            If your customers make a considered, expensive decision, this is built for you.
-            If you need a chatbot, a paid-media team, or an SEO retainer, we will tell you we are the wrong shop.
+            The best starting point is a real offer, experience you can demonstrate, and a team that knows how a good customer relationship begins. We help make that knowledge easier to use online.
           </p>
         </GlassPanel>
       </section>
 
       <section className="secondary-section" style={sectionGap}>
-        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)', borderLeft: '2px solid rgba(93,213,255,0.55)' }}>
+        <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)', borderLeft: '2px solid var(--d-accent)' }}>
           <div className="d-eyebrow mb-6">WHAT YOU OWN</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(26px, 3.2vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
-            The site. The accounts. <em className="serif" style={{ color: ACCENT }}>The finished system.</em>
+            Your website. Your accounts. <em className="serif" style={{ color: ACCENT }}>Your business.</em>
           </h2>
           <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '700px' }}>
             You own the finished website and the hosting and code accounts it runs on. There is no mandatory retainer.
             Active capabilities may use third-party services with direct costs, and they may need occasional maintenance.
-            We do not claim a live action runs forever without that work.
+            We make those dependencies clear at handoff so you can plan for them.
           </p>
         </GlassPanel>
       </section>
@@ -421,13 +408,13 @@ export default function ServicesPage() {
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">HOW THE ENGAGEMENT RUNS</div>
           <p className="font-inter mb-10" style={{ fontSize: '16px', lineHeight: 1.6, color: DIM, fontWeight: 300, maxWidth: '640px' }}>
-            Built in focused phases, with a live preview at every step — no big reveal at the end.
+            You see the work as it develops, know what is being tested, and take ownership of the finished build.
           </p>
           <div className="mb-4">
             {processSteps.map((s, i) => (
               <div key={s.w} className="flex gap-6">
                 <div className="flex flex-col items-center flex-shrink-0" style={{ width: '12px' }}>
-                  <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: ACCENT, flexShrink: 0, marginTop: '5px', boxShadow: '0 0 10px rgba(93,213,255,0.5)' }} />
+                  <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: ACCENT, flexShrink: 0, marginTop: '5px', boxShadow: 'none' }} />
                   {i < processSteps.length - 1 && <div style={{ width: '1px', flex: 1, background: 'rgba(255,255,255,0.14)', minHeight: '32px' }} />}
                 </div>
                 <div style={{ paddingBottom: i < processSteps.length - 1 ? '32px' : '0' }}>
@@ -443,9 +430,10 @@ export default function ServicesPage() {
 
       <section className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(22px, 5vw, 64px)' }}>
-          <div className="d-eyebrow mb-6">WHAT WE ARE NOT</div>
+          <div className="d-eyebrow mb-6">HOW WE WORK</div>
+          <h2 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', color: FG }}>Convenience with clear responsibilities.</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {dontDo.map((s) => (
+            {operatingPrinciples.map((s) => (
               <div key={s.t} className="glass-panel-soft" style={{ padding: '22px 26px' }}>
                 <p className="font-inter font-semibold mb-2" style={{ fontSize: '15px', color: FG, letterSpacing: '-0.01em' }}>{s.t}</p>
                 <p className="font-inter" style={{ fontSize: '13.5px', lineHeight: 1.6, color: MUTE, fontWeight: 300 }}>{s.d}</p>
@@ -459,17 +447,17 @@ export default function ServicesPage() {
         <GlassPanel style={{ padding: 'clamp(28px, 6vw, 72px)', textAlign: 'center' }}>
           <div className="d-eyebrow d-eyebrow-center mb-6">START HERE</div>
           <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG }}>
-            See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do</em> today.
+            Find the friction <em className="serif" style={{ color: ACCENT }}>before your customer does.</em>
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '640px', marginLeft: 'auto', marginRight: 'auto' }}>
-            The Agent Readiness Review is a written look at identity, services, area, credentials, policies, what AI can understand today, and where control is missing. {REVIEW_TURNAROUND} You keep the report either way.
+            The Agent Readiness Review checks how clearly your business can be understood, what supports trust, and how a customer or their assistant can move forward. You get practical priorities in writing. {REVIEW_TURNAROUND} You keep the report either way.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
             <Link href="/pricing" className="d-btn d-btn-ghost">See Pricing →</Link>
           </div>
           <p className="font-mono" style={{ fontSize: '11px', letterSpacing: '0.14em', color: MUTE }}>
-            OWNED BY YOU · CONTROLLED BY YOU · READY FOR THE AGENT-DRIVEN WEB
+            CLEAR TO CUSTOMERS · USEFUL TO THEIR ASSISTANTS · OWNED BY YOU
           </p>
         </GlassPanel>
       </section>

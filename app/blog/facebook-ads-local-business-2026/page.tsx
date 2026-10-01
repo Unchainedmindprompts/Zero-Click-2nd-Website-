@@ -1,404 +1,219 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+import { blogPosts } from '@/lib/blog';
+
+type Section = { h: string; p: string[]; items?: string[]; source?: string };
+const ARTICLE: { slug: string; title: string; description: string; date: string; category: string; intro: string; sections: Section[]; sources: string[][]; related: string[]; example?: object } = {
+  "slug": "facebook-ads-local-business-2026",
+  "title": "Paid Traffic and an Owned Website: Lessons for Service Businesses",
+  "description": "An updated archival guide to matching paid traffic with a clear offer, useful evidence, qualified inquiries and honest measurement.",
+  "date": "2026-02-12",
+  "category": "ARCHIVE",
+  "intro": "This article began as a paid-media guide. Paid media is not part of Kodecite’s current offer, but the underlying lesson still matters: a visitor from an ad, search result or AI assistant needs a clear business and a useful next step.",
+  "sections": [
+    {
+      "h": "Start with the outcome the business can serve",
+      "p": [
+        "An ad can attract attention before someone has decided what they need. A service business should therefore be clear about which customers, projects and locations it wants to serve. Cheap clicks are not useful if they consistently lead to requests outside the business’s scope.",
+        "Write down what makes an inquiry worthwhile before measuring the campaign. Project type, geography, timing and expectations may matter more than a large contact count. The website can explain many of those distinctions before anyone fills out a form."
+      ]
+    },
+    {
+      "h": "Keep the promise consistent from ad to page",
+      "p": [
+        "A customer should recognize the same offer after clicking. If an ad discusses a consultation, the page should explain that consultation: what it covers, who it suits and how it starts. Do not replace a specific promise with a generic homepage.",
+        "Use evidence that is relevant to the promoted work. A completed project, a properly attributed review or a product explanation can help someone decide whether to continue. Avoid presenting a testimonial as a typical financial or performance outcome unless there is evidence for that broader claim."
+      ]
+    },
+    {
+      "h": "Make the inquiry useful to both sides",
+      "p": [
+        "Ask for information that helps route or qualify the request. A service area, project category and short description may be useful. A long form demanding details the customer does not yet know can create unnecessary friction.",
+        "Explain what submission means. If someone will call to discuss the project, say so. If an appointment is genuinely being booked through a connected calendar, show the confirmed details. A request and a booking should never share an ambiguous success message."
+      ]
+    },
+    {
+      "h": "Measure beyond the platform dashboard",
+      "p": [
+        "Advertising platforms report events according to their settings and attribution models. A recorded lead is not necessarily a qualified inquiry, an appointment or a sale. Keep those stages separate in the business’s own records.",
+        "Review a sample of actual inquiries with the person who handles them. What was useful? Which questions were repeatedly missing? Did the customer expect a price or service that was not available? These observations can improve the page even before a campaign has enough data for confident conclusions."
+      ]
+    },
+    {
+      "h": "Use audience and tracking data responsibly",
+      "p": [
+        "Tracking and customer-list tools involve sharing information with a platform. Check the current product rules and the permissions applicable to the data and audience before implementation. Do not assume a customer relationship grants every advertising use.",
+        "Product options and targeting controls change. Use Meta’s current documentation and the available account settings for implementation rather than relying on a dated sequence of button clicks. The durable principle is to collect and use only appropriate data for a defined purpose."
+      ],
+      "source": "meta"
+    },
+    {
+      "h": "Avoid a guaranteed “flywheel” story",
+      "p": [
+        "Retargeting, creative testing and landing-page improvements can be useful, but they do not create automatic compounding returns. Small local audiences can saturate. Weak offers can generate clicks without worthwhile requests. Measurement can be incomplete.",
+        "Set a review process and a spending boundary. Compare the quality and cost of actual outcomes, not only the cheapest event the platform can optimize. A campaign that needs a different offer or better follow-up should not be scaled simply because its click-through rate looks attractive."
+      ]
+    },
+    {
+      "h": "The same foundation helps delegated customers",
+      "p": [
+        "A customer arriving through a personal AI assistant may already have compared providers. They still need accurate facts, relevant evidence and a next step that works. The site’s information should remain consistent regardless of where the visitor came from.",
+        "That is the connection to Kodecite’s current work: an owned business foundation that makes the service easier to understand and engage with. Where appropriate, a separately scoped capability can let an outside assistant submit a defined request and receive a real result."
+      ]
+    },
+    {
+      "h": "A useful handoff to your media partner",
+      "p": [
+        "If you work with an advertising specialist, give them the approved business facts, suitable project criteria, evidence and request process. Agree how the team will report qualified inquiries and closed work back into the review.",
+        "Kodecite’s present focus is the owned website and agent-facing business foundation. This archival article is retained for its customer-journey lessons, without implying that a paid-media retainer is included."
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "Meta Business Help Center",
+      "https://www.facebook.com/business/help"
+    ]
+  ],
+  "related": [
+    "below-the-content-layer",
+    "from-recommended-to-actionable-luxe-window-works"
+  ]
+};
+const SOURCE_LINKS: Record<string, string[]> = {
+  "google": [
+    "Google Search Central: AI features and your website",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
+  "schema": [
+    "Schema.org: About the vocabulary",
+    "https://schema.org/docs/about.html"
+  ],
+  "jsonld": [
+    "W3C: JSON-LD 1.1",
+    "https://www.w3.org/TR/json-ld11/"
+  ],
+  "local": [
+    "Schema.org: LocalBusiness",
+    "https://schema.org/LocalBusiness"
+  ],
+  "service": [
+    "Schema.org: Service",
+    "https://schema.org/Service"
+  ],
+  "offer": [
+    "Schema.org: Offer",
+    "https://schema.org/Offer"
+  ],
+  "updates": [
+    "Google Search documentation updates",
+    "https://developers.google.com/search/updates"
+  ],
+  "crawl": [
+    "Vercel: The rise of the AI crawler",
+    "https://vercel.com/blog/the-rise-of-the-ai-crawler"
+  ],
+  "reviews": [
+    "Google Business Profile: Local ranking guidance",
+    "https://support.google.com/business/answer/7091?hl=en"
+  ],
+  "sitemap": [
+    "Google Search Central: Sitemaps",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+  ],
+  "luxe": [
+    "Luxe Window Works: Public consultation capability",
+    "https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation"
+  ],
+  "meta": [
+    "Meta Business Help Center",
+    "https://www.facebook.com/business/help"
+  ],
+  "terms": [
+    "Meta: Customer List Custom Audiences Terms",
+    "https://www.facebook.com/legal/terms/customaudience"
+  ]
+};
+const PAGE_URL = `https://www.kodecite.ai/blog/${ARTICLE.slug}`;
+const WORD_COUNT = 734;
+const READ_TIME = '4 min read';
+const PUBLISHED = 'February 12, 2026';
 
 export const metadata: Metadata = {
-  title: 'Facebook Ads for Local Business in 2026',
-  description:
-    'Stop running ads that drain budget. Build a Facebook ad system that compounds — pixel data feeding audiences, retargeting, and lookalikes that flywheel.',
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
-  },
-  openGraph: {
-    title: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
-    description:
-      'The compounding Facebook ad system that local service businesses use to lower cost-per-lead over time instead of staying constant.',
-    url: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
-    type: 'article',
-  },
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: ARTICLE.title, description: ARTICLE.description, url: PAGE_URL, type: 'article', publishedTime: `${ARTICLE.date}T00:00:00-07:00`, modifiedTime: '2026-10-01T15:00:00Z' },
 };
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026#article',
-  headline: 'Facebook Ads for Local Service Businesses in 2026: The Flywheel Method',
-  description:
-    'Stop running ads that drain budget. Build a Facebook ad system that compounds — pixel data feeding audiences, retargeting warming leads, and lookalikes scaling what works.',
-  datePublished: '2026-02-12T00:00:00-07:00',
-  dateModified: '2026-02-12T00:00:00-07:00',
-  wordCount: 950,
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  keywords: 'Facebook ads local business, Meta ads, custom audiences, retargeting, lookalike audiences, local service marketing, flywheel method, pixel data',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  url: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
-  },
-  citation: [
-    { '@type': 'CreativeWork', name: 'Meta Business Help Center', url: 'https://www.facebook.com/business/help' },
-    { '@type': 'CreativeWork', name: 'Meta Ads Manager Guide', url: 'https://www.facebook.com/business/help/200000840044554' },
-    { '@type': 'CreativeWork', name: 'Meta Business — Pixel Setup', url: 'https://www.facebook.com/business/help/952192354843755' },
-  ],
+  '@context': 'https://schema.org', '@type': 'Article', '@id': `${PAGE_URL}#article`,
+  headline: ARTICLE.title, description: ARTICLE.description,
+  datePublished: `${ARTICLE.date}T00:00:00-07:00`, dateModified: '2026-10-01T15:00:00Z',
+  wordCount: WORD_COUNT, articleSection: ARTICLE.category,
+  author: articleAuthor, publisher: articlePublisher, isPartOf: blogCollectionPage,
+  url: PAGE_URL, mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+  image: 'https://www.kodecite.ai/og-image.png', about: [businessRef],
+  citation: ARTICLE.sources.map(([name, url]) => ({ '@type': 'CreativeWork', name, url })),
 };
-
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026#breadcrumb',
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', '@id': `${PAGE_URL}#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'Facebook Ads: The Flywheel Method',
-      item: 'https://www.kodecite.ai/blog/facebook-ads-local-business-2026',
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: ARTICLE.title, item: PAGE_URL },
   ],
 };
 
-const faqPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much should a local service business spend on Facebook ads?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The right budget depends on your service area and average job value, but most local service businesses see diminishing returns below $1,500 per month. The Flywheel Method requires at minimum three campaign layers running simultaneously, and underfunding any layer collapses the system. A $2,500 to $4,000 monthly budget allows meaningful testing across all three layers.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take for Facebook ads to work for a local business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The awareness layer needs approximately 4 to 6 weeks to accumulate sufficient pixel data for meaningful retargeting audiences. Expect the first 30 days to be primarily data-gathering, with conversion efficiency improving significantly in weeks 5 through 12 as retargeting and lookalike audiences mature. Businesses that stop ads before the 6-week mark miss the point where the system becomes efficient.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What type of ad creative works best for local service businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Video consistently outperforms static images for awareness-layer campaigns because it enables view-based audience segmentation. For retargeting and conversion campaigns, before-and-after imagery and direct offers such as free estimates or same-day booking with clear CTAs consistently outperform brand-focused creative. Real job photos outperform stock imagery for trust and click-through rate.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do Facebook ads work for high-ticket local services like window treatments or HVAC?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, but the strategy differs from lower-ticket services. High-ticket services require longer nurture sequences and should use lead generation forms rather than direct booking CTAs. The Flywheel Method is particularly effective for high-ticket services because it builds multiple touchpoints before asking for commitment — reducing resistance at the conversion stage significantly.',
-      },
-    },
-  ],
-};
-
-export default function FacebookAdsLocalBusiness() {
+export default function ArticlePage() {
+  const related = ARTICLE.related.map((slug) => blogPosts.find((post) => post.slug === slug)).filter(Boolean);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
-            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[var(--d-fg)] truncate">Facebook Ads: The Flywheel</span>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <header className="pt-36 pb-16 px-5 md:px-8" style={{ background: 'var(--d-bg)', borderBottom: '1px solid var(--d-line)' }}>
+        <div className="max-w-4xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex gap-3 text-sm font-inter text-[var(--d-fg-dim)] mb-9">
+            <Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/blog">Insights</Link>
           </nav>
-
-          <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">Facebook Ads</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">9 min read</span>
-          </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            Facebook Ads for Local Service Businesses:{' '}
-            <span className="text-[var(--d-accent)]">The Flywheel Method</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            Most local businesses run ads that drain budget and produce inconsistent results. The Flywheel Method is how you build a system that compounds — where each campaign layer feeds the next, and cost-per-lead decreases over time.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">ZC</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">KodeCite.ai</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">February 12, 2026</p>
-              </div>
-            </div>
+          <p className="d-eyebrow mb-6">{ARTICLE.category} · {READ_TIME}</p>
+          <h1 className="font-inter font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-[var(--d-fg)] mb-8">{ARTICLE.title}</h1>
+          <p className="font-inter text-lg md:text-xl leading-relaxed text-[var(--d-fg-dim)] max-w-3xl">{ARTICLE.intro}</p>
+          <div className="mt-9 pt-6 font-inter text-sm text-[var(--d-fg-dim)]" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <p className="font-semibold text-[var(--d-fg)] mb-1">Mark Abplanalp · Kodecite</p>
+            <p>Published {PUBLISHED} · Updated October 1, 2026</p>
           </div>
         </div>
+      </header>
+      <section className="px-5 md:px-8 py-16 md:py-20" style={{ background: 'var(--d-bg)' }}>
+        <article className="max-w-3xl mx-auto font-inter text-[var(--d-fg-dim)]" style={{ fontSize: '17px', lineHeight: 1.85 }}>
+          {ARTICLE.sections.map((section) => (
+            <section key={section.h} className="mb-12">
+              <h2 className="font-inter font-semibold text-2xl md:text-3xl leading-tight tracking-tight text-[var(--d-fg)] mb-5">{section.h}</h2>
+              {section.p.map((paragraph) => <p key={paragraph} className="mb-5">{paragraph}</p>)}
+              {section.items && <ul className="space-y-3 pl-6 mb-5 list-disc">{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
+              {section.source && SOURCE_LINKS[section.source] && <p className="text-sm"><a href={SOURCE_LINKS[section.source][1]} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{SOURCE_LINKS[section.source][0]} →</a></p>}
+              {section.h === 'A small connected example' && ARTICLE.example && <pre className="overflow-x-auto rounded-xl p-5 text-xs md:text-sm leading-relaxed my-6" style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)' }}><code>{JSON.stringify(ARTICLE.example, null, 2)}</code></pre>}
+            </section>
+          ))}
+          <section className="pt-8 mt-12" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Sources and further reading</h2>
+            <ul className="space-y-3 text-sm">{ARTICLE.sources.map(([label, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{label} →</a></li>)}</ul>
+          </section>
+          <section className="pt-8 mt-10" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Keep reading</h2>
+            <ul className="space-y-4">{related.map((post) => post && <li key={post.slug}><Link href={`/blog/${post.slug}`} className="text-[var(--d-accent)] hover:underline">{post.title} →</Link></li>)}</ul>
+            <Link href="/blog" className="inline-block mt-8 text-sm text-[var(--d-fg-dim)] hover:text-[var(--d-fg)]">← All insights</Link>
+          </section>
+        </article>
       </section>
-
-      <div className="section-divider" />
-
-      {/* Article + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
-                  Most local service businesses run Facebook ads the wrong way. They pick an audience, set a budget, write an ad, and wait. When it doesn&apos;t work, they change the creative and try again. When that doesn&apos;t work, they conclude that Facebook ads don&apos;t work for their business. The problem isn&apos;t Facebook. It&apos;s the absence of a system. The Flywheel Method is how we build ad campaigns that compound — where each element feeds the next, and the cost to acquire a customer decreases over time.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Why Spray-and-Pray Facebook Ads Fail
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  The Single Audience Problem
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Most local businesses run all their budget into a single broad audience — a geographic radius around their service area, layered with some demographic filters and interest targeting they set up once and never revisited. This audience contains people at every stage of the buying journey simultaneously: some have never heard of your business, some have visited your website, some have watched your videos, some are past customers. The same ad is shown to all of them, which means it&apos;s optimized for none of them.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  A first-time exposure ad that introduces your brand is the wrong message for someone who visited your estimate request page yesterday. A retargeting ad with an offer is the wrong message for someone who has never interacted with your brand before. When you treat every person in your geographic area as the same audience, you waste budget on the wrong messages for most of them.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Why Cold Audiences Are Your Worst Performers
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Cold interest-based audiences — people who match demographic and interest criteria but have had no prior contact with your business — have the highest cost per lead of any audience type. They don&apos;t know you, they have no reason to trust you yet, and they&apos;re seeing your ad for the first time. Asking a cold audience to book an estimate or call for a quote is asking for a significant commitment from someone who has zero relationship with your business.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Businesses that run all their ad budget at cold audiences are perpetually in acquisition mode — spending the same amount to reach new people every month with no compounding return. The alternative is building audiences from your own data: people who already know you exist, have demonstrated some interest, and are significantly more likely to convert at a fraction of the cost.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Flywheel Framework Explained
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  The Three Layers Every Campaign Needs
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The Flywheel Method organizes your Facebook ad campaigns into three layers that correspond to the three stages of the customer journey. Layer one is awareness — reaching cold audiences who match the profile of your ideal customer, with creative designed to build brand recognition and generate engagement signals, not direct conversions. Layer two is intent — retargeting warm audiences who have already engaged with your content or visited your website, with messaging that acknowledges their familiarity and moves them toward booking. Layer three is scaling — using lookalike audiences built from your best customers to find new cold prospects who most closely resemble the people who have already hired you.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  How Each Layer Feeds the Next
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The system compounds because each layer generates the inputs for the next. Your awareness campaigns generate video views and website visits — the raw data that feeds your retargeting audiences. Your retargeting campaigns convert warm leads and add them to your customer list — the source data for your lookalike audiences. Your lookalike campaigns find new cold prospects who closely resemble your best customers, who then enter the awareness layer and begin the cycle again. The longer the system runs, the better each audience becomes and the lower the cost per conversion falls.
-                </p>
-
-                {/* Flywheel visual */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6 my-8">
-                  <p className="eyebrow mb-5 text-xs">THE FLYWHEEL LAYERS</p>
-                  <div className="space-y-3">
-                    {[
-                      { layer: 'Layer 1', name: 'Awareness', desc: 'Cold interest audiences — brand introduction, video views, pixel data accumulation', color: 'text-[var(--d-fg-dim)]' },
-                      { layer: 'Layer 2', name: 'Intent', desc: 'Warm retargeting — video viewers, website visitors, estimate page traffic', color: 'text-[var(--d-fg)]' },
-                      { layer: 'Layer 3', name: 'Scale', desc: 'Lookalike audiences from customer list — most efficient cold targeting', color: 'text-[var(--d-accent)]' },
-                    ].map((item) => (
-                      <div key={item.layer} className="flex items-start gap-4 p-4 bg-[var(--d-bg)] rounded-lg border border-white/5">
-                        <div className="flex-shrink-0">
-                          <p className="text-[var(--d-accent)] text-xs font-bold font-inter">{item.layer}</p>
-                          <p className={`${item.color} text-sm font-semibold font-inter`}>{item.name}</p>
-                        </div>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter leading-relaxed">{item.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Layer 1 — Awareness: Reaching Cold Audiences Profitably
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Interest and Behavior Targeting for Local Services
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  For awareness campaigns targeting cold audiences, interest and behavior-based targeting is your starting point. For a local service business, this means targeting homeowners in your service area who match behavioral signals associated with home improvement spending — recent home purchases, home improvement interest categories, household income brackets that correlate with willingness to spend on professional services. The goal of this audience isn&apos;t to convert immediately. It&apos;s to generate the signal data — video views, profile visits, website clicks — that will fuel your more efficient retargeting campaigns.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  The Video View Strategy That Builds Pixel Data
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The most effective awareness creative for local service businesses is a 30 to 60 second video showing your work — real job footage, before-and-after transitions, a brief customer testimonial. The video doesn&apos;t need production polish. Authenticity outperforms slick production in local service categories consistently. The point of this video isn&apos;t to convert viewers. It&apos;s to identify people who watch 50% or more of the video — a strong signal of genuine interest that can be captured as a custom audience and retargeted in layer two.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Layer 2 — Intent: Retargeting Warm Visitors
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Setting Up Video View Retargeting
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Video view custom audiences capture everyone who watched 50%, 75%, or 95% of your awareness video. These are people who have seen your brand, spent meaningful time engaging with your content, and demonstrated genuine interest. They are dramatically warmer than any cold interest audience. A retargeting campaign to 50%+ video viewers typically produces cost-per-lead 40 to 70% lower than cold audience campaigns — because you&apos;re talking to people who already know you exist.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Website Visitor Retargeting with Urgency Messaging
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Website visitor retargeting — powered by the Facebook pixel — captures everyone who has visited your site. Segment this audience by page visited: people who viewed your estimate request page but didn&apos;t submit are your highest-intent segment and should receive direct conversion messaging with a clear offer. People who visited service pages without reaching the estimate page are mid-funnel and should receive social proof ads — reviews, job photos, and a soft CTA. Treat each segment differently. The same ad for all website visitors is only marginally better than no retargeting at all.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Layer 3 — Conversion: Lookalike Audiences That Scale
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Building Lookalikes from Your Best Customers
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Once you have 100 or more customers in your CRM, you have the source data to build a lookalike audience. Upload your customer email list to Facebook&apos;s Custom Audiences tool, create a 1% lookalike targeting the most similar people in your geographic area, and run your awareness creative to this audience. Because lookalikes are algorithmically matched to your actual customer profile — not to broad interest categories — they convert at rates comparable to warm retargeting audiences, even on first exposure.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  How to Feed the Flywheel Over Time
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  The flywheel compounds because the inputs improve continuously. More video views means richer retargeting audiences. More conversions means a larger and more representative customer list. A larger customer list means a more accurate lookalike audience. A more accurate lookalike means lower cost-per-click in the awareness layer. Lower cost-per-click means more video views for the same budget. Every component feeds every other component, and the system becomes more efficient every month it runs. This is why businesses that run the flywheel for 90 days see fundamentally different economics than businesses that keep restarting campaigns from scratch.
-                </p>
-
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
-              </div>
-            </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
-                  <p className="eyebrow mb-4 text-xs">FLYWHEEL BENCHMARKS</p>
-                  <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">6wk</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">to meaningful retargeting data</p>
-                    </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">60%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">lower CPL: retargeting vs cold</p>
-                    </div>
-                    <div>
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">1%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">lookalike starting point</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Build the Flywheel for Your Business
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    We set up the full three-layer system — awareness, retargeting, and lookalike — with proper pixel tracking, audience segmentation, and creative tailored to each stage.
-                  </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Start the Conversation
-                  </Link>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
-                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">6 min read</p>
-                    </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/what-is-zero-click-search" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          What Is Zero Click Search and Why Your Business Is Invisible
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </aside>
-
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      <section className="py-20 bg-[var(--d-bg)] px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">STOP WASTING AD BUDGET</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            Build a Facebook System That Gets More Efficient Every Month
-          </h2>
-          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            One campaign layer isn&apos;t a strategy. The Flywheel is. Let&apos;s build the three-layer system for your business and start compounding your ad results.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Get a Campaign Audit
-            </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read More Articles
-            </Link>
-          </div>
+      <section className="py-20 px-5 md:px-8" style={{ background: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="d-eyebrow mb-5">YOUR BUSINESS, CLEARLY UNDERSTOOD</p>
+          <h2 className="font-inter text-3xl md:text-4xl font-semibold tracking-tight text-[var(--d-fg)] mb-5">Make the next step easier for your customer and their AI assistant.</h2>
+          <p className="font-inter text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">An Agent Readiness Review looks at your business information, supporting evidence and the next steps a customer can take. Start with the gaps that matter to a real inquiry.</p>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
         </div>
       </section>
     </>

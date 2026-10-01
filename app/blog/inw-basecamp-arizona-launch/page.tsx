@@ -1,393 +1,229 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+import { blogPosts } from '@/lib/blog';
+
+type Section = { h: string; p: string[]; items?: string[]; source?: string };
+const ARTICLE: { slug: string; title: string; description: string; date: string; category: string; intro: string; sections: Section[]; sources: string[][]; related: string[]; example?: object } = {
+  "slug": "inw-basecamp-arizona-launch",
+  "title": "The INW Basecamp Arizona Launch: A Focused Foundation for a New Market",
+  "description": "Lessons from an earlier same-day landing-page launch: define the offer, separate launch checks from market outcomes and connect inquiries to human follow-up.",
+  "date": "2026-02-26",
+  "category": "CASE STUDIES",
+  "intro": "The original INW Basecamp Arizona launch report described a landing page, structured-data work and paid campaigns prepared on the same day. Its useful lesson is focused execution: establish what is offered, make it understandable and give interested customers a clear next step.",
+  "sections": [
+    {
+      "h": "Keep launch evidence separate from market results",
+      "p": [
+        "Publishing a page is a deliverable. Validating its structured data is a technical check. Launching a campaign is another action. None independently proves that a new market trusts the business or that customers will book.",
+        "This is a historical launch account, not a newly audited performance report. The article preserves the reported same-day scope without converting that timing into a general delivery promise. Current availability, campaign performance and business outcomes would need current records."
+      ]
+    },
+    {
+      "h": "A new market needs an accurate explanation",
+      "p": [
+        "An established business may have experience in one region while entering another. The website should distinguish those facts. Prior work can demonstrate expertise, but it should not be presented as local work in the new area.",
+        "Explain the actual offer, who it suits, where it is available and how a customer can confirm details. Identify whether there is a physical location, a service area or an upcoming expansion. Those distinctions affect both human expectations and how the business should be described in code."
+      ]
+    },
+    {
+      "h": "Use the smallest page that answers the decision",
+      "p": [
+        "A focused launch page should let a prospective customer understand the offering without hunting through an old site. Give it a descriptive title, useful headings, relevant evidence and a next step that matches the stage of the relationship.",
+        "The page should answer the questions that determine fit. Which customers and project types are suitable? What is available now? Which details need a conversation? What information should a request include? If a fact is not established, leave room for confirmation rather than filling it with confident marketing language."
+      ]
+    },
+    {
+      "h": "Model relationships without inventing a local presence",
+      "p": [
+        "Structured data can connect the page to the existing business and describe the actual offering. Use a location entity only when there is a real location to represent. Do not create a fictional office or suggest a verified business profile exists before it does.",
+        "The same principle applies to evidence. A project image from an established region can be useful if it is labeled honestly. A credential belongs to the holder who earned it. A new-market claim should say what is new and what experience the team brings with it."
+      ]
+    },
+    {
+      "h": "Let the conversion match the buying process",
+      "p": [
+        "For considered purchases, an inquiry may be the most useful first action. A customer may need to discuss suitability, timing, scope or price with a person before committing. The request flow should collect enough context to make that discussion productive.",
+        "An assistant working for the customer needs the same clarity. It should be able to distinguish a request for information from a confirmed appointment or purchase. A successful submission should explain that the request was received and what follow-up remains."
+      ]
+    },
+    {
+      "h": "Paid distribution was part of the historical scope",
+      "p": [
+        "The original launch included Facebook campaigns. That is context for the launch, not a current Kodecite paid-media offer. Paid distribution can bring people to a new page, while the owned site still needs to explain the business and handle the response well.",
+        "Campaign launch, audience engagement and qualified demand should be reported separately. Tracking and audience use also need appropriate permissions and platform compliance. A short launch timeline is not a reason to treat every visitor or customer record as available for advertising."
+      ]
+    },
+    {
+      "h": "A practical launch acceptance checklist",
+      "p": [
+        "Before publication, test the page against its stated purpose. Keep technical acceptance concrete and keep market expectations realistic."
+      ],
+      "items": [
+        "The offer, availability and geography reflect the approved business facts.",
+        "Images, credentials and examples are correctly attributed.",
+        "The page loads, navigation works and important information is accessible.",
+        "Structured data matches the visible page and appropriate vocabulary.",
+        "The request reaches the right person and shows an accurate confirmation.",
+        "The team knows who follows up and how later changes will be published."
+      ]
+    },
+    {
+      "h": "What the case contributes to an agent-led journey",
+      "p": [
+        "The broader lesson is to build around a real customer decision before expanding the site or campaign. A focused, accurate foundation can be extended as evidence and demand develop.",
+        "For Kodecite today, that extends to personal AI assistants and outside agents. The business needs to be understandable, supported by evidence and able to receive the appropriate next request. The format of the entry point can change; the responsibility to represent the business accurately remains."
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "Schema.org: About the vocabulary",
+      "https://schema.org/docs/about.html"
+    ],
+    [
+      "Google Search Central: Sitemaps",
+      "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+    ]
+  ],
+  "related": [
+    "below-the-content-layer",
+    "from-recommended-to-actionable-luxe-window-works"
+  ]
+};
+const SOURCE_LINKS: Record<string, string[]> = {
+  "google": [
+    "Google Search Central: AI features and your website",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
+  "schema": [
+    "Schema.org: About the vocabulary",
+    "https://schema.org/docs/about.html"
+  ],
+  "jsonld": [
+    "W3C: JSON-LD 1.1",
+    "https://www.w3.org/TR/json-ld11/"
+  ],
+  "local": [
+    "Schema.org: LocalBusiness",
+    "https://schema.org/LocalBusiness"
+  ],
+  "service": [
+    "Schema.org: Service",
+    "https://schema.org/Service"
+  ],
+  "offer": [
+    "Schema.org: Offer",
+    "https://schema.org/Offer"
+  ],
+  "updates": [
+    "Google Search documentation updates",
+    "https://developers.google.com/search/updates"
+  ],
+  "crawl": [
+    "Vercel: The rise of the AI crawler",
+    "https://vercel.com/blog/the-rise-of-the-ai-crawler"
+  ],
+  "reviews": [
+    "Google Business Profile: Local ranking guidance",
+    "https://support.google.com/business/answer/7091?hl=en"
+  ],
+  "sitemap": [
+    "Google Search Central: Sitemaps",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+  ],
+  "luxe": [
+    "Luxe Window Works: Public consultation capability",
+    "https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation"
+  ],
+  "meta": [
+    "Meta Business Help Center",
+    "https://www.facebook.com/business/help"
+  ],
+  "terms": [
+    "Meta: Customer List Custom Audiences Terms",
+    "https://www.facebook.com/legal/terms/customaudience"
+  ]
+};
+const PAGE_URL = `https://www.kodecite.ai/blog/${ARTICLE.slug}`;
+const WORD_COUNT = 760;
+const READ_TIME = '4 min read';
+const PUBLISHED = 'February 26, 2026';
 
 export const metadata: Metadata = {
-  title: 'Same-Day Schema: INW Basecamp Launch',
-  description:
-    'From concept to a live landing page with validated schema and active Facebook campaigns in one day — the behind-the-scenes of the INW Basecamp launch.',
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
-  },
-  openGraph: {
-    title: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
-    description:
-      'How we launched a new market landing page with zero schema errors and an active Facebook campaign on the same day — the complete story.',
-    url: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
-    type: 'article',
-  },
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: ARTICLE.title, description: ARTICLE.description, url: PAGE_URL, type: 'article', publishedTime: `${ARTICLE.date}T00:00:00-07:00`, modifiedTime: '2026-10-01T15:00:00Z' },
 };
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch#article',
-  headline: 'Same-Day Schema Validation: The INW Basecamp Arizona Launch',
-  description:
-    'From concept to live landing page, validated schema, and active Facebook campaigns in one day. The complete story of a new market launch done correctly from hour one.',
-  datePublished: '2026-02-26T00:00:00-07:00',
-  dateModified: '2026-02-26T00:00:00-07:00',
-  wordCount: 900,
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  keywords: 'local business launch, schema markup, new market SEO, Facebook ads launch, same-day indexing, INW Basecamp, LocalBusiness schema, landing page',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  url: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  citation: [
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
-    { '@type': 'CreativeWork', name: 'Google Search Console Help', url: 'https://support.google.com/webmasters' },
-    { '@type': 'CreativeWork', name: 'Meta Business Help Center', url: 'https://www.facebook.com/business/help' },
-  ],
+  '@context': 'https://schema.org', '@type': 'Article', '@id': `${PAGE_URL}#article`,
+  headline: ARTICLE.title, description: ARTICLE.description,
+  datePublished: `${ARTICLE.date}T00:00:00-07:00`, dateModified: '2026-10-01T15:00:00Z',
+  wordCount: WORD_COUNT, articleSection: ARTICLE.category,
+  author: articleAuthor, publisher: articlePublisher, isPartOf: blogCollectionPage,
+  url: PAGE_URL, mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+  image: 'https://www.kodecite.ai/og-image.png', about: [businessRef],
+  citation: ARTICLE.sources.map(([name, url]) => ({ '@type': 'CreativeWork', name, url })),
 };
-
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch#breadcrumb',
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', '@id': `${PAGE_URL}#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'INW Basecamp Arizona Launch',
-      item: 'https://www.kodecite.ai/blog/inw-basecamp-arizona-launch',
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: ARTICLE.title, item: PAGE_URL },
   ],
 };
 
-const faqPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Can schema markup be valid on day one of a new website launch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — schema validity depends entirely on implementation quality, not on how long a site has been live. When schema is hand-coded and validated in Google\'s Rich Results Test before launch, it passes validation the moment the site is indexed. Zero errors on day one is achievable with the right process, and this is the standard we hold every launch to.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do you build local search visibility for a business entering a new geographic market?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The foundation is establishing the new location as a distinct entity: a separate LocalBusiness schema instance with the new address, phone number, and service area; a Google Business Profile for the new location; and landing page content that explicitly addresses the new market context. AI systems treat geographic entities distinctly, so each new market needs its own entity establishment from day one.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to get a new local landing page indexed?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'With a clean technical foundation, a manually submitted sitemap, and URL Inspection requests in Google Search Console, a new page can be indexed within hours to 48 hours. The speed depends on the site\'s existing crawl budget and authority. For an established domain with good crawl health, manually requested pages are typically indexed within 24 hours.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should a new market launch use Facebook ads immediately?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For local businesses entering a new market with no existing brand awareness, Facebook ads are essential in the first 90 days. The goal in the initial phase is not immediate conversion — it is pixel data accumulation and brand recall building that enables more efficient conversion campaigns within 45 to 60 days of launch. Starting ads on day one means the pixel data compounds for longer.',
-      },
-    },
-  ],
-};
-
-export default function INWBasecampArizonaLaunch() {
+export default function ArticlePage() {
+  const related = ARTICLE.related.map((slug) => blogPosts.find((post) => post.slug === slug)).filter(Boolean);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
-            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[var(--d-fg)] truncate">INW Basecamp Arizona Launch</span>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <header className="pt-36 pb-16 px-5 md:px-8" style={{ background: 'var(--d-bg)', borderBottom: '1px solid var(--d-line)' }}>
+        <div className="max-w-4xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex gap-3 text-sm font-inter text-[var(--d-fg-dim)] mb-9">
+            <Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/blog">Insights</Link>
           </nav>
-
-          <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">Case Studies</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">7 min read</span>
-          </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            Same-Day Schema Validation:{' '}
-            <span className="text-[var(--d-accent)]">The INW Basecamp Arizona Launch</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            From concept to live landing page, validated schema, and active Facebook campaigns — in one day. The complete behind-the-scenes story of how we opened a new market for an existing business in hours, not weeks.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">ZC</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">KodeCite.ai</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">February 26, 2026</p>
-              </div>
-            </div>
+          <p className="d-eyebrow mb-6">{ARTICLE.category} · {READ_TIME}</p>
+          <h1 className="font-inter font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-[var(--d-fg)] mb-8">{ARTICLE.title}</h1>
+          <p className="font-inter text-lg md:text-xl leading-relaxed text-[var(--d-fg-dim)] max-w-3xl">{ARTICLE.intro}</p>
+          <div className="mt-9 pt-6 font-inter text-sm text-[var(--d-fg-dim)]" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <p className="font-semibold text-[var(--d-fg)] mb-1">Mark Abplanalp · Kodecite</p>
+            <p>Published {PUBLISHED} · Updated October 1, 2026</p>
           </div>
         </div>
+      </header>
+      <section className="px-5 md:px-8 py-16 md:py-20" style={{ background: 'var(--d-bg)' }}>
+        <article className="max-w-3xl mx-auto font-inter text-[var(--d-fg-dim)]" style={{ fontSize: '17px', lineHeight: 1.85 }}>
+          {ARTICLE.sections.map((section) => (
+            <section key={section.h} className="mb-12">
+              <h2 className="font-inter font-semibold text-2xl md:text-3xl leading-tight tracking-tight text-[var(--d-fg)] mb-5">{section.h}</h2>
+              {section.p.map((paragraph) => <p key={paragraph} className="mb-5">{paragraph}</p>)}
+              {section.items && <ul className="space-y-3 pl-6 mb-5 list-disc">{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
+              {section.source && SOURCE_LINKS[section.source] && <p className="text-sm"><a href={SOURCE_LINKS[section.source][1]} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{SOURCE_LINKS[section.source][0]} →</a></p>}
+              {section.h === 'A small connected example' && ARTICLE.example && <pre className="overflow-x-auto rounded-xl p-5 text-xs md:text-sm leading-relaxed my-6" style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)' }}><code>{JSON.stringify(ARTICLE.example, null, 2)}</code></pre>}
+            </section>
+          ))}
+          <section className="pt-8 mt-12" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Sources and further reading</h2>
+            <ul className="space-y-3 text-sm">{ARTICLE.sources.map(([label, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{label} →</a></li>)}</ul>
+          </section>
+          <section className="pt-8 mt-10" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Keep reading</h2>
+            <ul className="space-y-4">{related.map((post) => post && <li key={post.slug}><Link href={`/blog/${post.slug}`} className="text-[var(--d-accent)] hover:underline">{post.title} →</Link></li>)}</ul>
+            <Link href="/blog" className="inline-block mt-8 text-sm text-[var(--d-fg-dim)] hover:text-[var(--d-fg)]">← All insights</Link>
+          </section>
+        </article>
       </section>
-
-      <div className="section-divider" />
-
-      {/* Article + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
-                  INW Basecamp had been operating in the Pacific Northwest for years with a proven business model: premium outdoor recreation and corporate retreat facilities built around a basecamp concept. When the decision was made to expand into Arizona, the challenge was clear — they needed a complete digital presence for a new market, with no existing brand recognition, no local search history, and no organic footprint. The goal was day-one visibility. Here&apos;s how we built it.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Challenge: A New Market With No Digital Footprint
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  What Starting From Zero Looks Like
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Entering a new geographic market as a local business means starting from zero on every signal Google uses to evaluate local relevance. No indexed pages for the new location. No Google Business Profile for the Arizona address. No local citations in Arizona directories. No customer reviews mentioning the new location. No backlinks from Arizona-specific sources. From Google&apos;s perspective and from AI systems&apos; perspective, the Arizona location of INW Basecamp simply didn&apos;t exist.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The Pacific Northwest presence was an asset — it provided domain authority, an existing entity in Google&apos;s knowledge graph, and established brand signals that would transfer to the new location over time. But it wasn&apos;t a substitute for location-specific establishment. A business that is well-known in Spokane is not automatically findable in Scottsdale. Each market requires its own entity signals, its own local content, and its own structured data.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Why Same-Day Execution Was Business-Critical
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The Arizona launch had a hard date driven by an event booking. An anchor corporate retreat client had committed to the new location for an event six weeks out. The marketing window was six weeks — not three months of gradual SEO buildup. We needed the Arizona landing page indexed, the Facebook pixel collecting data, and the first ad campaigns active within 24 hours of receiving the brief. Anything slower than that left money on the table during the critical early booking period.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Building the Landing Page for Machine Readability
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Structure First, Content Second
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Our first decision was structural: what is the minimum viable page architecture that allows Google to understand the Arizona location as a distinct, real-world entity? The answer was a single dedicated landing page with a clear URL structure (/locations/arizona), a unique title and heading hierarchy explicitly naming the location, content specifically addressing the Arizona market&apos;s use case, and all four schema types implemented before the first line of body copy was written.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  This sequence — structure and schema before content — is the inverse of how most landing pages are built. Most teams write the marketing copy first and add schema as an afterthought. We treat schema as the architecture that content populates. The schema defines what the page is and who it&apos;s for. The content provides the human-readable evidence. Both are necessary. Schema without compelling content fails to convert humans. Content without schema fails to be found by machines.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Schema Decisions Before the First Line of Code
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Before writing any HTML, we mapped the complete schema architecture for the Arizona page. LocalBusiness schema with the Arizona physical address, phone number, and a new GBP link once it was verified. Service schema for the two primary offerings in the Arizona market: corporate retreat facilitation and guided outdoor excursion packages. FAQPage schema with six questions drawn directly from the sales calls INW Basecamp had already received from interested Arizona clients. BreadcrumbList schema positioning the page correctly within the existing site hierarchy.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Schema Implementation
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  LocalBusiness Schema for a New Location Entity
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The LocalBusiness schema for the Arizona location was implemented as a distinct entity from the Pacific Northwest locations — a separate JSON-LD object with the Arizona address, the Arizona phone number, and the Arizona service area explicitly defined. We used the TouristAttraction and SportsActivityLocation subtypes as supplemental types alongside LocalBusiness to signal the recreational nature of the facility to AI systems that use entity type for query matching.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The sameas property pointed to the new Arizona Google Business Profile URL — added within the same day as the landing page launch. This cross-reference, even on day one, signals to Google that the website entity and the GBP entity are the same real-world location. It accelerates entity recognition significantly compared to leaving the two data points unlinked.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  FAQPage and Service Schema for Day-One Discoverability
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The six FAQPage questions were drawn from actual client inquiries: &ldquo;Does INW Basecamp offer corporate team-building retreats in Arizona?&rdquo; &ldquo;What outdoor activities are available at the Arizona location?&rdquo; &ldquo;How many people can the Arizona facility accommodate?&rdquo; Each answer was written as a complete, standalone response — specific enough to be useful to AI systems, factual enough to be citable. These questions were placed in both the page content as visible Q&A blocks and in the FAQPage schema, ensuring consistency between what users see and what machines read.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Facebook Campaign Architecture
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Cold Audience Strategy for an Unknown Brand in a New Market
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The Facebook campaign launched the same day as the landing page, targeting a cold audience in the Phoenix and Scottsdale metro area. Audience parameters: business decision-makers aged 30 to 55, interests in corporate events, team building, and outdoor recreation, household income in the top quartile for the market. Creative: a 45-second video showcasing the Pacific Northwest facility with Arizona market-specific copy overlaid — the visual proof of concept that the brand&apos;s established quality would extend to the new location.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The goal of this initial campaign was not direct booking. It was pixel data accumulation and first-impression establishment. Every person who watched 50%+ of the video became a retargeting audience member. Every website visitor from the ad was pixeled. The conversion efficiency in weeks 5 and 6 of the campaign — when the anchor event&apos;s booking deadline created urgency — was dramatically higher because we had six weeks of warm audience data to retarget.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Lead Gen vs Direct Booking Decision
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  For a corporate retreat product at INW Basecamp&apos;s price point, direct booking CTAs — &ldquo;Book Now&rdquo; buttons — are the wrong call for cold audiences. The decision cycle for corporate retreat bookings involves multiple stakeholders, budget approval, and logistical review. Asking a cold prospect to book immediately produces almost no conversions and tells Facebook&apos;s algorithm the ads aren&apos;t working. We used lead generation forms instead — &ldquo;Request Information&rdquo; with a low-friction three-field form — which produced qualified leads at a cost the sales team could efficiently convert through the consultative process the product requires.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Same-Day Validation and Launch
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Zero Schema Errors on the First Submission
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The complete schema implementation — LocalBusiness, Service (two types), FAQPage, and BreadcrumbList — was validated in Google&apos;s Rich Results Test before the page went live. Zero errors. Zero warnings. This is the standard we hold every launch to, and it&apos;s achievable when schema is treated as architecture rather than an SEO afterthought. The page launched with every structured data signal in place, which meant Google could begin entity recognition from the first crawl rather than needing to revisit after schema errors were corrected.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  What the First 72 Hours Showed
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Within 24 hours, Google Search Console confirmed the Arizona landing page indexed. Within 48 hours, the FAQ rich results were appearing in Search Console&apos;s Enhancements report. Within 72 hours, branded searches for &ldquo;INW Basecamp Arizona&rdquo; were returning the landing page as the top result. The Facebook campaign had accumulated 847 video views and 23 landing page visits by hour 72 — a modest start, but the pixel data was building. By day 14, retargeting audiences were large enough to run conversion-focused campaigns. The new market had a digital presence, entity recognition, and an active ad pipeline — all from a single day of coordinated execution.
-                </p>
-
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
-              </div>
-            </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
-                  <p className="eyebrow mb-5 text-xs">LAUNCH DAY TIMELINE</p>
-                  <div className="space-y-4">
-                    {[
-                      { step: 'Hour 1', label: 'Brief received, schema architecture mapped' },
-                      { step: 'Hour 4', label: 'Landing page built and validated' },
-                      { step: 'Hour 6', label: 'Schema: 0 errors, 0 warnings' },
-                      { step: 'Hour 7', label: 'Site live, URL submitted to GSC' },
-                      { step: 'Hour 8', label: 'Facebook campaign active' },
-                      { step: 'Hour 24', label: 'Page indexed by Google' },
-                    ].map((item) => (
-                      <div key={item.step} className="flex items-start gap-3">
-                        <div className="w-16 flex-shrink-0">
-                          <span className="text-[var(--d-accent)] text-xs font-bold font-inter">{item.step}</span>
-                        </div>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter leading-snug">{item.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Expanding to a New Market?
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    We build new market landing pages with day-one schema validation, Google Business Profile setup, and Facebook campaign launch — all in a single coordinated execution.
-                  </p>
-                  <Link href="/contact" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Plan Your Launch
-                  </Link>
-                </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
-                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/how-we-indexed-49-pages-48-hours" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        How We Built Sites That Score 93–100 on PageSpeed
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">10 min read</p>
-                    </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </aside>
-
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      <section className="py-20 bg-[var(--d-bg)] px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">LAUNCH WITH CONFIDENCE</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            New Market. Day-One Visibility.
-          </h2>
-          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            Whether you&apos;re expanding to a new city or launching a new service line, we build the digital foundation that makes AI search systems notice you from day one.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Start the Conversation
-            </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read More Articles
-            </Link>
-          </div>
+      <section className="py-20 px-5 md:px-8" style={{ background: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="d-eyebrow mb-5">YOUR BUSINESS, CLEARLY UNDERSTOOD</p>
+          <h2 className="font-inter text-3xl md:text-4xl font-semibold tracking-tight text-[var(--d-fg)] mb-5">Make the next step easier for your customer and their AI assistant.</h2>
+          <p className="font-inter text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">An Agent Readiness Review looks at your business information, supporting evidence and the next steps a customer can take. Start with the gaps that matter to a real inquiry.</p>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
         </div>
       </section>
     </>

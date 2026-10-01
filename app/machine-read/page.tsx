@@ -2,12 +2,11 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/contact/ContactForm';
 import SecondaryPageShell from '@/components/SecondaryPageShell';
 import GlassPanel from '@/components/GlassPanel';
-import { CONSEQUENCE } from '@/lib/positioning';
 
 export const metadata: Metadata = {
   title: 'Agent Readiness Review',
   description:
-    'See what AI can understand, verify and safely do with your business today. Free written review within two business days.',
+    'Find where customers and their AI assistants can understand your offer, trust the evidence, and take the next step. Free written Agent Readiness Review within two business days.',
   alternates: { canonical: 'https://www.kodecite.ai/machine-read' },
 };
 
@@ -17,7 +16,7 @@ const machineReadPageSchema = {
   name: 'Agent Readiness Review — KodeCite.ai',
   url: 'https://www.kodecite.ai/machine-read',
   description:
-    'A free Agent Readiness Review shows what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps — with a written report within two business days.',
+    'A free written review of business identity, offers, fit, evidence, customer next steps, and permission or handoff gaps, with practical priorities within two business days.',
   publisher: { '@id': 'https://www.kodecite.ai/#business' },
 };
 
@@ -31,19 +30,19 @@ const breadcrumbSchema = {
 };
 
 const reviewCovers = [
-  { t: 'Identity', d: 'Who the business is, who runs it, and whether those facts agree across the site and the public record.' },
-  { t: 'Services and products', d: 'What is actually offered — and what is implied but never stated.' },
-  { t: 'Geography', d: 'Where the business works, where it does not, and whether that is machine-readable.' },
-  { t: 'Credentials and policies', d: 'Licenses, limitations, and the rules a safe recommendation has to respect.' },
-  { t: 'Machine discovery', d: 'What a crawler or agent can find today: site structure, structured data, discovery files. No claim that every system reads them.' },
-  { t: 'Action paths', d: 'What a customer — or their AI agent — can accomplish, and what still requires a human.' },
-  { t: 'Useful outcome', d: 'Whether a completed request is defined honestly, or whether the site over-promises booking, price, or acceptance.' },
-  { t: 'Control gaps', d: 'Human confirmation, validation, abuse, duplicates, platform constraints, and security.' },
+  { t: 'Who you are', d: 'Whether your identity, people, contact details, and public information describe the same business.' },
+  { t: 'What you offer', d: 'Whether a customer or assistant can understand your services and products without filling in missing details.' },
+  { t: 'Who you can help', d: 'Service area, project fit, important limits, and the conditions that shape a good request.' },
+  { t: 'Why someone should trust it', d: 'Relevant credentials, examples, reviews, and sources that support the claims on your site.' },
+  { t: 'What assistants can read', d: 'Accessible pages, connected business information, and discovery files, checked for consistency rather than assumed universal support.' },
+  { t: 'How a customer moves forward', d: 'Forms, contact routes, available capabilities, and the points where someone must repeat work or ask for help.' },
+  { t: 'What the result means', d: 'Whether a customer knows what was received, what is confirmed, and who will follow up.' },
+  { t: 'What needs attention first', d: 'A prioritized view of missing information, permission checks, duplicate handling, handoff gaps, and platform constraints.' },
 ];
 
 const FG = 'var(--d-fg)';
-const DIM = 'rgba(233, 238, 255, 0.95)';
-const MUTE = 'rgba(219, 227, 255, 0.8)';
+const DIM = 'var(--d-fg-dim)';
+const MUTE = 'var(--d-fg-mute)';
 const ACCENT = 'var(--d-accent)';
 const sectionGap = { marginTop: '30px' };
 
@@ -57,10 +56,10 @@ export default function MachineReadPage() {
         <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
           <div className="d-eyebrow mb-6">AGENT READINESS REVIEW · FREE · TWO BUSINESS DAYS</div>
           <h1 className="font-inter font-semibold mb-6" style={{ fontSize: 'clamp(36px, 5.4vw, 68px)', lineHeight: 1.02, letterSpacing: '-0.03em', color: FG, maxWidth: '16ch' }}>
-            See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do</em> today.
+            How easy is your business <em className="serif" style={{ color: ACCENT }}>to choose and contact?</em>
           </h1>
           <p className="font-inter mb-10" style={{ fontSize: '17px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px' }}>
-            {CONSEQUENCE} This is a written review of your current system — identity, services, geography, policies, discovery, action paths, and control gaps. This site does not currently accept autonomous agent submissions.
+            We review the journey a customer and their AI assistant would face: understanding the offer, checking fit and trust, and taking the next step. Send your website below. You will receive a free written review with practical priorities within two business days, and you keep it whether or not we work together.
           </p>
         </GlassPanel>
       </section>
@@ -81,6 +80,10 @@ export default function MachineReadPage() {
 
       <section id="machine-read" className="secondary-section" style={sectionGap}>
         <GlassPanel style={{ padding: 'clamp(32px, 4.5vw, 56px)', maxWidth: '760px', margin: '0 auto' }}>
+          <div className="mb-8">
+            <h2 className="font-inter font-semibold mb-3" style={{ fontSize: '26px', color: FG }}>Request your written review</h2>
+            <p className="font-inter" style={{ fontSize: '15px', lineHeight: 1.65, color: DIM }}>Tell us about the business and the website you want reviewed. We will use those details to prepare the review and follow up with you. The form is a human-submitted request; this site does not currently accept autonomous agent submissions.</p>
+          </div>
           <ContactForm />
         </GlassPanel>
       </section>
@@ -94,7 +97,7 @@ export default function MachineReadPage() {
                 Already know <em className="serif" style={{ color: ACCENT }}>what you need?</em>
               </h2>
               <p className="font-inter" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '440px' }}>
-                Skip the review. Use the contact page. Send the site, the timeline, and the scope.
+                Have a project or a specific customer workflow in mind? Send the website, the outcome you want, and any timeline we should know.
               </p>
             </div>
 
@@ -105,7 +108,7 @@ export default function MachineReadPage() {
                   Go to the contact page →
                 </p>
                 <div className="flex flex-col gap-1 mb-5" style={{ borderTop: '1px solid rgba(255,255,255,0.10)', paddingTop: '16px' }}>
-                  <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>No sales handoff. A senior reply, written in plain English.</p>
+                  <p className="font-inter" style={{ fontSize: '13px', color: MUTE, fontWeight: 300 }}>A direct conversation about your business and what would help.</p>
                 </div>
                 <span style={{ color: ACCENT, fontSize: '18px' }}>→</span>
               </a>

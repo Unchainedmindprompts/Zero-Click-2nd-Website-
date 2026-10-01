@@ -1,762 +1,262 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+
+const article = {
+  "slug": "automation-vs-digital-real-estate",
+  "title": "Where AI Helps a Business: Discovery and the Next Step",
+  "description": "Choose AI investments by the customer journey: accurate discovery, useful comparisons, and a reliable next step, alongside internal time savings.",
+  "date": "2026-03-10",
+  "intro": "Internal automation and customer-facing readiness solve different problems. The useful investment is the one that removes a real obstacle for your team or the people trying to do business with you.",
+  "sections": [
+    {
+      "heading": "Start with the work, not the category",
+      "paragraphs": [
+        "A business can benefit from faster document preparation, better intake, easier discovery, or fewer repeated questions. There is no universal rule that automation fails or that visibility deserves every dollar first.",
+        "Map a recent customer journey. How did the person find you? What did they need to understand? What almost stopped them? Which information did the team have to collect twice? Where did a person make a judgment that the software could not responsibly make?",
+        "This separates distinct opportunities. An internal assistant may save preparation time. Better public information may attract a more suitable customer. A connected request flow may remove friction between being chosen and being contacted. Measure each against the problem it is meant to solve."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Your customer may bring their own assistant",
+      "paragraphs": [
+        "An on-site chatbot only meets people who have reached your site. A customer's personal agent may be comparing businesses before that visit, carrying preferences across different sources, and preparing the next step on the customer's behalf.",
+        "For example, a homeowner might ask for providers who serve a specific area, work with a particular kind of property, and offer a consultation before a custom quote. If your website explains those facts clearly, the assistant has a better basis for judging fit. If your site only says “contact us for more,” the comparison leaves important questions unanswered.",
+        "The broader opportunity includes AI search engines, general assistants, and outside agents. The business foundation should remain useful across those routes, without assuming one platform will become every customer's front door."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Define the business before delegating its promises",
+      "paragraphs": [
+        "Before automating a customer-facing response, establish what the business actually offers. Identify the company, its owners and providers, its services, the customers it serves, and evidence for qualifications or claims. Encode supported relationships where appropriate and keep the same facts visible to people.",
+        "Then distinguish a fact from a decision. “We offer in-home consultations in these areas” may be a stable public fact. “We can visit Tuesday at 2 p.m.” needs current scheduling information. “Your project will cost this amount” may require measurements, product choices, and a person authorized to quote.",
+        "An assistant should not have to turn a general service description into a promise. Good preparation makes the available next step explicit, including what information or approval is still needed."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Choose an action with a clean boundary",
+      "paragraphs": [
+        "A useful first action is specific enough to verify. “Help the customer” is too broad. “Submit a consultation request using approved contact details and return its reference” gives everyone a result to check.",
+        "List the information required and collect only what the request needs. Explain who receives it and why. If the customer is asking through an outside assistant, the permission to pass their details should be clear. Send sensitive intake to an appropriate channel rather than putting it in public website files.",
+        "Define the response just as carefully. Received, awaiting review, booked, declined, and needs more information mean different things. The wording should match what the receiving system or person has actually established."
+      ],
+      "items": [
+        "A named action and supported destination",
+        "Required fields and customer permission",
+        "Business conditions that can be checked",
+        "An accurate result or a human handoff"
+      ],
+      "sources": []
+    },
+    {
+      "heading": "A narrow proof is more useful than a broad claim",
+      "paragraphs": [
+        "For Luxe Window Works, the verified result is an external AI consultation request, one email, and a duplicate prevented. That demonstrates a working request path and a useful repeated-submission safeguard.",
+        "It does not establish an autonomous scheduling or quoting service. Calling the same result an “AI booking” would create the wrong expectation for both the owner and the customer. The distinction matters because the business still has to respond and agree on what happens next.",
+        "Future actions could include availability checks, reservations, or transactions where the business systems and rules support them. Each needs a separate design and a test of the actual outcome. Capability descriptions should grow with demonstrated capability."
+      ],
+      "items": [],
+      "sources": [
+        {
+          "label": "Read the Luxe Window Works implementation",
+          "href": "/blog/from-recommended-to-actionable-luxe-window-works"
+        }
+      ]
+    },
+    {
+      "heading": "Measure time saved and business completed separately",
+      "paragraphs": [
+        "For internal automation, compare the time and correction effort before and after the change. A quick draft that requires lengthy repair may not save work. Include exceptions, staff review, and the impact on the customer.",
+        "For discovery, track whether people are finding the right service and arriving with accurate expectations. For an action flow, track accepted requests, duplicates, errors, human follow-up, and completed outcomes. Do not count a submission as revenue or a tool call as a successful appointment.",
+        "These measures help decide what comes next. A strong request path with slow human follow-up may need an operational change. A well-run operation attracting unsuitable inquiries may need clearer service information. The answer need not be another AI feature."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Own the foundation, then connect useful capabilities",
+      "paragraphs": [
+        "KodeCite builds a $4,995 one-time owned foundation with no required retainer. It makes the business easier to understand and evaluate. A live action is separately scoped around the actual workflow; a platform-layer pilot is separate as well.",
+        "The purpose is to help a business be understood, chosen, and engaged when customers delegate. Internal tools can support that work, but the public description and the real operating process need to agree.",
+        "Choose the smallest improvement that makes the journey better, verify it, and keep a person available for the decisions that still need one. That is a more practical investment discipline than choosing between “automate everything” and “get recommended first.”"
+      ],
+      "items": [],
+      "sources": []
+    }
+  ],
+  "takeaways": [
+    "Find the actual friction",
+    "Describe only real capabilities",
+    "Measure a confirmed customer outcome"
+  ],
+  "faq": [
+    {
+      "q": "Should I prioritize internal automation or AI discovery?",
+      "a": "Choose the bottleneck you can demonstrate. Internal time savings, better customer fit, and completed next steps require different work and measures."
+    },
+    {
+      "q": "Does an AI request mean the customer has booked?",
+      "a": "No. A request confirms only the state returned by the business. A booking requires an actual reserved slot and confirmation."
+    }
+  ]
+};
+const canonical = `https://www.kodecite.ai/blog/${article.slug}`;
+const modified = '2026-10-01T00:00:00Z';
+const published = `${article.date}T00:00:00-07:00`;
+const imageUrl = "https://www.kodecite.ai/blog-hero.png";
+const articleText = [article.intro, ...article.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...section.items]), ...article.faq.flatMap((item) => [item.q, item.a])].join(' ');
+const wordCount = articleText.trim().split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+const publishedLabel = new Date(`${article.date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const sources = article.sections.flatMap((section) => section.sources).filter((source, index, list) => list.findIndex((item) => item.href === source.href) === index);
+
 export const metadata: Metadata = {
-  title: 'Automation Is Failing Most Businesses',
-  description:
-    "Automation without an accurate business model and a control layer is how false bookings and bad handoffs get created. Own the rules first.",
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
-  },
+  title: article.title,
+  description: article.description,
+  alternates: { canonical },
   openGraph: {
-    title: 'Why Automating Everything Is Failing Most Businesses — KodeCite.AI',
-    description:
-      "The real AI opportunity isn't cutting costs — it's making sure AI recommends you first.",
-    url: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
+    title: article.title,
+    description: article.description,
+    url: canonical,
     type: 'article',
-    publishedTime: '2026-03-10',
+    publishedTime: published,
+    modifiedTime: modified,
     authors: ['Mark Abplanalp'],
+    images: [{ url: imageUrl }],
   },
+  twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [imageUrl] },
 };
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate#article',
-  headline:
-    'Why Automating Everything Is Failing Most Businesses — And Why Owning Your Digital Real Estate Is the Smarter Play in 2026',
-  description:
-    "Automation without an accurate business model and a control layer is how false bookings and bad handoffs get created. Own the rules first.",
-  url: 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
-  datePublished: '2026-03-10T00:00:00-07:00',
-  dateModified: '2026-03-10T00:00:00-07:00',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/automation-vs-digital-real-estate',
-  },
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  keywords: [
-    'AI automation',
-    'AEO',
-    'digital real estate',
-    'llms.txt',
-    'local business AI',
-    "Coeur d'Alene",
-    'Inland Northwest',
-    'AI visibility',
-    'agent.json',
-  ],
-  about: [
-    { '@type': 'DefinedTerm', name: 'AI Automation Failure Rates' },
-    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
-    { '@type': 'DefinedTerm', name: 'Digital Real Estate' },
-    { '@type': 'DefinedTerm', name: 'llms.txt' },
-    { '@type': 'DefinedTerm', name: 'agent.json' },
-    { '@type': 'DefinedTerm', name: 'Local Business AI Visibility' },
-  ],
-  mentions: [
-    { '@type': 'Person', name: 'Sam Altman', jobTitle: 'CEO, OpenAI' },
-    { '@type': 'Person', name: 'Jony Ive', jobTitle: 'Designer, io' },
-    { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
-    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
-  ],
-  citation: [
-    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'CreativeWork', name: 'McKinsey — The State of AI', url: 'https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai' },
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
+  '@id': `${canonical}#article`,
+  headline: article.title,
+  description: article.description,
+  author: articleAuthor,
+  publisher: articlePublisher,
+  datePublished: published,
+  dateModified: modified,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  url: canonical,
+  image: imageUrl,
+  isPartOf: blogCollectionPage,
+  about: [businessRef],
+  articleSection: 'AI Business Strategy',
+  wordCount,
+  citation: sources.filter((source) => source.href.startsWith('https://')).map((source) => ({ '@type': 'CreativeWork', name: source.label, url: source.href })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${canonical}#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: article.title, item: canonical },
   ],
 };
-
-const faqPageSchema = {
+const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is AI visibility and why does it matter for local businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI visibility means your business shows up when AI systems like ChatGPT, Perplexity, or voice assistants answer questions about services in your area. As more potential clients skip Google and ask AI directly — "Who\'s a good CPA in Coeur d\'Alene?" — the businesses with proper AI-readable signals get recommended. The ones without those signals get skipped, regardless of how good they are.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is llms.txt and does my business need it?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Think of llms.txt as your digital ID card for AI systems. It's a small file on your website that tells AI agents exactly who you are, what services you offer, where you operate, and why you're credible. Without it, AI systems have to guess — and they often get it wrong or skip you entirely. For professional service businesses, setting this up is one of the highest-leverage things you can do in 2026.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is AI augmentation different from AI automation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Automation tries to remove humans from the process. Augmentation keeps humans in the loop but makes them dramatically more effective. For professional service businesses, augmentation is almost always the right play. AI handles research, drafting, and data organization. You handle judgment, relationships, and the trust-building that earns loyalty. Studies consistently show 20–40% better client outcomes with augmentation versus full automation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why are 80–95% of AI automation projects failing?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The main culprits are poor data quality, unclear goals, and no measurable ROI framework up front. For local professional service firms there\'s an added issue: automation addresses operational efficiency but does nothing to solve the client acquisition problem. You can run a perfectly automated practice with an empty calendar.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is an Agent Readiness Review?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps. Free within two business days. It is a review request, not a booking.",
-      },
-    },
-  ],
+  '@id': `${canonical}#faq`,
+  mainEntity: article.faq.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
 };
 
-const signals = [
-  {
-    number: '01',
-    title: 'llms.txt',
-    body: 'Your AI identity card. Tells every AI system who you are, what you do, where you serve, and why to trust you.',
-  },
-  {
-    number: '02',
-    title: 'Schema Markup',
-    body: 'Structured proof of your expertise — reviews, credentials, certifications — in a format AI reads directly.',
-  },
-  {
-    number: '03',
-    title: 'Edge-Fast Site',
-    body: 'AI crawlers skip slow sites. Speed is a trust signal, not just a UX detail. Under 1.5 seconds matters.',
-  },
-  {
-    number: '04',
-    title: 'agent.json',
-    body: 'Future-proofs you for AI agent handoffs — the wave of task-completing AI assistants arriving in 2027.',
-  },
-  {
-    number: '05',
-    title: 'Expertise Content',
-    body: 'Published answers to real questions — FAQs and local guides that earn AI citations consistently.',
-  },
-];
-
-const comparisonRows = [
-  {
-    factor: 'Typical Cost',
-    automation: '$20K–$75K+',
-    aeo: '$3K–$8K',
-    automationNegative: true,
-  },
-  {
-    factor: 'Affects New Client Pipeline',
-    automation: 'Rarely',
-    aeo: 'Directly',
-    automationNegative: true,
-  },
-  {
-    factor: 'ROI Timeline',
-    automation: '12–18 months (if at all)',
-    aeo: '30–90 days to first signals',
-    automationNegative: true,
-  },
-  {
-    factor: 'Failure Rate',
-    automation: '80–95%',
-    aeo: 'Measurable and verifiable',
-    automationNegative: true,
-  },
-  {
-    factor: 'Long-term Moat',
-    automation: 'Low — tools commoditize fast',
-    aeo: 'High — early signals compound',
-    automationNegative: true,
-  },
-];
-
-const faqItems = [
-  {
-    q: 'What is AI visibility and why does it matter for local businesses?',
-    a: 'AI visibility means your business shows up when AI systems like ChatGPT, Perplexity, or voice assistants answer questions about services in your area. As more potential clients skip Google and ask AI directly — "Who\'s a good CPA in Coeur d\'Alene?" — the businesses with proper AI-readable signals get recommended. The ones without those signals get skipped, regardless of how good they are.',
-  },
-  {
-    q: 'What is llms.txt and does my business need it?',
-    a: "Think of llms.txt as your digital ID card for AI systems. It's a small file on your website that tells AI agents exactly who you are, what services you offer, where you operate, and why you're credible. Without it, AI systems have to guess — and they often get it wrong or skip you entirely. For professional service businesses, setting this up is one of the highest-leverage things you can do in 2026.",
-  },
-  {
-    q: 'How is AI augmentation different from AI automation?',
-    a: 'Automation tries to remove humans from the process. Augmentation keeps humans in the loop but makes them dramatically more effective. For professional service businesses, augmentation is almost always the right play. AI handles research, drafting, and data organization. You handle judgment, relationships, and the trust-building that earns loyalty. Studies consistently show 20–40% better client outcomes with augmentation versus full automation.',
-  },
-  {
-    q: 'Why are 80–95% of AI automation projects failing?',
-    a: "The main culprits are poor data quality, unclear goals, and no measurable ROI framework up front. For local professional service firms there's an added issue: automation addresses operational efficiency but does nothing to solve the client acquisition problem. You can run a perfectly automated practice with an empty calendar.",
-  },
-  {
-    q: 'What is an Agent Readiness Review?',
-    a: "A written look at what AI can understand, verify, and safely do with a business today — identity, services, geography, policies, discovery, action paths, and control gaps. Free within two business days. It is a review request, not a booking.",
-  },
-];
-
-export default function AutomationVsDigitalRealEstate() {
+export default function ArticlePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }} />
+      <section className="bg-[var(--d-bg)] pt-36 pb-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <nav aria-label="Breadcrumb" className="text-sm text-[var(--d-fg-dim)] mb-6 font-inter">
             <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="mx-2">/</span>
             <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[var(--d-fg)] truncate">Why Automating Everything Is Failing Most Businesses</span>
+            <span className="mx-2">/</span>
+            <span className="text-[var(--d-fg)]">{article.title}</span>
           </nav>
-
           <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">AI Strategy</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">10 min read</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] font-inter">AI Business Strategy</span>
+            <span className="text-[var(--d-fg-dim)] text-xs font-inter">·</span>
+            <span className="text-xs text-[var(--d-fg-dim)] font-inter">{readingTime} min read</span>
           </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            Why Automating Everything Is Failing Most Businesses —{' '}
-            <span className="text-[var(--d-accent)]">And Why Owning Your Digital Real Estate Is the Smarter Play in 2026</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl italic" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif' }}>
-            The real AI opportunity isn&apos;t cutting costs. It&apos;s making sure AI recommends{' '}
-            <span style={{ color: '#d4b896' }}>you first.</span>
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">MA</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">March 2026 · 10 min read</p>
-              </div>
+          <h1 className="font-inter text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] leading-tight mb-6">{article.title}</h1>
+          <p className="font-inter text-lg text-[var(--d-fg-dim)] max-w-3xl mb-8 leading-relaxed">{article.intro}</p>
+          <div className="flex items-center gap-4">
+            <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center text-white font-inter font-semibold text-sm">MA</div>
+            <div>
+              <p className="font-inter font-semibold text-sm text-[var(--d-fg)]">Mark Abplanalp</p>
+              <p className="font-inter text-xs text-[var(--d-fg-dim)]"><time dateTime={article.date}>{publishedLabel}</time> · Updated <time dateTime="2026-10-01">October 1, 2026</time></p>
             </div>
           </div>
         </div>
       </section>
 
       <div className="section-divider" />
-
-      {/* Article + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                {/* Opening paragraphs */}
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-6">
-                  I have talked to several owners here in the Inland Northwest — CPAs, realtors, contractors — who jumped into AI automation because it sounded like the future. The pitch was always the same: &ldquo;Cut the busywork, handle more clients with the same team, free up your time.&rdquo;
-                </p>
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-6">
-                  For a lot of them, the tools did what they promised. Documents got sorted faster. Emails drafted themselves. Schedules filled in automatically.
-                </p>
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-6">
-                  But the calendar didn&apos;t magically fill with new clients. The phone stayed quiet. The efficiency was real...{' '}
-                  <span style={{ color: '#d4b896' }} className="font-semibold">the growth wasn&apos;t.</span>
-                </p>
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
-                  That&apos;s the trap most are falling into right now. And it&apos;s why I believe the smarter play in 2026 isn&apos;t automating everything — it&apos;s making sure AI recommends you first.
-                </p>
-
-                {/* Stat Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
-                  {[
-                    { stat: '80–95%', label: 'of AI automation projects fail to deliver measurable ROI', source: 'MIT Sloan · Gartner · McKinsey 2025–2026' },
-                    { stat: '<1%', label: 'of independent local businesses have AI-readable signals set up', source: 'KodeCite.AI audit data 2025–2026' },
-                    { stat: '$700B', label: 'combined AI infrastructure spend by hyperscalers in 2026', source: 'CNBC · Futurum · Bridgewater 2026' },
-                  ].map((card) => (
-                    <div
-                      key={card.stat}
-                      className="rounded-xl p-5 text-center"
-                      style={{ background: '#1a2940', border: '1px solid rgba(255,255,255,0.07)' }}
-                    >
-                      <p className="font-inter text-4xl font-bold mb-1" style={{ color: '#d4b896' }}>
-                        {card.stat}
-                      </p>
-                      <p className="text-sm leading-snug mb-2" style={{ color: 'rgba(240,232,216,0.8)' }}>
-                        {card.label}
-                      </p>
-                      <p className="text-xs" style={{ color: 'rgba(240,232,216,0.68)' }}>{card.source}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Section 1 */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Automation Trap: Efficiency Without Demand Is Just Idle Capacity
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Here&apos;s what nobody in the automation pitch decks mentions: efficiency only pays off when demand is constant or growing.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Think of it like a pizza shop that buys an automated dough roller. Now you can make twice as many pizzas per hour. But if only 30 people walk in each day, you&apos;ve got an expensive machine sitting idle. You didn&apos;t grow — you just got more efficient at the same volume.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  That&apos;s what pure automation does for most professional service firms. It creates capacity surplus chasing clients — not the other way around.
-                </p>
-
-                {/* Pullquote */}
-                <blockquote
-                  className="my-8 pl-6 py-2"
-                  style={{ borderLeft: '4px solid #1d4ed8' }}
-                >
-                  <p className="text-xl font-semibold italic leading-relaxed" style={{ color: '#0a0806' }}>
-                    You built your reputation the hard way — through trust, referrals, showing up. Automation won&apos;t fill your pipeline. But being visible where people are looking? That will.
-                  </p>
-                </blockquote>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  The more useful question isn&apos;t &ldquo;How do I do more with less?&rdquo; It&apos;s &ldquo;How do I make sure more of the right people find me?&rdquo;
-                </p>
-
-                {/* Section 2 */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Smarter Path: Human + AI, Not Human Replaced by AI
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  When I went deep into the research on this, one finding kept coming back: augmentation consistently outperforms full automation by 20–40% on the outcomes that actually matter — client satisfaction, accuracy, retention, trust.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Not efficiency metrics. Real outcomes.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Why? Because the work that CPAs, attorneys, realtors, and contractors do is fundamentally judgment-based. It&apos;s knowing that this particular client is anxious about estate planning because their father just passed — not because of tax rates. It&apos;s knowing that a house on 4th Street in CdA has foundation quirks that don&apos;t show up in inspection reports.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  AI can draft the memo. You add the insight that saves the client thousands. That combination earns loyalty — and referrals.
-                </p>
-
-                {/* Highlight Box: Augmentation Formula */}
-                <div
-                  className="my-8 rounded-xl p-8 relative overflow-hidden"
-                  style={{ background: '#1a2940', border: '1px solid rgba(255,255,255,0.08)' }}
-                >
-                  <div className="relative z-10">
-                    <p className="text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: '#d4b896' }}>
-                      THE AUGMENTATION FORMULA
-                    </p>
-                    <div className="space-y-3">
-                      <p className="text-sm leading-relaxed" style={{ color: 'rgba(240,232,216,0.85)' }}>
-                        <span style={{ color: '#d4b896' }} className="font-semibold">AI handles:</span>{' '}
-                        Document prep, scheduling, first-draft emails, research aggregation, routine Q&amp;A
-                      </p>
-                      <p className="text-sm leading-relaxed" style={{ color: 'rgba(240,232,216,0.85)' }}>
-                        <span style={{ color: '#d4b896' }} className="font-semibold">You handle:</span>{' '}
-                        Judgment calls, relationship moments, complex advice, community presence
-                      </p>
-                      <p className="text-sm leading-relaxed font-semibold" style={{ color: 'rgba(240,232,216,0.9)' }}>
-                        <span style={{ color: '#d4b896' }}>Result:</span>{' '}
-                        20–40% better client outcomes — without the costly automation mistake
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Here in the Inland Northwest, your edge isn&apos;t a bigger tech stack. Your edge is that you&apos;re local, you&apos;re known, and you&apos;ve earned real trust. AI should amplify that — not replace it.
-                </p>
-
-                {/* Section 3 */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Bigger Opportunity: Making AI Recommend You First
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Augmentation is the smarter internal play. But the biggest opportunity in front of local businesses right now is external — it&apos;s about where new clients find you.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Six months ago, someone in Spokane needing a business attorney would Google it. Today, increasingly, they open ChatGPT or Perplexity and just ask: &ldquo;Who&apos;s a good business attorney in Spokane Valley?&rdquo;
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  And those AI systems answer. Directly. No links clicked. No search results scrolled. They recommend someone.
-                </p>
-
-                {/* Scenario Box */}
-                <div
-                  className="my-8 rounded-xl p-8 relative overflow-hidden"
-                  style={{ background: '#1a2940', border: '1px solid rgba(255,255,255,0.08)' }}
-                >
-                  <div
-                    className="absolute top-4 left-5 text-8xl leading-none select-none pointer-events-none"
-                    style={{ color: 'rgba(255,255,255,0.08)', fontFamily: 'Georgia, serif' }}
-                  >
-                    &ldquo;
-                  </div>
-                  <div className="relative z-10">
-                    <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#d4b896' }}>
-                      THE COEUR D&apos;ALENE SCENARIO
-                    </p>
-                    <p className="text-base leading-relaxed mb-4" style={{ color: 'rgba(240,232,216,0.85)' }}>
-                      Someone asks their AI glasses: &ldquo;Find me a local CPA who handles construction taxes.&rdquo; The AI doesn&apos;t open Google. It queries its knowledge layer, synthesizes business signals, and returns one name.
-                    </p>
-                    <p className="text-base leading-relaxed" style={{ color: 'rgba(240,232,216,0.7)' }}>
-                      The business that gets recommended was not the one that spent the most on ads last month — it was the one whose digital presence was readable, consistent, and credible enough for the AI to trust.
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Will that be you? Or your competitor who set up their AI signals six months before you did?
-                </p>
-
-                {/* Section 3a */}
-                <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">
-                  What AI-Readable Signals Actually Look Like
-                </h3>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Think of it like the difference between a neon sign on Sherman Avenue and a note taped to a telephone pole in the dark. Both technically announce your existence. Only one gets seen.
-                </p>
-
-                {/* Signal Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
-                  {signals.map((signal) => (
-                    <div
-                      key={signal.number}
-                      className="rounded-xl p-6 transition-all duration-300"
-                      style={{
-                        background: '#f2ede4',
-                        border: '1px solid rgba(160,114,58,0.2)',
-                      }}
-                    >
-                      <p className="font-inter text-3xl font-bold mb-3" style={{ color: 'rgba(212,184,150,0.5)' }}>
-                        {signal.number}
-                      </p>
-                      <p className="font-semibold text-[var(--d-fg)] mb-2 leading-snug">{signal.title}</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed">{signal.body}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Less than 1% of independent professionals in markets like ours have set these signals up. That&apos;s not a scary stat — it&apos;s a wide-open door.
-                </p>
-
-                {/* Section 4 */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Investment That Proves This Is Real
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  I get it — new tech hype gets exhausting. But follow the capital.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The biggest tech companies in the world are collectively spending around $700 billion on AI infrastructure in 2026 alone. They&apos;re not doing it to make better memes or prettier pictures.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  They&apos;re building the highways, the railways, and the electric grid of a new economy. The infrastructure that everything else will run on. And one of the changes that comes with that shift is how people discover and interact with businesses like yours.
-                </p>
-
-                {/* Highlight Box: Why This Matters */}
-                <div
-                  className="my-8 rounded-xl p-8 relative overflow-hidden"
-                  style={{ background: '#1a2940', border: '1px solid rgba(255,255,255,0.08)' }}
-                >
-                  <div className="relative z-10">
-                    <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#d4b896' }}>
-                      WHY THIS MATTERS FOR YOUR BUSINESS
-                    </p>
-                    <p className="text-base leading-relaxed mb-3" style={{ color: 'rgba(240,232,216,0.85)' }}>
-                      That infrastructure is being built specifically to handle AI agents answering queries — the same queries your future clients are asking right now about who to hire in Spokane, Coeur d&apos;Alene, or Kalispell.
-                    </p>
-                    <p className="text-base leading-relaxed font-semibold" style={{ color: 'rgba(240,232,216,0.9)' }}>
-                      The rails are being built. The question is whether your business is on the map when the trains start running.
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  OpenAI and Jony Ive — the designer behind the original iPhone — are building a pocket AI device. Late 2026 unveil, first shipments no earlier than early 2027. It&apos;s not replacing your phone — it&apos;s supplementing it with something quieter and smarter.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  And think about it — Ray-Ban and Oakley AI glasses are already here. People are wearing them right now. This isn&apos;t the beginning of a maybe. It&apos;s the early chapter of something already in motion.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  When someone standing outside a coffee shop in CdA asks their glasses &ldquo;Find me a local CPA who handles construction taxes&rdquo; — the AI says the name of whoever has the right signals in place.
-                </p>
-
-                {/* Pullquote with attribution */}
-                <blockquote
-                  className="my-8 pl-6 py-2"
-                  style={{ borderLeft: '4px solid #1d4ed8' }}
-                >
-                  <p className="text-xl font-semibold italic leading-relaxed mb-4" style={{ color: '#0a0806' }}>
-                    &ldquo;Sitting in the most beautiful cabin by a lake and in the mountains and just enjoying the peace and calm... You trust it over time, and it does have just this incredible contextual awareness of your whole life.&rdquo;
-                  </p>
-                  <footer className="text-sm" style={{ color: 'var(--d-fg-mute)' }}>
-                    — Sam Altman, CEO, OpenAI · Emerson Collective Demo Day 2025
-                  </footer>
-                </blockquote>
-
-                {/* Section 4a: Comparison */}
-                <h3 className="font-inter font-bold text-xl text-[var(--d-fg)] mt-8 mb-4">
-                  Automation vs. Digital Real Estate: A Direct Comparison
-                </h3>
-
-                <div className="my-8 overflow-x-auto rounded-xl" style={{ border: '1px solid rgba(160,114,58,0.2)' }}>
-                  <table className="w-full min-w-[480px] text-sm">
-                    <thead>
-                      <tr style={{ background: '#1a2940' }}>
-                        <th className="text-left px-5 py-3 font-semibold text-xs tracking-wider uppercase" style={{ color: 'rgba(240,232,216,0.6)' }}>Factor</th>
-                        <th className="text-left px-5 py-3 font-semibold text-xs tracking-wider uppercase" style={{ color: 'rgba(240,232,216,0.6)' }}>Full Automation</th>
-                        <th className="text-left px-5 py-3 font-semibold text-xs tracking-wider uppercase" style={{ color: 'rgba(240,232,216,0.6)' }}>Digital Real Estate (AEO)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {comparisonRows.map((row, i) => (
-                        <tr
-                          key={row.factor}
-                          style={{ background: i % 2 === 0 ? '#f2ede4' : '#f8f5f0' }}
-                        >
-                          <td className="px-5 py-3 font-semibold text-[var(--d-fg)]">{row.factor}</td>
-                          <td className="px-5 py-3">
-                            <span style={{ color: '#dc2626' }}>{row.automation}</span>
-                          </td>
-                          <td className="px-5 py-3">
-                            <span style={{ color: '#16a34a' }}>{row.aeo}</span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Section 5: Action Plan */}
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  Your Action Plan: Own the AI Layer Before Nationals Do
-                </h2>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Here&apos;s what makes this moment unusual: the cost to establish AI visibility is still low. We&apos;re in the pre-crowded window — the equivalent of claiming a great domain name in 1998 or setting up a solid Google Business Profile in 2012 before everyone else figured it out.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  National chains and PE roll-ups are quietly building their AI presence across hundreds of locations at once. Your advantage is that you only need to do it once — and the real community trust you&apos;ve earned over years is exactly the raw material AI systems reward.
-                </p>
-
-                <ul className="space-y-3 my-6">
-                  {[
-                    'Set up your llms.txt — your AI identity card. Takes hours, lasts years.',
-                    'Implement schema markup — structured proof of your expertise, location, and credibility.',
-                    'Audit your site speed — AI crawlers skip slow sites. Under 1.5 seconds matters.',
-                    'Publish expertise content — FAQs, local guides, answers to the questions your clients actually ask.',
-                    'Add agent.json — position yourself for the AI agent handoff economy arriving in 2027.',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <div
-                        className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                        style={{ background: '#1d4ed8' }}
-                      >
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="white" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p className="text-[var(--d-fg-dim)] leading-relaxed">{item}</p>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Closing pullquote */}
-                <blockquote
-                  className="my-8 pl-6 py-2"
-                  style={{ borderLeft: '4px solid #1d4ed8' }}
-                >
-                  <p className="text-xl font-semibold italic leading-relaxed" style={{ color: '#0a0806' }}>
-                    Your community reputation is gold. Your expertise is exactly the raw material AI systems are looking for. The only missing piece is making sure AI can see it.
-                  </p>
-                </blockquote>
-
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  You&apos;re sitting on a{' '}
-                  <span style={{ color: '#d4b896' }} className="font-semibold">gold mine</span>.
-                  {' '}You just haven&apos;t filed the claim yet.
-                </p>
-
-                {/* FAQ Section */}
-                <section className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mb-6">
-                    Frequently Asked Questions
-                  </h2>
-                  <div className="space-y-6">
-                    {faqItems.map((item) => (
-                      <div
-                        key={item.q}
-                        className="rounded-xl p-6"
-                        style={{ background: '#f2ede4', border: '1px solid rgba(160,114,58,0.2)' }}
-                      >
-                        <h3 className="font-semibold text-[var(--d-fg)] mb-3 leading-snug">
-                          {item.q}
-                        </h3>
-                        <p className="text-[var(--d-fg-dim)] leading-relaxed text-sm">{item.a}</p>
-                      </div>
-                    ))}
-                  </div>
+      <section className="bg-[var(--d-bg)] py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-12">
+            <article className="lg:col-span-2 prose-content font-inter text-[var(--d-fg-dim)]">
+              {article.sections.map((section, index) => (
+                <section key={section.heading} aria-labelledby={`section-${index}`}>
+                  <h2 id={`section-${index}`} className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">{section.heading}</h2>
+                  {section.paragraphs.map((paragraph) => <p key={paragraph} className="leading-relaxed mb-6">{paragraph}</p>)}
+                  {section.items.length > 0 && <ul className="list-disc pl-6 space-y-3 mb-8">{section.items.map((item) => <li key={item} className="leading-relaxed">{item}</li>)}</ul>}
+                  {section.sources.length > 0 && <ul className="space-y-2 mb-8">{section.sources.map((source) => <li key={source.href}><a href={source.href} className="text-sm text-[var(--d-accent)] hover:underline">{source.label}</a></li>)}</ul>}
                 </section>
-
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
+              ))}
+              <section aria-labelledby="article-faq" className="mt-12 pt-8 border-t border-[var(--d-line)]">
+                <h2 id="article-faq" className="font-inter text-3xl text-[var(--d-fg)] mb-6">Frequently asked questions</h2>
+                {article.faq.map((item) => <div key={item.q} className="mb-8"><h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mb-3">{item.q}</h3><p className="leading-relaxed">{item.a}</p></div>)}
+              </section>
+              <div className="mt-12 pt-8 border-t border-[var(--d-line)]">
+                <Link href="/blog" className="text-[var(--d-accent)] font-semibold hover:underline">Back to the articles</Link>
               </div>
             </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
+            <aside className="lg:col-span-1 mt-12 lg:mt-0">
               <div className="sticky top-28 space-y-6">
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="eyebrow mb-4 text-xs">BY THE NUMBERS</p>
-                  <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="font-bold text-3xl font-inter" style={{ color: '#d4b896' }}>80–95%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of AI automation projects fail to deliver measurable ROI</p>
-                    </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="font-bold text-3xl font-inter" style={{ color: '#d4b896' }}>&lt;1%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of local businesses have AI-readable signals in place</p>
-                    </div>
-                    <div>
-                      <p className="font-bold text-3xl font-inter" style={{ color: '#d4b896' }}>Now</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">the window is still open in most local markets</p>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Is AI Finding You — Or Skipping You?
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    Find out exactly how your site looks to AI right now — and what it takes to become the recommended name in your market.
-                  </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Request an Agent Readiness Review
-                  </Link>
+                  <p className="eyebrow mb-4 text-xs">THE PRACTICAL TAKEAWAY</p>
+                  <ul className="space-y-4">{article.takeaways.map((takeaway) => <li key={takeaway} className="text-sm leading-relaxed text-[var(--d-fg)]">{takeaway}</li>)}</ul>
                 </div>
-
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="font-inter font-semibold text-[var(--d-fg)] text-lg mb-3">See what your customer’s assistant can understand</p>
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">Review the business facts, evidence, and next step before deciding what to build.</p>
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Request an Agent Readiness Review</Link>
+                </div>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
                   <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <Link href="/blog/aeo-geo-making-seo-better" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        AEO + GEO Isn&apos;t Replacing SEO — It&apos;s Making It Better
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">10 min read</p>
-                    </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/the-shortlist-problem" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          The Shortlist Problem: Why AI Will Recommend One Local Business
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">9 min read</p>
-                      </Link>
-                    </div>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
-                      </Link>
-                    </div>
+                    <Link href="/blog/what-is-an-entity-graph" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">How an entity graph connects the business facts</Link>
+                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">The Luxe Window Works consultation-request proof</Link>
+                    <Link href="/blog" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">More practical guides for AI-ready businesses</Link>
                   </div>
                 </div>
-
               </div>
             </aside>
-
           </div>
         </div>
       </section>
-
       <div className="section-divider" />
-
-      {/* CTA Block */}
-      <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#1c1814' }}>
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(160,114,58,0.12) 0%, transparent 70%)',
-          }}
-        />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <p className="eyebrow mb-4">READY TO OWN YOUR MARKET?</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl mb-4" style={{ color: 'rgba(240,232,216,0.9)' }}>
-            Is AI Finding You — Or Skipping You?
-          </h2>
-          <p className="font-inter mb-8 leading-relaxed" style={{ color: 'rgba(240,232,216,0.6)' }}>
-            If this resonates, let&apos;s check where your business stands — no cost, no pressure. Just clarity on what AI systems see when someone asks about your services.
-          </p>
+      <section className="py-20 bg-[var(--d-bg-3)] px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="eyebrow mb-4">BE UNDERSTOOD. BE CHOSEN. MAKE THE NEXT STEP WORK.</p>
+          <h2 className="font-inter text-3xl md:text-4xl text-[var(--d-fg)] mb-4">Make your business easy for your customer’s AI assistant to understand, trust and do business with.</h2>
+          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">Start with an Agent Readiness Review. The owned foundation is $4,995 one time, with no required retainer. A live action is separately scoped; a platform-layer pilot is a separate engagement.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Request an Agent Readiness Review →
-            </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read More Articles
-            </Link>
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Request an Agent Readiness Review</Link>
+            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read more articles</Link>
           </div>
-          <p className="mt-6 text-sm" style={{ color: 'rgba(240,232,216,0.72)' }}>
-            kodecite.ai · No cost. No pitch. Just clarity on where you stand.
-          </p>
         </div>
       </section>
     </>

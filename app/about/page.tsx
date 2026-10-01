@@ -5,9 +5,9 @@ import SecondaryPageShell from '@/components/SecondaryPageShell';
 import { ABOUT_MISSION, LUXE_PROOF, REVIEW_HREF } from '@/lib/positioning';
 
 export const metadata: Metadata = {
-  title: 'About KodeCite — Business truth before technology',
+  title: 'About Kodecite — Built by a business operator',
   description:
-    'Kodecite exists to keep service businesses inside the commercial decision process as customers increasingly delegate discovery, evaluation, and next steps to AI. Founded by Mark Abplanalp in Coeur d\'Alene, Idaho.',
+    'Kodecite helps service businesses become easier for customers and their AI assistants to understand, trust and engage. Founded by Mark Abplanalp in Coeur d\'Alene, Idaho.',
   alternates: { canonical: 'https://www.kodecite.ai/about' },
 };
 
@@ -96,11 +96,11 @@ export default function AboutPage() {
             className="font-inter font-semibold mb-7"
             style={{ fontSize: 'clamp(30px, 3.9vw, 52px)', lineHeight: 1.14, letterSpacing: '-0.03em', color: FG, maxWidth: '900px', textWrap: 'balance' }}
           >
-            Business truth comes before{' '}
-            <em className="serif" style={{ color: ACCENT }}>technology.</em>
+            Built by an operator.{' '}
+            <em className="serif" style={{ color: ACCENT }}>For the business behind the website.</em>
           </h1>
           <p className="font-inter" style={{ ...leadStyle, maxWidth: '660px' }}>
-            {ABOUT_MISSION} We build the owned digital business layer that helps AI understand what you do, determine when you are a good fit, recommend you accurately, and take only the next steps you approve.
+            {ABOUT_MISSION} That means a website people can use, connected facts an assistant can evaluate, and a useful next step that respects how the business actually works.
           </p>
         </div>
       </section>
@@ -109,7 +109,7 @@ export default function AboutPage() {
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>01 / WHY KODECITE EXISTS</p>
           <h2 className="font-inter font-semibold mb-6" style={{ ...h2Style, maxWidth: '760px' }}>
-            Keep the business inside the <em className="serif" style={{ color: ACCENT }}>commercial decision.</em>
+            Make a good business <em className="serif" style={{ color: ACCENT }}>easier to choose.</em>
           </h2>
           <div style={{ maxWidth: '720px' }}>
             <p className="font-inter mb-6" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
@@ -118,7 +118,7 @@ export default function AboutPage() {
               The website remains the human-facing experience. The owned digital layer is the consistent representation of the same business.
             </p>
             <p className="font-inter" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
-              That foundation made a second job possible. An outside AI discovered what Luxe allowed, established that a request qualified, and submitted one protected consultation request.
+              That foundation made a second job possible. In the documented production test, an outside AI discovered what Luxe allowed, established that a request qualified, and submitted one protected consultation request.
               An honest result came back. Duplicate handling prevented a second request. A person still follows up — without booking, pricing, or accepting a project.
               Kodecite exists to make that kind of owned infrastructure repeatable for other service businesses.
               {` ${LUXE_PROOF}`}
@@ -131,7 +131,7 @@ export default function AboutPage() {
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>02 / THE WORK</p>
           <h2 className="font-inter font-semibold mb-3" style={h2Style}>
-            Understand. Verify. <em className="serif" style={{ color: ACCENT }}>Act only when allowed.</em>
+            Understand the business. <em className="serif" style={{ color: ACCENT }}>Make the next step easier.</em>
           </h2>
           <p className="font-inter font-semibold mb-12" style={{ fontSize: '18px', letterSpacing: '0.01em', color: DIM }}>
             Truth. Capability. Control.
@@ -159,8 +159,8 @@ export default function AboutPage() {
 
           <div style={{ borderLeft: '2px solid var(--d-accent)', paddingLeft: '24px', maxWidth: '820px' }}>
             <p className="font-inter font-semibold" style={{ fontSize: 'clamp(22px, 3vw, 34px)', lineHeight: 1.2, letterSpacing: '-0.02em', color: FG }}>
-              AI should not merely find a business.{' '}
-              <em className="serif" style={{ color: ACCENT }}>It should know what that business is allowed to do.</em>
+              A customer’s assistant needs more than a business name.{' '}
+              <em className="serif" style={{ color: ACCENT }}>It needs to know why the business fits and how to move forward.</em>
             </p>
           </div>
         </div>
@@ -170,11 +170,11 @@ export default function AboutPage() {
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>03 / WHAT WE BUILD</p>
           <h2 className="font-inter font-semibold mb-6" style={{ ...h2Style, maxWidth: '760px' }}>
-            Owned infrastructure. <em className="serif" style={{ color: ACCENT }}>Not a rented stack.</em>
+            A lasting business asset. <em className="serif" style={{ color: ACCENT }}>Yours to own.</em>
           </h2>
           <p className="font-inter mb-12" style={{ ...leadStyle, maxWidth: '640px' }}>
             Based in North Idaho. Relationships across the PNW — Eastside Seattle, Bend, and the North Idaho–Spokane corridor.
-            The offer is remote, not geo-limited.
+            We work remotely with service businesses across the country.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4" style={{ maxWidth: '900px' }}>
@@ -194,7 +194,7 @@ export default function AboutPage() {
         <div style={wrap}>
           <p className="font-inter mb-4" style={eyebrow}>04 / HOW THE PRACTICE OPERATES</p>
           <h2 className="font-inter font-semibold mb-6" style={h2Style}>
-            One-person senior practice. <em className="serif" style={{ color: ACCENT }}>Client ownership.</em>
+            Work directly with the person <em className="serif" style={{ color: ACCENT }}>building it.</em>
           </h2>
           <p className="font-inter mb-12" style={{ ...leadStyle, maxWidth: '600px' }}>
             Scoped engagements, durable infrastructure, and a handful of principles the practice will not compromise on.
@@ -241,7 +241,7 @@ export default function AboutPage() {
               </p>
               <p className="font-inter mb-6" style={{ ...leadStyle, fontSize: '16px', lineHeight: 1.75 }}>
                 Kodecite is a one-person senior practice. The PNW relationships are real.
-                The client owns the infrastructure. There is no team to hide behind and no retainer required to keep the lights on.
+                The client owns the infrastructure. You work directly with Mark from scope through handoff. Ongoing service costs are explained, and a Kodecite retainer is optional.
               </p>
               <div className="flex flex-wrap gap-x-3 gap-y-2 font-mono" style={{ fontSize: '11px', letterSpacing: '0.1em', color: MUTE }}>
                 {['30 YRS · SALES', 'ENTREPRENEUR SINCE 2002', 'WINDOW TREATMENTS', 'APPLE RETAIL · COMMERCIAL', 'ISSAQUAH · BEND · NORTH IDAHO'].map((chip, i, arr) => (
@@ -263,7 +263,7 @@ export default function AboutPage() {
             See what AI can understand, verify, and <em className="serif" style={{ color: ACCENT }}>safely do.</em>
           </h2>
           <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
-            The Agent Readiness Review is a plain-English look at your current system. No pitch required.
+            The Agent Readiness Review shows what your current website and business information make clear, where an assistant might be missing context, and what would make the next step easier. Free and written within two business days.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href={REVIEW_HREF} className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>

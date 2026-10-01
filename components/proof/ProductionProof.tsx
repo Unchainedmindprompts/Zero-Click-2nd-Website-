@@ -12,14 +12,14 @@ const story = [
   'Understood',
   'Verified',
   'Selected',
-  'Actioned',
-  'Controlled',
+  'Requested',
+  'Confirmed',
 ];
 
 const facts = [
   {
-    t: 'Published capability',
-    d: 'Luxe publishes a machine-readable in-home consultation capability. Contract 1.0. Readiness: request-submission-ready. Submission enabled. Human follow-up required.',
+    t: 'The published capability description',
+    d: 'The case study records a machine-readable consultation-request capability: contract 1.0, request-submission-ready, submission enabled and human follow-up required. That description is not a fresh delivery test.',
   },
   {
     t: 'What stayed unavailable',
@@ -27,7 +27,7 @@ const facts = [
   },
   {
     t: 'Authorized production test',
-    d: 'One valid request returned HTTP 200 accepted / in_service_area. The email reached the Luxe inbox. Personal fields, request IDs, and keys are not published here.',
+    d: 'In the recorded test, one valid request returned HTTP 200 accepted / in_service_area. The email reached the Luxe inbox. Personal fields, request IDs, and keys are not published here.',
   },
   {
     t: 'Duplicate and conflict',
@@ -39,12 +39,12 @@ export default function ProductionProof() {
   return (
     <section id="live-production-proof" className="secondary-section" style={{ marginTop: '30px' }}>
       <GlassPanel style={{ padding: 'clamp(36px, 5vw, 64px)' }}>
-        <div className="d-eyebrow mb-6">LIVE PRODUCTION PROOF</div>
+        <div className="d-eyebrow mb-6">DOCUMENTED PRODUCTION TEST</div>
         <h2 className="font-inter font-semibold mb-5" style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: FG, maxWidth: '20ch' }}>
           Luxe Window Works — a request an agent could <em className="serif" style={{ color: ACCENT }}>discover and submit.</em>
         </h2>
         <p className="font-inter mb-8" style={{ fontSize: '16px', lineHeight: 1.65, color: DIM, fontWeight: 300, maxWidth: '720px' }}>
-          An outside agent could discover what Luxe permits, determine qualification, submit a permitted request, receive an honest machine-readable outcome, and leave the next conversation to a human. {LUXE_PROOF}
+          The important result was practical: a customer’s assistant could move a qualified consultation request forward and know what happened. A person still handled the next conversation. {LUXE_PROOF}
         </p>
 
         <div className="flex flex-wrap gap-2 mb-10">

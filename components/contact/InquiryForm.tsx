@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { validateInquiry } from '@/lib/inquiry-validation';
 
 interface FormState {
   name: string;
@@ -29,28 +30,12 @@ export default function InquiryForm() {
     e.preventDefault();
     setErrorMsg('');
 
-    if (!form.name || !form.email || !form.businessName || !form.challenge) {
-      setErrorMsg('Name, email, business name, and your message are required.');
+    if (status === 'submitting') return;
+    const checked = validateInquiry(form, false);
+    if (!checked.ok) {
+      setErrorMsg(checked.error);
       setStatus('error');
       return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      setErrorMsg('Please enter a valid email address.');
-      setStatus('error');
-      return;
-    }
-
-    let website = form.website.trim();
-    if (website && !website.startsWith('http')) website = `https://${website}`;
-    if (website) {
-      try {
-        new URL(website);
-      } catch {
-        setErrorMsg('Please enter a valid website URL (e.g. yourbusiness.com).');
-        setStatus('error');
-        return;
-      }
     }
 
     setStatus('submitting');
@@ -58,7 +43,7 @@ export default function InquiryForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, website }),
+        body: JSON.stringify(checked.value),
       });
       if (!res.ok) throw new Error('Server error');
       setStatus('success');
@@ -74,6 +59,7 @@ export default function InquiryForm() {
   if (status === 'success') {
     return (
       <div
+        role="status"
         style={{
           background: 'var(--d-bg-2)',
           border: '1px solid var(--d-line)',
@@ -137,6 +123,7 @@ export default function InquiryForm() {
   // ── Form state (idle | submitting | error) ──────────────
   return (
     <form
+      aria-label="Contact Kodecite"
       onSubmit={handleSubmit}
       noValidate
       style={{
@@ -144,7 +131,7 @@ export default function InquiryForm() {
         background: 'var(--d-bg-3)',
         border: '1px solid var(--d-line-s)',
         borderRadius: '16px',
-        padding: '36px 40px 40px',
+        padding: 'clamp(22px, 4vw, 40px)',
         overflow: 'hidden',
       }}
     >
@@ -166,7 +153,7 @@ export default function InquiryForm() {
         <label>
           <span
             className="font-mono block mb-2"
-            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+            style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
           >
             Your name
           </span>
@@ -183,7 +170,7 @@ export default function InquiryForm() {
         <label>
           <span
             className="font-mono block mb-2"
-            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+            style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
           >
             Email
           </span>
@@ -204,7 +191,7 @@ export default function InquiryForm() {
         <label>
           <span
             className="font-mono block mb-2"
-            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+            style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
           >
             Business name
           </span>
@@ -221,7 +208,7 @@ export default function InquiryForm() {
         <label>
           <span
             className="font-mono block mb-2"
-            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+            style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
           >
             Website URL <span style={{ color: 'var(--d-fg-mute)' }}>(optional)</span>
           </span>
@@ -241,7 +228,7 @@ export default function InquiryForm() {
       <label className="block mb-6">
         <span
           className="font-mono block mb-1"
-          style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+          style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
         >
           How can we help?
         </span>

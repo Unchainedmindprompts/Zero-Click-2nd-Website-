@@ -3,115 +3,51 @@
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import NavOverlay from './NavOverlay';
 
-/**
- * Shell — the persistent site frame.
- *
- * Logo stays top-left and the controls (Agent Readiness Review + menu) stay top-right
- * across the entire site; only the page content beneath changes. The menu
- * button opens the full-screen NavOverlay. This is the single site nav —
- * individual pages must NOT render their own header/nav (blog breadcrumbs
- * are page content, not site nav).
- */
+const links = [
+  { href: '/services', label: 'What we build' },
+  { href: '/case-studies', label: 'The evidence' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/blog', label: 'Insights' },
+  { href: '/about', label: 'About' },
+];
+
 export default function Shell() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const headerRef = useRef<HTMLElement>(null);
+  const menuRef = useRef<HTMLButtonElement>(null);
 
-  // Close the overlay on navigation.
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  // Publish the live header height (safe-area + inner bar) so page content
-  // clears the sticky nav without a per-viewport magic number.
-  useEffect(() => {
-    const el = headerRef.current;
-    if (!el) return;
-    const publish = () => {
-      const h = el.getBoundingClientRect().height;
-      document.documentElement.style.setProperty('--kc-shell-h', `${Math.round(h)}px`);
-    };
-    publish();
-    const ro = new ResizeObserver(publish);
-    ro.observe(el);
-    window.addEventListener('resize', publish);
-    window.addEventListener('orientationchange', publish);
-    return () => {
-      ro.disconnect();
-      window.removeEventListener('resize', publish);
-      window.removeEventListener('orientationchange', publish);
-    };
-  }, [open, scrolled]);
-
-  // Elevate the shell once the page is scrolled.
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  // Lock body scroll while the overlay is open.
-  useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : '';
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [open]);
-
-  // Close on Escape.
+  useEffect(() => { setOpen(false); }, [pathname]);
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false);
+    const close = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { setOpen(false); menuRef.current?.focus(); }
     };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
   }, [open]);
 
   return (
     <>
-      <header ref={headerRef} className={`kc-shell ${scrolled || open ? 'kc-shell--scrolled' : ''}`}>
-        <div className="kc-shell__inner">
-          {/* Brand — top-left, persistent */}
-          <Link href="/" className="kc-brand" aria-label="KodeCite.ai home">
-            <span style={{ color: 'var(--d-accent)', fontSize: '13px', lineHeight: 1 }}>▸</span>
-            <span
-              className="font-inter font-semibold"
-              style={{ fontSize: '14px', letterSpacing: '-0.02em' }}
-            >
-              <span style={{ color: 'var(--kc-fg)' }}>KODECITE</span>
-              <span style={{ color: 'var(--d-fg-mute)' }}>.AI</span>
-            </span>
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <header className="site-header">
+        <div className="site-header-inner">
+          <Link className="site-brand" href="/" aria-label="Kodecite home">
+            <span className="brand-mark" aria-hidden="true"><span /><span /><span /></span>
+            <span>kodecite<span className="brand-dot">.</span></span>
           </Link>
-
-          {/* Controls — top-right, persistent */}
-          <div className="flex items-center gap-4">
-            <Link href="/machine-read" className="d-btn d-btn-primary d-btn-sm kc-shell-cta">
-              Agent Readiness Review →
-            </Link>
-            <button
-              type="button"
-              className="kc-menu-btn"
-              aria-label={open ? 'Close menu' : 'Open menu'}
-              aria-expanded={open}
-              aria-controls="kc-nav-overlay"
-              onClick={() => setOpen((v) => !v)}
-            >
-              <span />
-              <span />
-              <span />
-            </button>
+          <nav className="desktop-navigation" aria-label="Main navigation">
+            {links.map(link => <Link key={link.href} href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</Link>)}
+          </nav>
+          <div className="header-actions">
+            <Link className="header-review" href="/machine-read">Free readiness review <span aria-hidden="true">→</span></Link>
+            <button ref={menuRef} className="mobile-menu-toggle" type="button" aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>{open ? 'Close −' : 'Menu +'}</button>
           </div>
         </div>
+        {open && <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation">
+          {[...links, { href: '/why-now', label: 'Why now' }, { href: '/faq', label: 'Your questions' }, { href: '/contact', label: 'Contact' }, { href: '/machine-read', label: 'Free readiness review →' }].map(link => <Link key={link.href} href={link.href} onClick={() => setOpen(false)} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</Link>)}
+        </nav>}
       </header>
-
-      <div id="kc-nav-overlay">
-        <NavOverlay open={open} onClose={() => setOpen(false)} />
-      </div>
     </>
   );
 }

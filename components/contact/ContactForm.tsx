@@ -1,15 +1,18 @@
 'use client';
 
 import { useState } from 'react';
+import { validateInquiry } from '@/lib/inquiry-validation';
 
 interface FormState {
   name: string;
+  email: string;
   businessName: string;
   website: string;
   challenge: string;
 }
 
 interface SubmittedData {
+  email: string;
   website: string;
   businessName: string;
 }
@@ -17,13 +20,14 @@ interface SubmittedData {
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({
     name: '',
+    email: '',
     businessName: '',
     website: '',
     challenge: '',
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
-  const [submitted, setSubmitted] = useState<SubmittedData>({ website: '', businessName: '' });
+  const [submitted, setSubmitted] = useState<SubmittedData>({ email: '', website: '', businessName: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -33,30 +37,24 @@ export default function ContactForm() {
     e.preventDefault();
     setErrorMsg('');
 
-    if (!form.name || !form.businessName || !form.website || !form.challenge) {
-      setErrorMsg('All fields are required.');
+    if (status === 'submitting') return;
+    const checked = validateInquiry(form, true);
+    if (!checked.ok) {
+      setErrorMsg(checked.error);
       setStatus('error');
       return;
     }
-
-    const fullWebsite = form.website.startsWith('http') ? form.website : `https://${form.website}`;
-    try {
-      new URL(fullWebsite);
-    } catch {
-      setErrorMsg('Please enter a valid website URL (e.g. yourbusiness.com).');
-      setStatus('error');
-      return;
-    }
+    const fullWebsite = checked.value.website;
 
     setStatus('submitting');
     try {
       const res = await fetch('/api/machine-read', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, website: fullWebsite }),
+        body: JSON.stringify(checked.value),
       });
       if (!res.ok) throw new Error('Server error');
-      setSubmitted({ website: fullWebsite, businessName: form.businessName });
+      setSubmitted({ email: checked.value.email, website: fullWebsite, businessName: checked.value.businessName });
       setStatus('success');
     } catch {
       setErrorMsg(
@@ -70,6 +68,7 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div
+        role="status"
         style={{
           background: 'var(--d-bg-2)',
           border: '1px solid var(--d-line)',
@@ -97,7 +96,7 @@ export default function ContactForm() {
           className="font-mono mb-3"
           style={{ fontSize: '10px', letterSpacing: '0.2em', color: 'var(--d-accent)' }}
         >
-          REVIEW · QUEUED
+          REQUEST · RECEIVED
         </p>
 
         <h2
@@ -108,7 +107,7 @@ export default function ContactForm() {
             color: 'var(--d-fg)',
           }}
         >
-          Your review is in the queue.
+          Your request has been received.
         </h2>
 
         <p
@@ -124,9 +123,9 @@ export default function ContactForm() {
         >
           We&apos;ve received your Agent Readiness Review for{' '}
           <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>{submitted.website}</strong>.
-          You&apos;ll hear back at the email tied to{' '}
-          <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>{submitted.businessName}</strong>{' '}
-          within two business days with a written report.
+          We’ll send the written review to{' '}
+          <strong style={{ color: 'var(--d-fg)', fontWeight: 600 }}>{submitted.email}</strong>{' '}
+          within two business days.
         </p>
 
         <div
@@ -180,6 +179,7 @@ export default function ContactForm() {
   // ── Form state (idle | submitting | error) ──────────────
   return (
     <form
+      aria-label="Request an Agent Readiness Review"
       onSubmit={handleSubmit}
       noValidate
       style={{
@@ -187,7 +187,7 @@ export default function ContactForm() {
         background: 'var(--d-bg-3)',
         border: '1px solid var(--d-line-s)',
         borderRadius: '16px',
-        padding: '36px 40px 40px',
+        padding: 'clamp(22px, 4vw, 40px)',
         overflow: 'hidden',
       }}
     >
@@ -221,7 +221,7 @@ export default function ContactForm() {
         <label>
           <span
             className="font-mono block mb-2"
-            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+            style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
           >
             Your name
           </span>
@@ -231,14 +231,14 @@ export default function ContactForm() {
             type="text"
             value={form.name}
             onChange={handleChange}
-            placeholder="Mark Abplanalp"
+            placeholder="Your name"
             autoComplete="name"
           />
         </label>
         <label>
           <span
             className="font-mono block mb-2"
-            style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+            style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
           >
             Business name
           </span>
@@ -254,11 +254,17 @@ export default function ContactForm() {
         </label>
       </div>
 
+      <label className="block mb-4">
+        <span className="font-mono block mb-2" style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}>Reply email</span>
+        <input className="d-input" name="email" type="email" required maxLength={254} value={form.email} onChange={handleChange} placeholder="you@yourbusiness.com" autoComplete="email" />
+        <span className="block mt-2" style={{ fontSize: '12px', color: 'var(--d-fg-mute)' }}>Where we’ll send your written review. Used to respond to this request.</span>
+      </label>
+
       {/* Website URL */}
       <label className="block mb-4">
         <span
           className="font-mono block mb-2"
-          style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+          style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
         >
           Website URL
         </span>
@@ -290,7 +296,7 @@ export default function ContactForm() {
       <label className="block mb-6">
         <span
           className="font-mono block mb-1"
-          style={{ fontSize: '9px', letterSpacing: '0.16em', color: 'var(--d-fg-dim)' }}
+          style={{ fontSize: '11px', letterSpacing: '0.08em', color: 'var(--d-fg-dim)' }}
         >
           What should a customer — or their AI agent — be able to accomplish?
         </span>
@@ -335,7 +341,7 @@ export default function ContactForm() {
           className="font-mono"
           style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'var(--d-fg-mute)' }}
         >
-          NO SALES PITCH · TWO BUSINESS DAYS · YOUR REVIEW IS YOURS
+          FREE · WRITTEN WITHIN TWO BUSINESS DAYS
         </span>
         <button
           type="submit"

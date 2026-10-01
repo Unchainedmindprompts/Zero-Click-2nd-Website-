@@ -1,524 +1,267 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+
+const article = {
+  "slug": "the-shortlist-problem",
+  "title": "The Shortlist Problem: Help AI Understand Who You Fit",
+  "description": "Help customers and their AI assistants compare your business using specific services, relevant proof, clear conditions, and a useful next step.",
+  "date": "2026-03-17",
+  "intro": "When a customer asks an assistant to compare businesses, the valuable question is why yours fits that person. A clear offer and relevant proof give the assistant something useful to work with.",
+  "sections": [
+    {
+      "heading": "A shortlist is a decision, not a fixed slot",
+      "paragraphs": [
+        "Consider a customer asking, “Find a provider who handles this kind of project, serves my area, and can explain the options before I commit.” The assistant has a comparison task. Its answer may be a few candidates, a longer list, or a clarifying question.",
+        "There is no universal one-business-per-city slot to claim. Different needs can produce different choices. A company that is a strong fit for a complex project may be unsuitable for a small repair. A provider with excellent credentials may not serve the customer's location.",
+        "This is good news for an owner with a genuine specialty. You do not need to describe your business as best for everyone. You need to make its particular fit easy to understand, support, and check."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Publish the criteria your customers actually use",
+      "paragraphs": [
+        "Start with the questions your team answers before accepting work. Which jobs do you take? What makes a customer suitable? Which locations are covered? What needs an initial conversation? What could prevent a project from proceeding?",
+        "These criteria belong near the offer. A service page that answers them can help an assistant explain why the business is worth considering. It can also help an unsuitable customer move on without wasting anyone's time.",
+        "For example, a hypothetical consultant might work with owner-led businesses that already have a small team. A specialist installer might cover defined product categories and require an on-site measurement. Neither gains from being described as a universal solution."
+      ],
+      "items": [
+        "The problem and service being offered",
+        "Customer or project fit",
+        "Geographic and practical availability",
+        "Information needed for an estimate or consultation",
+        "Relevant experience and verifiable qualifications"
+      ],
+      "sources": []
+    },
+    {
+      "heading": "Give every important claim an appropriate form of proof",
+      "paragraphs": [
+        "Different claims require different evidence. A service description establishes what you say you offer. A professional register can support a credential. A dated project example can show experience with a type of work. A review can describe a customer's experience, with the limits of that individual account.",
+        "Connect each piece to the person, business, service, or project it concerns. A founder's qualification does not automatically belong to every employee. An award in one category does not establish superiority in another. Precision helps both the human reader and the assistant.",
+        "Keep the proof visible. Appropriate structured data can express relationships, but a hidden claim in markup should not carry a stronger story than the page itself."
+      ],
+      "items": [],
+      "sources": [
+        {
+          "label": "Google Search Central: structured data guidelines",
+          "href": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies"
+        }
+      ]
+    },
+    {
+      "heading": "Reduce the unanswered questions in a comparison",
+      "paragraphs": [
+        "A customer comparing three providers may need more than their specialties. They may need to know whether the consultation is remote or on-site, whether measurements are required, how custom pricing works, or who responds to a request.",
+        "Answer what the business can answer reliably. If the final price depends on choices that have not been made, describe those choices and the quote process. If availability is not connected to a live system, explain how it is confirmed. Clear uncertainty is more useful than a false promise.",
+        "This makes your business easier to compare on its real merits. It also reduces the risk of an assistant filling a gap with a plausible but incorrect assumption."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "The shortlist should lead somewhere",
+      "paragraphs": [
+        "Being considered only becomes commercially useful when the customer can engage. Provide a next step that matches the service and the current business process. That may be a phone call, a structured inquiry, or an action an outside assistant can invoke through a supported connection.",
+        "Define what information is needed and what the customer approves. State whether the result means a request was received, a time was reserved, or a purchase was completed. Where a person must make the decision, provide a clear handoff.",
+        "Luxe Window Works demonstrates one bounded path from an outside AI to a consultation request: one email and a duplicate prevented. That is meaningful evidence of engagement after discovery. It is not a claim that every shortlisted business can automatically book or transact."
+      ],
+      "items": [],
+      "sources": [
+        {
+          "label": "Read the Luxe Window Works implementation",
+          "href": "/blog/from-recommended-to-actionable-luxe-window-works"
+        }
+      ]
+    },
+    {
+      "heading": "Test for fit rather than fishing for praise",
+      "paragraphs": [
+        "Build a handful of scenarios from actual customer questions. Include a straightforward match, a request at the edge of your service area, a specialized job, and an unsuitable request. Ask relevant assistants to compare options and explain their reasons.",
+        "Look for factual mistakes and missing evidence. Does the answer understand your specialty? Does it cite a relevant project or merely repeat a slogan? Does it identify the correct next step? Does it overstate availability?",
+        "Keep the date, question, sources, and result. Repeat after meaningful corrections, and track the quality of real inquiries separately. A flattering answer is not a conversion report, and a missing mention in one sample is not proof that the business has disappeared."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Be the business that is easy to evaluate",
+      "paragraphs": [
+        "The practical aim is a customer who understands why your business may be right for the job and knows how to proceed. That holds whether the customer researches personally or delegates the comparison to a personal agent.",
+        "KodeCite's work begins with the owned business foundation: identity, offers, people, evidence, and clear capabilities. The $4,995 one-time foundation has no required retainer; a live action is scoped separately.",
+        "A shortlist remains the assistant's or customer's decision. Your part is to make the reasons for a good match clear and make the next step work."
+      ],
+      "items": [],
+      "sources": []
+    }
+  ],
+  "takeaways": [
+    "Define the customer you serve well",
+    "Connect each claim to evidence",
+    "Make engagement easy after comparison"
+  ],
+  "faq": [
+    {
+      "q": "Will an assistant only recommend one local business?",
+      "a": "Not necessarily. The number of options depends on the question, interface, and system. There is no fixed local shortlist size."
+    },
+    {
+      "q": "How do I know whether I am a good match in an AI answer?",
+      "a": "Check whether the answer accurately connects your actual service, area, conditions, and evidence to the customer’s specific request."
+    }
+  ]
+};
+const canonical = `https://www.kodecite.ai/blog/${article.slug}`;
+const modified = '2026-10-01T00:00:00Z';
+const published = `${article.date}T00:00:00-07:00`;
+const imageUrl = "https://www.kodecite.ai/blog-hero.png";
+const articleText = [article.intro, ...article.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...section.items]), ...article.faq.flatMap((item) => [item.q, item.a])].join(' ');
+const wordCount = articleText.trim().split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+const publishedLabel = new Date(`${article.date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const sources = article.sections.flatMap((section) => section.sources).filter((source, index, list) => list.findIndex((item) => item.href === source.href) === index);
+
 export const metadata: Metadata = {
-  title: 'The Shortlist Problem in AI Search',
-  description:
-    "As AI assistants and wearables take over local discovery, recommendations compress to one or two names. Here's how to be the business AI names.",
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/the-shortlist-problem',
-  },
+  title: article.title,
+  description: article.description,
+  alternates: { canonical },
   openGraph: {
-    title: 'The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours',
-    description:
-      'As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here\'s how to become one of them.',
-    url: 'https://www.kodecite.ai/blog/the-shortlist-problem',
+    title: article.title,
+    description: article.description,
+    url: canonical,
     type: 'article',
-    publishedTime: '2026-03-17',
+    publishedTime: published,
+    modifiedTime: modified,
     authors: ['Mark Abplanalp'],
+    images: [{ url: imageUrl }],
   },
+  twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [imageUrl] },
 };
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/the-shortlist-problem#article',
-  headline:
-    'The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours',
-  description:
-    'As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here\'s how to become one of them.',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  datePublished: '2026-03-17T00:00:00-07:00',
-  dateModified: '2026-03-17T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/the-shortlist-problem',
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  url: 'https://www.kodecite.ai/blog/the-shortlist-problem',
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  keywords: [
-    'AI recommendation shortlist',
-    'wearable AI discovery',
-    'answer engine optimization',
-    'AEO local business',
-    'AI local search',
-    'llms.txt',
-    'agent.json',
-    'zero click search',
-    'local business AI visibility',
-    'screenless AI',
-    'Ray-Ban Meta',
-    'ChatGPT local recommendations',
-    'Perplexity local search',
-    'Google AI Overviews local',
-  ],
-  articleSection: 'AI Search Strategy',
-  wordCount: 1900,
-  about: [
-    { '@type': 'DefinedTerm', name: 'Answer Engine Optimization' },
-    { '@type': 'DefinedTerm', name: 'AI Search Visibility' },
-    { '@type': 'DefinedTerm', name: 'Wearable AI Discovery' },
-    { '@type': 'DefinedTerm', name: 'Local Business AI Recommendations' },
-    { '@type': 'DefinedTerm', name: 'Structured Data for Local Business' },
-    { '@type': 'DefinedTerm', name: 'Zero Click Search' },
-  ],
-  mentions: [
-    { '@type': 'Organization', name: 'ChatGPT', url: 'https://openai.com/chatgpt' },
-    { '@type': 'Organization', name: 'Perplexity', url: 'https://www.perplexity.ai' },
-    { '@type': 'Thing', name: 'Google AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'Organization', name: 'Ray-Ban Meta', url: 'https://www.meta.com/smart-glasses/' },
-  ],
-  citation: [
-    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'CreativeWork', name: 'SparkToro — Zero-Click Search Study', url: 'https://sparktoro.com/blog/less-than-half-of-google-searches-now-result-in-a-click/' },
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
-  ],
+  '@id': `${canonical}#article`,
+  headline: article.title,
+  description: article.description,
+  author: articleAuthor,
+  publisher: articlePublisher,
+  datePublished: published,
+  dateModified: modified,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  url: canonical,
+  image: imageUrl,
+  isPartOf: blogCollectionPage,
+  about: [businessRef],
+  articleSection: 'AI Business Strategy',
+  wordCount,
+  citation: sources.filter((source) => source.href.startsWith('https://')).map((source) => ({ '@type': 'CreativeWork', name: source.label, url: source.href })),
 };
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Why will AI assistants recommend only one or two local businesses instead of a full list?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Screenless and wearable AI interfaces — smart glasses, earbuds, voice assistants — can't deliver ten options without being unusable. The UX pressure pushes every audio interface toward one high-confidence recommendation. Combined with the reputation risk of bad recommendations, AI systems default to the safest, most verifiable choice. The result is a shortlist of one or two businesses per local niche.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What makes a local business eligible for AI recommendation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Two criteria determine AI recommendation eligibility: first, genuine real-world excellence — strong reviews, consistent reputation, and honest operations that AI systems can verify. Second, fast, structured, AI-readable web infrastructure — sub-second load times, custom per-page JSON-LD schema, llms.txt, agent.json, and consistent NAP data across all major directories.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is llms.txt and why does it matter for local business AI visibility?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "llms.txt is a natural-language brief deployed at your site's root that tells AI crawlers exactly who you are, what you do, where you operate, and which pages contain your most valuable content. It gives AI systems a direct, unambiguous map to your authority signals — making it significantly easier for them to describe and recommend your business accurately.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I get on the AI recommendation shortlist without rebuilding my website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "It depends on your current platform. Some improvements — adding llms.txt, fixing directory consistency, improving review signals — can be made without rebuilding. However, if your site is on a subscription platform like WordPress, Wix, or Squarespace with real-device load times above two seconds, there are hard performance and schema ceilings that cannot be engineered around without rebuilding on a modern edge chassis like Next.js on Vercel.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How soon will wearable AI devices change local search behavior?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The behavior shift is already underway with existing voice assistants and AI Overviews. Wearables like Ray-Ban Meta glasses are accelerating it. The technical infrastructure required to rank in Google AI Overviews in 2026 is identical to what will be required for wearable discovery in 2027 and beyond. Businesses building that infrastructure now are compounding an advantage while the competitive window is still open.',
-      },
-    },
-  ],
-};
-
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': 'https://www.kodecite.ai/blog/the-shortlist-problem#breadcrumb',
+  '@id': `${canonical}#breadcrumb`,
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
     { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'The Shortlist Problem',
-      item: 'https://www.kodecite.ai/blog/the-shortlist-problem',
-    },
+    { '@type': 'ListItem', position: 3, name: article.title, item: canonical },
   ],
 };
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${canonical}#faq`,
+  mainEntity: article.faq.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
+};
 
-export default function ShortlistProblemPage() {
+export default function ArticlePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-
-      {/* Hero */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }} />
       <section className="bg-[var(--d-bg)] pt-36 pb-16">
         <div className="max-w-5xl mx-auto px-6">
-          <nav className="text-sm text-[var(--d-fg-dim)] mb-6 font-inter">
+          <nav aria-label="Breadcrumb" className="text-sm text-[var(--d-fg-dim)] mb-6 font-inter">
             <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
             <span className="mx-2">/</span>
             <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
             <span className="mx-2">/</span>
-            <span className="text-[var(--d-fg)]">The Shortlist Problem</span>
+            <span className="text-[var(--d-fg)]">{article.title}</span>
           </nav>
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] font-inter">AI Search Strategy</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] font-inter">AI Business Strategy</span>
             <span className="text-[var(--d-fg-dim)] text-xs font-inter">·</span>
-            <span className="text-xs text-[var(--d-fg-dim)] font-inter">10 min read</span>
+            <span className="text-xs text-[var(--d-fg-dim)] font-inter">{readingTime} min read</span>
           </div>
-          <h1 className="font-inter text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] leading-tight mb-6">
-            The Shortlist Problem: Why AI Will Recommend One Local Business — And Why It Might Not Be Yours
-          </h1>
-          <p className="font-inter text-lg text-[var(--d-fg-dim)] max-w-3xl mb-8 leading-relaxed">
-            As AI assistants and screenless wearables take over local discovery, recommendation lists will compress to one or two names per niche. Here&apos;s how to become one of them.
-          </p>
+          <h1 className="font-inter text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] leading-tight mb-6">{article.title}</h1>
+          <p className="font-inter text-lg text-[var(--d-fg-dim)] max-w-3xl mb-8 leading-relaxed">{article.intro}</p>
           <div className="flex items-center gap-4">
             <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center text-white font-inter font-semibold text-sm">MA</div>
             <div>
               <p className="font-inter font-semibold text-sm text-[var(--d-fg)]">Mark Abplanalp</p>
-              <p className="font-inter text-xs text-[var(--d-fg-dim)]">March 17, 2026</p>
+              <p className="font-inter text-xs text-[var(--d-fg-dim)]"><time dateTime={article.date}>{publishedLabel}</time> · Updated <time dateTime="2026-10-01">October 1, 2026</time></p>
             </div>
           </div>
         </div>
       </section>
 
       <div className="section-divider" />
-
-      {/* Article + Sidebar */}
       <section className="bg-[var(--d-bg)] py-16">
         <div className="max-w-5xl mx-auto px-6">
           <div className="lg:grid lg:grid-cols-3 lg:gap-12">
-
-            {/* Article Body */}
             <article className="lg:col-span-2 prose-content font-inter text-[var(--d-fg-dim)]">
-              <p className="text-lg leading-relaxed mb-6">
-                You&apos;re walking to a meeting. You&apos;re wearing a pair of Ray-Ban Meta glasses. You say, out loud, to no one in particular: <em>&quot;Who&apos;s the best estate planning attorney near me?&quot;</em>
-              </p>
-              <p className="leading-relaxed mb-6">
-                You don&apos;t get a list of ten options. You don&apos;t pull out your phone. You don&apos;t open a browser tab.
-              </p>
-              <p className="leading-relaxed mb-6">
-                You hear a name in your ear.
-              </p>
-              <p className="leading-relaxed mb-10">
-                Maybe two names. Probably one. That&apos;s the direction behavior is heading — and the implications for every local professional who lives by inbound are more significant than most people realize.
-              </p>
-
-              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">From Scrolling to Asking</h2>
-              <p className="leading-relaxed mb-6">
-                For twenty years, local search worked the same way. Someone typed a query, got a list of ten blue links, and picked one. The game was: be high enough on the list that they picked you.
-              </p>
-              <p className="leading-relaxed mb-6">
-                That game is changing fast.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Sixty percent of Google searches now end without a single click. AI answers the question directly — synthesizing information from multiple sources and delivering a complete response in the search window itself. Google AI Overviews, ChatGPT, Perplexity — they&apos;ve all moved in the same direction. The answer comes to you. You don&apos;t go looking for it.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Wearables accelerate this by an order of magnitude.
-              </p>
-              <p className="leading-relaxed mb-10">
-                When the interface is audio — smart glasses, earbuds, the AI assistant in your car — the entire interaction model changes. Screens invite browsing. Audio demands decisiveness. Nobody wants five names read out loud while they&apos;re walking down the street. The UX pressure on every screenless AI system pushes hard toward one high-confidence recommendation. One name. Maybe two. That&apos;s the entire decision set.
-              </p>
-
-              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">Why the List Will Compress</h2>
-              <p className="leading-relaxed mb-6">
-                This isn&apos;t speculation about distant future technology. It&apos;s a logical consequence of how AI recommendation systems work under the constraints of audio interfaces and user patience.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Think about what happens when an AI assistant makes a bad recommendation. The user has a terrible experience. They lose trust in the assistant. They stop using it. For the companies building these systems — Apple, Google, Meta, OpenAI — a bad recommendation is an existential risk to the product.
-              </p>
-              <p className="leading-relaxed mb-6">
-                So the system defaults toward caution. It recommends businesses it can verify. Businesses with consistent signals. Businesses whose online presence matches their real-world reputation. Businesses that are, in the language of machine learning, <em>low risk</em>.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Reading out five options is also cognitively exhausting for the user and reputationally risky for the assistant. One high-confidence answer is better product design.
-              </p>
-              <p className="leading-relaxed mb-10">
-                The result is what you might call a winner&apos;s circle: a small set of local businesses in each niche and geography that meet the threshold for safe recommendation. The businesses outside that circle aren&apos;t ranked lower. They&apos;re simply not in the conversation. The circle is not large. For most local niches in most mid-sized markets, it&apos;s probably three to five businesses at most. In smaller markets, it may be one or two.
-              </p>
-
-              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">What AI Can&apos;t Fake</h2>
-              <p className="leading-relaxed mb-6">
-                Before going further, it&apos;s worth being direct about something: none of this infrastructure work matters if the business isn&apos;t genuinely good.
-              </p>
-              <p className="leading-relaxed mb-6">
-                AI systems can&apos;t manufacture integrity. They can read reviews, but they can&apos;t write them — and the signal of authentic, consistent five-star reviews across multiple platforms over multiple years is one that no amount of technical optimization can replicate.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Real-world excellence is the foundation. Consistent NAP data across directories. Genuine client reviews that reflect actual service quality. Real expertise demonstrated through content that answers real questions. Honest operations that hold up to scrutiny.
-              </p>
-              <p className="leading-relaxed mb-10">
-                KodeCite&apos;s work — and any legitimate AEO work — is an amplifier, not a disguise. If the business is excellent, the infrastructure makes sure machines can see and trust that excellence. If the business isn&apos;t excellent, better schema markup won&apos;t save it.
-              </p>
-
-              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">Why Infrastructure Suddenly Matters Again</h2>
-              <p className="leading-relaxed mb-6">
-                When an AI crawler visits your website, it&apos;s operating on a budget. Not a financial budget — a compute budget. These systems are scanning millions of pages. They spend more time and resources on pages that load quickly, parse cleanly, and communicate their content clearly. They spend less time — or skip entirely — pages that are slow, bloated, and hard to read.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Most local professional websites are slow, bloated, and hard to read. Not because the designers did bad work, but because of the platforms they were built on.
-              </p>
-              <p className="leading-relaxed mb-6">
-                WordPress with a heavy theme, a page builder, and a dozen active plugins routinely delivers real-device load times of three to eight seconds on a modern phone. Wix and Squarespace are better, but still built on shared infrastructure with inherent performance ceilings. Real estate website subscription builders are often the worst of all — generic templates shared across thousands of agents, with thin or nonexistent structured data.
-              </p>
-              <p className="leading-relaxed mb-6">
-                The contrast with a purpose-built edge deployment is stark. A Next.js site deployed on Vercel&apos;s global CDN loads the same pages in under a second on a real device — not a simulated benchmark, but actual load time on a 2026 iPhone on WiFi or 5G. That&apos;s not a marginal improvement. It&apos;s the difference between getting read and getting skipped.
-              </p>
-              <p className="leading-relaxed mb-10">
-                The critique here isn&apos;t about brand names. It&apos;s about architecture and incentives. Subscription platforms are built to serve thousands of customers at acceptable quality. They&apos;re not built to be the fastest, cleanest, most machine-readable site in your local market. That&apos;s not their job. It&apos;s yours — if you want to be on the shortlist.
-              </p>
-
-              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">The Machine-Readable Local Expert</h2>
-              <p className="leading-relaxed mb-6">
-                Speed is necessary but not sufficient. The other half of the equation is structured data — the information architecture that tells AI systems exactly who you are, what you do, where you operate, and why you&apos;re trustworthy.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Most local professional websites communicate this information to humans. They do it poorly, or not at all, for machines.
-              </p>
-              <p className="leading-relaxed mb-6">
-                <strong className="text-[var(--d-fg)] font-semibold">llms.txt</strong> is a natural-language brief for AI crawlers. Think of it as the cover letter your website sends to every AI system that visits. It explains in plain English who the business is, what it does, where it operates, which pages contain the most valuable information, and how the AI should describe the business to users. Most websites don&apos;t have one. The ones that do have a meaningful advantage in how accurately AI systems represent them.
-              </p>
-              <p className="leading-relaxed mb-6">
-                <strong className="text-[var(--d-fg)] font-semibold">agent.json</strong> is a structured identity file — think of it as DNS for AI agents. It encodes the business as a machine-readable entity: services offered, geographic coverage, contact information, authority signals, and the capabilities an autonomous AI system would need to recommend or interact with the business. As AI agents become more autonomous — shopping for services, booking appointments, answering questions on behalf of users — this file becomes the handshake that makes discovery possible.
-              </p>
-              <p className="leading-relaxed mb-10">
-                <strong className="text-[var(--d-fg)] font-semibold">Per-page JSON-LD schema</strong> is the granular layer. Every page on the site — homepage, service pages, location pages, articles, FAQs — carries custom structured data that encodes the specific content and context of that page. Not copy-pasted site-wide boilerplate, but bespoke markup that tells a machine exactly what it&apos;s looking at. Zero invalid items at launch, verified before the site goes live. Together, these layers make it easy for an AI system to say, with confidence: <em>Call this business.</em>
-              </p>
-
-              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">The Condensation Hypothesis</h2>
-              <p className="leading-relaxed mb-6">
-                Here&apos;s the core argument stated plainly.
-              </p>
-              <p className="leading-relaxed mb-6">
-                As AI assistants and screenless wearables go mainstream over the next two to four years, recommendation lists for local services will compress dramatically. The shortlist for any local niche — best estate planning attorney in Coeur d&apos;Alene, best financial advisor in Boise, best real estate agent in Scottsdale — will shrink to one or two names.
-              </p>
-              <p className="leading-relaxed mb-4">That shortlist will be composed of operators who meet two criteria:</p>
-              <p className="leading-relaxed mb-4">
-                First, they run genuinely excellent businesses. Strong reviews, consistent reputation, real expertise, honest operations. This is non-negotiable and cannot be engineered around.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Second, they&apos;ve invested in fast, structured, AI-readable web infrastructure. Sub-second load times. Clean markup. Custom schema. AI identity files. Consistent directory presence. Content written to answer questions, not fill pages.
-              </p>
-              <p className="leading-relaxed mb-6">
-                Businesses that meet both criteria will be recommended. Businesses that meet only one will struggle. Businesses that meet neither will be invisible.
-              </p>
-              <p className="leading-relaxed mb-10">
-                Picture this: you&apos;re wearing smart glasses and ask, <em>&quot;Who&apos;s the best real estate agent near me?&quot;</em> The assistant evaluates the local market in real time. It finds three agents with strong reviews, then checks their web presence. Two have slow, generic subscription sites with thin schema. One has a sub-second Next.js site with custom per-page JSON-LD, an llms.txt brief, and consistent NAP data across every major directory. The choice, from the assistant&apos;s perspective, is easy. You hear one name.
-              </p>
-
-              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">What This Means for a Local Professional Today</h2>
-              <p className="leading-relaxed mb-6">
-                The practical implications break down into three areas.
-              </p>
-              <p className="leading-relaxed mb-4">
-                <strong className="text-[var(--d-fg)] font-semibold">Your site needs to load instantly.</strong> Not fast. Instantly. Sub-second on a real device. If you&apos;re on a subscription platform, this may not be achievable without rebuilding. That&apos;s an uncomfortable truth, but it&apos;s the truth.
-              </p>
-              <p className="leading-relaxed mb-4">
-                <strong className="text-[var(--d-fg)] font-semibold">Your expertise needs to be machine-readable.</strong> Schema markup is not optional anymore. Custom per-page JSON-LD that encodes your services, location, credentials, and authority isn&apos;t a nice-to-have — it&apos;s the difference between being understood by AI systems and being guessed at.
-              </p>
-              <p className="leading-relaxed mb-4">
-                <strong className="text-[var(--d-fg)] font-semibold">Your directory presence needs to be consistent.</strong> Google Business Profile, Bing Places, Apple Business Connect, Yelp, BBB — NAP data needs to match exactly across every platform. Inconsistencies create uncertainty for AI systems trying to verify your identity. Uncertainty means you don&apos;t make the shortlist.
-              </p>
-              <p className="leading-relaxed mb-10">
-                <strong className="text-[var(--d-fg)] font-semibold">Your content needs to answer questions, not describe services.</strong> Brochure content tells humans what you do. Answer-first content tells AI systems — and the humans asking them — why you&apos;re the right choice for a specific question in a specific context. The format matters as much as the words.
-              </p>
-
-              {/* FAQ / Checklist Section with microdata */}
-              <h2 className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">How to Become the Name AI Recommends</h2>
-              <p className="leading-relaxed mb-8">A simple checklist for where to start:</p>
-
-              <div>
-                <div className="mb-6">
-                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
-                    Audit your real-world reputation first.
-                  </h3>
-                  <p className="leading-relaxed">
-                    Reviews, consistency, service quality. No infrastructure work matters if this foundation is weak.
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
-                    Benchmark your site speed.
-                  </h3>
-                  <p className="leading-relaxed">
-                    Run your homepage through PageSpeed Insights. If your mobile score is below 70 or your load time is above two seconds on desktop, you have a structural problem.
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
-                    Check your schema.
-                  </h3>
-                  <p className="leading-relaxed">
-                    Use Google&apos;s Rich Results Test. If you have no structured data, or invalid items, AI systems are guessing about your business.
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
-                    Verify your directory consistency.
-                  </h3>
-                  <p className="leading-relaxed">
-                    Search your business name across GBP, Bing, Apple Maps, and Yelp. Any mismatch in NAP data needs to be corrected.
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
-                    Evaluate your platform honestly.
-                  </h3>
-                  <p className="leading-relaxed">
-                    If you&apos;re on a subscription builder and you&apos;re serious about AI visibility, understand what it can and can&apos;t deliver. Some platforms have hard ceilings on performance and schema depth that can&apos;t be engineered around without rebuilding on a modern edge chassis.
-                  </p>
-                </div>
-
-                <div className="mb-10">
-                  <h3 className="font-inter font-semibold text-[var(--d-fg)] mb-2">
-                    Add llms.txt.
-                  </h3>
-                  <p className="leading-relaxed">
-                    If you have access to your site&apos;s root directory, this is one of the highest-leverage additions you can make today. A clear, honest brief for AI crawlers about who you are and what you do.
-                  </p>
-                </div>
-              </div>
-
-              <p className="leading-relaxed mb-6">
-                The businesses that will dominate local AI recommendations over the next three years are largely the ones making these investments now — while the infrastructure is still novel and the competition is still asleep.
-              </p>
-              <p className="leading-relaxed mb-10">
-                The shortlist is forming. The question is whether your name is on it.
-              </p>
-
-              {/* Closing CTA */}
-              <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-8 mt-12">
-                <p className="font-inter text-white leading-relaxed">
-                  <strong className="text-[var(--d-accent)]">Not sure where you stand?</strong>{' '}
-                  <Link href="/machine-read" className="text-[var(--d-accent)] underline hover:text-blue-400 transition-colors">
-                    Request an Agent Readiness Review
-                  </Link>{' '}
-                  — we&apos;ll show you exactly how your business currently appears in ChatGPT, Perplexity, and Google AI Overviews, and what it would take to get you on the shortlist.
-                </p>
+              {article.sections.map((section, index) => (
+                <section key={section.heading} aria-labelledby={`section-${index}`}>
+                  <h2 id={`section-${index}`} className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">{section.heading}</h2>
+                  {section.paragraphs.map((paragraph) => <p key={paragraph} className="leading-relaxed mb-6">{paragraph}</p>)}
+                  {section.items.length > 0 && <ul className="list-disc pl-6 space-y-3 mb-8">{section.items.map((item) => <li key={item} className="leading-relaxed">{item}</li>)}</ul>}
+                  {section.sources.length > 0 && <ul className="space-y-2 mb-8">{section.sources.map((source) => <li key={source.href}><a href={source.href} className="text-sm text-[var(--d-accent)] hover:underline">{source.label}</a></li>)}</ul>}
+                </section>
+              ))}
+              <section aria-labelledby="article-faq" className="mt-12 pt-8 border-t border-[var(--d-line)]">
+                <h2 id="article-faq" className="font-inter text-3xl text-[var(--d-fg)] mb-6">Frequently asked questions</h2>
+                {article.faq.map((item) => <div key={item.q} className="mb-8"><h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mb-3">{item.q}</h3><p className="leading-relaxed">{item.a}</p></div>)}
+              </section>
+              <div className="mt-12 pt-8 border-t border-[var(--d-line)]">
+                <Link href="/blog" className="text-[var(--d-accent)] font-semibold hover:underline">Back to the articles</Link>
               </div>
             </article>
-
-            {/* Sidebar */}
             <aside className="lg:col-span-1 mt-12 lg:mt-0">
               <div className="sticky top-28 space-y-6">
-
-                {/* Stat Card */}
-                <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6">
-                  <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">The Shortlist Reality</p>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="eyebrow mb-4 text-xs">THE PRACTICAL TAKEAWAY</p>
+                  <ul className="space-y-4">{article.takeaways.map((takeaway) => <li key={takeaway} className="text-sm leading-relaxed text-[var(--d-fg)]">{takeaway}</li>)}</ul>
+                </div>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="font-inter font-semibold text-[var(--d-fg)] text-lg mb-3">See what your customer’s assistant can understand</p>
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">Review the business facts, evidence, and next step before deciding what to build.</p>
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Request an Agent Readiness Review</Link>
+                </div>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <div>
-                      <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">1–2</p>
-                      <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">businesses AI recommends per local category — not ten</p>
-                    </div>
-                    <div className="border-t border-[var(--d-line-s)] pt-4">
-                      <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">&lt;1%</p>
-                      <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">of local businesses have deployed llms.txt or agent.json</p>
-                    </div>
-                    <div className="border-t border-[var(--d-line-s)] pt-4">
-                      <p className="font-inter text-4xl text-[var(--d-fg)] font-bold">2027</p>
-                      <p className="font-inter text-sm text-[var(--d-fg-dim)] mt-1">anticipated mainstream wearable AI hardware — shortlists form before devices ship</p>
-                    </div>
+                    <Link href="/blog/what-is-an-entity-graph" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">How an entity graph connects the business facts</Link>
+                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">The Luxe Window Works consultation-request proof</Link>
+                    <Link href="/blog" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">More practical guides for AI-ready businesses</Link>
                   </div>
                 </div>
-
-                {/* CTA Card */}
-                <div className="bg-[rgba(255,255,255,0.10)] rounded-xl p-6">
-                  <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-3">Agent Readiness Review</p>
-                  <p className="font-inter text-xl text-white mb-3">Is Your Business on the Shortlist?</p>
-                  <p className="font-inter text-sm text-[var(--d-fg-mute)] mb-5 leading-relaxed">Find out exactly how AI currently describes your business — and what it would take to earn the shortlist position in your market.</p>
-                  <Link
-                    href="/machine-read"
-                    className="block text-center bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold text-sm py-3 px-4 rounded-lg transition-colors"
-                  >
-                    Request an Agent Readiness Review
-                  </Link>
-                </div>
-
-                {/* Related Reading */}
-                <div className="bg-[rgba(255,255,255,0.14)] border border-[var(--d-line-s)] rounded-xl p-6">
-                  <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">Related Reading</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/compressed-search-entity-trust" className="block group">
-                      <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">Compressed Search: Why Entity Trust Will Matter More Than Content Volume</p>
-                      <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">9 min read</p>
-                    </Link>
-                    <div className="border-t border-[var(--d-line-s)] pt-4">
-                      <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block group">
-                        <p className="font-inter text-sm font-semibold text-[var(--d-fg)] group-hover:text-[var(--d-accent)] transition-colors leading-snug">From Recommended to Actionable: How Luxe Window Works Became Ready for AI Agents</p>
-                        <p className="font-inter text-xs text-[var(--d-fg-dim)] mt-1">8 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </aside>
-
           </div>
         </div>
       </section>
-
       <div className="section-divider" />
-
-      {/* Bottom CTA */}
-      <section className="bg-[var(--d-bg-3)] py-20">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="font-inter text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] mb-4">The Shortlist Is Forming Now</p>
-          <h2 className="font-inter text-4xl md:text-5xl text-white mb-6 leading-tight">
-            Claim Your Position Before a Competitor Does
-          </h2>
-          <p className="font-inter text-[var(--d-fg-mute)] text-lg mb-10 leading-relaxed">
-            Visibility is one layer. The complete job is making the business understandable, verifiable, and safe to act with. An Agent Readiness Review shows where you stand today.
-          </p>
+      <section className="py-20 bg-[var(--d-bg-3)] px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="eyebrow mb-4">BE UNDERSTOOD. BE CHOSEN. MAKE THE NEXT STEP WORK.</p>
+          <h2 className="font-inter text-3xl md:text-4xl text-[var(--d-fg)] mb-4">Make your business easy for your customer’s AI assistant to understand, trust and do business with.</h2>
+          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">Start with an Agent Readiness Review. The owned foundation is $4,995 one time, with no required retainer. A live action is separately scoped; a platform-layer pilot is a separate engagement.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/machine-read"
-              className="bg-[var(--d-accent)] hover:bg-[#8a6030] text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
-            >
-              Request an Agent Readiness Review
-            </Link>
-            <Link
-              href="/blog"
-              className="border border-[var(--d-fg-mute)] hover:border-[#a09080] text-[var(--d-fg-mute)] hover:text-white font-inter font-semibold py-4 px-8 rounded-lg transition-colors"
-            >
-              Read More Articles
-            </Link>
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Request an Agent Readiness Review</Link>
+            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read more articles</Link>
           </div>
         </div>
       </section>

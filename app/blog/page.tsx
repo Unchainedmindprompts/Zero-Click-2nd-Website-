@@ -4,9 +4,9 @@ import BlogFilter from '@/components/blog/BlogFilter';
 import { REVIEW_HREF, THESIS } from '@/lib/positioning';
 
 export const metadata = {
-  title: 'Insights',
+  title: 'Insights — Doing business in the age of personal AI',
   description:
-    'Notes on the trusted digital business layer: how AI agents understand, evaluate, recommend, and take authorized next steps with service businesses.',
+    'Practical writing on customer AI assistants, business identity, credible evidence, discovery and useful next steps. Implementation notes and real case studies.',
   alternates: { canonical: 'https://www.kodecite.ai/blog' },
 };
 
@@ -30,8 +30,8 @@ export default function BlogPage() {
               maxWidth: '800px',
             }}
           >
-            Business truth.{' '}
-            <em className="serif">Controlled action.</em>
+            The customer has an assistant.{' '}
+            <em className="serif">What does your business need?</em>
           </h1>
 
           <p
@@ -44,8 +44,7 @@ export default function BlogPage() {
               maxWidth: '640px',
             }}
           >
-            {THESIS} Notes on business truth, controlled action, and what a usable
-            system actually requires.
+            {THESIS} Explore practical guides, implementation notes and evidence from real work. Each article tackles a different part of the customer journey.
           </p>
         </div>
       </section>
@@ -93,7 +92,7 @@ export default function BlogPage() {
               Request an Agent Readiness Review →
             </Link>
             <Link href="/services" className="d-btn d-btn-ghost">
-              See the five layers
+              Explore what we build
             </Link>
           </div>
         </div>

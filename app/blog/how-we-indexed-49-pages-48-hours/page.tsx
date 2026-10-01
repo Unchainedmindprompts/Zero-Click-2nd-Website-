@@ -1,483 +1,233 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+import { blogPosts } from '@/lib/blog';
+
+type Section = { h: string; p: string[]; items?: string[]; source?: string };
+const ARTICLE: { slug: string; title: string; description: string; date: string; category: string; intro: string; sections: Section[]; sources: string[][]; related: string[]; example?: object } = {
+  "slug": "how-we-indexed-49-pages-48-hours",
+  "title": "How We Indexed 49 New Pages in 48 Hours: The Earlier Luxe Chapter",
+  "description": "The reported Luxe Window Works indexing result, what the foundation work addressed, and how discovery later connected to an agent-submitted consultation request.",
+  "date": "2026-02-01",
+  "category": "CASE STUDIES",
+  "intro": "Luxe Window Works is the founder’s own window-treatment business. The original case study reported an increase from 75 to 124 indexed pages within 48 hours. That is one historical indexing observation, useful as a foundation story and separate from the later live consultation-capability test.",
+  "sections": [
+    {
+      "h": "What the reported result establishes",
+      "p": [
+        "The original report described 49 additional indexed URLs after website and publishing work. Indexing matters because it can make pages available to the search systems using that index. It does not establish that every page was recommended by an assistant, that the business won new work or that one technical change caused the increase.",
+        "These are historical figures from the original case study, not a fresh Search Console measurement. The result is not a delivery promise for another business. Crawl and indexing decisions depend on the site, content and search system, and can change after launch."
+      ]
+    },
+    {
+      "h": "The business information came before the page count",
+      "p": [
+        "Luxe needed to explain a real service business: custom window treatments, the products and work it handles, the customers it suits and the geography it serves. Useful service and area pages make that information easier for a homeowner to find and compare.",
+        "A page exists to answer a decision, not merely to increase the number of URLs. A customer exploring motorized shades needs different information from someone asking whether a provider works in their town. Those pages should connect to the same business identity and an appropriate next step."
+      ]
+    },
+    {
+      "h": "The reusable technical work",
+      "p": [
+        "A foundation review should check accessible pages, canonical URLs, internal links, redirects and sitemaps. Obsolete or conflicting URLs can confuse visitors and search systems. Fix the underlying navigation and publishing problems rather than treating a sitemap submission as a guarantee.",
+        "Google describes sitemaps as a way to inform search engines about relevant URLs. A sitemap does not force crawling or indexing. Keep it aligned with the live site, then use the appropriate search tools to observe what has actually been processed."
+      ],
+      "source": "sitemap"
+    },
+    {
+      "h": "Structured facts need the right test",
+      "p": [
+        "The earlier build included structured descriptions of the business and its services. The practical value is a consistent representation of the provider, offering and area. Validation can catch format and vocabulary issues before those descriptions are published.",
+        "Earlier versions of this case treated several schema types as automatic rich-result outcomes. That is too broad. Vocabulary validity, eligibility for a particular search feature and the appearance of that feature are different things. Google has also retired its FAQ rich-result feature. Neither a validation result nor a page count should be presented as proof of AI preference."
+      ],
+      "source": "updates"
+    },
+    {
+      "h": "Discovery evidence is a second observation",
+      "p": [
+        "Kodecite later published dated screenshots of AI answers involving Luxe, captured April 1, 2026. Those examples belong to specific queries and systems. They are evidence that the business appeared in those answers at that time.",
+        "They do not isolate whether content, business reputation, structured data, search retrieval or another factor drove the result. Keep the question, date and source alongside the answer. That lets an owner understand the evidence without converting a useful observation into a universal promise."
+      ]
+    },
+    {
+      "h": "The next chapter moved from reading to doing",
+      "p": [
+        "The later Luxe project gave an outside AI a defined way to request an in-home consultation. It could read the published capability, determine whether the request qualified and submit the required information.",
+        "The authorized production test delivered one email. Repeating the same request did not send another, and reusing its identity with changed information was rejected. A person still had to follow up. That is a different kind of proof from indexing: an actual request moved into the business process with an honest response."
+      ]
+    },
+    {
+      "h": "What another owner can take from the sequence",
+      "p": [
+        "Start by documenting the business and building useful pages that express it clearly. Check what search and assistant systems can retrieve. Then, where there is demand, scope one useful action and test it against the real operating rules."
+      ],
+      "items": [
+        "Foundation: accurate identity, services, fit, geography and evidence.",
+        "Discovery: dated observations of what customers and assistants find.",
+        "Engagement: a tested request flow and confirmed delivery.",
+        "Business outcome: human follow-up, appointments and won work tracked separately."
+      ]
+    },
+    {
+      "h": "Choose proof that matches the claim",
+      "p": [
+        "An indexing report supports an indexing claim. A screenshot supports a claim about that answer. An inbox and response test support a delivery claim. Revenue or time savings need their own measurement.",
+        "The value of the Luxe sequence is that the work can be examined in stages. It shows how an owned business foundation can support a more useful interaction when a customer delegates the next step to an assistant."
+      ]
+    }
+  ],
+  "sources": [
+    [
+      "Google Search Central: Sitemaps",
+      "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+    ],
+    [
+      "Google Search documentation updates",
+      "https://developers.google.com/search/updates"
+    ],
+    [
+      "Luxe Window Works: Public consultation capability",
+      "https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation"
+    ]
+  ],
+  "related": [
+    "from-recommended-to-actionable-luxe-window-works",
+    "schema-markup-complete-guide"
+  ]
+};
+const SOURCE_LINKS: Record<string, string[]> = {
+  "google": [
+    "Google Search Central: AI features and your website",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
+  "schema": [
+    "Schema.org: About the vocabulary",
+    "https://schema.org/docs/about.html"
+  ],
+  "jsonld": [
+    "W3C: JSON-LD 1.1",
+    "https://www.w3.org/TR/json-ld11/"
+  ],
+  "local": [
+    "Schema.org: LocalBusiness",
+    "https://schema.org/LocalBusiness"
+  ],
+  "service": [
+    "Schema.org: Service",
+    "https://schema.org/Service"
+  ],
+  "offer": [
+    "Schema.org: Offer",
+    "https://schema.org/Offer"
+  ],
+  "updates": [
+    "Google Search documentation updates",
+    "https://developers.google.com/search/updates"
+  ],
+  "crawl": [
+    "Vercel: The rise of the AI crawler",
+    "https://vercel.com/blog/the-rise-of-the-ai-crawler"
+  ],
+  "reviews": [
+    "Google Business Profile: Local ranking guidance",
+    "https://support.google.com/business/answer/7091?hl=en"
+  ],
+  "sitemap": [
+    "Google Search Central: Sitemaps",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+  ],
+  "luxe": [
+    "Luxe Window Works: Public consultation capability",
+    "https://www.luxewindowworks.com/api/capabilities/request-in-home-consultation"
+  ],
+  "meta": [
+    "Meta Business Help Center",
+    "https://www.facebook.com/business/help"
+  ],
+  "terms": [
+    "Meta: Customer List Custom Audiences Terms",
+    "https://www.facebook.com/legal/terms/customaudience"
+  ]
+};
+const PAGE_URL = `https://www.kodecite.ai/blog/${ARTICLE.slug}`;
+const WORD_COUNT = 774;
+const READ_TIME = '4 min read';
+const PUBLISHED = 'February 1, 2026';
 
 export const metadata: Metadata = {
-  title: '49 Pages Indexed in 48 Hours: Luxe Case Study',
-  description:
-    'The technical breakdown of the Luxe Window Works overhaul — how a Post Falls window-treatment business got 49 pages indexed in 48 hours.',
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
-  },
-  openGraph: {
-    title: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
-    description:
-      'The complete technical breakdown of the Luxe Window Works SEO overhaul — from 75 to 124 indexed pages in 48 hours, appearing in four rich result types.',
-    url: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
-    type: 'article',
-  },
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: ARTICLE.title, description: ARTICLE.description, url: PAGE_URL, type: 'article', publishedTime: `${ARTICLE.date}T00:00:00-07:00`, modifiedTime: '2026-10-01T15:00:00Z' },
 };
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours#article',
-  headline: 'How We Indexed 49 New Pages in 48 Hours — The Luxe Window Works Case Study',
-  description:
-    'The complete technical breakdown of the Luxe Window Works SEO overhaul — how a Post Falls, Idaho window treatments business went from 75 to 124 indexed pages in 48 hours with zero schema errors.',
-  datePublished: '2026-02-01T00:00:00-07:00',
-  dateModified: '2026-02-27T00:00:00-07:00',
-  wordCount: 950,
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  keywords: 'technical SEO, indexing, schema markup, Core Web Vitals, local business SEO, Google Search Console, crawl budget, Luxe Window Works, window treatments',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  url: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  about: [
-    {
-      '@type': 'DefinedTerm',
-      name: 'Technical SEO',
-    },
-  ],
-  citation: [
-    { '@type': 'CreativeWork', name: 'Google Search Console Help', url: 'https://support.google.com/webmasters' },
-    { '@type': 'CreativeWork', name: 'Schema.org Vocabulary', url: 'https://schema.org' },
-    { '@type': 'CreativeWork', name: 'Google Search Central — Sitemaps', url: 'https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview' },
-  ],
+  '@context': 'https://schema.org', '@type': 'Article', '@id': `${PAGE_URL}#article`,
+  headline: ARTICLE.title, description: ARTICLE.description,
+  datePublished: `${ARTICLE.date}T00:00:00-07:00`, dateModified: '2026-10-01T15:00:00Z',
+  wordCount: WORD_COUNT, articleSection: ARTICLE.category,
+  author: articleAuthor, publisher: articlePublisher, isPartOf: blogCollectionPage,
+  url: PAGE_URL, mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+  image: 'https://www.kodecite.ai/og-image.png', about: [businessRef],
+  citation: ARTICLE.sources.map(([name, url]) => ({ '@type': 'CreativeWork', name, url })),
 };
-
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours#breadcrumb',
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', '@id': `${PAGE_URL}#breadcrumb`,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'How We Indexed 49 New Pages in 48 Hours',
-      item: 'https://www.kodecite.ai/blog/how-we-indexed-49-pages-48-hours',
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai/' },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: ARTICLE.title, item: PAGE_URL },
   ],
 };
 
-const faqPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How did you get 49 pages indexed in 48 hours?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The result came from a combination of factors: rebuilding the site on Next.js for fast crawler response times, submitting a clean sitemap with only valid URLs, using Google Search Console URL Inspection to manually request priority indexing for the top 15 pages, and ensuring every page had strong internal links from already-indexed pages. Fast TTFB on our edge infrastructure allowed Google to crawl each page completely in a single pass.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What schema types were implemented for Luxe Window Works?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Four schema types were implemented: LocalBusiness schema on the homepage identifying the business entity with full NAP data and service area, Service schema on each individual service page, FAQPage schema capturing common customer questions on service pages, and BreadcrumbList schema on every page to establish site hierarchy for search engines and AI crawlers.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why was Luxe Window Works invisible to Google before the rebuild?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Their WordPress site had multiple compounding problems: a sitemap containing URLs that returned 404 errors, redirect chains consuming crawl budget, three competing SEO plugins generating conflicting schema markup, and Core Web Vitals failures including a 5.8 second mobile LCP. Google had indexed only 75 of their pages, and most of those were thin or duplicate content pages rather than their core service pages.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What should every local service business audit for AI search visibility?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every local service business should check four things immediately: (1) Google Search Console Coverage report for unindexed pages, (2) Google PageSpeed Insights mobile score for Core Web Vitals compliance, (3) Google Rich Results Test for schema validation errors, and (4) search for their business name on Google, ChatGPT, and Perplexity to verify they are being cited. Problems in any of these areas directly reduce AI search visibility.',
-      },
-    },
-  ],
-};
-
-export default function Indexed49Pages() {
+export default function ArticlePage() {
+  const related = ARTICLE.related.map((slug) => blogPosts.find((post) => post.slug === slug)).filter(Boolean);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
-            <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[var(--d-fg)] truncate">49 Pages in 48 Hours</span>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <header className="pt-36 pb-16 px-5 md:px-8" style={{ background: 'var(--d-bg)', borderBottom: '1px solid var(--d-line)' }}>
+        <div className="max-w-4xl mx-auto">
+          <nav aria-label="Breadcrumb" className="flex gap-3 text-sm font-inter text-[var(--d-fg-dim)] mb-9">
+            <Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/blog">Insights</Link>
           </nav>
-
-          <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">Case Studies</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">10 min read</span>
-          </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            How We Indexed{' '}
-            <span className="text-[var(--d-accent)]">49 New Pages in 48 Hours</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            The complete technical breakdown of the Luxe Window Works SEO overhaul — a Post Falls, Idaho window treatments and motorized shades business that went from 75 indexed pages to 124, appearing in four rich result types, in under 48 hours.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">ZC</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">KodeCite.ai</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">February 1, 2026</p>
-              </div>
-            </div>
+          <p className="d-eyebrow mb-6">{ARTICLE.category} · {READ_TIME}</p>
+          <h1 className="font-inter font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-[var(--d-fg)] mb-8">{ARTICLE.title}</h1>
+          <p className="font-inter text-lg md:text-xl leading-relaxed text-[var(--d-fg-dim)] max-w-3xl">{ARTICLE.intro}</p>
+          <div className="mt-9 pt-6 font-inter text-sm text-[var(--d-fg-dim)]" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <p className="font-semibold text-[var(--d-fg)] mb-1">Mark Abplanalp · Kodecite</p>
+            <p>Published {PUBLISHED} · Updated October 1, 2026</p>
           </div>
         </div>
+      </header>
+      <section className="px-5 md:px-8 py-16 md:py-20" style={{ background: 'var(--d-bg)' }}>
+        <article className="max-w-3xl mx-auto font-inter text-[var(--d-fg-dim)]" style={{ fontSize: '17px', lineHeight: 1.85 }}>
+          {ARTICLE.sections.map((section) => (
+            <section key={section.h} className="mb-12">
+              <h2 className="font-inter font-semibold text-2xl md:text-3xl leading-tight tracking-tight text-[var(--d-fg)] mb-5">{section.h}</h2>
+              {section.p.map((paragraph) => <p key={paragraph} className="mb-5">{paragraph}</p>)}
+              {section.items && <ul className="space-y-3 pl-6 mb-5 list-disc">{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
+              {section.source && SOURCE_LINKS[section.source] && <p className="text-sm"><a href={SOURCE_LINKS[section.source][1]} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{SOURCE_LINKS[section.source][0]} →</a></p>}
+              {section.h === 'A small connected example' && ARTICLE.example && <pre className="overflow-x-auto rounded-xl p-5 text-xs md:text-sm leading-relaxed my-6" style={{ background: 'var(--d-bg-2)', border: '1px solid var(--d-line)' }}><code>{JSON.stringify(ARTICLE.example, null, 2)}</code></pre>}
+            </section>
+          ))}
+          <section className="pt-8 mt-12" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Sources and further reading</h2>
+            <ul className="space-y-3 text-sm">{ARTICLE.sources.map(([label, url]) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer" className="text-[var(--d-accent)] underline underline-offset-4">{label} →</a></li>)}</ul>
+          </section>
+          <section className="pt-8 mt-10" style={{ borderTop: '1px solid var(--d-line)' }}>
+            <h2 className="text-xl font-semibold text-[var(--d-fg)] mb-5">Keep reading</h2>
+            <ul className="space-y-4">{related.map((post) => post && <li key={post.slug}><Link href={`/blog/${post.slug}`} className="text-[var(--d-accent)] hover:underline">{post.title} →</Link></li>)}</ul>
+            <Link href="/blog" className="inline-block mt-8 text-sm text-[var(--d-fg-dim)] hover:text-[var(--d-fg)]">← All insights</Link>
+          </section>
+        </article>
       </section>
-
-      <div className="section-divider" />
-
-      {/* Results Banner */}
-      <section className="py-10 bg-[var(--d-bg-2)] px-4 border-b border-white/5">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <p className="text-[var(--d-accent)] font-bold text-4xl font-inter">49</p>
-              <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">Net-new pages indexed</p>
-            </div>
-            <div>
-              <p className="text-[var(--d-accent)] font-bold text-4xl font-inter">48h</p>
-              <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">Time to full index</p>
-            </div>
-            <div>
-              <p className="text-[var(--d-accent)] font-bold text-4xl font-inter">4</p>
-              <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">Rich result types</p>
-            </div>
-            <div>
-              <p className="text-[var(--d-accent)] font-bold text-4xl font-inter">0</p>
-              <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">Schema errors</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Article + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            {/* Article Content */}
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                <p className="text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">
-                  Luxe Window Works came to us with a problem that is common among high-quality local businesses: a site that looked professional but was functionally invisible to search engines and AI systems. Based in Post Falls, Idaho, they specialize in custom window treatments and motorized shades — a premium, high-intent service where the right search appearance can mean the difference between a $5,000 installation and nothing. Their site was delivering nothing.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Starting Point: A Site Google Was Ignoring
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  What the Search Console Data Showed
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Our initial Google Search Console audit revealed that only 75 of their published URLs had been indexed — and most of those 75 were thin or duplicate pages. Their core service pages — the motorized shade installation page, the custom drapes consultation page, the commercial window treatment page — were either indexed with minimal crawl data or sitting in the &ldquo;Discovered - currently not indexed&rdquo; queue. Pages had been discovered but deprioritized, a sign that Google had evaluated the site and found insufficient quality signals to warrant indexing.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The Coverage report showed 31 pages in &ldquo;Crawled - currently not indexed&rdquo; status, 8 pages flagged as &ldquo;Duplicate without canonical tag,&rdquo; and 11 URLs pointing to pages that had been reorganized without proper redirects. Their sitemap was returning a 200 status but contained URLs that no longer existed. Core Web Vitals were failing across the board: mobile LCP at 5.8 seconds, CLS at 0.28, and INP in the &ldquo;poor&rdquo; range.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  The Technical Debt That Was Holding Them Back
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The site had been built on WordPress four years prior and never substantially updated. It ran 34 active plugins, including three competing SEO plugins each attempting to generate schema markup simultaneously — producing conflicting structured data that Google&apos;s parsers couldn&apos;t reconcile. The theme was a premium page builder that hadn&apos;t been updated in 14 months, and two of its JavaScript dependencies had known compatibility issues with newer browser engines.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Product photos of window treatment installations — the images users most needed to see — were being served as 4MB JPEGs. The mobile version was technically &ldquo;responsive&rdquo; but load times were effectively blocking engagement. Users who landed from a Google search were bouncing before the page rendered. The site was beautiful in a design tool preview. On a real mobile device on a real connection, it was unusable.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Technical SEO Overhaul
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Fixing the Crawl Budget Waste
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The first task was eliminating crawl budget waste. We identified 43 URLs consuming crawl budget without contributing indexable content: redirect chains, duplicate parameter-based URLs, staging environment pages accidentally exposed, and product category combinations with minimal unique content. We implemented proper canonical tags across duplicate content groupings, consolidated redirect chains to single-hop 301s, and disallowed staging and parameter URLs in robots.txt.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  This immediately freed up a meaningful portion of their crawl budget for pages that actually mattered: the service pages, the location pages, and the portfolio pages showing their window treatment installations. When Google&apos;s crawlers return to a site, they prioritize pages linked to frequently from well-indexed pages. By eliminating the noise, we made the signal pages unmistakably prominent.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Implementing Schema Markup Across Four Rich Result Types
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The new site launched with hand-coded JSON-LD schema across four types. The homepage received a comprehensive LocalBusiness schema: full legal name, physical address in Post Falls Idaho, geographic coordinates, service area covering North Idaho and Eastern Washington, operating hours, and a sameas link to their verified Google Business Profile. We used the HomeAndConstructionBusiness subtype to be specific about their industry vertical.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Each service page received dedicated Service schema describing the specific offering, its provider, and the areaServed properties listing the cities they serve. FAQPage schema was added with questions structured to match actual queries — &ldquo;how much does motorized shade installation cost,&rdquo; &ldquo;how long does a custom window treatment consultation take,&rdquo; &ldquo;do you install Hunter Douglas shades.&rdquo; These are now answered in structured data that AI systems can read and cite without fully rendering the page.
-                </p>
-
-                {/* Schema types box */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6 my-8">
-                  <p className="eyebrow mb-5 text-xs">SCHEMA TYPES IMPLEMENTED</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {[
-                      { type: 'LocalBusiness', desc: 'Entity identification, NAP, hours, service area' },
-                      { type: 'Service', desc: 'Per-service pages with provider and area data' },
-                      { type: 'FAQPage', desc: 'Common questions on each service page' },
-                      { type: 'BreadcrumbList', desc: 'Site hierarchy signal on every page' },
-                    ].map((item) => (
-                      <div key={item.type} className="flex items-start gap-3 p-3 bg-[var(--d-bg)] rounded-lg border border-white/5">
-                        <div className="w-2 h-2 rounded-full bg-[var(--d-accent)] mt-1.5 flex-shrink-0" />
-                        <div>
-                          <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">{item.type}</p>
-                          <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-0.5">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Sitemap Cleanup and Resubmission
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The existing sitemap contained 89 URLs, of which 23 returned 404s, 11 pointed to redirected pages, and 8 were duplicate parameter variants. We replaced it with a clean sitemap containing only the 49 canonical URLs of the new site — every URL present, live, and returning valid content. The sitemap was submitted to Google Search Console within the first hour of launch, and we used URL Inspection to manually request priority indexing for the 15 highest-value pages: the homepage, all service pages, and the top location landing pages.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Results: 48 Hours Later
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  From 75 to 124 Indexed Pages
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Within 48 hours of launch, Google Search Console confirmed 124 indexed pages — up from the 75 previously indexed on the old site. All 49 net-new pages were indexed, including all four core service pages, all eight location landing pages for North Idaho and Eastern Washington communities, and the complete portfolio section that had previously been inaccessible to crawlers. The Coverage report showed zero &ldquo;Crawled - currently not indexed&rdquo; entries. Every page submitted had been crawled and indexed.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The technical performance of the new site helped enormously. Our edge network responded to Google&apos;s crawl requests with TTFB consistently under 40ms. The HTML was fully formed at the server — no JavaScript execution required to access content. Google could crawl a page completely in a single pass. When a site responds this cleanly to crawler requests, Google&apos;s systems prioritize returning to it. The algorithm is designed to reward sites that are easy to crawl by crawling them more aggressively.
-                </p>
-
-                <blockquote className="border-l-4 border-[#D4A94A] pl-6 my-8">
-                  <p className="text-[var(--d-fg)] text-xl font-semibold font-inter leading-relaxed italic">
-                    &ldquo;Hand-coded schema with zero plugin dependencies. Every property validated before the site went live. No errors. No warnings.&rdquo;
-                  </p>
-                </blockquote>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Schema Validation Across All Four Types
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Google&apos;s Rich Results Test confirmed valid structured data for all four schema types across every page tested: LocalBusiness, Service, FAQPage, and BreadcrumbList. Google Search Console&apos;s Enhancements report began populating with FAQ rich result data within 24 hours of indexing. Sitelinks began appearing in branded searches by day three, indicating that Google had processed the BreadcrumbList hierarchy and built a site structure model.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Zero Invalid Items
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The schema audit produced zero errors and zero warnings across all validated pages. In our experience auditing newly launched sites, roughly 60% contain at least one schema error requiring correction post-launch. The difference here was the validation step before launch: every schema object was tested in Google&apos;s Rich Results Test and the Schema.org validator before the site went live. Nothing was left to discover after the fact.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  What This Means for AI Search Visibility
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Why Indexed Pages Matter for AI Citations
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  AI search systems — Google AI Overviews, Perplexity, ChatGPT browsing — can only reference content that is indexed. An unindexed page is invisible to AI regardless of content quality. The 49 net-new indexed pages for Luxe Window Works created 49 new opportunities for AI systems to encounter, read, and cite their business in response to relevant queries.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The location pages specifically created high-value AI citation opportunities. When someone in Post Falls asks &ldquo;who installs motorized shades near me&rdquo; through an AI interface, the system now has a page specifically about Luxe Window Works&apos; service in Post Falls, Idaho — with schema confirming the service type, the location, and the business entity. That specificity is what gets a business cited rather than a generic national competitor. Within two weeks, they began appearing in AI Overviews for queries like &ldquo;motorized shade installation Post Falls&rdquo; and &ldquo;custom window treatments North Idaho.&rdquo;
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  How Schema Validation Translates to Rich Results
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The zero-error schema validation has direct revenue implications. FAQ rich results appear in standard search results as expandable questions, increasing click-through rate on the pages that display them. Sitelinks make the business appear more authoritative in branded searches. Local Business rich results populate the knowledge panel with accurate NAP data. Each rich result type is a visibility enhancement that wouldn&apos;t exist without valid structured data.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  For a business like Luxe Window Works, where a single motorized shade or custom treatment installation can represent $3,000 to $8,000 in revenue, each additional appearance in search results has a direct and measurable dollar value. The technical foundation isn&apos;t overhead — it&apos;s infrastructure for revenue.
-                </p>
-
-                <h2 className="font-inter font-bold text-2xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Lesson for Local Service Businesses
-                </h2>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  Technical SEO Is Not Optional in the AI Search Era
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The Luxe Window Works result demonstrates a pattern we see consistently: premium local service businesses are leaving enormous visibility on the table because of technical infrastructure failures they didn&apos;t know existed. They have great service, strong reviews, and professional websites. But Google can&apos;t crawl them, AI systems can&apos;t read them, and customers searching for their service never find them.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  In the era of Google AI Overviews and AI-first search behavior, technical SEO isn&apos;t the domain of large enterprises with dedicated engineering teams. It&apos;s table stakes for any local business that wants to be cited when a customer asks an AI where to find the service they need. The businesses that invest in this infrastructure now are building visibility advantages that will compound over time as AI search behavior continues to grow.
-                </p>
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-6 mb-3">
-                  What Every Local Business Should Audit Right Now
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  Every local service business should run an immediate check on four things. First: open Google Search Console and look at the Coverage report — how many of your pages are indexed versus discovered but not indexed? Second: run your site through Google PageSpeed Insights on mobile — are you passing all three Core Web Vitals thresholds? Third: run your homepage through Google&apos;s Rich Results Test — does your schema validate with zero errors? Fourth: search for your business name on Google, ChatGPT, and Perplexity — are you appearing? If any of these checks reveal problems, you&apos;re invisible to customers who could be finding you right now.
-                </p>
-
-                {/* Back to blog */}
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
-              </div>
-            </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-
-                {/* Timeline */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
-                  <p className="eyebrow mb-5 text-xs">PROJECT TIMELINE</p>
-                  <div className="space-y-4">
-                    {[
-                      { step: 'Day 1', label: 'Technical audit complete' },
-                      { step: 'Day 3', label: 'Next.js architecture finalized' },
-                      { step: 'Day 8', label: 'Build complete, schema validated' },
-                      { step: 'Day 9', label: 'Site launched, sitemap submitted' },
-                      { step: 'Day 11', label: '124 pages indexed by Google' },
-                      { step: 'Day 23', label: 'First AI Overview appearance' },
-                    ].map((item) => (
-                      <div key={item.step} className="flex items-start gap-3">
-                        <div className="w-16 flex-shrink-0">
-                          <span className="text-[var(--d-accent)] text-xs font-bold font-inter">{item.step}</span>
-                        </div>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter leading-snug">{item.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* CTA Card */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    See the later Luxe chapter
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    Indexing was the earlier chapter. The later chapter is a live, protected consultation capability. An Agent Readiness Review shows what AI can understand, verify, and safely do today.
-                  </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Request an Agent Readiness Review
-                  </Link>
-                </div>
-
-                {/* Related Posts */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-white/5 p-6">
-                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/schema-markup-complete-guide" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        Schema Markup: The Complete Guide for Local Service Businesses
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
-                    </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/what-is-zero-click-search" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          What Is Zero Click Search and Why Your Business Is Invisible
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </aside>
-
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* CTA */}
-      <section className="py-20 bg-[var(--d-bg)] px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">GET THE SAME RESULT</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            Your Business Deserves to Be Found
-          </h2>
-          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            This is the earlier Luxe chapter: owned rebuild and indexing. The later chapter is the live consultation capability.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read the agent-ready chapter
-            </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read More Articles
-            </Link>
-          </div>
+      <section className="py-20 px-5 md:px-8" style={{ background: 'var(--d-bg-2)', borderTop: '1px solid var(--d-line)' }}>
+        <div className="max-w-3xl mx-auto">
+          <p className="d-eyebrow mb-5">YOUR BUSINESS, CLEARLY UNDERSTOOD</p>
+          <h2 className="font-inter text-3xl md:text-4xl font-semibold tracking-tight text-[var(--d-fg)] mb-5">Make the next step easier for your customer and their AI assistant.</h2>
+          <p className="font-inter text-[var(--d-fg-dim)] text-lg leading-relaxed mb-8">An Agent Readiness Review looks at your business information, supporting evidence and the next steps a customer can take. Start with the gaps that matter to a real inquiry.</p>
+          <Link href="/machine-read" className="d-btn d-btn-primary">Request an Agent Readiness Review →</Link>
         </div>
       </section>
     </>

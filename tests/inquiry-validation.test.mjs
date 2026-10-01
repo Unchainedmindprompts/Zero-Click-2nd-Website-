@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { validateInquiry } from '../lib/inquiry-validation.ts';
+const valid = { name: 'Example Owner', email: 'owner@example.com', businessName: 'Example Business', website: 'example.com', challenge: 'Make a qualified inquiry easier.' };
+test('normalizes a complete review request', () => { const result = validateInquiry({ ...valid, email: ' owner@example.com ' }, true); assert.equal(result.ok, true); assert.equal(result.value.email, 'owner@example.com'); assert.equal(result.value.website, 'https://example.com/'); });
+test('requires a reply email', () => assert.equal(validateInquiry({ ...valid, email: '' }, true).ok, false));
+test('rejects malformed email and header injection', () => { for (const email of ['a@b', 'invalid', 'a@example.com\nBcc: x@example.com']) assert.equal(validateInquiry({ ...valid, email }, true).ok, false); });
+test('review requires a website but a contact inquiry does not', () => { assert.equal(validateInquiry({ ...valid, website: '' }, true).ok, false); assert.equal(validateInquiry({ ...valid, website: '' }, false).ok, true); });
+test('rejects unsafe URL schemes and embedded credentials', () => { for (const website of ['javascript:alert(1)', 'file:///tmp/test', 'https://u:p@example.com', 'not a site']) assert.equal(validateInquiry({ ...valid, website }, true).ok, false); });
+test('rejects malformed types, empty fields and oversized messages', () => { for (const input of [null, [], 5, { ...valid, name: 42 }, { ...valid, name: ' ' }, { ...valid, challenge: 'a'.repeat(5001) }]) assert.equal(validateInquiry(input, true).ok, false); });

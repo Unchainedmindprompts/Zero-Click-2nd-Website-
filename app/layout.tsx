@@ -3,15 +3,12 @@ import {
   Inter,
   JetBrains_Mono,
   Instrument_Serif,
-  DM_Sans,
-  Bebas_Neue,
-  Cormorant_Garamond,
 } from 'next/font/google';
 import './globals.css';
+import './redesign.css';
 import Shell from '@/components/Shell';
 import RouteTransition from '@/components/RouteTransition';
 import Footer from '@/components/Footer';
-import BackgroundLayer from '@/components/BackgroundLayer';
 import { businessAreaServed } from '@/lib/schema';
 
 // ── Design system v2 fonts ────────────────────────────────────────────────────
@@ -37,37 +34,14 @@ const instrumentSerif = Instrument_Serif({
   display: 'swap',
 });
 
-// ── Legacy fonts — blog post pages depend on these CSS variables ──────────────
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-poppins',
-  weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
-});
-
-const bebasNeue = Bebas_Neue({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  weight: '400',
-  display: 'swap',
-});
-
-const cormorantGaramond = Cormorant_Garamond({
-  subsets: ['latin'],
-  variable: '--font-cormorant',
-  weight: ['300', '400'],
-  style: ['italic'],
-  display: 'swap',
-});
-
 // ── Metadata ──────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: {
-    default: 'KodeCite.ai — Make your business usable by AI',
+    default: 'Kodecite — Ready for your customer’s AI assistant',
     template: '%s | KodeCite.ai',
   },
   description:
-    'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Kodecite keeps service businesses eligible by making them understandable, verifiable, and safely actionable — with the owner in control.',
+    'Make your business easy for your customer’s AI assistant to understand, trust and do business with. Business-owned websites, connected information and carefully scoped actions.',
   keywords: [
     'business infrastructure', 'agent-ready website', 'entity graph',
     'Schema.org implementation', 'capability contract', 'controlled action',
@@ -78,21 +52,21 @@ export const metadata: Metadata = {
   creator: 'KodeCite.ai',
   metadataBase: new URL('https://www.kodecite.ai'),
   openGraph: {
-    title: 'KodeCite.ai — Make your business usable by AI',
+    title: 'Kodecite — Ready for your customer’s AI assistant',
     description:
-      'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Kodecite keeps service businesses eligible by making them understandable, verifiable, and safely actionable — with the owner in control.',
+      'Make your business easy for your customer’s AI assistant to understand, trust and do business with. Business-owned websites, connected information and carefully scoped actions.',
     url: 'https://www.kodecite.ai',
     siteName: 'KodeCite.ai',
-    images: [{ url: 'https://www.kodecite.ai/og-image.png?v=2', width: 1200, height: 630, alt: 'KodeCite.ai — AI-readable business infrastructure' }],
+    images: [{ url: 'https://www.kodecite.ai/api/og', width: 1200, height: 630, alt: 'KodeCite.ai — AI-readable business infrastructure' }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KodeCite.ai — Make your business usable by AI',
+    title: 'Kodecite — Ready for your customer’s AI assistant',
     description:
-      'Your next customer may ask an AI assistant to find, compare, and contact a business for them. Kodecite keeps service businesses eligible by making them understandable, verifiable, and safely actionable — with the owner in control.',
-    images: ['https://www.kodecite.ai/og-image.png?v=2'],
+      'Make your business easy for your customer’s AI assistant to understand, trust and do business with. Business-owned websites, connected information and carefully scoped actions.',
+    images: ['https://www.kodecite.ai/api/og'],
   },
   robots: {
     index: true,
@@ -122,7 +96,7 @@ const siteSchema = {
       },
       image: { '@id': 'https://www.kodecite.ai/#logo' },
       description:
-        'KodeCite.ai builds the owned digital business layer that helps AI understand what a service business does, determine when it is a good fit, recommend it accurately, and take only the next steps the owner approves. Luxe Window Works is production proof that this can work today.',
+        'Kodecite builds business-owned websites and connected business information that help customers and their AI assistants understand the business, check fit and evidence, and move a qualified request forward. Live agent actions are scoped separately, with permission checks and clear outcomes.',
       email: 'mark@kodecite.ai',
       telephone: '+14803239740',
       priceRange: '$$',
@@ -193,9 +167,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     inter.variable,
     jetbrainsMono.variable,
     instrumentSerif.variable,
-    dmSans.variable,
-    bebasNeue.variable,
-    cormorantGaramond.variable,
   ].join(' ');
 
   return (
@@ -207,7 +178,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="antialiased">
-        <BackgroundLayer />
         <Shell />
         <RouteTransition>{children}</RouteTransition>
         <Footer />

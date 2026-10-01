@@ -1,649 +1,265 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import { articleAuthor, articlePublisher, blogCollectionPage, businessRef } from '@/lib/schema';
+
+const article = {
+  "slug": "how-to-rank-in-google-ai-overviews-for-local-businesses",
+  "title": "Google AI Overviews: A Practical Guide for Local Businesses",
+  "description": "Check Google AI search eligibility, improve service information and evidence, and measure the customer journey without promising AI Overview placement.",
+  "date": "2026-03-10",
+  "intro": "There is no guaranteed method for getting a local business into an AI Overview. There is useful work you can do: make your pages eligible, answer real customer questions, support your claims, and provide a dependable next step.",
+  "sections": [
+    {
+      "heading": "Know what Google actually requires",
+      "paragraphs": [
+        "Google says a supporting page must be indexed and eligible to appear with a snippet. It adds no special technical requirements for AI Overviews or AI Mode. No particular schema type or AI text file is required, and eligibility does not guarantee selection.",
+        "That makes a basic technical review a sensible first step. Establish whether the relevant page is accessible and indexed before assuming a content format or a missing file explains its absence. A query may also produce no AI Overview at all.",
+        "Treat inclusion as an outcome to observe, not a fixed ranking you can buy. An assistant's summary and a traditional search result can serve different parts of the customer journey, but both need accurate, useful source material."
+      ],
+      "items": [],
+      "sources": [
+        {
+          "label": "Google Search Central: AI features and your website",
+          "href": "https://developers.google.com/search/docs/appearance/ai-features"
+        }
+      ]
+    },
+    {
+      "heading": "Step one: inspect the page that should answer the need",
+      "paragraphs": [
+        "Choose a priority service and a realistic customer question. Identify which page should explain the fit. Check that the URL works, the main content is present, and the navigation links to it from a sensible place.",
+        "Use Search Console's URL Inspection and indexing information to investigate access or indexing problems. Review relevant crawl and snippet controls before changing them; some exclusions may be intentional. Check mobile usability and the next-step form as part of the same journey.",
+        "Do not infer a platform-wide failure from one score. A performance issue needs an actual diagnosis. A service page that is absent, blocked, or inaccurate has a concrete problem regardless of which website technology produced it."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Step two: answer the questions that determine fit",
+      "paragraphs": [
+        "Describe the service, the customer it is for, the service area, and the process. Put important answers close to clear headings. A customer should not need to read an entire general guide to discover whether you perform the work they need.",
+        "Be explicit about information that cannot be final on a public page. If an estimate requires measurements, say what is measured and when a quote is issued. If a consultation request requires review, explain that process rather than imply instant availability.",
+        "Use questions your customers actually ask. A single strong service page may answer several related questions. Creating a thin page for every variation is unlikely to make the decision easier."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Step three: show why the claims deserve confidence",
+      "paragraphs": [
+        "Identify the people providing the service and the evidence relevant to their work. Credentials, dated projects, original explanations, and independent reviews can answer different customer concerns.",
+        "Describe each precisely. A project example shows work in a particular context; it does not promise the same result for everyone. A review describes that reviewer's experience. An award should name the issuer and date. Link to original evidence where appropriate and permitted.",
+        "Google's people-first content guidance encourages clear authorship and evidence of experience and expertise. Use that as a quality check on the material, not as a claim that adding a biography directly triggers an AI citation."
+      ],
+      "items": [],
+      "sources": [
+        {
+          "label": "Google Search Central: helpful, reliable, people-first content",
+          "href": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+        }
+      ]
+    },
+    {
+      "heading": "Step four: align the public business information",
+      "paragraphs": [
+        "Check the facts across the site and the profiles that customers use. Correct old locations, wrong phone numbers, retired services, and misleading hours. Keep the distinction between a physical address and a service area clear.",
+        "Where structured data is appropriate, make it match the visible information. Use stable business and person identities, and connect the relevant pages. Validate the implementation and review its meaning manually.",
+        "A useful FAQ can help customers understand a process. It does not need to be presented as a special admission ticket to an AI Overview. Likewise, trivial formatting differences in an address are not evidence by themselves that a search system has lost confidence in the business."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Step five: inspect the result and the next step",
+      "paragraphs": [
+        "Sample realistic questions and record the date, context, answer, and sources. Inspect whether the facts and the proposed next step are correct. A missing mention does not reveal the cause on its own, and a single successful mention does not establish predictable traffic.",
+        "Follow any link or contact route that the answer recommends. Does the customer reach the right service? Does the form explain what is being requested? Does the business receive it and return an accurate confirmation?",
+        "Track qualified inquiries and completed outcomes alongside search metrics. If customers increasingly delegate contact to an outside assistant, a supported request path may be useful. Scope and test that action separately from the work of publishing the business facts."
+      ],
+      "items": [],
+      "sources": []
+    },
+    {
+      "heading": "Keep Google in the wider customer journey",
+      "paragraphs": [
+        "AI Overviews are one surface. People may use other AI search engines, a personal agent, direct referrals, or a conventional search result. Clear identity, evidence, and offers should support all of those journeys.",
+        "KodeCite's focus is the owned foundation that makes the business understandable and usable across these routes. The foundation is $4,995 one time with no required retainer. A live action is separately scoped.",
+        "Start with an Agent Readiness Review when you need to identify the actual gaps. Ask for evidence, priorities, and a testable outcome. A promised citation within a fixed number of weeks is not a substitute for that work."
+      ],
+      "items": [],
+      "sources": []
+    }
+  ],
+  "takeaways": [
+    "Check eligibility and real access",
+    "Publish specific answers and proof",
+    "Measure qualified customer outcomes"
+  ],
+  "faq": [
+    {
+      "q": "Is structured data required for an AI Overview?",
+      "a": "Google does not require special schema for AI Overviews. Accurate structured data can still be useful when it describes the visible content appropriately."
+    },
+    {
+      "q": "Can anyone guarantee inclusion?",
+      "a": "No. Eligibility and good implementation do not guarantee Google will select a page."
+    },
+    {
+      "q": "Should I measure only AI mentions?",
+      "a": "No. Also track accurate representation, suitable inquiries, and completed customer outcomes. Mentions are one observation, not the whole business result."
+    }
+  ]
+};
+const canonical = `https://www.kodecite.ai/blog/${article.slug}`;
+const modified = '2026-10-01T00:00:00Z';
+const published = `${article.date}T00:00:00-07:00`;
+const imageUrl = "https://www.kodecite.ai/blog-hero.png";
+const articleText = [article.intro, ...article.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...section.items]), ...article.faq.flatMap((item) => [item.q, item.a])].join(' ');
+const wordCount = articleText.trim().split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+const publishedLabel = new Date(`${article.date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const sources = article.sections.flatMap((section) => section.sources).filter((source, index, list) => list.findIndex((item) => item.href === source.href) === index);
+
 export const metadata: Metadata = {
-  title: 'How to Rank Your Business in Google AI Overviews',
-  description:
-    'How to rank your business in Google AI Overviews: a step-by-step guide for local businesses using structured data, schema markup, answer-first content, E-E-A-T signals, and Google Business Profile.',
-  alternates: {
-    canonical: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
-  },
+  title: article.title,
+  description: article.description,
+  alternates: { canonical },
   openGraph: {
-    title: 'How to Rank in Google AI Overviews for Local Businesses',
-    description:
-      'Most local businesses are invisible to AI search. Here\'s exactly how to change that.',
-    url: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
+    title: article.title,
+    description: article.description,
+    url: canonical,
     type: 'article',
+    publishedTime: published,
+    modifiedTime: modified,
+    authors: ['Mark Abplanalp'],
+    images: [{ url: imageUrl }],
   },
+  twitter: { card: 'summary_large_image', title: article.title, description: article.description, images: [imageUrl] },
 };
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses#article',
-  headline: 'How to Rank in Google AI Overviews for Local Businesses',
-  description:
-    'Learn how local businesses can appear in Google AI Overviews through structured data, schema markup, E-E-A-T signals, and AI-first content strategies.',
-  author: {
-    '@type': 'Person',
-    '@id': 'https://www.kodecite.ai/#founder',
-    name: 'Mark Abplanalp',
-    jobTitle: 'Founder',
-    url: 'https://www.kodecite.ai',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://www.kodecite.ai/#business',
-    name: 'KodeCite.ai',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.kodecite.ai/og-image.png',
-      width: 1200,
-      height: 630,
-    },
-  },
-  isPartOf: {
-    '@type': 'CollectionPage',
-    '@id': 'https://www.kodecite.ai/blog',
-    name: 'KodeCite.ai Blog',
-    url: 'https://www.kodecite.ai/blog',
-  },
-  datePublished: '2026-03-10T00:00:00-07:00',
-  dateModified: '2026-08-03T00:00:00-07:00',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
-  },
-  image: {
-    '@type': 'ImageObject',
-    url: 'https://www.kodecite.ai/blog-hero.png',
-    width: 1200,
-    height: 630,
-  },
-  keywords: [
-    'Google AI Overviews',
-    'local SEO',
-    'AI search optimization',
-    'schema markup',
-    'AEO',
-    'answer engine optimization',
-  ],
-  citation: [
-    { '@type': 'CreativeWork', name: 'Google — AI Overviews', url: 'https://blog.google/products/search/ai-overviews-and-ai-mode/' },
-    { '@type': 'CreativeWork', name: 'Google Search Central — Structured Data', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' },
-    { '@type': 'CreativeWork', name: 'Google Search Central — E-E-A-T', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
-  ],
+  '@id': `${canonical}#article`,
+  headline: article.title,
+  description: article.description,
+  author: articleAuthor,
+  publisher: articlePublisher,
+  datePublished: published,
+  dateModified: modified,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  url: canonical,
+  image: imageUrl,
+  isPartOf: blogCollectionPage,
+  about: [businessRef],
+  articleSection: 'AI Business Strategy',
+  wordCount,
+  citation: sources.filter((source) => source.href.startsWith('https://')).map((source) => ({ '@type': 'CreativeWork', name: source.label, url: source.href })),
 };
-
-const faqPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How do I rank my business in Google AI Overviews?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Rank your business in Google AI Overviews by giving Google's AI clean, verifiable facts to pull from: add structured data (schema markup) for your business, services, and FAQs; publish a page that answers each high-intent customer question directly, with the answer first; keep your name, address, and phone identical everywhere online; and strengthen your Google Business Profile and E-E-A-T signals. AI Overviews synthesize from well-structured sources, so the most machine-readable, consistent business earns the mention — often from a lower ranking position than the #1 result.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why is my business not showing up in Google AI Overviews?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "The most common reason is that your website isn't machine-readable: no structured data, no answer-first content, and inconsistent business information across the web. Google's AI can't confidently extract or verify what your business does, so it cites competitors it can parse instead. Slow load times, thin service pages, and a weak or inconsistent Google Business Profile compound the problem. Fixing the structure — not adding more keywords — is what gets you cited.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do local businesses rank in Google AI Overviews?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Local businesses rank in Google AI Overviews by implementing structured data (schema markup), publishing content that directly answers customer questions, maintaining consistent NAP information across the web, and building strong E-E-A-T signals through their website and Google Business Profile.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is schema markup and why does it matter for AI search?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Schema markup is structured code added to a website that tells search engines and AI systems exactly what a business does, where it operates, and why it's credible. It allows AI systems to extract and verify business information with confidence, making it far more likely that business will be recommended in AI-generated results.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between traditional SEO and AI Overview optimization?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Traditional SEO focuses on ranking in the blue link results through keywords and backlinks. AI Overview optimization focuses on becoming the trusted source that Google's AI pulls from to generate its answers — which requires structured data, direct question-and-answer content, and strong trust signals across the web.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is llms.txt and should my local business have one?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'llms.txt is a simple file placed on your website that gives AI language models a structured summary of your business, content, and services. While not yet mainstream, early adopters who implement it now are establishing AI-readable authority before their competitors catch on.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are Google AI Overviews?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Google AI Overviews (formerly Search Generative Experience) are AI-generated summaries that appear at the top of Google search results, synthesizing information from multiple sources to answer a query directly. They cite sources but present a single cohesive answer, meaning most users never click through to individual websites — making citation in the overview itself the primary visibility goal.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need to be ranked number one to appear in Google AI Overviews?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. AI Overviews synthesize from multiple sources across the top results, meaning a page ranking fifth or sixth can be cited if its content is well-structured and directly answers the query. Position matters, but content structure and schema validity often matter more for citation specifically. A page that ranks lower but has superior structured data is frequently cited over a higher-ranking page with poor structure.',
-      },
-    },
-  ],
-};
-
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses#breadcrumb',
+  '@id': `${canonical}#breadcrumb`,
   itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://www.kodecite.ai',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Blog',
-      item: 'https://www.kodecite.ai/blog',
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'How to Rank in Google AI Overviews for Local Businesses',
-      item: 'https://www.kodecite.ai/blog/how-to-rank-in-google-ai-overviews-for-local-businesses',
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kodecite.ai' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kodecite.ai/blog' },
+    { '@type': 'ListItem', position: 3, name: article.title, item: canonical },
   ],
 };
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${canonical}#faq`,
+  mainEntity: article.faq.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
+};
 
-export default function HowToRankInGoogleAIOverviews() {
+export default function ArticlePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-
-      {/* Hero */}
-      <section className="pt-36 pb-16 bg-[var(--d-bg)] px-4 relative overflow-hidden">
-        <div className="absolute inset-0 hero-grid-bg opacity-40 pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm font-inter text-[var(--d-fg-dim)] mb-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }} />
+      <section className="bg-[var(--d-bg)] pt-36 pb-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <nav aria-label="Breadcrumb" className="text-sm text-[var(--d-fg-dim)] mb-6 font-inter">
             <Link href="/" className="hover:text-[var(--d-accent)] transition-colors">Home</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="mx-2">/</span>
             <Link href="/blog" className="hover:text-[var(--d-accent)] transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-[var(--d-fg)] truncate">How to Rank in Google AI Overviews</span>
+            <span className="mx-2">/</span>
+            <span className="text-[var(--d-fg)]">{article.title}</span>
           </nav>
-
           <div className="flex items-center gap-3 mb-6">
-            <span className="category-tag">AEO &amp; AI Search</span>
-            <span className="text-[var(--d-fg-dim)] text-sm font-inter">10 min read</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-[var(--d-accent)] font-inter">AI Business Strategy</span>
+            <span className="text-[var(--d-fg-dim)] text-xs font-inter">·</span>
+            <span className="text-xs text-[var(--d-fg-dim)] font-inter">{readingTime} min read</span>
           </div>
-
-          <h1 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] mb-6 leading-tight">
-            How to Rank in Google AI Overviews{' '}
-            <span className="text-[var(--d-accent)]">for Local Businesses</span>
-          </h1>
-
-          <p className="text-[var(--d-fg-dim)] text-xl font-inter leading-relaxed max-w-3xl">
-            Google&apos;s AI is answering your customers&apos; questions before they ever reach your website. Most local businesses are invisible to it — but that&apos;s fixable. Here&apos;s exactly how.
-          </p>
-
-          <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center">
-                <span className="text-[#f8f5f0] font-bold text-sm font-inter">KC</span>
-              </div>
-              <div>
-                <p className="text-[var(--d-fg)] text-sm font-semibold font-inter">Mark Abplanalp</p>
-                <p className="text-[var(--d-fg-dim)] text-xs font-inter">March 10, 2026</p>
-              </div>
+          <h1 className="font-inter text-4xl md:text-5xl lg:text-6xl text-[var(--d-fg)] leading-tight mb-6">{article.title}</h1>
+          <p className="font-inter text-lg text-[var(--d-fg-dim)] max-w-3xl mb-8 leading-relaxed">{article.intro}</p>
+          <div className="flex items-center gap-4">
+            <div className="w-9 h-9 rounded-full bg-[var(--d-accent)] flex items-center justify-center text-white font-inter font-semibold text-sm">MA</div>
+            <div>
+              <p className="font-inter font-semibold text-sm text-[var(--d-fg)]">Mark Abplanalp</p>
+              <p className="font-inter text-xs text-[var(--d-fg-dim)]"><time dateTime={article.date}>{publishedLabel}</time> · Updated <time dateTime="2026-10-01">October 1, 2026</time></p>
             </div>
           </div>
         </div>
       </section>
 
       <div className="section-divider" />
-
-      {/* Article + Sidebar */}
-      <section className="py-16 bg-[var(--d-bg)] px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-            {/* Article Content */}
-            <article className="lg:col-span-2">
-              <div className="prose-content font-inter">
-
-                {/* ── What Is a Google AI Overview? ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  What Is a Google AI Overview?
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  A Google AI Overview is the AI-generated summary block that appears above all organic search results for millions of queries every day. It doesn&apos;t link to ten websites and let users decide — it synthesizes a direct answer and typically cites two or three sources it trusts most.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  For local service businesses, this is both a threat and an opportunity. If Google&apos;s AI picks your competitor as the trusted source for &ldquo;best plumber in [city]&rdquo; or &ldquo;how much does a roof replacement cost,&rdquo; your phone stops ringing — even if you have a perfect 5-star rating and 20 years in business.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  The businesses that show up in AI Overviews aren&apos;t necessarily the biggest or most established. They&apos;re the ones whose digital presence is structured so that AI can read, verify, and trust it. That&apos;s a technical problem with a technical solution.
-                </p>
-
-                {/* ── Why Local Businesses Are Being Left Out ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  Why Local Businesses Are Being Left Out
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  AI systems like Google&apos;s don&apos;t browse your website the way a human customer does. They send automated crawlers on a tight token budget. If your site is slow, poorly structured, or lacking machine-readable signals, the crawler moves on before it ever understands what you do or who you serve.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Most local business websites fail on three fronts simultaneously:
-                </p>
-                <ul className="list-disc pl-6 mb-6 space-y-2 text-[var(--d-fg-dim)]">
-                  <li>
-                    <strong className="text-[var(--d-fg)]">No structured data</strong> — the site has no schema markup telling AI what the business is, where it operates, or what it offers.
-                  </li>
-                  <li>
-                    <strong className="text-[var(--d-fg)]">No direct answers</strong> — content is written for aesthetics, not for answering the specific questions customers type into AI search.
-                  </li>
-                  <li>
-                    <strong className="text-[var(--d-fg)]">Inconsistent presence</strong> — the business name, address, and phone number appear differently across directories, eroding AI confidence.
-                  </li>
-                </ul>
-
-                {/* Comparison Table */}
-                <div className="my-10 rounded-xl overflow-hidden border border-[rgba(100,70,30,0.2)]">
-                  <div className="bg-[rgba(255,255,255,0.10)] px-6 py-4">
-                    <p className="font-inter font-bold text-[rgba(240,232,216,0.9)] text-base tracking-wide">
-                      Traditional SEO vs AI Overview Optimization
-                    </p>
-                  </div>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm font-inter">
-                      <thead>
-                        <tr className="bg-[var(--d-bg-2)]">
-                          <th className="text-left px-6 py-3 font-semibold text-[var(--d-fg)] border-b border-[rgba(100,70,30,0.2)] w-1/2">
-                            Traditional SEO
-                          </th>
-                          <th className="text-left px-6 py-3 font-semibold text-[var(--d-accent)] border-b border-[rgba(100,70,30,0.2)] w-1/2">
-                            AI Overview Optimization
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {[
-                          ['Optimizes for keyword rankings', 'Optimizes for AI recommendation'],
-                          ['Targets human readers', 'Targets both humans and AI systems'],
-                          ['Focuses on backlinks and authority', 'Focuses on structured data and trust signals'],
-                          ['Measures clicks and impressions', 'Measures citations and AI mentions'],
-                          ['Page-level optimization', 'Site-wide schema and entity clarity'],
-                        ].map(([left, right], i) => (
-                          <tr
-                            key={i}
-                            className={i % 2 === 0 ? 'bg-[var(--d-bg)]' : 'bg-[var(--d-bg-2)]'}
-                          >
-                            <td className="px-6 py-3.5 text-[var(--d-fg-dim)] border-b border-[rgba(100,70,30,0.08)]">
-                              {left}
-                            </td>
-                            <td className="px-6 py-3.5 text-[var(--d-fg-dim)] border-b border-[rgba(100,70,30,0.08)]">
-                              {right}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                {/* ── The Foundation: Structured Data and Schema Markup ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Foundation: Structured Data and Schema Markup
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Schema markup is JSON-LD code embedded in your website that translates your business information into a language AI systems understand natively. It doesn&apos;t change how your site looks to visitors — it adds an invisible layer of machine-readable context that crawlers read instantly.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Without it, AI has to guess what your business does based on unstructured text. With it, AI knows with certainty. That certainty is what earns citations.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  LocalBusiness Schema
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  This is the foundation. It declares your business name, address, phone number, service area, hours, and category in a format AI can verify against other data sources. If your LocalBusiness schema matches your Google Business Profile exactly, you become significantly more trustworthy in AI&apos;s eyes.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  Service Schema
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  List every service you offer as a distinct Service entity within your schema. Don&apos;t lump them together — a roofing company that declares separate services for shingle replacement, flat roof installation, and storm damage repair gives AI a much clearer picture than one that says &ldquo;we do roofing.&rdquo;
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  FAQPage Schema
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Every question-and-answer pair on your website is an opportunity to become the direct source for an AI-generated answer. FAQPage schema markup labels these pairs explicitly, making it trivial for AI to extract and cite your content when a user asks the same question.
-                </p>
-
-                <h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mt-8 mb-3">
-                  BreadcrumbList Schema
-                </h3>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Breadcrumb schema maps the logical hierarchy of your site. It helps AI understand how your content is organized and demonstrates that your site has depth and structure — both signals of a trustworthy, authoritative source.
-                </p>
-
-                {/* ── Content That Answers Real Questions ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  Content That Answers Real Questions
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Google&apos;s AI doesn&apos;t pull from the most beautifully designed page. It pulls from the page that most directly answers the question being asked. This means your content strategy needs to shift from impression-based writing to answer-based writing.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Think about the questions your customers ask before they hire you. &ldquo;How much does a bathroom remodel cost in [city]?&rdquo; &ldquo;What&apos;s the difference between a term and whole life policy?&rdquo; &ldquo;How long does it take to replace a roof?&rdquo;
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Each of those questions deserves a page — or at minimum a section — that answers it directly, in the first sentence, without preamble. AI Overviews reward directness. Structure your content with a clear question as the heading (H2 or H3) and the answer in the immediate following paragraph.
-                </p>
-                <div className="inw-callout my-8">
-                  <p className="text-[var(--d-fg-dim)] font-inter leading-relaxed">
-                    <strong className="text-[var(--d-fg)]">The one-content rule:</strong> Write one piece of content that answers your customers&apos; most common pre-hire question. Make it specific, make it local, and make it the most complete answer on the internet for that query. Then add FAQPage schema. That single page can become your most powerful AI citation driver.
-                  </p>
-                </div>
-
-                {/* ── Consistency Across the Web ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  Consistency Across the Web
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  AI systems don&apos;t just read your website. They cross-reference your business identity against dozens of external data sources: Google Business Profile, Yelp, BBB, industry directories, social profiles, and citation aggregators. When your business name, address, and phone number (NAP) appear consistently across all of these, AI confidence in your identity increases dramatically.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Even small inconsistencies — &ldquo;Suite 100&rdquo; vs &ldquo;Ste. 100,&rdquo; or a phone number with and without the area code — introduce doubt. AI systems are probabilistic; they recommend what they&apos;re most confident about. Inconsistency reduces that confidence.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Audit every directory listing your business appears in. Your Google Business Profile is the anchor — match everything else to it exactly. Completeness matters too: a fully populated GBP (categories, services, description, photos, hours, Q&amp;A) carries significantly more weight than a sparse one.
-                </p>
-
-                {/* ── The Role of E-E-A-T ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Role of E-E-A-T
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  E-E-A-T — Experience, Expertise, Authoritativeness, and Trustworthiness — is Google&apos;s quality framework for evaluating content. It was originally a human quality reviewer guideline, but it now directly informs what Google&apos;s AI considers citation-worthy.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  For local businesses, E-E-A-T is built through:
-                </p>
-                <ul className="list-disc pl-6 mb-6 space-y-2 text-[var(--d-fg-dim)]">
-                  <li>
-                    <strong className="text-[var(--d-fg)]">Named authorship</strong> — content attributed to a real person with verifiable credentials, not &ldquo;The Team.&rdquo;
-                  </li>
-                  <li>
-                    <strong className="text-[var(--d-fg)]">Reviews and reputation signals</strong> — consistent 4-star-plus ratings across Google, Yelp, and industry-specific platforms.
-                  </li>
-                  <li>
-                    <strong className="text-[var(--d-fg)]">Licenses, certifications, and associations</strong> — markup that declares these credentials is more powerful than just listing them in text.
-                  </li>
-                  <li>
-                    <strong className="text-[var(--d-fg)]">Original content</strong> — case studies, before-and-after project documentation, and local market insights that can only come from direct experience.
-                  </li>
-                </ul>
-
-                {/* ── Optimizing for AI-First Discovery ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  Optimizing for AI-First Discovery
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Beyond schema and content, a new layer of AI-specific optimization is emerging. These aren&apos;t mainstream yet, which is exactly why acting now creates a durable competitive advantage.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  <strong className="text-[var(--d-fg)]">llms.txt</strong> — A plain-text file placed at the root of your website that gives AI language models a structured, human-readable summary of your business, services, content hierarchy, and key pages. Think of it as a sitemap designed specifically for AI crawlers.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  <strong className="text-[var(--d-fg)]">Token efficiency</strong> — AI crawlers operate on token budgets. Every unnecessary script, bloated plugin, and rendered JavaScript element consumes budget before the crawler reaches your core content. Clean, fast-loading Next.js or static-site architectures get fully indexed; bloated WordPress sites often get abandoned mid-crawl.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  <strong className="text-[var(--d-fg)]">Entity clarity</strong> — Your business should be identifiable as a distinct entity across the web, not just a domain. This means consistent use of your exact business name in schema, social profiles, and citations — creating a clear knowledge graph node that AI systems can reference with confidence.
-                </p>
-
-                {/* ── A Practical Starting Point ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  A Practical Starting Point
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  The full scope of AI visibility optimization can feel overwhelming. It isn&apos;t — but it does require working through it in the right order. Start with the highest-leverage items that have the most immediate impact on AI confidence.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  First, audit your Google Business Profile. It is the single most influential data source for local AI decisions. Every field should be complete, every category accurate, and your primary service area explicitly defined.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  Second, implement LocalBusiness schema on your homepage and key service pages. This is the minimum viable schema stack — it signals to AI exactly what your business is and where it operates.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-6">
-                  Third, publish one piece of content that directly answers a high-intent pre-hire question in your industry. Structure it with a question heading, direct answer, and FAQPage schema. This alone can earn your first AI citation.
-                </p>
-
-                {/* ── The Window Is Open — But Not Forever ── */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-4">
-                  The Window Is Open — But Not Forever
-                </h2>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  The businesses that will dominate AI search in 2027 are implementing their structured data stack right now, in 2026. AI systems build knowledge graphs over time — the earlier your business is established as a trusted entity, the harder it is for competitors to displace you.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-4">
-                  This isn&apos;t theoretical. We&apos;ve watched local service businesses in competitive markets earn AI citations within weeks of implementing proper schema, content, and consistency strategies. The window is real, it&apos;s open, and it is closing as more businesses catch on.
-                </p>
-                <p className="text-[var(--d-fg-dim)] leading-relaxed mb-8">
-                  The question isn&apos;t whether AI search will define local business visibility. It already does. The question is whether your business will be the answer AI recommends — or the one it doesn&apos;t know exists.
-                </p>
-
-                {/* ── Quick-Start Checklist ── */}
-                <div className="my-10 bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-8">
-                  <p className="eyebrow mb-6 text-xs justify-start">YOUR AI OVERVIEW QUICK-START CHECKLIST</p>
-                  <ul className="space-y-4">
-                    {[
-                      'Audit your Google Business Profile — every field complete and accurate',
-                      'Check NAP consistency across all directories and listings',
-                      'Add LocalBusiness schema to your website',
-                      'Write one piece of content answering your customers\' most common pre-hire question',
-                      'Add an FAQ section with FAQPage schema markup',
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 mt-0.5 rounded border-2 border-[var(--d-accent)] bg-white flex items-center justify-center">
-                          <svg className="w-3 h-3 text-[var(--d-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </span>
-                        <span className="text-[var(--d-fg-dim)] font-inter text-sm leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* FAQ Section */}
-                <h2 className="font-inter font-bold text-3xl text-[var(--d-fg)] mt-10 mb-6">
-                  Frequently Asked Questions
-                </h2>
-                <div className="space-y-6 mb-10">
-                  {[
-                    {
-                      q: 'How do I rank my business in Google AI Overviews?',
-                      a: "Rank your business in Google AI Overviews by giving Google's AI clean, verifiable facts to pull from: add structured data (schema markup) for your business, services, and FAQs; publish a page that answers each high-intent customer question directly, with the answer first; keep your name, address, and phone identical everywhere online; and strengthen your Google Business Profile and E-E-A-T signals. AI Overviews synthesize from well-structured sources, so the most machine-readable, consistent business earns the mention — often from a lower ranking position than the #1 result.",
-                    },
-                    {
-                      q: 'Why is my business not showing up in Google AI Overviews?',
-                      a: "The most common reason is that your website isn't machine-readable: no structured data, no answer-first content, and inconsistent business information across the web. Google's AI can't confidently extract or verify what your business does, so it cites competitors it can parse instead. Slow load times, thin service pages, and a weak or inconsistent Google Business Profile compound the problem. Fixing the structure — not adding more keywords — is what gets you cited.",
-                    },
-                    {
-                      q: 'How do local businesses rank in Google AI Overviews?',
-                      a: 'Local businesses rank in Google AI Overviews by implementing structured data (schema markup), publishing content that directly answers customer questions, maintaining consistent NAP information across the web, and building strong E-E-A-T signals through their website and Google Business Profile.',
-                    },
-                    {
-                      q: 'What is schema markup and why does it matter for AI search?',
-                      a: "Schema markup is structured code added to a website that tells search engines and AI systems exactly what a business does, where it operates, and why it's credible. It allows AI systems to extract and verify business information with confidence, making it far more likely that business will be recommended in AI-generated results.",
-                    },
-                    {
-                      q: 'What is the difference between traditional SEO and AI Overview optimization?',
-                      a: "Traditional SEO focuses on ranking in the blue link results through keywords and backlinks. AI Overview optimization focuses on becoming the trusted source that Google's AI pulls from to generate its answers — which requires structured data, direct question-and-answer content, and strong trust signals across the web.",
-                    },
-                    {
-                      q: 'What is llms.txt and should my local business have one?',
-                      a: 'llms.txt is a simple file placed on your website that gives AI language models a structured summary of your business, content, and services. While not yet mainstream, early adopters who implement it now are establishing AI-readable authority before their competitors catch on.',
-                    },
-                    {
-                      q: 'What are Google AI Overviews?',
-                      a: 'Google AI Overviews (formerly Search Generative Experience) are AI-generated summaries that appear at the top of Google search results, synthesizing information from multiple sources to answer a query directly. They cite sources but present a single cohesive answer, meaning most users never click through to individual websites — making citation in the overview itself the primary visibility goal.',
-                    },
-                    {
-                      q: 'Do I need to be ranked number one to appear in Google AI Overviews?',
-                      a: 'No. AI Overviews synthesize from multiple sources across the top results, meaning a page ranking fifth or sixth can be cited if its content is well-structured and directly answers the query. Position matters, but content structure and schema validity often matter more for citation specifically. A page that ranks lower but has superior structured data is frequently cited over a higher-ranking page with poor structure.',
-                    },
-                  ].map(({ q, a }, i) => (
-                    <div key={i} className="border-b border-[rgba(100,70,30,0.15)] pb-6">
-                      <h3 className="font-inter font-semibold text-[var(--d-fg)] text-base mb-2">{q}</h3>
-                      <p className="text-[var(--d-fg-dim)] text-sm leading-relaxed">{a}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Back to blog */}
-                <div className="mt-12 pt-8 border-t border-[rgba(100,70,30,0.2)]">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-2 text-[var(--d-accent)] font-semibold font-inter hover:text-[var(--d-accent)] transition-colors"
-                  >
-                    <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    Back to The Playbook
-                  </Link>
-                </div>
+      <section className="bg-[var(--d-bg)] py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-12">
+            <article className="lg:col-span-2 prose-content font-inter text-[var(--d-fg-dim)]">
+              {article.sections.map((section, index) => (
+                <section key={section.heading} aria-labelledby={`section-${index}`}>
+                  <h2 id={`section-${index}`} className="font-inter text-3xl text-[var(--d-fg)] mt-12 mb-5">{section.heading}</h2>
+                  {section.paragraphs.map((paragraph) => <p key={paragraph} className="leading-relaxed mb-6">{paragraph}</p>)}
+                  {section.items.length > 0 && <ul className="list-disc pl-6 space-y-3 mb-8">{section.items.map((item) => <li key={item} className="leading-relaxed">{item}</li>)}</ul>}
+                  {section.sources.length > 0 && <ul className="space-y-2 mb-8">{section.sources.map((source) => <li key={source.href}><a href={source.href} className="text-sm text-[var(--d-accent)] hover:underline">{source.label}</a></li>)}</ul>}
+                </section>
+              ))}
+              <section aria-labelledby="article-faq" className="mt-12 pt-8 border-t border-[var(--d-line)]">
+                <h2 id="article-faq" className="font-inter text-3xl text-[var(--d-fg)] mb-6">Frequently asked questions</h2>
+                {article.faq.map((item) => <div key={item.q} className="mb-8"><h3 className="font-inter font-semibold text-xl text-[var(--d-fg)] mb-3">{item.q}</h3><p className="leading-relaxed">{item.a}</p></div>)}
+              </section>
+              <div className="mt-12 pt-8 border-t border-[var(--d-line)]">
+                <Link href="/blog" className="text-[var(--d-accent)] font-semibold hover:underline">Back to the articles</Link>
               </div>
             </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
+            <aside className="lg:col-span-1 mt-12 lg:mt-0">
               <div className="sticky top-28 space-y-6">
-
-                {/* Key Stats */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
-                  <p className="eyebrow mb-4 text-xs justify-start">BY THE NUMBERS</p>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="eyebrow mb-4 text-xs">THE PRACTICAL TAKEAWAY</p>
+                  <ul className="space-y-4">{article.takeaways.map((takeaway) => <li key={takeaway} className="text-sm leading-relaxed text-[var(--d-fg)]">{takeaway}</li>)}</ul>
+                </div>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="font-inter font-semibold text-[var(--d-fg)] text-lg mb-3">See what your customer’s assistant can understand</p>
+                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">Review the business facts, evidence, and next step before deciding what to build.</p>
+                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">Request an Agent Readiness Review</Link>
+                </div>
+                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[var(--d-line-s)] p-6">
+                  <p className="eyebrow mb-4 text-xs">RELATED READING</p>
                   <div className="space-y-4">
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">84%</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">of AI Overview citations go to sites with schema markup</p>
-                    </div>
-                    <div className="border-b border-[rgba(100,70,30,0.2)] pb-4">
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">3×</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">more AI citations for businesses with consistent NAP data</p>
-                    </div>
-                    <div>
-                      <p className="text-[var(--d-accent)] font-bold text-3xl font-inter">2–4 wks</p>
-                      <p className="text-[var(--d-fg-dim)] text-sm font-inter mt-1">average time to first AI citation after schema implementation</p>
-                    </div>
+                    <Link href="/blog/what-is-an-entity-graph" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">How an entity graph connects the business facts</Link>
+                    <Link href="/blog/from-recommended-to-actionable-luxe-window-works" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">The Luxe Window Works consultation-request proof</Link>
+                    <Link href="/blog" className="block text-sm text-[var(--d-fg)] hover:text-[var(--d-accent)]">More practical guides for AI-ready businesses</Link>
                   </div>
                 </div>
-
-                {/* CTA Card */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.2)] p-6">
-                  <p className="font-inter font-bold text-[var(--d-fg)] text-lg mb-3 leading-snug">
-                    Is Your Business Invisible to AI?
-                  </p>
-                  <p className="text-[var(--d-fg-dim)] text-sm font-inter leading-relaxed mb-5">
-                    We audit your schema, content structure, and NAP consistency — then fix what&apos;s keeping you out of AI Overviews.
-                  </p>
-                  <Link href="/machine-read" className="btn-gold w-full text-center text-sm font-bold py-3 rounded-md block">
-                    Get Your Agent Readiness Review
-                  </Link>
-                </div>
-
-                {/* Related Posts */}
-                <div className="bg-[rgba(255,255,255,0.14)] rounded-xl border border-[rgba(100,70,30,0.15)] p-6">
-                  <p className="eyebrow mb-4 text-xs justify-start">RELATED READING</p>
-                  <div className="space-y-4">
-                    <Link href="/blog/schema-markup-complete-guide" className="block group">
-                      <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                        Schema Markup: The Complete Guide for Local Service Businesses
-                      </p>
-                      <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">12 min read</p>
-                    </Link>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/what-is-zero-click-search" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          What Is Zero Click Search and Why Your Business Is Invisible
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">8 min read</p>
-                      </Link>
-                    </div>
-                    <div className="border-t border-[rgba(100,70,30,0.2)] pt-4">
-                      <Link href="/blog/aeo-geo-making-seo-better" className="block group">
-                        <p className="text-[var(--d-fg)] text-sm font-semibold font-inter leading-snug group-hover:text-[var(--d-accent)] transition-colors">
-                          AEO + GEO Isn&apos;t Replacing SEO — It&apos;s Making It Better
-                        </p>
-                        <p className="text-[var(--d-fg-dim)] text-xs font-inter mt-1">10 min read</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </aside>
-
           </div>
         </div>
       </section>
-
       <div className="section-divider" />
-
-      {/* CTA */}
-      <section className="py-20 bg-[var(--d-bg)] px-4">
+      <section className="py-20 bg-[var(--d-bg-3)] px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow mb-4">STOP BEING INVISIBLE</p>
-          <h2 className="font-inter font-bold text-3xl md:text-4xl text-[var(--d-fg)] mb-4">
-            Ready to Become the Answer AI Cites?
-          </h2>
-          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">
-            The structured data, content strategy, and entity clarity that earns AI citations takes less time to build than you think — and the competitive window won&apos;t stay open. Let&apos;s talk about your site.
-          </p>
+          <p className="eyebrow mb-4">BE UNDERSTOOD. BE CHOSEN. MAKE THE NEXT STEP WORK.</p>
+          <h2 className="font-inter text-3xl md:text-4xl text-[var(--d-fg)] mb-4">Make your business easy for your customer’s AI assistant to understand, trust and do business with.</h2>
+          <p className="text-[var(--d-fg-dim)] font-inter mb-8 leading-relaxed">Start with an Agent Readiness Review. The owned foundation is $4,995 one time, with no required retainer. A live action is separately scoped; a platform-layer pilot is a separate engagement.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">
-              Start the Conversation
-            </Link>
-            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">
-              Read More Articles
-            </Link>
+            <Link href="/machine-read" className="btn-gold text-base font-bold px-8 py-4 rounded-md inline-block">Request an Agent Readiness Review</Link>
+            <Link href="/blog" className="btn-gold-outline text-base font-bold px-8 py-4 rounded-md inline-block">Read more articles</Link>
           </div>
         </div>
       </section>
